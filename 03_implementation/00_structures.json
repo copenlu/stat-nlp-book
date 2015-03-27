@@ -15,7 +15,9 @@
     "input" : {
       "sessionId" : null,
       "code" : "\"A\"",
-      "extraFields" : { },
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      },
       "outputFormat" : null
     }
   }, {
