@@ -1,0 +1,34 @@
+{
+  "name" : "NLP Data Structures",
+  "cells" : [ {
+    "id" : 0,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "At the heart of any NLP library you find data structures that store source \nand meta information of textual documents. Many of them are organized hierarchically in\nthe following way\n\n* Tokens, containing words and often character offsets\n* Sentences, containing a sequence of tokens\n* Documents, containing a sequence of sentences \n\nIn addition, each layer may contain further annotation that has been generated \nthrough the application of NLP techniques. For example, a sentence may also contain a\nrepresentation of a syntactic tree. \n\n## Design Decisions\n\n* Mutable vs Immutable\n* Deep class hierarchies vs flat compositional structures\n* Character Offsets vs sequential representation\n\n## NLP Data Structures in Wolfe\nNLP data structures are *immutable*, *flat compositional* and *offset-based* representations.\n\nTokens in Wolfe are represented through the `Token` case class",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 1,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "CharOffsets(0,1)",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 2,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### Bidirectional Navigation\nThe immutable nature of Wolfe NLP data structures means that it is difficult to store\nback-links from tokens to sentences, or sentences to documents, due to the following\nchicken and egg problem: to create a new sentence\nI first need to create the tokens, but if they need back links to sentences, I first need \nto create the sentence. \n\nWolfe overcomes the above problem by creating a bidirectional object graph after the construction\nof the complete document. This graph can then be accessed for traversal in any direction. \nCrucially, using Scala's `implicit class` feature (link), graph navigation methods can be\naccesses directly through the token, sentence etc. classes, and to the user it appears *as if*\nthe data structures provide navigation directly. Example below...\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  } ],
+  "config" : { }
+}
