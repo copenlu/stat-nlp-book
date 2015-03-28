@@ -14,7 +14,7 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "\"Hello World\".slice(0,5)",
+      "code" : "\"Hello World\".slice(0,6)",
       "extraFields" : {
         "aggregatedCells" : "[]"
       },
