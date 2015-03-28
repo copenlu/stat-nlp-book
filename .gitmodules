@@ -1,3 +1,6 @@
 [submodule "moro"]
 	path = moro
 	url = https://github.com/wolfe-pack/moro.git
+[submodule "wolfe"]
+	path = wolfe
+	url = https://github.com/wolfe-pack/wolfe.git
