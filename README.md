@@ -1,13 +1,21 @@
 # stat-nlp-book
 
-Setup and Run Moro
+## Setup
 
-1. Clone https://github.com/wolfe-pack/moro
-2. Set `docRoot = "[Some Directory that contains stat-nlp-book, maybe as a softlink]"` in `conf/application.conf` in the moro directory.
-3. Run `sbt run`
-
-Update wolfe in your local ivy repository
+### Update wolfe in your local ivy repository
 
 1. in the `wolfe` directory, do `sbt publish-local`
+
+### Setup and Run Moro
+
+1. git submodule update --init --recursive
+2. cd moro; git checkout master
+3. sbt run
+
+## Live editing in Intellij
+
+You can write code in intellij and access it from moro after you compile it (either through intellij or sbt)
+
+
 
 
