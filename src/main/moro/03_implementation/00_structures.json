@@ -14,7 +14,7 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "\"A\"",
+      "code" : "Test.test",
       "extraFields" : {
         "aggregatedCells" : "[]"
       },
