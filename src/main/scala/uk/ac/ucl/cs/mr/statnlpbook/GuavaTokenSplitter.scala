@@ -28,7 +28,7 @@ class GuavaTokenSplitter(val splitter: Splitter) extends (Document => Document) 
         val newToken = Token(word, CharOffsets(offset,offset + word.length))
         tokens += newToken
         offset += word.length
-      }bug
+      }
       IndexedSeq.empty ++ tokens
     }
     doc.copy(sentences = doc.sentences.map(s => s.copy(tokens = s.tokens.flatMap(split))))
