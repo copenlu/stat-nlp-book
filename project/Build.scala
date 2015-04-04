@@ -2,7 +2,7 @@ import sbt._
 import sbt.Keys._
 
 object BuildSettings {
-  val buildName         = "statnlpbook"
+  val buildName = "statnlpbook"
   val buildOrganization = "uk.ac.ucl.cs.mr"
   val buildScalaVersion = "2.11.4"
 
@@ -37,15 +37,19 @@ object BuildSettings {
 }
 
 object Build extends Build {
+
   import BuildSettings._
 
   lazy val wolfeNLP = ProjectRef(file("./wolfe"), "wolfe-nlp")
+  lazy val wolfeUI = ProjectRef(file("./wolfe"), "wolfe-ui")
+
 
   lazy val statnlpbook = Project(
     id = "statnlpbook",
     base = file("."),
     settings = buildSettings
-  ) dependsOn (
-    wolfeNLP % "test->test;compile->compile"
+  ) dependsOn(
+    wolfeNLP % "test->test;compile->compile",
+    wolfeUI % "test->test;compile->compile"
     )
 }
