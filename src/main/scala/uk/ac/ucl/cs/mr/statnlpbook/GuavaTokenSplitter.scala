@@ -24,11 +24,11 @@ class GuavaTokenSplitter(val splitter: Splitter) extends (Document => Document) 
       val end = token.offsets.end
       var offset = token.offsets.start
       for (word <- splits) {
-        while (token.word.slice(offset,word.length) != word) offset += 1
+        while (doc.source.slice(offset,offset + word.length) != word) offset += 1
         val newToken = Token(word, CharOffsets(offset,offset + word.length))
         tokens += newToken
         offset += word.length
-      }
+      }bug
       IndexedSeq.empty ++ tokens
     }
     doc.copy(sentences = doc.sentences.map(s => s.copy(tokens = s.tokens.flatMap(split))))
@@ -37,4 +37,10 @@ class GuavaTokenSplitter(val splitter: Splitter) extends (Document => Document) 
 
 object Tokenizer {
   def fromRegEx(regex:String) = new GuavaTokenSplitter(Splitter.onPattern(regex))
+
+  def main(args: Array[String]) {
+    val doc = Document.fromString("Thinkin' of a master plan.")
+    val tokenizer = Tokenizer.fromRegEx(" ")
+    println(tokenizer(doc))
+  }
 }
