@@ -58,6 +58,17 @@
       "extraFields" : { },
       "outputFormat" : null
     }
+  }, {
+    "id" : 6,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val tokenizer = Tokenizer.fromRegEx(\" \")\ntokenizer(doc).source",
+      "extraFields" : {
+        "aggregatedCells" : "[\"val text = \\\"Thinkin' of a master plan.\\\"\\ntext.split(\\\" \\\").toSeq\",\"val doc = Document.fromString(\\\"Thinkin' of a master plan.\\\")\\nrenderTokens(doc)\"]"
+      },
+      "outputFormat" : null
+    }
   } ],
   "config" : { }
 }

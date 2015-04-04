@@ -12,7 +12,7 @@ object BuildSettings {
     scalacOptions := Seq("-unchecked", "-deprecation", "-feature"), //, "-Yrangepos"?
     libraryDependencies ++= Seq(
       "org.sameersingh.scalaplot" % "scalaplot" % "0.1",
-      "com.google.guava" % "guava" % "12.0",
+      //"com.google.guava" % "guava" % "12.0",
       "org.scala-lang.modules" %% "scala-pickling" % "0.10.0"),
 
     //shellPrompt := ShellPrompt.buildShellPrompt,
