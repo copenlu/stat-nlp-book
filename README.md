@@ -12,15 +12,17 @@ Setup the project specific configuration file
 
     cp moro/conf/application-statnlpbook.conf moro/conf/application.conf
 
-Initialize sub-modules and run moro.
+Initialize sub-modules (1), compile the project (2) and wolfe (3) and run moro (4-5).
 
 1. `git submodule update --init --recursive`
-2. `cd moro; git checkout master`
-3. `sbt run`
+2. `sbt compile`
+3. `cd wolfe; sbt compile; cd ..`
+4. `cd moro; git checkout master`
+5. `sbt run`
 
-## Live editing in Intellij
+## Live editing in IntelliJ
 
-You can write code in intellij and access it from moro after you compile it (either through intellij or sbt)
+You can write code in IntelliJ and access it from moro after you compile it (either through IntelliJ or sbt)
 
 
 
