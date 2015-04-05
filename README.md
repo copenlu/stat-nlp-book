@@ -8,38 +8,15 @@
 
 ### Setup and Run Moro
 
-Add the following to `moro/conf/application.conf`
+Setup the project specific configuration file 
 
-```
-moro {
-    # document root
-    docRoot = "../src/main/moro/"
-    views.editor.hideAfterCompile = false
-    compilers {
-        wolfe {
-            classPath = ["../target/classes"]
-            imports = [
-                "org.sameersingh.htmlgen.D3jsConverter.Implicits._",
-                "org.sameersingh.scalaplot.Implicits._",
-                "org.sameersingh.htmlgen.Custom._",
-                "ml.wolfe._",
-                "ml.wolfe.Wolfe._",
-                "ml.wolfe.macros.OptimizedOperators._",
-                "ml.wolfe.D3Implicits._",
-                "ml.wolfe.util.Multidimensional._",
-                "ml.wolfe.nlp._",
-                "ml.wolfe.ui._",
-                "uk.ac.ucl.cs.mr.statnlpbook._"
-            ]
-        }
-    }
-}
-```
+    cp moro/conf/application-statnlpbook.conf moro/conf/application.conf
 
+Initialize sub-modules and run moro.
 
-1. git submodule update --init --recursive
-2. cd moro; git checkout master
-3. sbt run
+1. `git submodule update --init --recursive`
+2. `cd moro; git checkout master`
+3. `sbt run`
 
 ## Live editing in Intellij
 

@@ -37,11 +37,14 @@ object Tokenizer {
   def fromRegEx(regex:String) = new GuavaTokenSplitter(Splitter.onPattern(regex).omitEmptyStrings())
 
   def main(args: Array[String]) {
+    val punct = "[\\.\\?]"
+    val beforePunct = s"(?=$punct)"
+    val afterPunct = s"(?<=$punct)(?!\\s)" //but not if whitespace follows
+    val tokenizer = Tokenizer.fromRegEx(s"(\\s|$beforePunct|$afterPunct)")
     val doc = Document.fromString("Thinkin' of a master plan Mr. Peko. ")
-    val splitter = Splitter.onPattern("(?<!(Mr|Mrs))(?=[\\.,])|(?<=[\\.,])(?! )| ")
+    val splitter = Splitter.onPattern(s"(\\s|$beforePunct|$afterPunct)")
 //    val splitter = Splitter.onPattern("(?<!Mr)(?=[\\.,])")
     println(splitter.split("Thinkin' of.a master plan Mr. and Mrs. Peko.").asScala.mkString("\n"))
-    val tokenizer = Tokenizer.fromRegEx("(?<!(Mr|Mrs))(?=[\\.,])|(?<=[\\.,])(?! )| ")
     println(tokenizer(doc))
   }
 }
