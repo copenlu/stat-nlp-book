@@ -130,7 +130,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Many NLP tools work on a sentence-by-sentence basis. The next preprocessing step is hence to segment streams of tokens into sentences. In most cases this is straightforward after tokenization, because we only need to split sentences at sentence-ending punctuation tokens. In Wolfe this behaviour is implemented in the default `SentenceSplitter`.     ",
+      "code" : "Many NLP tools work on a sentence-by-sentence basis. The next preprocessing step is hence to segment streams of tokens into sentences. In most cases this is straightforward after tokenization, because we only need to split sentences at sentence-ending punctuation tokens. In Wolfe you can implement segmentation using `Segmenter` that splits a sentence at a token whenever that token's content matches a regular expression. If this expression only fires for punctuations, you get the desired behaviour. ",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -139,7 +139,7 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "val segmented = SentenceSplitter(tokenized)\nrenderTokens(segmented)",
+      "code" : "val segmenter = Segmenter.fromRegEx(\"^\\\\.$\")\nval segmented = segmenter(tokenized)\nrenderTokens(segmented)",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -148,7 +148,16 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "This is in fact a bad segmentation, as we split at the period of \"Mr.\". However, once you fix tokenization to treat \"Mr.\" as single token, the problem disappears. TODO: Call a good tokenizer here, and then show it works.    ",
+      "code" : "This is in fact a bad segmentation, as we split at the period of \"Mr.\". However, once you fix tokenization to treat \"Mr.\" as single token, the problem disappears. The default Wolfe tokenizer and segmenter overcome this problem. Below we use these to construct a _pipeline_ of document processors using [Scala function composition](https://twitter.github.io/scala_school/pattern-matching-and-functional-composition.html) via `andThen`.       ",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 16,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val pipeline = Tokenizer.default andThen Segmenter.default\nrenderTokens(pipeline(doc))",
       "extraFields" : { },
       "outputFormat" : null
     }
