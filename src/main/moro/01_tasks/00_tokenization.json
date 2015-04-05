@@ -14,7 +14,7 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "val text = \"Thinkin' of a master plan.\"\ntext.split(\"(?=\\\\.)\").toSeq",
+      "code" : "val text = \"Mr. Bob Dobolina is thinkin' of a master plan.\"\ntext.split(\" \").toSeq",
       "extraFields" : {
         "aggregatedCells" : "[]"
       },
@@ -25,7 +25,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "There are clearly a lot of shortcomings with this simple approach to tokenization. However, before we address these we will switch to using the Wolfe [document data structures](linkToImplementationSection). These simplify downstream processing, and also enable tailor-made rendering that will come in handy.\n\nNotice that in wolfe any document is always in a tokenized state, but it may be based on a very coarse grained tokenization where the whole document is one single token. Tokenization in this setting amounts to refining a given tokenization.\n\nBelow `Document.fromString` creates a document where a single token spans the complete source string. \n",
+      "code" : "There are clearly a lot of shortcomings in this tokenization. However, before we address these we will switch to using the Wolfe [document data structures](linkToImplementationSection). These simplify downstream processing, and also enable tailor-made rendering that will come in handy.\n\nNotice that in wolfe any document is always in a tokenized state, but it may be based on a very coarse grained tokenization where the whole document is one single token. Tokenization in this setting amounts to refining a given tokenization.\n\nBelow `Document.fromString` creates a document where a single token spans the complete source string. \n",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -34,7 +34,7 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "val doc = Document.fromString(\"Thinkin' of a master plan.\")\nrenderTokens(doc)",
+      "code" : "val doc = Document.fromString(text)\nrenderTokens(doc)",
       "extraFields" : {
         "aggregatedCells" : "[\"val text = \\\"Thinkin' of a master plan.\\\"\\ntext.split(\\\" \\\").toSeq\"]"
       },
