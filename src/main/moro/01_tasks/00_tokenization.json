@@ -14,7 +14,7 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "val text = \"Thinkin' of a master plan.\"\ntext.split(\" \").toSeq",
+      "code" : "val text = \"Thinkin' of a master plan.\"\ntext.split(\"(?=\\\\.)\").toSeq",
       "extraFields" : {
         "aggregatedCells" : "[]"
       },
@@ -67,6 +67,24 @@
       "extraFields" : {
         "aggregatedCells" : "[\"val text = \\\"Thinkin' of a master plan.\\\"\\ntext.split(\\\" \\\").toSeq\",\"val doc = Document.fromString(\\\"Thinkin' of a master plan.\\\")\\nrenderTokens(doc)\"]"
       },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 7,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Blah",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 8,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val tokenizer = Tokenizer.fromRegEx(\"((?<=\\\\.)|(?=\\\\.)| )\")\nval tokenized = tokenizer(doc)\nrenderTokens(tokenized)",
+      "extraFields" : { },
       "outputFormat" : null
     }
   } ],

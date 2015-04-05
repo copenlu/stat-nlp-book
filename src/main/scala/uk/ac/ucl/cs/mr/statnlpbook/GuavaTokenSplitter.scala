@@ -2,6 +2,8 @@ package uk.ac.ucl.cs.mr.statnlpbook
 
 import com.google.common.base.Splitter
 import ml.wolfe.nlp.{CharOffsets, Token, Document}
+import scala.collection.JavaConverters._
+
 
 
 
@@ -10,7 +12,6 @@ import ml.wolfe.nlp.{CharOffsets, Token, Document}
  */
 class GuavaTokenSplitter(val splitter: Splitter) extends (Document => Document) {
   import scala.collection.mutable.ArrayBuffer
-  import scala.collection.JavaConverters._
 
 
   def apply(doc: Document) = {
@@ -21,6 +22,7 @@ class GuavaTokenSplitter(val splitter: Splitter) extends (Document => Document) 
     def split(token: Token) = {
       tokens.clear()
       val splits = splitter.split(token.word).asScala
+      //todo nasty whitespace added to overcome guava issue with end of line lookbehind
       val end = token.offsets.end
       var offset = token.offsets.start
       for (word <- splits) {
@@ -39,8 +41,11 @@ object Tokenizer {
   def fromRegEx(regex:String) = new GuavaTokenSplitter(Splitter.onPattern(regex))
 
   def main(args: Array[String]) {
-    val doc = Document.fromString("Thinkin' of a master plan.")
-    val tokenizer = Tokenizer.fromRegEx(" ")
+    val doc = Document.fromString("Thinkin' of a master plan Mr. Peko.")
+    val splitter = Splitter.onPattern("(?<!(Mr|Mrs))(?=[\\.,])|(?<=[\\.,])(?! )| ")
+//    val splitter = Splitter.onPattern("(?<!Mr)(?=[\\.,])")
+    println(splitter.split("Thinkin' of.a master plan Mr. and Mrs. Peko.").asScala.mkString("\n"))
+    val tokenizer = Tokenizer.fromRegEx("(?=[\\.,])| |(?<=[\\.,])(?! )")
     println(tokenizer(doc))
   }
 }
