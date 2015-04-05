@@ -94,7 +94,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "This still isn't perfect. First, \"Mr.\" is split into two tokens, but it should be one. Second, and more subtly, many downstream linguistic processors (such as [syntactic parsers](todo)) prefer contractions such as \"doesn't\" to become two tokens, \"does\" and \"'t\" (Why?). We leave fixing this to to reader as an **exercise** TODO: have some way to highlight exercises.    ",
+      "code" : "This still isn't perfect. First, \"Mr.\" is split into two tokens, but it should be one. Second, and more subtly, many downstream linguistic processors (such as [syntactic parsers](todo)) prefer contractions such as \"doesn't\" to become two tokens, \"does\" and \"'t\" (Why?). \n\n##### Exercise\nImprove the regular expressions to overcome the two problems above.    ",
       "extraFields" : { },
       "outputFormat" : null
     }
