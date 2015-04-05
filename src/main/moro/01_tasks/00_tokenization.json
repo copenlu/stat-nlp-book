@@ -161,6 +161,24 @@
       "extraFields" : { },
       "outputFormat" : null
     }
+  }, {
+    "id" : 17,
+    "compiler" : "heading5",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Exercise",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 18,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Create a regular expression tokenizer and sentence segmenter that can process Hip-Hop lyrics from [OHHLA](todo). Use the `Corpora.ohhla` document collection and split sentences per line. ",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
   } ],
   "config" : { }
 }
