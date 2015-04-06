@@ -5,8 +5,21 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Yo\n$$\n \\prob{t_1,t_2,\\ldots}\n$$",
-      "extraFields" : { },
+      "code" : "Language models calculate the probability to see a given sequence of words, as defined through a [tokenization]() algorithm, in a given language or sub-language/domain/genre. For example, an English language model may assign a higher probability to seeing the sequence \"Blah Blub Blah\" than to \"Blub blub blub\", and for a hip-hop language model this proportion may be reversed.  \n\nMore formally, a language model \\\\(l\\\\) defines a distribution \\\\(\\prob_l(w_1,w_2,\\ldots,w_n)\\\\) over sequences of words.   \n$$\n \\prob(t_1,t_2,\\ldots)\n$$\n\n### What <a name=\"what\"></a>\n\nThis is a section\n",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 1,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "2 + 2",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      },
       "outputFormat" : null
     }
   } ],

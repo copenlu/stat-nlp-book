@@ -1,7 +1,8 @@
 package uk.ac.ucl.cs.mr.statnlpbook
 
 import com.google.common.base.Splitter
-import ml.wolfe.nlp.{Sentence, CharOffsets, Token, Document}
+import ml.wolfe.nlp.{CharOffsets, Document, Sentence, Token}
+
 import scala.collection.JavaConverters._
 import scala.collection.mutable.ArrayBuffer
 import scala.util.matching.Regex
@@ -9,34 +10,28 @@ import scala.util.matching.Regex
 /**
  * @author riedel
  */
-class RegexTokenizer(val splitter: Splitter) extends (Document => Document) {
-  import scala.collection.mutable.ArrayBuffer
+class RegexTokenizer(val regex: Regex) extends (Document => Document) {
 
   def apply(doc: Document) = {
     val text = doc.source
-    val tokens = new ArrayBuffer[Token]
-    tokens.sizeHint(1000)
 
     def split(token: Token) = {
-      tokens.clear()
-      val splits = splitter.split(token.word + " ").asScala
-      //todo nasty whitespace added to overcome guava issue with end of line lookbehind
-      val end = token.offsets.end
       var offset = token.offsets.start
-      for (word <- splits) {
-        while (doc.source.slice(offset,offset + word.length) != word) offset += 1
-        val newToken = Token(word, CharOffsets(offset,offset + word.length))
-        tokens += newToken
-        offset += word.length
+      val result = for (m <- regex.findAllMatchIn(token.word)) yield {
+        val end = m.start
+        val newToken = Token(doc.source.slice(offset,end), CharOffsets(offset,end))
+        offset = m.end
+        newToken
       }
-      IndexedSeq.empty ++ tokens
+      result.filter(t => t.offsets.end > t.offsets.start).toIndexedSeq
     }
     doc.copy(sentences = doc.sentences.map(s => s.copy(tokens = s.tokens.flatMap(split))))
   }
 }
 
+
 object Tokenizer {
-  def fromRegEx(regex:String) = new RegexTokenizer(Splitter.onPattern(regex).omitEmptyStrings())
+  def fromRegEx(regex:String) = new RegexTokenizer(regex.r)
 
   lazy val default = {
     val punct = "[\\.\\?]"
