@@ -17,10 +17,10 @@ object LanguageModels {
 
   type History = List[String]
   type Vocab = Set[String]
+  val random = new Random(0)
 
 
   trait Counts extends (String => Double) {
-    val random = new Random(0)
 
     def vocab: Vocab
 
@@ -39,9 +39,9 @@ object LanguageModels {
     lazy val proportions = new DenseProportions1((indexedVocab map prob).toArray)
 
     def sample() = {
-      indexedVocab(proportions.sampleIndex(random))
+      val index = proportions.sampleIndex(random)
+      indexedVocab(index)
     }
-
 
   }
 
@@ -57,6 +57,7 @@ object LanguageModels {
 
     lazy val normalizer = original.normalizer + vocab.size * alpha
 
+    override def toString() = s"$original + $alpha"
   }
 
   class RawCounts(val counts: Map[String, Double], val vocab: Vocab) extends Counts {
@@ -68,6 +69,9 @@ object LanguageModels {
     lazy val activeCounts = 0.0 :: counts.values.toList
     lazy val inverseMap = counts.groupBy(_._2) mapValues (_.keys.toList)
     lazy val normalizer = counts.valuesIterator.sum
+
+    override def toString() = counts.toString()
+
   }
 
   trait DiscountedCounts extends Counts {
@@ -114,7 +118,7 @@ object LanguageModels {
         recurse(tail)
       case _ =>
     }
-    recurse(padded(train,historyLength))
+    recurse(padded(train, historyLength))
     val map = counts mapValues (c => new RawCounts(c.toMap, vocabulary))
     new NGramLM {
       val counts = map.toMap withDefaultValue constantCounts(vocabulary)
@@ -126,7 +130,7 @@ object LanguageModels {
   }
 
   def laplace(lm: NGramLM, addCount: Double) = new NGramLM with LMDecorator {
-    val counts = lm.counts mapValues (c => new LaplaceCounts(c, addCount))
+    val counts = Map() ++ (lm.counts mapValues (c => new LaplaceCounts(c, addCount))).toMap
 
     def original = lm
   }
@@ -175,7 +179,7 @@ object LanguageModels {
     }
 
     def perplexity(data: History) = {
-      val logP = logPerplexity(padded(data,historySize))
+      val logP = logPerplexity(padded(data, historySize))
       val normed = -logP / data.length
       math.exp(normed)
     }
@@ -200,7 +204,9 @@ object LanguageModels {
 
   def history(docs: Iterable[Document], padding: Int = 5) = {
     val content = docs flatMap (_.tokens map (_.word))
-    content.toList.reverse
+    val list = content.toList
+    val result = list.reverse
+    result
   }
 
   @tailrec
@@ -216,7 +222,7 @@ object LanguageModels {
     }
   }
 
-  def padded(history: History, howMuch:Int = 5) = {
+  def padded(history: History, howMuch: Int = 5) = {
     val init = (0 until howMuch).toList map (_ => PAD)
     history ++ init
   }
@@ -230,11 +236,12 @@ object LanguageModels {
 
   def main(args: Array[String]) {
     //when calculating perplexity and training a model, the input should always be padded
+    //but OOV after padding creates: [PAD][OOV][OOV] ...
     val docs = OHHLA.JLive.allAlbums flatMap OHHLA.loadDir
     val (trainDocs, testDocs) = docs.splitAt(docs.length - 1)
-    val train = replaceFirstOccurenceWithOOV(OOV, history(trainDocs))
+    val train = replaceFirstOccurenceWithOOV(OOV, history(trainDocs)).reverse
     val vocab = train.toSet
-    val test = filterByVocab(vocab, OOV, history(testDocs))
+    val test = filterByVocab(vocab, OOV, history(testDocs)).reverse
 
     println(train.length)
 
@@ -246,13 +253,15 @@ object LanguageModels {
       val lms = Seq(
         "vocabLM" -> vocabLM(vocab),
         "unigramLM" -> ngramLM(train, 0, vocab),
-        "bigramLM" -> ngramLM(train, 1, vocab)
+        "bigramLM" -> laplace(ngramLM(train, 1, vocab), 0.0001)
       )
 
       for ((name, lm) <- lms) {
         println(name)
         println(lm.perplexity(test))
-        println(lm.sampleMany(10).reverse)
+        println(lm.sampleMany(25).reverse)
+
+
 
       }
     }
