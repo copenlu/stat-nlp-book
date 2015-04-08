@@ -43,6 +43,8 @@ object Build extends Build {
   import BuildSettings._
 
   lazy val wolfeNLP = ProjectRef(file("./wolfe"), "wolfe-nlp")
+  lazy val wolfeCore = ProjectRef(file("./wolfe"), "wolfe-core")
+
   lazy val wolfeUI = ProjectRef(file("./wolfe"), "wolfe-ui")
 
 
@@ -52,6 +54,7 @@ object Build extends Build {
     settings = buildSettings
   ) dependsOn(
     wolfeNLP % "test->test;compile->compile",
-    wolfeUI % "test->test;compile->compile"
+    wolfeUI % "test->test;compile->compile",
+    wolfeCore % "test->test;compile->compile"
     )
 }

@@ -1,13 +1,16 @@
 package uk.ac.ucl.cs.mr.statnlpbook.chapter
 
 import cc.factorie.variable.DenseProportions1
+import gnu.trove.map.hash.TIntDoubleHashMap
 import ml.wolfe.nlp.Document
+import ml.wolfe.term.{TypedDom, GenericDiscreteDom, VarSeqDom, DoubleTerm}
 
 import scala.annotation.tailrec
 import scala.collection.mutable
 import scala.util.Random
 
 import uk.ac.ucl.cs.mr.statnlpbook.corpora.OHHLA
+import uk.ac.ucl.cs.mr.statnlpbook.Util._
 
 
 /**
@@ -16,9 +19,10 @@ import uk.ac.ucl.cs.mr.statnlpbook.corpora.OHHLA
 object LanguageModels {
 
   type History = List[String]
+  type ConditionalCounts = PartialFunction[History, Counts]
   type Vocab = Set[String]
-  val random = new Random(0)
 
+  val random = new Random(0)
 
   trait Counts extends (String => Double) {
 
@@ -43,6 +47,9 @@ object LanguageModels {
       indexedVocab(index)
     }
 
+    def asMap = vocab.map(w => w -> apply(w)).toMap
+
+    override def toString() = asMap.toString()
   }
 
   class LaplaceCounts(val original: Counts, val alpha: Double) extends Counts {
@@ -103,7 +110,7 @@ object LanguageModels {
     }
   }
 
-  def constantCounts(vocabulary: Vocab) = new LaplaceCounts(new RawCounts(Map.empty, vocabulary), 1.0)
+  def constantCounts(vocabulary: Vocab) = new LaplaceCounts(zeroCounts(vocabulary), 1.0)
 
   def ngramLM(train: History, historyLength: Int, vocabulary: Vocab): NGramLM = {
     val counts = new mutable.HashMap[History, mutable.HashMap[String, Double]]
@@ -120,20 +127,39 @@ object LanguageModels {
     }
     recurse(padded(train, historyLength))
     val map = counts mapValues (c => new RawCounts(c.toMap, vocabulary))
-    new NGramLM {
-      val counts = map.toMap withDefaultValue constantCounts(vocabulary)
-
-      def historySize = historyLength
-
-      def vocab = vocabulary
-    }
+    lm(map.toMap, vocabulary, historyLength)
   }
 
-  def laplace(lm: NGramLM, addCount: Double) = new NGramLM with LMDecorator {
-    val counts = Map() ++ (lm.counts mapValues (c => new LaplaceCounts(c, addCount))).toMap
+  def lm(conditionalCounts: ConditionalCounts, vocabulary: Vocab, history: Int) = new NGramLM {
+    def historySize = history
 
-    def original = lm
+    def counts = conditionalCounts
+
+    def vocab = vocabulary
   }
+
+  def zeroCounts(vocabulary: Vocab) = new Counts {
+    def activeCounts = 0.0 :: Nil
+
+    def inverse(count: Double) = if (count == 0.0) vocab.toList else Nil
+
+    def apply(word: String) = 0.0
+
+    def vocab = vocabulary
+
+    def normalizer = 0.0
+
+    override def toString() = "_ => 0.0"
+  }
+
+  def laplace(lm: NGramLM, addCount: Double) =
+    lm decorate { c => cached(c andThen (new LaplaceCounts(_, addCount))) }
+
+  def backOff(lmN: NGramLM, lmNMinus1: NGramLM) =
+    lmN decorate { c => c orElse { case h => lmNMinus1.counts(h.dropRight(1)) } }
+
+  def interpolate(lmN: NGramLM, lmNMinus1: NGramLM, alpha: Double) =
+    lmN decorate { c => c orElse { case h => lmNMinus1.counts(h.dropRight(1)) } }
 
 
   //for each history we need to know which values are defined
@@ -141,7 +167,9 @@ object LanguageModels {
   //PartialFunction[History,PartialFunction[String,Double]]
 
   trait NGramLM {
-    def counts: Map[History, Counts]
+    self =>
+
+    def counts: ConditionalCounts
 
     def vocab: Vocab
 
@@ -150,6 +178,12 @@ object LanguageModels {
     def historySize: Int
 
     lazy val padding = (0 until historySize).toList map (_ => PAD)
+
+    def decorate(f: ConditionalCounts => ConditionalCounts) = new LMDecorator {
+      def original = self
+
+      lazy val counts = f(self.counts)
+    }
 
     @tailrec
     final def sampleMany(numSamples: Int, soFar: History = padding): History = {
@@ -227,6 +261,7 @@ object LanguageModels {
     history ++ init
   }
 
+
   def filterByVocab(vocab: Vocab, oov: String, corpus: History) =
     corpus map (w => if (vocab(w)) w else oov)
 
@@ -260,12 +295,73 @@ object LanguageModels {
         println(name)
         println(lm.perplexity(test))
         println(lm.sampleMany(25).reverse)
-
-
-
       }
     }
 
   }
 
 }
+
+object CountTerms {
+
+  import ml.wolfe.term.TermImplicits._
+
+  type NGramDom[T] = VarSeqDom[GenericDiscreteDom[T]]
+
+  trait NGramCounts[C <: NGramDom[_]] {
+    val ngramDomain: C
+    type NGramTerm = ngramDomain.Term
+
+    def apply(ngram: NGramTerm): DoubleTerm
+  }
+
+  def ngramCounts[T, C <: NGramDom[T]](data: Seq[T], order: Int, ngramDom: C): NGramCounts[ngramDom.type] = {
+    val elementDom = ngramDom.elementDom
+    val dataSettings = data.map(elementDom.toSetting).toArray
+    //learn a mapping from sequences of integers (can be mapped to single integers) to doubles, using trove IntDoubleMap
+    val countMap = new TIntDoubleHashMap(1000)
+    for (i <- order until dataSettings.length) {
+      //need to map each ngram to an index
+
+    }
+    ???
+  }
+
+//  def normalize[C <: NGramDom[_]](counts:NGramCounts[C]) = new NGramCounts[counts.ngramDomain.type] {
+//    val ngramDomain = counts.ngramDomain
+//
+//    //todo: counts need to know, for a given history-prefix, the events that give non-zero counts,
+//    //todo: to calculate normalizer more efficiently
+//    //todo: and its own implicit order to make sure we don't cache for each history
+//
+//    def apply(ngram: NGramTerm) = {
+//      ???
+//    }
+//  }
+
+  def interpolation[C <: NGramDom[_]](c1: NGramCounts[C])
+                                         (c2: NGramCounts[c1.ngramDomain.type])
+                                         (alpha: Double) = new NGramCounts[c1.ngramDomain.type] {
+    val ngramDomain: c1.ngramDomain.type = c1.ngramDomain
+
+    def apply(ngram: NGramTerm): DoubleTerm = {
+      c1(ngram) + c2(ngram) * alpha
+    }
+  }
+
+  def zero[C <: NGramDom[_]](dom:C):NGramCounts[dom.type] = new NGramCounts[dom.type] {
+    val ngramDomain: dom.type = dom
+    def apply(ngram: NGramTerm) = 0.0
+  }
+
+  def laplace[C <: NGramDom[_]](c:NGramCounts[C], alpha:Double) = new NGramCounts[c.ngramDomain.type] {
+    val ngramDomain: c.ngramDomain.type = c.ngramDomain
+
+    def apply(ngram: NGramTerm): DoubleTerm = {
+      c(ngram) + alpha
+    }
+  }
+
+}
+
+
