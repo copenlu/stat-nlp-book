@@ -307,20 +307,60 @@ object CountTerms {
   import ml.wolfe.term.TermImplicits._
 
   trait LanguageModel {
-    def order:Int
-    val Words:DiscreteDom[String]
-    val Histories = Seqs(Words,order - 1)
-    val Ngrams = Seqs(Words,order)
+    def order: Int
 
-    def counts(ngram:Ngrams.Term):DoubleTerm
-    def normalizer(history:Histories.Term):DoubleTerm
+    val Words: DiscreteDom[String]
+    val Histories:VarSeqDom[Words.type] // = Seqs(Words, order - 1)
+    val Ngrams:VarSeqDom[Words.type] // = Seqs(Words, order)
 
-//    def prob(history:Histories.Term)(word:Words.Term) =
-//      counts(history :+ word) / normalizer(history)
+    def counts(ngram: Ngrams.Term): DoubleTerm
 
+    def normalizer(history: Histories.Term): DoubleTerm
+
+    def apply(history: Histories.Term)(word: Words.Term) =
+      counts(history.append(word)(Ngrams)) / normalizer(history)
+
+    val prob = fun(Histories, Words)((h, w) => apply(h)(w))
   }
 
+  trait DecorateLM extends LanguageModel {
+    val self:LanguageModel
+    val Words:self.Words.type = self.Words
+    val Histories:self.Histories.type = self.Histories
+    val Ngrams:self.Ngrams.type = self.Ngrams
+    def order = self.order
+  }
 
+  def ngramLM(data: Seq[String], vocab: Seq[String], ngramOrder: Int): LanguageModel = new LanguageModel {
+    def order = ngramOrder
+
+    implicit val Words = vocab.toDom
+    val Histories = Seqs(Words, order - 1)
+    val Ngrams = Seqs(Words, order)
+    val NgramCounts = TypedVectors(Ngrams)
+    val HistoryCounts = TypedVectors(Histories)
+    val nCounts = ngramCounts(data.toConst, ngramOrder)(NgramCounts)
+    val historyCounts = ngramCounts(data.dropRight(1).toConst, ngramOrder - 1)(HistoryCounts)
+
+    def counts(ngram: Ngrams.Term) = nCounts(ngram)
+    def normalizer(history: Histories.Term) = historyCounts(history)
+  }
+
+  def constantLM(vocab:Seq[String]) = new LanguageModel {
+    def order = 0
+    implicit val Words = vocab.toDom
+    val Histories = Seqs(Words,0)
+    val Ngrams = Seqs(Words, 1)
+
+    def counts(ngram: Ngrams.Term) = 1.0
+    def normalizer(history: Histories.Term) = Words.domainSize
+  }
+
+  def laplace(lm: LanguageModel, alpha: Double) = new DecorateLM {
+    val self:lm.type = lm
+    def counts(ngram: Ngrams.Term) = lm.counts(ngram) + alpha
+    def normalizer(history: Histories.Term) = lm.normalizer(history) + (Words.domainSize * alpha)
+  }
 
 
 }
