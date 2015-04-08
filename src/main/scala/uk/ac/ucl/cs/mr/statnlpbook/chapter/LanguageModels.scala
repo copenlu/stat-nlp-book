@@ -315,8 +315,8 @@ object CountTerms {
     def counts(ngram:Ngrams.Term):DoubleTerm
     def normalizer(history:Histories.Term):DoubleTerm
 
-    def prob(history:Histories.Term)(word:Words.Term) =
-      counts(???) / normalizer(history)
+//    def prob(history:Histories.Term)(word:Words.Term) =
+//      counts(history :+ word) / normalizer(history)
 
   }
 
