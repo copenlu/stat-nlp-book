@@ -3,7 +3,7 @@ package uk.ac.ucl.cs.mr.statnlpbook.chapter
 import cc.factorie.variable.DenseProportions1
 import gnu.trove.map.hash.TIntDoubleHashMap
 import ml.wolfe.nlp.Document
-import ml.wolfe.term.{TypedDom, GenericDiscreteDom, VarSeqDom, DoubleTerm}
+import ml.wolfe.term._
 
 import scala.annotation.tailrec
 import scala.collection.mutable
@@ -306,61 +306,22 @@ object CountTerms {
 
   import ml.wolfe.term.TermImplicits._
 
-  type NGramDom[T] = VarSeqDom[GenericDiscreteDom[T]]
+  trait LanguageModel {
+    def order:Int
+    val Words:DiscreteDom[String]
+    val Histories = Seqs(Words,order - 1)
+    val Ngrams = Seqs(Words,order)
 
-  trait NGramCounts[C <: NGramDom[_]] {
-    val ngramDomain: C
-    type NGramTerm = ngramDomain.Term
+    def counts(ngram:Ngrams.Term):DoubleTerm
+    def normalizer(history:Histories.Term):DoubleTerm
 
-    def apply(ngram: NGramTerm): DoubleTerm
+    def prob(history:Histories.Term)(word:Words.Term) =
+      counts(???) / normalizer(history)
+
   }
 
-  def ngramCounts[T, C <: NGramDom[T]](data: Seq[T], order: Int, ngramDom: C): NGramCounts[ngramDom.type] = {
-    val elementDom = ngramDom.elementDom
-    val dataSettings = data.map(elementDom.toSetting).toArray
-    //learn a mapping from sequences of integers (can be mapped to single integers) to doubles, using trove IntDoubleMap
-    val countMap = new TIntDoubleHashMap(1000)
-    for (i <- order until dataSettings.length) {
-      //need to map each ngram to an index
 
-    }
-    ???
-  }
 
-//  def normalize[C <: NGramDom[_]](counts:NGramCounts[C]) = new NGramCounts[counts.ngramDomain.type] {
-//    val ngramDomain = counts.ngramDomain
-//
-//    //todo: counts need to know, for a given history-prefix, the events that give non-zero counts,
-//    //todo: to calculate normalizer more efficiently
-//    //todo: and its own implicit order to make sure we don't cache for each history
-//
-//    def apply(ngram: NGramTerm) = {
-//      ???
-//    }
-//  }
-
-  def interpolation[C <: NGramDom[_]](c1: NGramCounts[C])
-                                         (c2: NGramCounts[c1.ngramDomain.type])
-                                         (alpha: Double) = new NGramCounts[c1.ngramDomain.type] {
-    val ngramDomain: c1.ngramDomain.type = c1.ngramDomain
-
-    def apply(ngram: NGramTerm): DoubleTerm = {
-      c1(ngram) + c2(ngram) * alpha
-    }
-  }
-
-  def zero[C <: NGramDom[_]](dom:C):NGramCounts[dom.type] = new NGramCounts[dom.type] {
-    val ngramDomain: dom.type = dom
-    def apply(ngram: NGramTerm) = 0.0
-  }
-
-  def laplace[C <: NGramDom[_]](c:NGramCounts[C], alpha:Double) = new NGramCounts[c.ngramDomain.type] {
-    val ngramDomain: c.ngramDomain.type = c.ngramDomain
-
-    def apply(ngram: NGramTerm): DoubleTerm = {
-      c(ngram) + alpha
-    }
-  }
 
 }
 
