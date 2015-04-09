@@ -336,20 +336,20 @@ object CountTerms {
 
   }
 
-  //  def ngramLM(data: Seq[String], vocab: Seq[String], ngramOrder: Int): LanguageModel = new LanguageModel {
-  //    def order = ngramOrder
-  //
-  //    implicit val Words = vocab.toDom
-  //    val Histories = Seqs(Words, order - 1)
-  //    val Ngrams = Seqs(Words, order)
-  //    val NgramCounts = TypedVectors(Ngrams)
-  //    val HistoryCounts = TypedVectors(Histories)
-  //    val nCounts = ngramCounts(data.toConst, ngramOrder)(NgramCounts)
-  //    val historyCounts = ngramCounts(data.dropRight(1).toConst, ngramOrder - 1)(HistoryCounts)
-  //
-  //    def counts(ngram: Ngrams.Term) = nCounts(ngram)
-  //    def normalizer(history: Histories.Term) = historyCounts(history)
-  //  }
+  def ngramLM(data: Seq[String], vocabulary: Vocab, ngramOrder: Int) = new CountBasedLanguageModel[vocabulary.type] {
+
+    val vocab:vocabulary.type = vocabulary
+
+    val NgramCounts = TypedVectors(Ngrams, new DefaultIndexer())
+    val HistoryCounts = TypedVectors(Ngrams, new DefaultIndexer())
+    val nCounts = ngramCounts(data.toConst, ngramOrder)(NgramCounts)
+    val historyCounts = ngramCounts(data.dropRight(1).toConst, ngramOrder - 1)(HistoryCounts)
+
+    def counts(ngram: Ngrams.Term) = nCounts(ngram)
+
+    def normalizer(history: Ngrams.Term) = historyCounts(history)
+  }
+
   //
   //  def constantLM(vocab:Seq[String]) = new LanguageModel {
   //    def order = 0
