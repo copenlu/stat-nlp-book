@@ -57,13 +57,17 @@ object LanguageModel {
 
   }
 
-  def manualLM(probability:Array[Int] => Int => Double)(implicit vocabulary: Vocab) =
+  def manualLM(probability:IndexedSeq[Int] => Int => Double)(implicit vocabulary: Vocab) =
     new LanguageModel[vocabulary.type] {
       val vocab: vocabulary.type = vocabulary
 
       def apply(history: Ngrams.Term)(word: Words.Term) = {
-
-        ???
+        def compose(input:Settings,output:Setting) = {
+          val historySeq = input(0).disc.array.slice(1,input(0).disc(0) + 1)
+          output.cont(0) = probability(historySeq)(input(1).disc(0))
+        }
+        val term = new ManualTerm(compose,Vector(history,word),Doubles)
+        term
       }
     }
 
