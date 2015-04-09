@@ -39,26 +39,25 @@ object OHHLA {
   }
 
 
-
   def load(file: File) = {
-    val lines = Source.fromFile(file).getLines().mkString("\n")
+    val lines = Util.tryEncodings(enc => Source.fromFile(file,enc).getLines().mkString("\n"))
     val start = lines.indexOf("<pre>") + "<pre>".length
     val end = lines.indexOf("</pre>")
-    val headerAndLyrics = lines.slice(start,end)
-    val lyrics = headerAndLyrics.split("\n").drop(6).map(_.trim).mkString("<BAR>","</BAR><BAR>","</BAR>")
+    val headerAndLyrics = lines.slice(start, end)
+    val lyrics = headerAndLyrics.split("\n").drop(6).map(_.trim).mkString("<BAR>", "</BAR><BAR>", "</BAR>")
     val doc = Document.fromString(lyrics)
     pipeline(doc)
   }
 
-  def saveLoad(file:File) = try {
+  def saveLoad(file: File) = try {
     Some(load(file))
   } catch {
-    case e:MalformedInputException =>
+    case e: MalformedInputException =>
       e.printStackTrace()
       None
   }
 
-  def loadDir(dir:File) = {
+  def loadDir(dir: File) = {
     Util.files(dir) filter (_.getName.endsWith("txt.html")) flatMap saveLoad
   }
 
