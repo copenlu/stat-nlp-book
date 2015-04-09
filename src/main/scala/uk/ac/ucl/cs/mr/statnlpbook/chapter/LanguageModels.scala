@@ -355,9 +355,9 @@ object CountTerms {
     val nCounts = ngramCounts(data.toConst, ngramOrder)(NgramCounts)
     val historyCounts = ngramCounts(data.dropRight(1).toConst, ngramOrder - 1)(HistoryCounts)
 
-    def counts(ngram: Ngrams.Term) = nCounts(ngram)
+    def counts(ngram: Ngrams.Term) = nCounts(ngram.takeRight(ngramOrder))
 
-    def normalizer(history: Ngrams.Term) = historyCounts(history)
+    def normalizer(history: Ngrams.Term) = historyCounts(history.takeRight(ngramOrder - 1))
   }
 
 
