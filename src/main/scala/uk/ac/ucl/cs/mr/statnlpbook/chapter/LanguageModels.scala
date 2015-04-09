@@ -306,61 +306,77 @@ object CountTerms {
 
   import ml.wolfe.term.TermImplicits._
 
-  trait LanguageModel {
-    def order: Int
+  case class Vocab(vocab: Seq[String], maxOrder: Int = 4) {
+    val Words = vocab.toDom
+    val Ngrams = Seqs(Words, 0, maxOrder)
+  }
 
-    val Words: DiscreteDom[String]
-    val Histories:VarSeqDom[Words.type] // = Seqs(Words, order - 1)
-    val Ngrams:VarSeqDom[Words.type] // = Seqs(Words, order)
+
+  trait LanguageModel[V <: Vocab] {
+
+    val vocab: V
+
+    implicit val Ngrams: vocab.Ngrams.type = vocab.Ngrams
+    implicit val Words: vocab.Words.type = vocab.Words
+
+    def apply(history: Ngrams.Term)(word: Words.Term): DoubleTerm
+
+    val prob = fun(Ngrams, Words)((h, w) => apply(h)(w))
+  }
+
+
+  trait CountBasedLanguageModel[V <: Vocab] extends LanguageModel[V] {
 
     def counts(ngram: Ngrams.Term): DoubleTerm
 
-    def normalizer(history: Histories.Term): DoubleTerm
+    def normalizer(history: Ngrams.Term): DoubleTerm
 
-    def apply(history: Histories.Term)(word: Words.Term) =
-      counts(history.append(word)(Ngrams)) / normalizer(history)
+    def apply(history: Ngrams.Term)(word: Words.Term) =
+      counts(history :+ word) / normalizer(history)
 
-    val prob = fun(Histories, Words)((h, w) => apply(h)(w))
   }
 
-  trait DecorateLM extends LanguageModel {
-    val self:LanguageModel
-    val Words:self.Words.type = self.Words
-    val Histories:self.Histories.type = self.Histories
-    val Ngrams:self.Ngrams.type = self.Ngrams
-    def order = self.order
-  }
+  //  def ngramLM(data: Seq[String], vocab: Seq[String], ngramOrder: Int): LanguageModel = new LanguageModel {
+  //    def order = ngramOrder
+  //
+  //    implicit val Words = vocab.toDom
+  //    val Histories = Seqs(Words, order - 1)
+  //    val Ngrams = Seqs(Words, order)
+  //    val NgramCounts = TypedVectors(Ngrams)
+  //    val HistoryCounts = TypedVectors(Histories)
+  //    val nCounts = ngramCounts(data.toConst, ngramOrder)(NgramCounts)
+  //    val historyCounts = ngramCounts(data.dropRight(1).toConst, ngramOrder - 1)(HistoryCounts)
+  //
+  //    def counts(ngram: Ngrams.Term) = nCounts(ngram)
+  //    def normalizer(history: Histories.Term) = historyCounts(history)
+  //  }
+  //
+  //  def constantLM(vocab:Seq[String]) = new LanguageModel {
+  //    def order = 0
+  //    implicit val Words = vocab.toDom
+  //    val Histories = Seqs(Words,0)
+  //    val Ngrams = Seqs(Words, 1)
+  //
+  //    def counts(ngram: Ngrams.Term) = 1.0
+  //    def normalizer(history: Histories.Term) = Words.domainSize
+  //  }
+  //
+  def laplace(lm: CountBasedLanguageModel[_ <: Vocab], alpha: Double) = new CountBasedLanguageModel[lm.vocab.type] {
 
-  def ngramLM(data: Seq[String], vocab: Seq[String], ngramOrder: Int): LanguageModel = new LanguageModel {
-    def order = ngramOrder
+    val vocab: lm.vocab.type = lm.vocab
 
-    implicit val Words = vocab.toDom
-    val Histories = Seqs(Words, order - 1)
-    val Ngrams = Seqs(Words, order)
-    val NgramCounts = TypedVectors(Ngrams)
-    val HistoryCounts = TypedVectors(Histories)
-    val nCounts = ngramCounts(data.toConst, ngramOrder)(NgramCounts)
-    val historyCounts = ngramCounts(data.dropRight(1).toConst, ngramOrder - 1)(HistoryCounts)
-
-    def counts(ngram: Ngrams.Term) = nCounts(ngram)
-    def normalizer(history: Histories.Term) = historyCounts(history)
-  }
-
-  def constantLM(vocab:Seq[String]) = new LanguageModel {
-    def order = 0
-    implicit val Words = vocab.toDom
-    val Histories = Seqs(Words,0)
-    val Ngrams = Seqs(Words, 1)
-
-    def counts(ngram: Ngrams.Term) = 1.0
-    def normalizer(history: Histories.Term) = Words.domainSize
-  }
-
-  def laplace(lm: LanguageModel, alpha: Double) = new DecorateLM {
-    val self:lm.type = lm
     def counts(ngram: Ngrams.Term) = lm.counts(ngram) + alpha
-    def normalizer(history: Histories.Term) = lm.normalizer(history) + (Words.domainSize * alpha)
+
+    def normalizer(history: Ngrams.Term) = lm.normalizer(history) + (Words.domainSize * alpha)
   }
+
+  //
+  //  type TypedLM[W <: DiscreteDom[String], H <: VarSeqDom[W]] = LanguageModel {
+  //    val Words:W
+  //    val Histories:H // = Seqs(Words, order - 1)
+  //  }
+  //
+  //  def interpolate[W <: DiscreteDom[String],H <: VarSeqDom[W]](lm1:TypedLM[W,H],lm2:TypedLM[W,H]) = ???
 
 
 }
