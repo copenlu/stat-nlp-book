@@ -1,17 +1,10 @@
 package uk.ac.ucl.cs.mr.statnlpbook.chapter
 
-import cc.factorie.variable.DenseProportions1
-import gnu.trove.map.hash.TIntDoubleHashMap
 import ml.wolfe.nlp.Document
-import ml.wolfe.term._
-
 import scala.annotation.tailrec
-import scala.collection.mutable
 import scala.util.Random
 
 import uk.ac.ucl.cs.mr.statnlpbook.corpora.OHHLA
-import uk.ac.ucl.cs.mr.statnlpbook.Util._
-
 
 /**
  * @author riedel
@@ -64,7 +57,7 @@ object LanguageModels {
     val (trainDocs, testDocs) = docs.splitAt(docs.length - 1)
     val train = replaceFirstOccurenceWithOOV(OOV, history(trainDocs)).reverse
     implicit val vocab = Vocab(train.distinct)
-    val test = filterByVocab(vocab.vocab.toSet, OOV, history(testDocs)).reverse
+    val test = filterByVocab(vocab.vocab.toSet, OOV, history(testDocs)).reverse.toIndexedSeq
 
     println(train.length)
 
@@ -76,11 +69,12 @@ object LanguageModels {
       val lms = Seq(
         "vocabLM" -> constantLM,
         "unigramLM" -> ngramLM(train, 1),
-        "bigramLM" -> ngramLM(train, 2).laplace(0.0001)
+        "bigramLM" -> ngramLM(train, 2).laplace(1.0)
       )
 
       for ((name, lm) <- lms) {
         println(name)
+        println(lm.perplexity(test))
       }
     }
 

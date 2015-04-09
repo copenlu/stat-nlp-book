@@ -33,10 +33,21 @@ object LanguageModel {
       val vocab: self.vocab.type = self.vocab
 
       def apply(history: Ngrams.Term)(word: Words.Term): DoubleTerm = {
-        this(history)(word) * (1.0 - alpha) +  that(history)(word) * alpha
+        this(history)(word) * (1.0 - alpha) + that(history)(word) * alpha
       }
     }
 
+    def perplexity(data: IndexedSeq[String]): Double = {
+      var logProb = 0.0
+      val historyOrder = vocab.maxOrder - 1
+      for (i <- historyOrder until data.length) {
+        val history = data.slice(i - historyOrder, i)
+        val word = data(i)
+        val p = prob(history,word)
+        logProb += math.log(p)
+      }
+      math.exp(-logProb / (data.length - historyOrder))
+    }
 
 
   }
@@ -66,6 +77,8 @@ object LanguageModel {
 
   def ngramLM(data: Seq[String], ngramOrder: Int)(implicit vocabulary: Vocab) = new CountBasedLanguageModel[vocabulary.type] {
 
+    require(ngramOrder > 0, "ngramOrder needs to be at least 1 (=unigram)")
+
     val vocab: vocabulary.type = vocabulary
 
     val NgramCounts = TypedVectors(Ngrams, new DefaultIndexer())
@@ -85,7 +98,6 @@ object LanguageModel {
       1.0 / vocab.Words.domainSize
     }
   }
-
 
 
   def main(args: Array[String]) {
