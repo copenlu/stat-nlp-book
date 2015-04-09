@@ -314,6 +314,8 @@ object CountTerms {
 
   trait LanguageModel[V <: Vocab] {
 
+    self =>
+
     val vocab: V
 
     implicit val Ngrams: vocab.Ngrams.type = vocab.Ngrams
@@ -322,6 +324,14 @@ object CountTerms {
     def apply(history: Ngrams.Term)(word: Words.Term): DoubleTerm
 
     val prob = fun(Ngrams, Words)((h, w) => apply(h)(w))
+
+    def interpolate(that:LanguageModel[vocab.type],alpha:Double) = new LanguageModel[vocab.type] {
+      val vocab: self.vocab.type = self.vocab
+      def apply(history: Ngrams.Term)(word: Words.Term): DoubleTerm = {
+        this(history)(word) + alpha * that(history)(word)
+      }
+    }
+
   }
 
 
@@ -349,6 +359,7 @@ object CountTerms {
 
     def normalizer(history: Ngrams.Term) = historyCounts(history)
   }
+
 
   //
   //  def constantLM(vocab:Seq[String]) = new LanguageModel {
