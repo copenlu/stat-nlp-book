@@ -33,14 +33,18 @@ object LanguageModel {
       val vocab: self.vocab.type = self.vocab
 
       def apply(history: Ngrams.Term)(word: Words.Term): DoubleTerm = {
-        this(history)(word) + alpha * that(history)(word)
+        this(history)(word) * (1.0 - alpha) +  that(history)(word) * alpha
       }
     }
+
+
 
   }
 
 
   trait CountBasedLanguageModel[V <: Vocab] extends LanguageModel[V] {
+
+    self =>
 
     def counts(ngram: Ngrams.Term): DoubleTerm
 
@@ -48,6 +52,15 @@ object LanguageModel {
 
     def apply(history: Ngrams.Term)(word: Words.Term) =
       counts(history :+ word) / normalizer(history)
+
+    def laplace(alpha: Double) = new CountBasedLanguageModel[vocab.type] {
+
+      val vocab: self.vocab.type = self.vocab
+
+      def counts(ngram: Ngrams.Term) = self.counts(ngram) + alpha
+
+      def normalizer(history: Ngrams.Term) = self.normalizer(history) + (Words.domainSize * alpha)
+    }
 
   }
 
@@ -57,8 +70,8 @@ object LanguageModel {
 
     val NgramCounts = TypedVectors(Ngrams, new DefaultIndexer())
     val HistoryCounts = TypedVectors(Ngrams, new DefaultIndexer())
-    val nCounts = ngramCounts(data.toConst, ngramOrder)(NgramCounts)
-    val historyCounts = ngramCounts(data.dropRight(1).toConst, ngramOrder - 1)(HistoryCounts)
+    val nCounts = ngramCounts(data.toConst, ngramOrder)(NgramCounts).precalculate
+    val historyCounts = ngramCounts(data.dropRight(1).toConst, ngramOrder - 1)(HistoryCounts).precalculate
 
     def counts(ngram: Ngrams.Term) = nCounts(ngram.takeRight(ngramOrder))
 
@@ -73,14 +86,6 @@ object LanguageModel {
     }
   }
 
-  def laplace(lm: CountBasedLanguageModel[_ <: Vocab], alpha: Double) = new CountBasedLanguageModel[lm.vocab.type] {
-
-    val vocab: lm.vocab.type = lm.vocab
-
-    def counts(ngram: Ngrams.Term) = lm.counts(ngram) + alpha
-
-    def normalizer(history: Ngrams.Term) = lm.normalizer(history) + (Words.domainSize * alpha)
-  }
 
 
   def main(args: Array[String]) {
@@ -89,10 +94,13 @@ object LanguageModel {
 
     val lm1 = ngramLM(data, 2)
     val lm2 = constantLM
+    val lm3 = lm1.laplace(1.0)
 
     println(lm1.prob(Vector("A"), "A"))
     println(lm1.prob(Vector("A"), "B"))
     println(lm2.prob(Vector("A"), "B"))
+    println(lm3.prob(Vector("A"), "A"))
+    println(lm3.prob(Vector("A"), "B"))
 
 
   }
