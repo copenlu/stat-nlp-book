@@ -346,7 +346,7 @@ object CountTerms {
 
   }
 
-  def ngramLM(data: Seq[String], vocabulary: Vocab, ngramOrder: Int) = new CountBasedLanguageModel[vocabulary.type] {
+  def ngramLM(data: Seq[String], ngramOrder: Int)(implicit vocabulary: Vocab) = new CountBasedLanguageModel[vocabulary.type] {
 
     val vocab:vocabulary.type = vocabulary
 
