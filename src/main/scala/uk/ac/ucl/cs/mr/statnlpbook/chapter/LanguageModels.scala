@@ -15,11 +15,9 @@ object LanguageModels {
   type History = List[String]
   type Vocab = Set[String]
 
-  def history(docs: Iterable[Document], padding: Int = 5) = {
+  def words(docs: Iterable[Document], padding: Int = 0) = {
     val content = docs flatMap (_.tokens map (_.word))
-    val list = content.toList
-    val result = list.reverse
-    result
+    content.toIndexedSeq
   }
 
   @tailrec
@@ -47,17 +45,19 @@ object LanguageModels {
   def OOV = "<OOV>"
 
   def PAD = "<PAD>"
-
+  
   def main(args: Array[String]) {
 
     import LanguageModel._
+    import OHHLA._
+
     //when calculating perplexity and training a model, the input should always be padded
     //but OOV after padding creates: [PAD][OOV][OOV] ...
-    val docs = OHHLA.JLive.allAlbums flatMap OHHLA.loadDir
+    val docs = JLive.allAlbums flatMap loadDir
     val (trainDocs, testDocs) = docs.splitAt(docs.length - 1)
-    val train = replaceFirstOccurenceWithOOV(OOV, history(trainDocs)).reverse
+    val train = replaceFirstOccurenceWithOOV(OOV, words(trainDocs).toList.reverse).reverse
     implicit val vocab = Vocab(train.distinct)
-    val test = filterByVocab(vocab.words.toSet, OOV, history(testDocs)).reverse.toIndexedSeq
+    val test = filterByVocab(vocab.words.toSet, OOV, words(testDocs).toList.reverse).reverse.toIndexedSeq
 
     println(train.length)
 
@@ -67,9 +67,9 @@ object LanguageModels {
 
     for (_ <- 0 until 1) {
       val lms = Seq(
-        "vocabLM" -> constantLM,
-        "unigramLM" -> ngramLM(train, 1),
-        "bigramLM" -> ngramLM(train, 2).laplace(1.0)
+        "vocabLM" -> uniform,
+        "unigramLM" -> ngram(train, 1),
+        "bigramLM" -> ngram(train, 2).laplace(1.0)
       )
 
       for ((name, lm) <- lms) {

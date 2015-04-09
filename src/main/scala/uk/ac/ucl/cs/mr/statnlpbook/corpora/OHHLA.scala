@@ -28,7 +28,7 @@ object OHHLA {
 
   lazy val pipeline = tokenizer andThen segmenter
 
-  lazy val root = new File("data/ohhla/www.ohhla.com/anonymous/")
+  lazy val root = new File("../data/ohhla/www.ohhla.com/anonymous/")
 
   object JLive {
     lazy val AllAbove = new File(root, "j_live/allabove/")

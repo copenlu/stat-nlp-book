@@ -65,7 +65,7 @@
       "sessionId" : null,
       "code" : "val tokenizer = Tokenizer.fromRegEx(\"\\\\s\")\nval tokenized = tokenizer(doc)\nrenderTokens(tokenized)",
       "extraFields" : {
-        "aggregatedCells" : "[\"val text = \\\"Thinkin' of a master plan.\\\"\\ntext.split(\\\" \\\").toSeq\",\"val doc = Document.fromString(\\\"Thinkin' of a master plan.\\\")\\nrenderTokens(doc)\"]"
+        "aggregatedCells" : "[\"val text = \\\"Mr. Bob Dobolina is thinkin' of a master plan. Why doesn't he quit?\\\"\\ntext.split(\\\" \\\").toSeq\",\"val doc = Document.fromString(text)\\nrenderTokens(doc)\"]"
       },
       "outputFormat" : null
     }
@@ -140,7 +140,9 @@
     "input" : {
       "sessionId" : null,
       "code" : "val segmenter = Segmenter.fromRegEx(\"^\\\\.$\")\nval segmented = segmenter(tokenized)\nrenderTokens(segmented)",
-      "extraFields" : { },
+      "extraFields" : {
+        "aggregatedCells" : "[\"val text = \\\"Mr. Bob Dobolina is thinkin' of a master plan. Why doesn't he quit?\\\"\\ntext.split(\\\" \\\").toSeq\",\"val doc = Document.fromString(text)\\nrenderTokens(doc)\",\"val tokenizer = Tokenizer.fromRegEx(\\\"\\\\\\\\s\\\")\\nval tokenized = tokenizer(doc)\\nrenderTokens(tokenized)\",\"val punct = \\\"[\\\\\\\\.\\\\\\\\?]\\\"\\nval beforePunct = s\\\"(?=$punct)\\\"\\nval afterPunct = s\\\"(?<=$punct)(?!\\\\\\\\s)\\\" //but not if whitespace follows\\nval tokenizer = Tokenizer.fromRegEx(s\\\"(\\\\\\\\s|$beforePunct|$afterPunct)\\\")\\nval tokenized = tokenizer(doc)\\nrenderTokens(tokenized)\"]"
+      },
       "outputFormat" : null
     }
   }, {
@@ -158,7 +160,9 @@
     "input" : {
       "sessionId" : null,
       "code" : "val pipeline = Tokenizer.default andThen Segmenter.default\nrenderTokens(pipeline(doc))",
-      "extraFields" : { },
+      "extraFields" : {
+        "aggregatedCells" : "[\"val text = \\\"Mr. Bob Dobolina is thinkin' of a master plan. Why doesn't he quit?\\\"\\ntext.split(\\\" \\\").toSeq\",\"val doc = Document.fromString(text)\\nrenderTokens(doc)\",\"val tokenizer = Tokenizer.fromRegEx(\\\"\\\\\\\\s\\\")\\nval tokenized = tokenizer(doc)\\nrenderTokens(tokenized)\",\"val punct = \\\"[\\\\\\\\.\\\\\\\\?]\\\"\\nval beforePunct = s\\\"(?=$punct)\\\"\\nval afterPunct = s\\\"(?<=$punct)(?!\\\\\\\\s)\\\" //but not if whitespace follows\\nval tokenizer = Tokenizer.fromRegEx(s\\\"(\\\\\\\\s|$beforePunct|$afterPunct)\\\")\\nval tokenized = tokenizer(doc)\\nrenderTokens(tokenized)\",\"val segmenter = Segmenter.fromRegEx(\\\"^\\\\\\\\.$\\\")\\nval segmented = segmenter(tokenized)\\nrenderTokens(segmented)\"]"
+      },
       "outputFormat" : null
     }
   }, {
