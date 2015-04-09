@@ -57,7 +57,7 @@ object LanguageModels {
     val (trainDocs, testDocs) = docs.splitAt(docs.length - 1)
     val train = replaceFirstOccurenceWithOOV(OOV, history(trainDocs)).reverse
     implicit val vocab = Vocab(train.distinct)
-    val test = filterByVocab(vocab.vocab.toSet, OOV, history(testDocs)).reverse.toIndexedSeq
+    val test = filterByVocab(vocab.words.toSet, OOV, history(testDocs)).reverse.toIndexedSeq
 
     println(train.length)
 

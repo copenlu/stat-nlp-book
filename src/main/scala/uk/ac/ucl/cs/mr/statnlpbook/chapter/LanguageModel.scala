@@ -10,11 +10,16 @@ object LanguageModel {
 
   import ml.wolfe.term.TermImplicits._
 
-  case class Vocab(vocab: Seq[String], maxOrder: Int = 4) {
-    val Words = vocab.toDom
+  case class Vocab(words: Seq[String], maxOrder: Int = 4) {
+    val Words = words.toDom
     val Ngrams = Seqs(Words, 0, maxOrder)
-  }
 
+    def toIndex(word:String) = Words.valueToInt(word)
+    def toValue(index:Int) = Words.intToValue(index)
+
+    def indexed(data:Seq[String]) = data map toIndex
+
+  }
 
   trait LanguageModel[V <: Vocab] {
 
@@ -51,6 +56,16 @@ object LanguageModel {
 
 
   }
+
+  def manualLM(probability:Array[Int] => Int => Double)(implicit vocabulary: Vocab) =
+    new LanguageModel[vocabulary.type] {
+      val vocab: vocabulary.type = vocabulary
+
+      def apply(history: Ngrams.Term)(word: Words.Term) = {
+
+        ???
+      }
+    }
 
 
   trait CountBasedLanguageModel[V <: Vocab] extends LanguageModel[V] {
