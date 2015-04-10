@@ -10,8 +10,10 @@ object LanguageModel {
 
   import ml.wolfe.term.TermImplicits._
 
+  def OOV = "[OOV]"
+
   case class Vocab(words: Seq[String], maxOrder: Int = 4) {
-    val Words = words.toDom
+    val Words = words.toDom withOOV OOV
     val Ngrams = Seqs(Words, 0, maxOrder)
 
     def toIndex(word: String) = Words.valueToInt(word)
@@ -20,7 +22,7 @@ object LanguageModel {
 
     def indexed(data: Seq[String]) = data map toIndex
 
-    def size = words.length
+    def size = Words.domainSize
 
   }
 
@@ -120,7 +122,9 @@ object LanguageModel {
     def normalizer(history: Ngrams.Term) = historyCounts(history.takeRight(ngramOrder - 1))
   }
 
-  def uniform(implicit vocabulary: Vocab) = new LanguageModel[vocabulary.type] {
+  def uniform(implicit vocabulary: Vocab) = ngram(vocabulary.words,1)
+
+  def uniformOld(implicit vocabulary: Vocab) = new LanguageModel[vocabulary.type] {
     val vocab: vocabulary.type = vocabulary
 
     def apply(history: Ngrams.Term)(word: Words.Term): DoubleTerm = {
@@ -137,9 +141,12 @@ object LanguageModel {
     val lm2 = uniform
     val lm3 = lm1.laplace(1.0)
 
+    println(lm2.prob(Vector("A"), "B"))
+    println(lm2.prob(Vector("A"), "A"))
+    println(lm2.prob(Vector("A"), "C"))
+
     println(lm1.prob(Vector("A"), "A"))
     println(lm1.prob(Vector("A"), "B"))
-    println(lm2.prob(Vector("A"), "B"))
     println(lm3.prob(Vector("A"), "A"))
     println(lm3.prob(Vector("A"), "B"))
 
