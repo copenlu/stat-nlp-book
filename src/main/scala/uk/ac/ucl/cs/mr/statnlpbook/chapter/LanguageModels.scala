@@ -15,6 +15,8 @@ object LanguageModels {
   type History = List[String]
   type Vocab = Set[String]
 
+  def NoHistory = Vector.empty[String]
+
   def words(docs: Iterable[Document], padding: Int = 0) = {
     val content = docs flatMap (_.sentences flatMap (s => Vector.fill(padding)(PAD) ++ (s.tokens map (_.word))))
     content.toIndexedSeq
@@ -29,8 +31,8 @@ object LanguageModels {
     result.processed.reverse.toIndexedSeq
   }
 
-  def replaceOOVs(oov:String, vocab: Vocab, corpus: IndexedSeq[String]) =
-    corpus map (w => if (vocab(w)) w else oov)
+  def replaceOOVs(oov:String, vocab: Vocab, corpus: Seq[String]) =
+    (corpus map (w => if (vocab(w)) w else oov)).toIndexedSeq
 
 
   @tailrec

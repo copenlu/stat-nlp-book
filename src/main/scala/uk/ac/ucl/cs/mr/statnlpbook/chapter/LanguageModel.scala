@@ -2,6 +2,8 @@ package uk.ac.ucl.cs.mr.statnlpbook.chapter
 
 import ml.wolfe.term._
 
+import scala.collection.immutable.ListMap
+
 
 /**
  * @author riedel
@@ -51,6 +53,12 @@ object LanguageModel {
       def apply(history: Ngrams.Term)(word: Words.Term): DoubleTerm = {
         this(history)(word) * (1.0 - alpha) + that(history)(word) * alpha
       }
+    }
+
+    def distribution(history:IndexedSeq[String] = Vector.empty) = {
+      val conditioned = fun(Words)(w => apply(Ngrams.Const(history))(w))
+      val pairs = vocab.Words.values map (w => w -> conditioned(w))
+      ListMap((pairs sortBy (-_._2)):_*)
     }
 
     def perplexity(data: IndexedSeq[String]): Double = {

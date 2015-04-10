@@ -56,7 +56,7 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "val baseline = uniform(vocab)\nbaseline.prob(Vector.empty,\"call\") * vocab.size",
+      "code" : "val baseline = uniform(vocab)\nbaseline.prob(NoHistory,\"call\") * vocab.size",
       "extraFields" : {
         "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\"]"
       },
@@ -78,7 +78,7 @@
       "sessionId" : null,
       "code" : "baseline.perplexity(test)",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\"]"
       },
       "outputFormat" : null
     }
@@ -96,9 +96,9 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))",
+      "code" : "test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(NoHistory,w))",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\"]"
       },
       "outputFormat" : null
     }
@@ -116,9 +116,9 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "injectOOVs(OOV, List(\"A\",\"A\",\"B\",\"B\",\"A\")) -> \nreplaceOOVs(OOV, Set(\"A\",\"B\"), List(\"A\",\"B\",\"C\"))",
+      "code" : "injectOOVs(OOV, Seq(\"A\",\"A\",\"B\",\"B\",\"A\")) -> \nreplaceOOVs(OOV, Set(\"A\",\"B\"), Seq(\"A\",\"B\",\"C\"))",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(NoHistory,w))\"]"
       },
       "outputFormat" : null
     }
@@ -138,7 +138,7 @@
       "sessionId" : null,
       "code" : "val train = injectOOVs(OOV, words(trainDocs))\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\nval vocab = Vocab(train.distinct)\nval baseline = uniform(vocab)\nbaseline.perplexity(test.toIndexedSeq)",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))\",\"injectOOVs(OOV, List(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), List(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(NoHistory,w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\"]"
       },
       "outputFormat" : null
     }
@@ -156,9 +156,9 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "val unigram = ngram(train,1)(vocab)\n\n",
+      "code" : "val unigram = ngram(train,1)(vocab)\nunigram.distribution(NoHistory).takeRight(10)",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))\",\"injectOOVs(OOV, List(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), List(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(NoHistory,w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\"]"
       },
       "outputFormat" : null
     }
