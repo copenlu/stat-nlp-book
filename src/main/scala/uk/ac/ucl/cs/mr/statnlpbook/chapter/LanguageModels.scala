@@ -16,8 +16,17 @@ object LanguageModels {
   type Vocab = Set[String]
 
   def words(docs: Iterable[Document], padding: Int = 0) = {
-    val content = docs flatMap (_.tokens map (_.word))
+    val content = docs flatMap (_.sentences flatMap (s => Vector.fill(padding)(PAD) ++ (s.tokens map (_.word))))
     content.toIndexedSeq
+  }
+
+  def injectOOVs(oov: String, words: Seq[String]) = {
+    case class Result(vocab: Set[String], processed: List[String])
+    def combine(result: Result, word: String) =
+      if (result.vocab(word)) result.copy(processed = word :: result.processed)
+      else Result(result.vocab + word, oov :: result.processed)
+    val result = words.foldLeft(Result(Set.empty, Nil))(combine)
+    result.processed.reverse.toIndexedSeq
   }
 
   @tailrec
@@ -45,7 +54,7 @@ object LanguageModels {
   def OOV = "<OOV>"
 
   def PAD = "<PAD>"
-  
+
   def main(args: Array[String]) {
 
     import LanguageModel._

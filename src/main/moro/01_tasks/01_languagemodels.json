@@ -87,7 +87,27 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### Out-of-Vocabularly Words\n\nThe problem in the above case is that the baseline model assigns zero probability to words that are not in the vocabulary. Test sets will usually contain such words, and this leads to the above result. There are various solutions to this problem, but TODO: introduce OOV preprocessing and say that it's orthogonal to smoothing.  \n",
+      "code" : "#### Out-of-Vocabularly Words\n\nThe problem in the above case is that the baseline model assigns zero probability to words that are not in the vocabulary. Test sets will usually contain such words, and this leads to the above result. \n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 9,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))",
+      "extraFields" : {
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 10,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "There are various solutions to this problem, but TODO: introduce OOV preprocessing and say that it's orthogonal to smoothing.  ",
       "extraFields" : { },
       "outputFormat" : null
     }

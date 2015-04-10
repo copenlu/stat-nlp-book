@@ -10,9 +10,11 @@ object LanguageModel {
 
   import ml.wolfe.term.TermImplicits._
 
-  def OOV = "[OOV]"
 
   case class Vocab(words: Seq[String], maxOrder: Int = 4) {
+
+    def OOV = "[OOV]"
+
     val Words = words.toDom withOOV OOV
     val Ngrams = Seqs(Words, 0, maxOrder)
 
@@ -149,6 +151,8 @@ object LanguageModel {
     println(lm1.prob(Vector("A"), "B"))
     println(lm3.prob(Vector("A"), "A"))
     println(lm3.prob(Vector("A"), "B"))
+
+    println(LanguageModels.injectOOVs(vocab.OOV,data))
 
 
   }
