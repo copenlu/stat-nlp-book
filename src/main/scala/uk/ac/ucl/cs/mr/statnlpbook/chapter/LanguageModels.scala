@@ -55,9 +55,9 @@ object LanguageModels {
   def filterByVocab(vocab: Vocab, oov: String, corpus: History) =
     corpus map (w => if (vocab(w)) w else oov)
 
-  def OOV = "<OOV>"
+  def OOV = "[OOV]"
 
-  def PAD = "<PAD>"
+  def PAD = "[PAD]"
 
   def main(args: Array[String]) {
 

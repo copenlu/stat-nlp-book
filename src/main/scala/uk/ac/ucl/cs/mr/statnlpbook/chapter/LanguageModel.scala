@@ -13,7 +13,7 @@ object LanguageModel {
 
   case class Vocab(words: Seq[String], maxOrder: Int = 4) {
 
-    def OOV = "[OOV]"
+    def OOV = LanguageModels.OOV
 
     val distinct = words.distinct
     val Words = distinct.toDom withOOV OOV

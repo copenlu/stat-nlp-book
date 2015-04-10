@@ -116,7 +116,7 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "injectOOVs(\"[OOV]\", List(\"A\",\"A\",\"B\",\"B\")) -> \nreplaceOOVs(\"[OOV]\", Set(\"A\",\"B\"), List(\"A\",\"B\",\"C\"))",
+      "code" : "injectOOVs(OOV, List(\"A\",\"A\",\"B\",\"B\")) -> \nreplaceOOVs(OOV, Set(\"A\",\"B\"), List(\"A\",\"B\",\"C\"))",
       "extraFields" : {
         "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))\"]"
       },
@@ -136,9 +136,9 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "val train = injectOOVs(\"[OOV]\", words(trainDocs))\nval test = replaceOOVs(\"[OOV]\", train.toSet, words(testDocs))\nval vocab = Vocab(train.distinct)\nvocab.size",
+      "code" : "val train = injectOOVs(OOV, words(trainDocs))\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\nval vocab = Vocab(train.distinct)\nvocab.size",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))\",\"injectOOVs(\\\"[OOV]\\\", List(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\")) -> \\nreplaceOOVs(\\\"[OOV]\\\", Set(\\\"A\\\",\\\"B\\\"), List(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\\n\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))\",\"injectOOVs(OOV, List(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), List(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\"]"
       },
       "outputFormat" : null
     }
