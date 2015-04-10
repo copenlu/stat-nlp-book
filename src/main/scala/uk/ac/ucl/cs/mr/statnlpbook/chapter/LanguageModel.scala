@@ -55,8 +55,8 @@ object LanguageModel {
       }
     }
 
-    def distribution(history:IndexedSeq[String] = Vector.empty) = {
-      val conditioned = fun(Words)(w => apply(Ngrams.Const(history))(w))
+    def distribution(history:String*) = {
+      val conditioned = fun(Words)(w => apply(Ngrams.Const(history.toIndexedSeq))(w))
       val pairs = vocab.Words.values map (w => w -> conditioned(w))
       ListMap((pairs sortBy (-_._2)):_*)
     }

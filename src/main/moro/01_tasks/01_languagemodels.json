@@ -156,7 +156,7 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "val unigram = ngram(train,1)(vocab)\nunigram.distribution(NoHistory).take(10)",
+      "code" : "val unigram = ngram(train,1)(vocab)\nunigram.distribution().take(10)",
       "extraFields" : {
         "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(NoHistory,w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\"]"
       },
