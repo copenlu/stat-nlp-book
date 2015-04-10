@@ -82,6 +82,15 @@
       },
       "outputFormat" : null
     }
+  }, {
+    "id" : 8,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "#### Out-of-Vocabularly Words\n\nThe problem in the above case is that the baseline model assigns zero probability to words that are not in the vocabulary. Test sets will usually contain such words, and this leads to the above result. There are various solutions to this problem, but TODO: introduce OOV preprocessing and say that it's orthogonal to smoothing.  \n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
   } ],
   "config" : { }
 }
