@@ -116,7 +116,7 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "injectOOVs(OOV, List(\"A\",\"A\",\"B\",\"B\")) -> \nreplaceOOVs(OOV, Set(\"A\",\"B\"), List(\"A\",\"B\",\"C\"))",
+      "code" : "injectOOVs(OOV, List(\"A\",\"A\",\"B\",\"B\",\"A\")) -> \nreplaceOOVs(OOV, Set(\"A\",\"B\"), List(\"A\",\"B\",\"C\"))",
       "extraFields" : {
         "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))\"]"
       },
@@ -127,7 +127,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Now we can apply this to our training and test set\n",
+      "code" : "Now we can apply this to our training and test set, and create a new uniform model.",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -136,9 +136,29 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "val train = injectOOVs(OOV, words(trainDocs))\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\nval vocab = Vocab(train.distinct)\nvocab.size",
+      "code" : "val train = injectOOVs(OOV, words(trainDocs))\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\nval vocab = Vocab(train.distinct)\nval baseline = uniform(vocab)\nbaseline.perplexity(test.toIndexedSeq)",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))\",\"injectOOVs(OOV, List(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), List(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))\",\"injectOOVs(OOV, List(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), List(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 14,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### Training Language Models\nThe uniform LM is obviously not good at modelling actual language. To improve upon this baseline, we can estimate the conditional n-gram distributions from the training data. To this end let us first introduce one parameter \\\\(\\param_{w,h}\\\\) for each word \\\\(w\\\\) and history \\\\(h\\\\) of length \\\\(n - 1\\\\), and define a parametrized language model \\\\(p_\\params\\\\)\n$$\n\\prob_\\params(w|h) = \\param_{w,h}\n$$\nTraining an n-gram LM amounts to estimating \\\\(\\params\\\\) from some training set \\\\(\\train\\\\)... \nOne way to do this is to choose the \\\\(\\params\\\\) that [maximizes the log-likelihood](todo) of \\\\(\\train\\\\):\n$$\n\\params^* = \\arg \\max_\\params \\sum p_\\params(\\ldots)\n$$\nAs it turns out, this maximum-log-likelihood estimate (MLE) can calculated in closed form, simply by counting:\n$$\n\\param^*_{w,h} = \\frac{1}{1} \n$$\n\nLet us use this to first train a unigram model.  \n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 15,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val unigram = ngram(train,1)(vocab)\n\n",
+      "extraFields" : {
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(5)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(Vector.empty,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(Vector.empty,w))\",\"injectOOVs(OOV, List(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), List(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\"]"
       },
       "outputFormat" : null
     }

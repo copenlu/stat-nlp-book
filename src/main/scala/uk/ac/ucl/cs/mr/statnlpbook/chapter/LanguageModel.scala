@@ -87,23 +87,23 @@ object LanguageModel {
 
     self =>
 
-    def counts(ngram: Ngrams.Term): DoubleTerm
+    def count(ngram: Ngrams.Term): DoubleTerm
 
     def normalizer(history: Ngrams.Term): DoubleTerm
 
     def apply(history: Ngrams.Term)(word: Words.Term) =
-      counts(history :+ word) / normalizer(history)
+      count(history :+ word) / normalizer(history)
 
     def laplace(alpha: Double) = new CountBasedLanguageModel[vocab.type] with Decorated {
 
-      def counts(ngram: Ngrams.Term) = self.counts(ngram) + alpha
+      def count(ngram: Ngrams.Term) = self.count(ngram) + alpha
 
       def normalizer(history: Ngrams.Term) = self.normalizer(history) + (Words.domainSize * alpha)
     }
 
     def smooth(prior: LanguageModel[vocab.type], alpha: Double) = new Decorated {
       def apply(history: Ngrams.Term)(word: Words.Term): DoubleTerm = {
-        (self.counts(history :+ word) + alpha * prior(history)(word)) / (self.normalizer(history) + alpha)
+        (self.count(history :+ word) + alpha * prior(history)(word)) / (self.normalizer(history) + alpha)
       }
     }
 
@@ -120,20 +120,12 @@ object LanguageModel {
     val nCounts = ngramCounts(data.toConst, ngramOrder)(NgramCounts).precalculate
     val historyCounts = ngramCounts(data.dropRight(1).toConst, ngramOrder - 1)(HistoryCounts).precalculate
 
-    def counts(ngram: Ngrams.Term) = nCounts(ngram.takeRight(ngramOrder))
+    def count(ngram: Ngrams.Term) = nCounts(ngram.takeRight(ngramOrder))
 
     def normalizer(history: Ngrams.Term) = historyCounts(history.takeRight(ngramOrder - 1))
   }
 
   def uniform(implicit vocabulary: Vocab) = ngram(vocabulary.words,1)
-
-  def uniformOld(implicit vocabulary: Vocab) = new LanguageModel[vocabulary.type] {
-    val vocab: vocabulary.type = vocabulary
-
-    def apply(history: Ngrams.Term)(word: Words.Term): DoubleTerm = {
-      1.0 / vocab.Words.domainSize
-    }
-  }
 
 
   def main(args: Array[String]) {

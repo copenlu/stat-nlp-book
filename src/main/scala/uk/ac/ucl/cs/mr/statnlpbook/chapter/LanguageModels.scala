@@ -29,7 +29,7 @@ object LanguageModels {
     result.processed.reverse.toIndexedSeq
   }
 
-  def replaceOOVs(oov:String, vocab: Vocab, corpus: Seq[String]) =
+  def replaceOOVs(oov:String, vocab: Vocab, corpus: IndexedSeq[String]) =
     corpus map (w => if (vocab(w)) w else oov)
 
 
