@@ -15,7 +15,8 @@ object LanguageModel {
 
     def OOV = "[OOV]"
 
-    val Words = words.toDom withOOV OOV
+    val distinct = words.distinct
+    val Words = distinct.toDom withOOV OOV
     val Ngrams = Seqs(Words, 0, maxOrder)
 
     def toIndex(word: String) = Words.valueToInt(word)
@@ -24,7 +25,7 @@ object LanguageModel {
 
     def indexed(data: Seq[String]) = data map toIndex
 
-    def size = Words.domainSize
+    def size = distinct.length
 
   }
 
