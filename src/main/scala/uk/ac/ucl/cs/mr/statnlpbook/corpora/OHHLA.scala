@@ -21,10 +21,10 @@ object OHHLA {
     val afterPunct = s"(?<=$punct)(?!\\s)" //but not if whitespace follows
     val contractions = "('s|'re|'m|'d|'t|'ll)"
     val brackets = "(?<=\\()|(?=\\))"
-    Tokenizer.fromRegEx(s"(\\s|(?=<)|(?<=>)|$beforePunct|$afterPunct|(?=$contractions)|$brackets)")
+    Tokenizer.fromRegEx(s"(\\s|(?=\\[)|(?<=\\])|$beforePunct|$afterPunct|(?=$contractions)|$brackets)")
   }
 
-  lazy val segmenter = Segmenter.fromRegEx("^</BAR>$")
+  lazy val segmenter = Segmenter.fromRegEx("^\\[/BAR\\]$")
 
   lazy val pipeline = tokenizer andThen segmenter
 
@@ -44,7 +44,7 @@ object OHHLA {
     val start = lines.indexOf("<pre>") + "<pre>".length
     val end = lines.indexOf("</pre>")
     val headerAndLyrics = lines.slice(start, end)
-    val lyrics = headerAndLyrics.split("\n").drop(6).map(_.trim).mkString("<BAR>", "</BAR><BAR>", "</BAR>")
+    val lyrics = headerAndLyrics.split("\n").drop(6).map(_.trim).mkString("[BAR]", "[/BAR][BAR]", "[/BAR]")
     val doc = Document.fromString(lyrics)
     pipeline(doc)
   }
