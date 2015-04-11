@@ -11,7 +11,7 @@
     }
   }, {
     "id" : 1,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "val text = \"Mr. Bob Dobolina is thinkin' of a master plan. Why doesn't he quit?\"\ntext.split(\" \").toSeq",
@@ -31,7 +31,7 @@
     }
   }, {
     "id" : 3,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "val doc = Document.fromString(text)\nrenderTokens(doc)",
@@ -42,25 +42,16 @@
     }
   }, {
     "id" : 4,
-    "compiler" : "heading3",
-    "input" : {
-      "sessionId" : null,
-      "code" : "Tokenization with Regular Expressions",
-      "extraFields" : { },
-      "outputFormat" : null
-    }
-  }, {
-    "id" : 5,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Wolfe allows users to construct tokenizers using [regular expressions](http://en.wikipedia.org/wiki/Regular_expression) that define the character sequence patterns at which to split tokens. In general regular expressions are a powerful tool NLP practictioners can use when working with text, and they come in handy when you work with command line tools such as [grep](http://en.wikipedia.org/wiki/Grep). In the code below we use a simple pattern `\\\\s` that matches any whitespace. ",
+      "code" : "### Tokenization with Regular Expressions\nWolfe allows users to construct tokenizers using [regular expressions](http://en.wikipedia.org/wiki/Regular_expression) that define the character sequence patterns at which to split tokens. In general regular expressions are a powerful tool NLP practictioners can use when working with text, and they come in handy when you work with command line tools such as [grep](http://en.wikipedia.org/wiki/Grep). In the code below we use a simple pattern `\\\\s` that matches any whitespace. ",
       "extraFields" : { },
       "outputFormat" : null
     }
   }, {
     "id" : 6,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "val tokenizer = Tokenizer.fromRegEx(\"\\\\s\")\nval tokenized = tokenizer(doc)\nrenderTokens(tokenized)",
@@ -80,7 +71,7 @@
     }
   }, {
     "id" : 8,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "val punct = \"[\\\\.\\\\?]\"\nval beforePunct = s\"(?=$punct)\"\nval afterPunct = s\"(?<=$punct)(?!\\\\s)\" //but not if whitespace follows\nval tokenizer = Tokenizer.fromRegEx(s\"(\\\\s|$beforePunct|$afterPunct)\")\nval tokenized = tokenizer(doc)\nrenderTokens(tokenized)",
@@ -100,28 +91,10 @@
     }
   }, {
     "id" : 10,
-    "compiler" : "heading3",
-    "input" : {
-      "sessionId" : null,
-      "code" : "Learning To Tokenize",
-      "extraFields" : { },
-      "outputFormat" : null
-    }
-  }, {
-    "id" : 11,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "For most English domains powerful and robust tokenizers can be built using the simple pattern matching approach shown above. However, in languages such as Japanese (...), words are not separated by whitespace, and this makes tokenization substantially more challenging (example). Even for certain English domains such as the domain of biomedical papers, tokenization is non-trivial (example).\n\nWhen tokenization is more challenging and difficult to capture in a few rules a machine-learning based approach can be useful. In a nutshell, we can treat the tokenization problem as a character [classification problem](todo), or if needed, as a [sequential labelling problem](todo). [Maybe have a mini Wolfe example here?]  ",
-      "extraFields" : { },
-      "outputFormat" : null
-    }
-  }, {
-    "id" : 12,
-    "compiler" : "heading3",
-    "input" : {
-      "sessionId" : null,
-      "code" : "Sentence Segmentation",
+      "code" : "###Learning To Tokenize\nFor most English domains powerful and robust tokenizers can be built using the simple pattern matching approach shown above. However, in languages such as Japanese (...), words are not separated by whitespace, and this makes tokenization substantially more challenging (example). Even for certain English domains such as the domain of biomedical papers, tokenization is non-trivial (example).\n\nWhen tokenization is more challenging and difficult to capture in a few rules a machine-learning based approach can be useful. In a nutshell, we can treat the tokenization problem as a character [classification problem](todo), or if needed, as a [sequential labelling problem](todo). [Maybe have a mini Wolfe example here?]  ",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -130,13 +103,13 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Many NLP tools work on a sentence-by-sentence basis. The next preprocessing step is hence to segment streams of tokens into sentences. In most cases this is straightforward after tokenization, because we only need to split sentences at sentence-ending punctuation tokens. In Wolfe you can implement segmentation using `Segmenter` that splits a sentence at a token whenever that token's content matches a regular expression. If this expression only fires for punctuations, you get the desired behaviour. ",
+      "code" : "###Sentence Segmentation\nMany NLP tools work on a sentence-by-sentence basis. The next preprocessing step is hence to segment streams of tokens into sentences. In most cases this is straightforward after tokenization, because we only need to split sentences at sentence-ending punctuation tokens. In Wolfe you can implement segmentation using `Segmenter` that splits a sentence at a token whenever that token's content matches a regular expression. If this expression only fires for punctuations, you get the desired behaviour. ",
       "extraFields" : { },
       "outputFormat" : null
     }
   }, {
     "id" : 14,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "val segmenter = Segmenter.fromRegEx(\"^\\\\.$\")\nval segmented = segmenter(tokenized)\nrenderTokens(segmented)",
@@ -156,7 +129,7 @@
     }
   }, {
     "id" : 16,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "val pipeline = Tokenizer.default andThen Segmenter.default\nrenderTokens(pipeline(doc))",
@@ -166,20 +139,11 @@
       "outputFormat" : null
     }
   }, {
-    "id" : 17,
-    "compiler" : "heading5",
-    "input" : {
-      "sessionId" : null,
-      "code" : "Exercise",
-      "extraFields" : { },
-      "outputFormat" : null
-    }
-  }, {
     "id" : 18,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Create a regular expression tokenizer and sentence segmenter that can process Hip-Hop lyrics from [OHHLA](todo). Use the `Corpora.ohhla` document collection and split sentences per line. ",
+      "code" : "#### Exercise\nCreate a regular expression tokenizer and sentence segmenter that can process Hip-Hop lyrics from [OHHLA](todo). Use the `Corpora.ohhla` document collection and split sentences per line. ",
       "extraFields" : { },
       "outputFormat" : null
     }
