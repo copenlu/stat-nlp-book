@@ -67,7 +67,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Evaluation\nHow do we determine the quality of an (n-gram) LM? Extrinsic methods TODO.\n\nOne intrinsic way is to measure how well the LM plays the \"Shannon Game\": TODO. Given a test sequence \\\\(w_1,\\ldots,w_T\\\\) of \\\\(T\\\\) words, calculate\n$$\n\\perplexity(w_1,\\ldots,w_T) = \\ldots \n$$\nThe `LanguageModel` interface provides a `perplexity` method to calculate this measure on a given test. Let's see how the uniform model does on our test set. ",
+      "code" : "### Evaluation\nHow do we determine the quality of an (n-gram) LM? Extrinsic methods TODO.\n\nOne intrinsic way is to measure how well the LM plays the \"Shannon Game\": TODO. Given a test sequence \\\\(w_1,\\ldots,w_T\\\\) of \\\\(T\\\\) words, calculate\n$$\n\\perplexity(w_1,\\ldots,w_T) = \\prob(w_1,\\ldots,w_T)^{\\frac{1}{T}} = \\sqrt[T]{\\prod_i^N \\frac{1}{\\prob(w_i|w_{i-n},\\ldots,w_{i-1})}}\n$$\nThe `LanguageModel` interface provides a `perplexity` method to calculate this measure on a given test. Let's see how the uniform model does on our test set. ",
       "extraFields" : { },
       "outputFormat" : null
     }
