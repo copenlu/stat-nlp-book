@@ -83,6 +83,7 @@ object Plotter {
        |
        |/*These lines are all chart setup.  Pick and choose which chart features you want to utilize. */
        |nv.addGraph(function() {
+       |  var width = 600, height = 400;
        |  var chart = nv.models.multiBarHorizontalChart()
        |      .x(function(d) { return d.label })    //Specify the data accessors.
        |      .y(function(d) { return d.value })
@@ -92,11 +93,13 @@ object Plotter {
        |      .tooltips(false)        //Don't show tooltips
        |      .showValues(true)       //...instead, show the bar value right on top of each bar.
        |      .transitionDuration(350)
+       |      .width(width).height(height)
        |      ;
        |
        |  d3.select('#$id svg')
        |      .datum($data)
-       |      .call(chart);
+       |      .call(chart)
+       |      .style({ 'width': width, 'height': height });
        |
        |  nv.utils.windowResize(chart.update);
        |
