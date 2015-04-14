@@ -11,7 +11,7 @@ object Plotter {
     val id = "d3bar" + Math.abs(map.hashCode()).toString
 
     def mapDataToJson(series: Map[String,Double]) = {
-      series.map(p => s"{label:'${p._1}', value:${p._2}}").mkString("[", ",", "]")
+      series.map(p => s"""{label:"${p._1}", value:${p._2}}""").mkString("[", ",", "]")
     }
 
 
