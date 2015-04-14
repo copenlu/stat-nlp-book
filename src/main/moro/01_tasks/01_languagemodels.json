@@ -13,7 +13,7 @@
     }
   }, {
     "id" : 1,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "import chapter.LanguageModels._\nimport chapter.LanguageModel._\nimport corpora.OHHLA._\n\nval docs = JLive.allAlbums flatMap loadDir\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\nval train = words(trainDocs)\nval test = words(testDocs)\ntrain.take(15)",
@@ -33,7 +33,7 @@
     }
   }, {
     "id" : 3,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "val vocab = Vocab(train.distinct)\nvocab.size",
@@ -53,10 +53,10 @@
     }
   }, {
     "id" : 5,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "val baseline = uniform(vocab)\nbaseline.prob(NoHistory,\"call\") * vocab.size",
+      "code" : "val baseline = uniform(vocab)\nbaseline.probability(\"call\") * vocab.size",
       "extraFields" : {
         "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\"]"
       },
@@ -73,12 +73,12 @@
     }
   }, {
     "id" : 7,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "baseline.perplexity(test)",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size\"]"
       },
       "outputFormat" : null
     }
@@ -93,12 +93,12 @@
     }
   }, {
     "id" : 9,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(NoHistory,w))",
+      "code" : "test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\"]"
       },
       "outputFormat" : null
     }
@@ -113,12 +113,12 @@
     }
   }, {
     "id" : 11,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "injectOOVs(OOV, Seq(\"A\",\"A\",\"B\",\"B\",\"A\")) -> \nreplaceOOVs(OOV, Set(\"A\",\"B\"), Seq(\"A\",\"B\",\"C\"))",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(NoHistory,w))\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\"]"
       },
       "outputFormat" : null
     }
@@ -133,12 +133,12 @@
     }
   }, {
     "id" : 13,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "val train = injectOOVs(OOV, words(trainDocs))\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\nval vocab = Vocab(train.distinct)\nval baseline = uniform(vocab)\nbaseline.perplexity(test.toIndexedSeq)",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(NoHistory,w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\"]"
       },
       "outputFormat" : null
     }
@@ -147,18 +147,18 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Training Language Models\nThe uniform LM is obviously not good at modelling actual language. To improve upon this baseline, we can estimate the conditional n-gram distributions from the training data. To this end let us first introduce one parameter \\\\(\\param_{w,h}\\\\) for each word \\\\(w\\\\) and history \\\\(h\\\\) of length \\\\(n - 1\\\\), and define a parametrized language model \\\\(p_\\params\\\\)\n$$\n\\prob_\\params(w|h) = \\param_{w,h}\n$$\nTraining an n-gram LM amounts to estimating \\\\(\\params\\\\) from some training set \\\\(\\train\\\\)... \nOne way to do this is to choose the \\\\(\\params\\\\) that [maximizes the log-likelihood](todo) of \\\\(\\train\\\\):\n$$\n\\params^* = \\arg \\max_\\params \\sum p_\\params(\\ldots)\n$$\nAs it turns out, this maximum-log-likelihood estimate (MLE) can calculated in closed form, simply by counting:\n$$\n\\param^*_{w,h} = \\frac{1}{1} \n$$\n\nLet us use this to first train a unigram model.  \n",
+      "code" : "### Training Language Models\nThe uniform LM is obviously not good at modelling actual language. To improve upon this baseline, we can estimate the conditional n-gram distributions from the training data. To this end let us first introduce one parameter \\\\(\\param_{w,h}\\\\) for each word \\\\(w\\\\) and history \\\\(h\\\\) of length \\\\(n - 1\\\\), and define a parametrized language model \\\\(p_\\params\\\\)\n$$\n\\prob_\\params(w|h) = \\param_{w,h}\n$$\nTraining an n-gram LM amounts to estimating \\\\(\\params\\\\) from some training set \\\\(\\train=(w_1,\\ldots,w_n)\\\\).\nOne way to do this is to choose the \\\\(\\params\\\\) that [maximizes the log-likelihood](todo) of \\\\(\\train\\\\):\n$$\n\\params^* = \\arg \\max_\\params \\sum p_\\params(\\ldots)\n$$\nAs it turns out, this maximum-log-likelihood estimate (MLE) can calculated in closed form, simply by counting:\n$$\n\\param^*_{w,h} = \\frac{\\counts{\\train}{h,w}}{\\counts{\\train}{h}} \n$$\n\nwhere \n\n$$\n\\counts{D}{e} = \\text{Count of } e \\text{ in }  D \n$$\n\nLet us use this to first train a unigram model.  \n",
       "extraFields" : { },
       "outputFormat" : null
     }
   }, {
     "id" : 15,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "val unigram = ngram(train,1)(vocab)\nunigram.distribution().take(10)",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(NoHistory,w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\"]"
       },
       "outputFormat" : null
     }
@@ -167,19 +167,128 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "The uniform LM has substantially reduced (better) perplexity:\n",
+      "code" : "The uniform LM has substantially reduced (better) perplexity:",
       "extraFields" : { },
       "outputFormat" : null
     }
   }, {
     "id" : 17,
-    "compiler" : "wolfe",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "unigram.perplexity(test)",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.prob(NoHistory,\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.prob(NoHistory,w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\",\"val unigram = ngram(train,1)(vocab)\\nunigram.distribution().take(10)\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\",\"val unigram = ngram(train,1)(vocab)\\nunigram.distribution().take(10)\"]"
       },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 18,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### Bigram LM\n\nThe unigram model ignores any correlation between consecutive words in a sentence. The next best model to overcome this shortcoming is a bigram model. This model conditions the probability of the current word on the previous word. Let us construct such model from the training data.\n\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 19,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val bigram = ngram(train,2)(vocab)\nbigram.distribution(\"I\").take(10)",
+      "extraFields" : {
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\",\"val unigram = ngram(train,1)(vocab)\\nunigram.distribution().take(10)\",\"unigram.perplexity(test)\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 20,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "You can see a more peaked distribution conditioned on \"I\" than in the case of the unigram model. Let's see if this improves perplexity.\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 21,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "bigram.perplexity(test)",
+      "extraFields" : {
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\",\"val unigram = ngram(train,1)(vocab)\\nunigram.distribution().take(10)\",\"unigram.perplexity(test)\",\"val bigram = ngram(train,2)(vocab)\\nbigram.distribution(\\\"I\\\").take(10)\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 22,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Unfortunately the bigram model has the problem we tried to avoid using the OOV preprocessing method above. The problem is that there are contexts in which the OOV word hasn't been seen, and hence it receives 0 probability.\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 23,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "bigram.probability(\"[OOV]\",\"money\")",
+      "extraFields" : {
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\",\"val unigram = ngram(train,1)(vocab)\\nunigram.distribution().take(10)\",\"unigram.perplexity(test)\",\"val bigram = ngram(train,2)(vocab)\\nbigram.distribution(\\\"I\\\").take(10)\",\"bigram.perplexity(test)\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 24,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### Smoothing\n\nThe general problem is that maximum likelhood estimates will always underestimate the true probability of some words, and in turn overestimate the (context-dependent) probabilities of other words. To overcome this issue we aim to _smooth_ the probabilities and move mass from seen events to unseen events.\n\n#### Laplace Smoothing\n\nThe easiest way to overcome the problem of zero probabilities is to simply add pseudo counts to each event in the dataset (in a [Bayesian](todo) setting this amounts to a maximum posteriori estimate under a dirichlet prior on parameters). \n\n$$\n\\param^{\\alpha}_{w,h} = \\frac{\\counts{\\train}{h,w} + \\alpha}{\\counts{\\train}{h} + \\alpha \\lvert V \\rvert } \n$$\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 25,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val laplaceBigram = bigram.laplace(1.0)\nlaplaceBigram.probability(\"[OOV]\",\"money\")",
+      "extraFields" : {
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\",\"val unigram = ngram(train,1)(vocab)\\nunigram.distribution().take(10)\",\"unigram.perplexity(test)\",\"val bigram = ngram(train,2)(vocab)\\nbigram.distribution(\\\"I\\\").take(10)\",\"bigram.perplexity(test)\",\"bigram.probability(\\\"[OOV]\\\",\\\"money\\\")\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 26,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "This should give a better perplexity value:\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 27,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "laplaceBigram.perplexity(test)",
+      "extraFields" : {
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport chapter.LanguageModel._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = Vocab(train.distinct)\\nvocab.size\",\"val baseline = uniform(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size\",\"baseline.perplexity(test)\",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = Vocab(train.distinct)\\nval baseline = uniform(vocab)\\nbaseline.perplexity(test.toIndexedSeq)\",\"val unigram = ngram(train,1)(vocab)\\nunigram.distribution().take(10)\",\"unigram.perplexity(test)\",\"val bigram = ngram(train,2)(vocab)\\nbigram.distribution(\\\"I\\\").take(10)\",\"bigram.perplexity(test)\",\"bigram.probability(\\\"[OOV]\\\",\\\"money\\\")\",\"val laplaceBigram = bigram.laplace(1.0)\\nlaplaceBigram.probability(\\\"[OOV]\\\",\\\"money\\\")\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 28,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "##### Exercise\nCan you find a better pseudo-count number?\n\n#### Interpolation\n\nBlah blah",
+      "extraFields" : { },
       "outputFormat" : null
     }
   } ],

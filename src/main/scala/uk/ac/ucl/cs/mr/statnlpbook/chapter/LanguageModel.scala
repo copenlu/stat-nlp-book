@@ -44,6 +44,8 @@ object LanguageModel {
 
     lazy val prob = fun(Ngrams, Words)((h, w) => apply(h)(w))
 
+    def probability(word:String, history:String*) = prob(history.toIndexedSeq, word)
+
     trait Decorated extends LanguageModel[vocab.type] {
       val vocab: self.vocab.type = self.vocab
     }
@@ -76,14 +78,14 @@ object LanguageModel {
 
   }
 
-  def manual(probability: IndexedSeq[Int] => Int => Double)(implicit vocabulary: Vocab) =
+  def manual(probabilities: IndexedSeq[Int] => Int => Double)(implicit vocabulary: Vocab) =
     new LanguageModel[vocabulary.type] {
       val vocab: vocabulary.type = vocabulary
 
       def apply(history: Ngrams.Term)(word: Words.Term) = {
         def compose(input: Settings, output: Setting) = {
           val historySeq = input(0).disc.array.slice(1, input(0).disc(0) + 1)
-          output.cont(0) = probability(historySeq)(input(1).disc(0))
+          output.cont(0) = probabilities(historySeq)(input(1).disc(0))
         }
         val term = new ManualTerm(compose, Vector(history, word), Doubles)
         term
