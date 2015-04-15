@@ -25,7 +25,7 @@ object Plotter {
     val data = mapToJson(map)
 
     val html = s"""
-       |<div id="$id">
+       |<div id="$id" class="wolfe-nvd3">
        |<svg></svg>
        |</div>
        |
