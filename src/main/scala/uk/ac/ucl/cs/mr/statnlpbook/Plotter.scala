@@ -118,48 +118,16 @@ object Plotter {
 }
 
 object Renderer {
-  def renderAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int)]) = {
 
-    val charLength = 10
+  def renderAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int)]) =
+    renderWeightedAlignment(s1,s2,alignment.map(p => (p._1,p._2,1.0)))
 
-    def tokenPosition(index:Int, sentence:Sentence) =
-      Range(0, index).map(i => sentence.tokens(i).word.length * charLength).sum
-
-    case class RenderedToken(y:Int, index:Int, sentence:Sentence) {
-      val wordLength = sentence.tokens(index).word.length * charLength
-      val x = tokenPosition(index,sentence)
-      val svg = s"""<text class="align-word" x="$x", y="$y">${sentence.tokens(index).word}</text>"""
-
-      def upperConnector = (x + wordLength/ 2, y - 10)
-      def lowerConnector = (x + wordLength/ 2, y + 5)
-    }
-
-    def connect(t1:RenderedToken, t2:RenderedToken) =
-      s"""<line class="align-connect" x1=${t1.lowerConnector._1} y1=${t1.lowerConnector._2} x2=${t2.upperConnector._1} y2=${t2.upperConnector._2} stroke-width="1" stroke="black"/>"""
-
-    val renderedS1Tokens = (s1.tokens.indices map (i => i -> RenderedToken(20, i, s1))).toMap
-    val renderedS2Tokens = (s2.tokens.indices map (i => i -> RenderedToken(100, i, s2))).toMap
-
-
-    val s1Text = (s1.tokens.indices map (renderedS1Tokens(_).svg)).mkString("")
-    val s2Text = (s2.tokens.indices map (renderedS2Tokens(_).svg)).mkString("")
-
-    val connections = (alignment map { case (i, j) => connect(renderedS1Tokens(i), renderedS2Tokens(j)) }).mkString("")
-
-
-    val html = s"""
-       | <div>
-       |   <svg class="aligner">
-       |     $s1Text
-       |     $s2Text
-       |     $connections
-       |   </svg>
-       | </div>
-     """.stripMargin
+  def renderWeightedAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int, Double)]) = {
 
     val id = "align" + UUID.randomUUID().toString
     val s1Words = s1.tokens.map("\"" + _.word + "\"").mkString("[",",","]")
     val s2Words = s2.tokens.map("\"" + _.word + "\"").mkString("[",",","]")
+    val connData = alignment.map(p => s"{'i1':${p._1}, 'i2':${p._2}, 'weight':${p._3} }").mkString("[",",","]")
     val d3 =
       s"""
          |<div id = "$id" class="aligner">
@@ -168,9 +136,11 @@ object Renderer {
          |<script>
          |  var s1Data = $s1Words;
          |  var s2Data = $s2Words;
+         |  var connData = $connData
          |  var svg = d3.select('#$id svg')
          |
-         |  function buildSentenceGroup(groupElement,data,y) {
+         |  function buildSentenceGroup(parent,data,y) {
+         |    var groupElement = parent.append("g");
          |    var text = groupElement.selectAll("text")
          |      .data(data)
          |      .enter()
@@ -189,13 +159,29 @@ object Renderer {
          |    console.log(tokenOffsets);
          |    textLabels
          |      .attr("x", function(d,i) { return tokenOffsets[i];});
+         |    return groupElement;
          |  }
          |
-         |  var s1Group = svg.append("g");
-         |  var s2Group = svg.append("g");
-         |  buildSentenceGroup(s1Group,s1Data,10);
-         |  buildSentenceGroup(s2Group,s2Data,40);
+         |  var s1Group = buildSentenceGroup(svg,s1Data,10);
+         |  var s2Group = buildSentenceGroup(svg,s2Data,100);
          |
+         |  var s1TokenTexts = s1Group[0][0].childNodes;
+         |  var s2TokenTexts = s2Group[0][0].childNodes;
+         |
+         |  var connections = svg.selectAll("line")
+         |    .data(connData)
+         |    .enter()
+         |    .append("line")
+         |    .attr("x1", function(d) { return s1TokenTexts[d.i1].getBBox().x + s1TokenTexts[d.i1].getBBox().width / 2; })
+         |    .attr("y1", function(d) { return s1TokenTexts[d.i1].getBBox().y + s1TokenTexts[d.i1].getBBox().height; })
+         |    .attr("x2", function(d) { return s2TokenTexts[d.i2].getBBox().x + s2TokenTexts[d.i2].getBBox().width / 2; })
+         |    .attr("y2", function(d) { return s2TokenTexts[d.i2].getBBox().y; })
+         |    .attr("stroke-width", 2)
+         |    .attr("stroke-opacity", function(d) { return d.weight; } )
+         |    .attr("stroke", "black");
+         |
+         |  console.log(s1Group);
+         |  console.log(s1TokenTexts);
          |
          |</script>
        """.stripMargin
