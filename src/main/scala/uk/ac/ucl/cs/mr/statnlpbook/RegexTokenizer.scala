@@ -17,13 +17,18 @@ class RegexTokenizer(val regex: Regex) extends (Document => Document) {
 
     def split(token: Token) = {
       var offset = token.offsets.start
-      val result = for (m <- regex.findAllMatchIn(token.word)) yield {
+      val result = (for (m <- regex.findAllMatchIn(token.word)) yield {
         val end = m.start
         val newToken = Token(doc.source.slice(offset,end), CharOffsets(offset,end))
         offset = m.end
         newToken
+      }).toIndexedSeq
+      if (offset < token.offsets.end) {
+        val last = Token(doc.source.slice(offset,token.offsets.end),CharOffsets(offset,token.offsets.end))
+        result.filter(t => t.offsets.end > t.offsets.start) :+ last
       }
-      result.filter(t => t.offsets.end > t.offsets.start).toIndexedSeq
+      else
+        result.filter(t => t.offsets.end > t.offsets.start).toIndexedSeq
     }
     doc.copy(sentences = doc.sentences.map(s => s.copy(tokens = s.tokens.flatMap(split))))
   }
@@ -44,14 +49,19 @@ object Tokenizer {
   }
 
   def main(args: Array[String]) {
-    val punct = "[\\.\\?]"
-    val beforePunct = s"(?=$punct)"
-    val afterPunct = s"(?<=$punct)(?!\\s)" //but not if whitespace follows
-    val doc = Document.fromString("Thinkin' of a master plan Mr. Peko. ")
-    val splitter = Splitter.onPattern(s"(\\s|$beforePunct|$afterPunct)")
-//    val splitter = Splitter.onPattern("(?<!Mr)(?=[\\.,])")
-    println(splitter.split("Thinkin' of.a master plan Mr. and Mrs. Peko.").asScala.mkString("\n"))
-    println(default(doc))
+    val text = "Mr. Bob Dobolina is thinkin' of a master plan. Why doesn't he quit?"
+    val doc = Document.fromString(text)
+    val tokenizer = Tokenizer.fromRegEx(" ")
+    val tokenized = tokenizer(doc)
+    println(tokenized.tokens mkString "\n")
+//    val punct = "[\\.\\?]"
+//    val beforePunct = s"(?=$punct)"
+//    val afterPunct = s"(?<=$punct)(?!\\s)" //but not if whitespace follows
+//    val doc = Document.fromString("Thinkin' of a master plan Mr. Peko. ")
+//    val splitter = Splitter.onPattern(s"(\\s|$beforePunct|$afterPunct)")
+////    val splitter = Splitter.onPattern("(?<!Mr)(?=[\\.,])")
+//    println(splitter.split("Thinkin' of.a master plan Mr. and Mrs. Peko.").asScala.mkString("\n"))
+//    println(default(doc))
   }
 }
 
