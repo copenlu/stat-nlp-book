@@ -120,10 +120,14 @@ object Plotter {
 object Renderer {
   def renderAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int)]) = {
 
-    val wordLength = 50
+    val charLength = 10
+
+    def tokenPosition(index:Int, sentence:Sentence) =
+      Range(0, index).map(i => sentence.tokens(i).word.length * charLength).sum
 
     case class RenderedToken(y:Int, index:Int, sentence:Sentence) {
-      val x = index * wordLength
+      val wordLength = sentence.tokens(index).word.length * charLength
+      val x = tokenPosition(index,sentence)
       val svg = s"""<text class="align-word" x="$x", y="$y">${sentence.tokens(index).word}</text>"""
 
       def upperConnector = (x + wordLength/ 2, y - 10)
@@ -133,8 +137,8 @@ object Renderer {
     def connect(t1:RenderedToken, t2:RenderedToken) =
       s"""<line class="align-connect" x1=${t1.lowerConnector._1} y1=${t1.lowerConnector._2} x2=${t2.upperConnector._1} y2=${t2.upperConnector._2} stroke-width="1" stroke="black"/>"""
 
-    val renderedS1Tokens = (s1.tokens.indices map (i => i -> RenderedToken(20,i,s1))).toMap
-    val renderedS2Tokens = (s2.tokens.indices map (i => i -> RenderedToken(100,i,s2))).toMap
+    val renderedS1Tokens = (s1.tokens.indices map (i => i -> RenderedToken(20, i, s1))).toMap
+    val renderedS2Tokens = (s2.tokens.indices map (i => i -> RenderedToken(100, i, s2))).toMap
 
 
     val s1Text = (s1.tokens.indices map (renderedS1Tokens(_).svg)).mkString("")
@@ -154,31 +158,49 @@ object Renderer {
      """.stripMargin
 
     val id = "align" + UUID.randomUUID().toString
+    val s1Words = s1.tokens.map("\"" + _.word + "\"").mkString("[",",","]")
+    val s2Words = s2.tokens.map("\"" + _.word + "\"").mkString("[",",","]")
     val d3 =
       s"""
          |<div id = "$id" class="aligner">
          |<svg></svg>
          |</div>
          |<script>
-         |  var textData = [
-         |    { "x": 20, "y":20, "word": "green"},
-         |    { "x": 60, "y":20, "word": "blue"}
-         |  ];
+         |  var s1Data = $s1Words;
+         |  var s2Data = $s2Words;
          |  var svg = d3.select('#$id svg')
-         |  var text = svg.selectAll("text")
-         |    .data(textData)
-         |    .enter()
-         |    .append("text")
          |
-         |  var textLabels = text
-         |    .attr("x",function(d) {return d.x; })
-         |    .attr("y",function(d) {return d.y; })
-         |    .text(function(d) {return d.word;})
+         |  function buildSentenceGroup(groupElement,data,y) {
+         |    var text = groupElement.selectAll("text")
+         |      .data(data)
+         |      .enter()
+         |      .append("text");
+         |    var textLabels = text
+         |      .attr("x",function(d) { return 0; })
+         |      .attr("y",function(d) { return y; })
+         |      .text(function(d) {return d;});
+         |    var current = 20;
+         |    var gap = 10;
+         |    var tokenOffsets = [current];
+         |    for (i = 0; i < textLabels[0].length - 1; i++) {
+         |      current += textLabels[0][i].getComputedTextLength() + gap;
+         |      tokenOffsets.push(current);
+         |    }
+         |    console.log(tokenOffsets);
+         |    textLabels
+         |      .attr("x", function(d,i) { return tokenOffsets[i];});
+         |  }
+         |
+         |  var s1Group = svg.append("g");
+         |  var s2Group = svg.append("g");
+         |  buildSentenceGroup(s1Group,s1Data,10);
+         |  buildSentenceGroup(s2Group,s2Data,40);
+         |
          |
          |</script>
        """.stripMargin
 
-    RawHTML(html)
+    RawHTML(d3)
   }
 }
 
