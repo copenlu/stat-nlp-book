@@ -177,8 +177,10 @@ object Renderer {
          |    .attr("x2", function(d) { return s2TokenTexts[d.i2].getBBox().x + s2TokenTexts[d.i2].getBBox().width / 2; })
          |    .attr("y2", function(d) { return s2TokenTexts[d.i2].getBBox().y; })
          |    .attr("stroke-width", 2)
-         |    .attr("stroke-opacity", function(d) { return d.weight; } )
-         |    .attr("stroke", "black");
+         |    .attr("stroke", "black")
+         |    .attr("stroke-opacity", function(d) { return 0; })
+         |    .transition()
+         |    .attr("stroke-opacity", function(d) { return d.weight; } );
          |
          |  console.log(s1Group);
          |  console.log(s1TokenTexts);
