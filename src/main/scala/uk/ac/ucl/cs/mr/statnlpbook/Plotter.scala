@@ -1,5 +1,8 @@
 package uk.ac.ucl.cs.mr.statnlpbook
 
+import java.util.UUID
+
+import ml.wolfe.nlp.{Token, Sentence}
 import org.sameersingh.htmlgen.RawHTML
 
 /**
@@ -112,5 +115,71 @@ object Plotter {
     RawHTML(html)
   }
 
-
 }
+
+object Renderer {
+  def renderAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int)]) = {
+
+    val wordLength = 50
+
+    case class RenderedToken(y:Int, index:Int, sentence:Sentence) {
+      val x = index * wordLength
+      val svg = s"""<text class="align-word" x="$x", y="$y">${sentence.tokens(index).word}</text>"""
+
+      def upperConnector = (x + wordLength/ 2, y - 10)
+      def lowerConnector = (x + wordLength/ 2, y + 5)
+    }
+
+    def connect(t1:RenderedToken, t2:RenderedToken) =
+      s"""<line class="align-connect" x1=${t1.lowerConnector._1} y1=${t1.lowerConnector._2} x2=${t2.upperConnector._1} y2=${t2.upperConnector._2} stroke-width="1" stroke="black"/>"""
+
+    val renderedS1Tokens = (s1.tokens.indices map (i => i -> RenderedToken(20,i,s1))).toMap
+    val renderedS2Tokens = (s2.tokens.indices map (i => i -> RenderedToken(100,i,s2))).toMap
+
+
+    val s1Text = (s1.tokens.indices map (renderedS1Tokens(_).svg)).mkString("")
+    val s2Text = (s2.tokens.indices map (renderedS2Tokens(_).svg)).mkString("")
+
+    val connections = (alignment map { case (i, j) => connect(renderedS1Tokens(i), renderedS2Tokens(j)) }).mkString("")
+
+
+    val html = s"""
+       | <div>
+       |   <svg class="aligner">
+       |     $s1Text
+       |     $s2Text
+       |     $connections
+       |   </svg>
+       | </div>
+     """.stripMargin
+
+    val id = "align" + UUID.randomUUID().toString
+    val d3 =
+      s"""
+         |<div id = "$id" class="aligner">
+         |<svg></svg>
+         |</div>
+         |<script>
+         |  var textData = [
+         |    { "x": 20, "y":20, "word": "green"},
+         |    { "x": 60, "y":20, "word": "blue"}
+         |  ];
+         |  var svg = d3.select('#$id svg')
+         |  var text = svg.selectAll("text")
+         |    .data(textData)
+         |    .enter()
+         |    .append("text")
+         |
+         |  var textLabels = text
+         |    .attr("x",function(d) {return d.x; })
+         |    .attr("y",function(d) {return d.y; })
+         |    .text(function(d) {return d.word;})
+         |
+         |</script>
+       """.stripMargin
+
+    RawHTML(html)
+  }
+}
+
+
