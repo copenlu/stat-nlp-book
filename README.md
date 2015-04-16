@@ -6,6 +6,8 @@
 
 1. in the `wolfe` directory, do `sbt publish-local`
 
+You may have to delete the wolfe directory in the ivy cache to make sure you get the newest version.
+
 ### Setup and Run Moro
 
 Setup the project specific configuration file 
@@ -19,6 +21,12 @@ Initialize sub-modules (1), compile the project (2) and wolfe (3) and run moro (
 3. `cd wolfe; sbt compile; cd ..`
 4. `cd moro; git checkout master`
 5. `sbt run`
+
+### Download Data
+To download the OHHLA files
+
+    scripts/download_ohhla j_live
+
 
 ## Live editing in IntelliJ
 
