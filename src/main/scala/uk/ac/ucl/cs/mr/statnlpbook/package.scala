@@ -8,5 +8,6 @@ import ml.wolfe.ui.BratRenderer
  */
 package object statnlpbook {
   def renderTokens(doc:Document) = BratRenderer.bratTokens(doc)
+  def renderDependencies(doc:Document) = BratRenderer2.bratDependencies(doc)
 
 }

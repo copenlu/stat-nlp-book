@@ -27,7 +27,6 @@ To download the OHHLA files
 
     scripts/download_ohhla j_live
 
-
 ## Live editing in IntelliJ
 
 You can write code in IntelliJ and access it from moro after you compile it (either through IntelliJ or sbt)
