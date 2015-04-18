@@ -1,0 +1,36 @@
+{
+  "name" : "Word-based MT",
+  "cells" : [ {
+    "id" : 0,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### Some headline\nYo\n\nwassup\n\n  * Yo\n  * What\nHello\n\n<div>\n  <svg>\n  <circle cx=\"60\" cy=\"60\" r=\"50\"/> \n  </svg>\n</div>\n\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 1,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val pipeline = Tokenizer.default andThen Segmenter.default\nval text = \"This is the first sentence. This is the second one, which is a bit longer.\"\nval doc = pipeline apply Document.fromString(text)\nRenderer.renderWeightedAlignment(doc.sentences(0),doc.sentences(1),Seq((1,4,1.0), (3,1,0.1)))",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 2,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### Something else\nBut what?\n\n\"Yo\"\n\n  * Like this?\n  * Me too!\n\n\nPeace\n",
+      "extraFields" : {
+        "aggregatedCells" : "[\"1 + 3\\n\"]"
+      },
+      "outputFormat" : null
+    }
+  } ],
+  "config" : { }
+}
