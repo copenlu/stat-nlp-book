@@ -446,7 +446,9 @@ object BratRenderer2 {
   }
 
   def mkPosTagEntities(doc: Document): IndexedSeq[String] = {
-    for ((t, i) <- doc.tokens.zipWithIndex) yield s"['T$i','${t.posTag}',[[${ t.offsets.start },${ t.offsets.end }]]]"
+    def default = "Tok"
+    for ((t, i) <- doc.tokens.zipWithIndex) yield
+    s"['T$i','${if (t.posTag != null) t.posTag else default}',[[${ t.offsets.start },${ t.offsets.end }]]]"
   }
 
 
