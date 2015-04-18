@@ -22,6 +22,10 @@ Initialize sub-modules (1), compile the project (2) and wolfe (3) and run moro (
 4. `cd moro; git checkout master`
 5. `sbt run`
 
+Maybe (most definitely?) you'll need to clone htmlgen and scalaplot and install them to a local repository by running
+
+    mvn clean install -Dgpg.skip=true
+
 ### Download Data
 To download the OHHLA files
 
