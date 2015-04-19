@@ -34,7 +34,7 @@
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "val doc = ml.wolfe.nlp.converters.SISTAProcessors.annotate(\"Hello World, how are you?\",posTagger=true,parser=true)\ndoc",
+      "code" : "val doc = ml.wolfe.nlp.converters.SISTAProcessors.annotate(\"Hello World, how are you? This is a another sentence.\",posTagger=true,parser=true)\nrenderDependencies(doc)",
       "extraFields" : {
         "aggregatedCells" : "[\"import ml.wolfe.nlp.syntax._\\nval doc = Document.fromString(\\\"Hello World, how are you?\\\")\\nval pipeline = Tokenizer.default andThen Segmenter.default\\nval segmented = pipeline(doc)\\nval first = segmented.sentences.head\\nval withDep = first.copy(syntax = SyntaxAnnotation(ConstituentTree.empty, DependencyTree(first.tokens,Seq(Arc(3,1,Some(\\\"sbj\\\"))))))\\nval docWithDep = segmented.copy(sentences = IndexedSeq(withDep))\\nrenderDependencies(docWithDep)\\n\"]"
       },
