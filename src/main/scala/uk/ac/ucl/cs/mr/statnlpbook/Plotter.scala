@@ -283,7 +283,6 @@ object BratRenderer2 {
     val collData =
       s"""
         |{
-        |    entity_types: [ $tokenType ]
         |}
       """.stripMargin
 
