@@ -14,7 +14,7 @@
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "import ml.wolfe.nlp.syntax._\nval doc = Document.fromString(\"Hello World, how are you?\")\nval pipeline = Tokenizer.default andThen Segmenter.default\nval segmented = pipeline(doc)\nval test = segmented(0) = _.arcs = Seq(Arc(3,1,Some(\"sbj\")))\nrenderDependencies(test)",
+      "code" : "import ml.wolfe.nlp.syntax._\nval doc = Document.fromString(\"Hello World, how are you?\")\nval pipeline = Tokenizer.default andThen Segmenter.default\nval segmented = pipeline(doc)\nval test = segmented(0) = _.arcs = \n  Seq(Arc(3,1,Some(\"sbj\")), Arc(3,4,\"obj\"))\nrenderDependencies(test)",
       "extraFields" : {
         "aggregatedCells" : "[]"
       },
@@ -36,7 +36,7 @@
       "sessionId" : null,
       "code" : "val doc = parse(\"Hello World, how are you? This is a another sentence.\")\nrenderDependencies(doc)",
       "extraFields" : {
-        "aggregatedCells" : "[\"import ml.wolfe.nlp.syntax._\\nval doc = Document.fromString(\\\"Hello World, how are you?\\\")\\nval pipeline = Tokenizer.default andThen Segmenter.default\\nval segmented = pipeline(doc)\\nval test = segmented(0) = s => s.deps = DependencyTree(s.tokens,Seq(Arc(3,1,Some(\\\"sbj\\\"))))\\nrenderDependencies(test)\"]"
+        "aggregatedCells" : "[\"import ml.wolfe.nlp.syntax._\\nval doc = Document.fromString(\\\"Hello World, how are you?\\\")\\nval pipeline = Tokenizer.default andThen Segmenter.default\\nval segmented = pipeline(doc)\\nval test = segmented(0) = _.arcs = Seq(Arc(3,1,Some(\\\"sbj\\\")))\\nrenderDependencies(test)\"]"
       },
       "outputFormat" : null
     }
