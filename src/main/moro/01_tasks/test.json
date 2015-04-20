@@ -14,7 +14,7 @@
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "import ml.wolfe.nlp.syntax._\nval doc = Document.fromString(\"Hello World, how are you?\")\nval pipeline = Tokenizer.default andThen Segmenter.default\nval segmented = pipeline(doc)\nval first = segmented.sentences.head\nval withDep = first.copy(syntax = SyntaxAnnotation(ConstituentTree.empty, DependencyTree(first.tokens,Seq(Arc(3,1,Some(\"sbj\"))))))\nval docWithDep = segmented.copy(sentences = IndexedSeq(withDep))\n//val test = segmented.change(0){s => s.copy() }\nrenderDependencies(docWithDep)",
+      "code" : "import ml.wolfe.nlp.syntax._\nval doc = Document.fromString(\"Hello World, how are you?\")\nval pipeline = Tokenizer.default andThen Segmenter.default\nval segmented = pipeline(doc)\nval test = segmented(0) = s => s.deps = DependencyTree(s.tokens,Seq(Arc(3,1,Some(\"sbj\"))))\nrenderDependencies(test)",
       "extraFields" : {
         "aggregatedCells" : "[]"
       },
