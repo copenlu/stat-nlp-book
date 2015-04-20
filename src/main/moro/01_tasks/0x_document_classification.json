@@ -5,7 +5,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Introduction\nWhy? (motivation)\n\n\nWhat do we want to do (one example)?\nHow do we approach doing it?\n- dataset\n- classifier\n- features\n- evaluation\n- what can we improve\n\nExample choice:\n- spam filtering\n- language identification\n- sentiment analysis (up to a point)\n- determining: author gender, genre (music lyrics)\n- interesting webpages\n- recipe classification\n\n",
+      "code" : "Introduction\nWhy? (motivation)\n\n\nWhat do we want to do (one example)?\nHow do we approach doing it?\n- dataset\n- classifier\n- features\n- evaluation\n- what can we improve\n\nExample choice:\n- spam filtering\n- language identification\n- sentiment analysis (up to a point)\n- determining: author gender, genre (music lyrics)\n- interesting webpages\n- recipe classification\n\n\n\n\n\n\n\n\n\n\nDataset\n\nPreprocessing\n\nFeature engineering\n\nClassification\n\n\n",
       "extraFields" : { },
       "outputFormat" : null
     }
