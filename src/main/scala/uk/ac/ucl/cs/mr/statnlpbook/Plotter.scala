@@ -12,15 +12,15 @@ import scala.collection.mutable.ArrayBuffer
  */
 object Plotter {
 
-  def barChart(map: Map[String, Double]) = {
+  def barChart(map: Iterable[(String, Double)]) = {
     val id = "d3bar" + Math.abs(map.hashCode()).toString
 
-    def mapDataToJson(series: Map[String, Double]) = {
+    def mapDataToJson(series: Iterable[(String, Double)]) = {
       series.map(p => s"""{label:"${p._1}", value:${p._2}}""").mkString("[", ",", "]")
     }
 
 
-    def mapToJson(series: Map[String, Double]) = s"""
+    def mapToJson(series: Iterable[(String, Double)]) = s"""
      |[{
      |key: "Whatever",
      |values: ${mapDataToJson(series)},
@@ -283,7 +283,6 @@ object BratRenderer2 {
     val collData =
       s"""
         |{
-        |    entity_types: [ $tokenType ]
         |}
       """.stripMargin
 
