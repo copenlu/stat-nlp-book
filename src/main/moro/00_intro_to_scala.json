@@ -276,7 +276,7 @@
     "compiler" : "wolfe",
     "input" : {
       "sessionId" : null,
-      "code" : "// define your package like this\n// package com.statnlp.importantstuff\n\n// import packages\nimport scala.io.Source\n\n// use imported objects\nval source = Source.fromURL(\n     \"http://www0.cs.ucl.ac.uk/staff/I.SanchezCarmona/\").mkString\n\n// call methods in packages\nxml.Utility.escape(source)",
+      "code" : "// define your package like this\n// package com.statnlp.importantstuff\n\n// import packages\n//import scala.io.Source\n\n// use imported objects\n//val source = Source.fromURL(\n//     \"http://www0.cs.ucl.ac.uk/staff/I.SanchezCarmona/\").mkString\n\n// call methods in packages\n//xml.Utility.escape(source)\n1==1",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -772,42 +772,6 @@
     "input" : {
       "sessionId" : null,
       "code" : "implicit class JackString(s: String) {\n    def goCrazy() = (s + \" \") * 7\n}\n\"All work and no play makes Jack a dull boy.\".goCrazy()",
-      "extraFields" : { },
-      "outputFormat" : null
-    }
-  }, {
-    "id" : 87,
-    "compiler" : "wolfe",
-    "input" : {
-      "sessionId" : null,
-      "code" : "",
-      "extraFields" : { },
-      "outputFormat" : null
-    }
-  }, {
-    "id" : 88,
-    "compiler" : "wolfe",
-    "input" : {
-      "sessionId" : null,
-      "code" : "",
-      "extraFields" : { },
-      "outputFormat" : null
-    }
-  }, {
-    "id" : 81,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "",
-      "extraFields" : { },
-      "outputFormat" : null
-    }
-  }, {
-    "id" : 82,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "",
       "extraFields" : { },
       "outputFormat" : null
     }
