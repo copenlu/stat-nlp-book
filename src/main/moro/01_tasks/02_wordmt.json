@@ -5,7 +5,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Some headline\nYo\n\nwassup\n\n  * Yo\n  * What\nHello\n\n<div>\n  <svg>\n  <circle cx=\"60\" cy=\"60\" r=\"50\"/> \n  </svg>\n</div>\n\n",
+      "code" : "\nMachine Translation (MT) is one of the canonical NLP applications, and one that nowadays most people are familiar with, primarily through online translation services of the major search engine providers. While there is still some way to go before machines can provide fluent and flawless translations, in particular for more distant language pairs like English and Japanese, progress in this field has been remarkable. \n\nIn this chapter we will illustrate the foundations of this progress, and focus on word-based machine translation models. Nowaways the field has mostly moved to phrase and syntax-based approaches, but the word-based approach is still important, both from a foundational point of view, and as sub-component in more complex approaches.  \n\n### Noisy Channel Model for MT\nMany Word-based MT systems, as well as those based on more advanced representations, rely on a [Noisy Channel](todo) model.  \n\n\n",
       "extraFields" : { },
       "outputFormat" : null
     }
