@@ -1,0 +1,780 @@
+{
+  "name" : "Introduction to Scala",
+  "cells" : [ {
+    "id" : 0,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Scala Crash Course\n* Based on Scala School!\n* https://twitter.github.io/scala_school/",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 1,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "# Motivation\n\n## Why Scala?\n* Increasingly used in NLP and ML\n* Expressive\n* Concise\n* Java interoperability\n* Scala is not Java on steroids :)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 2,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "# Expressions\n## Expressions\n* (Almost) everything in Scala is an expression\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 3,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "\"Soft\" + \" \" + \"kitty,\" + \" warm\".+(\" kitty\")\n1.5 + 1.21828189\nif (true && false) 7 else 42",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 4,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Values & Variables\n* Values are immutable (cannot change their bindings)\n* Variables are mutable (but can be a source of problems)\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 5,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val value = \"I cannot be changed! Really!\"\n// this won't work\n// value = \"But surely, this is not true?!\"\nvalue\n\nvar variable = \"However, I can!\"\nvariable = \"See? I can change!\"\nvariable",
+      "extraFields" : {
+        "aggregatedCells" : "[\"\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\\n1.5 + 1.21828189\\nif (true && false) 7 else 42\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 6,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Functions\n* Every function is an object\n* Specify type signature\n* Need to provide type for function parameters (automatically inferred, if possible)\n* Can be stored in variables, passed as parameters\n* Can create anonymous functions\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 7,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "def depluralizer(word: String) =\n   if (word.takeRight(4) == \"sses\" || word.takeRight(3) == \"ies\" )\n     word.stripSuffix(\"es\")\n   else if (word.takeRight(2) == \"ss\")\n     word\n   else\n     word.stripSuffix(\"s\")\ndef exclamator(word: String) = word + \"!\"\nval removeIng = (word: String) => word.stripSuffix(\"ing\")\ndepluralizer(\"businesses\")",
+      "extraFields" : {
+        "aggregatedCells" : "[\"\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\\n1.5 + 1.21828189\\nif (true && false) 7 else 42\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// this won't work\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\\n\\nvar variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 8,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## More functions...\n* Partial application\n   * \"Fixes\" a subset of the input domain\n* Currying\n   * Multiple argument function into a chain of single argument functions\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 9,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "// partial function application\ndef addSuffix(stem: String, suffix: String): String =\n  stem + suffix\nval addIng = addSuffix(_:String, \"ing\")\naddIng(\"Learn\")\n// currying\ndef addWords(w1: String)(w2: String)(w3: String): String =\n  w1 + \" \" + w2 + \" \" + w3\nval curried = addWords _\nval soft = curried(\"soft\")\nval kitty = soft(\"kitty\")\nkitty(\"warm\")",
+      "extraFields" : {
+        "aggregatedCells" : "[\"\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\\n1.5 + 1.21828189\\nif (true && false) 7 else 42\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// this won't work\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\\n\\nvar variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n     word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\ndef exclamator(word: String) = word + \\\"!\\\"\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\ndepluralizer(\\\"businesses\\\")\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 10,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## ...and more functions\n* Variable length arguments\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 11,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "def concatenateAll(joiningSym: String, args: String*) = {\n args.foldLeft(\"\")((x: String, y: String) => x + joiningSym + y)\n}\nconcatenateAll(\"+\",\"soft\", \"kitty\", \"warm\", \"kitty\")",
+      "extraFields" : {
+        "aggregatedCells" : "[\"\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\\n1.5 + 1.21828189\\nif (true && false) 7 else 42\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// this won't work\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\\n\\nvar variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n     word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\ndef exclamator(word: String) = word + \\\"!\\\"\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\ndepluralizer(\\\"businesses\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String =\\n  stem + suffix\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\naddIng(\\\"Learn\\\")\\n// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 12,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Classes",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 13,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "class Tweet(c: String, u: String, t: Long) {\n // alternative constructor\n def this(c: String) = this(c, \"\", -1L)\n // constructor\n val content = c\n val user = u\n val time = t\n val anonymous_user = (u == \"\")\n\n // overriden instance method\n override def toString(): String =\n  \"[%s] @ %d : '%s'\".format(user, time, content)\n}\n\nval x = new Tweet(\"Test tweet\")\nx",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 14,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Inheritance\n* Each class inherits from only one superclass\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 15,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "class GeotaggedTweet(c: String, u: String, t: Long,\n                     coord: (Double, Double))\n                     extends Tweet(c, u, t) {\n  val coordinates = coord\n  override def toString(): String =\n   \"[%s] @ %d @ (%f, %f)  : '%s'\"\n     .format(user, time, coord._1, coord._2, content)\n}\n\nval nt = new GeotaggedTweet(\"Geotagged tweet\",\"user\",-1,(71,17))\nnt",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 16,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Abstract class\n* Defines methods, but does not implement them\n* Subclasses extending it define these methods\n* Cannot be instantiated\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 17,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "abstract class Regularization {\n def regularizationTerm(): Double\n}\nclass L1Reg(params: List[Double]) extends Regularization {\n def regularizationTerm(): Double =\n   params.map(x=>math.abs(x)).sum/params.length.toDouble\n}\nclass L2Reg(params: List[Double]) extends Regularization {\n def regularizationTerm(): Double =\n   params.map(x=>x*x).sum/params.length.toDouble\n}\nval L1reg = new L1Reg(List(-1,1,2,-2))\nL1reg.regularizationTerm",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 18,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Traits\n* Collects method and field definitions\n* Can be partially implemented\n* Cannot have constructor parameters\n* Classes can mix any number of traits\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 19,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "abstract class NE(word: String) {\n val value = word\n}\ntrait Person {\n var gender: Char\n}\ntrait Location {\n val isRiver: Boolean\n val partOf: Location\n}\n//class PersonNE(word: String, gender: Char) extends NE(word) with Person\n//class LocationNE(word: String, partOf: Location) extends NE(word) with Location",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 20,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Types\n* Functions/traits/classes can be generic and work on any type\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 21,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "class Stack[T] {\n var elems: List[T] = List()\n def push(value: T) { elems = value :: elems}\n def pop(): T = {\n  val head = elems.head;\n  elems = elems.tail;\n  head\n }\n}\n\nval stack = new Stack[Int]\nstack.push(1)\nstack.push(15)\nstack.pop",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 22,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## apply method\n* Syntactic sugar when class/object has one main use\n* Looks like we are calling a method\n* Handy way of closing the gap between functions and objects\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 23,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "// able to use this object as a function and object\nclass Evil {\n def apply() = 666\n}\nval evil = new Evil\n//evil.apply()\n//evil.apply\nevil()",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 24,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Objects\n* Hold single instances of a class\n* Can have same name as a class\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 25,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "object Timer {\n var count: Long = 0\n def inc() = count+=1\n def status() = count\n}\n\nTimer.inc()\nTimer.inc()\nTimer.status",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 26,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Functions are objects!\n* A function of one argument is an instance of a Function1 trait\n* Plus apply() = a function\n* Methods in classes are methods\n* Standalone methods are Function* instances\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 27,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "// shortcut for Function1[String, Boolean] - (String => Boolean)\nobject Palindrome extends Function1[String, Boolean] {\n def apply(s: String): Boolean = s == s.reverse\n}\nPalindrome(\"sator arepo tenet opera rotas\")",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 28,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Packages\n* Organize your code neatly\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 29,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "// define your package like this\n// package com.statnlp.importantstuff\n\n// import packages\n//import scala.io.Source\n\n// use imported objects\n//val source = Source.fromURL(\n//     \"http://www0.cs.ucl.ac.uk/staff/I.SanchezCarmona/\").mkString\n\n// call methods in packages\n//xml.Utility.escape(source)\n1==1",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 30,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Pattern Matching\n* Brutally useful!\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 31,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "def step1stemmer(word: String): String = {\n word match {\n   case i if (i.takeRight(1)==\"s\") => depluralizer(i)\n   case i if (i.takeRight(3)==\"ing\") => removeIng(i)\n   case i if (i.takeRight(2)==\"ed\") => word.stripSuffix(\"ed\")\n }\n}\nstep1stemmer(\"learning\")",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 32,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Pattern matching cntd.\n* Create functions\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 33,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "def factorial(n: Int): Int = {\n n match {\n  case 0 | 1 => 1\n  case x => x * factorial(n-1)\n }\n}\nfactorial(5)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 34,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Pattern matching cntd.\n* Checking for types\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 35,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "def parseArgument(arg: String, value: Any): String =\n  (arg, value) match {\n case (\"-x\", x) => \"-x\" + x\n case (\"-v\", v: Int) if (v<3) => \"-v < 3\"\n case (\"-v\", weird_value) => \"-v weird value!!\"\n case unk => \"An unknown argument: \" + unk\n}\nparseArgument(\"-v\", 0.5)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 36,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Pattern matching with Case classes\n* Matching on class members\n* Case classes!\n   * Store and match on the contents of a class\n   * Construction without \"new\"\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 37,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "abstract class Node\ncase class Split(left: Node, right: Node) extends Node\ncase class Leaf(value: Int) extends Node\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\n\ndef sum(tree: Node): Int = tree match {\n case Leaf(n) => n\n case Split(left, right) => sum(left) + sum(right)\n}\n\nsum(tree)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 38,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Exceptions\n* Try-catch-final + pattern matching\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 39,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "var ok: Boolean = true\nval computation: Double = try {\n 1 / 0\n} catch {\ncase e: ArithmeticException => {ok = false; Double.NaN}\n} finally {\nok = false\n}\n\n\"computation=%f, ok=%s\".format(computation,ok)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 40,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "# ???",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 41,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "def ??? : Nothing = throw new NotImplementedError\n\n//todo, but already compiles\ndef answerToLifeTheUniverseAndEverything() = ???\ndef question(s: String) = s match {\n  case \"the answer to life the universe and everything\" =>\n    answerToLifeTheUniverseAndEverything()\n  case _ => ???\n}\n\n//already done\ndef answerOnePlusOne() = 2\nanswerOnePlusOne()",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 42,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "# Collections\n## LISTS",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 43,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val tokens1 = List(\"All\", \"work\", \"and\", \"no\", \"play\", \"makes\",\n                   \"Jack\", \"a\", \"dull\", \"boy\", \".\")\ntokens1\ntokens1.head\ntokens1.tail\n\"Jack Torrance: \" :: tokens1",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 44,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val tokens2 = List(\"Jack\", \"!\", \"What\", \"...\", \"are\", \"you\", \"?\")\ntokens2\nval tokens3 = tokens1 ++ tokens2\ntokens3\ntokens3.distinct",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 45,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Sets\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 46,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val words1 = Set(\"Do\", \",\", \"or\", \"do\", \"not\", \".\",\n                 \"There\", \"is\", \"no\", \"try\", \".\")\nwords1\n\nval words2 = Set(\"A\", \"martini\", \".\",\n                 \"Shaken\", \",\", \"not\", \"stirred\", \".\")\nwords1 union words2\n\nwords1 intersect words2\n\nwords1 diff words2",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 47,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Maps",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 48,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val lemmas = Map(\"saving\" -> \"save\", \"tokens\" -> \"token\",\n                 \"token\" -> \"token\", \"occurring\" -> \"occur\")\nlemmas\nlemmas(\"tokens\")\nlemmas.keySet",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 49,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Tuples",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 50,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val wordCount = (\"like\", 2)\nwordCount._2\nwordCount._1\n\"like\" -> 2 == (\"like\", 2)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 51,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Option",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 52,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val lemmaOpt1 = lemmas.get(\"tokens\")\nlemmaOpt1\nlemmaOpt1.get\n\nval lemmaOpt2 = lemmas.get(\"Open the pod bay doors, HAL.\")\nlemmaOpt2\n\nif (lemmaOpt2.isDefined)\n  lemmaOpt2.get\nelse\n  \"I'm sorry, Dave.\"\n  \nlemmaOpt2.getOrElse(\"I'm afraid I can't do that.\").toString",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 53,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Methods on Collections",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 54,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## map",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 55,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val sentences = List(\"Daisy, Daisy, give me your answer do.\",\n                     \"I'm half crazy all for the love of you.\")\nsentences.head.toCharArray.map(c => c.toLower).mkString",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 56,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "  def dyingHAL(string: String) = {\n    string.toCharArray.map(c => {\n      val p = math.random\n      if (p > .3) c.toLower\n      else if (p > .05) c.toUpper\n      else '-'\n    }).mkString\n  }\n  sentences.map(dyingHAL).mkString(\" \")",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 57,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## foreach",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 58,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "tokens1\n\nvar counts = 0\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\ncounts",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 59,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## filter",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 60,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "tokens1\ntokens1.filter(t => !t.startsWith(\"a\")).size\ntokens1.count(t => !t.startsWith(\"a\"))",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 61,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## fold",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 62,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "tokens1\ntokens1.foldLeft(0)((count, word) => count + word.length)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 63,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## flatten",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 64,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "List(tokens1, tokens2)\nList(tokens1, tokens2).flatten",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 65,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## flatMap",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 66,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "List(tokens1, tokens2).map(_ :+ \"STOP\")\nList(tokens1, tokens2).flatMap(_ :+ \"STOP\")",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 67,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## [Performance Characteristics](http://docs.scala-lang.org/overviews/collections/performance-characteristics.html)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 68,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## compose",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 69,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\nsigmoid(3)\n\ndef plusOne(i: Double) = i + 1\nval fun1 = sigmoid _ compose plusOne\nfun1(2) //sigmoid(plusOne(2))",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 70,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## andThen",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 71,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val fun2 = sigmoid _ andThen plusOne\nfun2(3) //plusOne(sigmoid(3))\n(sigmoid _ andThen plusOne)(9) == (plusOne _ compose sigmoid)(9)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 72,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## NLP Pipeline with andThen",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 73,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "object SentenceSplitter extends (String => Seq[String]) {\n  override def apply(v1: String): Seq[String] =\n    v1.split(\"[.!?]\").toList\n}\nobject TokenSplitter extends (Seq[String] => Seq[Seq[String]]) {\n  override def apply(v1: Seq[String]): Seq[Seq[String]] =\n    v1.map(s => s.split(\" \").toList)\n}\nval pipeline = SentenceSplitter andThen TokenSplitter\npipeline(\"Of course, the whole point of a Doomsday Machine \" +\n         \"is lost, if you *keep* it a *secret*! Why didn't \" +\n         \"you tell the world, EH?\")",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 74,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## for comprehension",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 75,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "case class Sentence(tokens: Seq[String])\ncase class Document(sentences: Seq[Sentence])\n\nval docs = Seq(\n    Document(Seq(Sentence(Seq(\"I\", \"like\", \"Scala\", \".\")))),\n    Document(Seq(Sentence(Seq(\"Really\", \"?\")),\n                 Sentence(Seq(\"I\", \"like\", \"NLP\", \".\")))))\n\nvar shortTokens = 0\nfor (doc <- docs)\n  for (sentence <- doc.sentences)\n    for (token <- sentence.tokens)\n      if (token.length < 3) shortTokens += 1\nshortTokens",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 76,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "shortTokens = 0\nfor (doc <- docs)\n  for (sentence <- doc.sentences)\n    for (token <- sentence.tokens)\n      if (token.length < 3) shortTokens += 1\nshortTokens\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 77,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "shortTokens = 0\nfor {\n  doc <- docs\n  sentence <- doc.sentences\n  token <- sentence.tokens\n  if token.length < 3\n} shortTokens += 1\nshortTokens",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 78,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "docs.flatMap(_.sentences.flatMap(_.tokens)).count(_.length < 3)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 79,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "# Scala implicits",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 80,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "implicit val exponent = 5\ndef pow(i: Int)(implicit n: Int) = math.pow(i, n)\npow(2)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 83,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Implicit Methods",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 84,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "implicit def round(d: Double) = {\n  if(d - d.toInt >= 0.5) d.toInt + 1\n  else d.toInt\n}\ndef modulo(i: Int)(n: Int) = i % n\nmodulo(18)(6.75)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 85,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Implicit Classes",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 86,
+    "compiler" : "wolfe",
+    "input" : {
+      "sessionId" : null,
+      "code" : "implicit class JackString(s: String) {\n    def goCrazy() = (s + \" \") * 7\n}\n\"All work and no play makes Jack a dull boy.\".goCrazy()",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  } ],
+  "config" : { }
+}
