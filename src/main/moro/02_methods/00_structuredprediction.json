@@ -1,0 +1,14 @@
+{
+  "name" : "Structured Prediction",
+  "cells" : [ {
+    "id" : 0,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "\nIn general there seems to be no emerging unified _theory of NLP_ to emerge, and most textbooks and courses explain NLP as \n\n> collection of problems, techniques, ideas, frameworks, etc. that really are not tied together in any reasonable way other than the fact that they have to do with NLP.\n>\n>  -- <cite>[Hal Daume](http://nlpers.blogspot.co.uk/2012/12/teaching-intro-grad-nlp.html)</cite>\n\nThat's not to say though that they aren't cross-cutting patterns, general best practices and recipes that reoccur frequently. One such reoccuring pattern I found in many NLP papers and systems is what I like to refer to as the _[structured prediction](http://en.wikipedia.org/wiki/Structured_prediction) recipe_.   \n\n### In this Book\nThe structured prediction recipe can be found in several places within this book:\n\n  * [Word-Based MT](/template/statnlpbook/01_tasks/02_wordmt)\n  * [Document Classification](/template/statnlpbook/01_tasks/0x_document_classification)\n  * etc.",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  } ],
+  "config" : { }
+}
