@@ -14,7 +14,7 @@
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "val pipeline = Tokenizer.default andThen Segmenter.default\nval text = \"This is the first sentence. This is the second one, which is a bit longer.\"\nval doc = pipeline apply Document.fromString(text)\nRenderer.renderWeightedAlignment(doc.sentences(0),doc.sentences(1),Seq((1,4,1.0), (3,1,0.1)))",
+      "code" : "val s1 = segment(\"the house is small\").sentences(0)\nval s2 = segment(\"das Haus ist klein\").sentences(0)\nRenderer.renderWeightedAlignment(s1,s2,Seq((1,2,1.0), (2,1,0.1)))",
       "extraFields" : {
         "aggregatedCells" : "[]"
       },
