@@ -12,15 +12,15 @@ import scala.collection.mutable.ArrayBuffer
  */
 object Plotter {
 
-  def barChart(map: Iterable[(String, Double)]) = {
+  def barChart(map: Iterable[(Any, Double)]) = {
     val id = "d3bar" + Math.abs(map.hashCode()).toString
 
-    def mapDataToJson(series: Iterable[(String, Double)]) = {
-      series.map(p => s"""{label:"${p._1}", value:${p._2}}""").mkString("[", ",", "]")
+    def mapDataToJson(series: Iterable[(Any, Double)]) = {
+      series.map(p => s"""{label:"${p._1.toString}", value:${p._2}}""").mkString("[", ",", "]")
     }
 
 
-    def mapToJson(series: Iterable[(String, Double)]) = s"""
+    def mapToJson(series: Iterable[(Any, Double)]) = s"""
      |[{
      |key: "Whatever",
      |values: ${mapDataToJson(series)},
@@ -62,15 +62,15 @@ object Plotter {
     RawHTML(html)
   }
 
-  def multiBarHorizontalChart(map: Map[String, Double]) = {
+  def multiBarHorizontalChart(map: Map[Any, Double]) = {
     val id = "d3multibar" + Math.abs(map.hashCode()).toString
 
-    def mapDataToJson(series: Map[String, Double]) = {
-      series.map(p => s"""{label:"${p._1}", value:${p._2}}""").mkString("[", ",", "]")
+    def mapDataToJson(series: Map[Any, Double]) = {
+      series.map(p => s"""{label:"${p._1.toString}", value:${p._2}}""").mkString("[", ",", "]")
     }
 
 
-    def mapToJson(series: Map[String, Double]) = s"""
+    def mapToJson(series: Map[Any, Double]) = s"""
      |[{
      |key: "Whatever",
      |values: ${mapDataToJson(series)},
@@ -121,10 +121,10 @@ object Plotter {
 
 object Renderer {
 
-  def renderAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int)]) =
+  def renderAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int)] = Seq.empty) =
     renderWeightedAlignment(s1,s2,alignment.map(p => (p._1,p._2,1.0)))
 
-  def renderWeightedAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int, Double)]) = {
+  def renderWeightedAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int, Double)] = Seq.empty) = {
 
     val id = "align" + UUID.randomUUID().toString
     val s1Words = s1.tokens.map("\"" + _.word + "\"").mkString("[",",","]")
