@@ -12,7 +12,7 @@ You may have to delete the wolfe directory in the ivy cache to make sure you get
 
 Setup the project specific configuration file 
 
-    cp moro/conf/application-statnlpbook.conf moro/conf/application.conf
+    cp application-statnlpbook.conf moro/conf/application.conf
 
 Initialize sub-modules (1), compile the project (2) and wolfe (3) and run moro (4-5).
 
