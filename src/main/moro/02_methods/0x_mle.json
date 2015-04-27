@@ -1,0 +1,54 @@
+{
+  "name" : "Maximum Likelihood Estimation",
+  "cells" : [ {
+    "id" : 0,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Yo\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 4,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "def f(i:Int) = i * 2\nf(3)",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 3,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "\nasdads\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 1,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "\"Yo\"",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 2,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Blah\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  } ],
+  "config" : { }
+}
