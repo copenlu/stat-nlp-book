@@ -1,0 +1,307 @@
+{
+  "name" : "Introduction to Scala (2nd part, optional)",
+  "cells" : [ {
+    "id" : 0,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Classes",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 1,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "class Tweet(c: String, u: String, t: Long) {\n // alternative constructor\n def this(c: String) = this(c, \"\", -1L)\n // constructor\n val content = c\n val user = u\n val time = t\n val anonymous_user = (u == \"\")\n\n // overriden instance method\n override def toString(): String =\n  \"[%s] @ %d : '%s'\".format(user, time, content)\n}\n\nval x = new Tweet(\"Test tweet\")\nx",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 2,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Inheritance\n* Each class inherits from only one superclass\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 3,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "class GeotaggedTweet(c: String, u: String, t: Long,\n                     coord: (Double, Double))\n                     extends Tweet(c, u, t) {\n  val coordinates = coord\n  override def toString(): String =\n   \"[%s] @ %d @ (%f, %f)  : '%s'\"\n     .format(user, time, coord._1, coord._2, content)\n}\n\nval nt = new GeotaggedTweet(\"Geotagged tweet\",\"user\",-1,(71,17))\nnt",
+      "extraFields" : {
+        "aggregatedCells" : "[\"class Tweet(c: String, u: String, t: Long) {\\n // alternative constructor\\n def this(c: String) = this(c, \\\"\\\", -1L)\\n // constructor\\n val content = c\\n val user = u\\n val time = t\\n val anonymous_user = (u == \\\"\\\")\\n\\n // overriden instance method\\n override def toString(): String =\\n  \\\"[%s] @ %d : '%s'\\\".format(user, time, content)\\n}\\n\\nval x = new Tweet(\\\"Test tweet\\\")\\nx\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 4,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Abstract class\n* Defines methods, but does not implement them\n* Subclasses extending it define these methods\n* Cannot be instantiated\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 5,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "abstract class Regularization {\n def regularizationTerm(): Double\n}\nclass L1Reg(params: List[Double]) extends Regularization {\n def regularizationTerm(): Double =\n   params.map(x=>math.abs(x)).sum/params.length.toDouble\n}\nclass L2Reg(params: List[Double]) extends Regularization {\n def regularizationTerm(): Double =\n   params.map(x=>x*x).sum/params.length.toDouble\n}\nval L1reg = new L1Reg(List(-1,1,2,-2))\nL1reg.regularizationTerm",
+      "extraFields" : {
+        "aggregatedCells" : "[\"class Tweet(c: String, u: String, t: Long) {\\n // alternative constructor\\n def this(c: String) = this(c, \\\"\\\", -1L)\\n // constructor\\n val content = c\\n val user = u\\n val time = t\\n val anonymous_user = (u == \\\"\\\")\\n\\n // overriden instance method\\n override def toString(): String =\\n  \\\"[%s] @ %d : '%s'\\\".format(user, time, content)\\n}\\n\\nval x = new Tweet(\\\"Test tweet\\\")\\nx\",\"class GeotaggedTweet(c: String, u: String, t: Long,\\n                     coord: (Double, Double))\\n                     extends Tweet(c, u, t) {\\n  val coordinates = coord\\n  override def toString(): String =\\n   \\\"[%s] @ %d @ (%f, %f)  : '%s'\\\"\\n     .format(user, time, coord._1, coord._2, content)\\n}\\n\\nval nt = new GeotaggedTweet(\\\"Geotagged tweet\\\",\\\"user\\\",-1,(71,17))\\nnt\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 6,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Traits\n* Collects method and field definitions\n* Can be partially implemented\n* Cannot have constructor parameters\n* Classes can mix any number of traits\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 7,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "abstract class NE(word: String) {\n val value = word\n}\ntrait Person {\n var gender: Char\n}\ntrait Location {\n val isRiver: Boolean\n val partOf: Location\n}\n//class PersonNE(word: String, gender: Char) extends NE(word) with Person\n//class LocationNE(word: String, partOf: Location) extends NE(word) with Location",
+      "extraFields" : {
+        "aggregatedCells" : "[\"class Tweet(c: String, u: String, t: Long) {\\n // alternative constructor\\n def this(c: String) = this(c, \\\"\\\", -1L)\\n // constructor\\n val content = c\\n val user = u\\n val time = t\\n val anonymous_user = (u == \\\"\\\")\\n\\n // overriden instance method\\n override def toString(): String =\\n  \\\"[%s] @ %d : '%s'\\\".format(user, time, content)\\n}\\n\\nval x = new Tweet(\\\"Test tweet\\\")\\nx\",\"class GeotaggedTweet(c: String, u: String, t: Long,\\n                     coord: (Double, Double))\\n                     extends Tweet(c, u, t) {\\n  val coordinates = coord\\n  override def toString(): String =\\n   \\\"[%s] @ %d @ (%f, %f)  : '%s'\\\"\\n     .format(user, time, coord._1, coord._2, content)\\n}\\n\\nval nt = new GeotaggedTweet(\\\"Geotagged tweet\\\",\\\"user\\\",-1,(71,17))\\nnt\",\"abstract class Regularization {\\n def regularizationTerm(): Double\\n}\\nclass L1Reg(params: List[Double]) extends Regularization {\\n def regularizationTerm(): Double =\\n   params.map(x=>math.abs(x)).sum/params.length.toDouble\\n}\\nclass L2Reg(params: List[Double]) extends Regularization {\\n def regularizationTerm(): Double =\\n   params.map(x=>x*x).sum/params.length.toDouble\\n}\\nval L1reg = new L1Reg(List(-1,1,2,-2))\\nL1reg.regularizationTerm\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 8,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Types\n* Functions/traits/classes can be generic and work on any type\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 9,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "class Stack[T] {\n var elems: List[T] = List()\n def push(value: T) { elems = value :: elems}\n def pop(): T = {\n  val head = elems.head;\n  elems = elems.tail;\n  head\n }\n}\n\nval stack = new Stack[Int]\nstack.push(1)\nstack.push(15)\nstack.pop",
+      "extraFields" : {
+        "aggregatedCells" : "[\"class Tweet(c: String, u: String, t: Long) {\\n // alternative constructor\\n def this(c: String) = this(c, \\\"\\\", -1L)\\n // constructor\\n val content = c\\n val user = u\\n val time = t\\n val anonymous_user = (u == \\\"\\\")\\n\\n // overriden instance method\\n override def toString(): String =\\n  \\\"[%s] @ %d : '%s'\\\".format(user, time, content)\\n}\\n\\nval x = new Tweet(\\\"Test tweet\\\")\\nx\",\"class GeotaggedTweet(c: String, u: String, t: Long,\\n                     coord: (Double, Double))\\n                     extends Tweet(c, u, t) {\\n  val coordinates = coord\\n  override def toString(): String =\\n   \\\"[%s] @ %d @ (%f, %f)  : '%s'\\\"\\n     .format(user, time, coord._1, coord._2, content)\\n}\\n\\nval nt = new GeotaggedTweet(\\\"Geotagged tweet\\\",\\\"user\\\",-1,(71,17))\\nnt\",\"abstract class Regularization {\\n def regularizationTerm(): Double\\n}\\nclass L1Reg(params: List[Double]) extends Regularization {\\n def regularizationTerm(): Double =\\n   params.map(x=>math.abs(x)).sum/params.length.toDouble\\n}\\nclass L2Reg(params: List[Double]) extends Regularization {\\n def regularizationTerm(): Double =\\n   params.map(x=>x*x).sum/params.length.toDouble\\n}\\nval L1reg = new L1Reg(List(-1,1,2,-2))\\nL1reg.regularizationTerm\",\"abstract class NE(word: String) {\\n val value = word\\n}\\ntrait Person {\\n var gender: Char\\n}\\ntrait Location {\\n val isRiver: Boolean\\n val partOf: Location\\n}\\n//class PersonNE(word: String, gender: Char) extends NE(word) with Person\\n//class LocationNE(word: String, partOf: Location) extends NE(word) with Location\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 10,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## apply method\n* Syntactic sugar when class/object has one main use\n* Looks like we are calling a method\n* Handy way of closing the gap between functions and objects\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 11,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "// able to use this object as a function and object\nclass Evil {\n def apply() = 666\n}\nval evil = new Evil\n//evil.apply()\n//evil.apply\nevil()",
+      "extraFields" : {
+        "aggregatedCells" : "[\"class Tweet(c: String, u: String, t: Long) {\\n // alternative constructor\\n def this(c: String) = this(c, \\\"\\\", -1L)\\n // constructor\\n val content = c\\n val user = u\\n val time = t\\n val anonymous_user = (u == \\\"\\\")\\n\\n // overriden instance method\\n override def toString(): String =\\n  \\\"[%s] @ %d : '%s'\\\".format(user, time, content)\\n}\\n\\nval x = new Tweet(\\\"Test tweet\\\")\\nx\",\"class GeotaggedTweet(c: String, u: String, t: Long,\\n                     coord: (Double, Double))\\n                     extends Tweet(c, u, t) {\\n  val coordinates = coord\\n  override def toString(): String =\\n   \\\"[%s] @ %d @ (%f, %f)  : '%s'\\\"\\n     .format(user, time, coord._1, coord._2, content)\\n}\\n\\nval nt = new GeotaggedTweet(\\\"Geotagged tweet\\\",\\\"user\\\",-1,(71,17))\\nnt\",\"abstract class Regularization {\\n def regularizationTerm(): Double\\n}\\nclass L1Reg(params: List[Double]) extends Regularization {\\n def regularizationTerm(): Double =\\n   params.map(x=>math.abs(x)).sum/params.length.toDouble\\n}\\nclass L2Reg(params: List[Double]) extends Regularization {\\n def regularizationTerm(): Double =\\n   params.map(x=>x*x).sum/params.length.toDouble\\n}\\nval L1reg = new L1Reg(List(-1,1,2,-2))\\nL1reg.regularizationTerm\",\"abstract class NE(word: String) {\\n val value = word\\n}\\ntrait Person {\\n var gender: Char\\n}\\ntrait Location {\\n val isRiver: Boolean\\n val partOf: Location\\n}\\n//class PersonNE(word: String, gender: Char) extends NE(word) with Person\\n//class LocationNE(word: String, partOf: Location) extends NE(word) with Location\",\"class Stack[T] {\\n var elems: List[T] = List()\\n def push(value: T) { elems = value :: elems}\\n def pop(): T = {\\n  val head = elems.head;\\n  elems = elems.tail;\\n  head\\n }\\n}\\n\\nval stack = new Stack[Int]\\nstack.push(1)\\nstack.push(15)\\nstack.pop\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 12,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Objects\n* Hold single instances of a class\n* Can have same name as a class\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 13,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "object Timer {\n var count: Long = 0\n def inc() = count+=1\n def status() = count\n}\n\nTimer.inc()\nTimer.inc()\nTimer.status",
+      "extraFields" : {
+        "aggregatedCells" : "[\"class Tweet(c: String, u: String, t: Long) {\\n // alternative constructor\\n def this(c: String) = this(c, \\\"\\\", -1L)\\n // constructor\\n val content = c\\n val user = u\\n val time = t\\n val anonymous_user = (u == \\\"\\\")\\n\\n // overriden instance method\\n override def toString(): String =\\n  \\\"[%s] @ %d : '%s'\\\".format(user, time, content)\\n}\\n\\nval x = new Tweet(\\\"Test tweet\\\")\\nx\",\"class GeotaggedTweet(c: String, u: String, t: Long,\\n                     coord: (Double, Double))\\n                     extends Tweet(c, u, t) {\\n  val coordinates = coord\\n  override def toString(): String =\\n   \\\"[%s] @ %d @ (%f, %f)  : '%s'\\\"\\n     .format(user, time, coord._1, coord._2, content)\\n}\\n\\nval nt = new GeotaggedTweet(\\\"Geotagged tweet\\\",\\\"user\\\",-1,(71,17))\\nnt\",\"abstract class Regularization {\\n def regularizationTerm(): Double\\n}\\nclass L1Reg(params: List[Double]) extends Regularization {\\n def regularizationTerm(): Double =\\n   params.map(x=>math.abs(x)).sum/params.length.toDouble\\n}\\nclass L2Reg(params: List[Double]) extends Regularization {\\n def regularizationTerm(): Double =\\n   params.map(x=>x*x).sum/params.length.toDouble\\n}\\nval L1reg = new L1Reg(List(-1,1,2,-2))\\nL1reg.regularizationTerm\",\"abstract class NE(word: String) {\\n val value = word\\n}\\ntrait Person {\\n var gender: Char\\n}\\ntrait Location {\\n val isRiver: Boolean\\n val partOf: Location\\n}\\n//class PersonNE(word: String, gender: Char) extends NE(word) with Person\\n//class LocationNE(word: String, partOf: Location) extends NE(word) with Location\",\"class Stack[T] {\\n var elems: List[T] = List()\\n def push(value: T) { elems = value :: elems}\\n def pop(): T = {\\n  val head = elems.head;\\n  elems = elems.tail;\\n  head\\n }\\n}\\n\\nval stack = new Stack[Int]\\nstack.push(1)\\nstack.push(15)\\nstack.pop\",\"// able to use this object as a function and object\\nclass Evil {\\n def apply() = 666\\n}\\nval evil = new Evil\\n//evil.apply()\\n//evil.apply\\nevil()\"]"
+      },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 14,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Functions are objects!\n* A function of one argument is an instance of a Function1 trait\n* Plus apply() = a function\n* Methods in classes are methods\n* Standalone methods are Function* instances\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 15,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "// shortcut for Function1[String, Boolean] - (String => Boolean)\nobject Palindrome extends Function1[String, Boolean] {\n def apply(s: String): Boolean = s == s.reverse\n}\nPalindrome(\"sator arepo tenet opera rotas\")",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 16,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Packages\n* Organize your code neatly\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 17,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "// define your package like this\n// package com.statnlp.importantstuff\n\n// import packages\n//import scala.io.Source\n\n// use imported objects\n//val source = Source.fromURL(\n//     \"http://www0.cs.ucl.ac.uk/staff/I.SanchezCarmona/\").mkString\n\n// call methods in packages\n//xml.Utility.escape(source)\n1==1",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 18,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Pattern matching with Case classes\n* Matching on class members\n* Case classes!\n   * Store and match on the contents of a class\n   * Construction without \"new\"\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 19,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "abstract class Node\ncase class Split(left: Node, right: Node) extends Node\ncase class Leaf(value: Int) extends Node\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\n\ndef sum(tree: Node): Int = tree match {\n case Leaf(n) => n\n case Split(left, right) => sum(left) + sum(right)\n}\n\nsum(tree)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 20,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Exceptions\n* Try-catch-final + pattern matching\n<br><br>",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 21,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "var ok: Boolean = true\nval computation: Double = try {\n 1 / 0\n} catch {\ncase e: ArithmeticException => {ok = false; Double.NaN}\n} finally {\nok = false\n}\n\n\"computation=%f, ok=%s\".format(computation,ok)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 22,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "# ???",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 23,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "def ??? : Nothing = throw new NotImplementedError\n\n//todo, but already compiles\ndef answerToLifeTheUniverseAndEverything() = ???\ndef question(s: String) = s match {\n  case \"the answer to life the universe and everything\" =>\n    answerToLifeTheUniverseAndEverything()\n  case _ => ???\n}\n\n//already done\ndef answerOnePlusOne() = 2\nanswerOnePlusOne()",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 24,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## [Performance Characteristics](http://docs.scala-lang.org/overviews/collections/performance-characteristics.html)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 25,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "docs.flatMap(_.sentences.flatMap(_.tokens)).count(_.length < 3)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 26,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "# Scala implicits",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 27,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "implicit val exponent = 5\ndef pow(i: Int)(implicit n: Int) = math.pow(i, n)\npow(2)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 28,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Implicit Methods",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 29,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "implicit def round(d: Double) = {\n  if(d - d.toInt >= 0.5) d.toInt + 1\n  else d.toInt\n}\ndef modulo(i: Int)(n: Int) = i % n\nmodulo(18)(6.75)",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 30,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Implicit Classes",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 31,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "implicit class JackString(s: String) {\n    def goCrazy() = (s + \" \") * 7\n}\n\"All work and no play makes Jack a dull boy.\".goCrazy()",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  } ],
+  "config" : { }
+}
