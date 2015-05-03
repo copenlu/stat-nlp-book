@@ -5,7 +5,88 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Introduction\nWhy? (motivation)\n\n\nWhat do we want to do (one example)?\nHow do we approach doing it?\n- dataset\n- classifier\n- features\n- evaluation\n- what can we improve\n\nExample choice:\n- spam filtering\n- language identification\n- sentiment analysis (up to a point)\n- determining: author gender, genre (music lyrics)\n- interesting webpages\n- recipe classification\n\n\n\n\n\n\n\n\n\n\nDataset\n\nPreprocessing\n\nFeature engineering\n\nClassification\n\n\n",
+      "code" : "Document classification is an assignment problem - given a set of documents, assign each document a previously established class. There are numerous examples of different document classification problems.\n\n##### Spam classification\n\nOne of the earliest, and best known examples is the e-mail spam classification problem. Given a set of e-mails, some of which are labeled as spam, others as ham (non-spam), decide whether a new e-mail is spam or not. The e-mail client, or a service you are using has a module which is either pre-trained to deal with this problem, or a module which constantly improves its performance with all the new spams and hams you keep getting. Another similar application to this one is the classification of mail into important and unimportant.\n\n##### Sentiment analysis\n\nSentiment analysis is the problem of assigning sentiment to a document (usually review). If sentiment categories are nominal, this problem is a typical document classification problem. If they are numeric (strength of positiveness and negativeness), that is a text regression problem, which goes out of the scope of this chapter.\n\n##### Language classification\n\n##### Others\n\nTwitter classification, Genre classification, gender identification, author identification\n\n",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 1,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## General approach",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 2,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Problem\n\nWhat do we want to solve, and why? How will we approach it:\n\nThe next step would be obtaining a dataset over which we will classify some documents.",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 3,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Dataset",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 4,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Preprocessing",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 5,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Feature engineering",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 6,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Classification",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 7,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Evaluation",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 8,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Room for improvement",
+      "extraFields" : { },
+      "outputFormat" : null
+    }
+  }, {
+    "id" : 9,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## Exercises\nSMS spam collection (http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/)\nWebKB (http://www.cs.cmu.edu/~webkb/)\nLanguage identification (Leipzig Corpora Collection)\nReuters dataset\n\n\nSentiment analysis\nAuthor gender\n\nWebpage identification\nMusic lyrics classification\nRecipe classification\nTwitter classification (dataset problems!)\n\nhttp://trec.nist.gov/data.html\n",
       "extraFields" : { },
       "outputFormat" : null
     }
