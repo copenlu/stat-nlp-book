@@ -5,7 +5,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Document classification is an assignment problem - given a set of documents, assign each document a previously established class. There are numerous examples of different document classification problems.\n\n##### Spam classification\n\nOne of the earliest, and best known examples is the e-mail spam classification problem. Given a set of e-mails, some of which are labeled as spam, others as ham (non-spam), decide whether a new e-mail is spam or not. The e-mail client, or a service you are using has a module which is either pre-trained to deal with this problem, or a module which constantly improves its performance with all the new spams and hams you keep getting. Another similar application to this one is the classification of mail into important and unimportant.\n\n##### Sentiment analysis\n\nSentiment analysis is the problem of assigning sentiment to a document (usually review). If sentiment categories are nominal, this problem is a typical document classification problem. If they are numeric (strength of positiveness and negativeness), that is a text regression problem, which goes out of the scope of this chapter.\n\n##### Language classification\n\n##### Others\n\nTwitter classification, Genre classification, gender identification, author identification\n\n",
+      "code" : "Document classification is an assignment problem - given a set of documents, assign each document a previously established class.\n\nTODO: FORMAL DEFINITION\n\nThere are numerous examples of different document classification problems.\n\n##### Spam classification\n\nOne of the earliest, and best known examples is the e-mail spam classification problem. Given a set of e-mails, some of which are labeled as spam, others as ham (non-spam), decide whether a new e-mail is spam or not. The e-mail client, or a service you are using has a module which is either pre-trained to deal with this problem, or a module which constantly improves its performance with all the new spams and hams you keep getting. Another similar application to this one is the classification of mail into important and unimportant.\n\n##### Sentiment analysis\n\nSentiment analysis is the problem of assigning sentiment to a document (usually review). If sentiment categories are nominal, this problem is a typical document classification problem. If they are numeric (strength of positiveness and negativeness), that is a text regression problem, which goes out of the scope of this chapter.\n\n##### Language classification\n\nHaving a set of documents written in different language, the goal is to identify the language these documents are written in. This is a first step in automated language translation, when there is no prior information in what language the text is written in.\n\n##### Others\n\nNumerous other tasks are set under the term of document classification. For example, classification of Tweets into relevant and irrelevant, identification of genre (grouping documents in established genre classes), gender identification (identifying whether the document was written by a woman or a man), author identification (identification of whether the piece of text was written by an author A, B, C, ...) and others.",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -14,7 +14,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## General approach",
+      "code" : "## General approach\n\nLet's choose a problem, find (or construct!) a proper dataset. The format of the dataset will dictate possible ways to preprocess the text before going on to the next important steps: engineering a set of features which we deem important for successfully solving the problem, and using an appropriate classifier. In order to assess the performance of our system, we will need to properly evaluate the system.",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -32,7 +32,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Dataset",
+      "code" : "## Dataset\n\nLet's get the dataset\n\nWebKB (http://www.cs.cmu.edu/~webkb/)\n\nDOWNLOAD\n\nDirectory structure\n\nLoading in the data...",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -41,7 +41,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Preprocessing",
+      "code" : "## Preprocessing\n\nExtracting text only (getting rid of markup)",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -50,7 +50,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Feature engineering",
+      "code" : "## Feature engineering\n\nFirst BOW\n\nThen maybe something more elaborate",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -59,7 +59,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Classification",
+      "code" : "## Classification\n\nLinear classifier\n\nMLE Naive Bayes",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -68,7 +68,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Evaluation",
+      "code" : "## Evaluation\n\nSplit into train/dev/test\n\nPrecision/recall",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -77,7 +77,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Room for improvement",
+      "code" : "## Room for improvement\n\nUsing more advanced features",
       "extraFields" : { },
       "outputFormat" : null
     }
@@ -86,7 +86,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Exercises\nSMS spam collection (http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/)\nWebKB (http://www.cs.cmu.edu/~webkb/)\nLanguage identification (Leipzig Corpora Collection)\nReuters dataset\n\n\nSentiment analysis\nAuthor gender\n\nWebpage identification\nMusic lyrics classification\nRecipe classification\nTwitter classification (dataset problems!)\n\nhttp://trec.nist.gov/data.html\n",
+      "code" : "## Exercises\n\n1. Create a SMS spam classifier. Use the SMS Spam Collection v.1 dataset available here (http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/).\n\n2. Build a language identificator. Download free texts in language of your choice from the Leipzig Corpora Collection (http://corpora.uni-leipzig.de/download.html).\n\n3. Build a language indentificator between European Portuguese and Brazilian Portuguese. What kind of difficulties do you encounter there?\n\n4. Have fun with the Reuters dataset...\n\n5. Sentiment analysis?\n\n6. Gender identification?\n\n7. Music lyrics classification\n\n\nTODO: CHECK http://trec.nist.gov/data.html\n",
       "extraFields" : { },
       "outputFormat" : null
     }
