@@ -12,13 +12,14 @@ You may have to delete the wolfe directory in the ivy cache to make sure you get
 
 Setup the project specific configuration file 
 
-    cp statnlpbook-moro.conf moro/conf/application.conf
+    
 
-Initialize sub-modules (1), compile the project (2) and wolfe (3) and run moro (4-5).
+Initialize sub-modules (1), compile the project (2) and wolfe (3), setup the project specific configuration file (4) and run moro (5-6).
 
 1. `git submodule update --init --recursive`
 2. `sbt compile`
 3. `cd wolfe; sbt compile; cd ..`
+4. `cp moro/conf/application-statnlpbook.conf moro/conf/application.conf`
 4. `cd moro; git checkout master`
 5. `sbt run`
 
