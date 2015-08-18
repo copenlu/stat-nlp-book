@@ -121,10 +121,15 @@ object Plotter {
 
 object Renderer {
 
-  def renderAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int)] = Seq.empty) =
+  def renderAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int)] = Seq.empty):HTML =
     renderWeightedAlignment(s1,s2,alignment.map(p => (p._1,p._2,1.0)))
 
-  def renderWeightedAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int, Double)] = Seq.empty) = {
+  def renderWeightedAlignment(s1: Sentence, s2: Sentence, alignment: IndexedSeq[IndexedSeq[Double]]):HTML = {
+    val triplets = for (i <- alignment.indices; j <- alignment(i).indices) yield (j,i,alignment(i)(j))
+    renderWeightedAlignment(s1,s2,triplets)
+  }
+
+  def renderWeightedAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int, Double)] = Seq.empty):HTML = {
 
     val id = "align" + UUID.randomUUID().toString
     val s1Words = s1.tokens.map("\"" + _.word + "\"").mkString("[",",","]")
