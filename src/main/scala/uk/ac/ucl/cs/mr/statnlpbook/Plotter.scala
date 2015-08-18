@@ -3,7 +3,9 @@ package uk.ac.ucl.cs.mr.statnlpbook
 import java.util.UUID
 
 import ml.wolfe.nlp.{Document, Token, Sentence}
+import ml.wolfe.ui.D3Plotter
 import org.sameersingh.htmlgen.{HTML, RawHTML}
+import org.sameersingh.scalaplot.{XYChartImplicits, XYData, XYSeries, XYChart}
 
 import scala.collection.mutable.ArrayBuffer
 
@@ -11,6 +13,15 @@ import scala.collection.mutable.ArrayBuffer
  * @author riedel
  */
 object Plotter {
+
+  def lineplot(chart: XYData):HTML = {
+    D3Plotter.lineplot(XYChartImplicits.dataToChart(chart))
+  }
+
+  def lineplot(chart: XYChart):HTML = {
+    D3Plotter.lineplot(chart)
+  }
+
 
   def barChart(map: Iterable[(Any, Double)]) = {
     val id = "d3bar" + Math.abs(map.hashCode()).toString
@@ -121,20 +132,20 @@ object Plotter {
 
 object Renderer {
 
-  def renderAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int)] = Seq.empty):HTML =
-    renderWeightedAlignment(s1,s2,alignment.map(p => (p._1,p._2,1.0)))
+  def renderAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int)] = Seq.empty): HTML =
+    renderWeightedAlignment(s1, s2, alignment.map(p => (p._1, p._2, 1.0)))
 
-  def renderWeightedAlignment(s1: Sentence, s2: Sentence, alignment: IndexedSeq[IndexedSeq[Double]]):HTML = {
-    val triplets = for (i <- alignment.indices; j <- alignment(i).indices) yield (j,i,alignment(i)(j))
-    renderWeightedAlignment(s1,s2,triplets)
+  def renderWeightedAlignment(s1: Sentence, s2: Sentence, alignment: IndexedSeq[IndexedSeq[Double]]): HTML = {
+    val triplets = for (i <- alignment.indices; j <- alignment(i).indices) yield (j, i, alignment(i)(j))
+    renderWeightedAlignment(s1, s2, triplets)
   }
 
-  def renderWeightedAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int, Double)] = Seq.empty):HTML = {
+  def renderWeightedAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int, Double)] = Seq.empty): HTML = {
 
     val id = "align" + UUID.randomUUID().toString
-    val s1Words = s1.tokens.map("\"" + _.word + "\"").mkString("[",",","]")
-    val s2Words = s2.tokens.map("\"" + _.word + "\"").mkString("[",",","]")
-    val connData = alignment.map(p => s"{'i1':${p._1}, 'i2':${p._2}, 'weight':${p._3} }").mkString("[",",","]")
+    val s1Words = s1.tokens.map("\"" + _.word + "\"").mkString("[", ",", "]")
+    val s2Words = s2.tokens.map("\"" + _.word + "\"").mkString("[", ",", "]")
+    val connData = alignment.map(p => s"{'i1':${p._1}, 'i2':${p._2}, 'weight':${p._3} }").mkString("[", ",", "]")
     val d3 =
       s"""
          |<div id = "$id" class="aligner">
@@ -205,8 +216,8 @@ object Renderer {
 object BratRenderer2 {
 
   val bratInitScript = "/assets/initbrat.js"
-  val bratLocation   = "/assets/javascripts/brat"
-  val headJS         = bratLocation + "/client/lib/head.load.min.js"
+  val bratLocation = "/assets/javascripts/brat"
+  val headJS = bratLocation + "/client/lib/head.load.min.js"
 
   def wrapCode(id: String, collData: String, docData: String): HTML = {
     val webFontURLs =
@@ -304,7 +315,7 @@ object BratRenderer2 {
   }
 
   def bratDependencies(doc: Document) = {
-    val id = "bratDeps" +  UUID.randomUUID().toString
+    val id = "bratDeps" + UUID.randomUUID().toString
     val collData =
       s"""
          |{
@@ -329,7 +340,7 @@ object BratRenderer2 {
       currentTokenOffset += s.tokens.length
     }
 
-    val docData = mkDocData(doc, tokenEntities, sentenceBoundaries, tokenOffsets,relations)
+    val docData = mkDocData(doc, tokenEntities, sentenceBoundaries, tokenOffsets, relations)
 
     //Excluded this for now: |    '$bratLocation' + '/static/fonts/Astloch-Bold.ttf',
 
@@ -369,14 +380,13 @@ object BratRenderer2 {
     """.stripMargin
 
 
-
-  def entityType(label:String) ={
+  def entityType(label: String) = {
     val color = label.toLowerCase match {
-      case "per" => "#fc0"
-      case "org" => "#fc0"
-      case "loc" => "#fc0"
-      case "misc" => "#fc0"
-      case _ => "#fc0"
+    case "per" => "#fc0"
+    case "org" => "#fc0"
+    case "loc" => "#fc0"
+    case "misc" => "#fc0"
+    case _ => "#fc0"
     }
     val short = label.take(3)
     s"""
@@ -419,40 +429,42 @@ object BratRenderer2 {
   }
 
 
-
   def mkDocData(doc: Document, entities: IndexedSeq[String], sentenceBoundaries: IndexedSeq[String],
-    tokenOffsets: IndexedSeq[String], relations:IndexedSeq[String]= IndexedSeq.empty): String = {
+    tokenOffsets: IndexedSeq[String], relations: IndexedSeq[String] = IndexedSeq.empty): String = {
     s"""
         |{
         |    // Our text of choice
-        |    text     : "${ doc.source }",
+        |    text     : "${doc.source}",
         |    // The entities entry holds all entity annotations
         |    entities : [
         |        /* Format: [{ID}, {TYPE}, [[{START}, {END}]]]
         |            note that range of the offsets are [{START},{END}) */
-        |        ${ entities.mkString(",\n") }
+        |        ${entities.mkString(",\n")}
         |    ],
-        |    sentence_offsets: [${ sentenceBoundaries.mkString(",") }],
-        |    token_offsets: [${ tokenOffsets.mkString(",") }],
-        |    relations: [${ relations.mkString(",") }]
+        |    sentence_offsets: [${sentenceBoundaries.mkString(",")}],
+        |    token_offsets: [${tokenOffsets.mkString(",")}],
+        |    relations: [${relations.mkString(",")}]
         |
         |}
       """.stripMargin
   }
+
   def mkTokenOffsets(doc: Document): IndexedSeq[String] = {
-    for ((t, i) <- doc.tokens.zipWithIndex) yield s"[${ t.offsets.start },${ t.offsets.end }]"
+    for ((t, i) <- doc.tokens.zipWithIndex) yield s"[${t.offsets.start},${t.offsets.end}]"
   }
+
   def mkSentenceBoundaries(doc: Document): IndexedSeq[String] = {
-    for (s <- doc.sentences) yield s"[${ s.offsets.start },${ s.offsets.end }]"
+    for (s <- doc.sentences) yield s"[${s.offsets.start},${s.offsets.end}]"
   }
+
   def mkTokenEntities(doc: Document): IndexedSeq[String] = {
-    for ((t, i) <- doc.tokens.zipWithIndex) yield s"['T$i','Token',[[${ t.offsets.start },${ t.offsets.end }]]]"
+    for ((t, i) <- doc.tokens.zipWithIndex) yield s"['T$i','Token',[[${t.offsets.start},${t.offsets.end}]]]"
   }
 
   def mkPosTagEntities(doc: Document): IndexedSeq[String] = {
     def default = "Tok"
     for ((t, i) <- doc.tokens.zipWithIndex) yield
-    s"['T$i','${if (t.posTag != null) t.posTag else default}',[[${ t.offsets.start },${ t.offsets.end }]]]"
+    s"['T$i','${if (t.posTag != null) t.posTag else default}',[[${t.offsets.start},${t.offsets.end}]]]"
   }
 
 
@@ -460,15 +472,14 @@ object BratRenderer2 {
     val mentions = for (s <- doc.sentences; em <- s.ie.entityMentions) yield {
       val t1 = s.tokens(em.start)
       val t2 = s.tokens(em.end - 1)
-      (em.label,s"[[${ t1.offsets.start },${ t2.offsets.end }]]")
+      (em.label, s"[[${t1.offsets.start},${t2.offsets.end}]]")
     }
-    val result = for (((label,m),i) <- mentions.zipWithIndex) yield s"['T$i','$label',$m]"
+    val result = for (((label, m), i) <- mentions.zipWithIndex) yield s"['T$i','$label',$m]"
     result
   }
 
 
   def main(args: Array[String]) {
-
 
 
   }
