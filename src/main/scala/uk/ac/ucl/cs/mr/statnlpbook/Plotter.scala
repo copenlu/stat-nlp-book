@@ -26,6 +26,8 @@ object Plotter {
   def barChart(map: Iterable[(Any, Double)], color:Option[String] = None) = {
     val id = "d3bar" + Math.abs(map.hashCode()).toString
 
+    println("Id: " + id)
+
     def mapDataToJson(series: Iterable[(Any, Double)]) = {
       series.map(p => s"""{label:"${p._1.toString}", value:${p._2}}""").mkString("[", ",", "]")
     }
@@ -46,20 +48,27 @@ object Plotter {
        |</div>
        |
        |<script>
-       |
+       |console.log("Clearing svg");
+       |$$('#$id svg').empty();
+       |console.log(d3.select('#$id svg').length);
+       |console.log("Calling addGraph");
        |/*These lines are all chart setup.  Pick and choose which chart features you want to utilize. */
-       |nv.addGraph(function() {
+       |
+       |  nv.addGraph(function() {
        |  var chart = nv.models.discreteBarChart()
        |      .x(function(d) { return d.label })    //Specify the data accessors.
        |      .y(function(d) { return d.value })
        |      .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
        |      .tooltips(false)        //Don't show tooltips
        |      .showValues(true)       //...instead, show the bar value right on top of each bar.
-       |      .transitionDuration(350) ${color.map( c => ".color(['" + c + "'])").getOrElse("")}
+       |      ${color.map( c => ".color(['" + c + "'])").getOrElse("")}
        |      ;
-       |
+       |  console.log(chart);
+       |  console.log("Inside addGraph");
+       |  console.log(d3.select('#$id svg'));
        |  d3.select('#$id svg')
        |      .datum($data)
+       |      .transition().duration(350)
        |      .call(chart);
        |
        |  nv.utils.windowResize(chart.update);
