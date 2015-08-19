@@ -294,10 +294,18 @@
     }
   }, {
     "id" : 32,
+    "compiler" : "html",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"exercise\">\n  <div class=\"exname\">Exercise 2</div>\n  <div class=\"extext\">Can you find a better pseudo-count number?</div>\n</div>\n",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 33,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "##### Exercise\nCan you find a better pseudo-count number?\n\n#### Interpolation\n\nBlah blah",
+      "code" : "#### Interpolation\n\nBlah blah",
       "extraFields" : { }
     }
   } ],

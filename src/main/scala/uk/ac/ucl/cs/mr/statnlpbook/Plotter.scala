@@ -17,6 +17,10 @@ object Plotter {
 
   val colors = Seq("#ff7f0e", "#2ca02c", "#7777ff")
 
+  def lineplot(chart: Iterable[(Double,Double)]):HTML = {
+    lineplot(new XYData(XYChartImplicits.pairSeqToSeries(chart)))
+  }
+
   def lineplot(chart: XYData):HTML = {
     lineplot(XYChartImplicits.dataToChart(chart))
   }
