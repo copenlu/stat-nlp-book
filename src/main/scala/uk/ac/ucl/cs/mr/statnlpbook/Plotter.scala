@@ -23,7 +23,7 @@ object Plotter {
   }
 
 
-  def barChart(map: Iterable[(Any, Double)]) = {
+  def barChart(map: Iterable[(Any, Double)], color:Option[String] = None) = {
     val id = "d3bar" + Math.abs(map.hashCode()).toString
 
     def mapDataToJson(series: Iterable[(Any, Double)]) = {
@@ -55,7 +55,7 @@ object Plotter {
        |      .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
        |      .tooltips(false)        //Don't show tooltips
        |      .showValues(true)       //...instead, show the bar value right on top of each bar.
-       |      .transitionDuration(350)
+       |      .transitionDuration(350) ${color.map( c => ".color(['" + c + "'])").getOrElse("")}
        |      ;
        |
        |  d3.select('#$id svg')
