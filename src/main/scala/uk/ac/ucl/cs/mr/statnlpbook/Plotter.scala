@@ -8,6 +8,7 @@ import org.sameersingh.htmlgen.{HTML, RawHTML}
 import org.sameersingh.scalaplot.{XYChartImplicits, XYData, XYSeries, XYChart}
 
 import scala.collection.mutable.ArrayBuffer
+import scala.xml.PrettyPrinter
 
 /**
  * @author riedel
@@ -17,11 +18,11 @@ object Plotter {
 
   val colors = Seq("#ff7f0e", "#2ca02c", "#7777ff")
 
-  def lineplot(chart: Iterable[(Double,Double)]):HTML = {
+  def lineplot(chart: Iterable[(Double, Double)]): HTML = {
     lineplot(new XYData(XYChartImplicits.pairSeqToSeries(chart)))
   }
 
-  def lineplot(chart: XYData):HTML = {
+  def lineplot(chart: XYData): HTML = {
     lineplot(XYChartImplicits.dataToChart(chart))
   }
 
@@ -129,7 +130,7 @@ object Plotter {
     RawHTML(html)
   }
 
-  def barChart(map: Iterable[(Any, Double)], color:Option[String] = None) = {
+  def barChart(map: Iterable[(Any, Double)], color: Option[String] = None) = {
     val id = "d3bar" + Math.abs(map.hashCode()).toString
 
     println("Id: " + id)
@@ -167,7 +168,7 @@ object Plotter {
        |      .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
        |      .tooltips(false)        //Don't show tooltips
        |      .showValues(true)       //...instead, show the bar value right on top of each bar.
-       |      ${color.map( c => ".color(['" + c + "'])").getOrElse("")}
+       |      ${color.map(c => ".color(['" + c + "'])").getOrElse("")}
        |      ;
        |  console.log(chart);
        |  console.log("Inside addGraph");
@@ -247,6 +248,23 @@ object Plotter {
 
 object Renderer {
 
+
+  def table(rows: Seq[Seq[Any]]) = {
+    val printer = new PrettyPrinter(0, 2)
+    val result =
+      <table>
+        {for (row <- rows) yield {
+        <tr>
+          {for (cell <- row) yield
+        <td>
+          {cell.toString}
+        </td>}
+        </tr>
+      }}
+      </table>
+    RawHTML(printer.format(result))
+  }
+
   def renderAlignment(s1: Sentence, s2: Sentence, alignment: Seq[(Int, Int)] = Seq.empty): HTML =
     renderWeightedAlignment(s1, s2, alignment.map(p => (p._1, p._2, 1.0)))
 
@@ -323,6 +341,8 @@ object Renderer {
 
     RawHTML(d3)
   }
+
+
 }
 
 /**
@@ -497,11 +517,11 @@ object BratRenderer2 {
 
   def entityType(label: String) = {
     val color = label.toLowerCase match {
-    case "per" => "#fc0"
-    case "org" => "#fc0"
-    case "loc" => "#fc0"
-    case "misc" => "#fc0"
-    case _ => "#fc0"
+      case "per" => "#fc0"
+      case "org" => "#fc0"
+      case "loc" => "#fc0"
+      case "misc" => "#fc0"
+      case _ => "#fc0"
     }
     val short = label.take(3)
     s"""
@@ -545,7 +565,7 @@ object BratRenderer2 {
 
 
   def mkDocData(doc: Document, entities: IndexedSeq[String], sentenceBoundaries: IndexedSeq[String],
-    tokenOffsets: IndexedSeq[String], relations: IndexedSeq[String] = IndexedSeq.empty): String = {
+                tokenOffsets: IndexedSeq[String], relations: IndexedSeq[String] = IndexedSeq.empty): String = {
     s"""
         |{
         |    // Our text of choice
