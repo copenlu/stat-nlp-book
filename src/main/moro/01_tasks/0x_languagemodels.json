@@ -5,23 +5,47 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Language models (LMs) calculate the probability to see a given sequence of words, as defined through a [tokenization]() algorithm, in a given language or sub-language/domain/genre. For example, an English language model may assign a higher probability to seeing the sequence \"Blah Blub Blah\" than to \"Blub blub blub\", and for a hip-hop language model this proportion may be reversed. There are several use cases for such models: TODO\n\nMore formally, a language model is a stochastic process that models the probability \\\\(\\prob(w_1,\\ldots,w_d)\\\\) of observing sequences of words \\\\(w_1,\\ldots,w_d\\\\). We can, without loss of generality, decompose the probability of such sequences into\n$$\n\\prob(w_1,\\ldots,w_d) = \\prob(w_1) \\prod_{i+1}^d \\prob(w_i|w_1,\\ldots,w_{i-1}).\n$$\nThis means that a language model can be defined by how it models the conditional probablity \\\\(\\prob(w_i|w_1,\\ldots,w_{i-1})\\\\) of seeing a word \\\\(w_i\\\\) after having seen the *history* of previous words \\\\(w_1,\\ldots,w_{i-1}\\\\). We also have to model the prior probability \\\\(\\prob(w_1)\\\\), but as we show later, it is easy to reduce this prior to a conditional probability as well. \n\nIn practice it is common to define language models based on *equivalence classes* of histories instead of having different conditional distributions for each possible history. TODO: Why.\n\n### N-gram Language Models <a name=\"ngram\"></a>\nThe most common type of equivalence class relies on *truncating* histories \\\\(w_1,\\ldots,w_{i-1}\\\\) to length \\\\(n-1\\\\):\n$$\n\\prob(w_i|w_1,\\ldots,w_{i-1}) = \\prob(w_i|w_{i-n},\\ldots,w_{i-1}).\n$$\nThat is, the probability of a word only depends on the last \\\\(n-1\\\\) previous words. We will refer to such model as a *n-gram language model*. TODO: why is this good.\n\n### A Uniform Baseline LM\n*Unigram* models are the simplest 1-gram language models. That is, they model the conditional probability of word using the prior probability of seeing that word:\n$$\n\\prob(w_i|w_1,\\ldots,w_{i-1}) = \\prob(w_i).\n$$\nTo setup datasets and as baseline for more complex language models, we first introduce the simplest instantituation of a unigram model: a *uniform* language model which assigns the prior probability to each word. That is, given a *vocabulary* of words \\\\(\\vocab\\\\), the uniform LM is defined as:\n$$\n\\prob(w_i|w_1,\\ldots,w_{i-1}) = \\frac{1}{|\\vocab|}.\n$$\n\nLet us \"train\" and test such a language model on the OHHLA corpus. First: load a training and\ntesting corpus. ",
+      "code" : "<span class=\"emphasize\">Language models (LMs) calculate the probability to see a given sequence of words</span>, as defined through a [tokenization]() algorithm, in a given language or sub-language/domain/genre. For example, an English language model may assign a higher probability to seeing the sequence \"Blah Blub Blah\" than to \"Blub blub blub\", and for a hip-hop language model this proportion may be reversed. There are several use cases for such models: TODO\n",
       "extraFields" : {
         "aggregatedCells" : "[]"
       }
     }
   }, {
     "id" : 1,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "\nMore formally, a language model is a stochastic process that models the probability \\\\(\\prob(w_1,\\ldots,w_d)\\\\) of observing sequences of words \\\\(w_1,\\ldots,w_d\\\\). We can, without loss of generality, decompose the probability of such sequences into\n$$\n\\prob(w_1,\\ldots,w_d) = \\prob(w_1) \\prod_{i+1}^d \\prob(w_i|w_1,\\ldots,w_{i-1}).\n$$\nThis means that a language model can be defined by how it models the <span class=\"emphasize\">conditional probablity \\\\(\\prob(w_i|w_1,\\ldots,w_{i-1})\\\\) of seeing a word \\\\(w_i\\\\) after having seen the *history* of previous words \\\\(w_1,\\ldots,w_{i-1}\\\\)</span>. We also have to model the prior probability \\\\(\\prob(w_1)\\\\), but as we show later, it is easy to reduce this prior to a conditional probability as well. \n\nIn practice it is common to define language models based on *equivalence classes* of histories instead of having different conditional distributions for each possible history. TODO: Why.\n\n",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 2,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### N-gram Language Models\nThe most common type of equivalence class relies on *truncating* histories \\\\(w_1,\\ldots,w_{i-1}\\\\) to length \\\\(n-1\\\\):\n$$\n\\prob(w_i|w_1,\\ldots,w_{i-1}) = \\prob(w_i|w_{i-n},\\ldots,w_{i-1}).\n$$\nThat is, the <span class=\"emphasize\">probability of a word only depends on the last \\\\(n-1\\\\) previous words</span>. We will refer to such model as a *n-gram language model*. TODO: why is this good.\n\n",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 3,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "###A Uniform Baseline LM\n\n*Unigram* models are the simplest 1-gram language models. That is, they model the conditional probability of word using the prior probability of seeing that word:\n$$\n\\prob(w_i|w_1,\\ldots,w_{i-1}) = \\prob(w_i).\n$$\nTo setup datasets and as baseline for more complex language models, we first introduce the simplest instantituation of a unigram model: a *uniform* language model which assigns the prior probability to each word. That is, given a *vocabulary* of words \\\\(\\vocab\\\\), the uniform LM is defined as:\n$$\n\\prob(w_i|w_1,\\ldots,w_{i-1}) = \\frac{1}{|\\vocab|}.\n$$\n\nLet us \"train\" and test such a language model on the OHHLA corpus. First: load a training and\ntesting corpus. ",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 4,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "import chapter.LanguageModels._\nimport corpora.OHHLA._\n\nval docs = JLive.allAlbums flatMap loadDir\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\nval train = words(trainDocs)\nval test = words(testDocs)\ntrain.take(15)",
+      "code" : "import chapter.LanguageModels._\nimport corpora.OHHLA._\n\nval docs = JLive.allAlbums flatMap loadDir\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\nval train = words(trainDocs)\nval test = words(testDocs)\ntrain.take(15)",
       "extraFields" : {
         "aggregatedCells" : "[]"
       }
     }
   }, {
-    "id" : 2,
+    "id" : 5,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -29,17 +53,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 3,
+    "id" : 6,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "val vocab = train.toSet\nvocab.size",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\"]"
       }
     }
   }, {
-    "id" : 4,
+    "id" : 7,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -47,18 +71,18 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 5,
+    "id" : 8,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "trait LanguageModel {\n  def order:Int     \n  def probability(word:String, history:String*):Double    \n}",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\"]",
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\"]",
         "hide_output" : "true"
       }
     }
   }, {
-    "id" : 6,
+    "id" : 9,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -66,17 +90,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 7,
+    "id" : 10,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "case class UniformLM(vocab:Set[String]) extends LanguageModel {\n  def order = 1\n  def probability(word:String, history:String*) = \n    if (vocab(word)) 1.0 / vocab.size else 0.0\n}\nval baseline = UniformLM(vocab)\nbaseline.probability(\"call\") * vocab.size ",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\"]"
       }
     }
   }, {
-    "id" : 8,
+    "id" : 11,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -84,17 +108,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 9,
+    "id" : 12,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "def perplexity(lm:LanguageModel, data:Seq[String]) = {\n  var logProb = 0.0\n  val historyOrder = lm.order - 1\n  for (i <- historyOrder until data.length) {\n    val history = data.slice(i - historyOrder, i)\n    val word = data(i)\n    val p = lm.probability(word,history:_*)\n    logProb += math.log(p)\n  }\n  math.exp(-logProb / (data.length - historyOrder))\n}\nperplexity(baseline, test)  ",
+      "code" : "def perplexity(lm:LanguageModel, data:Seq[String]) = {\n  var logProb = 0.0\n  val historyOrder = lm.order - 1\n  for (i <- historyOrder until data.length) {\n    val history = data.slice(i - historyOrder, i)\n    val word = data(i)\n    val p = lm.probability(word,history:_*)\n    logProb += math.log(p)\n  }\n  math.exp(-logProb / (data.length - historyOrder))\n}\nperplexity(baseline, test)   ",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \"]"
       }
     }
   }, {
-    "id" : 10,
+    "id" : 13,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -102,17 +126,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 11,
+    "id" : 14,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)  \"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \"]"
       }
     }
   }, {
-    "id" : 12,
+    "id" : 15,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -120,17 +144,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 13,
+    "id" : 16,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "injectOOVs(OOV, Seq(\"A\",\"A\",\"B\",\"B\",\"A\")) -> \nreplaceOOVs(OOV, Set(\"A\",\"B\"), Seq(\"A\",\"B\",\"C\"))",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)  \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\"]"
       }
     }
   }, {
-    "id" : 14,
+    "id" : 17,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -138,17 +162,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 15,
+    "id" : 18,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "val train = injectOOVs(OOV, words(trainDocs))\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\nval vocab = train.toSet\nval baseline = UniformLM(vocab)\nperplexity(baseline,test)",
+      "code" : "val train = injectOOVs(OOV, words(trainDocs))\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\nval vocab = train.toSet\nval baseline = UniformLM(vocab)\nperplexity(baseline,test) ",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)  \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\"]"
       }
     }
   }, {
-    "id" : 16,
+    "id" : 19,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -156,18 +180,18 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 17,
+    "id" : 20,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "trait CountLM extends LanguageModel {\n  def counts:List[String] => Double\n  def norm:List[String] => Double\n  def probability(word:String, history:String*) = {\n    counts(word :: history.toList) / norm(history.toList)  \n  }\n}",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)  \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test)\"]",
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test) \"]",
         "hide_output" : "true"
       }
     }
   }, {
-    "id" : 18,
+    "id" : 21,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -175,17 +199,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 19,
+    "id" : 22,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "import scala.collection.mutable.HashMap\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\n  for (i <- order until train.length) {\n    val history = train.slice(i - order + 1, i).toList\n    val word = train(i)\n    counts(word :: history) += 1.0\n    norm(history) += 1.0\n  }\n}\nval unigram = NGramLM(train,1)\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10))",
+      "code" : "import scala.collection.mutable.HashMap\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\n  for (i <- order until train.length) {\n    val history = train.slice(i - order + 1, i).toList\n    val word = train(i)\n    counts(word :: history) += 1.0\n    norm(history) += 1.0\n  }\n}\nval unigram = NGramLM(train,1)\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10)) ",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)  \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test)\",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test) \",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\"]"
       }
     }
   }, {
-    "id" : 20,
+    "id" : 23,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -193,17 +217,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 21,
+    "id" : 24,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "perplexity(unigram,test)",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)  \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test)\",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10))\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test) \",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10)) \"]"
       }
     }
   }, {
-    "id" : 22,
+    "id" : 25,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -211,17 +235,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 23,
+    "id" : 26,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "val bigram = NGramLM(train,2)\nbarChart(vocab.map(w => w -> bigram.probability(w,\"I\")).toSeq.sortBy(-_._2).take(10))",
+      "code" : "val bigram = NGramLM(train,2)\nbarChart(vocab.map(w => w -> bigram.probability(w,\"I\")).toSeq.sortBy(-_._2).take(10)) ",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)  \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test)\",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10))\",\"perplexity(unigram,test)\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test) \",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(unigram,test)\"]"
       }
     }
   }, {
-    "id" : 24,
+    "id" : 27,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -229,17 +253,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 25,
+    "id" : 28,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "perplexity(bigram,test)",
+      "code" : "perplexity(bigram,test) ",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)  \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test)\",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10))\",\"perplexity(unigram,test)\",\"val bigram = NGramLM(train,2)\\nbarChart(vocab.map(w => w -> bigram.probability(w,\\\"I\\\")).toSeq.sortBy(-_._2).take(10))\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test) \",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(unigram,test)\",\"val bigram = NGramLM(train,2)\\nbarChart(vocab.map(w => w -> bigram.probability(w,\\\"I\\\")).toSeq.sortBy(-_._2).take(10)) \"]"
       }
     }
   }, {
-    "id" : 26,
+    "id" : 29,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -247,17 +271,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 27,
+    "id" : 30,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "bigram.probability(\"[OOV]\",\"money\")",
+      "code" : "bigram.probability(\"[OOV]\",\"money\") ",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)  \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test)\",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10))\",\"perplexity(unigram,test)\",\"val bigram = NGramLM(train,2)\\nbarChart(vocab.map(w => w -> bigram.probability(w,\\\"I\\\")).toSeq.sortBy(-_._2).take(10))\",\"perplexity(bigram,test)\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test) \",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(unigram,test)\",\"val bigram = NGramLM(train,2)\\nbarChart(vocab.map(w => w -> bigram.probability(w,\\\"I\\\")).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(bigram,test) \"]"
       }
     }
   }, {
-    "id" : 28,
+    "id" : 31,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -265,17 +289,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 29,
+    "id" : 32,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "case class LaplaceLM(base:CountLM,vocabSize:Int,alpha:Double) extends CountLM {\n  def counts = h => base.counts(h) + alpha\n  def norm = h => base.norm(h) + alpha * vocabSize\n  def order = base.order\n}\nval laplaceBigram = LaplaceLM(bigram,vocab.size,0.1)\nlaplaceBigram.probability(\"[OOV]\",\"money\")",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)  \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test)\",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10))\",\"perplexity(unigram,test)\",\"val bigram = NGramLM(train,2)\\nbarChart(vocab.map(w => w -> bigram.probability(w,\\\"I\\\")).toSeq.sortBy(-_._2).take(10))\",\"perplexity(bigram,test)\",\"bigram.probability(\\\"[OOV]\\\",\\\"money\\\")\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test) \",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(unigram,test)\",\"val bigram = NGramLM(train,2)\\nbarChart(vocab.map(w => w -> bigram.probability(w,\\\"I\\\")).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(bigram,test) \",\"bigram.probability(\\\"[OOV]\\\",\\\"money\\\") \"]"
       }
     }
   }, {
-    "id" : 30,
+    "id" : 33,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -283,17 +307,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 31,
+    "id" : 34,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "perplexity(laplaceBigram,test)",
+      "code" : "perplexity(laplaceBigram,test) ",
       "extraFields" : {
-        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length - 5)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)  \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test)\",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10))\",\"perplexity(unigram,test)\",\"val bigram = NGramLM(train,2)\\nbarChart(vocab.map(w => w -> bigram.probability(w,\\\"I\\\")).toSeq.sortBy(-_._2).take(10))\",\"perplexity(bigram,test)\",\"bigram.probability(\\\"[OOV]\\\",\\\"money\\\")\",\"case class LaplaceLM(base:CountLM,vocabSize:Int,alpha:Double) extends CountLM {\\n  def counts = h => base.counts(h) + alpha\\n  def norm = h => base.norm(h) + alpha * vocabSize\\n  def order = base.order\\n}\\nval laplaceBigram = LaplaceLM(bigram,vocab.size,0.1)\\nlaplaceBigram.probability(\\\"[OOV]\\\",\\\"money\\\")\"]"
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test) \",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(unigram,test)\",\"val bigram = NGramLM(train,2)\\nbarChart(vocab.map(w => w -> bigram.probability(w,\\\"I\\\")).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(bigram,test) \",\"bigram.probability(\\\"[OOV]\\\",\\\"money\\\") \",\"case class LaplaceLM(base:CountLM,vocabSize:Int,alpha:Double) extends CountLM {\\n  def counts = h => base.counts(h) + alpha\\n  def norm = h => base.norm(h) + alpha * vocabSize\\n  def order = base.order\\n}\\nval laplaceBigram = LaplaceLM(bigram,vocab.size,0.1)\\nlaplaceBigram.probability(\\\"[OOV]\\\",\\\"money\\\")\"]"
       }
     }
   }, {
-    "id" : 32,
+    "id" : 35,
     "compiler" : "html",
     "input" : {
       "sessionId" : null,
@@ -301,12 +325,40 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 33,
+    "id" : 36,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### Interpolation\n\nBlah blah",
+      "code" : "#### Test counts\n???\n",
       "extraFields" : { }
+    }
+  }, {
+    "id" : 37,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "//\nval testBigram = NGramLM(test,2)\nval jointVocab = (train ++ test).toSet\ndef avgCounts(trainLM:CountLM, testLM:CountLM, vocab:Set[String]) = {\n  require(trainLM.order == 2 && testLM.order == 2)\n  val avgTestCounts = new HashMap[Double,Double] withDefaultValue 0.0\n  val norm = new HashMap[Double,Double] withDefaultValue 0.0\n  for (w1 <- jointVocab; w2 <- jointVocab) {\n    val trainCount = trainLM.counts(w1 :: w2 :: Nil)\n    val testCount = testLM.counts(w1 :: w2 :: Nil)\n    avgTestCounts(trainCount) += testCount\n    norm(trainCount) += 1.0\n  }\n  for (c <- avgTestCounts.keys) avgTestCounts(c) /= norm(c)\n  avgTestCounts\n}\nval avgTestCounts = avgCounts(bigram,testBigram,jointVocab)\nval avgLaplaceCounts = avgCounts(bigram,laplaceBigram,jointVocab)\nval compared = for (i <- 0 until 8) yield avgTestCounts(i) -> avgLaplaceCounts(i) \n//avgTestCounts.toSeq.sortBy(_._1).take(10)\n//barChart(avgTestCounts.toSeq.sortBy(_._1).take(10))\ncompared",
+      "extraFields" : {
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test) \",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(unigram,test)\",\"val bigram = NGramLM(train,2)\\nbarChart(vocab.map(w => w -> bigram.probability(w,\\\"I\\\")).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(bigram,test) \",\"bigram.probability(\\\"[OOV]\\\",\\\"money\\\") \",\"case class LaplaceLM(base:CountLM,vocabSize:Int,alpha:Double) extends CountLM {\\n  def counts = h => base.counts(h) + alpha\\n  def norm = h => base.norm(h) + alpha * vocabSize\\n  def order = base.order\\n}\\nval laplaceBigram = LaplaceLM(bigram,vocab.size,0.1)\\nlaplaceBigram.probability(\\\"[OOV]\\\",\\\"money\\\")\",\"perplexity(laplaceBigram,test) \"]"
+      }
+    }
+  }, {
+    "id" : 38,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "#### Interpolation\n\nBlah blah\n",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 39,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "laplaceBigram.probability(\"money\",\"[OOV]\")\nunigram.probability(\"money\") ",
+      "extraFields" : {
+        "aggregatedCells" : "[\"import chapter.LanguageModels._\\nimport corpora.OHHLA._\\n\\nval docs = JLive.allAlbums flatMap loadDir\\nval (trainDocs, testDocs) = docs.splitAt(docs.length / 2)\\nval train = words(trainDocs)\\nval test = words(testDocs)\\ntrain.take(15)\",\"val vocab = train.toSet\\nvocab.size\",\"trait LanguageModel {\\n  def order:Int     \\n  def probability(word:String, history:String*):Double    \\n}\",\"case class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"call\\\") * vocab.size \",\"def perplexity(lm:LanguageModel, data:Seq[String]) = {\\n  var logProb = 0.0\\n  val historyOrder = lm.order - 1\\n  for (i <- historyOrder until data.length) {\\n    val history = data.slice(i - historyOrder, i)\\n    val word = data(i)\\n    val p = lm.probability(word,history:_*)\\n    logProb += math.log(p)\\n  }\\n  math.exp(-logProb / (data.length - historyOrder))\\n}\\nperplexity(baseline, test)   \",\"test.filterNot(train.toSet).take(3) map (w => w -> baseline.probability(w))\",\"injectOOVs(OOV, Seq(\\\"A\\\",\\\"A\\\",\\\"B\\\",\\\"B\\\",\\\"A\\\")) -> \\nreplaceOOVs(OOV, Set(\\\"A\\\",\\\"B\\\"), Seq(\\\"A\\\",\\\"B\\\",\\\"C\\\"))\",\"val train = injectOOVs(OOV, words(trainDocs))\\nval test = replaceOOVs(OOV, train.toSet, words(testDocs))\\nval vocab = train.toSet\\nval baseline = UniformLM(vocab)\\nperplexity(baseline,test) \",\"trait CountLM extends LanguageModel {\\n  def counts:List[String] => Double\\n  def norm:List[String] => Double\\n  def probability(word:String, history:String*) = {\\n    counts(word :: history.toList) / norm(history.toList)  \\n  }\\n}\",\"import scala.collection.mutable.HashMap\\ncase class NGramLM(train:IndexedSeq[String],order:Int) extends CountLM {\\n  val counts = new HashMap[List[String],Double] withDefaultValue 0.0\\n  val norm = new HashMap[List[String],Double] withDefaultValue 0.0\\n  for (i <- order until train.length) {\\n    val history = train.slice(i - order + 1, i).toList\\n    val word = train(i)\\n    counts(word :: history) += 1.0\\n    norm(history) += 1.0\\n  }\\n}\\nval unigram = NGramLM(train,1)\\nbarChart(vocab.map(w => w -> unigram.probability(w)).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(unigram,test)\",\"val bigram = NGramLM(train,2)\\nbarChart(vocab.map(w => w -> bigram.probability(w,\\\"I\\\")).toSeq.sortBy(-_._2).take(10)) \",\"perplexity(bigram,test) \",\"bigram.probability(\\\"[OOV]\\\",\\\"money\\\") \",\"case class LaplaceLM(base:CountLM,vocabSize:Int,alpha:Double) extends CountLM {\\n  def counts = h => base.counts(h) + alpha\\n  def norm = h => base.norm(h) + alpha * vocabSize\\n  def order = base.order\\n}\\nval laplaceBigram = LaplaceLM(bigram,vocab.size,0.1)\\nlaplaceBigram.probability(\\\"[OOV]\\\",\\\"money\\\")\",\"perplexity(laplaceBigram,test) \",\"//\\nval testBigram = NGramLM(test,2)\\nval jointVocab = (train ++ test).toSet\\ndef avgCounts(trainLM:CountLM, testLM:CountLM, vocab:Set[String]) = {\\n  val avgTestCounts = new HashMap[Double,Double] withDefaultValue 0.0\\n  val norm = new HashMap[Double,Double] withDefaultValue 0.0\\n  for (w1 <- jointVocab; w2 <- jointVocab) {\\n    val trainCount = trainLM.counts(w1 :: w2 :: Nil)\\n    val testCount = testLM.counts(w1 :: w2 :: Nil)\\n    avgTestCounts(trainCount) += testCount\\n    norm(trainCount) += 1.0\\n  }\\n  for (c <- avgTestCounts.keys) avgTestCounts(c) /= norm(c)\\n  avgTestCounts\\n}\\nval avgTestCounts = avgCounts(bigram,testBigram,jointVocab)\\nval avgLaplaceCounts = avgCounts(bigram,laplaceBigram,jointVocab)\\navgTestCounts.toSeq.sortBy(_._1).take(10)\\n//barChart(avgTestCounts.toSeq.sortBy(_._1).take(10))\\n\"]"
+      }
     }
   } ],
   "config" : {
