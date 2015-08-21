@@ -23,7 +23,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\nLet us now create an example CFG. Notice that we implemented a  implicit conversion methods which will allow us to construct terminals, non-terminals and rules more succinctly. We omit these methods here for brevity. ",
+      "code" : "<div class=\"newslide\"></div>\nLet us now create an example CFG. Notice that we implemented a  implicit conversion methods which will allow us to construct terminals, non-terminals and rules more succinctly. We omit these methods here for brevity. <span class=\"summary\">Let us now create an example CFG</span> ",
       "extraFields" : { }
     }
   }, {
