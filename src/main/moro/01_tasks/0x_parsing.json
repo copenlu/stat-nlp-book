@@ -5,27 +5,11 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\nIn many NLP applications it is useful to understand the syntactic structure of a sentence: where are the verbs, what are the subject and object of the verbs, which phrases form coherent sub-structures of the sentence? Understanding this enables the machine to more effectively translate from Japanese to English, or to understand the query [\"who is the president of the united state\"](https://www.google.co.uk/search?q=who+is+the+president+of+the+united+state&oq=who+is+the+president+of+the+united+state&aqs=chrome..69i57j0l5.252j0j4&sourceid=chrome&es_sm=119&ie=UTF-8) and execute it against a database. <span class=\"summary\">It is useful to understand the syntactic structure of a sentence: where are the verbs, what are the subject and object of the verbs, which phrases form coherent sub-structures?</span>  \n\n<div class=\"newslide\"></div>\n\nNote that this chapter is heavily influenced by the structure and content of [Mike Collins' PCFG lecture](http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf). <span class=\"summary\">(Based on Mike Collins Lecture)</span> \n\n<div class=\"newslide\"></div>\n### Context Free Grammars\nA common approach to capture constituency, grammatical relations and subcategorization is based on [Context Free Grammars](https://www.cs.rochester.edu/~nelson/courses/csc_173/grammars/cfg.html) (CFGs). On a high level, these grammars assume that legal sentences can be derived by repeatedly and _independently_ expanding abstract symbols (such as \"NounPhrase\" or \"Adjective\") into more concrete sequences of symbols (such as \"Adjective Noun\" or \"green\") until each symbol is a concrete word. <span class=\"summary\">Context Free Grammars define rules that expand ...</span> \n\n",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 2,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\nMore formally, a CFG is a 4-tuple \\\\(G=(N,\\Sigma,R,S)\\\\) where\n\n  * \\\\(N\\\\) is a set of _non-terminal symbols_.\n  * \\\\(\\Sigma\\\\) is a set of _terminal symbols_.\n  * \\\\(R\\\\) is a finite set of _rules_ \\\\(X \\rightarrow Y_1 Y_2\\ldots Y_n\\\\) where \\\\(X \\in N\\\\) and \\\\(Y_i \\in N \\cup \\Sigma\\\\). \n  * \\\\(S \\in N\\\\) is a _start symbol_. ",
+      "code" : "<div class=\"newslide\"></div>\nIn many NLP applications it is useful to understand the syntactic structure of a sentence: where are the verbs, what are the subject and object of the verbs, which phrases form coherent sub-structures of the sentence? Understanding this enables the machine to more effectively translate from Japanese to English, or to understand the query [\"who is the president of the united state\"](https://www.google.co.uk/search?q=who+is+the+president+of+the+united+state&oq=who+is+the+president+of+the+united+state&aqs=chrome..69i57j0l5.252j0j4&sourceid=chrome&es_sm=119&ie=UTF-8) and execute it against a database. <span class=\"summary\">It is useful to understand the syntactic structure of a sentence: where are the verbs, what are the subject and object of the verbs, which phrases form coherent sub-structures?</span>  \n\n<div class=\"newslide\"></div>\n\nNote that this chapter is heavily influenced by the structure and content of [Mike Collins' PCFG lecture](http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf). <span class=\"summary\">(Based on Mike Collins Lecture)</span> \n\n<div class=\"newslide\"></div>\n### Context Free Grammars\nA common approach to capture constituency, grammatical relations and subcategorization is based on [Context Free Grammars](https://www.cs.rochester.edu/~nelson/courses/csc_173/grammars/cfg.html) (CFGs). On a high level, these grammars assume that legal sentences can be derived by repeatedly and _independently_ expanding abstract symbols (such as \"NounPhrase\" or \"Adjective\") into more concrete sequences of symbols (such as \"Adjective Noun\" or \"green\") until each symbol is a concrete word. <span class=\"summary\">Context Free Grammars define rules that expand ...</span> \n\n<div class=\"newslide\"></div>\nMore formally, a CFG is a 4-tuple \\\\(G=(N,\\Sigma,R,S)\\\\) where\n\n  * \\\\(N\\\\) is a set of _non-terminal symbols_.\n  * \\\\(\\Sigma\\\\) is a set of _terminal symbols_.\n  * \\\\(R\\\\) is a finite set of _rules_ \\\\(X \\rightarrow Y_1 Y_2\\ldots Y_n\\\\) where \\\\(X \\in N\\\\) and \\\\(Y_i \\in N \\cup \\Sigma\\\\). \n  * \\\\(S \\in N\\\\) is a _start symbol_. \n\n<div class=\"newslide\"></div>\nBefore we show examples, let us define a scala data structure for PCFGs.",
       "extraFields" : { }
     }
   }, {
     "id" : 3,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\nBefore we show examples, let us define a scala data structure for PCFGs.",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 4,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -35,7 +19,7 @@
       }
     }
   }, {
-    "id" : 5,
+    "id" : 4,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -43,7 +27,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 6,
+    "id" : 5,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -55,7 +39,7 @@
       }
     }
   }, {
-    "id" : 7,
+    "id" : 6,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -65,15 +49,15 @@
       }
     }
   }, {
-    "id" : 8,
+    "id" : 7,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n### (Left-most) Derivation\nA left-most derivation given a CFG \\\\(G\\\\) is a sequence of strings \\\\(s_1 \\ldots s_n\\\\) such that \n\n* \\\\(s_1 = S\\\\), that is, the first string consists only of the start symbol.\n* \\\\(s_n \\in \\Sigma^*\\\\), that is, the last string consists of only terminals.\n* Each \\\\(s_i\\\\) for \\\\(i > 1\\\\) is generated by replacing the\n\n<div class=\"newslide\"></div>\nLet us write some code that puts this definition into action and generates random derivations based on a grammar. left-most non-terminal \\\\(\\alpha\\\\) with the right-hand side of any rule that has \\\\(\\alpha\\\\) as left-hand side. ",
+      "code" : "<div class=\"newslide\"></div>\n### (Left-most) Derivation\nA left-most derivation given a CFG \\\\(G\\\\) is a sequence of strings \\\\(s_1 \\ldots s_n\\\\) such that \n\n* \\\\(s_1 = S\\\\), that is, the first string consists only of the start symbol.\n* \\\\(s_n \\in \\Sigma^*\\\\), that is, the last string consists of only terminals.\n* Each \\\\(s_i\\\\) for \\\\(i > 1\\\\) is generated by replacing the left-most non-terminal \\\\(\\alpha\\\\) with the right-hand side of any rule that has \\\\(\\alpha\\\\) as left-hand side. \n\n<div class=\"newslide\"></div>\nLet us write some code that puts this definition into action and generates random derivations based on a grammar. ",
       "extraFields" : { }
     }
   }, {
-    "id" : 10,
+    "id" : 8,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -84,7 +68,7 @@
       }
     }
   }, {
-    "id" : 11,
+    "id" : 9,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -92,7 +76,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 12,
+    "id" : 10,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -102,15 +86,15 @@
       }
     }
   }, {
-    "id" : 13,
+    "id" : 11,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n### Probabilistic Context Free Grammars\n[Probabilistic Context Free Grammars](http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf) (PFCGs) are [Context Free Grammars](https://www.cs.rochester.edu/~nelson/courses/csc_173/grammars/cfg.html) where rules have probabilities. More formally, a PCFG consists of \n\n* A Context Free Grammar \\\\(G=(N,\\Sigma,R,S)\\\\).\n* A parameter \\\\(q(\\alpha \\rightarrow \\beta)\\\\) for each rule\n\n<div class=\"newslide\"></div>\nBefore we show examples, let us define a scala data structure for PCFGs.  \\\\(\\alpha \\rightarrow \\beta \\in R\\\\).   ",
+      "code" : "<div class=\"newslide\"></div>\n### Probabilistic Context Free Grammars\n[Probabilistic Context Free Grammars](http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf) (PFCGs) are [Context Free Grammars](https://www.cs.rochester.edu/~nelson/courses/csc_173/grammars/cfg.html) where rules have probabilities. More formally, a PCFG consists of \n\n* A Context Free Grammar \\\\(G=(N,\\Sigma,R,S)\\\\).\n* A parameter \\\\(q(\\alpha \\rightarrow \\beta)\\\\) for each rule  \\\\(\\alpha \\rightarrow \\beta \\in R\\\\).\n\n<div class=\"newslide\"></div>\nBefore we show examples, let us define a scala data structure for PCFGs.    ",
       "extraFields" : { }
     }
   }, {
-    "id" : 15,
+    "id" : 12,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -121,7 +105,7 @@
       }
     }
   }, {
-    "id" : 16,
+    "id" : 13,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -129,7 +113,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 17,
+    "id" : 14,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -141,7 +125,7 @@
       }
     }
   }, {
-    "id" : 18,
+    "id" : 15,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
