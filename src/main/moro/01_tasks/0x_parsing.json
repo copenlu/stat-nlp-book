@@ -1,0 +1,188 @@
+{
+  "name" : "Parsing",
+  "cells" : [ {
+    "id" : 0,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "In many NLP applications it is useful to understand the syntactic structure of a sentence: where are the verbs, what are the subject and object of the verbs, which phrases form coherent sub-structures of the sentence? Understanding this enables the machine to more effectively translate from Japanese to English, or to understand the query [\"who is the president of the united state\"](https://www.google.co.uk/search?q=who+is+the+president+of+the+united+state&oq=who+is+the+president+of+the+united+state&aqs=chrome..69i57j0l5.252j0j4&sourceid=chrome&es_sm=119&ie=UTF-8) and execute it against a database. \n\nNote that this chapter is heavily influenced by the structure and content of [Mike Collins' PCFG lecture](http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf). ",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 1,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Roughly speaking, syntax (from greek syntaxis: \"arrangement\") covers the question of how words are arranged together to form well-formed sentences. There are three important concepts to consider:\n\n* **Constituency**: groups of words act as single units.\n* **Grammatical Relations**: object, subject, direct object etc. \n* **Subcategorization**: restrictions on the type of phrases that go with certain words.",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 2,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### Context Free Grammars\nA common approach to capture constituency, grammatical relations and subcategorization is based on [Context Free Grammars](https://www.cs.rochester.edu/~nelson/courses/csc_173/grammars/cfg.html) (CFGs). On a high level, these grammars assume that legal sentences can be derived by repeatedly and _independently_ expanding abstract symbols (such as \"NounPhrase\" or \"Adjective\") into more concrete sequences of symbols (such as \"Adjective Noun\" or \"green\") until each symbol is a concrete word.  \n\n",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 3,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "More formally, a CFG is a 4-tuple \\\\(G=(N,\\Sigma,R,S)\\\\) where\n\n  * \\\\(N\\\\) is a set of _non-terminal symbols_.\n  * \\\\(\\Sigma\\\\) is a set of _terminal symbols_.\n  * \\\\(R\\\\) is a finite set of _rules_ \\\\(X \\rightarrow Y_1 Y_2\\ldots Y_n\\\\) where \\\\(X \\in N\\\\) and \\\\(Y_i \\in N \\cup \\Sigma\\\\). \n  * \\\\(S \\in N\\\\) is a _start symbol_. ",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 4,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Before we show examples, let us define a scala data structure for PCFGs.",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 5,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "sealed trait RHS\ncase class NonTerminal(name:Symbol) extends RHS \ncase class Terminal(name:String) extends RHS \ncase class Rule(lhs:NonTerminal,rhs:List[RHS])\ncase class CFG(N:Set[NonTerminal],Sigma:Set[Terminal],R:List[Rule],S:NonTerminal)\n1",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      }
+    }
+  }, {
+    "id" : 6,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Let us now create an example CFG. Notice that we implemented a  implicit conversion methods which will allow us to construct terminals, non-terminals and rules more succinctly. We omit these methods here for brevity. ",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 7,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "implicit def toNonTerm(name:Symbol) = NonTerminal(name)\nimplicit def toTerm(word:String) = Terminal(word)\nval anyToRhs:PartialFunction[Any,RHS] = {\n  case s:String => toTerm(s) \n  case s:Symbol => toNonTerm(s) \n}\nimplicit def toRule1(rule:(Symbol,List[Any])) = \n  Rule(rule._1,rule._2.collect(anyToRhs)) \n\nimplicit def toRule2(rule:(Symbol,Any)) = \n  Rule(rule._1,List(anyToRhs(rule._2))) \n    \ndef rhsToString(rhs:RHS) = rhs match {\n  case NonTerminal(n) => n.toString\n  case Terminal(w) => w\n}    \nimplicit def toHTML(cfg:CFG) = {\n  implicit val lhsOrdering = new Ordering[NonTerminal] {\n    override def compare(x: NonTerminal, y: NonTerminal): Int = {\n      if (x == cfg.S) -1 else if (y == cfg.S) 1 else x.name.toString.compareTo(y.name.toString)\n    }  \n  }      \n  table(cfg.R.sortBy(_.lhs)(lhsOrdering).map(r => Seq(r.lhs.name,r.rhs.map(rhsToString).mkString(\" \"))))    \n}\nimplicit def derivToHTML(deriv:Seq[Seq[RHS]]) = {\n  table(deriv.map(d => Seq(d.map(rhsToString).mkString(\" \"))))    \n}\ndef cfgFromRules(start:NonTerminal, rules:Rule*) = {\n  val terminals = rules.flatMap(_.rhs).collect{ case n:Terminal => n}.toSet\n  val nonTerminals = (rules.flatMap(r => r.lhs :: r.rhs)).collect{ case n:NonTerminal => n}.toSet\n  CFG(nonTerminals,terminals,rules.toList,start)\n}",
+      "extraFields" : {
+        "hide" : "true",
+        "hide_output" : "true",
+        "aggregatedCells" : "[\"sealed trait RHS\\ncase class NonTerminal(name:Symbol) extends RHS \\ncase class Terminal(name:String) extends RHS \\ncase class Rule(lhs:NonTerminal,rhs:List[RHS])\\ncase class CFG(N:Set[NonTerminal],Sigma:Set[Terminal],R:List[Rule],S:NonTerminal)\\n1\"]"
+      }
+    }
+  }, {
+    "id" : 8,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val cfg = cfgFromRules('S,\n  'S -> List('NP,'VP), 'VP -> List('Verb, 'NP), 'NP -> List('DT,'Nom), 'Nom -> List('Adj,'Noun),   \n  'Adj -> \"green\", 'Adj -> \"blue\", 'Noun -> \"house\", 'Verb -> \"is\", 'DT -> \"the\")\ncfg",
+      "extraFields" : {
+        "aggregatedCells" : "[\"sealed trait RHS\\ncase class NonTerminal(name:Symbol) extends RHS \\ncase class Terminal(name:String) extends RHS \\ncase class Rule(lhs:NonTerminal,rhs:List[RHS])\\ncase class CFG(N:Set[NonTerminal],Sigma:Set[Terminal],R:List[Rule],S:NonTerminal)\\n1\",\"implicit def toNonTerm(name:Symbol) = NonTerminal(name)\\nimplicit def toTerm(word:String) = Terminal(word)\\nval anyToRhs:PartialFunction[Any,RHS] = {\\n  case s:String => toTerm(s) \\n  case s:Symbol => toNonTerm(s) \\n}\\nimplicit def toRule1(rule:(Symbol,List[Any])) = \\n  Rule(rule._1,rule._2.collect(anyToRhs)) \\n\\nimplicit def toRule2(rule:(Symbol,Any)) = \\n  Rule(rule._1,List(anyToRhs(rule._2))) \\n    \\ndef rhsToString(rhs:RHS) = rhs match {\\n  case NonTerminal(n) => n.toString\\n  case Terminal(w) => w\\n}    \\nimplicit def toHTML(cfg:CFG) = {\\n  implicit val lhsOrdering = new Ordering[NonTerminal] {\\n    override def compare(x: NonTerminal, y: NonTerminal): Int = {\\n      if (x == cfg.S) -1 else if (y == cfg.S) 1 else x.name.toString.compareTo(y.name.toString)\\n    }  \\n  }      \\n  table(cfg.R.sortBy(_.lhs)(lhsOrdering).map(r => Seq(r.lhs.name,r.rhs.map(rhsToString).mkString(\\\" \\\"))))    \\n}\\nimplicit def derivToHTML(deriv:Seq[Seq[RHS]]) = {\\n  table(deriv.map(d => Seq(d.map(rhsToString).mkString(\\\" \\\"))))    \\n}\\ndef cfgFromRules(start:NonTerminal, rules:Rule*) = {\\n  val terminals = rules.flatMap(_.rhs).collect{ case n:Terminal => n}.toSet\\n  val nonTerminals = (rules.flatMap(r => r.lhs :: r.rhs)).collect{ case n:NonTerminal => n}.toSet\\n  CFG(nonTerminals,terminals,rules.toList,start)\\n}\"]"
+      }
+    }
+  }, {
+    "id" : 9,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### (Left-most) Derivation\nA left-most derivation given a CFG \\\\(G\\\\) is a sequence of strings \\\\(s_1 \\ldots s_n\\\\) such that \n\n* \\\\(s_1 = S\\\\), that is, the first string consists only of the start symbol.\n* \\\\(s_n \\in \\Sigma^*\\\\), that is, the last string consists of only terminals.\n* Each \\\\(s_i\\\\) for \\\\(i > 1\\\\) is generated by replacing the left-most non-terminal \\\\(\\alpha\\\\) with the right-hand side of any rule that has \\\\(\\alpha\\\\) as left-hand side. ",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 10,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Let us write some code that puts this definition into action and generates random derivations based on a grammar.",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 11,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "import scala.collection.mutable.{ArrayBuffer,ListBuffer}\nval rand = new scala.util.Random(0) \ndef generateDerivation(cfg:CFG) = {\n  val result = new ListBuffer[Seq[RHS]]\n  val current = new ListBuffer[RHS]\n  current += cfg.S\n  result += Seq() ++ current.toSeq\n  var index = -1\n  do {\n    index = current.indexWhere(_.isInstanceOf[NonTerminal])\n    if (index != -1) {\n      val rules = cfg.R.filter(_.lhs == current(index))\n      val sampled = rules(rand.nextInt(rules.length))\n      current.remove(index)\n      current.insertAll(index, sampled.rhs)\n      result += Seq() ++ current.toSeq\n    }\n  } while (index != -1)\n  result.toSeq\n} ",
+      "extraFields" : {
+        "aggregatedCells" : "[\"sealed trait RHS\\ncase class NonTerminal(name:Symbol) extends RHS \\ncase class Terminal(name:String) extends RHS \\ncase class Rule(lhs:NonTerminal,rhs:List[RHS])\\ncase class CFG(N:Set[NonTerminal],Sigma:Set[Terminal],R:List[Rule],S:NonTerminal)\\n1\",\"implicit def toNonTerm(name:Symbol) = NonTerminal(name)\\nimplicit def toTerm(word:String) = Terminal(word)\\nval anyToRhs:PartialFunction[Any,RHS] = {\\n  case s:String => toTerm(s) \\n  case s:Symbol => toNonTerm(s) \\n}\\nimplicit def toRule1(rule:(Symbol,List[Any])) = \\n  Rule(rule._1,rule._2.collect(anyToRhs)) \\n\\nimplicit def toRule2(rule:(Symbol,Any)) = \\n  Rule(rule._1,List(anyToRhs(rule._2))) \\n    \\ndef rhsToString(rhs:RHS) = rhs match {\\n  case NonTerminal(n) => n.toString\\n  case Terminal(w) => w\\n}    \\nimplicit def toHTML(cfg:CFG) = {\\n  implicit val lhsOrdering = new Ordering[NonTerminal] {\\n    override def compare(x: NonTerminal, y: NonTerminal): Int = {\\n      if (x == cfg.S) -1 else if (y == cfg.S) 1 else x.name.toString.compareTo(y.name.toString)\\n    }  \\n  }      \\n  table(cfg.R.sortBy(_.lhs)(lhsOrdering).map(r => Seq(r.lhs.name,r.rhs.map(rhsToString).mkString(\\\" \\\"))))    \\n}\\nimplicit def derivToHTML(deriv:Seq[Seq[RHS]]) = {\\n   table(deriv.map(d => Seq(d.map(rhsToString).mkString(\\\" \\\"))))    \\n}\",\"val cfg = CFG(\\n    Set('NP,'Nom,'Adj,'Noun,'S,'VP,'Verb,'DT),\\n    Set(\\\"green\\\",\\\"house\\\",\\\"blue\\\",\\\"is\\\"),\\n    List('S -> List('NP,'VP), 'VP -> List('Verb, 'NP),  \\n         'NP -> List('DT,'Nom), \\n         'Nom -> List('Adj,'Noun),   \\n         'Adj -> \\\"green\\\", 'Adj -> \\\"blue\\\",\\n         'Noun -> \\\"house\\\", 'Verb -> \\\"is\\\"), \\n    'S) \\ncfg\"]",
+        "hide_output" : "true"
+      }
+    }
+  }, {
+    "id" : 12,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Let us generate an example derivation.",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 13,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "generateDerivation(cfg)",
+      "extraFields" : {
+        "aggregatedCells" : "[\"sealed trait RHS\\ncase class NonTerminal(name:Symbol) extends RHS \\ncase class Terminal(name:String) extends RHS \\ncase class Rule(lhs:NonTerminal,rhs:List[RHS])\\ncase class CFG(N:Set[NonTerminal],Sigma:Set[Terminal],R:List[Rule],S:NonTerminal)\\n1\",\"implicit def toNonTerm(name:Symbol) = NonTerminal(name)\\nimplicit def toTerm(word:String) = Terminal(word)\\nval anyToRhs:PartialFunction[Any,RHS] = {\\n  case s:String => toTerm(s) \\n  case s:Symbol => toNonTerm(s) \\n}\\nimplicit def toRule1(rule:(Symbol,List[Any])) = \\n  Rule(rule._1,rule._2.collect(anyToRhs)) \\n\\nimplicit def toRule2(rule:(Symbol,Any)) = \\n  Rule(rule._1,List(anyToRhs(rule._2))) \\n    \\ndef rhsToString(rhs:RHS) = rhs match {\\n  case NonTerminal(n) => n.toString\\n  case Terminal(w) => w\\n}    \\nimplicit def toHTML(cfg:CFG) = {\\n  implicit val lhsOrdering = new Ordering[NonTerminal] {\\n    override def compare(x: NonTerminal, y: NonTerminal): Int = {\\n      if (x == cfg.S) -1 else if (y == cfg.S) 1 else x.name.toString.compareTo(y.name.toString)\\n    }  \\n  }      \\n  table(cfg.R.sortBy(_.lhs)(lhsOrdering).map(r => Seq(r.lhs.name,r.rhs.map(rhsToString).mkString(\\\" \\\"))))    \\n}\\nimplicit def derivToHTML(deriv:Seq[Seq[RHS]]) = {\\n   table(deriv.map(d => Seq(d.map(rhsToString).mkString(\\\" \\\"))))    \\n}\",\"val cfg = CFG(\\n    Set('NP,'Nom,'Adj,'Noun,'S,'VP,'Verb,'DT),\\n    Set(\\\"green\\\",\\\"house\\\",\\\"blue\\\",\\\"is\\\", \\\"the\\\"),\\n    List('S -> List('NP,'VP), 'VP -> List('Verb, 'NP),  \\n         'NP -> List('DT,'Nom), \\n         'Nom -> List('Adj,'Noun),   \\n         'Adj -> \\\"green\\\", 'Adj -> \\\"blue\\\",\\n         'Noun -> \\\"house\\\", 'Verb -> \\\"is\\\", 'DT -> \\\"the\\\"), \\n    'S) \\ncfg\",\"import scala.collection.mutable.{ArrayBuffer,ListBuffer}\\nval rand = new scala.util.Random(0) \\ndef generateDerivation(cfg:CFG) = {\\n  val result = new ListBuffer[Seq[RHS]]\\n  val current = new ListBuffer[RHS]\\n  current += cfg.S\\n  result += Seq() ++ current.toSeq\\n  var index = -1\\n  do {\\n    index = current.indexWhere(_.isInstanceOf[NonTerminal])\\n    if (index != -1) {\\n      val rules = cfg.R.filter(_.lhs == current(index))\\n      val sampled = rules(rand.nextInt(rules.length))\\n      current.remove(index)\\n      current.insertAll(index, sampled.rhs)\\n      result += Seq() ++ current.toSeq\\n    }\\n  } while (index != -1)\\n  result.toSeq\\n} \"]"
+      }
+    }
+  }, {
+    "id" : 14,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### Probabilistic Context Free Grammars\n[Probabilistic Context Free Grammars](http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf) (PFCGs) are [Context Free Grammars](https://www.cs.rochester.edu/~nelson/courses/csc_173/grammars/cfg.html) where rules have probabilities. More formally, a PCFG consists of \n\n* A Context Free Grammar \\\\(G=(N,\\Sigma,R,S)\\\\).\n* A parameter \\\\(q(\\alpha \\rightarrow \\beta)\\\\) for each rule \\\\(\\alpha \\rightarrow \\beta \\in R\\\\).   ",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 15,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Before we show examples, let us define a scala data structure for PCFGs. ",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 16,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "case class ProbRule(rule:Rule,prob:Double)\ncase class PCFG(N:Set[NonTerminal],Sigma:Set[Terminal],R:List[ProbRule],S:NonTerminal)",
+      "extraFields" : {
+        "aggregatedCells" : "[\"sealed trait RHS\\ncase class NonTerminal(name:Symbol) extends RHS \\ncase class Terminal(name:String) extends RHS \\ncase class Rule(lhs:NonTerminal,rhs:List[RHS])\\ncase class CFG(N:Set[NonTerminal],Sigma:Set[Terminal],R:List[Rule],S:NonTerminal)\\n1\",\"implicit def toNonTerm(name:Symbol) = NonTerminal(name)\\nimplicit def toTerm(word:String) = Terminal(word)\\nval anyToRhs:PartialFunction[Any,RHS] = {\\n  case s:String => toTerm(s) \\n  case s:Symbol => toNonTerm(s) \\n}\\nimplicit def toRule1(rule:(Symbol,List[Any])) = \\n  Rule(rule._1,rule._2.collect(anyToRhs)) \\n\\nimplicit def toRule2(rule:(Symbol,Any)) = \\n  Rule(rule._1,List(anyToRhs(rule._2))) \\n    \\ndef rhsToString(rhs:RHS) = rhs match {\\n  case NonTerminal(n) => n.toString\\n  case Terminal(w) => w\\n}    \\nimplicit def toHTML(cfg:CFG) = {\\n  implicit val lhsOrdering = new Ordering[NonTerminal] {\\n    override def compare(x: NonTerminal, y: NonTerminal): Int = {\\n      if (x == cfg.S) -1 else if (y == cfg.S) 1 else x.name.toString.compareTo(y.name.toString)\\n    }  \\n  }      \\n  table(cfg.R.sortBy(_.lhs)(lhsOrdering).map(r => Seq(r.lhs.name,r.rhs.map(rhsToString).mkString(\\\" \\\"))))    \\n}\\nimplicit def derivToHTML(deriv:Seq[Seq[RHS]]) = {\\n   table(deriv.map(d => Seq(d.map(rhsToString).mkString(\\\" \\\"))))    \\n}\",\"val cfg = CFG(\\n    Set('NP,'Nom,'Adj,'Noun,'S,'VP,'Verb,'DT),\\n    Set(\\\"green\\\",\\\"house\\\",\\\"blue\\\",\\\"is\\\"),\\n    List('S -> List('NP,'VP), 'VP -> List('Verb, 'NP),  \\n         'NP -> List('DT,'Nom), \\n         'Nom -> List('Adj,'Noun),   \\n         'Adj -> \\\"green\\\", 'Adj -> \\\"blue\\\",\\n         'Noun -> \\\"house\\\", 'Verb -> \\\"is\\\"), \\n    'S) \\ncfg\",\"import scala.collection.mutable.{ArrayBuffer,ListBuffer}\\nval rand = new scala.util.Random(0) \\ndef generateDerivation(cfg:CFG) = {\\n  val result = new ListBuffer[Seq[RHS]]\\n  val current = new ListBuffer[RHS]\\n  current += cfg.S\\n  result += Seq() ++ current.toSeq\\n  var index = -1\\n  do {\\n    index = current.indexWhere(_.isInstanceOf[NonTerminal])\\n    if (index != -1) {\\n      val rules = cfg.R.filter(_.lhs == current(index))\\n      val sampled = rules(rand.nextInt(rules.length))\\n      current.remove(index)\\n      current.insertAll(index, sampled.rhs)\\n      result += Seq() ++ current.toSeq\\n    }\\n  } while (index != -1)\\n  result.toSeq\\n} \",\"generateDerivation(cfg)\"]",
+        "hide_output" : "true"
+      }
+    }
+  }, {
+    "id" : 17,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Let us now create an example PCFG. ",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 18,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "implicit def toNonTerm(name:Symbol) = NonTerminal(name)\nimplicit def toTerm(word:String) = Terminal(word)\nval anyToRhs:PartialFunction[Any,RHS] = {\n  case s:String => toTerm(s) \n  case s:Symbol => toNonTerm(s) \n}\nimplicit def toRule1(rule:(Symbol,(List[Any],Double))) = \n  ProbRule(Rule(rule._1,rule._2._1.collect(anyToRhs)), rule._2._2) \n\nimplicit def toRule2(rule:(Symbol,(Any,Double))) = \n  ProbRule(Rule(rule._1,List(anyToRhs(rule._2._1))),rule._2._2) \n    \nimplicit def toHTML(pcfg:PCFG) = {\n  implicit val lhsOrdering = new Ordering[NonTerminal] {\n    override def compare(x: NonTerminal, y: NonTerminal): Int = {\n      if (x == pcfg.S) -1 else if (y == pcfg.S) 1 else x.name.toString.compareTo(y.name.toString)\n    }  \n  }      \n  table(pcfg.R.sortBy(_.rule.lhs).map(r => Seq(r.rule.lhs.name,r.rule.rhs.map(rhsToString).mkString(\" \"),r.prob)))    \n}\n",
+      "extraFields" : {
+        "hide" : "true",
+        "hide_output" : "true",
+        "aggregatedCells" : "[\"sealed trait RHS\\ncase class NonTerminal(name:Symbol) extends RHS \\ncase class Terminal(name:String) extends RHS \\ncase class Rule(lhs:NonTerminal,rhs:List[RHS])\\ncase class CFG(N:Set[NonTerminal],Sigma:Set[Terminal],R:List[Rule],S:NonTerminal)\\n1\",\"implicit def toNonTerm(name:Symbol) = NonTerminal(name)\\nimplicit def toTerm(word:String) = Terminal(word)\\nval anyToRhs:PartialFunction[Any,RHS] = {\\n  case s:String => toTerm(s) \\n  case s:Symbol => toNonTerm(s) \\n}\\nimplicit def toRule1(rule:(Symbol,List[Any])) = \\n  Rule(rule._1,rule._2.collect(anyToRhs)) \\n\\nimplicit def toRule2(rule:(Symbol,Any)) = \\n  Rule(rule._1,List(anyToRhs(rule._2))) \\n    \\ndef rhsToString(rhs:RHS) = rhs match {\\n  case NonTerminal(n) => n.toString\\n  case Terminal(w) => w\\n}    \\nimplicit def toHTML(cfg:CFG) = {\\n  implicit val lhsOrdering = new Ordering[NonTerminal] {\\n    override def compare(x: NonTerminal, y: NonTerminal): Int = {\\n      if (x == cfg.S) -1 else if (y == cfg.S) 1 else x.name.toString.compareTo(y.name.toString)\\n    }  \\n  }      \\n  table(cfg.R.sortBy(_.lhs)(lhsOrdering).map(r => Seq(r.lhs.name,r.rhs.map(rhsToString).mkString(\\\" \\\"))))    \\n}\\nimplicit def derivToHTML(deriv:Seq[Seq[RHS]]) = {\\n   table(deriv.map(d => Seq(d.map(rhsToString).mkString(\\\" \\\"))))    \\n}\",\"val cfg = CFG(\\n    Set('NP,'Nom,'Adj,'Noun,'S,'VP,'Verb,'DT),\\n    Set(\\\"green\\\",\\\"house\\\",\\\"blue\\\",\\\"is\\\"),\\n    List('S -> List('NP,'VP), 'VP -> List('Verb, 'NP),  \\n         'NP -> List('DT,'Nom), \\n         'Nom -> List('Adj,'Noun),   \\n         'Adj -> \\\"green\\\", 'Adj -> \\\"blue\\\",\\n         'Noun -> \\\"house\\\", 'Verb -> \\\"is\\\"), \\n    'S) \\ncfg\",\"import scala.collection.mutable.{ArrayBuffer,ListBuffer}\\nval rand = new scala.util.Random(0) \\ndef generateDerivation(cfg:CFG) = {\\n  val result = new ListBuffer[Seq[RHS]]\\n  val current = new ListBuffer[RHS]\\n  current += cfg.S\\n  result += Seq() ++ current.toSeq\\n  var index = -1\\n  do {\\n    index = current.indexWhere(_.isInstanceOf[NonTerminal])\\n    if (index != -1) {\\n      val rules = cfg.R.filter(_.lhs == current(index))\\n      val sampled = rules(rand.nextInt(rules.length))\\n      current.remove(index)\\n      current.insertAll(index, sampled.rhs)\\n      result += Seq() ++ current.toSeq\\n    }\\n  } while (index != -1)\\n  result.toSeq\\n} \",\"generateDerivation(cfg)\",\"case class ProbRule(rule:Rule,prob:Double)\\ncase class PCFG(N:Set[NonTerminal],Sigma:Set[Terminal],R:List[ProbRule],S:NonTerminal)\"]"
+      }
+    }
+  }, {
+    "id" : 19,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val example = PCFG(\n    Set('NP,'Adj,'Noun),\n    Set(\"green\",\"house\",\"blue\"),\n    List('NP -> (List('Adj,'Noun),1.0), \n         'Adj -> (\"green\",0.9), 'Adj -> (\"blue\",0.1),\n         'Noun -> (\"house\",1.0)),\n    'NP) \nexample",
+      "extraFields" : {
+        "aggregatedCells" : "[\"sealed trait RHS\\ncase class NonTerminal(name:Symbol) extends RHS \\ncase class Terminal(name:String) extends RHS \\ncase class Rule(lhs:NonTerminal,rhs:List[RHS])\\ncase class CFG(N:Set[NonTerminal],Sigma:Set[Terminal],R:List[Rule],S:NonTerminal)\\n1\",\"implicit def toNonTerm(name:Symbol) = NonTerminal(name)\\nimplicit def toTerm(word:String) = Terminal(word)\\nval anyToRhs:PartialFunction[Any,RHS] = {\\n  case s:String => toTerm(s) \\n  case s:Symbol => toNonTerm(s) \\n}\\nimplicit def toRule1(rule:(Symbol,List[Any])) = \\n  Rule(rule._1,rule._2.collect(anyToRhs)) \\n\\nimplicit def toRule2(rule:(Symbol,Any)) = \\n  Rule(rule._1,List(anyToRhs(rule._2))) \\n    \\ndef rhsToString(rhs:RHS) = rhs match {\\n  case NonTerminal(n) => n.toString\\n  case Terminal(w) => w\\n}    \\nimplicit def toHTML(cfg:CFG) = {\\n  implicit val lhsOrdering = new Ordering[NonTerminal] {\\n    override def compare(x: NonTerminal, y: NonTerminal): Int = {\\n      if (x == cfg.S) -1 else if (y == cfg.S) 1 else x.name.toString.compareTo(y.name.toString)\\n    }  \\n  }      \\n  table(cfg.R.sortBy(_.lhs)(lhsOrdering).map(r => Seq(r.lhs.name,r.rhs.map(rhsToString).mkString(\\\" \\\"))))    \\n}\\nimplicit def derivToHTML(deriv:Seq[Seq[RHS]]) = {\\n   table(deriv.map(d => Seq(d.map(rhsToString).mkString(\\\" \\\"))))    \\n}\",\"val cfg = CFG(\\n    Set('NP,'Nom,'Adj,'Noun,'S,'VP,'Verb,'DT),\\n    Set(\\\"green\\\",\\\"house\\\",\\\"blue\\\",\\\"is\\\"),\\n    List('S -> List('NP,'VP), 'VP -> List('Verb, 'NP),  \\n         'NP -> List('DT,'Nom), \\n         'Nom -> List('Adj,'Noun),   \\n         'Adj -> \\\"green\\\", 'Adj -> \\\"blue\\\",\\n         'Noun -> \\\"house\\\", 'Verb -> \\\"is\\\"), \\n    'S) \\ncfg\",\"import scala.collection.mutable.{ArrayBuffer,ListBuffer}\\nval rand = new scala.util.Random(0) \\ndef generateDerivation(cfg:CFG) = {\\n  val result = new ListBuffer[Seq[RHS]]\\n  val current = new ListBuffer[RHS]\\n  current += cfg.S\\n  result += Seq() ++ current.toSeq\\n  var index = -1\\n  do {\\n    index = current.indexWhere(_.isInstanceOf[NonTerminal])\\n    if (index != -1) {\\n      val rules = cfg.R.filter(_.lhs == current(index))\\n      val sampled = rules(rand.nextInt(rules.length))\\n      current.remove(index)\\n      current.insertAll(index, sampled.rhs)\\n      result += Seq() ++ current.toSeq\\n    }\\n  } while (index != -1)\\n  result.toSeq\\n} \",\"generateDerivation(cfg)\",\"case class ProbRule(rule:Rule,prob:Double)\\ncase class PCFG(N:Set[NonTerminal],Sigma:Set[Terminal],R:List[ProbRule],S:NonTerminal)\",\"implicit def toNonTerm(name:Symbol) = NonTerminal(name)\\nimplicit def toTerm(word:String) = Terminal(word)\\nval anyToRhs:PartialFunction[Any,RHS] = {\\n  case s:String => toTerm(s) \\n  case s:Symbol => toNonTerm(s) \\n}\\nimplicit def toRule1(rule:(Symbol,(List[Any],Double))) = \\n  ProbRule(Rule(rule._1,rule._2._1.collect(anyToRhs)), rule._2._2) \\n\\nimplicit def toRule2(rule:(Symbol,(Any,Double))) = \\n  ProbRule(Rule(rule._1,List(anyToRhs(rule._2._1))),rule._2._2) \\n    \\nimplicit def toHTML(pcfg:PCFG) = {\\n  implicit val lhsOrdering = new Ordering[NonTerminal] {\\n    override def compare(x: NonTerminal, y: NonTerminal): Int = {\\n      if (x == pcfg.S) -1 else if (y == pcfg.S) 1 else x.name.toString.compareTo(y.name.toString)\\n    }  \\n  }      \\n  table(pcfg.R.sortBy(_.rule.lhs).map(r => Seq(r.rule.lhs.name,r.rule.rhs.map(rhsToString).mkString(\\\" \\\"),r.prob)))    \\n}\\n\"]",
+        "hide_output" : "false"
+      }
+    }
+  } ],
+  "config" : { }
+}

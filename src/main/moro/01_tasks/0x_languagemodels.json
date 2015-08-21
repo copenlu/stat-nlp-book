@@ -391,7 +391,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Let us reformulate the laplace LM using adjusted counts. Note that we since we have histories with count 0, we do need to increase the original denominator by a small \\\\(\\epsilon\\\\) to avoid division by zero. \n$$\n\\begin{split}\n\\counts{\\train,\\alpha}{h,w} &= \\param^{\\alpha}_{w,h} \\cdot (\\counts{\\train}{h} + 1)\\\\\\\\\n\\counts{\\train,\\alpha}{h} &= \\counts{\\train}{h} + \\epsilon\n\\end{split}\n$$",
+      "code" : "Let us reformulate the laplace LM using adjusted counts. Note that we since we have histories with count 0, we do need to increase the original denominator by a small \\\\(\\epsilon\\\\) to avoid division by zero. \n$$\n\\begin{split}\n\\counts{\\train,\\alpha}{h,w} &= \\param^{\\alpha}_{w,h} \\cdot (\\counts{\\train}{h} +  \\epsilon)\\\\\\\\\n\\counts{\\train,\\alpha}{h} &= \\counts{\\train}{h} + \\epsilon\n\\end{split}\n$$",
       "extraFields" : { }
     }
   }, {
