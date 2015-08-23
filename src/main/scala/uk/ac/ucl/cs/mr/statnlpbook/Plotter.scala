@@ -368,7 +368,8 @@ object Renderer {
     def createGraph(tree: ConstituentTree) =
       createGraphRecurse((tree -> Node("topNode", "TOP", 0)) :: Nil, Graph(Node("topNode", "TOP", 0) :: Nil), 1)
 
-    val graph = createGraph(constituentTree)
+    val rawGraph = createGraph(constituentTree)
+    val graph = Graph(rawGraph.nodes.filter(_.id != 0), rawGraph.edges.filter(_.from != 0))
     val nodeString = graph.nodes.sortBy(_.id).map(
       n => s"""g.setNode(${n.id}, { label: "${n.content}", class: "${n.css}", labelStyle: "font-size: $fontSize"}); """).mkString("\n")
     val edgeString = graph.edges.sortBy(e => (e.from,e.to)).map (
