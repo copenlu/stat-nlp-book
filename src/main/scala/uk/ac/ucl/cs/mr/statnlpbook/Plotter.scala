@@ -343,7 +343,18 @@ object Renderer {
     RawHTML(d3)
   }
 
-  def renderParseTree(constituentTree: ConstituentTree) = {
+  case class RenderTree(label: String, css: String = "", children: List[RenderTree] = Nil)
+
+  def wolfeTreeToRenderTree(tree: ConstituentTree): RenderTree = tree match {
+    case ConstituentTree(PreterminalNode(_, _, label, word), _) =>
+      RenderTree(label, css = "nonTerminal", RenderTree(word, css = "terminal") :: Nil)
+    case ConstituentTree(NonterminalNode(_, _, label, _), children) =>
+      RenderTree(label, css = "nonTerminal", children = children map wolfeTreeToRenderTree)
+  }
+
+  def renderParseTree(tree: ConstituentTree):HTML = renderParseTree(wolfeTreeToRenderTree(tree))
+
+  def renderParseTree(tree: RenderTree) = {
     val id = "parseTree" + UUID.randomUUID().toString
     val fontSize = "33px"
 
@@ -351,34 +362,26 @@ object Renderer {
     case class Edge(from: Int, to: Int)
     case class Graph(nodes: List[Node], edges: List[Edge] = Nil)
 
-    def createGraphRecurse(trees: List[(ConstituentTree, Node)], result: Graph = Graph(Nil, Nil), id: Int = 0): Graph = trees match {
-      case (ConstituentTree(PreterminalNode(_, _, label, word), _), parent) :: tail =>
-        val newNodes = Node("nonTerminal", label, id) :: Node("terminal", word, id + 1) :: result.nodes
-        val newEdges = Edge(parent.id, id) :: Edge(id, id + 1) :: result.edges
-        createGraphRecurse(tail, Graph(newNodes, newEdges), id + 2)
-      case (ConstituentTree(NonterminalNode(_, _, label, _), children), parent) :: tail =>
-        val newParent = Node("nonTerminal", label, id)
+    def createGraphRecurse(trees: List[(RenderTree, Node)], result: Graph = Graph(Nil, Nil), id: Int = 0): Graph = trees match {
+      case (r: RenderTree, parent) :: tail =>
+        val newParent = Node(r.css, r.label, id)
         val newNodes = newParent :: result.nodes
         val newEdges = Edge(parent.id, id) :: result.edges
-        val newJobs = children map (_ -> newParent)
+        val newJobs = r.children map (_ -> newParent)
         createGraphRecurse(newJobs ::: tail, Graph(newNodes, newEdges), id + 1)
       case _ => result
     }
 
-    def createGraph(tree: ConstituentTree) =
+    def createGraph(tree: RenderTree) =
       createGraphRecurse((tree -> Node("topNode", "TOP", 0)) :: Nil, Graph(Node("topNode", "TOP", 0) :: Nil), 1)
 
-    val rawGraph = createGraph(constituentTree)
+    val rawGraph = createGraph(tree)
     val graph = Graph(rawGraph.nodes.filter(_.id != 0), rawGraph.edges.filter(_.from != 0))
     val nodeString = graph.nodes.sortBy(_.id).map(
       n => s"""g.setNode(${n.id}, { label: "${n.content}", class: "${n.css}", labelStyle: "font-size: $fontSize"}); """).mkString("\n")
-    val edgeString = graph.edges.sortBy(e => (e.from,e.to)).map (
+    val edgeString = graph.edges.sortBy(e => (e.from, e.to)).map(
       e => s"""g.setEdge(${e.from}, ${e.to});""").mkString("\n")
 
-    val nodes = for (t <- constituentTree.breadthFirstSearch) yield t match {
-      case ConstituentTree(NonterminalNode(_, _, label, _), _) => "{}"
-      case ConstituentTree(PreterminalNode(_, _, label, word), _) => "{}"
-    }
     val html =
       s"""
         |<div id = "$id" class="parseTree">
@@ -426,9 +429,9 @@ object Renderer {
 
   def main(args: Array[String]) {
     val wolfeTree =
-      ConstituentTree(NonterminalNode(0,3,"NP"),
-        ConstituentTree(PreterminalNode(0,1,"DT","the")) ::
-          ConstituentTree(NonterminalNode(1,3,"Nom")) :: Nil
+      ConstituentTree(NonterminalNode(0, 3, "NP"),
+        ConstituentTree(PreterminalNode(0, 1, "DT", "the")) ::
+          ConstituentTree(NonterminalNode(1, 3, "Nom")) :: Nil
       )
     println(renderParseTree(wolfeTree))
   }
