@@ -348,7 +348,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\nLet us first focus on the prediction task: given a sentence, find the highest scoring parse tree. In a way, we have already solved a variant of this problem. We can consider a CFG as a deterministic distribution over trees, and finding _a_ highest scoring parse is equivalent to finding any legal tree&mdash;our bottom-up and dynamic program based algorithms hence performed a structured prediction.\n\n<div class=\"newslide\"></div>\n#### CYK for PCFGs\nHere we present a probabilistic variant of the CYK algorithm. \n",
+      "code" : "<div class=\"newslide\"></div>\nLet us first focus on the prediction task: given a sentence, find the highest scoring parse tree. In a way, we have already solved a variant of this problem. We can consider a CFG as a deterministic distribution over trees, and finding _a_ highest scoring parse is equivalent to finding any legal tree&mdash;our bottom-up and dynamic program based algorithms hence performed a structured prediction.\n\n<div class=\"newslide\"></div>\n#### CYK for PCFGs\nHere we present a probabilistic variant of the CYK algorithm. Notice that again we require normalization to CNF. Exercise: how to incorporate the rule probabilities during normalization? \n",
       "extraFields" : { }
     }
   }, {
