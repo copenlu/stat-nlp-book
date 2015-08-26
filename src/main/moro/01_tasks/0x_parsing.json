@@ -280,7 +280,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n### Ambiguity \nFor real world grammars many phrases have several legal parse trees. Which one is the correct one depends on the intent of the speaker. That said, in many cases it is quite obvious that one parse tree should be more likely, or have a higher _probability_. This suggest a probabilistic treatment of grammars and parsing. Before we go there, let us inspect a typical case of syntactic natural language ambiguity. \n",
+      "code" : "<div class=\"newslide\"></div>\n### Ambiguity \nFor real world grammars many phrases have several legal parse trees. Which one is the correct one depends on the intent of the speaker. That said, in many cases it is quite obvious that one parse tree should be more likely, or have a higher _probability_. This suggest a probabilistic treatment of grammars and parsing. Before we introduce probabilistic CFGs, let us inspect a typical case of syntactic natural language ambiguity. <span class=\"summary\">Sentences can have several legal parse trees.</span> \n",
       "extraFields" : { }
     }
   }, {
@@ -298,7 +298,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\n\n<div class=\"newslide\"></div>\n### Probabilistic Context Free Grammars\n[Probabilistic Context Free Grammars](http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf) (PFCGs) are [Context Free Grammars](https://www.cs.rochester.edu/~nelson/courses/csc_173/grammars/cfg.html) where rules have probabilities. More formally, a PCFG consists of \n\n* A Context Free Grammar \\\\(G=(N,\\Sigma,R,S)\\\\).\n* A parameter \\\\(q(\\alpha \\rightarrow \\beta)\\\\) for each rule  \\\\(\\alpha \\rightarrow \\beta \\in R\\\\).\n\n<div class=\"newslide\"></div>\nBefore we show examples, let us define a scala data structure for\nPCFGs.    \n",
+      "code" : "<div class=\"newslide\"></div>\nThe example is an instance of _prepositional phrase attachment ambiguity_: the \"in his pyjamas\" phrase could both be part of the verb phrase, meaning that the shooting happened in pyjamas, or part of the noun phrase \"the elephant\", meaning that the elephant was in pyjamas. Both readings make syntactic sense, so there is nothing wrong with the grammar. However, we would like the machine to return the preferred reading when such sentence is parsed. For this we need to find a way to assign different readings different probabilities. <span class=\"summary\">Can we assign the better parse a higher _probability_?</span> \n\n<div class=\"newslide\"></div>\n### Probabilistic Context Free Grammars\n[Probabilistic Context Free Grammars](http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf) (PFCGs) are [Context Free Grammars](https://www.cs.rochester.edu/~nelson/courses/csc_173/grammars/cfg.html) where rules have probabilities. More formally, a PCFG consists of \n\n* A Context Free Grammar \\\\(G=(N,\\Sigma,R,S)\\\\).\n* A parameter \\\\(q(\\alpha \\rightarrow \\beta)\\\\) for each rule  \\\\(\\alpha \\rightarrow \\beta \\in R\\\\).\n\n<div class=\"newslide\"></div>\nBefore we show examples, let us define a scala data structure for\nPCFGs.    \n",
       "extraFields" : { }
     }
   }, {
