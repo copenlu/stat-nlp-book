@@ -1,0 +1,15 @@
+{
+  "name" : "Logistics",
+  "cells" : [ {
+    "id" : 0,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n### Course Details\n\n* **Course**: COMPGI19, COMPM083.\n* **Lecture**: Friday 2PM - 5PM\n* **Lecturer**: Sebastian Riedel\n* **Lab**: Tuesdays 9AM to ???, ???\n* **Teaching Assistants**: Tim Rocktäschel, Matko Bosnjak\n\n<div class=\"newslide\"></div>\n### Course Details (cont'd)\n\n* I am *not a linguist*\n    * I probably don’t know your favourite linguistic framework or terminology\n* I am *not a cognitive scientist*\n    * I don’t know how humans process language\n* This course has no exams!\n    * You should learn how to construct stat NLP systems\n* Send me questions (I will discuss these in class)\n* Lab exercises and assignments are in **Scala**\n* Requirements\n    * You should know how to code, base knowledge in probability (Bayes Rule, MLE)\n\n\n<div class=\"newslide\"></div>\n### Assignments\n* Require programming, math, and analysis. \n* 3 Assignments, weigthed 30/40/30.\n* One project will require team-work.\n* Usual rules of plagiarism apply.\n\n<div class=\"newslide\"></div>\n### Course Material\n* We will be using the \"stat-nlp-book\" project.\n* Includes both lecture notes, and slides.\n    * slides are summaries of the lecture notes, using the same source document.\n* References to other material are given in context.\n* This is work in progress, incomplete and contains errors.\n* Please contribute by adding issues on github when you see errors.\n* You can clone the project and create pull requests with your own contributions. \n\n\n",
+      "extraFields" : { }
+    }
+  } ],
+  "config" : {
+    "autosave" : "false"
+  }
+}
