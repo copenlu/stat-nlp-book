@@ -1,5 +1,13 @@
 {
   "name" : "Introduction",
-  "cells" : [ ],
+  "cells" : [ {
+    "id" : 0,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n\n### What is NLP?\n<img width=\"90%\" class=\"single-img frame\" src=\"/assets/figures/whatwesaytodogs.png\"></img>\n\n* Building computer systems that **analyze**, **understand**, and **generate** natural languages.\n* Deep understanding of **broad** language\n    * not just string processing or keyword matching\n\n<div class=\"newslide\"></div>\nCan you think of NLP applications?\n\n<div class=\"newslide\"></div>\n### Speech Recognition\n\n<img width=\"80%\" class=\"single-img frame\" src=\"/assets/figures/wreckanicebeach.png\"></img>\n\n<div class=\"newslide\"></div>\n### Speech Recognition\nSpeech Recognition is usually **not considered NLP**. We will not cover this topic here. \n\n<div class=\"newslide\"></div>\n### Machine Translation\n\n<img width=\"80%\" class=\"single-img frame\" src=\"/assets/figures/mt.png\"></img>\n\n<div class=\"newslide\"></div>\n### Personal Assistants\n\n<div class=\"centered-div\">\n<img width=\"40%\" class=\"frame\" src=\"/assets/figures/siri1.png\"></img>\n<img width=\"40%\" class=\"frame\" src=\"/assets/figures/siri2.png\"></img>\n</div>\n<div class=\"newslide\"></div>\n### Information Extraction\n\n<img width=\"80%\" class=\"single-img frame\" src=\"/assets/figures/ie1.png\"></img>\n\n<div class=\"newslide\"></div>\n### Information Extraction\n\n<img width=\"80%\" class=\"single-img frame\" src=\"/assets/figures/ie2.png\"></img>\n\n<div class=\"newslide\"></div>\nQuestions?\n\n",
+      "extraFields" : { }
+    }
+  } ],
   "config" : { }
 }
