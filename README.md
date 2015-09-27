@@ -8,6 +8,14 @@
 
 You may have to delete the wolfe directory in the ivy cache to make sure you get the newest version.
 
+### Create wolfe API docs
+
+```sh
+cd wolfe
+sbt doc
+cd ..
+```
+
 ### Setup and Run Moro
 
 Setup the project specific configuration file 
