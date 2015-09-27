@@ -12,8 +12,6 @@ You may have to delete the wolfe directory in the ivy cache to make sure you get
 
 Setup the project specific configuration file 
 
-    
-
 Initialize sub-modules (1), compile the project (2) and wolfe (3), setup the project specific configuration file (4) and run moro (5-6).
 
 1. `git submodule update --init --recursive`
@@ -31,6 +29,10 @@ Maybe (most definitely?) you'll need to clone htmlgen and scalaplot and install 
 To download the OHHLA files
 
     scripts/download_ohhla j_live
+
+## Browse the Book
+
+The COMPGI19 entry point is [here](http://localhost:9000/template/statnlpbook/04_compgi19/02_overview).
 
 ## Live editing in IntelliJ
 
