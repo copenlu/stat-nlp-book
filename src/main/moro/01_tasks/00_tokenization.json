@@ -41,7 +41,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n### Tokenization with Regular Expressions\nWolfe allows users to construct tokenizers using [regular expressions](http://en.wikipedia.org/wiki/Regular_expression) that define the character sequence patterns at which to split tokens. In general regular expressions are a powerful tool NLP practitioners can use when working with text, and they come in handy when you work with command line tools such as [grep](http://en.wikipedia.org/wiki/Grep). In the code below we use a simple pattern `\\\\s` that matches any whitespace. ",
+      "code" : "<div class=\"newslide\"></div>\n### Tokenization with Regular Expressions\nWolfe allows users to construct tokenizers using [regular expressions](http://en.wikipedia.org/wiki/Regular_expression) that define the character sequence patterns at which to split tokens. In general regular expressions are a powerful tool NLP practitioners can use when working with text, and they come in handy when you work with command line tools such as [grep](http://en.wikipedia.org/wiki/Grep). In the code below we use a simple pattern `\\\\s` that matches any whitespace. <span class=\"summary\">We can use regular expressions to define where to split tokens.</span>",
       "extraFields" : { }
     }
   }, {
@@ -59,7 +59,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "One shortcoming of this tokenization is its treatment of punctuation because it considers \"plan.\" as a token whereas ideally we would prefer \"plan\" and \".\" to be distinct tokens (why?). To achieve this we need to use [lookahead](http://www.regular-expressions.info/lookaround.html) patterns that split at zero-length patterns before and after punctuation. Note how we used Scala [String Interpolation](http://docs.scala-lang.org/overviews/core/string-interpolation.html) to inject smaller patterns into larger ones.           ",
+      "code" : "<div class=\"newslide\"></div>\nOne shortcoming of this tokenization is its treatment of punctuation because it considers \"plan.\" as a token whereas ideally we would prefer \"plan\" and \".\" to be distinct tokens (why?). To achieve this we need to use [lookahead](http://www.regular-expressions.info/lookaround.html) patterns that split at zero-length patterns before and after punctuation. Note how we used Scala [String Interpolation](http://docs.scala-lang.org/overviews/core/string-interpolation.html) to inject smaller patterns into larger ones. <span class=\"summary\">Use **lookahead** to split at zero-length tokens.</span>          ",
       "extraFields" : { }
     }
   }, {
@@ -77,7 +77,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "This still isn't perfect. First, \"Mr.\" is split into two tokens, but it should be one. Second, and more subtly, many downstream linguistic processors (such as [syntactic parsers](todo)) prefer contractions such as \"doesn't\" to become two tokens, \"does\" and \"'t\" (Why?). \n\n<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Improve the regular expressions to overcome the two problems above.</div>    \n</div>",
+      "code" : "<div class=\"newslide\"></div>\nThis still isn't perfect. First, \"Mr.\" is split into two tokens, but it should be one. Second, and more subtly, many downstream linguistic processors (such as [syntactic parsers](todo)) prefer contractions such as \"doesn't\" to become two tokens, \"does\" and \"'t\" (Why?). <span class=\"summary\">This is still not perfect due to abbreviations such as \"Mr.\" and the representation of **contractions**.</span> \n\n<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Improve the regular expressions to overcome the two problems above.</div>    \n</div>",
       "extraFields" : { }
     }
   }, {
@@ -85,7 +85,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "###Learning To Tokenize\nFor most English domains powerful and robust tokenizers can be built using the simple pattern matching approach shown above. However, in languages such as Japanese (...), words are not separated by whitespace, and this makes tokenization substantially more challenging (example). Even for certain English domains such as the domain of biomedical papers, tokenization is non-trivial (example).\n\nWhen tokenization is more challenging and difficult to capture in a few rules a machine-learning based approach can be useful. In a nutshell, we can treat the tokenization problem as a character [classification problem](todo), or if needed, as a [sequential labelling problem](todo). [Maybe have a mini Wolfe example here?]  ",
+      "code" : "<div class=\"newslide\"></div>\n###Learning To Tokenize\nFor most English domains powerful and robust tokenizers can be built using the simple pattern matching approach shown above. However, in languages such as Japanese (...), words are not separated by whitespace, and this makes tokenization substantially more challenging (example). Even for certain English domains such as the domain of biomedical papers, tokenization is non-trivial.<span class=\"summary\">Tokenization is relatively easy for English, but not for other languages or domains.</span> \n\nWhen tokenization is more challenging and difficult to capture in a few rules a machine-learning based approach can be useful. In a nutshell, we can treat the tokenization problem as a character [classification problem](todo), or if needed, as a [sequential labelling problem](todo). [Maybe have a mini Wolfe example here?]<span class=\"summary\">We can **learn** to tokenize using sequence labelling models we discuss later.</span> ",
       "extraFields" : { }
     }
   }, {
@@ -93,7 +93,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "###Sentence Segmentation\nMany NLP tools work on a sentence-by-sentence basis. The next preprocessing step is hence to segment streams of tokens into sentences. In most cases this is straightforward after tokenization, because we only need to split sentences at sentence-ending punctuation tokens. In Wolfe you can implement segmentation using `Segmenter` that splits a sentence at a token whenever that token's content matches a regular expression. If this expression only fires for punctuations, you get the desired behaviour. ",
+      "code" : "<div class=\"newslide\"></div>\n###Sentence Segmentation\nMany NLP tools work on a sentence-by-sentence basis. The next preprocessing step is hence to segment streams of tokens into sentences. In most cases this is straightforward after tokenization, because we only need to split sentences at sentence-ending punctuation tokens. In Wolfe you can implement segmentation using `Segmenter` that splits a sentence at a token whenever that token's content matches a regular expression. If this expression only fires for punctuations, you get the desired behaviour. ",
       "extraFields" : { }
     }
   }, {
