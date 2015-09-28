@@ -2,11 +2,10 @@ package uk.ac.ucl.cs.mr.statnlpbook
 
 import java.util.UUID
 
-import ml.wolfe.nlp.syntax.{PreterminalNode, NonterminalNode, ConstituentTree}
-import ml.wolfe.nlp.{Document, Token, Sentence}
-import ml.wolfe.ui.D3Plotter
+import ml.wolfe.nlp.syntax.{ConstituentTree, NonterminalNode, PreterminalNode}
+import ml.wolfe.nlp.{Document, Sentence}
 import org.sameersingh.htmlgen.{HTML, RawHTML}
-import org.sameersingh.scalaplot.{XYChartImplicits, XYData, XYSeries, XYChart}
+import org.sameersingh.scalaplot.{XYChart, XYChartImplicits, XYData, XYSeries}
 
 import scala.collection.mutable.ArrayBuffer
 import scala.xml.PrettyPrinter
@@ -449,6 +448,7 @@ object BratRenderer2 {
   val headJS = bratLocation + "/client/lib/head.load.min.js"
 
   def wrapCode(id: String, collData: String, docData: String): HTML = {
+    println("Rendering brat ...")
     val webFontURLs =
       s"""
         |[
@@ -487,12 +487,12 @@ object BratRenderer2 {
         |
         |             head.ready(function() {
         |                console.log("Head is ready");
+        |                console.log("Huh?");
         |
         |                var collData = $collData;
         |
         |                var docData = $docData;
-        |
-        |                Util.embed(
+        |                var dispatcher = Util.embed(
         |                    // id of the div element where brat should embed the visualisations
         |                    '$id',
         |                    // object containing collection data
@@ -502,6 +502,18 @@ object BratRenderer2 {
         |                    // Array containing locations of the visualisation fonts
         |                    $webFontURLs
         |                    );
+        |                console.log("Dispatcher:");
+        |                console.log(dispatcher);
+        |                dispatcher.on('doneRendering', function() {
+        |                    console.log("Done Rendering!");
+        |                    var scale = typeof bratSVGScale !== 'undefined' ? bratSVGScale : 1;
+        |                    var div = jQuery('#$id');
+        |                    var svg = jQuery('svg',div);
+        |                    var newHeight = scale * svg.height();
+        |                    var newWidth = scale * svg.width();
+        |                    svg.height(newHeight).width(newWidth);
+        |                    div.height(newHeight);
+        |                });
         |            });
         |
         |

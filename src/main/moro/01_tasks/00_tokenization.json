@@ -93,7 +93,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n###Sentence Segmentation\nMany NLP tools work on a sentence-by-sentence basis. The next preprocessing step is hence to segment streams of tokens into sentences. In most cases this is straightforward after tokenization, because we only need to split sentences at sentence-ending punctuation tokens. In Wolfe you can implement segmentation using `Segmenter` that splits a sentence at a token whenever that token's content matches a regular expression. If this expression only fires for punctuations, you get the desired behaviour. ",
+      "code" : "<div class=\"newslide\"></div>\n###Sentence Segmentation\nMany NLP tools work on a sentence-by-sentence basis. The next preprocessing step is hence to segment streams of tokens into sentences. In most cases this is straightforward after tokenization, because we only need to split sentences at sentence-ending punctuation tokens. In Wolfe you can implement segmentation using `Segmenter` that splits a sentence at a token whenever that token's content matches a regular expression. If this expression only fires for punctuations, you get the desired behaviour. <span class=\"summary\">Most NLP tools work on a **per-sentence basis**. To find sentence splits we can again use **regular expressions** .</span> ",
       "extraFields" : { }
     }
   }, {
@@ -111,7 +111,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "This is in fact a bad segmentation, as we split at the period of \"Mr.\". However, once you fix tokenization to treat \"Mr.\" as single token, the problem disappears. The default Wolfe tokenizer and segmenter overcome this problem. Below we use these to construct a _pipeline_ of document processors using [Scala function composition](https://twitter.github.io/scala_school/pattern-matching-and-functional-composition.html) via `andThen`.       ",
+      "code" : "<div class=\"newslide\"></div>\nThis is in fact a bad segmentation, as we split at the period of \"Mr.\". However, once you fix tokenization to treat \"Mr.\" as single token, the problem disappears. The default Wolfe tokenizer and segmenter overcome this problem. Below we use these to construct a _pipeline_ of document processors using [Scala function composition](https://twitter.github.io/scala_school/pattern-matching-and-functional-composition.html) via `andThen`. <span class=\"summary\">This is still bad, but we can the default tokenizer and segmenter to </span>       ",
       "extraFields" : { }
     }
   }, {
@@ -129,7 +129,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### Exercise\nCreate a regular expression tokenizer and sentence segmenter that can process Hip-Hop lyrics from [OHHLA](todo). Use the `Corpora.ohhla` document collection and split sentences per line. ",
+      "code" : "<div class=\"newslide\"></div>\n#### Exercise\nCreate a regular expression tokenizer and sentence segmenter that can process Hip-Hop lyrics from [OHHLA](todo). Use the `Corpora.ohhla` document collection and split sentences per line. \n\n<div class=\"newslide\"></div>\n### Background Reading\n\n* Jurafsky & Martin, Speech and Language Processing: Chapter 2, Regular Expressions and Automata.\n* Manning, Raghavan & Schuetze, Introduction to Information Retrieval: [Tokenization](http://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html)\n",
       "extraFields" : { }
     }
   } ],
