@@ -492,7 +492,10 @@ object BratRenderer2 {
         |                var collData = $collData;
         |
         |                var docData = $docData;
-        |                var dispatcher = Util.embed(
+        |                var currentWidth = jQuery('#$id').width();
+        |                console.log(jQuery('#$id').width());
+        |
+        |                var dispatcher = Util.embedWithForceWidth(
         |                    // id of the div element where brat should embed the visualisations
         |                    '$id',
         |                    // object containing collection data
@@ -500,7 +503,9 @@ object BratRenderer2 {
         |                    // object containing document data
         |                    docData,
         |                    // Array containing locations of the visualisation fonts
-        |                    $webFontURLs
+        |                    $webFontURLs,
+        |                    //forceWidth
+        |                    typeof bratSVGScale !== 'undefined' ? currentWidth / bratSVGScale : currentWidth
         |                    );
         |                console.log("Dispatcher:");
         |                console.log(dispatcher);
