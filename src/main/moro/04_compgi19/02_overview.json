@@ -5,7 +5,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\n<div class=\"newslide\"></div>\nThis page is the main access point to the course material. Note that every page allows you to toggle between a text and a presentation mode. In the lectures we will mostly use the presentation view, but both are essentially based on the same content.<span class=\"summary\">This is the content of the course:</span> \n\n* [Logistics](http://localhost:9000/template/statnlpbook/04_compgi19/00_logistics)\n* [Introduction](http://localhost:9000/template/statnlpbook/04_compgi19/01_intro)\n* Lectures\n    * [Tokenization](http://localhost:9000/template/statnlpbook/01_tasks/00_tokenization)",
+      "code" : "\n<div class=\"newslide\"></div>\nThis page is the main access point to the course material. Note that every page allows you to toggle between a text and a presentation mode. In the lectures we will mostly use the presentation view, but both are essentially based on the same content.<span class=\"summary\">This is the content of the course:</span> \n\n* [Logistics](/template/statnlpbook/04_compgi19/00_logistics)\n* [Introduction](/template/statnlpbook/04_compgi19/01_intro)\n* Lectures\n    * [Tokenization](/template/statnlpbook/01_tasks/00_tokenization)",
       "extraFields" : { }
     }
   } ],
