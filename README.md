@@ -2,6 +2,9 @@
 
 ### Setup and run the book
 
+Before running any of the following comands, make sure you have [all the prerequisites installed](https://github.com/uclmr/stat-nlp-book/wiki/Installation-of-prerequisites).
+
+
 Setup the project specific configuration file 
 
 Clone the repository (1), 
