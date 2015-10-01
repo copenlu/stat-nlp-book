@@ -1,33 +1,19 @@
 # stat-nlp-book
 
-## Setup
-
-### Update wolfe in your local ivy repository
-
-1. in the `wolfe` directory, do `sbt publish-local`
-
-You may have to delete the wolfe directory in the ivy cache to make sure you get the newest version.
-
-### Create wolfe API docs
-
-```sh
-cd wolfe
-sbt doc
-cd ..
-```
-
-### Setup and Run Moro
+### Setup and run the book
 
 Setup the project specific configuration file 
 
 Initialize sub-modules (1), compile the project (2) and wolfe (3), setup the project specific configuration file (4) and run moro (5-6).
 
-1. `git submodule update --init --recursive`
-2. `sbt compile`
-3. `cd wolfe; sbt compile; cd ..`
-4. `cp moro/conf/application-statnlpbook.conf moro/conf/application.conf`
-4. `cd moro; git checkout master`
-5. `sbt run`
+1. clone the repository: `git clone https://github.com/uclmr/stat-nlp-book.git; cd stat-nlp-book`
+2. update repository submodules (wolfe & moro): `git submodule update --init --recursive`
+3. compile the book: `sbt compile`
+4. compile wolfe, and publish it in your local ivy repository: `cd wolfe; sbt compile; sbt publish-local; cd ..`
+(You may have to delete the wolfe directory in the ivy cache to make sure you get the newest version.)
+5. move conf files around: `cp moro/conf/application-statnlpbook.conf moro/conf/application.conf`
+6. run the book: `cd moro; git checkout master; sbt run`
+(You might me bugged by your firewall here. Set it to allow the application. This step might take some time depending on your computer performance. Do not panic over warning messages :) )
 
 Maybe (most definitely?) you'll need to clone htmlgen and scalaplot and install them to a local repository by running
 
@@ -40,7 +26,7 @@ To download the OHHLA files
 
 ## Browse the Book
 
-The COMPGI19 entry point is [here](http://localhost:9000/template/statnlpbook/04_compgi19/02_overview).
+Once you have the book running (step 6), proceed to the COMPGI19 entry point [here](http://localhost:9000/template/statnlpbook/04_compgi19/02_overview).
 
 ## Live editing in IntelliJ
 
