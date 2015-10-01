@@ -4,16 +4,21 @@
 
 Setup the project specific configuration file 
 
-Initialize sub-modules (1), compile the project (2) and wolfe (3), setup the project specific configuration file (4) and run moro (5-6).
+Clone the repository (1), 
+Initialize sub-modules (wolfe & moro) (2), compile the project (3) and compile wolfe, and publish it to your local ivy repository (4), setup the project specific configuration file (5) and run moro (6).
 
-1. clone the repository: `git clone https://github.com/uclmr/stat-nlp-book.git; cd stat-nlp-book`
-2. update repository submodules (wolfe & moro): `git submodule update --init --recursive`
-3. compile the book: `sbt compile`
-4. compile wolfe, and publish it in your local ivy repository: `cd wolfe; sbt compile; sbt publish-local; cd ..`
-(You may have to delete the wolfe directory in the ivy cache to make sure you get the newest version.)
-5. move conf files around: `cp moro/conf/application-statnlpbook.conf moro/conf/application.conf`
-6. run the book: `cd moro; git checkout master; sbt run`
-(You might me bugged by your firewall here. Set it to allow the application. This step might take some time depending on your computer performance. Do not panic over warning messages :) )
+1. `git clone https://github.com/uclmr/stat-nlp-book.git; cd stat-nlp-book`
+2. `git submodule update --init --recursive`
+3. `sbt compile`
+4. `cd wolfe; sbt compile; sbt publish-local; cd ..`
+5. `cp moro/conf/application-statnlpbook.conf moro/conf/application.conf`
+6. `cd moro; git checkout master; sbt run`
+
+Remarks:
+- step 4 - You may have to delete the wolfe directory in the ivy cache to make sure you get the newest version.
+- step 6 - You might me bugged by your firewall here. Set it to allow the application. This step might take some time depending on your computer performance. Do not panic over warning messages :)
+
+
 
 Maybe (most definitely?) you'll need to clone htmlgen and scalaplot and install them to a local repository by running
 
