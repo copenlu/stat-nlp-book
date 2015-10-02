@@ -5,7 +5,7 @@ import java.util.UUID
 import ml.wolfe.nlp.syntax.{ConstituentTree, NonterminalNode, PreterminalNode}
 import ml.wolfe.nlp.{Document, Sentence}
 import org.sameersingh.htmlgen.{HTML, RawHTML}
-import org.sameersingh.scalaplot.{XYChart, XYChartImplicits, XYData, XYSeries}
+import org.sameersingh.scalaplot._
 
 import scala.collection.mutable.ArrayBuffer
 import scala.xml.PrettyPrinter
@@ -20,6 +20,15 @@ object Plotter {
 
   def lineplot(chart: Iterable[(Double, Double)]): HTML = {
     lineplot(new XYData(XYChartImplicits.pairSeqToSeries(chart)))
+  }
+
+  def lineplot(data: Iterable[(Double, Double)],
+               logX:Boolean = false, logY:Boolean = false): HTML = {
+    val xyData = new XYData(XYChartImplicits.pairSeqToSeries(data))
+    val xAxis = GlobalImplicits.Axis(log = logX)
+    val yAxis = GlobalImplicits.Axis(log = logY)
+    val chart = XYChartImplicits.xyChart(xyData,x = xAxis, y = yAxis)
+    lineplot(chart)
   }
 
   def lineplot(chart: XYData): HTML = {
@@ -109,7 +118,9 @@ object Plotter {
        |chart.yAxis     //Chart y-axis settings
        |.axisLabel("${ylabel(chart.y.label)}")
        |.tickFormat(${if (chart.y.isLog) "logFormat" else "linearFormat"});
+       |
        | ${if (chart.y.isLog) "chart.yScale(d3.scale.log());" else ""}
+       | ${if (chart.x.isLog) "chart.xScale(d3.scale.log());" else ""}
        |
        |/* Done setting the chart up? Time to render it!*/
        |var myData = $data;   //You need data...
