@@ -13,25 +13,26 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\n<div class=\"newslide\"></div>\n### Fool a <a href=\"text-processing.com/demo/sentiment/\">Sentiment Analyzer</a>\n\n<div class=\"newslide\"></div>\n### Fool a <a href=\"translate.google.com/?hl=en&tab=TT\">Machine Translator</a>\n\n<div class=\"newslide\"></div>\n### Ambiguity Everywhere\n\n",
+      "code" : "\n<div class=\"newslide\"></div>\n### Fool a <a href=\"text-processing.com/demo/sentiment/\">Sentiment Analyzer</a>\n\n<div class=\"newslide\"></div>\n### Fool a <a href=\"translate.google.com/?hl=en&tab=TT\">Machine Translator</a>\n\n<div class=\"newslide\"></div>\n### <a href=\"https://books.google.com/ngrams\">Count</a> N-grams\n\n<div class=\"newslide\"></div>\n### Ambiguity Everywhere\n\n",
       "extraFields" : { }
     }
   }, {
-    "id" : 3,
+    "id" : 2,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "import org.sameersingh.htmlgen.Custom._\nCarousel(\n    \"\" -> \"Fed <b>raises</b> interest rates 0.5% in effort to control inflation\", \n    \"\" -> \"Fed raises <b>interest</b> rates 0.5% in effort to control inflation\",\n    \"\" -> \"Fed raises interest <b>rates</b> 0.5% in effort to control inflation\")",
       "extraFields" : {
-        "showEditor" : "false"
+        "showEditor" : "false",
+        "aggregatedCells" : "[]"
       }
     }
   }, {
-    "id" : 2,
+    "id" : 3,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\n\n\n\n<div class=\"newslide\"></div>\nQuestions?\n\n",
+      "code" : "<div class=\"newslide\"></div>\n### Syllabus\n\nThis course covers three core dimensions of NLP:\n\n* Tasks (tokenization, language models, machine translations etc.)\n* Methods (Maximum Likelihood, EM algorithm, dynamic programming etc.)\n* Implementations (document representations, efficient feature extraction etc.)\n\nThe lectures, and the structure of the course, will be driven by tasks.\n\n<div class=\"newslide\"></div>\n### NLP Tasks\n\n* Tokenization, Segmentation\n* Language Modelling\n* Machine Translation\n* Syntactic Parsing\n* Document Classification\n* Information Extraction\n* Topic Models and Word Embeddings\n\n<div class=\"newslide\"></div>\nQuestions?\n\n",
       "extraFields" : { }
     }
   } ],
