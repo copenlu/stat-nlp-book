@@ -98,6 +98,8 @@ object Plotter {
        | $style
        |</style>
        |<script>
+       |console.log("Clearing Plotter");
+       |$$('#$id svg').empty();
        |
        |/*These lines are all chart setup.  Pick and choose which chart features you want to utilize. */
        |nv.addGraph(function() {
