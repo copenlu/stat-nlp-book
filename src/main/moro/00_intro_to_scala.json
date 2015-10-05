@@ -37,7 +37,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n### Expressions\n\nAlmost everything in Scala is an expression, for example:\n\nnumerical calulations...",
+      "code" : "<div class=\"newslide\"></div>\n### Expressions\n\nAlmost everything in Scala is an expression, for example:\n\nnumerical calculations...",
       "extraFields" : { }
     }
   }, {
