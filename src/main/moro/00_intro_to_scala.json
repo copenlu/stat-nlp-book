@@ -25,6 +25,14 @@
       "extraFields" : { }
     }
   }, {
+    "id" : 146,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## The Simple Build Tool (SBT)\n\nGet it [here](http://www.scala-sbt.org/): http://www.scala-sbt.org/\n\n- A build tool (like Maven)\n- Needed for compiling the assignment code",
+      "extraFields" : { }
+    }
+  }, {
     "id" : 145,
     "compiler" : "markdown",
     "input" : {
