@@ -1,27 +1,11 @@
 {
   "name" : "Scala Crash Course",
   "cells" : [ {
-    "id" : 0,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "overview",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 1,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Introduction\n\nThis short Scala crash course is based on [Scala School by Twitter](https://twitter.github.io/scala_school/).\n\nWe chose Scala as the language for the course (as well as the language we develop our systems in) because of several reasons, some of which are:\n\n* Increasingly used in NLP and ML, but don't take our word for it, take a look at the code of some of the world's leading labs: [UCL Machine Reading group](https://github.com/uclmr/) :), [Berkeley NLP Group](http://nlp.cs.berkeley.edu/) and [another interesting ML project at UC Berkeley](http://bid2.berkeley.edu/bid-data-project/) , [University of Washington](http://knowitall.github.io/openie/), [Allen Institute for Artificial Intelligence](https://github.com/allenai), etc.\n* Expressive - Scala offers first class functions, and closures, and effectively enables you to quickly rewrite pseudocode or math models to code\n* Concise - it offers type inference, and is on the quest to eliminate boilerplate code\n* Java interoperability - you can reuse your favorite Java libraries! This comes in VERY handy.\n* bear in mind that Scala is not Java on steroids :) it is just a different, object-oriented functional programming language (cannot stress the functional part enough)",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 2,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "installing",
+      "code" : "<div class=\"newslide\"></div>\n## Introduction\n\nThis short Scala crash course is based on [Scala School by Twitter](https://twitter.github.io/scala_school/).\n\nWe chose Scala as the language for the course (as well as the language we develop our systems in) because of several reasons, some of which are:\n\n* Increasingly used in NLP and ML, but don't take our word for it, take a look at the code of some of the world's leading labs: [UCL Machine Reading group](https://github.com/uclmr/) :), [Berkeley NLP Group](http://nlp.cs.berkeley.edu/) and [another interesting ML project at UC Berkeley](http://bid2.berkeley.edu/bid-data-project/) , [University of Washington](http://knowitall.github.io/openie/), [Allen Institute for Artificial Intelligence](https://github.com/allenai), etc.\n* Expressive - Scala offers first class functions, and closures, and effectively enables you to quickly rewrite pseudocode or math models to code\n* Concise - it offers type inference, and is on the quest to eliminate boilerplate code\n* Java interoperability - you can reuse your favorite Java libraries! This comes in VERY handy.\n* bear in mind that Scala is not Java on steroids :) it is just a different, object-oriented functional programming language (cannot stress the functional part enough)",
       "extraFields" : { }
     }
   }, {
@@ -29,15 +13,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Installing scala\nIn order to install Scala, please follow [these instructions](http://www.scala-lang.org/download/install.html).\n\nStarting the interpreter\n\nProgramming in IntelliJ",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 4,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "basics",
+      "code" : "<div class=\"newslide\"></div>\n## Installing scala\nIn order to install Scala, please follow [these instructions](http://www.scala-lang.org/download/install.html).\n\nStarting the interpreter\n\nProgramming in IntelliJ",
       "extraFields" : { }
     }
   }, {
@@ -45,15 +21,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Scala basics\n\nThis part of the book concerns the basics of Scala, a quick crash-course of Scala which you will need in order to understand this book, and be able to code up your assignments. All sorts of feedback are welcome and highly appreciated!\n\nYou can run these commands either in IntelliJ, or by running\n\n`sbt console`\n\nor\n\n`scala`\n\nin your command line, and thus entering Scala's REPL (Read-Evaluate-Print Loop) interpreter.",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 6,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "expressions",
+      "code" : "<div class=\"newslide\"></div>\n## Scala basics\n\nThis part of the book concerns the basics of Scala, a quick crash-course of Scala which you will need in order to understand this book, and be able to code up your assignments. All sorts of feedback are welcome and highly appreciated!\n\nYou can run these commands either in IntelliJ, or by running\n\n`sbt console`\n\nor\n\n`scala`\n\nin your command line, and thus entering Scala's REPL (Read-Evaluate-Print Loop) interpreter.",
       "extraFields" : { }
     }
   }, {
@@ -61,7 +29,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Expressions\n\nAlmost everything in Scala is an expression, for example:\n\nnumerical calulations...",
+      "code" : "<div class=\"newslide\"></div>\n### Expressions\n\nAlmost everything in Scala is an expression, for example:\n\nnumerical calulations...",
       "extraFields" : { }
     }
   }, {
@@ -115,7 +83,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Values and variables\n\nScala suports values and variables. Values are technically constants, and they cannot be changed (they are immutable), as opposed to variables which can (are mutable). Try removing the commented piece of code to verify that:",
+      "code" : "<div class=\"newslide\"></div>\n### Values and variables\n\nScala suports values and variables. Values are technically constants, and they cannot be changed (they are immutable), as opposed to variables which can (are mutable). Try removing the commented piece of code to verify that:",
       "extraFields" : { }
     }
   }, {
@@ -147,19 +115,11 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 17,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "functions",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 18,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Functions\n\nIn Scala, functions are objects you create with the keyword `def`, e.g.:",
+      "code" : "<div class=\"newslide\"></div>\n### Functions\n\nIn Scala, functions are objects you create with the keyword `def`, e.g.:",
       "extraFields" : { }
     }
   }, {
@@ -191,19 +151,11 @@
       }
     }
   }, {
-    "id" : 22,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "morefunctions",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 23,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### More on functions\n\nScala enables you to use a couple of other very useful constructs, like:\n\nanonymous functions, or unnamed functions:",
+      "code" : "<div class=\"newslide\"></div>\n\n### More on functions\n\nScala enables you to use a couple of other very useful constructs, like:\n\nanonymous functions, or unnamed functions:",
       "extraFields" : { }
     }
   }, {
@@ -271,19 +223,11 @@
       }
     }
   }, {
-    "id" : 31,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "patternmatching",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 32,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Pattern Matching\n\nPattern matching is the [second most](http://www.tutorialspoint.com/scala/scala_pattern_matching.htm) used feature of scala. It is a general pattern matching mechanism which allows you to match on any kind of data.\n\nLet's take a look at a small example:",
+      "code" : "<div class=\"newslide\"></div>\n\n### Pattern Matching\n\nPattern matching is the [second most](http://www.tutorialspoint.com/scala/scala_pattern_matching.htm) used feature of scala. It is a general pattern matching mechanism which allows you to match on any kind of data.\n\nLet's take a look at a small example:",
       "extraFields" : { }
     }
   }, {
@@ -297,19 +241,11 @@
       }
     }
   }, {
-    "id" : 34,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "_ wildcard\n",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 35,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "We can use the pattern matching syntax to create full-functions, piecewise functions, and partial functions.\n\nFor example, you can define a factorial function with pattern matching like so",
+      "code" : "<div class=\"newslide\"></div>\n\nWe can use the pattern matching syntax to create full-functions, piecewise functions, and partial functions.\n\nFor example, you can define a factorial function with pattern matching like so",
       "extraFields" : { }
     }
   }, {
@@ -345,7 +281,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\n### Pattern matching with Case classes\n\nCase classes are regular Scala classes wtich export their constructor parameters and enable you to recursively decompose them with pattern matching.\n\nFor example, let's build a small tree-like structure in Scala with case classes, and build a specific instance of a tree:",
+      "code" : "<div class=\"newslide\"></div>\n\n### Pattern matching with Case classes\n\nCase classes are regular Scala classes wtich export their constructor parameters and enable you to recursively decompose them with pattern matching.\n\nFor example, let's build a small tree-like structure in Scala with case classes, and build a specific instance of a tree:",
       "extraFields" : { }
     }
   }, {
@@ -385,19 +321,11 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 44,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "exceptions",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 45,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Exceptions\n* Try-catch-final + pattern matching\n<br><br>",
+      "code" : "<div class=\"newslide\"></div>\n\n## Exceptions\n* Try-catch-final + pattern matching\n<br><br>",
       "extraFields" : { }
     }
   }, {
@@ -411,19 +339,11 @@
       }
     }
   }, {
-    "id" : 47,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "placeholder",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 48,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "# ???",
+      "code" : "<div class=\"newslide\"></div>\n\n# ???",
       "extraFields" : { }
     }
   }, {
@@ -437,19 +357,11 @@
       }
     }
   }, {
-    "id" : 50,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "collections",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 51,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "## Collections\n",
+      "code" : "<div class=\"newslide\"></div>\n\n## Collections\n",
       "extraFields" : { }
     }
   }, {
@@ -465,7 +377,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Lists\n\nScala lists are an ubiquitous data structure, in its essence a simple [linked lists](https://en.wikipedia.org/wiki/Linked_list) ([#ScalaDoc](http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List)), coming in both immutable and mutable flavor.\n\nLet's first construct a simple list:",
+      "code" : "<div class=\"newslide\"></div>\n\n### Lists\n\nScala lists are an ubiquitous data structure, in its essence a simple [linked lists](https://en.wikipedia.org/wiki/Linked_list) ([#ScalaDoc](http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List)), coming in both immutable and mutable flavor.\n\nLet's first construct a simple list:",
       "extraFields" : { }
     }
   }, {
@@ -581,7 +493,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Sets\n\nSets are data structures which store elements without an order and repetition.\n\nAn example of a set is given here:",
+      "code" : "<div class=\"newslide\"></div>\n\n### Sets\n\nSets are data structures which store elements without an order and repetition.\n\nAn example of a set is given here:",
       "extraFields" : { }
     }
   }, {
@@ -649,19 +561,11 @@
       }
     }
   }, {
-    "id" : 74,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "maps",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 75,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Maps\n\nA map (also known as associative array or dictionary) is a collection of key-value pairs, such that each key appears exactly only once.",
+      "code" : "<div class=\"newslide\"></div>\n\n### Maps\n\nA map (also known as associative array or dictionary) is a collection of key-value pairs, such that each key appears exactly only once.",
       "extraFields" : { }
     }
   }, {
@@ -711,19 +615,11 @@
       }
     }
   }, {
-    "id" : 81,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "tuples",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 82,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Tuples\n\nTuples are fixed-length lists in Scala (length up to 22 in Scala), denoted in a specific format:",
+      "code" : "<div class=\"newslide\"></div>\n\n### Tuples\n\nTuples are fixed-length lists in Scala (length up to 22 in Scala), denoted in a specific format:",
       "extraFields" : { }
     }
   }, {
@@ -773,19 +669,11 @@
       }
     }
   }, {
-    "id" : 88,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "option",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 89,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Option\n\nOptions are containers for optional values, which can contain values `Some(X)`, if a value is present, and `None` if the value is missing. They are very useful to eliminate using `null` as a missing value.\n\nIn the following example, our map `lemmas` contains a method `get` which returns an optional value, whose specific value can then be accessed with a method `get`:",
+      "code" : "<div class=\"newslide\"></div>\n\n### Option\n\nOptions are containers for optional values, which can contain values `Some(X)`, if a value is present, and `None` if the value is missing. They are very useful to eliminate using `null` as a missing value.\n\nIn the following example, our map `lemmas` contains a method `get` which returns an optional value, whose specific value can then be accessed with a method `get`:",
       "extraFields" : { }
     }
   }, {
@@ -835,27 +723,11 @@
       }
     }
   }, {
-    "id" : 95,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "collections",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 96,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "### Important methods on Collections",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 97,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "map",
+      "code" : "<div class=\"newslide\"></div>\n\n### Important methods on Collections",
       "extraFields" : { }
     }
   }, {
@@ -863,7 +735,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### map\n\nThe map method is one of the most frequently used methods. This method simply applies a specific function on the elements of a collection. In our case, having two sentences in a list:",
+      "code" : "<div class=\"newslide\"></div>\n\n#### map\n\nThe map method is one of the most frequently used methods. This method simply applies a specific function on the elements of a collection. In our case, having two sentences in a list:",
       "extraFields" : { }
     }
   }, {
@@ -895,19 +767,11 @@
       }
     }
   }, {
-    "id" : 102,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "mapValues",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 103,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### mapValues",
+      "code" : "<div class=\"newslide\"></div>\n\n#### mapValues",
       "extraFields" : { }
     }
   }, {
@@ -919,19 +783,11 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 105,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "foreach",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 106,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### foreach\n\nAs opposed to map, which applies a function to each element of a collection, foreach calls a non-returning procedure over each element, and does not result in a new collection, as map does.\n\nSo, if we'd want to count the number of characters in given tokens, we'd do the following:",
+      "code" : "<div class=\"newslide\"></div>\n\n#### foreach\n\nAs opposed to map, which applies a function to each element of a collection, foreach calls a non-returning procedure over each element, and does not result in a new collection, as map does.\n\nSo, if we'd want to count the number of characters in given tokens, we'd do the following:",
       "extraFields" : { }
     }
   }, {
@@ -945,19 +801,11 @@
       }
     }
   }, {
-    "id" : 108,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "filter",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 109,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### filter",
+      "code" : "<div class=\"newslide\"></div>\n\n#### filter",
       "extraFields" : { }
     }
   }, {
@@ -971,35 +819,11 @@
       }
     }
   }, {
-    "id" : 111,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "fold",
-      "extraFields" : { }
-    }
-  }, {
     "id" : 112,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### groupBy",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 138,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "GroupBy method groups elements of the collection by a specific discriminator function, into key (the value of the descriminator function) and value (a list of all the elements of the starting collection which produce the same value of the descriminator function). Let's say you'd want to group our previously created tokens by their first character. That would be very easy with Scala:",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 136,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "tokens1.groupBy(_.charAt(0))",
+      "code" : "<div class=\"newslide\"></div>\n\n#### groupBy",
       "extraFields" : { }
     }
   }, {
@@ -1007,11 +831,27 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### maxBy",
+      "code" : "GroupBy method groups elements of the collection by a specific discriminator function, into key (the value of the descriminator function) and value (a list of all the elements of the starting collection which produce the same value of the descriminator function). Let's say you'd want to group our previously created tokens by their first character. That would be very easy with Scala:",
       "extraFields" : { }
     }
   }, {
-    "id" : 139,
+    "id" : 114,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "tokens1.groupBy(_.charAt(0))",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 115,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n\n#### maxBy",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 116,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1019,7 +859,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 140,
+    "id" : 117,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1027,15 +867,15 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 114,
+    "id" : 118,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### fold\n\nThe fold method comes in three similar flavours, fold, foldLeft and foldRight (check the differences between them [here](https://coderwall.com/p/4l73-a/scala-fold-foldleft-and-foldright)). In its essence, you can view these functions as iterators with an accumulator. Starting with a dedicated starting element, this function applies a function to a starting element and the first element. Then it applies the same function to the result and the second element, and so on... You can use, for example, foldLeft to again iterate through the token list and calculate total token lengths:",
+      "code" : "<div class=\"newslide\"></div>\n\n#### fold\n\nThe fold method comes in three similar flavours, fold, foldLeft and foldRight (check the differences between them [here](https://coderwall.com/p/4l73-a/scala-fold-foldleft-and-foldright)). In its essence, you can view these functions as iterators with an accumulator. Starting with a dedicated starting element, this function applies a function to a starting element and the first element. Then it applies the same function to the result and the second element, and so on... You can use, for example, foldLeft to again iterate through the token list and calculate total token lengths:",
       "extraFields" : { }
     }
   }, {
-    "id" : 115,
+    "id" : 119,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1045,23 +885,15 @@
       }
     }
   }, {
-    "id" : 116,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "flatten",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 117,
+    "id" : 121,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### flatten\n\nFlatten, as its name states, flattens a collection of collections into a single collection:",
+      "code" : "<div class=\"newslide\"></div>\n\n#### flatten\n\nFlatten, as its name states, flattens a collection of collections into a single collection:",
       "extraFields" : { }
     }
   }, {
-    "id" : 118,
+    "id" : 122,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1071,23 +903,15 @@
       }
     }
   }, {
-    "id" : 119,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "flatmap",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 120,
+    "id" : 124,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### flatMap",
+      "code" : "<div class=\"newslide\"></div>\n\n#### flatMap",
       "extraFields" : { }
     }
   }, {
-    "id" : 121,
+    "id" : 125,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1097,23 +921,15 @@
       }
     }
   }, {
-    "id" : 122,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "compose",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 123,
+    "id" : 127,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### compose",
+      "code" : "<div class=\"newslide\"></div>\n\n#### compose",
       "extraFields" : { }
     }
   }, {
-    "id" : 124,
+    "id" : 128,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1123,23 +939,15 @@
       }
     }
   }, {
-    "id" : 125,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "andThen",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 126,
+    "id" : 130,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### andThen",
+      "code" : "<div class=\"newslide\"></div>\n\n#### andThen",
       "extraFields" : { }
     }
   }, {
-    "id" : 127,
+    "id" : 131,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1149,23 +957,15 @@
       }
     }
   }, {
-    "id" : 128,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "pipeline",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 129,
+    "id" : 133,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "##### NLP Pipeline with andThen",
+      "code" : "<div class=\"newslide\"></div>\n\n##### NLP Pipeline with andThen",
       "extraFields" : { }
     }
   }, {
-    "id" : 130,
+    "id" : 134,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1175,23 +975,15 @@
       }
     }
   }, {
-    "id" : 131,
-    "compiler" : "section",
-    "input" : {
-      "sessionId" : null,
-      "code" : "forcomprehension",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 132,
+    "id" : 136,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### for comprehension",
+      "code" : "<div class=\"newslide\"></div>\n\n#### for comprehension",
       "extraFields" : { }
     }
   }, {
-    "id" : 133,
+    "id" : 137,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1201,7 +993,7 @@
       }
     }
   }, {
-    "id" : 134,
+    "id" : 138,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1211,7 +1003,7 @@
       }
     }
   }, {
-    "id" : 135,
+    "id" : 139,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
