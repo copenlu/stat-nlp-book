@@ -386,7 +386,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Let us reformulate the laplace LM using adjusted counts. Note that we since we have histories with count 0, we do need to increase the original denominator by a small \\\\(\\epsilon\\\\) to avoid division by zero. \n$$\n\\begin{split}\n\\counts{\\train,\\alpha}{h,w} &= \\param^{\\alpha}_{w,h} \\cdot (\\counts{\\train}{h} +  \\epsilon)\\\\\\\\\n\\counts{\\train,\\alpha}{h} &= \\counts{\\train}{h} + \\epsilon\n\\end{split}\n$$",
+      "code" : "<div class=\"newslide\"></div>\n\nLet us reformulate the laplace LM using adjusted counts. Note that we since we have histories with count 0, we do need to increase the original denominator by a small \\\\(\\epsilon\\\\) to avoid division by zero. \n$$\n\\begin{split}\n\\counts{\\train,\\alpha}{h,w} &= \\param^{\\alpha}_{w,h} \\cdot (\\counts{\\train}{h} +  \\epsilon)\\\\\\\\\n\\counts{\\train,\\alpha}{h} &= \\counts{\\train}{h} + \\epsilon\n\\end{split}\n$$\n<div class=\"newslide\"></div>",
       "extraFields" : { }
     }
   }, {
@@ -404,7 +404,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "We see above that for high frequency words the absolute counts are altered quite substantially. This is unfortunate because for high frequency words we would expect the counts to be relatively accurate. Can we test more generally wether our adjusted counts are sensible? \n\nOne option is to compare the adjusted counts to average counts in a held-out set. For example, for words of count 0 in the training set, how does their average count in the held-out set compare to their adjusted count in the smoothed model?       ",
+      "code" : "<div class=\"newslide\"></div>\nWe see above that for high frequency words the absolute counts are altered quite substantially. This is unfortunate because for high frequency words we would expect the counts to be relatively accurate. Can we test more generally wether our adjusted counts are sensible? \n\n<div class=\"newslide\"></div>\nOne option is to compare the adjusted counts to average counts in a held-out set. For example, for words of count 0 in the training set, how does their average count in the held-out set compare to their adjusted count in the smoothed model?       ",
       "extraFields" : { }
     }
   }, {
@@ -422,7 +422,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### Interpolation\nFor a given context the smoothing methods discussed above shift mass uniformly across the words that haven't been seen in this context. This makes sense when the words are not in the vocabularly. However, when words are in the vocabularly but just have not been seen in the given context, we can do better because we can leverage statistics about the word from other contexts. In particular, we can *back-off* to the statistics of \\\\(n-1\\\\) grams. ",
+      "code" : "<div class=\"newslide\"></div>\n#### Interpolation\nFor a given context the smoothing methods discussed above shift mass uniformly across the words that haven't been seen in this context. This makes sense when the words are not in the vocabularly. However, when words are in the vocabularly but just have not been seen in the given context, we can do better because we can leverage statistics about the word from other contexts. In particular, we can *back-off* to the statistics of \\\\(n-1\\\\) grams. ",
       "extraFields" : { }
     }
   }, {
@@ -440,7 +440,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "A simple technique to use the \\\\(n-1\\\\) gram statistics is interpolation. Here we generally compose the probability of a word as the weighted sum of the probability of an \\\\(n\\\\)-gram model and a back-off \\\\(n-1\\\\) models: \n\n$$\n\\prob(w_i|w_{i-n},\\ldots,w_{i-1}) = \\alpha \\cdot \\prob(w_i|w_{i-n},\\ldots,w_{i-1}) + (1 - \\alpha) \\cdot \\prob(w_i|w_{i-n+1},\\ldots,w_{i-1})\n$$",
+      "code" : "<div class=\"newslide\"></div>\nA simple technique to use the \\\\(n-1\\\\) gram statistics is interpolation. Here we generally compose the probability of a word as the weighted sum of the probability of an \\\\(n\\\\)-gram model and a back-off \\\\(n-1\\\\) models: \n\n$$\n\\prob(w_i|w_{i-n},\\ldots,w_{i-1}) = \\alpha \\cdot \\prob(w_i|w_{i-n},\\ldots,w_{i-1}) + (1 - \\alpha) \\cdot \\prob(w_i|w_{i-n+1},\\ldots,w_{i-1})\n$$\n\n<div class=\"newslide\"></div>",
       "extraFields" : { }
     }
   }, {
@@ -459,7 +459,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Let us interpolate between a bigram and uniform language model, varying the interpolation parameter \\\\(\\alpha\\\\).\n",
+      "code" : "<div class=\"newslide\"></div>\nLet us interpolate between a bigram and uniform language model, varying the interpolation parameter \\\\(\\alpha\\\\).\n",
       "extraFields" : { }
     }
   }, {
@@ -478,7 +478,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "#### Backoff \nInstead of combining probabilities for all words given a context, it makes sense to back-off only when no counts for a given event are available and rely on available counts where possible. \n\nA particularly simple, if not to say stupid, backoff method is [Stupid Backoff](http://www.aclweb.org/anthology/D07-1090.pdf). Let \\\\(w\\\\) be a word and \\\\(h_{n}\\\\) be an n-gram of length \\\\(n\\\\):  \n\n\\begin{align}\n\\prob_{\\mbox{Stupid}}(w|h_n) = \n\\begin{cases}\n\\frac{\\counts{\\train}{h_n,w}}{\\counts{\\train}{h_n}}  &= \\mbox{if }\\counts{\\train}{h_n,w} > 0 \\\\\\\\\n\\prob_{\\mbox{Stupid}}(w|h_{n-1}) & \\mbox{otherwise}\n\\end{cases}\n\\end{align}\n",
+      "code" : "<div class=\"newslide\"></div>\n#### Backoff \nInstead of combining probabilities for all words given a context, it makes sense to back-off only when no counts for a given event are available and rely on available counts where possible. \n\n<div class=\"newslide\"></div>\nA particularly simple, if not to say stupid, backoff method is [Stupid Backoff](http://www.aclweb.org/anthology/D07-1090.pdf). Let \\\\(w\\\\) be a word and \\\\(h_{n}\\\\) be an n-gram of length \\\\(n\\\\):  \n\n\\begin{align}\n\\prob_{\\mbox{Stupid}}(w|h_n) = \n\\begin{cases}\n\\frac{\\counts{\\train}{h_n,w}}{\\counts{\\train}{h_n}}  &= \\mbox{if }\\counts{\\train}{h_n,w} > 0 \\\\\\\\\n\\prob_{\\mbox{Stupid}}(w|h_{n-1}) & \\mbox{otherwise}\n\\end{cases}\n\\end{align}\n\n<div class=\"newslide\"></div>",
       "extraFields" : { }
     }
   }, {
@@ -497,7 +497,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "It turns out that the Stupid LM is very effective when it comes to *extrinsic* evaluations, but it doesn't represent a probability distribution which makes perplexity values meaningless. The code below illustrates the problem.",
+      "code" : "<div class=\"newslide\"></div>\nIt turns out that the Stupid LM is very effective when it comes to *extrinsic* evaluations, but it doesn't represent a probability distribution which makes perplexity values meaningless. The code below illustrates the problem.",
       "extraFields" : { }
     }
   }, {
@@ -515,7 +515,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "The are several ways to overcome this problem, e.g. the Katz-Backoff method. We refer to other material for a deeper discussion of these.\n\n<div class=\"exercise\">\n  <div class=\"exname\">Exercise 3</div>\n  <div class=\"extext\">Implement a version of the stupid language model that provides probabilities summing up to 1.</div>\n</div>\n\n### Background Reading\n\n* Jurafsky & Martin, Speech and Language Processing: Chapter 4, N-Grams.\n* Bill MacCartney, Stanford NLP Lunch Tutorial: [Smoothing](http://nlp.stanford.edu/~wcmac/papers/20050421-smoothing-tutorial.pdf)",
+      "code" : "<div class=\"newslide\"></div>\nThe are several ways to overcome this problem, e.g. the Katz-Backoff method. We refer to other material for a deeper discussion of these.\n\n<div class=\"exercise\">\n  <div class=\"exname\">Exercise 3</div>\n  <div class=\"extext\">Develop and implement a version of the stupid language model that provides probabilities summing up to 1.</div>\n</div>\n\n<div class=\"newslide\"></div>\n### Background Reading\n\n* Jurafsky & Martin, Speech and Language Processing: Chapter 4, N-Grams.\n* Bill MacCartney, Stanford NLP Lunch Tutorial: [Smoothing](http://nlp.stanford.edu/~wcmac/papers/20050421-smoothing-tutorial.pdf)",
       "extraFields" : { }
     }
   } ],
