@@ -39,6 +39,7 @@ To download the OHHLA files
     scripts/download_ohhla j_live
 
 ## Browse the Book
+Everytime you want to run the book, you have to go to the `stat-nlp-book/moro` directory and call `sbt run`.
 
 Once you have the book running (step 6), proceed to the COMPGI19 entry point [here](http://localhost:9000/template/statnlpbook/04_compgi19/02_overview).
 
