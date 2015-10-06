@@ -23,9 +23,15 @@ Remarks:
 
 
 
-Maybe (most definitely?) you'll need to clone htmlgen and scalaplot and install them to a local repository by running
+Maybe (most definitely?) you'll need to clone htmlgen and scalaplot:
 
+    git clone https://github.com/sameersingh/scalaplot.git
+    git clone https://github.com/sameersingh/htmlgen.git
+    
+and install them to a local repository by running (in each directory):
+    
     mvn clean install -Dgpg.skip=true
+    
 
 ### Download Data
 To download the OHHLA files
