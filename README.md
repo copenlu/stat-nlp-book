@@ -49,5 +49,11 @@ Once you have the book running (step 6), proceed to the COMPGI19 entry point [he
 You can write code in IntelliJ and access it from moro after you compile it (either through IntelliJ or sbt)
 
 
+## Contact your TAs
+[George Spithourakis](mailto:g.spithourakis.12@ucl.ac.uk)
 
+[Johannes Welbl](mailto:johannes.welbl.14@ucl.ac.uk)
 
+[Tim Rocktäschel](mailto:t.rocktaschel@cs.ucl.ac.uk)
+
+[Matko Bošnjak](mailto:matko.bosnjak@cs.ucl.ac.uk)
