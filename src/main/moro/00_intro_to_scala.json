@@ -1,7 +1,7 @@
 {
   "name" : "Scala Crash Course",
   "cells" : [ {
-    "id" : 1,
+    "id" : 0,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -9,7 +9,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 3,
+    "id" : 1,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -17,7 +17,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 5,
+    "id" : 2,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -25,7 +25,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 7,
+    "id" : 3,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -33,7 +33,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 8,
+    "id" : 4,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -43,7 +43,7 @@
       }
     }
   }, {
-    "id" : 9,
+    "id" : 5,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -51,7 +51,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 10,
+    "id" : 6,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -61,7 +61,7 @@
       }
     }
   }, {
-    "id" : 11,
+    "id" : 7,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -69,7 +69,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 12,
+    "id" : 8,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -79,7 +79,7 @@
       }
     }
   }, {
-    "id" : 13,
+    "id" : 9,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -87,7 +87,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 14,
+    "id" : 10,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -97,7 +97,7 @@
       }
     }
   }, {
-    "id" : 15,
+    "id" : 11,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -107,7 +107,7 @@
       }
     }
   }, {
-    "id" : 16,
+    "id" : 12,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -115,7 +115,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 18,
+    "id" : 13,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -123,7 +123,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 19,
+    "id" : 14,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -133,7 +133,7 @@
       }
     }
   }, {
-    "id" : 20,
+    "id" : 15,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -141,7 +141,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 21,
+    "id" : 16,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -151,7 +151,7 @@
       }
     }
   }, {
-    "id" : 23,
+    "id" : 17,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -159,7 +159,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 24,
+    "id" : 18,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -169,7 +169,7 @@
       }
     }
   }, {
-    "id" : 25,
+    "id" : 19,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -177,7 +177,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 26,
+    "id" : 20,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -187,7 +187,7 @@
       }
     }
   }, {
-    "id" : 27,
+    "id" : 21,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -195,7 +195,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 28,
+    "id" : 22,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -205,7 +205,7 @@
       }
     }
   }, {
-    "id" : 29,
+    "id" : 23,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -213,7 +213,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 30,
+    "id" : 24,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -223,7 +223,7 @@
       }
     }
   }, {
-    "id" : 32,
+    "id" : 25,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -231,7 +231,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 33,
+    "id" : 26,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -241,7 +241,7 @@
       }
     }
   }, {
-    "id" : 35,
+    "id" : 27,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -249,7 +249,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 36,
+    "id" : 28,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -259,7 +259,7 @@
       }
     }
   }, {
-    "id" : 37,
+    "id" : 29,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -267,7 +267,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 38,
+    "id" : 30,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -277,7 +277,7 @@
       }
     }
   }, {
-    "id" : 39,
+    "id" : 31,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -285,7 +285,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 40,
+    "id" : 32,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -295,7 +295,7 @@
       }
     }
   }, {
-    "id" : 41,
+    "id" : 33,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -303,7 +303,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 42,
+    "id" : 34,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -313,7 +313,7 @@
       }
     }
   }, {
-    "id" : 43,
+    "id" : 35,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -321,7 +321,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 45,
+    "id" : 36,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -329,7 +329,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 46,
+    "id" : 37,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -339,7 +339,7 @@
       }
     }
   }, {
-    "id" : 48,
+    "id" : 38,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -347,7 +347,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 49,
+    "id" : 39,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -357,7 +357,7 @@
       }
     }
   }, {
-    "id" : 51,
+    "id" : 40,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -365,7 +365,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 52,
+    "id" : 41,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -373,7 +373,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 53,
+    "id" : 42,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -381,7 +381,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 54,
+    "id" : 43,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -391,7 +391,7 @@
       }
     }
   }, {
-    "id" : 55,
+    "id" : 44,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -399,7 +399,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 56,
+    "id" : 45,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -409,7 +409,7 @@
       }
     }
   }, {
-    "id" : 57,
+    "id" : 46,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -417,7 +417,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 58,
+    "id" : 47,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -427,7 +427,7 @@
       }
     }
   }, {
-    "id" : 59,
+    "id" : 48,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -435,7 +435,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 60,
+    "id" : 49,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -445,7 +445,7 @@
       }
     }
   }, {
-    "id" : 61,
+    "id" : 50,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -453,7 +453,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 62,
+    "id" : 51,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -463,7 +463,7 @@
       }
     }
   }, {
-    "id" : 63,
+    "id" : 52,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -471,7 +471,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 64,
+    "id" : 53,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -481,7 +481,7 @@
       }
     }
   }, {
-    "id" : 65,
+    "id" : 54,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -489,7 +489,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 66,
+    "id" : 55,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -497,7 +497,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 67,
+    "id" : 56,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -507,7 +507,7 @@
       }
     }
   }, {
-    "id" : 68,
+    "id" : 57,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -515,7 +515,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 69,
+    "id" : 58,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -525,7 +525,7 @@
       }
     }
   }, {
-    "id" : 70,
+    "id" : 59,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -533,7 +533,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 71,
+    "id" : 60,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -543,7 +543,7 @@
       }
     }
   }, {
-    "id" : 72,
+    "id" : 61,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -551,7 +551,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 73,
+    "id" : 62,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -561,7 +561,7 @@
       }
     }
   }, {
-    "id" : 75,
+    "id" : 63,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -569,7 +569,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 76,
+    "id" : 64,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -579,7 +579,7 @@
       }
     }
   }, {
-    "id" : 77,
+    "id" : 65,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -587,7 +587,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 78,
+    "id" : 66,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -597,7 +597,7 @@
       }
     }
   }, {
-    "id" : 79,
+    "id" : 67,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -605,7 +605,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 80,
+    "id" : 68,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -615,7 +615,7 @@
       }
     }
   }, {
-    "id" : 82,
+    "id" : 69,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -623,7 +623,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 83,
+    "id" : 70,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -633,7 +633,7 @@
       }
     }
   }, {
-    "id" : 84,
+    "id" : 71,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -641,7 +641,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 85,
+    "id" : 72,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -651,7 +651,7 @@
       }
     }
   }, {
-    "id" : 86,
+    "id" : 73,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -659,7 +659,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 87,
+    "id" : 74,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -669,7 +669,7 @@
       }
     }
   }, {
-    "id" : 89,
+    "id" : 75,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -677,7 +677,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 90,
+    "id" : 76,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -687,7 +687,7 @@
       }
     }
   }, {
-    "id" : 91,
+    "id" : 77,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -695,7 +695,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 92,
+    "id" : 78,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -705,7 +705,7 @@
       }
     }
   }, {
-    "id" : 93,
+    "id" : 79,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -713,7 +713,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 94,
+    "id" : 80,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -723,7 +723,7 @@
       }
     }
   }, {
-    "id" : 96,
+    "id" : 81,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -731,7 +731,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 98,
+    "id" : 82,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -739,7 +739,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 99,
+    "id" : 83,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -749,7 +749,7 @@
       }
     }
   }, {
-    "id" : 100,
+    "id" : 84,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -757,13 +757,163 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 101,
+    "id" : 85,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "  def dyingHAL(string: String) = {\n    string.toCharArray.map(c => {\n      val p = math.random\n      if (p > .3) c.toLower\n      else if (p > .05) c.toUpper\n      else '-'\n    }).mkString\n  }\n  sentences.map(dyingHAL).mkString(\" \")",
+      "code" : "  def dyingHAL(string: String) = {\n    string.toCharArray.map(c => {\n      val p = math.random\n      if (p > .3) c.toLower\n      else if (p > .05) c.toUpper\n      else '-'\n    }).mkString\n  }\n  \n  sentences.map(dyingHAL).mkString(\" \")",
       "extraFields" : {
         "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\"]"
+      }
+    }
+  }, {
+    "id" : 86,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n\nLet's do a short exercise through which we'll showcase the rest of the functions. Given a text:",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 87,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val text = \"It's not pining, it's passed on! This parrot is no more! It has ceased to be! It's expired and gone to meet its maker! This is a late parrot! It's a stiff! Bereft of life, it rests in peace! If you hadn't nailed it to the perch, it would be pushing up the daisies! It's rung down the curtain and joined the choir invisible! This is an ex-parrot!\";",
+      "extraFields" : {
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  \\n  sentences.map(dyingHAL).mkString(\\\" \\\")\"]"
+      }
+    }
+  }, {
+    "id" : 88,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Let's do some frequency analysis...",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 89,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n#### flatten\n\nFirst, we'll split the text into sentences over exclamations points. This is a very bad way to do sentence segmentation, but you will learn better ways very soon. Afterwards, we'll split the sentences into words.",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 90,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val sentences = text.split('!')\nval words = sentences.map(_.split(' ')).flatten.toList\nwords.take(10)",
+      "extraFields" : {
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  \\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"val text = \\\"It's not pining, it's passed on! This parrot is no more! It has ceased to be! It's expired and gone to meet its maker! This is a late parrot! It's a stiff! Bereft of life, it rests in peace! If you hadn't nailed it to the perch, it would be pushing up the daisies! It's rung down the curtain and joined the choir invisible! This is an ex-parrot!\\\";\"]"
+      }
+    }
+  }, {
+    "id" : 91,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "The first split creates an array of strings (our sentences). The split inside a map results in an array of arrays of strings (our words, in sentences). As we will take a look only at sentences, we need to flatten everything to a single array.",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 92,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n\n#### flatMap\n\nWe can do the same by invoking flatMap:",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 93,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val alternative = sentences.flatMap(_.split(' ')).toList\nalternative.take(10)",
+      "extraFields" : {
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  \\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"val text = \\\"It's not pining, it's passed on! This parrot is no more! It has ceased to be! It's expired and gone to meet its maker! This is a late parrot! It's a stiff! Bereft of life, it rests in peace! If you hadn't nailed it to the perch, it would be pushing up the daisies! It's rung down the curtain and joined the choir invisible! This is an ex-parrot!\\\";\",\"val sentences = text.split('!')\\nval words = sentences.map(_.split(' ')).flatten.toList\"]"
+      }
+    }
+  }, {
+    "id" : 94,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n\n#### filter\n\nSeeing how our bad sentence splitting (take care of your sentence splitting!) creates some empty strings, we need to filter them out:",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 95,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val filtered = words.filter(_.length > 0).map(_.toLowerCase)\n\n\nfiltered.toList.take(5)",
+      "extraFields" : {
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  \\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"val text = \\\"It's not pining, it's passed on! This parrot is no more! It has ceased to be! It's expired and gone to meet its maker! This is a late parrot! It's a stiff! Bereft of life, it rests in peace! If you hadn't nailed it to the perch, it would be pushing up the daisies! It's rung down the curtain and joined the choir invisible! This is an ex-parrot!\\\";\",\"val sentences = text.split('!')\\nval words = sentences.map(_.split(' ')).flatten.toList\",\"val alternative = sentences.flatMap(_.split(' ')).toList\\nalternative.take(10)\"]"
+      }
+    }
+  }, {
+    "id" : 96,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "We can also filter out other things, like stopwords:",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 97,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val stopwords = Set(\"the\", \"an\")\nwords.filter(x => x.length > 0 && !stopwords.contains(x)).toList.take(10)",
+      "extraFields" : {
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  \\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"val text = \\\"It's not pining, it's passed on! This parrot is no more! It has ceased to be! It's expired and gone to meet its maker! This is a late parrot! It's a stiff! Bereft of life, it rests in peace! If you hadn't nailed it to the perch, it would be pushing up the daisies! It's rung down the curtain and joined the choir invisible! This is an ex-parrot!\\\";\",\"val sentences = text.split('!')\\nval words = sentences.map(_.split(' ')).flatten.toList\",\"val alternative = sentences.flatMap(_.split(' ')).toList\\nalternative.take(10)\",\"val filtered = words.filter(_.length > 0).map(_.toLowerCase)\\n\\n\\nfiltered.toList.take(5)\"]"
+      }
+    }
+  }, {
+    "id" : 98,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n\n#### groupBy\n\ngroupBy method groups elements of the collection by a specific discriminator function, into key (the value of the descriminator function) and value (a list of all the elements of the starting collection which produce the same value of the descriminator function). We will group our words by themselves:",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 99,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val grouped = filtered.groupBy(x => x)",
+      "extraFields" : {
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  \\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"val text = \\\"It's not pining, it's passed on! This parrot is no more! It has ceased to be! It's expired and gone to meet its maker! This is a late parrot! It's a stiff! Bereft of life, it rests in peace! If you hadn't nailed it to the perch, it would be pushing up the daisies! It's rung down the curtain and joined the choir invisible! This is an ex-parrot!\\\";\",\"val sentences = text.split('!')\\nval words = sentences.map(_.split(' ')).flatten.toList\",\"val alternative = sentences.flatMap(_.split(' ')).toList\\nalternative.take(10)\",\"val filtered = words.filter(_.length > 0).map(_.toLowerCase)\\n\\n\\nfiltered.toList.take(5)\",\"val stopwords = Set(\\\"the\\\", \\\"an\\\")\\nwords.filter(x => x.length > 0 && !stopwords.contains(x)).toList.take(10)\"]"
+      }
+    }
+  }, {
+    "id" : 100,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Exercise: group words by their first letter",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 101,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n\n#### mapValues\n\nThe reason we grouped the words by themselves is to count them up easily. We will do that with the mapValues function which applies a desired counting function over the values of our group map.",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 102,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val occurrences = grouped.mapValues(x => x.length)",
+      "extraFields" : {
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  \\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"val text = \\\"It's not pining, it's passed on! This parrot is no more! It has ceased to be! It's expired and gone to meet its maker! This is a late parrot! It's a stiff! Bereft of life, it rests in peace! If you hadn't nailed it to the perch, it would be pushing up the daisies! It's rung down the curtain and joined the choir invisible! This is an ex-parrot!\\\";\",\"val sentences = text.split('!')\\nval words = sentences.map(_.split(' ')).flatten.toList\",\"sentences.flatMap(_.split(' '))\",\"val filtered = words.filter(_.length > 0).map(_.toLowerCase)\",\"val stopwords = Set(\\\"the\\\", \\\"an\\\")\\nwords.filter(x => x.length > 0 && !stopwords.contains(x)).toList.take(10)\",\"val grouped = filtered.groupBy(x => x)\"]"
       }
     }
   }, {
@@ -771,41 +921,55 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n#### mapValues",
+      "code" : "<div class=\"newslide\"></div>\n\n#### maxBy\n\nOut of curiosity, let's take a look at the most frequent word in our text by using maxBy:",
       "extraFields" : { }
     }
   }, {
     "id" : 104,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "occurrences.maxBy(_._2)",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 105,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "",
+      "code" : "<div class=\"newslide\"></div>\n\n#### fold\n\nThe fold method comes in three similar flavours, fold, foldLeft and foldRight (check the differences between them [here](https://coderwall.com/p/4l73-a/scala-fold-foldleft-and-foldright)). In its essence, you can view these functions as iterators with an accumulator. Starting with a dedicated starting element, this function applies a function to a starting element and the first element. Then it applies the same function to the result and the second element, and so on... You can use, for example, foldLeft to iterate through the map of occurrences and calculate the total number of words:",
       "extraFields" : { }
     }
   }, {
     "id" : 106,
-    "compiler" : "markdown",
+    "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n#### foreach\n\nAs opposed to map, which applies a function to each element of a collection, foreach calls a non-returning procedure over each element, and does not result in a new collection, as map does.\n\nSo, if we'd want to count the number of characters in given tokens, we'd do the following:",
+      "code" : "val totalOccurrences = occurrences.foldLeft(0)((count, x) => count + x._2)",
       "extraFields" : { }
     }
   }, {
     "id" : 107,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "and use that to calculate word frequencies:",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 108,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "tokens1\n\nvar counts = 0\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\ncounts",
-      "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\"]"
-      }
+      "code" : "val frequencies = occurrences.mapValues(_ / totalOccurrences.toDouble)",
+      "extraFields" : { }
     }
   }, {
     "id" : 109,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n#### filter",
+      "code" : "<div class=\"newslide\"></div>\n\n#### foreach\n\nAs opposed to map, which applies a function to each element of a collection, foreach calls a non-returning procedure over each element, and does not result in a new collection, as map does.\n\nSo, if we'd want to check whether our frequencies sum to 1, we would do the following:",
       "extraFields" : { }
     }
   }, {
@@ -813,115 +977,19 @@
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "tokens1\ntokens1.filter(t => !t.startsWith(\"a\")).size\ntokens1.count(t => !t.startsWith(\"a\"))",
-      "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\"]"
-      }
+      "code" : "var count = 0.0\nfrequencies.foreach(x => count += x._2)\ncount",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 111,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Exercise: do the same by using the foldLeft function.",
+      "extraFields" : { }
     }
   }, {
     "id" : 112,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n#### groupBy",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 113,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "GroupBy method groups elements of the collection by a specific discriminator function, into key (the value of the descriminator function) and value (a list of all the elements of the starting collection which produce the same value of the descriminator function). Let's say you'd want to group our previously created tokens by their first character. That would be very easy with Scala:",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 114,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "tokens1.groupBy(_.charAt(0))",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 115,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n#### maxBy",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 116,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "Another useful function is maxBy, which finds such an element of a collection which is the maximum one, by an implicit ordering. The previous example grouped all the tokens by their first character. If we'd want to see which of those groups has the largest amount of elements, we would do the following:",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 117,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "tokens1.groupBy(_.charAt(0)).maxBy(_._2.length)",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 118,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n#### fold\n\nThe fold method comes in three similar flavours, fold, foldLeft and foldRight (check the differences between them [here](https://coderwall.com/p/4l73-a/scala-fold-foldleft-and-foldright)). In its essence, you can view these functions as iterators with an accumulator. Starting with a dedicated starting element, this function applies a function to a starting element and the first element. Then it applies the same function to the result and the second element, and so on... You can use, for example, foldLeft to again iterate through the token list and calculate total token lengths:",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 119,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "tokens1\ntokens1.foldLeft(0)((count, word) => count + word.length)",
-      "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\"]"
-      }
-    }
-  }, {
-    "id" : 121,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n#### flatten\n\nFlatten, as its name states, flattens a collection of collections into a single collection:",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 122,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "List(tokens1, tokens2)\nList(tokens1, tokens2).flatten",
-      "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\"]"
-      }
-    }
-  }, {
-    "id" : 124,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n#### flatMap",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 125,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "List(tokens1, tokens2).map(_ :+ \"STOP\")\nList(tokens1, tokens2).flatMap(_ :+ \"STOP\")",
-      "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\"]"
-      }
-    }
-  }, {
-    "id" : 127,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -929,17 +997,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 128,
+    "id" : 113,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\nsigmoid(3)\n\ndef plusOne(i: Double) = i + 1\nval fun1 = sigmoid _ compose plusOne\nfun1(2) //sigmoid(plusOne(2))",
       "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\"]"
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1.groupBy(_.charAt(0))\",\"tokens1.groupBy(_.charAt(0)).maxBy(_._2.length)\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\"]"
       }
     }
   }, {
-    "id" : 130,
+    "id" : 114,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -947,17 +1015,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 131,
+    "id" : 115,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "val fun2 = sigmoid _ andThen plusOne\nfun2(3) //plusOne(sigmoid(3))\n(sigmoid _ andThen plusOne)(9) == (plusOne _ compose sigmoid)(9)",
       "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\",\"def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\\nsigmoid(3)\\n\\ndef plusOne(i: Double) = i + 1\\nval fun1 = sigmoid _ compose plusOne\\nfun1(2) //sigmoid(plusOne(2))\"]"
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1.groupBy(_.charAt(0))\",\"tokens1.groupBy(_.charAt(0)).maxBy(_._2.length)\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\",\"def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\\nsigmoid(3)\\n\\ndef plusOne(i: Double) = i + 1\\nval fun1 = sigmoid _ compose plusOne\\nfun1(2) //sigmoid(plusOne(2))\"]"
       }
     }
   }, {
-    "id" : 133,
+    "id" : 116,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -965,17 +1033,17 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 134,
+    "id" : 117,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "object SentenceSplitter extends (String => Seq[String]) {\n  override def apply(v1: String): Seq[String] =\n    v1.split(\"[.!?]\").toList\n}\nobject TokenSplitter extends (Seq[String] => Seq[Seq[String]]) {\n  override def apply(v1: Seq[String]): Seq[Seq[String]] =\n    v1.map(s => s.split(\" \").toList)\n}\nval pipeline = SentenceSplitter andThen TokenSplitter\npipeline(\"Of course, the whole point of a Doomsday Machine \" +\n         \"is lost, if you *keep* it a *secret*! Why didn't \" +\n         \"you tell the world, EH?\")",
       "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\",\"def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\\nsigmoid(3)\\n\\ndef plusOne(i: Double) = i + 1\\nval fun1 = sigmoid _ compose plusOne\\nfun1(2) //sigmoid(plusOne(2))\",\"val fun2 = sigmoid _ andThen plusOne\\nfun2(3) //plusOne(sigmoid(3))\\n(sigmoid _ andThen plusOne)(9) == (plusOne _ compose sigmoid)(9)\"]"
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1.groupBy(_.charAt(0))\",\"tokens1.groupBy(_.charAt(0)).maxBy(_._2.length)\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\",\"def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\\nsigmoid(3)\\n\\ndef plusOne(i: Double) = i + 1\\nval fun1 = sigmoid _ compose plusOne\\nfun1(2) //sigmoid(plusOne(2))\",\"val fun2 = sigmoid _ andThen plusOne\\nfun2(3) //plusOne(sigmoid(3))\\n(sigmoid _ andThen plusOne)(9) == (plusOne _ compose sigmoid)(9)\"]"
       }
     }
   }, {
-    "id" : 136,
+    "id" : 118,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -983,33 +1051,33 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 137,
+    "id" : 119,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "case class Sentence(tokens: Seq[String])\ncase class Document(sentences: Seq[Sentence])\n\nval docs = Seq(\n    Document(Seq(Sentence(Seq(\"I\", \"like\", \"Scala\", \".\")))),\n    Document(Seq(Sentence(Seq(\"Really\", \"?\")),\n                 Sentence(Seq(\"I\", \"like\", \"NLP\", \".\")))))\n\nvar shortTokens = 0\nfor (doc <- docs)\n  for (sentence <- doc.sentences)\n    for (token <- sentence.tokens)\n      if (token.length < 3) shortTokens += 1\nshortTokens",
       "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\",\"def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\\nsigmoid(3)\\n\\ndef plusOne(i: Double) = i + 1\\nval fun1 = sigmoid _ compose plusOne\\nfun1(2) //sigmoid(plusOne(2))\",\"val fun2 = sigmoid _ andThen plusOne\\nfun2(3) //plusOne(sigmoid(3))\\n(sigmoid _ andThen plusOne)(9) == (plusOne _ compose sigmoid)(9)\",\"object SentenceSplitter extends (String => Seq[String]) {\\n  override def apply(v1: String): Seq[String] =\\n    v1.split(\\\"[.!?]\\\").toList\\n}\\nobject TokenSplitter extends (Seq[String] => Seq[Seq[String]]) {\\n  override def apply(v1: Seq[String]): Seq[Seq[String]] =\\n    v1.map(s => s.split(\\\" \\\").toList)\\n}\\nval pipeline = SentenceSplitter andThen TokenSplitter\\npipeline(\\\"Of course, the whole point of a Doomsday Machine \\\" +\\n         \\\"is lost, if you *keep* it a *secret*! Why didn't \\\" +\\n         \\\"you tell the world, EH?\\\")\"]"
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1.groupBy(_.charAt(0))\",\"tokens1.groupBy(_.charAt(0)).maxBy(_._2.length)\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\",\"def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\\nsigmoid(3)\\n\\ndef plusOne(i: Double) = i + 1\\nval fun1 = sigmoid _ compose plusOne\\nfun1(2) //sigmoid(plusOne(2))\",\"val fun2 = sigmoid _ andThen plusOne\\nfun2(3) //plusOne(sigmoid(3))\\n(sigmoid _ andThen plusOne)(9) == (plusOne _ compose sigmoid)(9)\",\"object SentenceSplitter extends (String => Seq[String]) {\\n  override def apply(v1: String): Seq[String] =\\n    v1.split(\\\"[.!?]\\\").toList\\n}\\nobject TokenSplitter extends (Seq[String] => Seq[Seq[String]]) {\\n  override def apply(v1: Seq[String]): Seq[Seq[String]] =\\n    v1.map(s => s.split(\\\" \\\").toList)\\n}\\nval pipeline = SentenceSplitter andThen TokenSplitter\\npipeline(\\\"Of course, the whole point of a Doomsday Machine \\\" +\\n         \\\"is lost, if you *keep* it a *secret*! Why didn't \\\" +\\n         \\\"you tell the world, EH?\\\")\"]"
       }
     }
   }, {
-    "id" : 138,
+    "id" : 120,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "shortTokens = 0\nfor (doc <- docs)\n  for (sentence <- doc.sentences)\n    for (token <- sentence.tokens)\n      if (token.length < 3) shortTokens += 1\nshortTokens\n",
       "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\",\"def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\\nsigmoid(3)\\n\\ndef plusOne(i: Double) = i + 1\\nval fun1 = sigmoid _ compose plusOne\\nfun1(2) //sigmoid(plusOne(2))\",\"val fun2 = sigmoid _ andThen plusOne\\nfun2(3) //plusOne(sigmoid(3))\\n(sigmoid _ andThen plusOne)(9) == (plusOne _ compose sigmoid)(9)\",\"object SentenceSplitter extends (String => Seq[String]) {\\n  override def apply(v1: String): Seq[String] =\\n    v1.split(\\\"[.!?]\\\").toList\\n}\\nobject TokenSplitter extends (Seq[String] => Seq[Seq[String]]) {\\n  override def apply(v1: Seq[String]): Seq[Seq[String]] =\\n    v1.map(s => s.split(\\\" \\\").toList)\\n}\\nval pipeline = SentenceSplitter andThen TokenSplitter\\npipeline(\\\"Of course, the whole point of a Doomsday Machine \\\" +\\n         \\\"is lost, if you *keep* it a *secret*! Why didn't \\\" +\\n         \\\"you tell the world, EH?\\\")\",\"case class Sentence(tokens: Seq[String])\\ncase class Document(sentences: Seq[Sentence])\\n\\nval docs = Seq(\\n    Document(Seq(Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"Scala\\\", \\\".\\\")))),\\n    Document(Seq(Sentence(Seq(\\\"Really\\\", \\\"?\\\")),\\n                 Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"NLP\\\", \\\".\\\")))))\\n\\nvar shortTokens = 0\\nfor (doc <- docs)\\n  for (sentence <- doc.sentences)\\n    for (token <- sentence.tokens)\\n      if (token.length < 3) shortTokens += 1\\nshortTokens\"]"
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1.groupBy(_.charAt(0))\",\"tokens1.groupBy(_.charAt(0)).maxBy(_._2.length)\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\",\"def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\\nsigmoid(3)\\n\\ndef plusOne(i: Double) = i + 1\\nval fun1 = sigmoid _ compose plusOne\\nfun1(2) //sigmoid(plusOne(2))\",\"val fun2 = sigmoid _ andThen plusOne\\nfun2(3) //plusOne(sigmoid(3))\\n(sigmoid _ andThen plusOne)(9) == (plusOne _ compose sigmoid)(9)\",\"object SentenceSplitter extends (String => Seq[String]) {\\n  override def apply(v1: String): Seq[String] =\\n    v1.split(\\\"[.!?]\\\").toList\\n}\\nobject TokenSplitter extends (Seq[String] => Seq[Seq[String]]) {\\n  override def apply(v1: Seq[String]): Seq[Seq[String]] =\\n    v1.map(s => s.split(\\\" \\\").toList)\\n}\\nval pipeline = SentenceSplitter andThen TokenSplitter\\npipeline(\\\"Of course, the whole point of a Doomsday Machine \\\" +\\n         \\\"is lost, if you *keep* it a *secret*! Why didn't \\\" +\\n         \\\"you tell the world, EH?\\\")\",\"case class Sentence(tokens: Seq[String])\\ncase class Document(sentences: Seq[Sentence])\\n\\nval docs = Seq(\\n    Document(Seq(Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"Scala\\\", \\\".\\\")))),\\n    Document(Seq(Sentence(Seq(\\\"Really\\\", \\\"?\\\")),\\n                 Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"NLP\\\", \\\".\\\")))))\\n\\nvar shortTokens = 0\\nfor (doc <- docs)\\n  for (sentence <- doc.sentences)\\n    for (token <- sentence.tokens)\\n      if (token.length < 3) shortTokens += 1\\nshortTokens\"]"
       }
     }
   }, {
-    "id" : 139,
+    "id" : 121,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "shortTokens = 0\nfor {\n  doc <- docs\n  sentence <- doc.sentences\n  token <- sentence.tokens\n  if token.length < 3\n} shortTokens += 1\nshortTokens",
       "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\",\"def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\\nsigmoid(3)\\n\\ndef plusOne(i: Double) = i + 1\\nval fun1 = sigmoid _ compose plusOne\\nfun1(2) //sigmoid(plusOne(2))\",\"val fun2 = sigmoid _ andThen plusOne\\nfun2(3) //plusOne(sigmoid(3))\\n(sigmoid _ andThen plusOne)(9) == (plusOne _ compose sigmoid)(9)\",\"object SentenceSplitter extends (String => Seq[String]) {\\n  override def apply(v1: String): Seq[String] =\\n    v1.split(\\\"[.!?]\\\").toList\\n}\\nobject TokenSplitter extends (Seq[String] => Seq[Seq[String]]) {\\n  override def apply(v1: Seq[String]): Seq[Seq[String]] =\\n    v1.map(s => s.split(\\\" \\\").toList)\\n}\\nval pipeline = SentenceSplitter andThen TokenSplitter\\npipeline(\\\"Of course, the whole point of a Doomsday Machine \\\" +\\n         \\\"is lost, if you *keep* it a *secret*! Why didn't \\\" +\\n         \\\"you tell the world, EH?\\\")\",\"case class Sentence(tokens: Seq[String])\\ncase class Document(sentences: Seq[Sentence])\\n\\nval docs = Seq(\\n    Document(Seq(Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"Scala\\\", \\\".\\\")))),\\n    Document(Seq(Sentence(Seq(\\\"Really\\\", \\\"?\\\")),\\n                 Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"NLP\\\", \\\".\\\")))))\\n\\nvar shortTokens = 0\\nfor (doc <- docs)\\n  for (sentence <- doc.sentences)\\n    for (token <- sentence.tokens)\\n      if (token.length < 3) shortTokens += 1\\nshortTokens\",\"shortTokens = 0\\nfor (doc <- docs)\\n  for (sentence <- doc.sentences)\\n    for (token <- sentence.tokens)\\n      if (token.length < 3) shortTokens += 1\\nshortTokens\\n\"]"
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"// a convenient way to code piecewise functions\\nif (2 > 5 || 5 > 2) 7 else 4\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"// defining a function which works with a single String parameter\\ndef depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"// save an anonymous function into a value\\nval removeIng = (word: String) => word.stripSuffix(\\\"ing\\\")\\n\\nremoveIng(\\\"learning\\\")\",\"// partial function application\\ndef addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"// currying\\ndef addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => depluralizer(i)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => removeIng(i)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => word.stripSuffix(\\\"ed\\\")\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = {\\n n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n }\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"var ok: Boolean = true\\nval computation: Double = try {\\n 1 / 0\\n} catch {\\ncase e: ArithmeticException => {ok = false; Double.NaN}\\n} finally {\\nok = false\\n}\\n\\n\\\"computation=%f, ok=%s\\\".format(computation,ok)\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"tokens1\\n\\nvar counts = 0\\ntokens1.foreach(t => t.toCharArray.foreach(c => counts += 1))\\ncounts\",\"tokens1\\ntokens1.filter(t => !t.startsWith(\\\"a\\\")).size\\ntokens1.count(t => !t.startsWith(\\\"a\\\"))\",\"tokens1.groupBy(_.charAt(0))\",\"tokens1.groupBy(_.charAt(0)).maxBy(_._2.length)\",\"tokens1\\ntokens1.foldLeft(0)((count, word) => count + word.length)\",\"List(tokens1, tokens2)\\nList(tokens1, tokens2).flatten\",\"List(tokens1, tokens2).map(_ :+ \\\"STOP\\\")\\nList(tokens1, tokens2).flatMap(_ :+ \\\"STOP\\\")\",\"def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\\nsigmoid(3)\\n\\ndef plusOne(i: Double) = i + 1\\nval fun1 = sigmoid _ compose plusOne\\nfun1(2) //sigmoid(plusOne(2))\",\"val fun2 = sigmoid _ andThen plusOne\\nfun2(3) //plusOne(sigmoid(3))\\n(sigmoid _ andThen plusOne)(9) == (plusOne _ compose sigmoid)(9)\",\"object SentenceSplitter extends (String => Seq[String]) {\\n  override def apply(v1: String): Seq[String] =\\n    v1.split(\\\"[.!?]\\\").toList\\n}\\nobject TokenSplitter extends (Seq[String] => Seq[Seq[String]]) {\\n  override def apply(v1: Seq[String]): Seq[Seq[String]] =\\n    v1.map(s => s.split(\\\" \\\").toList)\\n}\\nval pipeline = SentenceSplitter andThen TokenSplitter\\npipeline(\\\"Of course, the whole point of a Doomsday Machine \\\" +\\n         \\\"is lost, if you *keep* it a *secret*! Why didn't \\\" +\\n         \\\"you tell the world, EH?\\\")\",\"case class Sentence(tokens: Seq[String])\\ncase class Document(sentences: Seq[Sentence])\\n\\nval docs = Seq(\\n    Document(Seq(Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"Scala\\\", \\\".\\\")))),\\n    Document(Seq(Sentence(Seq(\\\"Really\\\", \\\"?\\\")),\\n                 Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"NLP\\\", \\\".\\\")))))\\n\\nvar shortTokens = 0\\nfor (doc <- docs)\\n  for (sentence <- doc.sentences)\\n    for (token <- sentence.tokens)\\n      if (token.length < 3) shortTokens += 1\\nshortTokens\",\"shortTokens = 0\\nfor (doc <- docs)\\n  for (sentence <- doc.sentences)\\n    for (token <- sentence.tokens)\\n      if (token.length < 3) shortTokens += 1\\nshortTokens\\n\"]"
       }
     }
   } ],
