@@ -1,5 +1,11 @@
 # stat-nlp-book
 
+### Live Online Version
+
+We are running a [live online version](http://stat-nlp-book.wolfe.ml:9000/template/statnlpbook/04_compgi19/02_overview) of the book. 
+Due to security reasons the content is not editable. If you want to play with the code and execute it you need to
+install the book locally, as described below.
+
 ### Setup and run the book
 
 Before running any of the following comands, make sure you have [all the prerequisites installed](https://github.com/uclmr/stat-nlp-book/wiki/Installation-of-prerequisites).
