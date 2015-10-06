@@ -1,11 +1,19 @@
 {
   "name" : "Scala Crash Course",
   "cells" : [ {
-    "id" : 0,
+    "id" : 140,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n## Introduction\n\nThis short Scala crash course is based on [Scala School by Twitter](https://twitter.github.io/scala_school/).\n\nWe chose Scala as the language for the course (as well as the language we develop our systems in) because of several reasons, some of which are:\n\n* Increasingly used in NLP and ML, but don't take our word for it, take a look at the code of some of the world's leading labs: [UCL Machine Reading group](https://github.com/uclmr/) :), [Berkeley NLP Group](http://nlp.cs.berkeley.edu/) and [another interesting ML project at UC Berkeley](http://bid2.berkeley.edu/bid-data-project/) , [University of Washington](http://knowitall.github.io/openie/), [Allen Institute for Artificial Intelligence](https://github.com/allenai), etc.\n* Expressive - Scala offers first class functions, and closures, and effectively enables you to quickly rewrite pseudocode or math models to code\n* Concise - it offers type inference, and is on the quest to eliminate boilerplate code\n* Java interoperability - you can reuse your favorite Java libraries! This comes in VERY handy.\n* bear in mind that Scala is not Java on steroids :) it is just a different, object-oriented functional programming language (cannot stress the functional part enough)",
+      "code" : "<span class=\"summary\">\n<div class=\"newslide\"></div>\n# Welcome to the Tutorial!\n\n## Meet your Tutors\n* [George Spithourakis](g.spithourakis.12@ucl.ac.uk)\n* [Johannes Welbl](johannes.welbl.14@ucl.ac.uk)\n* [Tim Rocktäschel](t.rocktaschel@cs.ucl.ac.uk)\n* [Matko Bošnjak](matko.bosnjak@gmail.com)\n\nWe are all 1st or 3rd year NLP/ML PhD students in Sebastian's Machine Reading lab\n\n<div class=\"newslide\"></div>\n## Tutorial Logistics\n* Tuesdays 8am to 10am \n    * Yes, that's early for us too\n    * No, we couldn't do anything about it\n    * Please be here at 8am\n    * Don't show up at 9:59am and expect help\n* Room: MPEB 1.03\n* At least two tutors will be present\n\n<div class=\"newslide\"></div>\n## Why should I be here?\n* This is the place to ask questions\n* We will discuss new assignments\n* We will introduce Scala concepts, libraries and tricks\n* We are here to help you\n* We hope to make your NLP life easier\n* The tutorial is meant to be interactive\n    * Interrupt is!\n    * Ask us!\n\n<div class=\"newslide\"></div>\n## Today's Agenda\n* Get you up and running with Scala\n* Show you how the interactive course book can be run\n* Start with some simple Scala code\n \n<div class=\"newslide\"></div>\n### Next Week\n* Almost everything you have to know about Scala to solve the assignments\n</span>",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 141,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n## Introduction\n\nThis short Scala crash course is based on the execellent [Scala School by Twitter](https://twitter.github.io/scala_school/).<span class=\"summary\"></span>\n\nWe chose Scala as the language for the course (as well as the language we develop our systems in) because of several reasons, some of which are:\n<span class=\"summary\"></span>\n\n* Increasingly used in NLP and ML, but don't take our word for it, take a look at the code of some of the world's leading labs: [UCL Machine Reading group](https://github.com/uclmr/) :), [Berkeley NLP Group](http://nlp.cs.berkeley.edu/) and [another interesting ML project at UC Berkeley](http://bid2.berkeley.edu/bid-data-project/) , [University of Washington](http://knowitall.github.io/openie/), [Allen Institute for Artificial Intelligence](https://github.com/allenai), etc.<span class=\"summary\"></span>\n* Expressive - Scala offers first class functions, and closures, and effectively enables you to quickly rewrite pseudocode or math models to code\n<div class=\"newslide\"></div>\n* Concise - it offers type inference, and is on the quest to eliminate boilerplate code\n* Java interoperability - you can reuse your favorite Java libraries! This comes in VERY handy.\n* Scala is not Java on steroids :) it is just a different, object-oriented *functional* programming language (cannot stress the functional part enough)",
       "extraFields" : { }
     }
   }, {
@@ -13,7 +21,23 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n## Installing scala\nIn order to install Scala, please follow [these instructions](http://www.scala-lang.org/download/install.html).\n\nStarting the interpreter\n\nProgramming in IntelliJ",
+      "code" : "<div class=\"newslide\"></div>\n## Installing Scala\nIn order to install Scala, please follow [these instructions](http://www.scala-lang.org/download/install.html).<span class=\"summary\">www.scala-lang.org/download/install.html</span>\n\nStarting the interpreter: run `scala` from the command line\n\nProgramming in [IntelliJ](https://www.jetbrains.com/idea/): www.jetbrains.com/idea\n\nThere is also an [Scala IDE based on Eclipse](http://scala-ide.org/), but we recommend IntelliJ!",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 146,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "## The Simple Build Tool (SBT)\n\nGet it [here](http://www.scala-sbt.org/): http://www.scala-sbt.org/\n\n- A build tool (like Maven)\n- Needed for compiling the assignment code",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 145,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n## Running the StatNLP Book locally\n\nYou need to do this if you want to make use of the interactive part of the tutorial and lecture!\n\n\n```\ngit clone https://github.com/uclmr/stat-nlp-book.git; cd stat-nlp-book\ngit submodule update --init --recursive\nsbt compile\ncd wolfe; sbt compile; sbt publish-local; cd ..\ncp moro/conf/application-statnlpbook.conf moro/conf/application.conf\ncd moro; git checkout master; sbt run\n```\n\nopen `localhost:9000` in your browser",
       "extraFields" : { }
     }
   }, {
@@ -21,7 +45,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n## Scala basics\n\nThis part of the book concerns the basics of Scala, a quick crash-course of Scala which you will need in order to understand this book, and be able to code up your assignments. All sorts of feedback are welcome and highly appreciated!\n\nYou can run these commands either in IntelliJ, or by running\n\n`sbt console`\n\nor\n\n`scala`\n\nin your command line, and thus entering Scala's REPL (Read-Evaluate-Print Loop) interpreter.",
+      "code" : "<div class=\"newslide\"></div>\n## Scala Basics\n\nThis part of the book concerns the basics of Scala, a quick crash-course of Scala which you will need in order to understand this book, and be able to code up your assignments. All sorts of feedback are welcome and highly appreciated!<span class=\"summary\"></span>\n\nYou can run these commands either in IntelliJ, or by running\n\n`sbt console`\n\nor\n\n`scala`\n\nin your command line, and thus entering Scala's REPL (Read-Evaluate-Print Loop) interpreter.",
       "extraFields" : { }
     }
   }, {
@@ -29,7 +53,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n### Expressions\n\nAlmost everything in Scala is an expression, for example:\n\nnumerical calulations...",
+      "code" : "<div class=\"newslide\"></div>\n### Expressions\n\nAlmost everything in Scala is an expression, for example:\n\nnumerical calculations...",
       "extraFields" : { }
     }
   }, {
@@ -47,7 +71,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "string operations...",
+      "code" : "<div class=\"newslide\"></div>\n\nstring operations...",
       "extraFields" : { }
     }
   }, {
@@ -65,7 +89,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "or logical expressions...",
+      "code" : "<div class=\"newslide\"></div>\n\nor logical expressions...",
       "extraFields" : { }
     }
   }, {
@@ -111,7 +135,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "You might ask yourself: why should I use values and immutable structure? There are several reasons for and against using them. Immutable structures help with reasoning about the code, concurrency, make the code less prone to bugs (no references to take care of), etc. You can find a couple of thoughts abot that [here](http://stackoverflow.com/questions/214714/mutable-vs-immutable-objects) and [here](http://programmers.stackexchange.com/questions/151733/if-immutable-objects-are-good-why-do-people-keep-creating-mutable-objects).\nYou might also ask yourself: how do I change something in an immutable structure then? Easily - you copy it with a change in place :)\nHowever, you will see more in the rest of the tutorial.",
+      "code" : "You might ask yourself: why should I use values and immutable structure? There are several reasons for and against using them. Immutable structures help with reasoning about the code, concurrency, make the code less prone to bugs (no references to take care of), etc. You can find a couple of thoughts abot that [here](http://stackoverflow.com/questions/214714/mutable-vs-immutable-objects) and [here](http://programmers.stackexchange.com/questions/151733/if-immutable-objects-are-good-why-do-people-keep-creating-mutable-objects).\nYou might also ask yourself: how do I change something in an immutable structure then? Easily - you copy it with a change in place :)\nHowever, you will see more in the rest of the tutorial.<span class=\"summary\"></span>",
       "extraFields" : { }
     }
   }, {
@@ -137,7 +161,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "As you can see from the definition, you need to specify the type of the parameters, but you can freely omit the output type as the interpreter/compiler will do that implicitly (except in cases of recursive functions).\nFunctions can be stored in variables and passed as parameters, as they are full-fledged Scala objects.\n\nLet's take a look at a couple of functions' capabilities on a small NLP example - let's build something (maybe) useful which depluralizes (removes suffixes of plural forms of) nouns:",
+      "code" : "As you can see from the definition, you need to specify the type of the parameters, but you can freely omit the output type as the interpreter/compiler will do that implicitly (except in cases of recursive functions).\nFunctions can be stored in variables and passed as parameters, as they are full-fledged Scala objects.<span class=\"summary\"></span>\n\nLet's take a look at a couple of functions' capabilities on a small NLP example - let's build something (maybe) useful which depluralizes (removes suffixes of plural forms of) nouns:<span class=\"summary\"></span>\n<div class=\"newslide\"></div>",
       "extraFields" : { }
     }
   }, {
