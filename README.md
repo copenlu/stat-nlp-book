@@ -4,8 +4,12 @@
 
 Before running any of the following comands, make sure you have [all the prerequisites installed](https://github.com/uclmr/stat-nlp-book/wiki/Installation-of-prerequisites).
 
+After installing prerequisites, install the following libraries to a local repository by running the following:
 
-Setup the project specific configuration file 
+    git clone https://github.com/sameersingh/scalaplot.git; cd scalaplot
+    mvn clean install -Dgpg.skip=true; cd ..
+    git clone https://github.com/sameersingh/htmlgen.git; cd htmlgen
+    mvn clean install -Dgpg.skip=true; cd ..
 
 Clone the repository (1), 
 Initialize sub-modules (wolfe & moro) (2), compile the project (3) and compile wolfe, and publish it to your local ivy repository (4), setup the project specific configuration file (5) and run moro (6).
@@ -21,17 +25,6 @@ Remarks:
 - ignore `[error] (wolfe-examples/compile:doc) Scaladoc generation failed` when executing step 4
 - step 4 - You may have to delete the wolfe directory in the ivy cache to make sure you get the newest version.
 - step 6 - You might me bugged by your firewall here. Set it to allow the application. This step might take some time depending on your computer performance. Do not panic over warning messages :)
-
-
-
-Maybe (most definitely?) you'll need to clone htmlgen and scalaplot:
-
-    git clone https://github.com/sameersingh/scalaplot.git
-    git clone https://github.com/sameersingh/htmlgen.git
-    
-and install them to a local repository by running (in each directory):
-    
-    mvn clean install -Dgpg.skip=true
     
 
 ### Download Data
