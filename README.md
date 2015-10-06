@@ -18,7 +18,7 @@ Initialize sub-modules (wolfe & moro) (2), compile the project (3) and compile w
 6. `cd moro; git checkout master; sbt run`
 
 Remarks:
-- ignore the error `[error] (wolfe-examples/compile:doc) Scaladoc generation failed` when executing step 4
+- ignore `[error] (wolfe-examples/compile:doc) Scaladoc generation failed` when executing step 4
 - step 4 - You may have to delete the wolfe directory in the ivy cache to make sure you get the newest version.
 - step 6 - You might me bugged by your firewall here. Set it to allow the application. This step might take some time depending on your computer performance. Do not panic over warning messages :)
 
