@@ -1,5 +1,7 @@
 package uk.ac.ucl.cs.mr.statnlpbook.chapter.languagemodels
 
+import ml.wolfe.nlp.Document
+
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
@@ -15,7 +17,12 @@ trait LanguageModel {
   def probability(word: String, history: String*): Double
 }
 
-object LanguageModel {
+object Util {
+
+  def words(docs: Iterable[Document], padding: Int = 0) = {
+    val content = docs flatMap (_.sentences flatMap (s => Vector.fill(padding)(PAD) ++ (s.tokens map (_.word))))
+    content.toIndexedSeq
+  }
 
   val lmRandom = new Random()
 
@@ -29,6 +36,39 @@ object LanguageModel {
     }
     i - 1
   }
+
+  def injectOOVs(oov: String, words: Seq[String]) = {
+    case class Result(vocab: Set[String], processed: List[String])
+    def combine(result: Result, word: String) =
+      if (result.vocab(word)) result.copy(processed = word :: result.processed)
+      else Result(result.vocab + word, oov :: result.processed)
+    val result = words.foldLeft(Result(Set.empty, Nil))(combine)
+    result.processed.reverse.toIndexedSeq
+  }
+
+  def OOV = "[OOV]"
+
+  def PAD = "[PAD]"
+
+  def replaceOOVs(oov: String, vocab: Set[String], corpus: Seq[String]) =
+    (corpus map (w => if (vocab(w)) w else oov)).toIndexedSeq
+
+  private def revCross[T](args: List[List[T]], result: List[List[T]] = List(Nil)): List[List[T]] = {
+    args match {
+      case Nil => result
+      case h :: t =>
+        val appended = for (f <- h; r <- result) yield f :: r
+        cross(t, appended)
+    }
+  }
+  def cross[T](args: List[List[T]], result: List[List[T]] = List(Nil)): List[List[T]] = revCross(args.reverse,result)
+
+
+}
+
+object LanguageModel {
+
+  import Util._
 
   def sample(lm: LanguageModel, init: Seq[String], amount: Int) = {
     val words = lm.vocab.toIndexedSeq
@@ -53,19 +93,7 @@ object LanguageModel {
     math.exp(-logProb / (data.length - historyOrder))
   }
 
-  def injectOOVs(oov: String, words: Seq[String]) = {
-    case class Result(vocab: Set[String], processed: List[String])
-    def combine(result: Result, word: String) =
-      if (result.vocab(word)) result.copy(processed = word :: result.processed)
-      else Result(result.vocab + word, oov :: result.processed)
-    val result = words.foldLeft(Result(Set.empty, Nil))(combine)
-    result.processed.reverse.toIndexedSeq
-  }
 
-  def OOV = "[OOV]"
-
-  def replaceOOVs(oov: String, vocab: Set[String], corpus: Seq[String]) =
-    (corpus map (w => if (vocab(w)) w else oov)).toIndexedSeq
 
 }
 
