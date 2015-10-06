@@ -26,6 +26,7 @@ Initialize sub-modules (wolfe & moro) (2), compile the project (3) and compile w
 4. `cd wolfe; sbt compile; sbt publish-local; cd ..`
 5. `cp moro/conf/application-statnlpbook.conf moro/conf/application.conf`
 6. `cd moro; git checkout master; sbt run`
+7. `ln -s $PWD/src/main/moro/figures $PWD/moro/public/figures`
 
 Remarks:
 - ignore `[error] (wolfe-examples/compile:doc) Scaladoc generation failed` when executing step 4
