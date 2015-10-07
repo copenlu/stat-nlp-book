@@ -13,7 +13,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\n<div class=\"newslide\"></div>\n### Fool a <a href=\"text-processing.com/demo/sentiment/\">Sentiment Analyzer</a>\n\n<div class=\"newslide\"></div>\n### Fool a <a href=\"translate.google.com/?hl=en&tab=TT\">Machine Translator</a>\n\n<div class=\"newslide\"></div>\n### <a href=\"https://books.google.com/ngrams\">Count</a> N-grams\n\n<div class=\"newslide\"></div>\n### Ambiguity Everywhere\n\n",
+      "code" : "\n<div class=\"newslide\"></div>\n### Why is it difficult?\n\n<img width=\"80%\" class=\"frame single-img\" src=\"/assets/figures/sexcoffee.png\"></img>\n\n<div class=\"newslide\"></div>\n### Ambiguity Everywhere\n",
       "extraFields" : { }
     }
   }, {
@@ -32,7 +32,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n### Syllabus\n\nThis course covers three core dimensions of NLP:\n\n* Tasks (tokenization, language models, machine translations etc.)\n* Methods (Maximum Likelihood, EM algorithm, dynamic programming etc.)\n* Implementations (document representations, efficient feature extraction etc.)\n\nThe lectures, and the structure of the course, will be driven by tasks.\n\n<div class=\"newslide\"></div>\n### NLP Tasks\n\n* Tokenization, Segmentation\n* Language Modelling\n* Machine Translation\n* Syntactic Parsing\n* Document Classification\n* Information Extraction\n* Topic Models and Word Embeddings\n\n<div class=\"newslide\"></div>\nQuestions?\n\n",
+      "code" : "<div class=\"newslide\"></div>\n### Fool a <a href=\"http://text-processing.com/demo/sentiment/\">Sentiment Analyzer</a>\n\n<div class=\"newslide\"></div>\n### Fool a <a href=\"http://translate.google.com/?hl=en&tab=TT\">Machine Translator</a>\n\n<div class=\"newslide\"></div>\n### <a href=\"https://books.google.com/ngrams\">Count</a> N-grams\n\n<div class=\"newslide\"></div>\n### Syllabus\n\nThis course covers three core dimensions of NLP:\n\n* Tasks (tokenization, language models, machine translations etc.)\n* Methods (Maximum Likelihood, EM algorithm, dynamic programming etc.)\n* Implementations (document representations, efficient feature extraction etc.)\n\nThe lectures, and the structure of the course, will be driven by tasks.\n\n<div class=\"newslide\"></div>\n### NLP Tasks\n\n* Tokenization, Segmentation\n* Language Modelling\n* Machine Translation\n* Syntactic Parsing\n* Document Classification\n* Information Extraction\n* Topic Models and Word Embeddings\n\n<div class=\"newslide\"></div>\nQuestions?\n\n",
       "extraFields" : { }
     }
   } ],
