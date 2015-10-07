@@ -57,3 +57,5 @@ You can write code in IntelliJ and access it from moro after you compile it (eit
 [Tim Rocktäschel](mailto:t.rocktaschel@cs.ucl.ac.uk)
 
 [Matko Bošnjak](mailto:matko.bosnjak@cs.ucl.ac.uk)
+
+When contacting us, please send a single e-mail to all four of us so we can coordinate the response.
