@@ -25,7 +25,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\nWe can now create a uniform language model using a built-in constructor. Language models in this book implement the `LanguageModel` trait we define. ",
+      "code" : "<div class=\"newslide\"></div>\nWe can now create a uniform language model using a built-in constructor. Language models in this book implement the `LanguageModel` trait. ",
       "extraFields" : { }
     }
   }, {
