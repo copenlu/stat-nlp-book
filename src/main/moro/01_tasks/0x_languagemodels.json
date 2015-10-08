@@ -526,7 +526,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n#### Backoff \nInstead of combining probabilities for all words given a context, it makes sense to back-off only when no counts for a given event are available and rely on available counts where possible. \n\n<div class=\"newslide\"></div>\nA particularly simple, if not to say stupid, backoff method is [Stupid Backoff](http://www.aclweb.org/anthology/D07-1090.pdf). Let \\\\(w\\\\) be a word and \\\\(h_{n}\\\\) be an n-gram of length \\\\(n\\\\):  \n\n\\begin{align}\n\\prob_{\\mbox{Stupid}}(w|h_n) = \n\\begin{cases}\n\\frac{\\counts{\\train}{h_n,w}}{\\counts{\\train}{h_n}}  &= \\mbox{if }\\counts{\\train}{h_n,w} > 0 \\\\\\\\\n\\prob_{\\mbox{Stupid}}(w|h_{n-1}) & \\mbox{otherwise}\n\\end{cases}\n\\end{align}\n\n<div class=\"newslide\"></div>",
+      "code" : "<div class=\"newslide\"></div>\n#### Backoff \nInstead of combining probabilities for all words given a context, it makes sense to back-off only when no counts for a given event are available and rely on available counts where possible. \n\n<div class=\"newslide\"></div>\nA particularly simple, if not to say stupid, backoff method is [Stupid Backoff](http://www.aclweb.org/anthology/D07-1090.pdf). Let \\\\(w\\\\) be a word and \\\\(h_{n}\\\\) be an n-gram of length \\\\(n\\\\):  \n\n$$\n\\prob_{\\mbox{Stupid}}(w|h_n) = \n\\begin{cases}\n\\frac{\\counts{\\train}{h_n,w}}{\\counts{\\train}{h_n}}  &= \\mbox{if }\\counts{\\train}{h_n,w} > 0 \\\\\\\\\n\\prob_{\\mbox{Stupid}}(w|h_{n-1}) & \\mbox{otherwise}\n\\end{cases}\n$$\n\n<div class=\"newslide\"></div>",
       "extraFields" : { }
     }
   }, {
