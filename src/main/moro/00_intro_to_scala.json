@@ -457,7 +457,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\nExercise: Write an a pattern matcher to evaluate simple mathematical expressions with addition, subtraction, multiplication and division.",
+      "code" : "<div class=\"newslide\"></div>\n\nExercise: Write a pattern matcher to evaluate simple mathematical expressions with addition, subtraction, multiplication and division.",
       "extraFields" : { }
     }
   }, {
