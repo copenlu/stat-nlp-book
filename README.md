@@ -53,12 +53,9 @@ You can write code in IntelliJ and access it from moro after you compile it (eit
 
 If you have a question that is not specific to you but could be interesting for other students as well, please post it in the [discussion forum](https://moodle.ucl.ac.uk/mod/forum/view.php?id=1402119). Otherwise, contact us directly.
 
-[George Spithourakis](mailto:g.spithourakis.12@ucl.ac.uk)
-
-[Johannes Welbl](mailto:johannes.welbl.14@ucl.ac.uk)
-
-[Tim Rocktäschel](mailto:t.rocktaschel@cs.ucl.ac.uk)
-
-[Matko Bošnjak](mailto:matko.bosnjak@cs.ucl.ac.uk)
+- [George Spithourakis](mailto:g.spithourakis.12@ucl.ac.uk)
+- [Johannes Welbl](mailto:johannes.welbl.14@ucl.ac.uk)
+- [Tim Rocktäschel](mailto:t.rocktaschel@cs.ucl.ac.uk)
+- [Matko Bošnjak](mailto:matko.bosnjak@cs.ucl.ac.uk)
 
 When contacting us, please send a single e-mail to all four of us so we can coordinate the response.
