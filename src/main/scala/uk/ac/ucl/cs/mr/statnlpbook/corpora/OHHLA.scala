@@ -30,14 +30,25 @@ object OHHLA {
 
   lazy val root = new File("../data/ohhla/www.ohhla.com/anonymous/")
 
-  object JLive {
+  trait Artist {
+    def albumRoot:File
+    lazy val allAlbums = albumRoot.listFiles().filter(_.isDirectory)
+  }
+
+  object JLive extends Artist {
     lazy val AllAbove = new File(root, "j_live/allabove/")
     lazy val BestPart = new File(root, "j_live/bestpart/")
     lazy val albumRoot = new File(root, "j_live")
-    lazy val allAlbums = albumRoot.listFiles().filter(_.isDirectory)
-
   }
 
+  object Roots extends Artist {
+    lazy val albumRoot = new File(root, "roots")
+    lazy val Halflive = new File(albumRoot, "halflife")
+  }
+
+  object Rakim extends Artist {
+    lazy val albumRoot = new File(root, "rakim")
+  }
 
   def load(file: File) = {
     val lines = Util.tryEncodings(enc => Source.fromFile(file,enc).getLines().mkString("\n"))
@@ -62,13 +73,19 @@ object OHHLA {
   }
 
   def main(args: Array[String]) {
-    val file = new File("data/ohhla/www.ohhla.com/anonymous/j_live/allabove/satisfy.jlv.txt.html")
-    val processed = load(file)
-    //println(doc.source)
-    println(processed.sentences.map(_.toPrettyString).mkString("\n"))
+//    val file = new File("data/ohhla/www.ohhla.com/anonymous/j_live/allabove/satisfy.jlv.txt.html")
+//    val processed = load(file)
+//    //println(doc.source)
+//    println(processed.sentences.map(_.toPrettyString).mkString("\n"))
 
     val allAbove = loadDir(JLive.albumRoot)
     println(allAbove.length)
+
+    println(loadDir(Roots.albumRoot).length)
+
+
+
+
 
   }
 }

@@ -37,7 +37,10 @@ Remarks:
 ### Download Data
 To download the OHHLA files
 
-    scripts/download_ohhla j_live
+    scripts/download_ohhla.sh j_live
+    scripts/download_ohhla_txt.sh YFA_roots.html
+    scripts/download_ohhla_txt.sh YFA_rakim.html
+    
 
 ## Browse the Book
 Everytime you want to run the book, you have to go to the `stat-nlp-book/moro` directory and call `sbt run`.
