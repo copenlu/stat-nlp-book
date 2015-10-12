@@ -139,6 +139,60 @@
       "extraFields" : { }
     }
   }, {
+    "id" : 144,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\n### Control Structures\n\nIf-then-else",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 145,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val word = \"Hello\"\nvar response = \"\"\n\nif (word == \"world\") {\n    response = \"What about it?\"\n} else if (word == \"Hello\") {\n    response = \"Hi!\"\n} else {\n    response = \"I have no idea what you are talking about!\"\n}\nresponse",
+      "extraFields" : {
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\"]"
+      }
+    }
+  }, {
+    "id" : 146,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\nFor Loop",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 147,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "var count = 0\nfor (i <- 0 to 10) count = count + i\ncount",
+      "extraFields" : {
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"val word = \\\"Hello\\\"\\nvar response = \\\"\\\"\\n\\nif (word == \\\"world\\\") {\\n    response = \\\"What about it?\\\"\\n} else if (word == \\\"Hello\\\") {\\n    response = \\\"Hi!\\\"\\n} else {\\n    response = \\\"I have no idea what you are talking about!\\\"\\n}\\nresponse\"]"
+      }
+    }
+  }, {
+    "id" : 148,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "<div class=\"newslide\"></div>\nWhile Loop",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 149,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "var count = 0\nvar i = 0\nwhile (i < 10) {\n    i = i + 1\n    count = count + i\n}\ncount",
+      "extraFields" : {
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"val word = \\\"Hello\\\"\\nvar response = \\\"\\\"\\n\\nif (word == \\\"world\\\") {\\n    response = \\\"What about it?\\\"\\n} else if (word == \\\"Hello\\\") {\\n    response = \\\"Hi!\\\"\\n} else {\\n    response = \\\"I have no idea what you are talking about!\\\"\\n}\\nresponse\",\"var count = 0\\nfor (i <- 0 to 10) count = count + 1\\ncount\"]"
+      }
+    }
+  }, {
     "id" : 16,
     "compiler" : "markdown",
     "input" : {
@@ -262,24 +316,6 @@
       "code" : "def ??? : Nothing = throw new NotImplementedError\n\n//todo, but already compiles\ndef answerToLifeTheUniverseAndEverything() = ???\ndef question(s: String) = s match {\n  case \"the answer to life the universe and everything\" =>\n    answerToLifeTheUniverseAndEverything()\n  case _ => ???\n}\n\n//already done\ndef answerOnePlusOne() = 2\nanswerOnePlusOne()",
       "extraFields" : {
         "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(3,6)\",\"val verboseSum = new Function2[Int,Int,Int] {\\n    def apply(a: Int, b: Int): Int = a + b\\n}\\n\\nverboseSum(3,5)\",\"//equivalent: def changeCharacters(s: String, fun: Function1[Character, Character]) = {\\ndef changeCharacters(s: String, fun: Character => Character) = {\\n  val sb = new StringBuilder()\\n  val chars = s.toCharArray()\\n  for (i <- 0 until s.length()) {\\n    sb += fun(chars(i))\\n  }\\n  sb.toString\\n}\\n\\ndef capitalize(c: Character) = Character.toUpperCase(c)\\n\\nchangeCharacters(\\\"Hello, Scala!\\\", capitalize)\",\"def mul(a: Int, b: Int): Int = {\\n  return a * b \\n}  \\n\\ndef sub(a: Int, b: Int) = a - b\\n\\nval sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(8,sub(mul(2, 4), 5))\",\"def saySomething = {\\n  \\\"I don't know\\\" // ignored!\\n  \\\"Okay\\\"         // ignored!\\n  \\\"This is fun!\\\"\\n}\\n\\nsaySomething\"]"
-      }
-    }
-  }, {
-    "id" : 139,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n## For Loops",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 143,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "var count = 0\nfor (i <- 0 to 10) count = count + 1\ncount",
-      "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(3,6)\",\"val verboseSum = new Function2[Int,Int,Int] {\\n    def apply(a: Int, b: Int): Int = a + b\\n}\\n\\nverboseSum(3,5)\",\"//equivalent: def changeCharacters(s: String, fun: Function1[Character, Character]) = {\\ndef changeCharacters(s: String, fun: Character => Character) = {\\n  val sb = new StringBuilder()\\n  val chars = s.toCharArray()\\n  for (i <- 0 until s.length()) {\\n    sb += fun(chars(i))\\n  }\\n  sb.toString\\n}\\n\\ndef capitalize(c: Character) = Character.toUpperCase(c)\\n\\nchangeCharacters(\\\"Hello, Scala!\\\", capitalize)\",\"def mul(a: Int, b: Int): Int = {\\n  return a * b \\n}  \\n\\ndef sub(a: Int, b: Int) = a - b\\n\\nval sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(8,sub(mul(2, 4), 5))\",\"def saySomething = {\\n  \\\"I don't know\\\" // ignored!\\n  \\\"Okay\\\"         // ignored!\\n  \\\"This is fun!\\\"\\n}\\n\\nsaySomething\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\"]"
       }
     }
   }, {
@@ -468,42 +504,6 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 49,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n### Pattern Matching with Case Classes",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 50,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "def sum(tree: Node): Int = tree match {\n case Leaf(n) => n\n case Split(left, right) => sum(left) + sum(right)\n}\n\nsum(tree)",
-      "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(3,6)\",\"val verboseSum = new Function2[Int,Int,Int] {\\n    def apply(a: Int, b: Int): Int = a + b\\n}\\n\\nverboseSum(3,5)\",\"//equivalent: def changeCharacters(s: String, fun: Function1[Character, Character]) = {\\ndef changeCharacters(s: String, fun: Character => Character) = {\\n  val sb = new StringBuilder()\\n  val chars = s.toCharArray()\\n  for (i <- 0 until s.length()) {\\n    sb += fun(chars(i))\\n  }\\n  sb.toString\\n}\\n\\ndef capitalize(c: Character) = Character.toUpperCase(c)\\n\\nchangeCharacters(\\\"Hello, Scala!\\\", capitalize)\",\"def mul(a: Int, b: Int): Int = {\\n  return a * b \\n}  \\n\\ndef sub(a: Int, b: Int) = a - b\\n\\nval sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(8,sub(mul(2, 4), 5))\",\"def saySomething = {\\n  \\\"I don't know\\\" // ignored!\\n  \\\"Okay\\\"         // ignored!\\n  \\\"This is fun!\\\"\\n}\\n\\nsaySomething\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"def repeatNTimes(word: String, N: Int): String = {\\n    ???\\n}\\n\\ndef reverse(word: String): String = {\\n    ???\\n}\\n\\n//repeatNTimes(reverse(\\\"Test\\\"), 3)\",\"def depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"def addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"def addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => i.dropRight(1)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => i.dropRight(3)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => i.dropRight(2)\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\"]"
-      }
-    }
-  }, {
-    "id" : 51,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\nExercise: Write a pattern matcher to evaluate simple mathematical expressions with addition, subtraction, multiplication and division.",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 52,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "abstract class Term\ncase class I(i: Int) extends Term\ncase class Add(left: Term, right: Term) extends Term\ncase class Sub(left: Term, right: Term) extends Term\ncase class Mul(left: Term, right: Term) extends Term\ncase class Div(left: Term, right: Term) extends Term\n\ndef evaluate(expr: Term): Int = {\n  ???\n}\n\n//evaluate(Add(I(2), Sub(I(3), I(2))))",
-      "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(3,6)\",\"val verboseSum = new Function2[Int,Int,Int] {\\n    def apply(a: Int, b: Int): Int = a + b\\n}\\n\\nverboseSum(3,5)\",\"//equivalent: def changeCharacters(s: String, fun: Function1[Character, Character]) = {\\ndef changeCharacters(s: String, fun: Character => Character) = {\\n  val sb = new StringBuilder()\\n  val chars = s.toCharArray()\\n  for (i <- 0 until s.length()) {\\n    sb += fun(chars(i))\\n  }\\n  sb.toString\\n}\\n\\ndef capitalize(c: Character) = Character.toUpperCase(c)\\n\\nchangeCharacters(\\\"Hello, Scala!\\\", capitalize)\",\"def mul(a: Int, b: Int): Int = {\\n  return a * b \\n}  \\n\\ndef sub(a: Int, b: Int) = a - b\\n\\nval sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(8,sub(mul(2, 4), 5))\",\"def saySomething = {\\n  \\\"I don't know\\\" // ignored!\\n  \\\"Okay\\\"         // ignored!\\n  \\\"This is fun!\\\"\\n}\\n\\nsaySomething\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"def repeatNTimes(word: String, N: Int): String = {\\n    ???\\n}\\n\\ndef reverse(word: String): String = {\\n    ???\\n}\\n\\n//repeatNTimes(reverse(\\\"Test\\\"), 3)\",\"def depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"def addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"def addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => i.dropRight(1)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => i.dropRight(3)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => i.dropRight(2)\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\"]"
-      }
-    }
-  }, {
     "id" : 135,
     "compiler" : "markdown",
     "input" : {
@@ -519,24 +519,6 @@
       "code" : "abstract class Entity {\n    def label(): String\n}\n\nclass Person extends Entity {\n    override def label(): String = \"PER\"\n}\n\nval john = new Person()\njohn.label()",
       "extraFields" : {
         "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(3,6)\",\"val verboseSum = new Function2[Int,Int,Int] {\\n    def apply(a: Int, b: Int): Int = a + b\\n}\\n\\nverboseSum(3,5)\",\"//equivalent: def changeCharacters(s: String, fun: Function1[Character, Character]) = {\\ndef changeCharacters(s: String, fun: Character => Character) = {\\n  val sb = new StringBuilder()\\n  val chars = s.toCharArray()\\n  for (i <- 0 until s.length()) {\\n    sb += fun(chars(i))\\n  }\\n  sb.toString\\n}\\n\\ndef capitalize(c: Character) = Character.toUpperCase(c)\\n\\nchangeCharacters(\\\"Hello, Scala!\\\", capitalize)\",\"def mul(a: Int, b: Int): Int = {\\n  return a * b \\n}  \\n\\ndef sub(a: Int, b: Int) = a - b\\n\\nval sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(8,sub(mul(2, 4), 5))\",\"def saySomething = {\\n  \\\"I don't know\\\" // ignored!\\n  \\\"Okay\\\"         // ignored!\\n  \\\"This is fun!\\\"\\n}\\n\\nsaySomething\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"def repeatNTimes(word: String, N: Int): String = {\\n    ???\\n}\\n\\ndef reverse(word: String): String = {\\n    ???\\n}\\n\\n//repeatNTimes(reverse(\\\"Test\\\"), 3)\",\"def depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"def addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"def addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => i.dropRight(1)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => i.dropRight(3)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => i.dropRight(2)\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"abstract class Term\\ncase class I(i: Int) extends Term\\ncase class Add(left: Term, right: Term) extends Term\\ncase class Sub(left: Term, right: Term) extends Term\\ncase class Mul(left: Term, right: Term) extends Term\\ncase class Div(left: Term, right: Term) extends Term\\n\\ndef evaluate(expr: Term): Int = {\\n  ???\\n}\\n\\n//evaluate(Add(I(2), Sub(I(3), I(2))))\"]"
-      }
-    }
-  }, {
-    "id" : 137,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n### Traits",
-      "extraFields" : { }
-    }
-  }, {
-    "id" : 138,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "trait Label\ntrait Lemma",
-      "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(3,6)\",\"val verboseSum = new Function2[Int,Int,Int] {\\n    def apply(a: Int, b: Int): Int = a + b\\n}\\n\\nverboseSum(3,5)\",\"//equivalent: def changeCharacters(s: String, fun: Function1[Character, Character]) = {\\ndef changeCharacters(s: String, fun: Character => Character) = {\\n  val sb = new StringBuilder()\\n  val chars = s.toCharArray()\\n  for (i <- 0 until s.length()) {\\n    sb += fun(chars(i))\\n  }\\n  sb.toString\\n}\\n\\ndef capitalize(c: Character) = Character.toUpperCase(c)\\n\\nchangeCharacters(\\\"Hello, Scala!\\\", capitalize)\",\"def mul(a: Int, b: Int): Int = {\\n  return a * b \\n}  \\n\\ndef sub(a: Int, b: Int) = a - b\\n\\nval sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(8,sub(mul(2, 4), 5))\",\"def saySomething = {\\n  \\\"I don't know\\\" // ignored!\\n  \\\"Okay\\\"         // ignored!\\n  \\\"This is fun!\\\"\\n}\\n\\nsaySomething\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"def repeatNTimes(word: String, N: Int): String = {\\n    ???\\n}\\n\\ndef reverse(word: String): String = {\\n    ???\\n}\\n\\n//repeatNTimes(reverse(\\\"Test\\\"), 3)\",\"def depluralizer(word: String) =\\n   if (word.takeRight(4) == \\\"sses\\\" || word.takeRight(3) == \\\"ies\\\" )\\n        word.stripSuffix(\\\"es\\\")\\n   else if (word.takeRight(2) == \\\"ss\\\")\\n     word\\n   else\\n     word.stripSuffix(\\\"s\\\")\\n\\ndef exclamator(word: String) = word + \\\"!\\\"\\n\\ndepluralizer(\\\"businesses\\\")\",\"def addSuffix(stem: String, suffix: String): String = stem + suffix\\n\\nval addIng = addSuffix(_:String, \\\"ing\\\")\\n\\naddIng(\\\"Learn\\\")\",\"def addWords(w1: String)(w2: String)(w3: String): String =\\n  w1 + \\\" \\\" + w2 + \\\" \\\" + w3\\nval curried = addWords _\\nval soft = curried(\\\"soft\\\")\\nval kitty = soft(\\\"kitty\\\")\\nkitty(\\\"warm\\\")\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"def step1stemmer(word: String): String = {\\n word match {\\n   case i if (i.takeRight(1)==\\\"s\\\") => i.dropRight(1)\\n   case i if (i.takeRight(3)==\\\"ing\\\") => i.dropRight(3)\\n   case i if (i.takeRight(2)==\\\"ed\\\") => i.dropRight(2)\\n   case _ => word\\n }\\n}\\nstep1stemmer(\\\"learning\\\")\",\"def factorial(n: Int): Int = n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n}\\n\\nfactorial(5)\",\"def parseArgument(arg: String, value: Any): String =\\n  (arg, value) match {\\n case (\\\"-x\\\", x) => \\\"-x\\\" + x\\n case (\\\"-v\\\", v: Int) if (v<3) => \\\"-v < 3\\\"\\n case (\\\"-v\\\", weird_value) => \\\"-v weird value!!\\\"\\n case unk => \\\"An unknown argument: \\\" + unk\\n}\\nparseArgument(\\\"-v\\\", 0.5)\",\"abstract class Node\\ncase class Split(left: Node, right: Node) extends Node\\ncase class Leaf(value: Int) extends Node\\n\\nval tree = Split(Leaf(2),Split(Leaf(1),Leaf(10)))\",\"def sum(tree: Node): Int = tree match {\\n case Leaf(n) => n\\n case Split(left, right) => sum(left) + sum(right)\\n}\\n\\nsum(tree)\",\"abstract class Term\\ncase class I(i: Int) extends Term\\ncase class Add(left: Term, right: Term) extends Term\\ncase class Sub(left: Term, right: Term) extends Term\\ncase class Mul(left: Term, right: Term) extends Term\\ncase class Div(left: Term, right: Term) extends Term\\n\\ndef evaluate(expr: Term): Int = {\\n  ???\\n}\\n\\n//evaluate(Add(I(2), Sub(I(3), I(2))))\",\"abstract class Entity {\\n    def label(): String\\n}\\n\\nclass Person extends Entity {\\n    override def label(): String = \\\"PER\\\"\\n}\\n\\nval john = new Person()\\njohn.label()\"]"
       }
     }
   }, {
