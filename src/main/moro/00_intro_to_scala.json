@@ -135,11 +135,11 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "You might ask yourself: why should I use values and immutable structure? There are several reasons for and against using them. Immutable structures help with reasoning about the code, concurrency, make the code less prone to bugs (no references to take care of), etc. You can find a couple of thoughts abot that [here](http://stackoverflow.com/questions/214714/mutable-vs-immutable-objects) and [here](http://programmers.stackexchange.com/questions/151733/if-immutable-objects-are-good-why-do-people-keep-creating-mutable-objects).\nYou might also ask yourself: how do I change something in an immutable structure then? Easily - you copy it with a change in place :)\nHowever, you will see more in the rest of the tutorial.<span class=\"summary\"></span>",
+      "code" : "You might ask yourself: why should I use values and immutable structure? There are several reasons for and against using them. Immutable structures help with reasoning about the code, concurrency, make the code less prone to bugs (no references to take care of), etc. You can find a couple of thoughts about that [here](http://stackoverflow.com/questions/214714/mutable-vs-immutable-objects) and [here](http://programmers.stackexchange.com/questions/151733/if-immutable-objects-are-good-why-do-people-keep-creating-mutable-objects).\nYou might also ask yourself: how do I change something in an immutable structure then? Easily - you copy it with a change in place :)\nHowever, you will see more in the rest of the tutorial.<span class=\"summary\"></span>",
       "extraFields" : { }
     }
   }, {
-    "id" : 144,
+    "id" : 16,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -147,7 +147,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 145,
+    "id" : 17,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -157,7 +157,7 @@
       }
     }
   }, {
-    "id" : 146,
+    "id" : 18,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -165,7 +165,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 147,
+    "id" : 19,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -175,7 +175,7 @@
       }
     }
   }, {
-    "id" : 148,
+    "id" : 20,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -183,7 +183,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 149,
+    "id" : 21,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -193,7 +193,7 @@
       }
     }
   }, {
-    "id" : 16,
+    "id" : 22,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -201,7 +201,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 17,
+    "id" : 23,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -211,7 +211,7 @@
       }
     }
   }, {
-    "id" : 18,
+    "id" : 24,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -219,7 +219,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 19,
+    "id" : 25,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -227,7 +227,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 20,
+    "id" : 26,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -237,7 +237,7 @@
       }
     }
   }, {
-    "id" : 21,
+    "id" : 27,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -247,7 +247,7 @@
       }
     }
   }, {
-    "id" : 22,
+    "id" : 28,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -255,7 +255,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 23,
+    "id" : 29,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -265,7 +265,7 @@
       }
     }
   }, {
-    "id" : 24,
+    "id" : 30,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -273,7 +273,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 25,
+    "id" : 31,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -283,15 +283,15 @@
       }
     }
   }, {
-    "id" : 26,
+    "id" : 32,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\nThe last expression in the body of a function is its return value. Also, functions without arguments can be called without paranthesis.",
+      "code" : "<div class=\"newslide\"></div>\nThe last expression in the body of a function is its return value. Also, functions without arguments can be called without parenthesis.",
       "extraFields" : { }
     }
   }, {
-    "id" : 27,
+    "id" : 33,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -301,7 +301,7 @@
       }
     }
   }, {
-    "id" : 28,
+    "id" : 34,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -309,7 +309,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 29,
+    "id" : 35,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -319,7 +319,7 @@
       }
     }
   }, {
-    "id" : 30,
+    "id" : 36,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -327,7 +327,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 31,
+    "id" : 37,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -337,7 +337,7 @@
       }
     }
   }, {
-    "id" : 32,
+    "id" : 38,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -345,7 +345,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 140,
+    "id" : 39,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -353,7 +353,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 141,
+    "id" : 40,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -361,7 +361,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 142,
+    "id" : 41,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -369,7 +369,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 34,
+    "id" : 42,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -377,7 +377,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 35,
+    "id" : 43,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -387,7 +387,7 @@
       }
     }
   }, {
-    "id" : 36,
+    "id" : 44,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -395,7 +395,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 37,
+    "id" : 45,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -405,7 +405,7 @@
       }
     }
   }, {
-    "id" : 38,
+    "id" : 46,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -413,7 +413,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 39,
+    "id" : 47,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -423,7 +423,7 @@
       }
     }
   }, {
-    "id" : 40,
+    "id" : 48,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -431,7 +431,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 41,
+    "id" : 49,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -441,7 +441,7 @@
       }
     }
   }, {
-    "id" : 42,
+    "id" : 50,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -449,7 +449,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 43,
+    "id" : 51,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -459,7 +459,7 @@
       }
     }
   }, {
-    "id" : 44,
+    "id" : 52,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -467,7 +467,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 45,
+    "id" : 53,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -477,15 +477,15 @@
       }
     }
   }, {
-    "id" : 46,
+    "id" : 54,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n### Case Classes\n\nCase classes are regular Scala classes wtich export their constructor parameters and enable you to recursively decompose them with pattern matching.\n",
+      "code" : "<div class=\"newslide\"></div>\n\n### Case Classes\n\nCase classes are regular Scala classes which export their constructor parameters and enable you to recursively decompose them with pattern matching.\n",
       "extraFields" : { }
     }
   }, {
-    "id" : 47,
+    "id" : 55,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -496,7 +496,7 @@
       }
     }
   }, {
-    "id" : 48,
+    "id" : 56,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -504,7 +504,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 135,
+    "id" : 57,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -512,7 +512,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 136,
+    "id" : 58,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -522,7 +522,7 @@
       }
     }
   }, {
-    "id" : 53,
+    "id" : 59,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -530,23 +530,23 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 54,
+    "id" : 60,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "In Scala, collections are a set of useful classes and interfaces which enable you (efficient) data storage, and processing. They are divided in mutable and immutable structures (check more about this [here](http://docs.scala-lang.org/overviews/collections/overview.html)).\n\nBefore going further, just a small word on preformance:\nknow your data structures! Whatever you are using, if you are concerned with performance, [documentation](http://docs.scala-lang.org/overviews/collections/performance-characteristics.html) is your best friend!",
+      "code" : "In Scala, collections are a set of useful classes and interfaces which enable you (efficient) data storage, and processing. They are divided in mutable and immutable structures (check more about this [here](http://docs.scala-lang.org/overviews/collections/overview.html)).\n\nBefore going further, just a small word on performance:\nknow your data structures! Whatever you are using, if you are concerned with performance, [documentation](http://docs.scala-lang.org/overviews/collections/performance-characteristics.html) is your best friend!",
       "extraFields" : { }
     }
   }, {
-    "id" : 55,
+    "id" : 61,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n### Lists\n\nScala lists are an ubiquitous data structure, in its essence a simple [linked lists](https://en.wikipedia.org/wiki/Linked_list) ([#ScalaDoc](http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List)), coming in both immutable and mutable flavor.\n\nLet's first construct a simple list:",
+      "code" : "<div class=\"newslide\"></div>\n\n### Lists\n\nScala lists are an ubiquitous data structure, in its essence a simple [linked lists](https://en.wikipedia.org/wiki/Linked_list) ([#ScalaDoc](http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List)), coming in both immutable and mutable flavour.\n\nLet's first construct a simple list:",
       "extraFields" : { }
     }
   }, {
-    "id" : 56,
+    "id" : 62,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -556,7 +556,7 @@
       }
     }
   }, {
-    "id" : 57,
+    "id" : 63,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -564,7 +564,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 58,
+    "id" : 64,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -574,7 +574,7 @@
       }
     }
   }, {
-    "id" : 59,
+    "id" : 65,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -582,7 +582,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 60,
+    "id" : 66,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -592,7 +592,7 @@
       }
     }
   }, {
-    "id" : 61,
+    "id" : 67,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -600,7 +600,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 62,
+    "id" : 68,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -610,7 +610,7 @@
       }
     }
   }, {
-    "id" : 63,
+    "id" : 69,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -618,7 +618,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 64,
+    "id" : 70,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -628,7 +628,7 @@
       }
     }
   }, {
-    "id" : 65,
+    "id" : 71,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -636,7 +636,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 66,
+    "id" : 72,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -646,15 +646,15 @@
       }
     }
   }, {
-    "id" : 67,
+    "id" : 73,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\nFor more details on lists, including other useful methods chech the [documentation](http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List) or a [random tutorial](http://www.tutorialspoint.com/scala/scala_lists.htm).",
+      "code" : "\nFor more details on lists, including other useful methods check the [documentation](http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List) or a [random tutorial](http://www.tutorialspoint.com/scala/scala_lists.htm).",
       "extraFields" : { }
     }
   }, {
-    "id" : 68,
+    "id" : 74,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -662,7 +662,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 69,
+    "id" : 75,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -672,7 +672,7 @@
       }
     }
   }, {
-    "id" : 70,
+    "id" : 76,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -680,7 +680,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 71,
+    "id" : 77,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -690,7 +690,7 @@
       }
     }
   }, {
-    "id" : 72,
+    "id" : 78,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -698,7 +698,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 73,
+    "id" : 79,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -708,7 +708,7 @@
       }
     }
   }, {
-    "id" : 74,
+    "id" : 80,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -716,7 +716,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 75,
+    "id" : 81,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -726,7 +726,7 @@
       }
     }
   }, {
-    "id" : 76,
+    "id" : 82,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -734,7 +734,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 77,
+    "id" : 83,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -744,7 +744,7 @@
       }
     }
   }, {
-    "id" : 78,
+    "id" : 84,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -752,7 +752,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 79,
+    "id" : 85,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -762,7 +762,7 @@
       }
     }
   }, {
-    "id" : 80,
+    "id" : 86,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -770,7 +770,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 81,
+    "id" : 87,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -780,7 +780,7 @@
       }
     }
   }, {
-    "id" : 82,
+    "id" : 88,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -788,7 +788,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 83,
+    "id" : 89,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -798,7 +798,7 @@
       }
     }
   }, {
-    "id" : 84,
+    "id" : 90,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -806,7 +806,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 85,
+    "id" : 91,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -816,7 +816,7 @@
       }
     }
   }, {
-    "id" : 86,
+    "id" : 92,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -824,7 +824,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 87,
+    "id" : 93,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -834,7 +834,7 @@
       }
     }
   }, {
-    "id" : 88,
+    "id" : 94,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -842,7 +842,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 89,
+    "id" : 95,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -852,7 +852,7 @@
       }
     }
   }, {
-    "id" : 90,
+    "id" : 96,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -860,7 +860,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 91,
+    "id" : 97,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -870,7 +870,7 @@
       }
     }
   }, {
-    "id" : 92,
+    "id" : 98,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -878,7 +878,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 93,
+    "id" : 99,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -888,7 +888,7 @@
       }
     }
   }, {
-    "id" : 94,
+    "id" : 100,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -896,7 +896,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 95,
+    "id" : 101,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -904,7 +904,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 96,
+    "id" : 102,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -914,7 +914,7 @@
       }
     }
   }, {
-    "id" : 97,
+    "id" : 103,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -922,7 +922,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 98,
+    "id" : 104,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -932,7 +932,7 @@
       }
     }
   }, {
-    "id" : 99,
+    "id" : 105,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -940,7 +940,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 100,
+    "id" : 106,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -950,7 +950,7 @@
       }
     }
   }, {
-    "id" : 101,
+    "id" : 107,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -958,7 +958,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 102,
+    "id" : 108,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -966,7 +966,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 103,
+    "id" : 109,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -976,7 +976,7 @@
       }
     }
   }, {
-    "id" : 104,
+    "id" : 110,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -984,7 +984,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 105,
+    "id" : 111,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -992,7 +992,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 106,
+    "id" : 112,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1002,7 +1002,7 @@
       }
     }
   }, {
-    "id" : 107,
+    "id" : 113,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1010,7 +1010,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 108,
+    "id" : 114,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1020,7 +1020,7 @@
       }
     }
   }, {
-    "id" : 109,
+    "id" : 115,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1028,7 +1028,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 110,
+    "id" : 116,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1038,7 +1038,7 @@
       }
     }
   }, {
-    "id" : 111,
+    "id" : 117,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1046,7 +1046,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 112,
+    "id" : 118,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1056,7 +1056,7 @@
       }
     }
   }, {
-    "id" : 113,
+    "id" : 119,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1064,7 +1064,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 114,
+    "id" : 120,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1072,7 +1072,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 115,
+    "id" : 121,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1082,7 +1082,7 @@
       }
     }
   }, {
-    "id" : 116,
+    "id" : 122,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1090,7 +1090,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 117,
+    "id" : 123,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1100,7 +1100,7 @@
       }
     }
   }, {
-    "id" : 118,
+    "id" : 124,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1108,7 +1108,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 119,
+    "id" : 125,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1118,7 +1118,7 @@
       }
     }
   }, {
-    "id" : 120,
+    "id" : 126,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1126,7 +1126,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 121,
+    "id" : 127,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1136,7 +1136,7 @@
       }
     }
   }, {
-    "id" : 122,
+    "id" : 128,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1144,7 +1144,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 123,
+    "id" : 129,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1154,7 +1154,7 @@
       }
     }
   }, {
-    "id" : 124,
+    "id" : 130,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1162,7 +1162,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 125,
+    "id" : 131,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1170,7 +1170,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 126,
+    "id" : 132,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1180,7 +1180,7 @@
       }
     }
   }, {
-    "id" : 127,
+    "id" : 133,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1188,7 +1188,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 128,
+    "id" : 134,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
@@ -1198,7 +1198,7 @@
       }
     }
   }, {
-    "id" : 129,
+    "id" : 135,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
@@ -1206,7 +1206,7 @@
       "extraFields" : { }
     }
   }, {
-    "id" : 130,
+    "id" : 136,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
