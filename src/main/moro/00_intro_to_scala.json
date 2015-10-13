@@ -135,7 +135,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "You might ask yourself: why should I use values and immutable structure? There are several reasons for and against using them. Immutable structures help with reasoning about the code, concurrency, make the code less prone to bugs (no references to take care of), etc. You can find a couple of thoughts abot that [here](http://stackoverflow.com/questions/214714/mutable-vs-immutable-objects) and [here](http://programmers.stackexchange.com/questions/151733/if-immutable-objects-are-good-why-do-people-keep-creating-mutable-objects).\nYou might also ask yourself: how do I change something in an immutable structure then? Easily - you copy it with a change in place :)\nHowever, you will see more in the rest of the tutorial.<span class=\"summary\"></span>",
+      "code" : "You might ask yourself: why should I use values and immutable structure? There are several reasons for and against using them. Immutable structures help with reasoning about the code, concurrency, make the code less prone to bugs (no references to take care of), etc. You can find a couple of thoughts about that [here](http://stackoverflow.com/questions/214714/mutable-vs-immutable-objects) and [here](http://programmers.stackexchange.com/questions/151733/if-immutable-objects-are-good-why-do-people-keep-creating-mutable-objects).\nYou might also ask yourself: how do I change something in an immutable structure then? Easily - you copy it with a change in place :)\nHowever, you will see more in the rest of the tutorial.<span class=\"summary\"></span>",
       "extraFields" : { }
     }
   }, {
@@ -287,7 +287,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\nThe last expression in the body of a function is its return value. Also, functions without arguments can be called without paranthesis.",
+      "code" : "<div class=\"newslide\"></div>\nThe last expression in the body of a function is its return value. Also, functions without arguments can be called without parenthesis.",
       "extraFields" : { }
     }
   }, {
@@ -367,7 +367,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n### Case Classes\n\nCase classes are regular Scala classes wtich export their constructor parameters and enable you to recursively decompose them with pattern matching. You don't have to write `new`!",
+      "code" : "<div class=\"newslide\"></div>\n\n### Case Classes\n\nCase classes are regular Scala classes which export their constructor parameters and enable you to recursively decompose them with pattern matching. You don't have to write `new`!",
       "extraFields" : { }
     }
   }, {
@@ -503,7 +503,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "In Scala, collections are a set of useful classes and interfaces which enable you (efficient) data storage, and processing. They are divided in mutable and immutable structures (check more about this [here](http://docs.scala-lang.org/overviews/collections/overview.html)).\n\nBefore going further, just a small word on preformance:\nknow your data structures! Whatever you are using, if you are concerned with performance, [documentation](http://docs.scala-lang.org/overviews/collections/performance-characteristics.html) is your best friend!",
+      "code" : "In Scala, collections are a set of useful classes and interfaces which enable you (efficient) data storage, and processing. They are divided in mutable and immutable structures (check more about this [here](http://docs.scala-lang.org/overviews/collections/overview.html)).\n\nBefore going further, just a small word on performance:\nknow your data structures! Whatever you are using, if you are concerned with performance, [documentation](http://docs.scala-lang.org/overviews/collections/performance-characteristics.html) is your best friend!",
       "extraFields" : { }
     }
   }, {
@@ -511,7 +511,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n### Lists\n\nScala lists are an ubiquitous data structure, in its essence a simple [linked lists](https://en.wikipedia.org/wiki/Linked_list) ([#ScalaDoc](http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List)), coming in both immutable and mutable flavor.\n\nLet's first construct a simple list:",
+      "code" : "<div class=\"newslide\"></div>\n\n### Lists\n\nScala lists are an ubiquitous data structure, in its essence a simple [linked lists](https://en.wikipedia.org/wiki/Linked_list) ([#ScalaDoc](http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List)), coming in both immutable and mutable flavour.\n\nLet's first construct a simple list:",
       "extraFields" : { }
     }
   }, {
@@ -619,7 +619,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\nFor more details on lists, including other useful methods chech the [documentation](http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List) or a [random tutorial](http://www.tutorialspoint.com/scala/scala_lists.htm).",
+      "code" : "\nFor more details on lists, including other useful methods check the [documentation](http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List) or a [random tutorial](http://www.tutorialspoint.com/scala/scala_lists.htm).",
       "extraFields" : { }
     }
   }, {
