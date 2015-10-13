@@ -341,7 +341,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "- Exercise: Write a function that repeats a word N times.\n- Exercise: Write a function that reverses a word.",
+      "code" : "<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Write a function that repeats a word N times.</div>    \n</div>\n<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Write a function that reverses a word.</div>    \n</div>",
       "extraFields" : { }
     }
   }, {
@@ -459,7 +459,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\nExercise: Write a function that calculates the Nth fibonacci number.\n\n\\\\(F_n = F_{n-1} + F_{n-2},\\quad F_0 = 0,\\quad F_1 = 1\\\\)",
+      "code" : "<div class=\"newslide\"></div>\n\n<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Write a function that calculates the Nth fibonacci number.</div>    \n</div>\n\n\\\\(F_n = F_{n-1} + F_{n-2},\\quad F_0 = 0,\\quad F_1 = 1\\\\)",
       "extraFields" : { }
     }
   }, {
@@ -1029,7 +1029,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Exercise: group words by their first letter",
+      "code" : "<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Group words by their first letter</div>    \n</div>",
       "extraFields" : { }
     }
   }, {
@@ -1127,7 +1127,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Exercise: do the same by using the foldLeft function.",
+      "code" : "<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Do the same by using the foldLeft function.</div>    \n</div>",
       "extraFields" : { }
     }
   }, {
