@@ -37,9 +37,9 @@ Remarks:
 ### Download Data
 To download the OHHLA files
 
-    scripts/download_ohhla.sh j_live
-    scripts/download_ohhla_txt.sh YFA_roots.html
-    scripts/download_ohhla_txt.sh YFA_rakim.html
+    ./scripts/download_ohhla.sh j_live
+    ./scripts/download_ohhla_txt.sh YFA_roots.html
+    ./scripts/download_ohhla_txt.sh YFA_rakim.html
     
 
 ## Browse the Book
