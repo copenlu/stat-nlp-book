@@ -459,7 +459,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\n<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Write a function that calculates the Nth fibonacci number.</div>    \n</div>\n\n\\\\(F_n = F_{n-1} + F_{n-2},\\quad F_0 = 0,\\quad F_1 = 1\\\\)",
+      "code" : "<div class=\"newslide\"></div>\n\nExercise: Write a function that calculates the Nth fibonacci number.\n\n\\\\(F_n = F_{n-1} + F_{n-2},\\quad F_0 = 0,\\quad F_1 = 1\\\\)",
       "extraFields" : { }
     }
   }, {
@@ -529,7 +529,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\nVery useful methods on lists are head and tail. Head of a list is the first element of a list:",
+      "code" : "<div class=\"newslide\"></div>\nVery useful methods on lists are head and tail. Head of a list is the first element of a list:",
       "extraFields" : { }
     }
   }, {
@@ -565,7 +565,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\nLists allow quick addition of an element to the beginning to the list (prepending):",
+      "code" : "<div class=\"newslide\"></div>\nLists allow quick addition of an element to the beginning to the list (prepending):",
       "extraFields" : { }
     }
   }, {
@@ -583,7 +583,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\nConcatenating two lists:",
+      "code" : "<div class=\"newslide\"></div>\nConcatenating two lists:",
       "extraFields" : { }
     }
   }, {
@@ -601,7 +601,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "A frequently useful method is getting unique elements from a list:",
+      "code" : "<div class=\"newslide\"></div>\nA frequently useful method is getting unique elements from a list:",
       "extraFields" : { }
     }
   }, {
@@ -645,7 +645,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "And some of the most useful methods on lists are [union](https://en.wikipedia.org/wiki/Union_\\(set_theory\\)):",
+      "code" : "<div class=\"newslide\"></div>\nAnd some of the most useful methods on lists are [union](https://en.wikipedia.org/wiki/Union_\\(set_theory\\)):",
       "extraFields" : { }
     }
   }, {
@@ -663,7 +663,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "[intersection](https://en.wikipedia.org/wiki/Intersection_\\(set_theory\\)):",
+      "code" : "<div class=\"newslide\"></div>\n[intersection](https://en.wikipedia.org/wiki/Intersection_\\(set_theory\\)):",
       "extraFields" : { }
     }
   }, {
@@ -717,7 +717,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "\nFetching the value of a specific key in the map:",
+      "code" : "<div class=\"newslide\"></div>\nFetching the value of a specific key in the map:",
       "extraFields" : { }
     }
   }, {
@@ -1029,7 +1029,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Group words by their first letter</div>    \n</div>",
+      "code" : "Exercise: group words by their first letter",
       "extraFields" : { }
     }
   }, {
@@ -1127,7 +1127,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Do the same by using the foldLeft function.</div>    \n</div>",
+      "code" : "Exercise: do the same by using the foldLeft function.",
       "extraFields" : { }
     }
   }, {
@@ -1179,7 +1179,7 @@
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "object SentenceSplitter extends (String => Seq[String]) {\n  override def apply(v1: String): Seq[String] =\n    v1.split(\"[.!?]\").toList\n}\nobject TokenSplitter extends (Seq[String] => Seq[Seq[String]]) {\n  override def apply(v1: Seq[String]): Seq[Seq[String]] =\n    v1.map(s => s.split(\" \").toList)\n}\nval pipeline = SentenceSplitter andThen TokenSplitter\npipeline(\"Of course, the whole point of a Doomsday Machine \" +\n         \"is lost, if you *keep* it a *secret*! Why didn't \" +\n         \"you tell the world, EH?\")",
+      "code" : "object SentenceSplitter extends (String => Seq[String]) {\n  override def apply(v1: String): Seq[String] =\n    v1.split(\"[.!?]\").toList\n}\nobject TokenSplitter extends (Seq[String] => Seq[Seq[String]]) {\n  override def apply(v1: Seq[String]): Seq[Seq[String]] =\n    v1.map(s => s.split(\" \").toList)\n}\nval pipeline = SentenceSplitter andThen TokenSplitter\npipeline(\"Of course, the whole point of a Doomsday Machine \" +\n         \"is lost, if you *keep* it a *secret*! Why didn't \" +\n         \"you tell the world, EH?\")list",
       "extraFields" : {
         "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"val word = \\\"Hello\\\"\\nvar response = \\\"\\\"\\n\\nif (word == \\\"world\\\") {\\n    response = \\\"What about it?\\\"\\n} else if (word == \\\"Hello\\\") {\\n    response = \\\"Hi!\\\"\\n} else {\\n    response = \\\"I have no idea what you are talking about!\\\"\\n}\\nresponse\",\"var count = 0\\nfor (i <- 0 to 10) count = count + i\\ncount\",\"var count = 0\\nvar i = 0\\nwhile (i < 10) {\\n    i = i + 1\\n    count = count + i\\n}\\ncount\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(3,6)\",\"val verboseSum = new Function2[Int,Int,Int] {\\n    def apply(a: Int, b: Int): Int = a + b\\n}\\n\\nverboseSum(3,5)\",\"//equivalent: def changeCharacters(s: String, fun: Function1[Character, Character]) = {\\ndef changeCharacters(s: String, fun: Character => Character) = {\\n  val sb = new StringBuilder()\\n  val chars = s.toCharArray()\\n  for (i <- 0 until s.length()) {\\n    sb += fun(chars(i))\\n  }\\n  sb.toString\\n}\\n\\ndef capitalize(c: Character) = Character.toUpperCase(c)\\n\\nchangeCharacters(\\\"Hello, Scala!\\\", capitalize)\",\"def mul(a: Int, b: Int): Int = {\\n  return a * b \\n}  \\n\\ndef sub(a: Int, b: Int) = a - b\\n\\nval sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(8,sub(mul(2, 4), 5))\",\"def saySomething = {\\n  \\\"I don't know\\\" // ignored!\\n  \\\"Okay\\\"         // ignored!\\n  \\\"This is fun!\\\"\\n}\\n\\nsaySomething\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = s match {\\n  case \\\"the answer to life the universe and everything\\\" =>\\n    answerToLifeTheUniverseAndEverything()\\n  case _ => ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"def repeatNTimes(word: String, N: Int): String = {\\n    ???\\n}\\n\\ndef reverse(word: String): String = {\\n    ???\\n}\\n\\n//repeatNTimes(reverse(\\\"Test\\\"), 3)\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"class TokenVerbose(name: String)\\ncase class Token(name: String)\\n\\nval test1 = new TokenVerbose(\\\"Test1\\\")\\nval test2 = Token(\\\"Test2\\\")\\nval test3 = Token(\\\"Test2\\\")\\n\\ntest2 == test3\",\"case class Sentence(tokens: Seq[String])\\ncase class Document(sentences: Seq[Sentence])\\n\\nval docs = Seq(\\n    Document(Seq(Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"Scala\\\", \\\".\\\")))),\\n    Document(Seq(Sentence(Seq(\\\"Really\\\", \\\"?\\\")),\\n                 Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"NLP\\\", \\\".\\\")))))\\n\\nvar shortTokens = 0\\nfor (doc <- docs)\\n  for (sentence <- doc.sentences)\\n    for (token <- sentence.tokens)\\n      if (token.length < 3) shortTokens += 1\\nshortTokens\",\"shortTokens = 0\\nfor (doc <- docs)\\n  for (sentence <- doc.sentences)\\n    for (token <- sentence.tokens)\\n      if (token.length < 3) shortTokens += 1\\nshortTokens\",\"shortTokens = 0\\nfor {\\n  doc <- docs\\n  sentence <- doc.sentences\\n  token <- sentence.tokens\\n  if token.length < 3\\n} shortTokens += 1\\nshortTokens\",\"val pattern = \\\"\\\"\\\"(\\\\w*) Inc\\\"\\\"\\\".r\\nval word: Any = \\\"Google Inc\\\"\\nword match {\\n    case \\\"Microsoft\\\" | \\\"Yahoo\\\" => \\\"We can match Strings\\\"\\n    case pattern(name) => s\\\"There is an incorporated company named $name\\\"\\n    case (\\\"Twitter\\\", \\\"Facebook\\\") => \\\"Data Structures\\\"\\n    case List(\\\"A\\\", \\\"B\\\", \\\"C\\\") => \\\"...and lists etc.!\\\"\\n    case Token(\\\"LinkedIn\\\") => \\\"...and even the content inside Case Classes!\\\"\\n}\",\"def factorial(n: Int): Int = n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n}\\n\\nfactorial(5)\",\"def fibonacci(n: Int): Int = n match {\\n  case _ => ???\\n}\\n\\n//fibonacci(19) == 4181\",\"trait LanguageModel {\\n  def order:Int     \\n  def vocab:Set[String]\\n  def probability(word:String, history:String*):Double    \\n}\\n\\ncase class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\n\\ncase class MyFancyLM(vocab:Set[String]) extends LanguageModel {\\n  def order = ???\\n  def probability(word:String, history:String*) = ???\\n}\\n\\nval vocab = Set(\\\"This\\\",\\\"is\\\",\\\"a\\\",\\\"test\\\", \\\"!\\\")\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"test\\\")\",\"val tokens1 = List(\\\"All\\\", \\\"work\\\", \\\"and\\\", \\\"no\\\", \\\"play\\\", \\\"makes\\\",\\n                   \\\"Jack\\\", \\\"a\\\", \\\"dull\\\", \\\"boy\\\", \\\".\\\")\\ntokens1\",\"tokens1.head\",\"tokens1.tail\",\"\\\"Jack Torrance: \\\" :: tokens1\",\"val tokens2 = List(\\\"Jack\\\", \\\"!\\\", \\\"What\\\", \\\"...\\\", \\\"are\\\", \\\"you\\\", \\\"?\\\")\\ntokens2\\nval tokens3 = tokens1 ++ tokens2\\ntokens3\",\"tokens3.distinct\",\"val words1 = Set(\\\"Do\\\", \\\",\\\", \\\"or\\\", \\\"do\\\", \\\"not\\\", \\\".\\\",\\n                 \\\"There\\\", \\\"is\\\", \\\"no\\\", \\\"try\\\", \\\".\\\")\\nwords1\\n\\nval words2 = Set(\\\"A\\\", \\\"martini\\\", \\\".\\\",\\n                 \\\"Shaken\\\", \\\",\\\", \\\"not\\\", \\\"stirred\\\", \\\".\\\")\",\"words1 union words2\",\"words1 intersect words2\",\"words1 diff words2\",\"val lemmas = Map(\\\"saving\\\" -> \\\"save\\\", \\\"tokens\\\" -> \\\"token\\\",\\n                 \\\"token\\\" -> \\\"token\\\", \\\"occurring\\\" -> \\\"occur\\\")\\nlemmas\",\"lemmas(\\\"tokens\\\")\",\"lemmas.keySet\",\"val wordCount = (\\\"like\\\", 2)\",\"wordCount._1\\nwordCount._2\",\"\\\"like\\\" -> 2 == (\\\"like\\\", 2)\",\"val lemmaOpt1 = lemmas.get(\\\"tokens\\\")\\nlemmaOpt1\\nlemmaOpt1.get\",\"val lemmaOpt2 = lemmas.get(\\\"Open the pod bay doors, HAL.\\\")\\nlemmaOpt2\\n\\nif (lemmaOpt2.isDefined)\\n  lemmaOpt2.get\\nelse\\n  \\\"I'm sorry, Dave.\\\"\",\"lemmaOpt2.getOrElse(\\\"I'm afraid I can't do that.\\\").toString\",\"val sentences = List(\\\"Daisy, Daisy, give me your answer do.\\\",\\n                     \\\"I'm half crazy all for the love of you.\\\")\\n//sentences.head.toCharArray.map(c => c.toLower).mkString\",\"  def dyingHAL(string: String) = {\\n    string.toCharArray.map(c => {\\n      val p = math.random\\n      if (p > .3) c.toLower\\n      else if (p > .05) c.toUpper\\n      else '-'\\n    }).mkString\\n  }\\n  \\n  sentences.map(dyingHAL).mkString(\\\" \\\")\",\"val text = \\\"It's not pining, it's passed on! This parrot is no more! It has ceased to be! It's expired and gone to meet its maker! This is a late parrot! It's a stiff! Bereft of life, it rests in peace! If you hadn't nailed it to the perch, it would be pushing up the daisies! It's rung down the curtain and joined the choir invisible! This is an ex-parrot!\\\";\",\"val sentences = text.split('!')\\nval words = sentences.map(_.split(' ')).flatten.toList\\nwords.take(10)\",\"val alternative = sentences.flatMap(_.split(' ')).toList\\nalternative.take(10)\",\"val filtered = words.filter(_.length > 0).map(_.toLowerCase)\\n\\n\\nfiltered.toList.take(5)\",\"val stopwords = Set(\\\"the\\\", \\\"an\\\")\\nwords.filter(x => x.length > 0 && !stopwords.contains(x)).toList.take(10)\",\"val grouped = filtered.groupBy(x => x)\",\"val occurrences = grouped.mapValues(x => x.length)\",\"occurrences.maxBy(_._2)\",\"val totalOccurrences = occurrences.foldLeft(0)((count, x) => count + x._2)\",\"val frequencies = occurrences.mapValues(_ / totalOccurrences.toDouble)\",\"var count = 0.0\\nfrequencies.foreach(x => count += x._2)\\ncount\",\"def sigmoid(θ: Double) = 1 / (1 + math.exp(-θ))\\nsigmoid(3)\\n\\ndef plusOne(i: Double) = i + 1\\nval fun1 = sigmoid _ compose plusOne\\nfun1(2) //sigmoid(plusOne(2))\",\"val fun2 = sigmoid _ andThen plusOne\\nfun2(3) //plusOne(sigmoid(3))\\n(sigmoid _ andThen plusOne)(9) == (plusOne _ compose sigmoid)(9)\"]"
       }
