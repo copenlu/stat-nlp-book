@@ -54,8 +54,9 @@ You can write code in IntelliJ and access it from moro after you compile it (eit
 To import the stat-nlp-book project to IntelliJ:
 
 1. Open IntelliJ
-2. Import Project and select the stat-nlp-book directory
-3. Select Import project from external module and SBT under it
+2. Select *Import Project* and select the stat-nlp-book directory
+3. Select *Import project from external module* and SBT under it
+4. Select ok with the default settings for the next widnows
 
 ## Contact your TAs
 
