@@ -51,6 +51,11 @@ Once you have the book running (step 6), proceed to the COMPGI19 entry point [he
 
 You can write code in IntelliJ and access it from moro after you compile it (either through IntelliJ or sbt)
 
+To import the stat-nlp-book project to IntelliJ:
+
+1. Open IntelliJ
+2. Import Project and select the stat-nlp-book directory
+3. Select Import project from external module and SBT under it
 
 ## Contact your TAs
 
