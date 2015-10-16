@@ -59,8 +59,8 @@ To import the stat-nlp-book project to IntelliJ:
 
 1. Open IntelliJ
 2. Select *Import Project* and select the stat-nlp-book directory
-3. Select *Import project from external module* and SBT under it
-4. Select ok with the default settings for the next widnows
+3. Select *Import project from external module* and SBT under it, and click on OK.
+4. In the next window select auto-import and continue with importing.
 
 ## Contact your TAs
 
