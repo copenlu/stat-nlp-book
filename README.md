@@ -36,7 +36,7 @@ Remarks:
     
 
 ### Download Data
-To download the OHHLA files
+To download the OHHLA files, execute the following in your stat-nlp-book folder (NOT in the script folder)
 
     ./scripts/download_ohhla.sh j_live
     ./scripts/download_ohhla_txt.sh YFA_roots.html
