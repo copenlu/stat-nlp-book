@@ -67,29 +67,27 @@
       }
     }
   }, {
-    "id" : 135,
+    "id" : 127,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Remember that when you don't specify the type, Scala infers it automatically, and in some cases can do that in ways you dislike:",
+      "code" : "However, be aware that Scala's automatic type inference doesn't have to work like you want it to:",
       "extraFields" : { }
     }
   }, {
-    "id" : 136,
+    "id" : 128,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
       "code" : "22 / 23",
-      "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\"]"
-      }
+      "extraFields" : { }
     }
   }, {
-    "id" : 137,
+    "id" : 129,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "As here, where by infering that both values are Integer, Scala uses integer division, which might is bad when calculating probabilities.",
+      "code" : "In this case, having two Integers, Scala infers that it needs to use integer division, which is wrong if you wanted to get a decimal value.",
       "extraFields" : { }
     }
   }, {
@@ -259,7 +257,7 @@
       "sessionId" : null,
       "code" : "val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\n\nsum(3,6)",
       "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"val word = \\\"Hello\\\"\\nvar response = \\\"\\\"\\n\\nif (word == \\\"world\\\") {\\n    response = \\\"What about it?\\\"\\n} else if (word == \\\"Hello\\\") {\\n    response = \\\"Hi!\\\"\\n} else {\\n    response = \\\"I have no idea what you are talking about!\\\"\\n}\\nresponse\",\"var count = 0\\nfor (i <- 0 to 10) count = count + i\\ncount\",\"var count = 0\\nvar i = 0\\nwhile (i < 10) {\\n    i = i + 1\\n    count = count + i\\n}\\ncount\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\"]"
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"22 / 23\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"val word = \\\"Hello\\\"\\nvar response = \\\"\\\"\\n\\nif (word == \\\"world\\\") {\\n    response = \\\"What about it?\\\"\\n} else if (word == \\\"Hello\\\") {\\n    response = \\\"Hi!\\\"\\n} else {\\n    response = \\\"I have no idea what you are talking about!\\\"\\n}\\nresponse\",\"var count = 0\\nfor (i <- 0 to 10) count = count + i\\ncount\",\"var count = 0\\nvar i = 0\\nwhile (i < 10) {\\n    i = i + 1\\n    count = count + i\\n}\\ncount\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\"]"
       }
     }
   }, {
@@ -273,19 +271,19 @@
       }
     }
   }, {
-    "id" : 138,
+    "id" : 130,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "And should you want to create a function which does not return anything (`void` in C), use `Unit`as return type:",
+      "code" : "If you don't want your function to return a value (like `void` in C), use `Unit`as a return value:",
       "extraFields" : { }
     }
   }, {
-    "id" : 139,
+    "id" : 131,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "// println does not return anything\ndef printSum(a: Int, b: Int) = println(a + b)\n// you will get an empty result, as moro prints out the returning value, which does not exist in this case\nprintSum(15, 779)",
+      "code" : "// println does not return a value\ndef printSum(a: Int, b: Int): Unit = println(a + b)\n// moro prints out the return value, which is non-existent in this case!\nprintSum(15, 667)",
       "extraFields" : {
         "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"22 / 23\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"val word = \\\"Hello\\\"\\nvar response = \\\"\\\"\\n\\nif (word == \\\"world\\\") {\\n    response = \\\"What about it?\\\"\\n} else if (word == \\\"Hello\\\") {\\n    response = \\\"Hi!\\\"\\n} else {\\n    response = \\\"I have no idea what you are talking about!\\\"\\n}\\nresponse\",\"var count = 0\\nfor (i <- 0 to 10) count = count + i\\ncount\",\"var count = 0\\nvar i = 0\\nwhile (i < 10) {\\n    i = i + 1\\n    count = count + i\\n}\\ncount\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(3,6)\",\"val verboseSum = new Function2[Int,Int,Int] {\\n    def apply(a: Int, b: Int): Int = a + b\\n}\\n\\nverboseSum(3,5)\"]"
       }
@@ -359,7 +357,7 @@
       "sessionId" : null,
       "code" : "def ??? : Nothing = throw new NotImplementedError\n\n//todo, but already compiles\ndef answerToLifeTheUniverseAndEverything() = ???\ndef question(s: String) = {\n    if (s == \"the answer to life the universe and everything\")\n        answerToLifeTheUniverseAndEverything()\n    else\n        ???\n}\n\n//already done\ndef answerOnePlusOne() = 2\nanswerOnePlusOne()",
       "extraFields" : {
-        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"22 / 23\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"val word = \\\"Hello\\\"\\nvar response = \\\"\\\"\\n\\nif (word == \\\"world\\\") {\\n    response = \\\"What about it?\\\"\\n} else if (word == \\\"Hello\\\") {\\n    response = \\\"Hi!\\\"\\n} else {\\n    response = \\\"I have no idea what you are talking about!\\\"\\n}\\nresponse\",\"var count = 0\\nfor (i <- 0 to 10) count = count + i\\ncount\",\"var count = 0\\nvar i = 0\\nwhile (i < 10) {\\n    i = i + 1\\n    count = count + i\\n}\\ncount\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(3,6)\",\"val verboseSum = new Function2[Int,Int,Int] {\\n    def apply(a: Int, b: Int): Int = a + b\\n}\\n\\nverboseSum(3,5)\",\"// println does not return anything\\ndef printSum(a: Int, b: Int) = println(a + b)\\n// you will get an empty result, as moro prints out the returning value, which does not exist in this case\\nprintSum(15, 779)\",\"//equivalent: def changeCharacters(s: String, fun: Function1[Character, Character]) = {\\ndef changeCharacters(s: String, fun: Character => Character) = {\\n  val sb = new StringBuilder()\\n  val chars = s.toCharArray()\\n  for (i <- 0 until s.length()) {\\n    sb += fun(chars(i))\\n  }\\n  sb.toString\\n}\\n\\ndef capitalize(c: Character) = Character.toUpperCase(c)\\n\\nchangeCharacters(\\\"Hello, Scala!\\\", capitalize)\",\"def mul(a: Int, b: Int): Int = {\\n  return a * b \\n}  \\n\\ndef sub(a: Int, b: Int) = a - b\\n\\nval sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(8,sub(mul(2, 4), 5))\",\"def saySomething = {\\n  \\\"I don't know\\\" // ignored!\\n  \\\"Okay\\\"         // ignored!\\n  \\\"This is fun!\\\"\\n}\\n\\nsaySomething\"]"
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"22 / 23\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"val word = \\\"Hello\\\"\\nvar response = \\\"\\\"\\n\\nif (word == \\\"world\\\") {\\n    response = \\\"What about it?\\\"\\n} else if (word == \\\"Hello\\\") {\\n    response = \\\"Hi!\\\"\\n} else {\\n    response = \\\"I have no idea what you are talking about!\\\"\\n}\\nresponse\",\"var count = 0\\nfor (i <- 0 to 10) count = count + i\\ncount\",\"var count = 0\\nvar i = 0\\nwhile (i < 10) {\\n    i = i + 1\\n    count = count + i\\n}\\ncount\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(3,6)\",\"val verboseSum = new Function2[Int,Int,Int] {\\n    def apply(a: Int, b: Int): Int = a + b\\n}\\n\\nverboseSum(3,5)\",\"// println does not return a value\\ndef printSum(a: Int, b: Int): Unit = println(a + b)\\n// moro prints out the return value, which is non-existent in this case!\\nprintSum(15, 667)\",\"//equivalent: def changeCharacters(s: String, fun: Function1[Character, Character]) = {\\ndef changeCharacters(s: String, fun: Character => Character) = {\\n  val sb = new StringBuilder()\\n  val chars = s.toCharArray()\\n  for (i <- 0 until s.length()) {\\n    sb += fun(chars(i))\\n  }\\n  sb.toString\\n}\\n\\ndef capitalize(c: Character) = Character.toUpperCase(c)\\n\\nchangeCharacters(\\\"Hello, Scala!\\\", capitalize)\",\"def mul(a: Int, b: Int): Int = {\\n  return a * b \\n}  \\n\\ndef sub(a: Int, b: Int) = a - b\\n\\nval sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(8,sub(mul(2, 4), 5))\",\"def saySomething = {\\n  \\\"I don't know\\\" // ignored!\\n  \\\"Okay\\\"         // ignored!\\n  \\\"This is fun!\\\"\\n}\\n\\nsaySomething\"]"
       }
     }
   }, {
@@ -503,7 +501,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\nExercise: Write a function that calculates the Nth fibonacci number.\n\n\\\\(F_n = F_{n-1} + F_{n-2},\\quad F_0 = 0,\\quad F_1 = 1\\\\)",
+      "code" : "<div class=\"newslide\"></div>\n\n<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Write a function that calculates the Nth fibonacci number.</div>    \n</div>\n\n\n\\\\(F_n = F_{n-1} + F_{n-2},\\quad F_0 = 0,\\quad F_1 = 1\\\\)",
       "extraFields" : { }
     }
   }, {
@@ -535,35 +533,37 @@
       }
     }
   }, {
-    "id" : 140,
+    "id" : 132,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n\nOk, now we have a more or less a feeling what Scala is like, but we still didn't cover the Hello World application, just because we wanted to build up our understanding before doing it:\n",
+      "code" : "<div class=\"newslide\"></div>\nSince we have enough understanding of Scala, we can proceed with understanding a Hello World application in it:",
       "extraFields" : { }
     }
   }, {
-    "id" : 141,
+    "id" : 133,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "object HelloWorld1 extends App {\n    println(\"Hello World\")\n}",
-      "extraFields" : { }
+      "code" : "// remember, moro shows only the return value, which is an object in this case!\nobject HelloWorld1 extends App {\n    println(\"Hello World!\")\n}",
+      "extraFields" : {
+        "aggregatedCells" : "[\"// Scala's interpretes automatically resolves the type of the expression in most cases\\n1.5 + 1.21828189\",\"22 / 23\",\"// see the difference between calling infix operators, and calling them as methods\\n\\\"Soft\\\" + \\\" \\\" + \\\"kitty,\\\" + \\\" warm\\\".+(\\\" kitty\\\")\",\"2 > 5 || 5 > 2 && true\",\"val value = \\\"I cannot be changed! Really!\\\"\\n// value = \\\"But surely, this is not true?!\\\"\\nvalue\",\"var variable = \\\"However, I can!\\\"\\nvariable = \\\"See? I can change!\\\"\\nvariable\",\"val word = \\\"Hello\\\"\\nvar response = \\\"\\\"\\n\\nif (word == \\\"world\\\") {\\n    response = \\\"What about it?\\\"\\n} else if (word == \\\"Hello\\\") {\\n    response = \\\"Hi!\\\"\\n} else {\\n    response = \\\"I have no idea what you are talking about!\\\"\\n}\\nresponse\",\"var count = 0\\nfor (i <- 0 to 10) count = count + i\\ncount\",\"var count = 0\\nvar i = 0\\nwhile (i < 10) {\\n    i = i + 1\\n    count = count + i\\n}\\ncount\",\"def sum(a: Int, b: Int): Int = a + b\\nsum(9000, 1)\",\"val sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(3,6)\",\"val verboseSum = new Function2[Int,Int,Int] {\\n    def apply(a: Int, b: Int): Int = a + b\\n}\\n\\nverboseSum(3,5)\",\"// println does not return a value\\ndef printSum(a: Int, b: Int): Unit = println(a + b)\\n// moro prints out the return value, which is non-existent in this case!\\nprintSum(15, 667)\",\"//equivalent: def changeCharacters(s: String, fun: Function1[Character, Character]) = {\\ndef changeCharacters(s: String, fun: Character => Character) = {\\n  val sb = new StringBuilder()\\n  val chars = s.toCharArray()\\n  for (i <- 0 until s.length()) {\\n    sb += fun(chars(i))\\n  }\\n  sb.toString\\n}\\n\\ndef capitalize(c: Character) = Character.toUpperCase(c)\\n\\nchangeCharacters(\\\"Hello, Scala!\\\", capitalize)\",\"def mul(a: Int, b: Int): Int = {\\n  return a * b \\n}  \\n\\ndef sub(a: Int, b: Int) = a - b\\n\\nval sum: (Int, Int) => Int = (a: Int, b: Int) => a + b\\n\\nsum(8,sub(mul(2, 4), 5))\",\"def saySomething = {\\n  \\\"I don't know\\\" // ignored!\\n  \\\"Okay\\\"         // ignored!\\n  \\\"This is fun!\\\"\\n}\\n\\nsaySomething\",\"def ??? : Nothing = throw new NotImplementedError\\n\\n//todo, but already compiles\\ndef answerToLifeTheUniverseAndEverything() = ???\\ndef question(s: String) = {\\n    if (s == \\\"the answer to life the universe and everything\\\")\\n        answerToLifeTheUniverseAndEverything()\\n    else\\n        ???\\n}\\n\\n//already done\\ndef answerOnePlusOne() = 2\\nanswerOnePlusOne()\",\"def repeatNTimes(word: String, N: Int): String = {\\n    ???\\n}\\n\\ndef reverse(word: String): String = {\\n    ???\\n}\\n\\n//repeatNTimes(reverse(\\\"Test\\\"), 3)\",\"def concatenateAll(delimiter: String, args: String*) = {\\n    args.foldLeft(\\\"\\\")((x: String, y: String) => x + delimiter + y)\\n}\\nconcatenateAll(\\\"+\\\",\\\"soft\\\", \\\"kitty\\\", \\\"warm\\\", \\\"kitty\\\")\",\"class TokenVerbose(name: String)\\ncase class Token(name: String)\\n\\nval test1 = new TokenVerbose(\\\"Test1\\\")\\nval test2 = Token(\\\"Test2\\\")\\nval test3 = Token(\\\"Test2\\\")\\n\\ntest2 == test3\",\"case class Sentence(tokens: Seq[String])\\ncase class Document(sentences: Seq[Sentence])\\n\\nval docs = Seq(\\n    Document(Seq(Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"Scala\\\", \\\".\\\")))),\\n    Document(Seq(Sentence(Seq(\\\"Really\\\", \\\"?\\\")),\\n                 Sentence(Seq(\\\"I\\\", \\\"like\\\", \\\"NLP\\\", \\\".\\\")))))\\n\\nvar shortTokens = 0\\nfor (doc <- docs)\\n  for (sentence <- doc.sentences)\\n    for (token <- sentence.tokens)\\n      if (token.length < 3) shortTokens += 1\\nshortTokens\",\"shortTokens = 0\\nfor (doc <- docs)\\n  for (sentence <- doc.sentences)\\n    for (token <- sentence.tokens)\\n      if (token.length < 3) shortTokens += 1\\nshortTokens\",\"shortTokens = 0\\nfor {\\n  doc <- docs\\n  sentence <- doc.sentences\\n  token <- sentence.tokens\\n  if token.length < 3\\n} shortTokens += 1\\nshortTokens\",\"val pattern = \\\"\\\"\\\"(\\\\w*) Inc\\\"\\\"\\\".r\\nval word: Any = \\\"Google Inc\\\"\\nword match {\\n    case \\\"Microsoft\\\" | \\\"Yahoo\\\" => \\\"We can match Strings\\\"\\n    case pattern(name) => s\\\"There is an incorporated company named $name\\\"\\n    case (\\\"Twitter\\\", \\\"Facebook\\\") => \\\"Data Structures\\\"\\n    case List(\\\"A\\\", \\\"B\\\", \\\"C\\\") => \\\"...and lists etc.!\\\"\\n    case Token(\\\"LinkedIn\\\") => \\\"...and even the content inside Case Classes!\\\"\\n}\",\"def factorial(n: Int): Int = n match {\\n  case 0 | 1 => 1\\n  case x => x * factorial(n-1)\\n}\\n\\nfactorial(5)\",\"def fibonacci(n: Int): Int = n match {\\n  case _ => ???\\n}\\n\\n//fibonacci(19) == 4181\",\"trait LanguageModel {\\n  def order:Int     \\n  def vocab:Set[String]\\n  def probability(word:String, history:String*):Double    \\n}\\n\\ncase class UniformLM(vocab:Set[String]) extends LanguageModel {\\n  def order = 1\\n  def probability(word:String, history:String*) = \\n    if (vocab(word)) 1.0 / vocab.size else 0.0\\n}\\n\\ncase class MyFancyLM(vocab:Set[String]) extends LanguageModel {\\n  def order = ???\\n  def probability(word:String, history:String*) = ???\\n}\\n\\nval vocab = Set(\\\"This\\\",\\\"is\\\",\\\"a\\\",\\\"test\\\", \\\"!\\\")\\nval baseline = UniformLM(vocab)\\nbaseline.probability(\\\"test\\\")\"]"
+      }
     }
   }, {
-    "id" : 142,
+    "id" : 134,
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "and the prefered way:",
+      "code" : "The preferred version of starting your programs:",
       "extraFields" : { }
     }
   }, {
-    "id" : 143,
+    "id" : 135,
     "compiler" : "scala",
     "input" : {
       "sessionId" : null,
-      "code" : "object HelloWorld2 {\n    def main(args: Array[String]) {\n        println(\"Hello World\")\n    }\n}",
+      "code" : "object HelloWorld2 {\n    def main(args: Array[String]) {\n      println(\"Hello World!\")\n    }\n  }",
       "extraFields" : { }
     }
   }, {
@@ -1105,7 +1105,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Exercise: group words by their first letter",
+      "code" : "<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Group words by their first letter.</div>    \n</div>",
       "extraFields" : { }
     }
   }, {
@@ -1203,7 +1203,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Exercise: do the same by using the foldLeft function.",
+      "code" : "<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>    \n  <div class=\"extext\">Do the same by using the foldLeft function.</div>\n</div>",
       "extraFields" : { }
     }
   } ],
