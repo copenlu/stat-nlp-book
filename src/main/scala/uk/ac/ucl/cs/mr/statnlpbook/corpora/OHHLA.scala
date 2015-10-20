@@ -78,11 +78,11 @@ object OHHLA {
   }
 
   def loadDir(dir: File) = {
-    Util.files(dir) filter (_.getName.endsWith("txt.html")) flatMap (f => saveLoad(f,raw = false))
+    Util.files(dir).sortBy(_.getName) filter (_.getName.endsWith("txt.html")) flatMap (f => saveLoad(f,raw = false))
   }
 
   def loadDirRaw(dir: File) = {
-    Util.files(dir) filter (_.getName.endsWith("txt.html")) flatMap (f => saveLoad(f,raw = true))
+    Util.files(dir).sortBy(_.getName) filter (_.getName.endsWith("txt.html")) flatMap (f => saveLoad(f,raw = true))
   }
 
 
