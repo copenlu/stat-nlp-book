@@ -326,7 +326,7 @@ object Renderer {
          |    return groupElement;
          |  }
          |
-         |  var s1Group = buildSentenceGroup(svg,s1Data,10);
+         |  var s1Group = buildSentenceGroup(svg,s1Data,20);
          |  var s2Group = buildSentenceGroup(svg,s2Data,100);
          |
          |  var s1TokenTexts = s1Group[0][0].childNodes;
