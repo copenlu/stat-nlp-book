@@ -480,9 +480,9 @@ object BratRenderer2 {
         |                bratLocation = "/assets/javascripts/brat";
         |                head.js(
         |                    // External libraries
-        |                    bratLocation + '/client/lib/jquery.min.js',
-        |                    bratLocation + '/client/lib/jquery.svg.min.js',
-        |                    bratLocation + '/client/lib/jquery.svgdom.min.js',
+        |                    //bratLocation + '/client/lib/jquery.min.js',
+        |                    //bratLocation + '/client/lib/jquery.svg.min.js',
+        |                    //bratLocation + '/client/lib/jquery.svgdom.min.js',
         |
         |                    // brat helper modules
         |                    bratLocation + '/client/src/configuration.js',

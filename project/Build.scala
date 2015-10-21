@@ -13,12 +13,20 @@ object BuildSettings {
     libraryDependencies ++= Seq(
       "org.sameersingh.scalaplot" % "scalaplot" % "0.1",
       "com.google.guava" % "guava" % "18.0",
-      "org.scala-lang.modules" %% "scala-pickling" % "0.10.0"),
+      "org.scala-lang.modules" %% "scala-pickling" % "0.10.0",
+      "ml.wolfe" %% "wolfe-core" % "0.6.0",
+      "ml.wolfe" %% "wolfe-ui" % "0.6.0",
+      "ml.wolfe" %% "wolfe-nlp" % "0.6.0"),
 
-    //shellPrompt := ShellPrompt.buildShellPrompt,
+
+  //shellPrompt := ShellPrompt.buildShellPrompt,
     fork in run := true, //use a fresh JVM for sbt run
     connectInput in run := true, //to use readLine after sbt run
     commands ++= Seq(vmargs),
+    resolvers ++= Seq(
+      "IESL Release" at "https://dev-iesl.cs.umass.edu/nexus/content/groups/public",
+      "UCLMR Release" at "http://homeniscient.cs.ucl.ac.uk:8081/nexus/content/repositories/releases"
+    ),
     addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0-M1" cross CrossVersion.full)
   )
 
@@ -42,19 +50,9 @@ object Build extends Build {
 
   import BuildSettings._
 
-  lazy val wolfeNLP = ProjectRef(file("./wolfe"), "wolfe-nlp")
-  lazy val wolfeCore = ProjectRef(file("./wolfe"), "wolfe-core")
-
-  lazy val wolfeUI = ProjectRef(file("./wolfe"), "wolfe-ui")
-
-
   lazy val statnlpbook = Project(
     id = "statnlpbook",
     base = file("."),
     settings = buildSettings
-  ) dependsOn(
-    wolfeNLP % "test->test;compile->compile",
-    wolfeUI % "test->test;compile->compile",
-    wolfeCore % "test->test;compile->compile"
-    )
+  ) dependsOn()
 }
