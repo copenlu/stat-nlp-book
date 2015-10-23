@@ -546,7 +546,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\nIt turns out that the Stupid LM is very effective when it comes to *extrinsic* evaluations, but it doesn't represent a probability distribution which makes perplexity values meaningless. The code below illustrates the problem.",
+      "code" : "<div class=\"newslide\"></div>\nIt turns out that the Stupid LM is very effective when it comes to *extrinsic* evaluations, but it doesn't represent a valid probability distribution: when you sum over the probabilities of all words given a history, the result may be larger than 1. This is the case because the main n-gram model probabilities for all non-zero count words already sum to 1. The fact that the probabilities sum to more than 1 makes perplexity values meaningless. The code below illustrates the problem.",
       "extraFields" : { }
     }
   }, {
