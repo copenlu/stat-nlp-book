@@ -1,3 +1,6 @@
+# project specific
+data/
+
 *.class
 *.log
 
