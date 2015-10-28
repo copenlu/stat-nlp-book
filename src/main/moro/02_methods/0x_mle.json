@@ -5,49 +5,8 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "Yo\n",
-      "extraFields" : { },
-      "outputFormat" : null
-    }
-  }, {
-    "id" : 4,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "def f(i:Int) = i * 2\nf(3)",
-      "extraFields" : {
-        "aggregatedCells" : "[]"
-      },
-      "outputFormat" : null
-    }
-  }, {
-    "id" : 3,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "\nasdads\n",
-      "extraFields" : { },
-      "outputFormat" : null
-    }
-  }, {
-    "id" : 1,
-    "compiler" : "scala",
-    "input" : {
-      "sessionId" : null,
-      "code" : "\"Yo\"",
-      "extraFields" : {
-        "aggregatedCells" : "[]"
-      },
-      "outputFormat" : null
-    }
-  }, {
-    "id" : 2,
-    "compiler" : "markdown",
-    "input" : {
-      "sessionId" : null,
-      "code" : "Blah\n",
-      "extraFields" : { },
-      "outputFormat" : null
+      "code" : "The Maximum Likelihood Estimator (MLE) is one of the simplest ways, and often most intuitive way, to determine the parameters of a probabilistic models based on some training data. Under favourable conditions the MLE has several useful properties. On such property is consistency: if you sample enough data from a distribution with certain parameters, the MLE will recover these parameters with arbitrary precision. In our [structured prediction recipe](/template/statnlpbook/02_methods/00_structuredprediction) MLE can be seen as the most basic form of continuous optimization for parameter estimation. \n\nIn this section we will focus on MLE for _discrete distributions_ and _continuous parameters_. We will assume a distribution \\\\(\\prob_\\params(\\x)\\\\) with \\\\(\\x = (x_1,\\ldots, x_n)\\\\) that factorizes in the following way:\n\n\\begin{equation}\n  \\prob_\\params(\\x) = \\prod_i^n \\prob_\\params(x_i|\\phi_i(\\x)) \n                    = \\prod_i^n \\param_{x_i|\\phi_i(\\x)}\n\\end{equation}\n\nHere the functions \\\\(\\phi_i\\\\) provide a context to condition the probability of \\\\(x_i\\\\) with. For example, in a trigram language model this could be the bigram history for word \\\\(i\\\\), and hence \\\\(\\phi_i(\\x) = (x_{i-1},x_{i-2})\\\\). Notice that this function should not consider the variable \\\\(x_i\\\\) itself. \n\nThe Maximum Likelihood estimate \\\\(\\params^*\\\\) for this model, given some training data \\\\(\\train = (x_1,\\ldots, x_n)\\\\), is defined as the solution to the following optimization problem:\n\n\\begin{equation}\\label{eq:mle}\n  \\params^* = \\argmax_{\\params} \\prob_\\params(\\train) = \\argmax_{\\params} \\log \\prob_\\params(\\train) \n\\end{equation}\n\nHere the second equality stems from the monotonicity of the \\\\(\\log\\\\) function, and is useful because the \\\\(\\log\\\\) expression is easier to optimize. In words, the maximum likelihood estimate are the parameters that assign maximal probability to the training sample.  \n\nAs it turns out, the solution for \\\\(\\ref{eq:mle}\\\\) has a _closed form_: we can write the result as a direct function of \\\\(\\train\\\\) without the need of any iterative optimization algorithm. The result is simply:\n\n\\begin{equation}\n  \\param_{x|\\phi} = \\frac{\\counts{\\train}{x,\\phi}}{\\counts{\\train}{\\phi}}\n\\end{equation}\n\nwhere \\\\(\\counts{\\train}{x,\\phi}\\\\) is the number of times we have seen the value \\\\(x\\\\) paired with the context \\\\(\\phi\\\\) in the data \\\\(\\train\\\\), and \\\\(\\counts{\\train}{\\phi}\\\\) the number of times we have seen the context \\\\(\\phi\\\\).   \n\nNotice that in the same way we can represent the context of a variable using a function \\\\(\\phi\\\\), and hence map contexts to more coarse-grained equivalence classes, we can map the values \\\\(x_i\\\\) to a more coarse grained representation \\\\(\\gamma(x_i)\\\\). For example, in a language model we could decide to only care about the syntactic type (Verb, Noun, etc.) of a word and use \\\\(\\gamma(x) = \\mbox{syn-type}(x)\\\\). In this case the MLE only changes in the way we count: instead of counting the times we see \\\\(x\\\\) paired with the context \\\\(\\phi\\\\), we count how often we see \\\\(\\gamma\\\\) paired with the context \\\\(\\phi\\\\). \n\n\n\n\n\n\n",
+      "extraFields" : { }
     }
   } ],
   "config" : { }
