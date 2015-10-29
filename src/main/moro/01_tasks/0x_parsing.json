@@ -244,7 +244,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n#### CYK algorithm\nThe CYK algorithm caches, for each span in the sentence, all possible trees that can cover the span according to the CFG. Again we record all changes throughout the algorithm for later visualization.   ",
+      "code" : "<div class=\"newslide\"></div>\n#### CYK algorithm\nThe CYK algorithm caches, for each span in the sentence, all possible trees that can cover the span according to the CFG. Again we record all changes throughout the algorithm for later visualization. ",
       "extraFields" : { }
     }
   }, {
