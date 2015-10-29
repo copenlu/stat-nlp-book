@@ -58,7 +58,8 @@ trait CountLM extends LanguageModel {
   def norm: List[String] => Double
 
   def probability(word: String, history: String*) = {
-    counts(word :: history.toList) / norm(history.toList)
+    val subHistory = history.takeRight(order - 1).toList
+    counts(word :: subHistory) / norm(subHistory)
   }
 }
 
