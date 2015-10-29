@@ -368,7 +368,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\nWe now have a higher probability associated to the preferred parse.",
+      "code" : "<div class=\"newslide\"></div>\nThe above algorithm now returns only a single parse for the given sentence: the one with the higher probability. You can adapt to return all parses by changing the `unify` method to return the input as is.",
       "extraFields" : { }
     }
   }, {
