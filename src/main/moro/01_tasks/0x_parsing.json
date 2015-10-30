@@ -281,7 +281,7 @@
     "compiler" : "markdown",
     "input" : {
       "sessionId" : null,
-      "code" : "<div class=\"newslide\"></div>\n### Ambiguity \nFor real world grammars many phrases have several legal parse trees. Which one is the correct one depends on the intent of the speaker. That said, in many cases it is quite obvious that one parse tree should be more likely, or have a higher _probability_. This suggest a probabilistic treatment of grammars and parsing. Before we introduce probabilistic CFGs, let us inspect a typical case of syntactic natural language ambiguity. <span class=\"summary\">Sentences can have several legal parse trees.</span> \n",
+      "code" : "<div class=\"exercise\">\n  <div class=\"exname\">Exercise</div>\n  <div class=\"extext\">Manually perform CYK for this <a href=\"https://docs.google.com/document/d/160QtURHYQKdIWApWXZZFyyPH1q0EB0Nq4ptc8gmzCeM/edit#heading=h.hlfvaoch2h87\">data</a></div>\n</div>\n\n<div class=\"newslide\"></div>\n### Ambiguity \nFor real world grammars many phrases have several legal parse trees. Which one is the correct one depends on the intent of the speaker. That said, in many cases it is quite obvious that one parse tree should be more likely, or have a higher _probability_. This suggest a probabilistic treatment of grammars and parsing. Before we introduce probabilistic CFGs, let us inspect a typical case of syntactic natural language ambiguity. <span class=\"summary\">Sentences can have several legal parse trees.</span> \n",
       "extraFields" : { }
     }
   }, {
