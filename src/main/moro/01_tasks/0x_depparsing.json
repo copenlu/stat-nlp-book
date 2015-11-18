@@ -6,8 +6,7 @@
     "input" : {
       "sessionId" : null,
       "code" : "### Dependency Parsing\nDP is important and a lot fun.\n\n$$\n f(x) = \\sum_i x_i\n$$\n",
-      "extraFields" : { },
-      "outputFormat" : null
+      "extraFields" : { }
     }
   }, {
     "id" : 1,
@@ -17,8 +16,7 @@
       "code" : "val text = \"This is the NII tech talk.\"\nval parsed = parse(text)\nrenderDependencies(parsed)\nMap(1 -> 2, 2 -> 3)",
       "extraFields" : {
         "aggregatedCells" : "[]"
-      },
-      "outputFormat" : null
+      }
     }
   } ],
   "config" : { }
