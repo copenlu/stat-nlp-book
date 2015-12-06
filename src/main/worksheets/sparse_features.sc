@@ -1,5 +1,4 @@
-import trainers.{FeatureKey, FeatureVector}
-import uk.ac.ucl.cs.mr.statnlpbook.assignment2.{dot, addInPlace}
+import trainers.{FeatureKey, FeatureVector,addInPlace}
 import scala.collection.mutable
 
 //a list of text classification labels
