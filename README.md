@@ -1,5 +1,17 @@
 # stat-nlp-book
 
+### Installation
+
+* Install python3
+* Install virtualenv
+
+Then create virtual env:
+    
+    virtualenv -p /usr/local/bin/python3 bookenv
+    source bookenv/bin/activate
+    pip3 install -r requirements.txt
+
+
 ### Live Online Version
 
 We are running a [live online version](http://stat-nlp-book.wolfe.ml:9000/template/statnlpbook/04_compgi19/02_overview) of the book. 
