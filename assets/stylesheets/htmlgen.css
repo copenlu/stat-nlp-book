@@ -1,0 +1,96 @@
+.property {
+    background-color:#f5f5f5;
+    color:#808080;
+    font-size:80%;
+}
+
+table, th, td
+{
+    border-collapse:collapse;
+    border:1px solid black;
+}
+
+th, td
+{
+  padding:5px;
+  text-align: center;
+}
+
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+/* Starting div styles */
+.typeName {
+  color:#002200;
+  background-color:#FFFFFF;
+}
+
+.asString {
+  color:dark-grey;
+}
+
+.asIterable {
+  color:blue;
+}
+
+.asProduct {
+  color:green;
+}
+
+.asMap {
+  color:black;
+}
+
+.fields {
+  padding-left:25px;
+  background-color:#F5FFFF;
+  margin: 0px;
+  width: 100%;
+}
+
+.field {
+  background-color:#FFF5FF;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+.fieldName {
+  color:#222222;
+}
+
+.fieldValue {
+  color:#666666;
+  width: 100%;
+}
+
+table.matrix {
+  border: 0px;
+  padding: 3px;
+  width:250px;
+  height:250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.matrixRow {
+  background-color: yellow;
+}
+
+.matrixCell {
+  background-color: black;
+}
+
+.hide {
+  display: none;
+}
+
+.matrix > thead, th {
+  border: 0px;
+  background-color: white;
+}

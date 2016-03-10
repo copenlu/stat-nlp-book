@@ -1,0 +1,64 @@
+/* Print Styles */
+@media print {
+    h1 a {color: black; text-decoration: none;display: inline-block;}
+    .ace_editor {display: block;}
+    .runButton {display: none ;}
+    #slidesButton {display: none !important;}
+    .ace_bracket {display: none !important;}
+    a {color: blue;}
+    header {margin-bottom: 0px; padding-bottom: 0px;}
+    .ace_gutter-active-line {visibility: hidden;}
+    
+    .editor {border: thin solid gray !important; border-radius: 5px !important;}
+    .cell {margin-top: 10px !important; margin-bottom: 10px !important;}
+    .ace_indent-guide {visibility: hidden !important}
+    .grid {width:750px !important;}
+}
+
+
+#slidesButton {
+	display: inline;
+}
+
+.exercise {
+}
+
+.extext {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.exname {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.summary {
+    display: none
+}
+
+.edgePath path {
+    stroke: white;
+}
+
+.parseTree .node text {
+  /*font-size : 30 px;*/
+}
+
+.single-img {
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered-div {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.frame {
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #888888;
+
+}

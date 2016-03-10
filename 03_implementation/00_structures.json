@@ -1,0 +1,103 @@
+{
+  "name" : "NLP Data Structures",
+  "cells" : [ {
+    "id" : 0,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "At the heart of any NLP library you find data structures that store source \nand meta information of textual documents. Many of them are organized hierarchically in\nthe following way:\n\n* Tokens, containing words and often character offsets\n* Sentences, containing a sequence of tokens\n* Documents, containing a sequence of sentences \n\nIn addition, each layer may contain further annotation that has been generated \nthrough the application of NLP techniques. For example, a sentence may also contain a representation of a syntactic tree, while a document may contain a representation of coreference chains. \n\n## Design Decisions\n\n* Mutable vs Immutable\n* Deep class hierarchies vs flat compositional structures\n* Character Offsets vs sequential representation\n\n## NLP Data Structures in Wolfe\nNLP data structures are *immutable*, *flat compositional* and *offset-based* representations.\n\n* Tokens in Wolfe are represented through the `Token` case class:",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 1,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "// A simple Token\nToken(\"scratched\") \n\n// A fully-specified Token\nToken(word = \"scratched\", \n      posTag = \"VBD\", \n      offsets = CharOffsets(0,9), \n      lemma = \"scratch\")",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      }
+    }
+  }, {
+    "id" : 2,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "* Token sequences can be wrapped in the `Sentence` case class to incorporate additional sentence-level reasoning:",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 3,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val sentence = \"The cat scratched the man\".split(\" \").foldLeft(Sentence.empty) { case(s,w) => s + Token(w) }\nsentence.words",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      }
+    }
+  }, {
+    "id" : 31,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "Additional linguistic annotation is provided through optional annotation case classes.  Annotating a sentence with a `ConstituentTree` can be done using the `SyntaxAnnotation` class as follows:",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 32,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "// A constituent tree in Wall Street Journal Treebank format\nval wsjStr = \"(S (NP (DET the) (NN cat)) (VP (VB scratches) (NP (DET the) (NN man))))\"\n// Parsing the string into an ml.wolfe.nlp.ConstituentTree using a built-in conversion method\n val tree = ml.wolfe.nlp.io.ConstituentTreeFactory.stringToTree(wsjStr).get\n// Copying the tree into the previous sentence object\nval s = sentence.copy(syntax = SyntaxAnnotation(tree = tree, dependencies = null))\ns.syntax.tree.toTreebankString",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      }
+    }
+  }, {
+    "id" : 4,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "* The `Document` class adds yet another level to the heirarchy, coupling a sequence of sentences to other document-level annotations, such as id, filename, or coreference.  A `Document` is also meant to preserve the unprocessed text in the `source` field:",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 5,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "val text = \"The cat scratched the man.  She was not pleased.\"\nval sentences = text.split(\"\\\\.\").map(_.trim.split(\" \").foldLeft(Sentence.empty){ case (s,w) => s + Token(w) })\nval tmpDoc = Document.apply(sentences.map(_.words))\nval doc = tmpDoc.copy(source = text, id = Some(\"Example Document\"))\ndoc.sentences.map(_.words.mkString(\" \"))",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      }
+    }
+  }, {
+    "id" : 6,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### Bidirectional Navigation\nThe immutable nature of Wolfe NLP data structures means that it is difficult to store\nback-links from tokens to sentences, or sentences to documents, due to the following\nchicken and egg problem: to create a new sentence\nI first need to create the tokens, but if they need back links to sentences, I first need \nto create the sentence. \n\nWolfe overcomes the above problem by creating a bidirectional object graph after the construction\nof the complete document. This graph can then be accessed for traversal in any direction. \nCrucially, using Scala's `implicit class` feature (link), graph navigation methods can be\naccesses directly through the token, sentence etc. classes, and to the user it appears *as if*\nthe data structures provide navigation directly:\n",
+      "extraFields" : { }
+    }
+  }, {
+    "id" : 7,
+    "compiler" : "scala",
+    "input" : {
+      "sessionId" : null,
+      "code" : "import doc.navigable._\nval second = doc.sentences.head.next.get\nsecond.index + \": \" + second.words.mkString(\" \")",
+      "extraFields" : {
+        "aggregatedCells" : "[]"
+      }
+    }
+  }, {
+    "id" : 8,
+    "compiler" : "markdown",
+    "input" : {
+      "sessionId" : null,
+      "code" : "### Serialization\nApplying many layers of linguistic annotation can be a very time-consuming process and something that you'll likely want to avoid repeatedly performing.  Wolfe NLP data structures are easily serializable, and can be efficiently written and read from files.  Wolfe relies on the scala.pickling library to convert the object hierachy represented in a Wolfe NLP data structure into a byte stream, which can then be written to file.  Conversions to JSON are also supported.  Bulk read and writes using streams are supported using ml.wolfe.nlp.io.NLPPicklers lazyPickle() and lazyUnpickle().",
+      "extraFields" : { }
+    }
+  } ],
+  "config" : { }
+}
