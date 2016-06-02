@@ -3,6 +3,15 @@ from nbformat import current
 import os
 
 def execute_notebook(nbfile,silent=True):
+    """
+    execute a notebook file
+    Args:
+        nbfile: the filename
+        silent: should output be hidden.
+
+    Returns: Nothing
+
+    """
     # os.chdir(working_dir)
     with io.open(nbfile) as f:
         nb = current.read(f, 'json')
