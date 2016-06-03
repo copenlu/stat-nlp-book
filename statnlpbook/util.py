@@ -25,20 +25,20 @@ def execute_notebook(nbfile, silent=True):
         ip.run_cell(cell.input, silent=silent)
 
 
-LATEX_MACROS = """
-$$
-\newcommand{\prob}{p}
-\newcommand{\vocab}{V}
-\newcommand{\params}{\boldsymbol{\theta}}
-\newcommand{\param}{\theta}
-\DeclareMathOperator{\perplexity}{PP}
-\DeclareMathOperator{\argmax}{argmax}
-\newcommand{\train}{\mathcal{D}}
-\newcommand{\counts}[2]{\#_{#1}(#2) }
-$$
-"""
-
-
-def load_latex_macros():
-    ip = get_ipython()
-    ip.run_cell(LATEX_MACROS, silent=True)
+# LATEX_MACROS = """
+# $$
+# \newcommand{\prob}{p}
+# \newcommand{\vocab}{V}
+# \newcommand{\params}{\boldsymbol{\theta}}
+# \newcommand{\param}{\theta}
+# \DeclareMathOperator{\perplexity}{PP}
+# \DeclareMathOperator{\argmax}{argmax}
+# \newcommand{\train}{\mathcal{D}}
+# \newcommand{\counts}[2]{\#_{#1}(#2) }
+# $$
+# """
+#
+#
+# def load_latex_macros():
+#     ip = get_ipython()
+#     ip.run_cell(LATEX_MACROS, silent=True)
