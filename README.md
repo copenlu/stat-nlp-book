@@ -10,6 +10,10 @@ Clone this repository, and enter it:
     
     git clone https://github.com/uclmr/stat-nlp-book.git
     cd stat-nlp-book
+    
+Download the data:
+
+    source scripts/download_ohhla.sh j_live
 
 Then create virtual env:
     
