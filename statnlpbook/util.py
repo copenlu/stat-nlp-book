@@ -1,6 +1,6 @@
 import io
 
-from nbformat import current
+from nbformat import reader
 
 
 def execute_notebook(nbfile, silent=True):
@@ -14,14 +14,14 @@ def execute_notebook(nbfile, silent=True):
 
     """
     with io.open(nbfile) as f:
-        nb = current.read(f, 'json')
+        nb = reader.read(f)
 
     ip = get_ipython()
 
-    for cell in nb.worksheets[0].cells:
+    for cell in nb.cells:
         if cell.cell_type != 'code':
             continue
-        ip.run_cell(cell.input, silent=silent)
+        ip.run_cell(cell.source, silent=silent)
 
 
 def cross_product(lists):
