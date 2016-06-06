@@ -1,6 +1,6 @@
 import io
+
 from nbformat import current
-import os
 
 
 def execute_notebook(nbfile, silent=True):
@@ -13,7 +13,6 @@ def execute_notebook(nbfile, silent=True):
     Returns: Nothing
 
     """
-    # os.chdir(working_dir)
     with io.open(nbfile) as f:
         nb = current.read(f, 'json')
 
@@ -23,6 +22,23 @@ def execute_notebook(nbfile, silent=True):
         if cell.cell_type != 'code':
             continue
         ip.run_cell(cell.input, silent=silent)
+
+
+def cross_product(lists):
+    """
+    Returns a generator over all tuples in the cross product of the lists in `lists`.
+    Args:
+        lists: a list of lists
+    Returns:
+        generator that generates all tuples in the cross product.
+    """
+    if len(lists) == 0:
+        yield ()
+    else:
+        for prev_tuple in cross_product(lists[1:]):
+            for head in lists[0]:
+                yield (head,) + prev_tuple
+
 
 
 # LATEX_MACROS = """
