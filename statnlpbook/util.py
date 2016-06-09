@@ -41,7 +41,7 @@ def cross_product(lists):
                 yield (head,) + prev_tuple
 
 
-def plot_bar_graph(values, labels):
+def plot_bar_graph(values, labels, rotation=0, align='center'):
     """
     Plots a bar graph.
     Args:
@@ -51,9 +51,9 @@ def plot_bar_graph(values, labels):
     Returns: None
 
     """
-    plt.xticks(range(0, len(values)), labels)
-    plt.bar(range(0, len(values)), values, align='center')
-
+    plt.xticks(range(0, len(values)), labels,rotation=rotation)
+    plt.bar(range(0, len(values)), values, align=align)
+    # plt.setp(bar, rotation='vertical')
 
     # LATEX_MACROS = """
     # $$
