@@ -1,6 +1,7 @@
 import io
 
 from nbformat import reader
+import matplotlib.pyplot as plt
 
 
 def execute_notebook(nbfile, silent=True):
@@ -40,21 +41,34 @@ def cross_product(lists):
                 yield (head,) + prev_tuple
 
 
+def plot_bar_graph(values, labels):
+    """
+    Plots a bar graph.
+    Args:
+        values: bar values.
+        labels: bar labels
 
-# LATEX_MACROS = """
-# $$
-# \newcommand{\prob}{p}
-# \newcommand{\vocab}{V}
-# \newcommand{\params}{\boldsymbol{\theta}}
-# \newcommand{\param}{\theta}
-# \DeclareMathOperator{\perplexity}{PP}
-# \DeclareMathOperator{\argmax}{argmax}
-# \newcommand{\train}{\mathcal{D}}
-# \newcommand{\counts}[2]{\#_{#1}(#2) }
-# $$
-# """
-#
-#
-# def load_latex_macros():
-#     ip = get_ipython()
-#     ip.run_cell(LATEX_MACROS, silent=True)
+    Returns: None
+
+    """
+    plt.xticks(range(0, len(values)), labels)
+    plt.bar(range(0, len(values)), values, align='center')
+
+
+    # LATEX_MACROS = """
+    # $$
+    # \newcommand{\prob}{p}
+    # \newcommand{\vocab}{V}
+    # \newcommand{\params}{\boldsymbol{\theta}}
+    # \newcommand{\param}{\theta}
+    # \DeclareMathOperator{\perplexity}{PP}
+    # \DeclareMathOperator{\argmax}{argmax}
+    # \newcommand{\train}{\mathcal{D}}
+    # \newcommand{\counts}[2]{\#_{#1}(#2) }
+    # $$
+    # """
+    #
+    #
+    # def load_latex_macros():
+    #     ip = get_ipython()
+    #     ip.run_cell(LATEX_MACROS, silent=True)

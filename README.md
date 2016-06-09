@@ -23,7 +23,7 @@ Then create virtual env:
 
 ### Running the book / browsing it
 
-Once you're in your stat-nlp-book directory, run the book with:
+Once you're in your stat-nlp-book directory and have run `source bookenv/bin/activate`, run the book with:
 
     jupyter notebook
 

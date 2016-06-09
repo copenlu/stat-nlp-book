@@ -1,3 +1,4 @@
+matplotlib
 decorator==4.0.9
 ipython-genutils==0.1.0
 jsonschema==2.5.1
