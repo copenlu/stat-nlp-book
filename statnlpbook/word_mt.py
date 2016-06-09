@@ -2,9 +2,9 @@ import uuid
 
 
 class Alignment:
-    def __init__(self, sentence_1, sentence_2, alignment_tuples):
-        self.sentence_1 = sentence_1
-        self.sentence_2 = sentence_2
+    def __init__(self, source, target, alignment_tuples):
+        self.source = source
+        self.target = target
         self.triples = []
         for tuple in alignment_tuples:
             if len(tuple) == 2:
@@ -12,10 +12,19 @@ class Alignment:
             else:
                 self.triples.append(tuple)
 
+    @classmethod
+    def from_matrix(cls, matrix, source, target):
+        alignment_tuples = []
+        for si in range(0, len(source)):
+            for ti in range(0, len(target)):
+                alignment_tuples.append((si, ti, matrix[si][ti]))
+        obj = cls(source, target, alignment_tuples)
+        return obj
+
     def _repr_html_(self):
         svg_id = str(uuid.uuid1())
-        source = ["<tspan id='t{}'>{}</tspan>".format(i, source) for i, source in enumerate(self.sentence_1)]
-        target = ["<tspan id='t{}'>{}</tspan>".format(i, target) for i, target in enumerate(self.sentence_2)]
+        source = ["<tspan id='t{}'>{}</tspan>".format(i, s) for i, s in enumerate(self.source)]
+        target = ["<tspan id='t{}'>{}</tspan>".format(i, t) for i, t in enumerate(self.target)]
         alignments = ["['.source #t{}','.target #t{}',{}]".format(s, t, score) for s, t, score in self.triples]
         alignments_string = '[' + (",".join(alignments)) + ']'
         result = """
