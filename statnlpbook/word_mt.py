@@ -59,6 +59,7 @@ class Alignment:
                       newLine.setAttribute('style',"stroke:black;stroke-width:2;stroke-opacity:" + score + ";");
                       root.find('.connections').append(newLine)
                   }};
+                  //console.log(alignments);
                   for (var i = 0; i < alignments.length; i++) {{
                     appendLine(alignments[i]);
                   }}
