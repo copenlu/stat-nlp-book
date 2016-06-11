@@ -69,3 +69,4 @@ class Alignment:
         </svg>
         """.format(svg_id, " ".join(source), " ".join(target), svg_id, alignments_string)
         return result
+
