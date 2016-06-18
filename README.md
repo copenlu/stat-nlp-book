@@ -20,6 +20,8 @@ Then create virtual env:
     virtualenv -p /usr/local/bin/python3 bookenv
     source bookenv/bin/activate
     pip3 install -r requirements.txt
+    
+You also need to install [graphviz](http://www.graphviz.org/) on your system.
 
 ### Running the book / browsing it
 

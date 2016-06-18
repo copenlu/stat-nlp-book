@@ -6,3 +6,4 @@ jupyter-core==4.1.0
 nbformat==4.0.1
 traitlets==4.2.1
 notebook
+graphviz==0.4.10
