@@ -51,7 +51,7 @@ def plot_bar_graph(values, labels, rotation=0, align='center'):
     Returns: None
 
     """
-    plt.xticks(range(0, len(values)), labels,rotation=rotation)
+    plt.xticks(range(0, len(values)), labels, rotation=rotation)
     plt.bar(range(0, len(values)), values, align=align)
     # plt.setp(bar, rotation='vertical')
 
@@ -72,3 +72,28 @@ def plot_bar_graph(values, labels, rotation=0, align='center'):
     # def load_latex_macros():
     #     ip = get_ipython()
     #     ip.run_cell(LATEX_MACROS, silent=True)
+
+
+class Carousel:
+    def __init__(self, elements):
+        self.elements = elements
+
+    def _repr_html_(self):
+        def create_item(element, active=False):
+            css_class = "item active" if active else "item"
+            return """<div class="{}">{}</div>""".format(css_class, element._repr_html_())
+
+        items = [create_item(self.elements[i], i == 0) for i in range(0, len(self.elements))]
+        items_html = "\n".join(items)
+        result = """
+        <div id="carousel-example-generic" class="carousel" data-ride="carousel">
+          <!-- Controls -->
+          <a href="#carousel-example-generic" role="button" data-slide="prev">Previous</a>
+          &nbsp
+          <a  href="#carousel-example-generic" role="button" data-slide="next">Next</a>
+          <div class="carousel-inner" role="listbox">
+          {}
+          </div>
+        </div>
+        """.format(items_html)
+        return result
