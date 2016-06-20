@@ -1,5 +1,6 @@
 from graphviz import Digraph
 from collections import defaultdict
+import statnlpbook.util as util
 
 
 def render_forest(trees):
@@ -50,6 +51,19 @@ def render_tree(tree):
     return render_forest([tree])
 
 
+def filter_non_terminals(tree, allowed_non_terminals, collapse_if_singleton=True):
+    if isinstance(tree, str):
+        return tree if collapse_if_singleton else [tree]
+    else:
+        non_terminal, children = tree
+        filtered_children = sum([filter_non_terminals(child, allowed_non_terminals, False) for child in children], [])
+        if non_terminal in allowed_non_terminals:
+            result = [(non_terminal, filtered_children)]
+        else:
+            result = filtered_children
+        return result[0] if collapse_if_singleton and len(result) == 1 else result
+
+
 def render_transitions(transitions):
     class Output:
         def _repr_html_(self):
@@ -71,6 +85,10 @@ def get_label(node):
 
 
 class Chart:
+    """
+    A CYK Chart representation, optmised for visualisation of the chart and the individual CYK steps.
+    """
+
     def __init__(self, sentence):
         self.sentence = sentence
         self.entries = defaultdict(list)  # map from (Int,Int,NonTerminal) to (list of (int,int,str) cells)
@@ -89,13 +107,13 @@ class Chart:
         self.cell_to_entries[begin, end] += [(label, value)]
 
     def append_label(self, begin, end, label, sources=None):
-        self[begin, end, label] += [] if sources is None else sources
+        self[begin, end, label] += [[]] if sources is None else [sources]
 
     def entries_at_cell(self, begin, end):
         return self.cell_to_entries[begin, end]
 
     def labels_at_cell(self, begin, end):
-        return [label for label, _ in self.cell_to_entries[begin, end]]
+        return util.distinct_list([label for label, _ in self.cell_to_entries[begin, end]])
 
     def mark_target_label(self, begin, end, label):
         self.target_cell_labels.add((begin, end, label))
@@ -144,10 +162,26 @@ class Chart:
         self.mark_target_label(i, i, non_terminal)
         return self
 
-    def mark(self, begin, end, label):
+    def mark(self, begin, end, label, source_index=0):
         self.mark_target_label(begin, end, label)
-        for b, e, l in self[begin, end, label]:
+        for b, e, l in self[begin, end, label][source_index]:
             self.mark_source_label(b, e, l)
+
+    def derive_trees(self, begin=None, end=None, label='S'):
+        b = begin if begin is not None else 0
+        e = end if end is not None else len(self.sentence) - 1
+        result = []
+        for sources in self[b, e, label]:
+            if len(sources) == 2:
+                (bc1, ec1, lc1), (bc2, ec2, lc2) = sources
+                for child_1 in self.derive_trees(bc1, ec1, lc1):
+                    for child_2 in self.derive_trees(bc2, ec2, lc2):
+                        tree = (label, [child_1, child_2])
+                        result.append(tree)
+            else:
+                tree = (label, [self.sentence[begin]])
+                result.append(tree)
+        return result
 
     def _repr_html_(self):
         header = "<tr><td></td>{}</tr>".format(
@@ -174,9 +208,10 @@ class Chart:
             cells = []
             for col_index in range(0, len(self.sentence)):
                 relevant_entries = self.cell_to_entries[row_index, col_index]
+                relevant_labels = util.distinct_list([label for label, _ in relevant_entries])
                 border = 'solid' if col_index >= row_index else 'none'
                 labels = ['<font color="{}">{}</font>'.format(color_for_label(row_index, col_index, label), label) for
-                          label, _ in relevant_entries]
+                          label in relevant_labels]
                 cell_color = color_for_cell(row_index, col_index)
                 cell = """<td style="border:{};" bgcolor="{}">{}</td>""".format(border, cell_color,
                                                                                 ", ".join(labels))

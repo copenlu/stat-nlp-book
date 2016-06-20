@@ -3,7 +3,6 @@ import io
 from nbformat import reader
 import matplotlib.pyplot as plt
 
-
 def execute_notebook(nbfile, silent=True):
     """
     execute a notebook file
@@ -79,11 +78,13 @@ class Carousel:
         self.elements = elements
 
     def _repr_html_(self):
-        def create_item(element, active=False):
+        def create_item(index, active=False):
+            element = self.elements[index]
             css_class = "item active" if active else "item"
-            return """<div class="{}">{}</div>""".format(css_class, element._repr_html_())
+            return """<div class="{}">{} {} / {}</div>""".format(css_class, element._repr_html_(), index + 1,
+                                                                 len(self.elements))
 
-        items = [create_item(self.elements[i], i == 0) for i in range(0, len(self.elements))]
+        items = [create_item(i, i == 0) for i in range(0, len(self.elements))]
         items_html = "\n".join(items)
         result = """
         <div id="carousel-example-generic" class="carousel" data-ride="carousel">
@@ -97,3 +98,13 @@ class Carousel:
         </div>
         """.format(items_html)
         return result
+
+
+def distinct_list(input_list):
+    result = []
+    added = set()
+    for i in input_list:
+        if i not in added:
+            added.add(i)
+            result.append(i)
+    return result
