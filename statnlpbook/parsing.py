@@ -213,13 +213,21 @@ class Chart:
             else:
                 return 'white'
 
+        def text_for_cell(row_index, col_index, label):
+            if (row_index, col_index, label) in self.scores:
+                score = self.scores[row_index, col_index, label]
+                return '<font color="{0}">{1}: {2:.2f}</font>'.format(color_for_label(row_index, col_index, label), label,
+                                                               score)
+            else:
+                return '<font color="{}">{}</font>'.format(color_for_label(row_index, col_index, label), label)
+
         for row_index in range(0, len(self.sentence)):
             cells = []
             for col_index in range(0, len(self.sentence)):
                 relevant_entries = self.cell_to_entries[row_index, col_index]
                 relevant_labels = util.distinct_list([label for label, _ in relevant_entries])
                 border = 'solid' if col_index >= row_index else 'none'
-                labels = ['<font color="{}">{}</font>'.format(color_for_label(row_index, col_index, label), label) for
+                labels = [text_for_cell(row_index, col_index, label) for
                           label in relevant_labels]
                 cell_color = color_for_cell(row_index, col_index)
                 cell = """<td style="border:{};" bgcolor="{}">{}</td>""".format(border, cell_color,
@@ -228,5 +236,3 @@ class Chart:
             row = "<tr><td>{}: {}</td>{}</tr>".format(row_index, self.sentence[row_index], "".join(cells))
             rows.append(row)
         return "<table>{}</table>".format("\n".join(rows))
-
-

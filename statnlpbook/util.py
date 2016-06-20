@@ -75,6 +75,9 @@ def plot_bar_graph(values, labels, rotation=0, align='center'):
     #     ip.run_cell(LATEX_MACROS, silent=True)
 
 
+import uuid
+
+
 class Carousel:
     def __init__(self, elements):
         self.elements = elements
@@ -88,17 +91,19 @@ class Carousel:
 
         items = [create_item(i, i == 0) for i in range(0, len(self.elements))]
         items_html = "\n".join(items)
+        div_id = str(uuid.uuid1())
+
         result = """
-        <div id="carousel-example-generic" class="carousel" data-ride="carousel" interval=false>
+        <div id="{}" class="carousel" data-ride="carousel" interval=false>
           <!-- Controls -->
-          <a href="#carousel-example-generic" role="button" data-slide="prev">Previous</a>
+          <a href="#{}" role="button" data-slide="prev">Previous</a>
           &nbsp
-          <a  href="#carousel-example-generic" role="button" data-slide="next">Next</a>
+          <a  href="#{}" role="button" data-slide="next">Next</a>
           <div class="carousel-inner" role="listbox">
           {}
           </div>
         </div>
-        """.format(items_html)
+        """.format(div_id, div_id, div_id, items_html)
         return result
 
 
