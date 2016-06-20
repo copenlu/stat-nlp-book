@@ -87,7 +87,7 @@ class Carousel:
         items = [create_item(i, i == 0) for i in range(0, len(self.elements))]
         items_html = "\n".join(items)
         result = """
-        <div id="carousel-example-generic" class="carousel" data-ride="carousel">
+        <div id="carousel-example-generic" class="carousel" data-ride="carousel" interval=false>
           <!-- Controls -->
           <a href="#carousel-example-generic" role="button" data-slide="prev">Previous</a>
           &nbsp
