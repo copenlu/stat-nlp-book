@@ -126,14 +126,23 @@ class Chart:
         self.mark_target(begin, end)
         self.mark_source(begin, middle)
         self.mark_source(middle + 1, end)
+        return self
 
     def mark_cyk_rule(self, begin, end, alpha):
         self.clear_label_marks()
         self.mark(begin, end, alpha)
+        return self
+
+    def mark_cyk_source_focus(self, begin, middle, end, beta, gamma):
+        self.clear_label_marks()
+        self.mark_source_label(begin, middle, beta)
+        self.mark_source_label(middle + 1, end, gamma)
+        return self
 
     def mark_cyk_terminal(self, i, non_terminal):
         self.clear_label_marks()
         self.mark_target_label(i, i, non_terminal)
+        return self
 
     def mark(self, begin, end, label):
         self.mark_target_label(begin, end, label)
