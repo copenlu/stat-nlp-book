@@ -1,6 +1,7 @@
 from graphviz import Digraph
 from collections import defaultdict
 import statnlpbook.util as util
+import math
 
 
 def render_forest(trees):
@@ -97,6 +98,7 @@ class Chart:
         self.source_cell_labels = set()
         self.target_cells = set()
         self.source_cells = set()
+        self.scores = defaultdict(lambda: -math.inf)
 
     def __getitem__(self, key):
         return self.entries[key]
@@ -106,8 +108,15 @@ class Chart:
         begin, end, label = key
         self.cell_to_entries[begin, end] += [(label, value)]
 
+    def score(self, begin, end, label):
+        return self.scores[begin, end, label]
+
     def append_label(self, begin, end, label, sources=None):
         self[begin, end, label] += [[]] if sources is None else [sources]
+
+    def update_label(self, begin, end, label, score=0.0, sources=None):
+        self[begin, end, label] = [[]] if sources is None else [sources]
+        self.scores[begin, end, label] = score
 
     def entries_at_cell(self, begin, end):
         return self.cell_to_entries[begin, end]
@@ -219,3 +228,5 @@ class Chart:
             row = "<tr><td>{}: {}</td>{}</tr>".format(row_index, self.sentence[row_index], "".join(cells))
             rows.append(row)
         return "<table>{}</table>".format("\n".join(rows))
+
+

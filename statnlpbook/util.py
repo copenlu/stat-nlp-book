@@ -2,6 +2,8 @@ import io
 
 from nbformat import reader
 import matplotlib.pyplot as plt
+import math
+
 
 def execute_notebook(nbfile, silent=True):
     """
@@ -108,3 +110,7 @@ def distinct_list(input_list):
             added.add(i)
             result.append(i)
     return result
+
+
+def safe_log(x):
+    return math.log(x) if x > 0. else -math.inf
