@@ -41,6 +41,7 @@ def cross_product(lists):
             for head in lists[0]:
                 yield (head,) + prev_tuple
 
+import mpld3
 
 def plot_bar_graph(values, labels, rotation=0, align='center'):
     """
@@ -52,10 +53,11 @@ def plot_bar_graph(values, labels, rotation=0, align='center'):
     Returns: None
 
     """
+    # fig = plt.figure()
     plt.xticks(range(0, len(values)), labels, rotation=rotation)
     plt.bar(range(0, len(values)), values, align=align)
     # plt.setp(bar, rotation='vertical')
-
+    # return mpld3.display(fig)
     # LATEX_MACROS = """
     # $$
     # \newcommand{\prob}{p}
@@ -94,16 +96,16 @@ class Carousel:
         div_id = str(uuid.uuid1())
 
         result = """
-        <div id="{}" class="carousel" data-ride="carousel" interval=false>
+        <div id="{0}" class="carousel" data-ride="carousel" interval=false>
           <!-- Controls -->
-          <a href="#{}" role="button" data-slide="prev">Previous</a>
+          <a href="#{0}" role="button" data-slide="prev">Previous</a>
           &nbsp
-          <a  href="#{}" role="button" data-slide="next">Next</a>
+          <a  href="#{0}" role="button" data-slide="next">Next</a>
           <div class="carousel-inner" role="listbox">
-          {}
+          {1}
           </div>
         </div>
-        """.format(div_id, div_id, div_id, items_html)
+        """.format(div_id, items_html)
         return result
 
 
