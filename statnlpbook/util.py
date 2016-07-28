@@ -41,43 +41,28 @@ def cross_product(lists):
             for head in lists[0]:
                 yield (head,) + prev_tuple
 
+
 import mpld3
 
-def plot_bar_graph(values, labels, rotation=0, align='center'):
+
+def plot_bar_graph(values, labels, rotation=0, align='center', use_mpld3=False):
     """
     Plots a bar graph.
     Args:
+        use_mpld3: should we use mpld3 to render the graph.
+        rotation: by which angle should the labels be rotated.
+        align: how to align the labels
         values: bar values.
         labels: bar labels
 
     Returns: None
 
     """
-    # fig = plt.figure()
-    plt.xticks(range(0, len(values)), labels, rotation=rotation)
+    fig = plt.figure()
+    plt.xticks([float(x) for x in range(0, len(values))], labels, rotation=rotation)
     plt.bar(range(0, len(values)), values, align=align)
-    # plt.setp(bar, rotation='vertical')
-    # return mpld3.display(fig)
-    # LATEX_MACROS = """
-    # $$
-    # \newcommand{\prob}{p}
-    # \newcommand{\vocab}{V}
-    # \newcommand{\params}{\boldsymbol{\theta}}
-    # \newcommand{\param}{\theta}
-    # \DeclareMathOperator{\perplexity}{PP}
-    # \DeclareMathOperator{\argmax}{argmax}
-    # \newcommand{\train}{\mathcal{D}}
-    # \newcommand{\counts}[2]{\#_{#1}(#2) }
-    # $$
-    # """
-    #
-    #
-    # def load_latex_macros():
-    #     ip = get_ipython()
-    #     ip.run_cell(LATEX_MACROS, silent=True)
-
-
-import uuid
+    if use_mpld3:
+        return mpld3.display(fig)
 
 
 class Carousel:
