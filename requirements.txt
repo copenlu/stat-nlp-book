@@ -8,3 +8,4 @@ traitlets==4.2.1
 notebook
 graphviz==0.4.10
 mpld3
+scikit_learn==0.17.1
