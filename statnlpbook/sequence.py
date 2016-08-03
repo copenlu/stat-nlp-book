@@ -3,6 +3,10 @@ import functools
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.preprocessing import LabelEncoder
+from collections import defaultdict
+import numpy as np
+import matplotlib.pyplot as plt
+
 import statnlpbook.util as util
 
 
@@ -141,6 +145,48 @@ class LocalSequenceLabeler:
                     print("Guess: {}".format(y_guess[i]))
                     print(" ".join(x[max(0, i - 5):i]) + " [" + x[i] + "] " + " ".join(x[i + 1:min(i + 5, len(x))]))
                     print(self.feat(x, i))
+
+
+def accuracy(gold, guess):
+    total = 0
+    correct = 0
+    for (x, y), y_guess in zip(gold, guess):
+        for i in range(0, len(x)):
+            correct += 1 if y[i] == y_guess[i] else 0
+            total += 1
+    return correct / total
+
+
+def confusion_matrix_dict(gold, guess, normalise=False):
+    counts = defaultdict(float)
+    for (x, y), y_guess in zip(gold, guess):
+        for i in range(0, len(x)):
+            counts[y[i], y_guess[i]] += 1.0
+    if normalise:
+        max_count = max(counts.values())
+        old = counts
+        counts = defaultdict(float, [(k, v / max_count) for (k, v) in old.items()])
+    return counts
+
+
+def plot_confusion_matrix_dict(matrix_dict):
+    labels = set([y for y, _ in matrix_dict.keys()] + [y for _, y in matrix_dict.keys()])
+    sorted_labels = sorted(labels)
+    matrix = np.zeros((len(sorted_labels), len(sorted_labels)))
+    for i1, y1 in enumerate(sorted_labels):
+        for i2, y2 in enumerate(sorted_labels):
+            matrix[i1, i2] = matrix_dict[y1, y2]
+    plt.imshow(matrix, interpolation='nearest', cmap=plt.cm.Blues)
+    plt.colorbar()
+    tick_marks = np.arange(len(sorted_labels))
+    plt.xticks(tick_marks, sorted_labels, rotation=45)
+    plt.yticks(tick_marks, sorted_labels)
+    plt.tight_layout()
+    # return matrix
+
+
+def plot_confusion_matrix(gold, guess, normalise=False):
+    plot_confusion_matrix_dict(confusion_matrix_dict(gold, guess, normalise))
 
 
 # dev_classifier_output[2],to_classifier_y(dev)[2]
