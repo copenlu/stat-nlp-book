@@ -135,11 +135,11 @@ class LocalSequenceLabeler:
         dev_output = to_xy(data, dev_classifier_output)
         return dev_output
 
-    def show_errors(self, data, predicate=lambda x, y, y_guess, i: True):
+    def show_errors(self, data, filter_gold=lambda y: True, filter_guess=lambda y: True):
         guess = self.predict(data)
         for (x, y), y_guess in zip(data, guess):
             for i in range(0, len(y)):
-                if y[i] != y_guess[i] and predicate(x, y, y_guess, i):
+                if y[i] != y_guess[i] and filter_gold(y[i]) and filter_guess(y_guess[i]):
                     print("---------")
                     print("Gold:  {}".format(y[i]))
                     print("Guess: {}".format(y_guess[i]))
