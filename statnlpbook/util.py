@@ -1,4 +1,5 @@
 import io
+import uuid
 
 from nbformat import reader
 import matplotlib.pyplot as plt
@@ -65,6 +66,25 @@ def plot_bar_graph(values, labels, rotation=0, align='center', use_mpld3=False):
         return mpld3.display(fig)
 
 
+def generic_to_html(element, top_level=True):
+    if getattr(element, "_repr_html", None) is not None:
+        value = element._repr_html_()
+    else:
+        if isinstance(element, list) or isinstance(element, tuple):
+            if top_level:
+                value = "<ul>" + "\n".join(["<li>{}</li>".format(generic_to_html(e, False)) for e in element]) + "</ul>"
+            else:
+                # value = """<ul>""" + "\n".join(
+                #     ["""<li style="display:inline;">{}</li>""".format(generic_to_html(e, False)) for e in element]) + "</ul>"
+                value = " ".join([generic_to_html(e, False) for e in element])
+
+
+        else:
+            value = str(element)
+            # print(value)
+    return value
+
+
 class Carousel:
     def __init__(self, elements):
         self.elements = elements
@@ -72,8 +92,9 @@ class Carousel:
     def _repr_html_(self):
         def create_item(index, active=False):
             element = self.elements[index]
+            value = generic_to_html(element)
             css_class = "item active" if active else "item"
-            return """<div class="{}">{} {} / {}</div>""".format(css_class, element._repr_html_(), index + 1,
+            return """<div class="{}">{} {} / {}</div>""".format(css_class, value, index + 1,
                                                                  len(self.elements))
 
         items = [create_item(i, i == 0) for i in range(0, len(self.elements))]

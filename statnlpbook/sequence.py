@@ -212,9 +212,18 @@ class MEMMSequenceLabeler:
     def input_repr(self, x, i, y):
         return self.feat(x, i, padded_history(y, i, self.order))
 
+    def sklearn_repr(self, x, i, y):
+        return self.vectorizer.transform([self.input_repr(x, i, y)])
+
     def predict_next(self, x, i, y):
         scikit_x = self.vectorizer.transform([self.input_repr(x, i, y)])
         return self.label_encoder.inverse_transform(self.lr.predict(scikit_x))[0]
+
+    def labels(self):
+        return self.label_encoder.classes_
+
+    def predict_scores(self, x, i, y):
+        return self.lr.predict_log_proba(self.sklearn_repr(x, i, y))[0]
 
     def predict(self, data):
         result = []
