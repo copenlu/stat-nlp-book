@@ -1,9 +1,9 @@
 import io
+import math
 import uuid
 
-from nbformat import reader
 import matplotlib.pyplot as plt
-import math
+from nbformat import reader
 
 
 def execute_notebook(nbfile, silent=True):
@@ -67,7 +67,7 @@ def plot_bar_graph(values, labels, rotation=0, align='center', use_mpld3=False):
 
 
 def generic_to_html(element, top_level=True):
-    if getattr(element, "_repr_html", None) is not None:
+    if getattr(element, "_repr_html_", None) is not None:
         value = element._repr_html_()
     else:
         if isinstance(element, list) or isinstance(element, tuple):

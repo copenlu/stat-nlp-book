@@ -165,16 +165,46 @@ class LocalSequenceLabeler:
         dev_output = to_xy(data, dev_classifier_output)
         return dev_output
 
-    def show_errors(self, data, filter_gold=lambda y: True, filter_guess=lambda y: True):
+    def errors(self, data, filter_gold=lambda y: True, filter_guess=lambda y: True):
         guess = self.predict(data)
+        model = self
+        errors = []
         for (x, y), y_guess in zip(data, guess):
             for i in range(0, len(y)):
                 if y[i] != y_guess[i] and filter_gold(y[i]) and filter_guess(y_guess[i]):
-                    print("---------")
-                    print("Gold:  {}".format(y[i]))
-                    print("Guess: {}".format(y_guess[i]))
-                    print(" ".join(x[max(0, i - 5):i]) + " [" + x[i] + "] " + " ".join(x[i + 1:min(i + 5, len(x))]))
-                    print(self.feat(x, i))
+                    errors.append(SingleError(i, x, y, y_guess, model))
+        return errors
+
+
+class SingleError:
+    def __init__(self, i, x, y, y_guess, model):
+        self.model = model
+        self.y_guess = y_guess
+        self.y = y
+        self.x = x
+        self.i = i
+
+    def _repr_html_(self):
+        from_index = max(0, self.i - 5)
+        to_index = min(self.i + 5, len(self.x))
+        words = to_td_seq(self.x, from_index, to_index, self.i)
+        gold = to_td_seq(self.y, from_index, to_index, self.i)
+        guess = to_td_seq(self.y_guess, from_index, to_index, self.i)
+        cell = """<table style=""><tr>{words}</tr><tr>{gold}</tr><tr>{guess}</tr></table>""".format(
+            words=words,
+            gold=gold,
+            guess=guess)
+        feats = self.model.feat(self.x, self.i)
+        feat_names = "<td>" + "</td><td>".join(sorted(feats.keys())) + "</td>"
+        feat_values = "<td>" + "</td><td>".join([str(feats[k]) for k in sorted(feats.keys())]) + "</td>"
+        feat_table = """<table><tr>{names}</tr><tr>{values}</tr></table>""".format(names=feat_names, values=feat_values)
+
+        return cell + feat_table
+
+
+def to_td_seq(sequence, from_index, to_index, focus=None):
+    return "<td>" + "</td><td>".join(["{}".format(sequence[j]) if j != focus else "<b>{}</b>".format(sequence[j])
+                                      for j in range(from_index, to_index)]) + "</td>"
 
 
 def padded_history(seq, index, length):
