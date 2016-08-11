@@ -151,6 +151,13 @@ class LocalSequenceLabeler:
         self.lr = LogisticRegression(**lr_params)
         self.lr.fit_transform(train_classifier_x, train_classifier_y)
 
+        self.v_weights = self.vectorizer.inverse_transform(self.lr.coef_)
+
+    def weights(self, label):
+        v_index = self.label_encoder.transform(label)
+        v_weights = self.v_weights[v_index]
+        return v_weights
+
     def plot_lr_weights(self, label, how_many=20, reverse=True):
         v_index = self.label_encoder.transform(label)
         v_weights = self.vectorizer.inverse_transform(self.lr.coef_)[v_index]
@@ -195,9 +202,31 @@ class SingleError:
             gold=gold,
             guess=guess)
         feats = self.model.feat(self.x, self.i)
-        feat_names = "<td>" + "</td><td>".join(sorted(feats.keys())) + "</td>"
-        feat_values = "<td>" + "</td><td>".join([str(feats[k]) for k in sorted(feats.keys())]) + "</td>"
-        feat_table = """<table><tr>{names}</tr><tr>{values}</tr></table>""".format(names=feat_names, values=feat_values)
+        sorted_feat_keys = sorted(feats.keys())
+        gold_weights = defaultdict(float, self.model.weights(self.y[self.i]))
+        guess_weights = defaultdict(float, self.model.weights(self.y_guess[self.i]))
+        feat_names = "<td>" + "</td><td>".join(sorted_feat_keys) + "</td>"
+        feat_values = "<td>" + "</td><td>".join([str(feats[k]) for k in sorted_feat_keys]) + "</td>"
+
+        def to_feat_key(key, value):
+            if isinstance(value, bool):
+                return key
+            else:
+                return "{}={}".format(key, value)
+
+        gold_weights_row = "<td>" + "</td><td>".join(
+            ["{:.2f}".format(gold_weights[to_feat_key(key, feats[key])]) for key in sorted_feat_keys]) + "</td>"
+        guess_weights_row = "<td>" + "</td><td>".join(
+            ["{:.2f}".format(guess_weights[to_feat_key(key, feats[key])]) for key in sorted_feat_keys]) + "</td>"
+
+        feat_table = """
+        <table>
+          <tr>{names}</tr>
+          <tr>{values}</tr>
+          <tr>{gold_weights}</tr>
+          <tr>{guess_weights}</tr>
+        </table>""".format(names=feat_names, values=feat_values, gold_weights=gold_weights_row,
+                           guess_weights=guess_weights_row)
 
         return cell + feat_table
 
