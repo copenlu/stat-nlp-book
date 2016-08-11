@@ -204,7 +204,9 @@ class SingleError:
             words=words,
             gold=gold,
             guess=guess)
-        feats = self.model.feat(self.x, self.i)
+        feats = self.model.input_repr(self.x, self.i, self.y_guess) if isinstance(self.model,
+                                                                                  MEMMSequenceLabeler) else self.model.feat(
+            self.x, self.i)
         sorted_feat_keys = sorted(feats.keys())
         gold_weights = defaultdict(float, self.model.weights(self.y[self.i]))
         guess_weights = defaultdict(float, self.model.weights(self.y_guess[self.i]))
@@ -245,6 +247,21 @@ def padded_history(seq, index, length):
     return padding + history
 
 
+def errors(data, y_guesses, gold_label=None, guess_label=None, model=None):
+    def test_gold(l):
+        return gold_label is None or l == gold_label
+
+    def test_guess(l):
+        return guess_label is None or l == guess_label
+
+    errors = []
+    for (x, y), y_guess in zip(data, y_guesses):
+        for i in range(0, len(x)):
+            if test_gold(y[i]) and test_guess(y_guess[i]) and y[i] != y_guess[i]:
+                errors.append(SingleError(i, x, y, y_guess, model))
+    return errors
+
+
 class MEMMSequenceLabeler:
     def transform_input(self, data):
         return [self.feat(x, i, padded_history(y, i, self.order)) for x, y in data for i in range(0, len(x))]
@@ -260,6 +277,12 @@ class MEMMSequenceLabeler:
         train_classifier_y = self.label_encoder.fit_transform(to_classifier_y(train_data))
         self.lr = LogisticRegression(**lr_params)
         self.lr.fit_transform(train_classifier_x, train_classifier_y)
+        self.v_weights = self.vectorizer.inverse_transform(self.lr.coef_)
+
+    def weights(self, label):
+        v_index = self.label_encoder.transform(label)
+        v_weights = self.v_weights[v_index]
+        return v_weights
 
     def plot_lr_weights(self, label, how_many=20, reverse=True, feat_filter=lambda s: True):
         v_index = self.label_encoder.transform(label)
@@ -296,6 +319,7 @@ class MEMMSequenceLabeler:
                 y_guess += prediction
             result.append(y_guess)
         return result
+
         # dev_classifier_Y = label_encoder.transform(to_classifier_y(dev))
         # dev_classifier_output = self.label_encoder.inverse_transform(
         #     self.lr.predict(self.vectorizer.transform(to_classifier_x(data, self.feat))))
