@@ -81,22 +81,25 @@ def draw_transition_fg(length=3):
     factor_style = {'shape': 'box', 'fontcolor': 'white',
                     'style': 'filled', 'fillcolor': 'black', 'width': '0.2', 'height': '0.2'}
 
+    obs_style = {'shape': 'circle', 'style': 'filled', 'fillcolor': 'lightgrey'}
     ys = graph()
     result = graph()
-    result.node("x", shape='circle', style='filled', fillcolor='lightgrey')
-    for i in range(0, length):
+    result.node("x", **obs_style)
+    ys.node("y0", label="P", **obs_style)
+    for i in range(1, length):
         node_id = "y" + str(i)
         factor_id = "l" + str(i)
         ys.node(node_id, **var_style)
-        result.node(factor_id, **factor_style)
-        result.edge(node_id, factor_id)
-        result.edge(factor_id, "x")
+        # result.node(factor_id, **factor_style)
+        # result.edge(node_id, factor_id)
+        # result.edge(factor_id, "x")
 
     for i in range(1, length):
         factor_id = "t" + str(i)
         ys.node(factor_id, **factor_style)
         ys.edge("y" + str(i), factor_id, constraint="false")
         ys.edge("y" + str(i - 1), factor_id, constraint="false")
+        ys.edge(factor_id, "x")
 
     result.subgraph(ys)
     return result
