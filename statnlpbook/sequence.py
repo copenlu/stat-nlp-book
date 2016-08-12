@@ -320,23 +320,6 @@ class MEMMSequenceLabeler:
             result.append(y_guess)
         return result
 
-        # dev_classifier_Y = label_encoder.transform(to_classifier_y(dev))
-        # dev_classifier_output = self.label_encoder.inverse_transform(
-        #     self.lr.predict(self.vectorizer.transform(to_classifier_x(data, self.feat))))
-        # dev_output = to_xy(data, dev_classifier_output)
-        # return dev_output
-
-        # def show_errors(self, data, filter_gold=lambda y: True, filter_guess=lambda y: True):
-        #     guess = self.predict(data)
-        #     for (x, y), y_guess in zip(data, guess):
-        #         for i in range(0, len(y)):
-        #             if y[i] != y_guess[i] and filter_gold(y[i]) and filter_guess(y_guess[i]):
-        #                 print("---------")
-        #                 print("Gold:  {}".format(y[i]))
-        #                 print("Guess: {}".format(y_guess[i]))
-        #                 print(" ".join(x[max(0, i - 5):i]) + " [" + x[i] + "] " + " ".join(x[i + 1:min(i + 5, len(x))]))
-        #                 print(self.feat(x, i))
-
 
 def memm_greedy_predict(memm: MEMMSequenceLabeler, data):
     result = []
@@ -352,8 +335,9 @@ def memm_greedy_predict(memm: MEMMSequenceLabeler, data):
 def accuracy(gold, guess):
     total = 0
     correct = 0
-    for (x, y), y_guess in zip(gold, guess):
-        for i in range(0, len(x)):
+    for pair, y_guess in zip(gold, guess):
+        y = pair[1] if isinstance(pair, tuple) else pair
+        for i in range(0, len(y)):
             correct += 1 if y[i] == y_guess[i] else 0
             total += 1
     return correct / total
@@ -406,3 +390,24 @@ def to_xy(data, all_y):
             index += 1
         result.append(tuple(new_y))
     return result
+
+
+def render_beam_history(history, instance, end=None, begin=None):
+    x, y = instance
+    end = len(x) if end is None else end
+    begin = 0 if begin is None else begin
+    elements = []
+    for beam in history[begin:end]:
+        words = to_td_seq(x, begin, end)
+        gold = to_td_seq(y, begin, end)
+        hypotheses = "<tr>" + "</tr><tr>".join(
+            [to_td_seq(cand + ["{:.2f}".format(score)], begin, len(cand) + 1) for cand, score in beam]) + "</tr>"
+        element = """
+        <table>
+          <tr>{words}</tr>
+          <tr>{gold}</tr>
+          {hypotheses}
+        </table>
+        """.format(words=words, gold=gold, hypotheses=hypotheses)
+        elements.append(element)
+    return util.Carousel(elements)
