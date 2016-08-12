@@ -102,7 +102,7 @@ class Carousel:
         div_id = str(uuid.uuid1())
 
         result = """
-        <div id="{0}" class="carousel" data-ride="carousel" interval=false>
+        <div id="{0}" class="carousel" data-ride="carousel" data-interval="false">
           <!-- Controls -->
           <a href="#{0}" role="button" data-slide="prev">Previous</a>
           &nbsp
