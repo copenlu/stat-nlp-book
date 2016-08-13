@@ -1,11 +1,12 @@
-import graphviz as gv
 import functools
-from sklearn.linear_model import LogisticRegression
-from sklearn.feature_extraction import DictVectorizer
-from sklearn.preprocessing import LabelEncoder
 from collections import defaultdict
-import numpy as np
+
+import graphviz as gv
 import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.feature_extraction import DictVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import LabelEncoder
 
 import statnlpbook.util as util
 
@@ -151,7 +152,10 @@ class LocalSequenceLabeler:
         self.label_encoder = LabelEncoder()
         train_classifier_x = self.vectorizer.fit_transform(to_classifier_x(train_data, feat))
         train_classifier_y = self.label_encoder.fit_transform(to_classifier_y(train_data))
-        self.lr = LogisticRegression(**lr_params)
+        if "C" not in lr_params:
+            self.lr = LogisticRegression(C=10, **lr_params)
+        else:
+            self.lr = LogisticRegression(**lr_params)
         self.lr.fit_transform(train_classifier_x, train_classifier_y)
 
         self.v_weights = self.vectorizer.inverse_transform(self.lr.coef_)
@@ -327,6 +331,41 @@ class MEMMSequenceLabeler:
                 y_guess += prediction
             result.append(y_guess)
         return result
+
+
+import pycrfsuite as pycrf
+
+
+def to_item_sequence(x, feat):
+    return pycrf.ItemSequence([feat(x, i) for i in range(0, len(x))])
+
+
+def add_to_trainer(trainer, data, feat):
+    for x, y in data:
+        trainer.append(to_item_sequence(x, feat), y)
+
+
+class CRFSequenceLabeler:
+    def __init__(self, feat, data, **crf_params):
+        self.feat = feat #lambda x, i: {**feat(x, i), 'b_bias': 'True'}
+        self.trainer = pycrf.Trainer(verbose=False)
+        self.trainer.set_params({
+            **crf_params,
+            #     'c1': 0.0,   # coefficient for L1 penalty
+            'c2': 0.1,  # coefficient for L2 penalty
+            #     'max_iterations': 50,  # stop earlier
+            # include transitions that are possible, but not observed
+            'feature.possible_transitions': True
+        })
+        add_to_trainer(self.trainer, data, self.feat)
+        import tempfile
+        f = tempfile.NamedTemporaryFile(delete=True)
+        self.trainer.train(f.name)
+        self.tagger = pycrf.Tagger()
+        self.tagger.open(f.name)
+
+    def predict(self, data):
+        return [self.tagger.tag(to_item_sequence(x, self.feat)) for x, _ in data]
 
 
 def memm_greedy_predict(memm: MEMMSequenceLabeler, data):

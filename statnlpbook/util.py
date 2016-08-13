@@ -127,3 +127,13 @@ def distinct_list(input_list):
 
 def safe_log(x):
     return math.log(x) if x > 0. else -math.inf
+
+
+class Table:
+    def __init__(self, rows):
+        self.rows = rows
+
+    def _repr_html_(self):
+        rows = "".join(["<tr>{}<tr>".format(" ".join(["<td>{}</td>".format(elem) for elem in row])) for row in self.rows])
+        result = "<table>{}</table>".format(rows)
+        return result
