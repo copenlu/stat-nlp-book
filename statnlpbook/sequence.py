@@ -304,11 +304,19 @@ class MEMMSequenceLabeler:
         scikit_x = self.vectorizer.transform([self.input_repr(x, i, y)])
         return self.label_encoder.inverse_transform(self.lr.predict(scikit_x))[0]
 
+    def predict_next_hist(self, x, i, hist):
+        scikit_x = self.vectorizer.transform([self.feat(x, i, padded_history(hist, 1, self.order))])
+        return self.label_encoder.inverse_transform(self.lr.predict(scikit_x))[0]
+
     def labels(self):
         return self.label_encoder.classes_
 
     def predict_scores(self, x, i, y):
         return self.lr.predict_log_proba(self.sklearn_repr(x, i, y))[0]
+
+    def predict_scores_hist(self, x, i, hist):
+        scikit_x = self.vectorizer.transform([self.feat(x, i, padded_history(hist, 1, self.order))])
+        return self.lr.predict_log_proba(scikit_x)[0]
 
     def predict(self, data):
         result = []
@@ -411,3 +419,42 @@ def render_beam_history(history, instance, end=None, begin=None):
         """.format(words=words, gold=gold, hypotheses=hypotheses)
         elements.append(element)
     return util.Carousel(elements)
+
+
+def top_keys(dictionary, width=2):
+    sorted_keys_to_keep = sorted(dictionary.keys(), key=lambda k: -dictionary[k])[:width]
+    return sorted_keys_to_keep
+
+
+def drop_keys(dictionary, keys):
+    for k in keys:
+        del dictionary[k]
+
+
+def keep_keys(dictionary, keys):
+    for k in set(dictionary.keys()) - set(keys):
+        del dictionary[k]
+
+
+def convert_alpha_beta_to_history(x, alpha, beta):
+    # construct the sequences corresponding to the alpha and beta maps
+    beams = [defaultdict(lambda: [])]
+    for i in range(0, len(x)):
+        beam = {}
+        for l, s in alpha[i].items():
+            beam[l] = beams[-1][beta[i][l]] + [l]
+        beams.append(beam)
+    del beams[0]
+    history = [[([], 0.0)]]
+    for i in range(0, len(x)):
+        beam = []
+        for l, s in sorted(alpha[i].items(), key=lambda t: -t[1]):
+            beam.append((beams[i][l], s))
+        history.append(beam)
+    return history
+
+
+def prune_alpha_beta(alpha, beta, width):
+    top = top_keys(alpha, width)
+    keep_keys(alpha, top)
+    keep_keys(beta, top)
