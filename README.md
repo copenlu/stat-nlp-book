@@ -7,7 +7,8 @@ We assume you have a command line interface in your OS
 
 ### Install Git
 
-Go to [https://git-scm.com/book/en/v2/Getting-Started-Installing-Git] and follow platform specific instructions. 
+Go to the [git installation instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
+and follow platform specific instructions. 
 
 ### Get Stat-NLP-Book Repository
 
@@ -20,7 +21,7 @@ Let us assume the full stat-nlp-book path is `SNLPHOME`.
 
 ### Install Docker
 
-Go to [https://www.docker.com/] and follow the instruction for your platform.
+Go to the [docker webpage](https://www.docker.com/) and follow the instruction for your platform.
 
 ### Download Stat-NLP-Book Image
 
@@ -30,7 +31,7 @@ Go to [https://www.docker.com/] and follow the instruction for your platform.
 
     docker run -v SNLPHOME:/home/jovyan/work riedelcastro/stat-nlp-book 
 
-Go to [http://localhost:8888/notebooks/introduction.ipynb]. 
+Go to the [introduction page](http://localhost:8888/notebooks/introduction.ipynb). 
 
 ## Code Outside the Notebook
 Assume you have a local code directory with absolute path `CODE`. 
