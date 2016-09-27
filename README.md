@@ -1,6 +1,18 @@
 # stat-nlp-book
 
-### Installation
+## Docker Installation 
+
+### Install Docker
+
+### Download Stat-NLP-Book Image
+
+```
+docker pull riedelcastro/stat-nlp-book
+```
+
+### Run Notebook
+
+## Manual Installation 
 
 * Install python3
 * Install virtualenv
@@ -23,7 +35,7 @@ Then create virtual env:
     
 You also need to install [graphviz](http://www.graphviz.org/) on your system.
 
-### Running the book / browsing it
+## Running the book / browsing it
 
 Once you're in your stat-nlp-book directory and have run `source bookenv/bin/activate`, run the book with:
 
