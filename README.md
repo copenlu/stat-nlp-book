@@ -31,7 +31,7 @@ Go to the [docker webpage](https://www.docker.com/) and follow the instruction f
 
     docker run -p 8888:8888 -v SNLPHOME:/home/jovyan/work riedelcastro/stat-nlp-book 
 
-Go to the [introduction page](http://localhost:8888/notebooks/introduction.ipynb). 
+Go to the [introduction page](http://localhost:8888/notebooks/overview.ipynb). 
 
 ## Code Outside the Notebook
 Assume you have a local code directory with absolute path `CODE`. 
