@@ -29,7 +29,7 @@ Go to the [docker webpage](https://www.docker.com/) and follow the instruction f
 
 ### Run Notebook
 
-    docker run -v SNLPHOME:/home/jovyan/work riedelcastro/stat-nlp-book 
+    docker run -p 8888:8888 -v SNLPHOME:/home/jovyan/work riedelcastro/stat-nlp-book 
 
 Go to the [introduction page](http://localhost:8888/notebooks/introduction.ipynb). 
 
