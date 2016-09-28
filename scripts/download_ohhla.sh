@@ -1,17 +1,12 @@
 #!/bin/bash
 
-# Example (all J-Live): download_ohhla j_live
-# Example (all): download_ohhla
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DOWNLOAD=$DIR/download_artist.sh
 
-wget \
-     --recursive \
-     --no-clobber \
-     --page-requisites \
-     --html-extension \
-     --convert-links \
-     --restrict-file-names=windows \
-     --domains www.ohhla.com \
-     --directory-prefix=data/ohhla \
-     --no-parent \
-         www.ohhla.com/anonymous/$1
-
+$DOWNLOAD http://www.ohhla.com/YFA_roots.html
+$DOWNLOAD http://www.ohhla.com/YFA_rakim.html
+$DOWNLOAD http://www.ohhla.com/YFA_atcq.html
+$DOWNLOAD http://www.ohhla.com/YFA_gsr.html
+$DOWNLOAD http://www.ohhla.com/YFA_slickrick.html
+$DOWNLOAD http://www.ohhla.com/YFA_nas.html
+$DOWNLOAD www.ohhla.com/anonymous/j_live
