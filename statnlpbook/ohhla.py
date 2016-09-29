@@ -31,7 +31,11 @@ def load_song(file_name):
     try:
         return load_raw('utf-8')
     except UnicodeDecodeError:
-        return load_raw('cp1252')
+        try:
+            return load_raw('cp1252')
+        except UnicodeDecodeError:
+            print("Could not load " + file_name)
+            return ""
 
 
 def load_album(path):
@@ -45,6 +49,14 @@ def load_albums(album_paths):
     return [song
             for path in album_paths
             for song in load_album(path)]
+
+
+def load_all_songs(path):
+    only_files = [join(path, f) for f in listdir(path) if isfile(join(path, f)) and 'txt' in f]
+    only_paths = [join(path, f) for f in listdir(path) if not isfile(join(path, f))]
+    lyrics = [load_song(f) for f in only_files]
+    sub_songs = [song for sub_path in only_paths for song in load_all_songs(sub_path)]
+    return lyrics + sub_songs
 
 
 token = re.compile('\'|\[BAR\]|\[/BAR\]|[\w-]+')
