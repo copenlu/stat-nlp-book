@@ -96,19 +96,39 @@ def replace_OOVs(vocab, data):
     return [word if word in vocab else OOV for word in data]
 
 
+def inject_OOVs(data):
+    """
+    Uses a heuristic to inject OOV symbols into a dataset.
+    Args:
+        data: the sequence of words to inject OOVs into.
+
+    Returns: the new sequence with OOV symbols injected.
+    """
+    seen = set()
+    result = []
+    for word in data:
+        if word in seen:
+            result.append(word)
+        else:
+            result.append(OOV)
+            seen.add(word)
+    return result
+
+
 class OOVAwareLM(LanguageModel):
     """
     This LM converts out of vocabulary tokens to a special OOV token before their probability is calculated.
     """
 
-    def probability(self, word, *history):
-        actual_word = word if word in self.base_lm.vocab else self.oov
-        return self.base_lm.probality(actual_word, *history)
-
-    def __init__(self, base_lm, oov=OOV):
+    def __init__(self, base_lm, oov_count, oov=OOV):
         super().__init__(base_lm.vocab, base_lm.order)
         self.base_lm = base_lm
         self.oov = oov
+        self.oov_count = oov_count
+
+    def probability(self, word, *history):
+        actual_word, norm = (word, 1) if word in self.base_lm.vocab else (self.oov, self.oov_count)
+        return self.base_lm.probality(actual_word, *history) / norm
 
 
 class CountLM(LanguageModel):
