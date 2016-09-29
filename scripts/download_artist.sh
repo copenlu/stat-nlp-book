@@ -4,6 +4,7 @@
 # Example (all): download_ohhla
 # www.ohhla.com/anonymous/$1
 # http://www.ohhla.com/YFA_roots.html
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 wget \
      --recursive \
@@ -13,7 +14,7 @@ wget \
      --convert-links \
      --restrict-file-names=windows \
      --domains www.ohhla.com \
-     --directory-prefix=data/ohhla \
+     --directory-prefix=$DIR/../data/ohhla \
      --no-parent \
          $1
 

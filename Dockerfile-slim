@@ -15,10 +15,10 @@ RUN jupyter-nbextension install https://bitbucket.org/ipre/calico/downloads/cali
 USER $NB_USER
 
 RUN conda install --quiet --yes \
-    -c jacksongs -c damianavila82 -c anaconda -c auto -c conda-forge  \
+    -c jacksongs -c damianavila82 -c anaconda -c auto \
     mpld3=0.2 \
     graphviz=2.38.0 \
-    tensorflow \
+#    pdfkit=0.4.1 \
     rise && \
     conda clean -tipsy
 
@@ -38,6 +38,7 @@ RUN pip3 install \
 #    python3 setup.py install
 
 RUN jupyter-nbextension install rise --py --sys-prefix
+
 
 RUN jupyter-nbextension enable rise --py --sys-prefix && \
     jupyter-nbextension enable calico-spell-check
