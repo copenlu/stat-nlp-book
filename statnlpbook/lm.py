@@ -128,7 +128,7 @@ class OOVAwareLM(LanguageModel):
 
     def probability(self, word, *history):
         actual_word, norm = (word, 1) if word in self.base_lm.vocab else (self.oov, self.oov_count)
-        return self.base_lm.probality(actual_word, *history) / norm
+        return self.base_lm.probability(actual_word, *history) / norm
 
 
 class CountLM(LanguageModel):
