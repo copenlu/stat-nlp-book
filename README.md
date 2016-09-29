@@ -33,6 +33,12 @@ Go to the [docker webpage](https://www.docker.com/) and follow the instruction f
 ### Download Stat-NLP-Book Image
 
     docker pull riedelcastro/stat-nlp-book
+    
+### Download Data
+
+The book requires some data that can be stored on github. To download execute:
+
+    docker run -p 8888:8888 -v SNLPHOME:/home/jovyan/work  scripts/download_data.sh   
 
 ### Run Notebook
 
