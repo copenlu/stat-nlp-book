@@ -38,11 +38,11 @@ Go to the [docker webpage](https://www.docker.com/) and follow the instruction f
 
 The book requires some data that can be stored on github. To download execute:
 
-    docker run -p 8888:8888 -v SNLPHOME:/home/jovyan/work riedelcastro/stat-nlp-book scripts/download_data.sh   
+    docker run -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book scripts/download_data.sh   
 
 ### Run Notebook
 
-    docker run -p 8888:8888 -v SNLPHOME:/home/jovyan/work riedelcastro/stat-nlp-book 
+    docker run -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book 
 
 Go to the [introduction page](http://localhost:8888/notebooks/overview.ipynb). 
 
