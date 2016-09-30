@@ -3,10 +3,10 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DOWNLOAD=$DIR/download_artist.sh
 
-$DOWNLOAD http://www.ohhla.com/YFA_roots.html
-$DOWNLOAD http://www.ohhla.com/YFA_rakim.html
-$DOWNLOAD http://www.ohhla.com/YFA_atcq.html
-$DOWNLOAD http://www.ohhla.com/YFA_gsr.html
-$DOWNLOAD http://www.ohhla.com/YFA_slickrick.html
-$DOWNLOAD http://www.ohhla.com/YFA_nas.html
-$DOWNLOAD www.ohhla.com/anonymous/j_live
+$DOWNLOAD http://www.ohhla.com/YFA_roots.html $DIR/../data/ohhla
+$DOWNLOAD http://www.ohhla.com/YFA_rakim.html $DIR/../data/ohhla
+$DOWNLOAD http://www.ohhla.com/YFA_atcq.html $DIR/../data/ohhla
+$DOWNLOAD http://www.ohhla.com/YFA_gsr.html $DIR/../data/ohhla
+$DOWNLOAD http://www.ohhla.com/YFA_slickrick.html $DIR/../data/ohhla
+$DOWNLOAD http://www.ohhla.com/YFA_nas.html $DIR/../data/ohhla
+$DOWNLOAD www.ohhla.com/anonymous/j_live $DIR/../data/ohhla

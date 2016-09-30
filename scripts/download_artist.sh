@@ -14,7 +14,7 @@ wget \
      --convert-links \
      --restrict-file-names=windows \
      --domains www.ohhla.com \
-     --directory-prefix=$DIR/../data/ohhla \
+     --directory-prefix=$2 \
      --no-parent \
          $1
 
