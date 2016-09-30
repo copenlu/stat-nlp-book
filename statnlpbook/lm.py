@@ -120,15 +120,19 @@ class OOVAwareLM(LanguageModel):
     This LM converts out of vocabulary tokens to a special OOV token before their probability is calculated.
     """
 
-    def __init__(self, base_lm, oov_count, oov=OOV):
-        super().__init__(base_lm.vocab, base_lm.order)
+    def __init__(self, base_lm, missing_words, oov=OOV):
+        super().__init__(base_lm.vocab | missing_words, base_lm.order)
         self.base_lm = base_lm
         self.oov = oov
-        self.oov_count = oov_count
+        self.missing_words = missing_words
 
     def probability(self, word, *history):
-        actual_word, norm = (word, 1) if word in self.base_lm.vocab else (self.oov, self.oov_count)
-        return self.base_lm.probability(actual_word, *history) / norm
+        if word in self.base_lm.vocab:
+            return self.base_lm.probability(word, *history)
+        elif word in self.missing_words:
+            return self.base_lm.probability(self.oov, *history) / len(self.missing_words)
+        else:
+            return 0.0
 
 
 class CountLM(LanguageModel):
