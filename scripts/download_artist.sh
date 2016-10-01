@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# Example (all J-Live): download_ohhla j_live
-# Example (all): download_ohhla
-# www.ohhla.com/anonymous/$1
-# http://www.ohhla.com/YFA_roots.html
+# Example (all Roots): download_artist.sh http://www.ohhla.com/YFA_roots.html data/ohhla/train
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 wget \
