@@ -1,0 +1,10 @@
+#ipython_notebook img{                                                                                        
+    display:block;
+    background: url(uclmr_logo.png) no-repeat;
+    background-size: contain;
+    width: 33px;
+    height: 33px;
+    padding-left: 33px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
