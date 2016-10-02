@@ -46,20 +46,5 @@ The book requires some data that can be stored on github. To download execute:
 
 Go to the [introduction page](http://localhost:8888/notebooks/overview.ipynb). 
 
-## Code Outside the Notebook
-Assume you have a local code directory with absolute path `CODE`. 
 
-### Running
-When running code outside notebooks you can still use the 
-docker image like so:
-
-    docker run -v CODE:/home/jovyan/work riedelcastro/stat-nlp-book python3 mycode/main.py
-    
-### Editing 
-You can edit your code in `CODE` with any editor or IDE of your choice. 
-Good options are:
-
-* PyCharm (...)
-* Atom (...)
-* vim etc.
 
