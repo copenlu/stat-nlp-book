@@ -38,7 +38,7 @@ Go to the [docker webpage](https://www.docker.com/) and follow the instruction f
 
 The book requires some data that can be stored on github. To download execute:
 
-    docker run -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book scripts/download_data.sh   
+    docker run -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book scripts/download_data.sh   
 
 ### Run Notebook
 
