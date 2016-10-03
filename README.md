@@ -6,11 +6,12 @@ The easiest option for reading the book is via the static [nbviewer](http://nbvi
 While this does not allow you to change and execute code, it also doesn't require you install software locally and only needs a browser.
 
 
-
 ## Installation 
 
-We assume you have a command line interface in your OS 
-(bash, zsh, cygwin, git-bash, power-shell etc.). 
+We assume you have a command line interface (CLI) in your OS 
+(bash, zsh, cygwin, git-bash, power-shell etc.). We assume this CLI sets 
+ the variable `$PWD` to the current variable. If it doesn't replace
+ all mentions of `$PWD` with the current directory you are in. 
 
 ### Install Docker
 
@@ -34,7 +35,7 @@ We assume from here on that you are in the top level `stat-nlp-book` directory:
     
 ### Download Data
 
-The book requires some data that can be stored on github. To download execute:
+The book requires some data that cannot be stored on github. To download execute:
 
     docker run -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book scripts/download_data.sh   
 
