@@ -10,21 +10,7 @@ While this does not allow you to change and execute code, it also doesn't requir
 ## Installation 
 
 We assume you have a command line interface in your OS 
-(bash, zsh, cygwin etc.). 
-
-### Install Git
-
-Go to the [git installation instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
-and follow platform specific instructions. 
-
-### Get Stat-NLP-Book Repository
-
-Clone this repository, and enter it:
-    
-    git clone https://github.com/uclmr/stat-nlp-book.git
-    cd stat-nlp-book
-
-Let us assume the full stat-nlp-book path is `SNLPHOME`. 
+(bash, zsh, cygwin, git-bash, power-shell etc.). 
 
 ### Install Docker
 
@@ -33,6 +19,18 @@ Go to the [docker webpage](https://www.docker.com/) and follow the instruction f
 ### Download Stat-NLP-Book Image
 
     docker pull riedelcastro/stat-nlp-book
+    
+### Get Stat-NLP-Book Repository
+
+You can use the git installation in the docker container to get the repository:
+
+    docker run -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book git clone https://github.com/uclmr/stat-nlp-book.git  
+ 
+### Change into Stat-NLP-Book directory
+
+We assume from here on that you are in the top level `stat-nlp-book` directory:
+
+    cd stat-nlp-book
     
 ### Download Data
 
