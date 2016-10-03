@@ -43,7 +43,7 @@ The book requires some data that cannot be stored on github. To download execute
 
     docker run -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book 
 
-Go to the [introduction page](http://localhost:8888/notebooks/overview.ipynb). 
+You are now ready to visit the [overview page](http://localhost:8888/notebooks/overview.ipynb) of the installed book. 
 
 
 
