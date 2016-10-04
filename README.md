@@ -10,7 +10,7 @@ While this does not allow you to change and execute code, it also doesn't requir
 
 We assume you have a command line interface (CLI) in your OS 
 (bash, zsh, cygwin, git-bash, power-shell etc.). We assume this CLI sets 
- the variable `$PWD` to the current variable. If it doesn't replace
+ the variable `$PWD` to the current directory. If it doesn't replace
  all mentions of `$PWD` with the current directory you are in. 
 
 ### Install Docker
