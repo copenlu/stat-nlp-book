@@ -59,7 +59,7 @@ def load_all_songs(path):
     return lyrics + sub_songs
 
 
-token = re.compile('\'|\[BAR\]|\[/BAR\]|[\w-]+')
+token = re.compile("\[BAR\]|\[/BAR\]|[\w-]+|'m|'t|'ll|'ve|'d|\'")
 
 
 def words(docs):
