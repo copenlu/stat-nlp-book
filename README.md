@@ -46,4 +46,21 @@ The book requires some data that cannot be stored on github. To download execute
 You are now ready to visit the [overview page](http://localhost:8888/notebooks/overview.ipynb) of the installed book. 
 
 
+## Usage
 
+Once installed you can always run your notebook server via
+
+    docker run -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book 
+    
+**assuming that your docker daemon is running** and that you are
+**in the `stat-nlp-book` directory. How to run the docker daemon
+depends on your system. 
+
+### Update the notebook
+
+We frequently make changes to the book. To get these updates run
+
+    docker run -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book git pull
+    
+    
+ 
