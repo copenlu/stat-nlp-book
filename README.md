@@ -62,5 +62,12 @@ We frequently make changes to the book. To get these updates run
 
     docker run -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book git pull
     
-    
+### Access Content
+
+The repository contains a lot of material, some of which may not be ready
+for consumption yet. This is why you should always access content through
+the top-level [overview page](http://localhost:8888/notebooks/overview.ipynb).
+
+
+
  
