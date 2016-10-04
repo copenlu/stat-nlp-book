@@ -3,7 +3,7 @@
 ## Render Book Statically
 
 The easiest option for reading the book is via the static [nbviewer](http://nbviewer.jupyter.org/github/uclmr/stat-nlp-book/blob/python/overview.ipynb). 
-While this does not allow you to change and execute code, it also doesn't require you install software locally and only needs a browser.
+While this does not allow you to change and execute code, it also doesn't require you to install software locally and only needs a browser.
 
 
 ## Installation 
