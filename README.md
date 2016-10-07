@@ -48,11 +48,12 @@ You are now ready to visit the [overview page](http://localhost:8888/notebooks/o
 
 ## Usage
 
-Once installed you can always run your notebook server via
+Once installed you can always run your notebook server by first changing
+into your local stat-nlp-book directory, and then executing
 
     docker run -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book 
     
-**assuming that your docker daemon is running** and that you are
+This is **assuming that your docker daemon is running** and that you are
 **in the `stat-nlp-book` directory. How to run the docker daemon
 depends on your system. 
 
