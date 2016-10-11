@@ -2,10 +2,11 @@ import uuid
 
 
 class Alignment:
-    def __init__(self, source, target, alignment_tuples):
+    def __init__(self, source, target, alignment_tuples, view_box="0 0 250 100"):
         self.source = source
         self.target = target
         self.triples = []
+        self.view_box = view_box
         for tuple in alignment_tuples:
             if len(tuple) == 2:
                 self.triples.append((tuple[0], tuple[1], 1.0))
@@ -13,12 +14,12 @@ class Alignment:
                 self.triples.append(tuple)
 
     @classmethod
-    def from_matrix(cls, matrix, source, target):
+    def from_matrix(cls, matrix, source, target, view_box="0 0 250 100"):
         alignment_tuples = []
         for si in range(0, len(source)):
             for ti in range(0, len(target)):
                 alignment_tuples.append((si, ti, matrix[si][ti]))
-        obj = cls(source, target, alignment_tuples)
+        obj = cls(source, target, alignment_tuples, view_box)
         return obj
 
     def _repr_html_(self):
@@ -29,7 +30,9 @@ class Alignment:
         alignments_string = '[' + (",".join(alignments)) + ']'
         result = """
         <svg id='{}' xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink">
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="{}"
+             >
 
             <text x="0" y="15" class="source">
                 {}
@@ -67,6 +70,5 @@ class Alignment:
               }});
             </script>
         </svg>
-        """.format(svg_id, " ".join(source), " ".join(target), svg_id, alignments_string)
+        """.format(svg_id, self.view_box, " ".join(source), " ".join(target), svg_id, alignments_string)
         return result
-
