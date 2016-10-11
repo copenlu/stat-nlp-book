@@ -2,7 +2,7 @@ import uuid
 
 
 class Alignment:
-    def __init__(self, source, target, alignment_tuples, view_box="0 0 250 100"):
+    def __init__(self, source, target, alignment_tuples, view_box="0 0 400 100"):
         self.source = source
         self.target = target
         self.triples = []
@@ -14,7 +14,7 @@ class Alignment:
                 self.triples.append(tuple)
 
     @classmethod
-    def from_matrix(cls, matrix, source, target, view_box="0 0 250 100"):
+    def from_matrix(cls, matrix, source, target, view_box="0 0 400 100"):
         alignment_tuples = []
         for si in range(0, len(source)):
             for ti in range(0, len(target)):
