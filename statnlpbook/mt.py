@@ -24,3 +24,18 @@ def create_distortion_table(max_length, fixed=None):
                     else:
                         beta[ti, si, lt, ls] = 1.0 / lt
     return beta
+
+
+def render_history(history):
+    class Test:
+        def _repr_html_(self):
+            rows = []
+            for beam in history:
+                for hyp in beam:
+                    remaining_str = [("_" if i not in hyp.remaining else hyp.source[i])
+                                     for i in range(0, len(hyp.source))]
+                    rows.append("<tr><td>{}</td><td>{}</td><td>{}</td><td>{}</td></tr>".format(
+                        " ".join(hyp.target), " ".join(remaining_str), len(hyp.remaining), hyp.score))
+            return "<table>" + "\n".join(rows) + "</table>"
+
+    return Test()

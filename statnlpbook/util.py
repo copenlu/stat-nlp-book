@@ -130,11 +130,14 @@ def safe_log(x):
 
 
 class Table:
-    def __init__(self, rows, font_size="large"):
+    def __init__(self, rows, font_size="large", padding='initial'):
         self.font_size = font_size
         self.rows = rows
+        self.padding = padding
 
     def _repr_html_(self):
-        rows = "".join(["<tr>{}<tr>".format(" ".join(["<td>{}</td>".format(elem) for elem in row])) for row in self.rows])
-        result = """<table style="font-size:{};">{}</table>""".format(self.font_size,rows)
+        rows = "".join(["<tr>{}<tr>".format(" ".join(
+            ["<td style='padding:{padding}'>{elem}</td>".format(padding=self.padding, elem=elem) for elem in row])) for
+                        row in self.rows])
+        result = """<table style="font-size:{font_size};">{rows}</table>""".format(font_size=self.font_size, rows=rows)
         return result
