@@ -141,3 +141,6 @@ class Table:
                         row in self.rows])
         result = """<table style="font-size:{font_size};">{rows}</table>""".format(font_size=self.font_size, rows=rows)
         return result
+
+
+
