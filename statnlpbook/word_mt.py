@@ -18,8 +18,8 @@ class Alignment:
         alignment_tuples = []
         for si in range(0, len(source)):
             for ti in range(0, len(target)):
-                alignment_tuples.append((si, ti, matrix[si][ti]))
-        obj = cls(source, target, alignment_tuples, view_box)
+                alignment_tuples.append((ti, si, matrix[si][ti]))
+        obj = cls(target, source, alignment_tuples, view_box)
         return obj
 
     def _repr_html_(self):
