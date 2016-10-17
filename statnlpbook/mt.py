@@ -31,7 +31,8 @@ def render_history(history):
         def _repr_html_(self):
             rows = []
             for beam in history:
-                for hyp in beam:
+                for j in range(len(beam), 0, -1):
+                    hyp = beam[j-1]
                     remaining_str = [("_" if i not in hyp.remaining else hyp.source[i])
                                      for i in range(0, len(hyp.source))]
                     rows.append("<tr><td>{}</td><td>{}</td><td>{}</td><td>{}</td></tr>".format(
