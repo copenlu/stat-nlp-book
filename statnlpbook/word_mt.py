@@ -2,7 +2,7 @@ import uuid
 
 
 class Alignment:
-    def __init__(self, source, target, alignment_tuples, view_box="0 0 250 100"):
+    def __init__(self, source, target, alignment_tuples, view_box="0 0 400 100"):
         self.source = source
         self.target = target
         self.triples = []
@@ -14,12 +14,12 @@ class Alignment:
                 self.triples.append(tuple)
 
     @classmethod
-    def from_matrix(cls, matrix, source, target, view_box="0 0 250 100"):
+    def from_matrix(cls, matrix, source, target, view_box="0 0 400 100"):
         alignment_tuples = []
         for si in range(0, len(source)):
             for ti in range(0, len(target)):
-                alignment_tuples.append((si, ti, matrix[si][ti]))
-        obj = cls(source, target, alignment_tuples, view_box)
+                alignment_tuples.append((ti, si, matrix[si][ti]))
+        obj = cls(target, source, alignment_tuples, view_box)
         return obj
 
     def _repr_html_(self):
@@ -34,7 +34,7 @@ class Alignment:
              viewBox="{}"
              >
 
-            <text x="0" y="15" class="source">
+            <text x="0" y="20" class="source">
                 {}
             </text>
             <text x="0" y="100" class="target">

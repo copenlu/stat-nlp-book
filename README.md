@@ -54,12 +54,24 @@ into your local stat-nlp-book directory, and then executing
     docker run -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book 
     
 This is **assuming that your docker daemon is running** and that you are
-**in the `stat-nlp-book` directory. How to run the docker daemon
+**in the `stat-nlp-book` directory**. How to run the docker daemon
 depends on your system. 
 
 ### Update the notebook
 
-We frequently make changes to the book. To get these updates run
+We frequently make changes to the book. To get these changes you
+should first make sure to clean your *local changes* to avoid merge 
+conflicts. That is, you might have made changes (by changing the code
+or simply running it) to the files that we changed. In these cases `git`
+ will complain when you do the update. To overcome this you can undo all
+ your changes by executing:
+ 
+    docker run -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book git checkout -- .
+    
+If you want to keep your changes **create copies of the changed files**.
+Jupyter has a "Make a copy" option in the "File" menu for this. 
+
+To get the actual updates then run
 
     docker run -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book git pull
     
