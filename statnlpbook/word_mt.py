@@ -37,7 +37,7 @@ class Alignment:
             <text x="0" y="20" class="source">
                 {}
             </text>
-            <text x="0" y="100" class="target">
+            <text x="0" y="95" class="target">
                 {}
             </text>
             <g class='connections'></g>
