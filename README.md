@@ -26,13 +26,17 @@ Go to the [docker webpage](https://www.docker.com/) and follow the instruction f
 You can use the git installation in the docker container to get the repository:
 
     docker run -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book git clone https://github.com/uclmr/stat-nlp-book.git  
- 
+
+Note: this will create a new `stat-nlp-book` directory in your current directory.
+
 ### Change into Stat-NLP-Book directory
 
 We assume from here on that you are in the top level `stat-nlp-book` directory:
 
     cd stat-nlp-book
-    
+
+Note: you need to be in the `stat-nlp-book` directory every time you want to run/update the book.
+
 ### Download Data
 
 The book requires some data that cannot be stored on github. To download execute:
@@ -49,13 +53,13 @@ You are now ready to visit the [overview page](http://localhost:8888/notebooks/o
 ## Usage
 
 Once installed you can always run your notebook server by first changing
-into your local stat-nlp-book directory, and then executing
+into your local `stat-nlp-book` directory, and then executing:
 
     docker run -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book 
     
 This is **assuming that your docker daemon is running** and that you are
 **in the `stat-nlp-book` directory**. How to run the docker daemon
-depends on your system. 
+depends on your system.
 
 ### Update the notebook
 
@@ -79,7 +83,7 @@ To get the actual updates then run
 
 The repository contains a lot of material, some of which may not be ready
 for consumption yet. This is why you should always access content through
-the top-level [overview page](http://localhost:8888/notebooks/overview.ipynb).
+the top-level [overview page (local-link)](http://localhost:8888/notebooks/overview.ipynb).
 
 
 
