@@ -121,12 +121,31 @@ class OOVAwareLM(LanguageModel):
     """
 
     def __init__(self, base_lm, missing_words, oov=OOV):
+        """
+        Create an OOV Aware LM that uniformly assigns the mass of the OOV symbol
+         to the missing words outside of the training vocabulary.
+        Args:
+            base_lm: the base LM to get word and OOV probabilities from.
+            missing_words: a set of words that are not in the base_lm vocab but expected
+            in the vocab of this LM.
+        """
         super().__init__(base_lm.vocab | missing_words, base_lm.order)
         self.base_lm = base_lm
         self.oov = oov
         self.missing_words = missing_words
 
     def probability(self, word, *history):
+        """
+        Returns the original probability of the word under the base_lm if the word
+        is in the vocab of the base_lm. If the word is in the set of missing words,
+        it assigns it prob(OOV) / len(missing_words). Else 0 is returned.
+        Args:
+            word: the word to estimate the probability of.
+            *history: the history to condition on.
+
+        Returns: OOV Aware probability of the word given the context.
+
+        """
         if word in self.base_lm.vocab:
             return self.base_lm.probability(word, *history)
         elif word in self.missing_words:
@@ -149,8 +168,14 @@ class CountLM(LanguageModel):
         pass
 
     def probability(self, word, *history):
+        if word not in self.vocab:
+            return 0.0
         sub_history = tuple(history[-(self.order - 1):]) if self.order > 1 else ()
-        return self.counts((word,) + sub_history) / self.norm(sub_history)
+        norm = self.norm(sub_history)
+        if norm == 0:
+            return 1.0 / len(self.vocab)
+        else:
+            return self.counts((word,) + sub_history) / self.norm(sub_history)
 
 
 class NGramLM(CountLM):
