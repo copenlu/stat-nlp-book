@@ -1,0 +1,50 @@
+>>
+>word
+0	"Root"
+1	"Summary"
+2	"of"
+3	"Analysis"
+4	"Performed"
+5	"on"
+6	"Wild-Type"
+7	"and"
+8	"LMP1"
+9	"Transgenic"
+10	"Lymphomas"
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"VBN"
+5	"IN"
+6	"NN"
+7	"CC"
+8	"NN"
+9	"JJ"
+10	"NNS"
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+1	3	"prep_of"
+3	4	"partmod"
+4	6	"prep_on"
+4	8	"prep_on"
+6	8	"conj_and"
+10	9	"amod"
+6	10	"dep"
+
+>mention
+8	8	"Protein(LMP1)"
+
+>trigger
+9	9	"Gene_expression"
+>argument
+9	8	"Theme"
+>relation
+
+

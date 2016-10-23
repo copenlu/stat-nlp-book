@@ -1,0 +1,110 @@
+>>
+>word
+0	"Root"
+1	"Accession"
+2	"Numbers"
+3	"The"
+4	"GenBank"
+5	"("
+6	"http://www.ncbi.nlm.nih.gov/Genbank/"
+7	")"
+8	"accession"
+9	"number"
+10	"for"
+11	"the"
+12	"EBV"
+13	"genome"
+14	"sequence"
+15	"is"
+16	"AJ507799"
+17	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"DT"
+4	"NN"
+5	"-LRB-"
+6	"NN"
+7	"-RRB-"
+8	"NN"
+9	"NN"
+10	"IN"
+11	"DT"
+12	"NN"
+13	"NN"
+14	"NN"
+15	"VBZ"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+9	2	"dep"
+9	3	"det"
+9	4	"nn"
+9	6	"nn"
+9	8	"nn"
+16	10	"mark"
+14	11	"det"
+14	12	"nn"
+14	13	"nn"
+16	14	"nsubj"
+16	15	"cop"
+9	16	"dep"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"gene"
+3	"identifier"
+4	"for"
+5	"LMP1"
+6	"is"
+7	"BNLF1"
+8	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"IN"
+5	"NN"
+6	"VBZ"
+7	"NN"
+8	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+7	3	"nsubj"
+3	5	"prep_for"
+7	6	"cop"
+
+>mention
+5	5	"Protein(LMP1)"
+7	7	"Protein(BNLF1)"
+
+>trigger
+>argument
+>relation
+
+

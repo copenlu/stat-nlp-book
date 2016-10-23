@@ -1,0 +1,494 @@
+>>
+>word
+0	"Root"
+1	"Transcriptional"
+2	"regulation"
+3	"during"
+4	"myelopoiesis"
+5	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+2	4	"prep_during"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"coordinated"
+3	"production"
+4	"of"
+5	"all"
+6	"blood"
+7	"cells"
+8	"from"
+9	"a"
+10	"common"
+11	"stem"
+12	"cell"
+13	"is"
+14	"a"
+15	"highly"
+16	"regulated"
+17	"process"
+18	"involving"
+19	"successive"
+20	"stages"
+21	"of"
+22	"commitment"
+23	"and"
+24	"differentiation"
+25	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"VBN"
+3	"NN"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"NNS"
+8	"IN"
+9	"DT"
+10	"JJ"
+11	"NN"
+12	"NN"
+13	"VBZ"
+14	"DT"
+15	"RB"
+16	"VBN"
+17	"NN"
+18	"VBG"
+19	"JJ"
+20	"NNS"
+21	"IN"
+22	"NN"
+23	"CC"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+17	3	"nsubj"
+7	5	"det"
+7	6	"nn"
+3	7	"prep_of"
+12	9	"det"
+12	10	"amod"
+12	11	"nn"
+3	12	"prep_from"
+17	13	"cop"
+17	14	"det"
+16	15	"advmod"
+17	16	"amod"
+17	18	"partmod"
+20	19	"amod"
+18	20	"dobj"
+20	22	"prep_of"
+20	24	"prep_of"
+22	24	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"From"
+2	"analyses"
+3	"of"
+4	"mice"
+5	"deficient"
+6	"in"
+7	"transcription"
+8	"factor"
+9	"genes"
+10	"and"
+11	"from"
+12	"the"
+13	"characterizations"
+14	"of"
+15	"chromosome"
+16	"breakpoints"
+17	"in"
+18	"human"
+19	"leukemias"
+20	","
+21	"it"
+22	"has"
+23	"become"
+24	"evident"
+25	"that"
+26	"transcription"
+27	"factors"
+28	"are"
+29	"important"
+30	"regulators"
+31	"of"
+32	"hematopoiesis"
+33	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NNS"
+3	"IN"
+4	"NNS"
+5	"JJ"
+6	"IN"
+7	"NN"
+8	"NN"
+9	"NNS"
+10	"CC"
+11	"IN"
+12	"DT"
+13	"NNS"
+14	"IN"
+15	"NN"
+16	"NNS"
+17	"IN"
+18	"JJ"
+19	"NNS"
+20	","
+21	"PRP"
+22	"VBZ"
+23	"VBN"
+24	"JJ"
+25	"IN"
+26	"NN"
+27	"NNS"
+28	"VBP"
+29	"JJ"
+30	"NNS"
+31	"IN"
+32	"NN"
+33	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+24	2	"prep_from"
+2	4	"prep_of"
+4	5	"amod"
+9	7	"nn"
+9	8	"nn"
+5	9	"prep_in"
+13	12	"det"
+24	13	"prep_from"
+16	15	"nn"
+13	16	"prep_of"
+19	18	"amod"
+16	19	"prep_in"
+24	21	"nsubj"
+24	21	"nsubj"
+24	22	"aux"
+24	23	"cop"
+24	24	"conj_and"
+30	25	"complm"
+27	26	"nn"
+30	27	"nsubj"
+30	28	"cop"
+30	29	"amod"
+24	30	"ccomp"
+30	32	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"During"
+2	"myelopoiesis"
+3	","
+4	"which"
+5	"includes"
+6	"the"
+7	"development"
+8	"of"
+9	"granulocytic"
+10	"and"
+11	"monocytic"
+12	"lineages"
+13	","
+14	"transcription"
+15	"factors"
+16	"from"
+17	"several"
+18	"families"
+19	"are"
+20	"active"
+21	","
+22	"including"
+23	"AML1"
+24	"/CBF"
+25	"beta"
+26	","
+27	"C/EBP"
+28	","
+29	"Ets"
+30	","
+31	"c-Myb"
+32	","
+33	"HOX"
+34	","
+35	"and"
+36	"MZF-1"
+37	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	","
+4	"WDT"
+5	"VBZ"
+6	"DT"
+7	"NN"
+8	"IN"
+9	"JJ"
+10	"CC"
+11	"JJ"
+12	"NNS"
+13	","
+14	"NN"
+15	"NNS"
+16	"IN"
+17	"JJ"
+18	"NNS"
+19	"VBP"
+20	"JJ"
+21	","
+22	"VBG"
+23	"NN"
+24	"NN"
+25	"NN"
+26	","
+27	"NN"
+28	","
+29	"NN"
+30	","
+31	"NN"
+32	","
+33	"NN"
+34	","
+35	"CC"
+36	"NN"
+37	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	2	"nsubj"
+20	2	"prep_during"
+2	5	"rcmod"
+7	6	"det"
+5	7	"dobj"
+12	9	"amod"
+9	11	"conj_and"
+12	11	"amod"
+7	12	"prep_of"
+15	14	"nn"
+20	15	"nsubj"
+18	17	"amod"
+15	18	"prep_from"
+20	19	"cop"
+24	23	"nn"
+20	24	"prep_including"
+24	25	"dep"
+20	27	"prep_including"
+24	27	"conj_and"
+20	29	"prep_including"
+24	29	"conj_and"
+20	31	"prep_including"
+24	31	"conj_and"
+20	33	"prep_including"
+24	33	"conj_and"
+20	36	"prep_including"
+24	36	"conj_and"
+
+>mention
+23	23	"Protein(AML1)"
+24	25	"Protein(/CBF)"
+31	31	"Protein(c-Myb)"
+36	36	"Protein(MZF-1)"
+
+>trigger
+20	20	"Positive_regulation"
+>argument
+20	23	"Theme"
+20	24	"Theme"
+20	31	"Theme"
+20	36	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Few"
+2	"of"
+3	"these"
+4	"factors"
+5	"are"
+6	"expressed"
+7	"exclusively"
+8	"in"
+9	"myeloid"
+10	"cells"
+11	";"
+12	"instead"
+13	"it"
+14	"appears"
+15	"that"
+16	"they"
+17	"cooperatively"
+18	"regulate"
+19	"transcription"
+20	"of"
+21	"myeloid-specific"
+22	"genes"
+23	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"IN"
+3	"DT"
+4	"NNS"
+5	"VBP"
+6	"VBN"
+7	"RB"
+8	"IN"
+9	"JJ"
+10	"NNS"
+11	":"
+12	"RB"
+13	"PRP"
+14	"VBZ"
+15	"IN"
+16	"PRP"
+17	"RB"
+18	"VBP"
+19	"NN"
+20	"IN"
+21	"JJ"
+22	"NNS"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"nsubjpass"
+4	3	"det"
+1	4	"prep_of"
+6	5	"auxpass"
+6	7	"advmod"
+10	9	"amod"
+6	10	"prep_in"
+14	12	"advmod"
+14	13	"nsubj"
+6	14	"parataxis"
+18	15	"complm"
+18	16	"nsubj"
+18	17	"advmod"
+14	18	"ccomp"
+18	19	"dobj"
+22	21	"amod"
+19	22	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Here"
+2	"we"
+3	"discuss"
+4	"recent"
+5	"advances"
+6	"in"
+7	"transcriptional"
+8	"regulation"
+9	"during"
+10	"myelopoiesis"
+11	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"PRP"
+3	"VBP"
+4	"JJ"
+5	"NNS"
+6	"IN"
+7	"JJ"
+8	"NN"
+9	"IN"
+10	"NN"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"advmod"
+3	2	"nsubj"
+5	4	"amod"
+3	5	"dobj"
+8	7	"amod"
+5	8	"prep_in"
+8	10	"prep_during"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

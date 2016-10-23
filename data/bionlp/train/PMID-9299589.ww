@@ -1,0 +1,370 @@
+>>
+>word
+0	"Root"
+1	"Rel/NF-kappa"
+2	"B"
+3	"transcription"
+4	"factors"
+5	"and"
+6	"the"
+7	"control"
+8	"of"
+9	"apoptosis"
+10	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NN"
+4	"NNS"
+5	"CC"
+6	"DT"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nn"
+4	2	"nn"
+4	3	"nn"
+7	6	"det"
+4	7	"conj_and"
+7	9	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"process"
+3	"of"
+4	"apoptosis"
+5	"is"
+6	"used"
+7	"to"
+8	"eliminate"
+9	"unwanted"
+10	"cells"
+11	"from"
+12	"a"
+13	"wide"
+14	"variety"
+15	"of"
+16	"organisms"
+17	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"VBZ"
+6	"VBN"
+7	"TO"
+8	"VB"
+9	"JJ"
+10	"NNS"
+11	"IN"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"IN"
+16	"NNS"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+6	2	"nsubjpass"
+8	2	"xsubj"
+2	4	"prep_of"
+6	5	"auxpass"
+8	7	"aux"
+6	8	"xcomp"
+10	9	"amod"
+8	10	"dobj"
+14	12	"det"
+14	13	"amod"
+8	14	"prep_from"
+14	16	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Various"
+2	"extracellular"
+3	"signals"
+4	","
+5	"often"
+6	"converging"
+7	"in"
+8	"common"
+9	"intracellular"
+10	"pathways"
+11	","
+12	"can"
+13	"induce"
+14	"apoptosis"
+15	"in"
+16	"a"
+17	"cell-type-specific"
+18	"fashion"
+19	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"JJ"
+3	"NNS"
+4	","
+5	"RB"
+6	"VBG"
+7	"IN"
+8	"JJ"
+9	"JJ"
+10	"NNS"
+11	","
+12	"MD"
+13	"VB"
+14	"NN"
+15	"IN"
+16	"DT"
+17	"JJ"
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"amod"
+13	3	"nsubj"
+6	5	"advmod"
+3	6	"partmod"
+10	8	"amod"
+10	9	"amod"
+6	10	"prep_in"
+13	12	"aux"
+13	14	"dobj"
+18	16	"det"
+18	17	"amod"
+13	18	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Recent"
+2	"work"
+3	"from"
+4	"several"
+5	"laboratories"
+6	"has"
+7	"demonstrated"
+8	"that"
+9	"Rel/NF-kappa"
+10	"B"
+11	"transcription"
+12	"factors"
+13	"regulate"
+14	"apoptosis"
+15	"in"
+16	"many"
+17	"cell"
+18	"types"
+19	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"JJ"
+5	"NNS"
+6	"VBZ"
+7	"VBN"
+8	"IN"
+9	"NN"
+10	"NN"
+11	"NN"
+12	"NNS"
+13	"VBP"
+14	"NN"
+15	"IN"
+16	"JJ"
+17	"NN"
+18	"NNS"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+7	2	"nsubj"
+5	4	"amod"
+2	5	"prep_from"
+7	6	"aux"
+13	8	"complm"
+12	9	"nn"
+12	10	"nn"
+12	11	"nn"
+13	12	"nsubj"
+7	13	"ccomp"
+13	14	"dobj"
+18	16	"amod"
+18	17	"nn"
+13	18	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"most"
+3	"cells"
+4	","
+5	"Rel/NF-kappa"
+6	"B"
+7	"transcription"
+8	"factors"
+9	"appear"
+10	"to"
+11	"mediate"
+12	"survival"
+13	"signals"
+14	"that"
+15	"protect"
+16	"cells"
+17	"from"
+18	"apoptosis"
+19	";"
+20	"however"
+21	","
+22	"under"
+23	"some"
+24	"circumstances"
+25	","
+26	"activation"
+27	"of"
+28	"these"
+29	"factors"
+30	"may"
+31	"also"
+32	"promote"
+33	"apoptosis"
+34	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"JJS"
+3	"NNS"
+4	","
+5	"NN"
+6	"NN"
+7	"NN"
+8	"NNS"
+9	"VBP"
+10	"TO"
+11	"VB"
+12	"NN"
+13	"NNS"
+14	"WDT"
+15	"VBP"
+16	"NNS"
+17	"IN"
+18	"NN"
+19	":"
+20	"RB"
+21	","
+22	"IN"
+23	"DT"
+24	"NNS"
+25	","
+26	"NN"
+27	"IN"
+28	"DT"
+29	"NNS"
+30	"MD"
+31	"RB"
+32	"VB"
+33	"NN"
+34	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"amod"
+9	3	"prep_in"
+8	5	"nn"
+8	6	"nn"
+8	7	"nn"
+9	8	"nsubj"
+11	8	"xsubj"
+11	10	"aux"
+9	11	"xcomp"
+13	12	"nn"
+11	13	"dobj"
+15	13	"nsubj"
+13	15	"rcmod"
+15	16	"dobj"
+15	18	"prep_from"
+32	20	"advmod"
+24	23	"det"
+32	24	"prep_under"
+32	26	"nsubj"
+29	28	"det"
+26	29	"prep_of"
+32	30	"aux"
+32	31	"advmod"
+9	32	"parataxis"
+32	33	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

@@ -1,0 +1,601 @@
+>>
+>word
+0	"Root"
+1	"Altered"
+2	"DNA-binding"
+3	"specificity"
+4	"mutants"
+5	"of"
+6	"EKLF"
+7	"and"
+8	"Sp1"
+9	"show"
+10	"that"
+11	"EKLF"
+12	"is"
+13	"an"
+14	"activator"
+15	"of"
+16	"the"
+17	"beta-globin"
+18	"locus"
+19	"control"
+20	"region"
+21	"in"
+22	"vivo"
+23	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"JJ"
+3	"NN"
+4	"NNS"
+5	"IN"
+6	"NN"
+7	"CC"
+8	"NN"
+9	"VBP"
+10	"IN"
+11	"NN"
+12	"VBZ"
+13	"DT"
+14	"NN"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"NN"
+19	"NN"
+20	"NN"
+21	"FW"
+22	"FW"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"amod"
+4	2	"amod"
+4	3	"nn"
+9	4	"nsubj"
+4	6	"prep_of"
+4	8	"prep_of"
+6	8	"conj_and"
+14	10	"complm"
+14	11	"nsubj"
+14	12	"cop"
+14	13	"det"
+9	14	"ccomp"
+20	16	"det"
+20	17	"nn"
+20	18	"nn"
+20	19	"nn"
+14	20	"prep_of"
+22	21	"nn"
+14	22	"advmod"
+
+>mention
+6	6	"Protein(EKLF)"
+8	8	"Protein(Sp1)"
+11	11	"Protein(EKLF)"
+17	17	"Protein(beta-globin)"
+
+>trigger
+3	3	"Binding"
+>argument
+3	6	"Theme"
+3	8	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"locus"
+3	"control"
+4	"region"
+5	"of"
+6	"the"
+7	"beta-globin"
+8	"cluster"
+9	"contains"
+10	"five"
+11	"DNase"
+12	"I"
+13	"hypersensitive"
+14	"sites"
+15	"("
+16	"5"
+17	"'"
+18	"HS1-5"
+19	")"
+20	"required"
+21	"for"
+22	"locus"
+23	"activation"
+24	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"NN"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"NN"
+9	"VBZ"
+10	"CD"
+11	"NN"
+12	"CD"
+13	"JJ"
+14	"NNS"
+15	"-LRB-"
+16	"CD"
+17	"''"
+18	"JJ"
+19	"-RRB-"
+20	"VBN"
+21	"IN"
+22	"NN"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"det"
+4	2	"nn"
+4	3	"nn"
+9	4	"nsubj"
+8	6	"det"
+8	7	"nn"
+4	8	"prep_of"
+14	10	"num"
+14	11	"nn"
+14	12	"num"
+14	13	"amod"
+9	14	"dobj"
+18	16	"number"
+14	18	"dep"
+14	20	"partmod"
+23	22	"nn"
+20	23	"prep_for"
+
+>mention
+7	7	"Protein(beta-globin)"
+
+>trigger
+20	20	"Positive_regulation"
+23	23	"Positive_regulation"
+>argument
+20	23	"Theme"
+23	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"5"
+2	"'"
+3	"HS3"
+4	"contains"
+5	"six"
+6	"G-rich"
+7	"motifs"
+8	"that"
+9	"are"
+10	"essential"
+11	"for"
+12	"its"
+13	"activity"
+14	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"``"
+3	"NN"
+4	"VBZ"
+5	"CD"
+6	"JJ"
+7	"NNS"
+8	"WDT"
+9	"VBP"
+10	"JJ"
+11	"IN"
+12	"PRP$"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"num"
+4	3	"nsubj"
+7	5	"num"
+7	6	"amod"
+4	7	"dobj"
+10	7	"nsubj"
+10	9	"cop"
+7	10	"rcmod"
+13	12	"poss"
+10	13	"prep_for"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Members"
+2	"of"
+3	"a"
+4	"protein"
+5	"family"
+6	","
+7	"characterized"
+8	"by"
+9	"three"
+10	"zinc"
+11	"fingers"
+12	"highly"
+13	"homologous"
+14	"to"
+15	"those"
+16	"found"
+17	"in"
+18	"transcription"
+19	"factor"
+20	"Sp1"
+21	","
+22	"interact"
+23	"with"
+24	"these"
+25	"motifs"
+26	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"IN"
+3	"DT"
+4	"NN"
+5	"NN"
+6	","
+7	"VBN"
+8	"IN"
+9	"CD"
+10	"NN"
+11	"NNS"
+12	"RB"
+13	"JJ"
+14	"TO"
+15	"DT"
+16	"VBN"
+17	"IN"
+18	"NN"
+19	"NN"
+20	"NN"
+21	","
+22	"VBP"
+23	"IN"
+24	"DT"
+25	"NNS"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+22	1	"nsubj"
+5	3	"det"
+5	4	"nn"
+1	5	"prep_of"
+5	7	"partmod"
+11	9	"num"
+11	10	"nn"
+7	11	"agent"
+13	12	"advmod"
+11	13	"amod"
+13	15	"prep_to"
+15	16	"partmod"
+20	18	"nn"
+20	19	"nn"
+16	20	"prep_in"
+25	24	"det"
+22	25	"prep_with"
+
+>mention
+20	20	"Protein(Sp1)"
+
+>trigger
+22	22	"Binding"
+>argument
+22	20	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Because"
+2	"point"
+3	"mutagenesis"
+4	"can"
+5	"not"
+6	"distinguish"
+7	"between"
+8	"family"
+9	"members"
+10	","
+11	"it"
+12	"is"
+13	"not"
+14	"known"
+15	"which"
+16	"protein"
+17	"activates"
+18	"5"
+19	"'"
+20	"HS3"
+21	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	"NN"
+4	"MD"
+5	"RB"
+6	"VB"
+7	"IN"
+8	"NN"
+9	"NNS"
+10	","
+11	"PRP"
+12	"VBZ"
+13	"RB"
+14	"VBN"
+15	"WDT"
+16	"NN"
+17	"VBZ"
+18	"CD"
+19	"''"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"mark"
+3	2	"nn"
+6	3	"nsubj"
+6	4	"aux"
+6	5	"neg"
+14	6	"advcl"
+9	8	"nn"
+6	9	"prep_between"
+14	11	"nsubjpass"
+14	12	"auxpass"
+14	13	"neg"
+16	15	"det"
+17	16	"nsubj"
+14	17	"ccomp"
+20	18	"num"
+17	20	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"show"
+3	"that"
+4	"the"
+5	"function"
+6	"of"
+7	"such"
+8	"closely"
+9	"related"
+10	"proteins"
+11	"can"
+12	"be"
+13	"distinguished"
+14	"in"
+15	"vivo"
+16	"by"
+17	"matching"
+18	"point"
+19	"mutations"
+20	"in"
+21	"5"
+22	"'"
+23	"HS3"
+24	"with"
+25	"amino"
+26	"acid"
+27	"changes"
+28	"in"
+29	"the"
+30	"zinc"
+31	"fingers"
+32	"of"
+33	"Sp1"
+34	"and"
+35	"EKLF"
+36	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"IN"
+4	"DT"
+5	"NN"
+6	"IN"
+7	"JJ"
+8	"RB"
+9	"JJ"
+10	"NNS"
+11	"MD"
+12	"VB"
+13	"VBN"
+14	"FW"
+15	"FW"
+16	"IN"
+17	"VBG"
+18	"NN"
+19	"NNS"
+20	"IN"
+21	"CD"
+22	"POS"
+23	"NN"
+24	"IN"
+25	"NN"
+26	"NN"
+27	"NNS"
+28	"IN"
+29	"DT"
+30	"NN"
+31	"NNS"
+32	"IN"
+33	"NN"
+34	"CC"
+35	"NN"
+36	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+13	3	"complm"
+5	4	"det"
+13	5	"nsubjpass"
+10	7	"amod"
+9	8	"advmod"
+10	9	"amod"
+5	10	"prep_of"
+13	11	"aux"
+13	12	"auxpass"
+2	13	"ccomp"
+15	14	"nn"
+13	15	"advmod"
+13	17	"agent"
+19	18	"nn"
+17	19	"dobj"
+23	21	"num"
+19	23	"prep_in"
+27	25	"nn"
+27	26	"nn"
+17	27	"prep_with"
+31	29	"det"
+31	30	"nn"
+27	31	"prep_in"
+31	33	"prep_of"
+31	35	"prep_of"
+33	35	"conj_and"
+
+>mention
+33	33	"Protein(Sp1)"
+35	35	"Protein(EKLF)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Testing"
+2	"their"
+3	"activity"
+4	"in"
+5	"transgenic"
+6	"mice"
+7	"shows"
+8	"that"
+9	"EKLF"
+10	"is"
+11	"a"
+12	"direct"
+13	"activator"
+14	"of"
+15	"5"
+16	"'"
+17	"HS3"
+18	"."
+
+>tag
+0	"Root"
+1	"VBG"
+2	"PRP$"
+3	"NN"
+4	"IN"
+5	"JJ"
+6	"NNS"
+7	"VBZ"
+8	"IN"
+9	"NN"
+10	"VBZ"
+11	"DT"
+12	"JJ"
+13	"NN"
+14	"IN"
+15	"CD"
+16	"POS"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	1	"csubj"
+3	2	"poss"
+1	3	"dobj"
+6	5	"amod"
+3	6	"prep_in"
+13	8	"complm"
+13	9	"nsubj"
+13	10	"cop"
+13	11	"det"
+13	12	"amod"
+7	13	"ccomp"
+17	15	"num"
+13	17	"prep_of"
+
+>mention
+9	9	"Protein(EKLF)"
+
+>trigger
+>argument
+>relation
+
+

@@ -1,0 +1,600 @@
+>>
+>word
+0	"Root"
+1	"Biphasic"
+2	"control"
+3	"of"
+4	"NF-kappa"
+5	"B"
+6	"activation"
+7	"induced"
+8	"by"
+9	"the"
+10	"triggering"
+11	"of"
+12	"HLA-DR"
+13	"antigens"
+14	"expressed"
+15	"on"
+16	"B"
+17	"cells"
+18	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"NN"
+6	"NN"
+7	"VBN"
+8	"IN"
+9	"DT"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"NNS"
+14	"VBN"
+15	"IN"
+16	"NN"
+17	"NNS"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+7	2	"nsubj"
+5	4	"nn"
+6	5	"nn"
+2	6	"prep_of"
+10	9	"det"
+7	10	"prep_by"
+13	12	"nn"
+10	13	"prep_of"
+13	14	"partmod"
+17	16	"nn"
+14	17	"prep_on"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"regulation"
+3	"of"
+4	"NF-kappa"
+5	"B"
+6	"activation"
+7	"following"
+8	"the"
+9	"triggering"
+10	"of"
+11	"HLA-DR"
+12	"antigens"
+13	"by"
+14	"mAb"
+15	"L243"
+16	"has"
+17	"been"
+18	"studied"
+19	"at"
+20	"various"
+21	"times"
+22	"in"
+23	"Raji"
+24	"cells"
+25	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"NN"
+6	"NN"
+7	"VBG"
+8	"DT"
+9	"NN"
+10	"IN"
+11	"NN"
+12	"NNS"
+13	"IN"
+14	"NN"
+15	"CD"
+16	"VBZ"
+17	"VBN"
+18	"VBN"
+19	"IN"
+20	"JJ"
+21	"NNS"
+22	"IN"
+23	"NN"
+24	"NNS"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+18	2	"nsubjpass"
+5	4	"nn"
+6	5	"nn"
+2	6	"prep_of"
+9	8	"det"
+6	9	"prep_following"
+12	11	"nn"
+9	12	"prep_of"
+9	14	"prep_by"
+14	15	"num"
+18	16	"aux"
+18	17	"auxpass"
+21	20	"amod"
+18	21	"prep_at"
+24	23	"nn"
+21	24	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Electrophoretic"
+2	"mobility"
+3	"shift"
+4	"assays"
+5	"demonstrated"
+6	"a"
+7	"strong"
+8	"increase"
+9	"of"
+10	"NF-kappa"
+11	"B"
+12	"DNA"
+13	"binding"
+14	"after"
+15	"triggering"
+16	"of"
+17	"HLA-DR"
+18	"antigens"
+19	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NN"
+4	"NNS"
+5	"VBD"
+6	"DT"
+7	"JJ"
+8	"NN"
+9	"IN"
+10	"NN"
+11	"NN"
+12	"NN"
+13	"NN"
+14	"IN"
+15	"NN"
+16	"IN"
+17	"NN"
+18	"NNS"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"amod"
+4	2	"nn"
+4	3	"nn"
+5	4	"nsubj"
+8	6	"det"
+8	7	"amod"
+5	8	"dobj"
+13	10	"nn"
+13	11	"nn"
+13	12	"nn"
+8	13	"prep_of"
+5	15	"prep_after"
+18	17	"nn"
+15	18	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Using"
+2	"TNF-alpha"
+3	"-activity"
+4	"neutralizing"
+5	"antibodies"
+6	","
+7	"the"
+8	"authors"
+9	"demonstrated"
+10	"that"
+11	"the"
+12	"upregulation"
+13	"of"
+14	"NF-kappa"
+15	"B"
+16	"was"
+17	"found"
+18	"to"
+19	"depend"
+20	","
+21	"at"
+22	"later"
+23	"time"
+24	"point"
+25	","
+26	"on"
+27	"an"
+28	"autocrine"
+29	"effect"
+30	"of"
+31	"TNF-alpha"
+32	"secreted"
+33	"following"
+34	"triggering"
+35	"of"
+36	"HLA-DR"
+37	"antigens"
+38	"."
+
+>tag
+0	"Root"
+1	"VBG"
+2	"NN"
+3	"NN"
+4	"NN"
+5	"NNS"
+6	","
+7	"DT"
+8	"NNS"
+9	"VBD"
+10	"IN"
+11	"DT"
+12	"NN"
+13	"IN"
+14	"NN"
+15	"NN"
+16	"VBD"
+17	"VBN"
+18	"TO"
+19	"VB"
+20	","
+21	"IN"
+22	"JJ"
+23	"NN"
+24	"NN"
+25	","
+26	"IN"
+27	"DT"
+28	"JJ"
+29	"NN"
+30	"IN"
+31	"NN"
+32	"VBN"
+33	"VBG"
+34	"NN"
+35	"IN"
+36	"NN"
+37	"NNS"
+38	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	1	"partmod"
+5	2	"nn"
+5	3	"nn"
+5	4	"nn"
+1	5	"dobj"
+8	7	"det"
+9	8	"nsubj"
+17	10	"complm"
+12	11	"det"
+17	12	"nsubjpass"
+19	12	"xsubj"
+15	14	"nn"
+12	15	"prep_of"
+17	16	"auxpass"
+9	17	"ccomp"
+19	18	"aux"
+17	19	"xcomp"
+24	22	"amod"
+24	23	"nn"
+19	24	"prep_at"
+29	27	"det"
+29	28	"amod"
+19	29	"prep_on"
+29	31	"prep_of"
+31	32	"partmod"
+32	34	"prep_following"
+37	36	"nn"
+34	37	"prep_of"
+
+>mention
+2	2	"Protein(TNF-alpha)"
+31	31	"Protein(TNF-alpha)"
+
+>trigger
+32	32	"Localization"
+33	33	"Positive_regulation"
+>argument
+32	31	"Theme"
+33	32	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"contrast"
+3	","
+4	"it"
+5	"was"
+6	"found"
+7	"to"
+8	"be"
+9	"TNF-alpha"
+10	"independent"
+11	"in"
+12	"the"
+13	"early"
+14	"time"
+15	"point"
+16	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	","
+4	"PRP"
+5	"VBD"
+6	"VBN"
+7	"TO"
+8	"VB"
+9	"NN"
+10	"JJ"
+11	"IN"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	2	"prep_in"
+6	4	"nsubjpass"
+10	4	"xsubj"
+6	5	"auxpass"
+10	7	"aux"
+10	8	"cop"
+10	9	"dep"
+6	10	"xcomp"
+15	12	"det"
+15	13	"amod"
+15	14	"nn"
+10	15	"prep_in"
+
+>mention
+9	9	"Protein(TNF-alpha)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Moreover"
+2	","
+3	"the"
+4	"upregulation"
+5	"of"
+6	"NF-kappa"
+7	"B"
+8	"binding"
+9	"activity"
+10	"is"
+11	"regulated"
+12	"by"
+13	"the"
+14	"triggering"
+15	"of"
+16	"selected"
+17	"epitopes"
+18	"of"
+19	"HLA-DR"
+20	"antigens"
+21	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"NN"
+8	"NN"
+9	"NN"
+10	"VBZ"
+11	"VBN"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"IN"
+16	"VBN"
+17	"NNS"
+18	"IN"
+19	"NN"
+20	"NNS"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+11	1	"advmod"
+4	3	"det"
+11	4	"nsubjpass"
+9	6	"nn"
+9	7	"nn"
+9	8	"nn"
+4	9	"prep_of"
+11	10	"auxpass"
+14	13	"det"
+11	14	"agent"
+17	16	"amod"
+14	17	"prep_of"
+20	19	"nn"
+17	20	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"fact"
+3	","
+4	"mAb"
+5	"L243"
+6	"but"
+7	"not"
+8	"the"
+9	"staphylococcal"
+10	"superantigens"
+11	","
+12	"staphylococcal"
+13	"exotoxin"
+14	"toxic"
+15	"shock"
+16	"syndrome"
+17	"toxin-I"
+18	"or"
+19	"staphylococcal"
+20	"enterotoxin"
+21	"B"
+22	","
+23	"regulate"
+24	"the"
+25	"NF-kappa"
+26	"B"
+27	"binding"
+28	"activity"
+29	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	","
+4	"NN"
+5	"NN"
+6	"CC"
+7	"RB"
+8	"DT"
+9	"JJ"
+10	"NNS"
+11	","
+12	"JJ"
+13	"NN"
+14	"JJ"
+15	"NN"
+16	"NN"
+17	"NN"
+18	"CC"
+19	"JJ"
+20	"NN"
+21	"NN"
+22	","
+23	"VBP"
+24	"DT"
+25	"NN"
+26	"NN"
+27	"NN"
+28	"NN"
+29	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+23	2	"prep_in"
+5	4	"nn"
+23	5	"nsubj"
+10	8	"det"
+10	9	"amod"
+5	10	"conj_negcc"
+23	10	"nsubj"
+17	12	"amod"
+17	13	"nn"
+17	14	"amod"
+17	15	"nn"
+17	16	"nn"
+10	17	"appos"
+21	19	"amod"
+21	20	"nn"
+10	21	"appos"
+17	21	"conj_or"
+28	24	"det"
+26	25	"nn"
+28	26	"nn"
+28	27	"nn"
+23	28	"dobj"
+
+>mention
+14	17	"Protein(toxin-I)"
+19	21	"Protein(B)"
+
+>trigger
+>argument
+>relation
+
+

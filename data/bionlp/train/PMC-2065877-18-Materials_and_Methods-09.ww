@@ -1,0 +1,767 @@
+>>
+>word
+0	"Root"
+1	"Antibodies"
+2	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"FITC-conjugated"
+2	"goat"
+3	"anti-mouse"
+4	"IgM"
+5	","
+6	"rat"
+7	"IgG2akappa"
+8	"anti-mouse"
+9	"IgD"
+10	"("
+11	"clone"
+12	"11-26"
+13	")"
+14	","
+15	"rat"
+16	"IgG1kappa"
+17	"anti-mouse"
+18	"kappa"
+19	"("
+20	"clone"
+21	"187.1"
+22	")"
+23	","
+24	"rat"
+25	"IgG2bkappa"
+26	"anti-mouse"
+27	"lambda"
+28	"("
+29	"clone"
+30	"JC5-1"
+31	")"
+32	";"
+33	"PE-conjugated"
+34	"goat"
+35	"anti-mouse"
+36	"IgG"
+37	";"
+38	"un-conjugated"
+39	"goat"
+40	"anti-mouse"
+41	"kappa"
+42	"and"
+43	"anti-mouse"
+44	"lambda"
+45	"were"
+46	"purchased"
+47	"from"
+48	"Southern"
+49	"Biotech"
+50	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"JJ"
+4	"NN"
+5	","
+6	"NN"
+7	"NN"
+8	"JJ"
+9	"NN"
+10	"-LRB-"
+11	"NN"
+12	"CD"
+13	"-RRB-"
+14	","
+15	"NN"
+16	"NN"
+17	"JJ"
+18	"NN"
+19	"-LRB-"
+20	"NN"
+21	"NN"
+22	"-RRB-"
+23	","
+24	"NN"
+25	"NN"
+26	"JJ"
+27	"NN"
+28	"-LRB-"
+29	"NN"
+30	"NN"
+31	"-RRB-"
+32	":"
+33	"JJ"
+34	"NN"
+35	"JJ"
+36	"NN"
+37	":"
+38	"JJ"
+39	"NN"
+40	"JJ"
+41	"NN"
+42	"CC"
+43	"JJ"
+44	"NN"
+45	"VBD"
+46	"VBN"
+47	"IN"
+48	"NN"
+49	"NNP"
+50	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"amod"
+4	2	"nn"
+4	3	"amod"
+46	4	"nsubjpass"
+9	6	"nn"
+9	7	"nn"
+9	8	"amod"
+4	9	"appos"
+9	11	"appos"
+11	12	"num"
+18	15	"nn"
+18	16	"nn"
+18	17	"amod"
+4	18	"appos"
+21	20	"nn"
+18	21	"appos"
+27	24	"nn"
+27	25	"nn"
+27	26	"amod"
+18	27	"appos"
+30	29	"nn"
+27	30	"abbrev"
+36	33	"amod"
+36	34	"nn"
+36	35	"amod"
+18	36	"dep"
+41	38	"amod"
+41	39	"nn"
+41	40	"amod"
+18	41	"dep"
+44	43	"amod"
+18	44	"dep"
+41	44	"conj_and"
+46	45	"auxpass"
+49	48	"nn"
+46	49	"prep_from"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"APC-conjugated"
+2	"rat"
+3	"IgG2akappa"
+4	"anti-mouse"
+5	"CD19"
+6	"("
+7	"clone"
+8	"6D5"
+9	")"
+10	","
+11	"PE-conjugated"
+12	"mouse"
+13	"IgG2akappa"
+14	"anti-LMP1"
+15	"("
+16	"clone"
+17	"S12"
+18	")"
+19	","
+20	"un-conjugated"
+21	"mouse"
+22	"IgG2a"
+23	"anti-Rb"
+24	"("
+25	"clone"
+26	"2"
+27	")"
+28	","
+29	"and"
+30	"anti-Cdk2"
+31	"("
+32	"clone"
+33	"55"
+34	")"
+35	"were"
+36	"purchased"
+37	"from"
+38	"BD"
+39	"Bioscience"
+40	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NN"
+4	"JJ"
+5	"NN"
+6	"-LRB-"
+7	"NN"
+8	"NN"
+9	"-RRB-"
+10	","
+11	"JJ"
+12	"NN"
+13	"NN"
+14	"NN"
+15	"-LRB-"
+16	"NN"
+17	"NN"
+18	"-RRB-"
+19	","
+20	"JJ"
+21	"NN"
+22	"NN"
+23	"NN"
+24	"-LRB-"
+25	"NN"
+26	"CD"
+27	"-RRB-"
+28	","
+29	"CC"
+30	"NN"
+31	"-LRB-"
+32	"NN"
+33	"CD"
+34	"-RRB-"
+35	"VBD"
+36	"VBN"
+37	"IN"
+38	"NN"
+39	"NN"
+40	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"nn"
+36	3	"nsubjpass"
+5	4	"amod"
+3	5	"dep"
+8	7	"nn"
+3	8	"appos"
+14	11	"amod"
+14	12	"nn"
+14	13	"nn"
+3	14	"conj_and"
+36	14	"nsubjpass"
+17	16	"nn"
+14	17	"appos"
+23	20	"amod"
+23	21	"nn"
+23	22	"nn"
+3	23	"conj_and"
+36	23	"nsubjpass"
+23	25	"appos"
+25	26	"num"
+3	30	"conj_and"
+36	30	"nsubjpass"
+30	32	"appos"
+32	33	"num"
+36	35	"auxpass"
+39	38	"nn"
+36	39	"prep_from"
+
+>mention
+5	5	"Protein(CD19)"
+14	14	"Protein(anti-LMP1)"
+23	23	"Protein(anti-Rb)"
+30	30	"Protein(anti-Cdk2)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"PE-conjugated"
+2	"rat"
+3	"IgG2akappa"
+4	"anti-mouse"
+5	"CD5"
+6	"("
+7	"clone"
+8	"53-7"
+9	".3"
+10	")"
+11	"was"
+12	"purchased"
+13	"from"
+14	"eBioscience"
+15	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NN"
+4	"JJ"
+5	"NN"
+6	"-LRB-"
+7	"NN"
+8	"NN"
+9	"NN"
+10	"-RRB-"
+11	"VBD"
+12	"VBN"
+13	"IN"
+14	"NN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"amod"
+5	2	"nn"
+5	3	"nn"
+5	4	"amod"
+12	5	"nsubjpass"
+9	7	"nn"
+9	8	"nn"
+5	9	"appos"
+12	11	"auxpass"
+12	14	"prep_from"
+
+>mention
+5	5	"Protein(CD5)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Rat"
+2	"anti-LMP1"
+3	"("
+4	"clones"
+5	"8G3"
+6	","
+7	"1G6"
+8	","
+9	"7E10"
+10	","
+11	"and"
+12	"7G8"
+13	")"
+14	"was"
+15	"purchased"
+16	"from"
+17	"Ascenion"
+18	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"-LRB-"
+4	"NNS"
+5	"NN"
+6	","
+7	"NN"
+8	","
+9	"NN"
+10	","
+11	"CC"
+12	"NN"
+13	"-RRB-"
+14	"VBD"
+15	"VBN"
+16	"IN"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+15	2	"nsubjpass"
+2	4	"appos"
+4	5	"dep"
+4	7	"dep"
+5	7	"conj_and"
+4	9	"dep"
+5	9	"conj_and"
+4	12	"dep"
+5	12	"conj_and"
+15	14	"auxpass"
+15	17	"prep_from"
+
+>mention
+2	2	"Protein(anti-LMP1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Rabbit"
+2	"anti-pAkt"
+3	"("
+4	"Ser473"
+5	")"
+6	","
+7	"anti-pGSK3alpha"
+8	"/"
+9	"beta"
+10	"("
+11	"Ser21/9"
+12	")"
+13	","
+14	"anti-pStat3"
+15	"("
+16	"Tyr705"
+17	")"
+18	","
+19	"anti-pStat6"
+20	"("
+21	"Tyr641"
+22	")"
+23	","
+24	"anti-pmTOR"
+25	"("
+26	"Ser2448"
+27	")"
+28	","
+29	"anti-Stat6"
+30	","
+31	"anti-Akt"
+32	","
+33	"anti-FoxO1"
+34	","
+35	"and"
+36	"anti-p27"
+37	"were"
+38	"purchased"
+39	"from"
+40	"Cell"
+41	"Signaling"
+42	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"-LRB-"
+4	"NN"
+5	"-RRB-"
+6	","
+7	"NN"
+8	":"
+9	"NN"
+10	"-LRB-"
+11	"NN"
+12	"-RRB-"
+13	","
+14	"NN"
+15	"-LRB-"
+16	"NN"
+17	"-RRB-"
+18	","
+19	"NN"
+20	"-LRB-"
+21	"NN"
+22	"-RRB-"
+23	","
+24	"NN"
+25	"-LRB-"
+26	"NN"
+27	"-RRB-"
+28	","
+29	"NN"
+30	","
+31	"NN"
+32	","
+33	"NN"
+34	","
+35	"CC"
+36	"NN"
+37	"VBD"
+38	"VBN"
+39	"IN"
+40	"NN"
+41	"NN"
+42	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+38	2	"nsubjpass"
+2	4	"appos"
+2	7	"conj_and"
+38	7	"nsubjpass"
+2	8	"punct"
+2	9	"conj_and"
+38	9	"nsubjpass"
+9	11	"appos"
+2	14	"conj_and"
+38	14	"nsubjpass"
+14	16	"appos"
+2	19	"conj_and"
+38	19	"nsubjpass"
+19	21	"appos"
+2	24	"conj_and"
+38	24	"nsubjpass"
+24	26	"appos"
+2	29	"conj_and"
+38	29	"nsubjpass"
+2	31	"conj_and"
+38	31	"nsubjpass"
+2	33	"conj_and"
+38	33	"nsubjpass"
+2	36	"conj_and"
+38	36	"nsubjpass"
+38	37	"auxpass"
+41	40	"nn"
+38	41	"prep_from"
+
+>mention
+2	2	"Protein(anti-pAkt)"
+7	7	"Protein(anti-pGSK3alpha)"
+9	9	"Protein(beta)"
+14	14	"Protein(anti-pStat3)"
+19	19	"Protein(anti-pStat6)"
+24	24	"Protein(anti-pmTOR)"
+29	29	"Protein(anti-Stat6)"
+31	31	"Protein(anti-Akt)"
+33	33	"Protein(anti-FoxO1)"
+36	36	"Protein(anti-p27)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Rabbit"
+2	"anti-Stat3"
+3	"("
+4	"H-190"
+5	")"
+6	","
+7	"anti-IkappaBalpha"
+8	"("
+9	"C-21"
+10	")"
+11	","
+12	"and"
+13	"goat"
+14	"anti-beta"
+15	"actin"
+16	"("
+17	"I-19"
+18	")"
+19	"were"
+20	"purchased"
+21	"from"
+22	"Santa"
+23	"Cruz"
+24	"Biotechnology"
+25	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"JJ"
+3	"-LRB-"
+4	"NN"
+5	"-RRB-"
+6	","
+7	"JJ"
+8	"-LRB-"
+9	"NN"
+10	"-RRB-"
+11	","
+12	"CC"
+13	"NN"
+14	"NN"
+15	"NN"
+16	"-LRB-"
+17	"NN"
+18	"-RRB-"
+19	"VBD"
+20	"VBN"
+21	"IN"
+22	"NNP"
+23	"NNP"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+20	2	"nsubjpass"
+2	4	"appos"
+2	7	"conj_and"
+20	7	"nsubjpass"
+7	9	"appos"
+15	13	"nn"
+15	14	"nn"
+2	15	"conj_and"
+20	15	"nsubjpass"
+15	17	"appos"
+20	19	"auxpass"
+24	22	"nn"
+24	23	"nn"
+20	24	"prep_from"
+
+>mention
+2	2	"Protein(anti-Stat3)"
+7	7	"Protein(anti-IkappaBalpha)"
+14	15	"Protein(actin)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Mouse"
+2	"IgG1kappa"
+3	"anti-GSK3"
+4	"was"
+5	"purchased"
+6	"from"
+7	"Upstate"
+8	"Biotechnology"
+9	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NN"
+4	"VBD"
+5	"VBN"
+6	"IN"
+7	"NN"
+8	"NN"
+9	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	2	"nn"
+5	3	"nsubjpass"
+5	4	"auxpass"
+8	7	"nn"
+5	8	"prep_from"
+
+>mention
+3	3	"Protein(anti-GSK3)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Rabbit"
+2	"anti-pRb"
+3	"("
+4	"Thr373"
+5	")"
+6	"was"
+7	"purchased"
+8	"from"
+9	"EMD"
+10	"Biosciences"
+11	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"-LRB-"
+4	"NN"
+5	"-RRB-"
+6	"VBD"
+7	"VBN"
+8	"IN"
+9	"NNP"
+10	"NNP"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+7	2	"nsubjpass"
+2	4	"appos"
+7	6	"auxpass"
+10	9	"nn"
+7	10	"prep_from"
+
+>mention
+2	2	"Protein(anti-pRb)"
+
+>trigger
+>argument
+>relation
+
+

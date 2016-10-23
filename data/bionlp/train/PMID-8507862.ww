@@ -1,0 +1,459 @@
+>>
+>word
+0	"Root"
+1	"Expression"
+2	"of"
+3	"mRNA"
+4	"for"
+5	"the"
+6	"GATA-binding"
+7	"proteins"
+8	"in"
+9	"human"
+10	"eosinophils"
+11	"and"
+12	"basophils"
+13	":"
+14	"potential"
+15	"role"
+16	"in"
+17	"gene"
+18	"transcription"
+19	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"IN"
+5	"DT"
+6	"JJ"
+7	"NNS"
+8	"IN"
+9	"JJ"
+10	"NNS"
+11	"CC"
+12	"NNS"
+13	":"
+14	"JJ"
+15	"NN"
+16	"IN"
+17	"NN"
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+1	3	"prep_of"
+7	5	"det"
+7	6	"amod"
+3	7	"prep_for"
+10	9	"amod"
+1	10	"prep_in"
+1	12	"prep_in"
+10	12	"conj_and"
+15	14	"amod"
+1	15	"dep"
+18	17	"nn"
+15	18	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"expression"
+3	"of"
+4	"the"
+5	"hematopoietic"
+6	"transcription"
+7	"factors"
+8	"GATA-1"
+9	","
+10	"GATA-2"
+11	","
+12	"and"
+13	"GATA-3"
+14	"was"
+15	"studied"
+16	"in"
+17	"eosinophils"
+18	"and"
+19	"basophils"
+20	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"NNS"
+8	"NN"
+9	","
+10	"NN"
+11	","
+12	"CC"
+13	"NN"
+14	"VBD"
+15	"VBN"
+16	"IN"
+17	"NNS"
+18	"CC"
+19	"NNS"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+15	2	"nsubjpass"
+7	4	"det"
+7	5	"amod"
+7	6	"nn"
+2	7	"prep_of"
+7	8	"dep"
+7	10	"dep"
+8	10	"conj_and"
+7	13	"dep"
+8	13	"conj_and"
+15	14	"auxpass"
+15	17	"prep_in"
+15	19	"prep_in"
+17	19	"conj_and"
+
+>mention
+8	8	"Protein(GATA-1)"
+10	10	"Protein(GATA-2)"
+13	13	"Protein(GATA-3)"
+
+>trigger
+2	2	"Gene_expression"
+>argument
+2	8	"Theme"
+2	10	"Theme"
+2	13	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Eosinophils"
+2	"express"
+3	"mRNA"
+4	"for"
+5	"GATA-1"
+6	","
+7	"GATA-2"
+8	","
+9	"and"
+10	"GATA-3"
+11	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"VBP"
+3	"NN"
+4	"IN"
+5	"NN"
+6	","
+7	"NN"
+8	","
+9	"CC"
+10	"NN"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+2	3	"dobj"
+3	5	"prep_for"
+3	7	"prep_for"
+5	7	"conj_and"
+3	10	"prep_for"
+5	10	"conj_and"
+
+>mention
+5	5	"Protein(GATA-1)"
+7	7	"Protein(GATA-2)"
+10	10	"Protein(GATA-3)"
+
+>trigger
+3	3	"Transcription"
+>argument
+3	5	"Theme"
+3	7	"Theme"
+3	10	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Basophils"
+2	"express"
+3	"GATA-2"
+4	"and"
+5	"GATA-3"
+6	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"VBP"
+3	"NN"
+4	"CC"
+5	"NN"
+6	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+2	3	"dobj"
+2	5	"dobj"
+3	5	"conj_and"
+
+>mention
+3	3	"Protein(GATA-2)"
+5	5	"Protein(GATA-3)"
+
+>trigger
+2	2	"Gene_expression"
+>argument
+2	3	"Theme"
+2	5	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Treatment"
+2	"of"
+3	"HL-60"
+4	"eosinophilic"
+5	"sublines"
+6	"with"
+7	"either"
+8	"interleukin-5"
+9	"or"
+10	"butyric"
+11	"acid"
+12	"increased"
+13	"the"
+14	"expression"
+15	"of"
+16	"GATA-1"
+17	"mRNA"
+18	"concomitant"
+19	"with"
+20	"the"
+21	"expression"
+22	"of"
+23	"eosinophil-specific"
+24	"genes"
+25	","
+26	"whereas"
+27	"levels"
+28	"of"
+29	"GATA-2"
+30	"mRNA"
+31	"remained"
+32	"relatively"
+33	"constant"
+34	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"JJ"
+5	"NNS"
+6	"IN"
+7	"CC"
+8	"NN"
+9	"CC"
+10	"JJ"
+11	"NN"
+12	"VBD"
+13	"DT"
+14	"NN"
+15	"IN"
+16	"NN"
+17	"NN"
+18	"JJ"
+19	"IN"
+20	"DT"
+21	"NN"
+22	"IN"
+23	"JJ"
+24	"NNS"
+25	","
+26	"IN"
+27	"NNS"
+28	"IN"
+29	"NN"
+30	"NN"
+31	"VBD"
+32	"RB"
+33	"JJ"
+34	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+12	1	"nsubj"
+5	3	"nn"
+5	4	"amod"
+1	5	"prep_of"
+8	7	"preconj"
+1	8	"prep_with"
+11	10	"amod"
+1	11	"prep_with"
+8	11	"conj_or"
+14	13	"det"
+12	14	"dobj"
+17	16	"nn"
+14	17	"prep_of"
+12	18	"dep"
+21	20	"det"
+18	21	"prep_with"
+24	23	"amod"
+21	24	"prep_of"
+12	26	"dep"
+33	27	"nsubj"
+30	29	"nn"
+27	30	"prep_of"
+33	31	"cop"
+33	32	"advmod"
+12	33	"dep"
+
+>mention
+8	8	"Protein(interleukin-5)"
+16	16	"Protein(GATA-1)"
+29	29	"Protein(GATA-2)"
+
+>trigger
+12	12	"Positive_regulation"
+14	14	"Transcription"
+33	33	"Positive_regulation"
+>argument
+12	14	"Theme"
+14	16	"Theme"
+33	29	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"presence"
+3	"of"
+4	"mRNA"
+5	"for"
+6	"these"
+7	"proteins"
+8	"in"
+9	"eosinophils"
+10	"and"
+11	"basophils"
+12	"suggests"
+13	"that"
+14	"gene"
+15	"transcription"
+16	"in"
+17	"these"
+18	"lineages"
+19	"may"
+20	"be"
+21	"regulated"
+22	"by"
+23	"GATA-binding"
+24	"proteins"
+25	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"IN"
+6	"DT"
+7	"NNS"
+8	"IN"
+9	"NNS"
+10	"CC"
+11	"NNS"
+12	"VBZ"
+13	"IN"
+14	"NN"
+15	"NN"
+16	"IN"
+17	"DT"
+18	"NNS"
+19	"MD"
+20	"VB"
+21	"VBN"
+22	"IN"
+23	"JJ"
+24	"NNS"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+12	2	"nsubj"
+2	4	"prep_of"
+7	6	"det"
+4	7	"prep_for"
+2	9	"prep_in"
+2	11	"prep_in"
+9	11	"conj_and"
+21	13	"complm"
+15	14	"nn"
+21	15	"nsubjpass"
+18	17	"det"
+15	18	"prep_in"
+21	19	"aux"
+21	20	"auxpass"
+12	21	"ccomp"
+24	23	"amod"
+21	24	"agent"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

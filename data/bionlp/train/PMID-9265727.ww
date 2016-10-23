@@ -1,0 +1,538 @@
+>>
+>word
+0	"Root"
+1	"Transcription"
+2	"factors"
+3	"in"
+4	"immune-mediated"
+5	"disease"
+6	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"IN"
+4	"JJ"
+5	"NN"
+6	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+5	4	"amod"
+2	5	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"A"
+2	"large"
+3	"amount"
+4	"of"
+5	"detailed"
+6	"information"
+7	"about"
+8	"the"
+9	"intracellular"
+10	"proteins"
+11	"regulating"
+12	"NF-kappa"
+13	"B"
+14	"activation"
+15	"and"
+16	"the"
+17	"cellular"
+18	"response"
+19	"to"
+20	"NF-kappa"
+21	"B"
+22	"activation"
+23	"has"
+24	"emerged"
+25	"recently"
+26	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"IN"
+5	"JJ"
+6	"NN"
+7	"IN"
+8	"DT"
+9	"JJ"
+10	"NNS"
+11	"VBG"
+12	"NN"
+13	"NN"
+14	"NN"
+15	"CC"
+16	"DT"
+17	"JJ"
+18	"NN"
+19	"TO"
+20	"NN"
+21	"NN"
+22	"NN"
+23	"VBZ"
+24	"VBN"
+25	"RB"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+24	3	"nsubj"
+6	5	"amod"
+3	6	"prep_of"
+10	8	"det"
+10	9	"amod"
+6	10	"prep_about"
+10	11	"partmod"
+13	12	"nn"
+14	13	"nn"
+11	14	"dobj"
+18	16	"det"
+18	17	"amod"
+3	18	"conj_and"
+24	18	"nsubj"
+21	20	"nn"
+22	21	"nn"
+18	22	"prep_to"
+24	23	"aux"
+24	25	"advmod"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Several"
+2	"small"
+3	"molecules"
+4	","
+5	"an"
+6	"antisense"
+7	"oligonucleotide"
+8	","
+9	"and"
+10	"gene"
+11	"therapeutic"
+12	"agents"
+13	"that"
+14	"inhibit"
+15	"NF-kappa"
+16	"b"
+17	"activation"
+18	"have"
+19	"been"
+20	"described"
+21	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"JJ"
+3	"NNS"
+4	","
+5	"DT"
+6	"JJ"
+7	"NN"
+8	","
+9	"CC"
+10	"NN"
+11	"JJ"
+12	"NNS"
+13	"WDT"
+14	"VBP"
+15	"NN"
+16	"NN"
+17	"NN"
+18	"VBP"
+19	"VBN"
+20	"VBN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"amod"
+14	3	"nsubj"
+20	3	"nsubjpass"
+7	5	"det"
+7	6	"amod"
+3	7	"conj_and"
+14	7	"nsubj"
+20	7	"nsubjpass"
+12	10	"nn"
+12	11	"amod"
+3	12	"conj_and"
+14	12	"nsubj"
+20	12	"nsubjpass"
+3	14	"rcmod"
+16	15	"nn"
+17	16	"nn"
+14	17	"dobj"
+20	18	"aux"
+20	19	"auxpass"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Despite"
+2	"this"
+3	","
+4	"there"
+5	"are"
+6	"still"
+7	"significant"
+8	"gaps"
+9	"in"
+10	"our"
+11	"understanding"
+12	"of"
+13	"this"
+14	"process"
+15	"and"
+16	"its"
+17	"consequences"
+18	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	","
+4	"EX"
+5	"VBP"
+6	"RB"
+7	"JJ"
+8	"NNS"
+9	"IN"
+10	"PRP$"
+11	"NN"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"CC"
+16	"PRP$"
+17	"NNS"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	2	"prep_despite"
+5	4	"expl"
+5	6	"advmod"
+8	7	"amod"
+5	8	"nsubj"
+11	10	"poss"
+8	11	"prep_in"
+14	13	"det"
+11	14	"prep_of"
+17	16	"poss"
+8	17	"prep_in"
+11	17	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"contrast"
+3	","
+4	"the"
+5	"characterization"
+6	"of"
+7	"transcription"
+8	"factors"
+9	"selectively"
+10	"regulating"
+11	"cytokine"
+12	"production"
+13	"by"
+14	"CD4"
+15	"+"
+16	"T"
+17	"cell"
+18	"subsets"
+19	"is"
+20	"at"
+21	"a"
+22	"very"
+23	"early"
+24	"stage"
+25	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	","
+4	"DT"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NNS"
+9	"RB"
+10	"VBG"
+11	"NN"
+12	"NN"
+13	"IN"
+14	"NN"
+15	"CC"
+16	"NN"
+17	"NN"
+18	"NNS"
+19	"VBZ"
+20	"IN"
+21	"DT"
+22	"RB"
+23	"JJ"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+19	2	"prep_in"
+5	4	"det"
+19	5	"nsubj"
+8	7	"nn"
+5	8	"prep_of"
+10	9	"advmod"
+8	10	"partmod"
+12	11	"nn"
+10	12	"dobj"
+12	14	"prep_by"
+18	16	"nn"
+18	17	"nn"
+12	18	"prep_by"
+14	18	"conj_+"
+24	21	"det"
+23	22	"advmod"
+24	23	"amod"
+19	24	"prep_at"
+
+>mention
+14	14	"Protein(CD4)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Three"
+2	"interacting"
+3	"proteins"
+4	"have"
+5	"recently"
+6	"been"
+7	"shown"
+8	"to"
+9	"contribute"
+10	"to"
+11	"subset-restricted"
+12	"expression"
+13	"of"
+14	"the"
+15	"IL-4"
+16	"gene"
+17	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"VBG"
+3	"NNS"
+4	"VBP"
+5	"RB"
+6	"VBN"
+7	"VBN"
+8	"TO"
+9	"VB"
+10	"TO"
+11	"JJ"
+12	"NN"
+13	"IN"
+14	"DT"
+15	"NN"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"num"
+3	2	"amod"
+7	3	"nsubjpass"
+9	3	"xsubj"
+7	4	"aux"
+7	5	"advmod"
+7	6	"auxpass"
+9	8	"aux"
+7	9	"xcomp"
+12	11	"amod"
+9	12	"prep_to"
+16	14	"det"
+16	15	"nn"
+12	16	"prep_of"
+
+>mention
+15	15	"Protein(IL-4)"
+
+>trigger
+9	9	"Regulation"
+12	12	"Gene_expression"
+>argument
+9	12	"Theme"
+12	15	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"There"
+2	"are"
+3	"other"
+4	"elements"
+5	"regulating"
+6	"IL-4"
+7	"gene"
+8	"expression"
+9	","
+10	"however"
+11	","
+12	"and"
+13	"the"
+14	"relative"
+15	"importance"
+16	"of"
+17	"these"
+18	"recently"
+19	"identified"
+20	"proteins"
+21	"has"
+22	"yet"
+23	"to"
+24	"be"
+25	"determined"
+26	"."
+
+>tag
+0	"Root"
+1	"EX"
+2	"VBP"
+3	"JJ"
+4	"NNS"
+5	"VBG"
+6	"NN"
+7	"NN"
+8	"NN"
+9	","
+10	"RB"
+11	","
+12	"CC"
+13	"DT"
+14	"JJ"
+15	"NN"
+16	"IN"
+17	"DT"
+18	"RB"
+19	"VBN"
+20	"NNS"
+21	"VBZ"
+22	"RB"
+23	"TO"
+24	"VB"
+25	"VBN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"expl"
+4	3	"amod"
+2	4	"nsubj"
+4	5	"partmod"
+8	6	"nn"
+8	7	"nn"
+5	8	"dobj"
+2	10	"advmod"
+15	13	"det"
+15	14	"amod"
+21	15	"nsubj"
+25	15	"xsubj"
+20	17	"det"
+19	18	"advmod"
+20	19	"amod"
+15	20	"prep_of"
+2	21	"conj_and"
+21	22	"advmod"
+25	23	"aux"
+25	24	"auxpass"
+21	25	"xcomp"
+
+>mention
+6	6	"Protein(IL-4)"
+
+>trigger
+5	5	"Regulation"
+8	8	"Gene_expression"
+>argument
+5	8	"Theme"
+8	6	"Theme"
+>relation
+
+

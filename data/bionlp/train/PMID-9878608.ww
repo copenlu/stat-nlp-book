@@ -1,0 +1,589 @@
+>>
+>word
+0	"Root"
+1	"Reactivation"
+2	"of"
+3	"Kaposi"
+4	"'s"
+5	"sarcoma-associated"
+6	"herpesvirus"
+7	"infection"
+8	"from"
+9	"latency"
+10	"by"
+11	"expression"
+12	"of"
+13	"the"
+14	"ORF"
+15	"50"
+16	"transactivator"
+17	","
+18	"a"
+19	"homolog"
+20	"of"
+21	"the"
+22	"EBV"
+23	"R"
+24	"protein"
+25	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"POS"
+5	"JJ"
+6	"NN"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"IN"
+11	"NN"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"CD"
+16	"NN"
+17	","
+18	"DT"
+19	"NN"
+20	"IN"
+21	"DT"
+22	"NN"
+23	"NN"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	3	"nn"
+6	3	"poss"
+6	5	"amod"
+7	6	"nn"
+7	6	"poss"
+1	7	"prep_of"
+1	9	"prep_from"
+1	11	"prep_by"
+16	13	"det"
+16	14	"nn"
+16	15	"num"
+11	16	"prep_of"
+19	18	"det"
+16	19	"appos"
+24	21	"det"
+24	22	"nn"
+24	23	"nn"
+19	24	"prep_of"
+
+>mention
+14	16	"Protein(transactivator)"
+22	23	"Protein(R)"
+
+>trigger
+11	11	"Gene_expression"
+>argument
+11	16	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Kaposi"
+2	"'s"
+3	"sarcoma"
+4	"("
+5	"KS"
+6	")"
+7	"-"
+8	"associated"
+9	"herpesvirus"
+10	"("
+11	"KSHV"
+12	")"
+13	","
+14	"or"
+15	"human"
+16	"herpesvirus"
+17	"8"
+18	","
+19	"is"
+20	"a"
+21	"lymphotropic"
+22	"virus"
+23	"strongly"
+24	"linked"
+25	"to"
+26	"several"
+27	"AIDS-related"
+28	"neoplasms"
+29	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"POS"
+3	"NN"
+4	"-LRB-"
+5	"NN"
+6	"-RRB-"
+7	":"
+8	"JJ"
+9	"NN"
+10	"-LRB-"
+11	"NN"
+12	"-RRB-"
+13	","
+14	"CC"
+15	"JJ"
+16	"NN"
+17	"CD"
+18	","
+19	"VBZ"
+20	"DT"
+21	"JJ"
+22	"NN"
+23	"RB"
+24	"VBN"
+25	"TO"
+26	"JJ"
+27	"JJ"
+28	"NNS"
+29	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	1	"poss"
+3	2	"possessive"
+3	5	"abbrev"
+9	8	"amod"
+22	9	"nsubj"
+9	11	"abbrev"
+16	15	"amod"
+9	16	"conj_or"
+22	16	"nsubj"
+16	17	"num"
+22	19	"cop"
+22	20	"det"
+22	21	"amod"
+3	22	"dep"
+24	23	"advmod"
+22	24	"partmod"
+28	26	"amod"
+28	27	"amod"
+24	28	"prep_to"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"primary"
+3	"reservoir"
+4	"of"
+5	"infection"
+6	"consists"
+7	"of"
+8	"latently"
+9	"infected"
+10	"B"
+11	"lymphocytes"
+12	"and"
+13	"possibly"
+14	"other"
+15	"mononuclear"
+16	"cells"
+17	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"IN"
+5	"NN"
+6	"VBZ"
+7	"IN"
+8	"RB"
+9	"JJ"
+10	"NN"
+11	"NNS"
+12	"CC"
+13	"RB"
+14	"JJ"
+15	"JJ"
+16	"NNS"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+6	3	"nsubj"
+3	5	"prep_of"
+9	8	"advmod"
+11	9	"amod"
+11	10	"nn"
+6	11	"prep_of"
+16	13	"advmod"
+16	14	"amod"
+16	15	"amod"
+6	16	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Viral"
+2	"reactivation"
+3	"from"
+4	"latency"
+5	"and"
+6	"spread"
+7	"from"
+8	"this"
+9	"lymphoid"
+10	"reservoir"
+11	"is"
+12	"presumably"
+13	"required"
+14	"for"
+15	"development"
+16	"of"
+17	"nonlymphoid"
+18	"tumors"
+19	"like"
+20	"KS"
+21	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"CC"
+6	"NN"
+7	"IN"
+8	"DT"
+9	"JJ"
+10	"NN"
+11	"VBZ"
+12	"RB"
+13	"VBN"
+14	"IN"
+15	"NN"
+16	"IN"
+17	"JJ"
+18	"NNS"
+19	"IN"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+13	2	"nsubjpass"
+2	4	"prep_from"
+2	6	"prep_from"
+4	6	"conj_and"
+10	8	"det"
+10	9	"amod"
+2	10	"prep_from"
+13	11	"auxpass"
+13	12	"advmod"
+13	15	"prep_for"
+18	17	"amod"
+15	18	"prep_of"
+18	20	"prep_like"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Here"
+2	"we"
+3	"show"
+4	"that"
+5	"deregulated"
+6	"expression"
+7	"of"
+8	"a"
+9	"single"
+10	"viral"
+11	"gene"
+12	","
+13	"ORF"
+14	"50"
+15	","
+16	"which"
+17	"encodes"
+18	"a"
+19	"transactivator"
+20	"able"
+21	"to"
+22	"selectively"
+23	"upregulate"
+24	"delayed-early"
+25	"viral"
+26	"genes"
+27	","
+28	"suffices"
+29	"to"
+30	"disrupt"
+31	"latency"
+32	"and"
+33	"induce"
+34	"the"
+35	"lytic"
+36	"gene"
+37	"cascade"
+38	"in"
+39	"latently"
+40	"infected"
+41	"B"
+42	"cells"
+43	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"PRP"
+3	"VBP"
+4	"IN"
+5	"VBN"
+6	"NN"
+7	"IN"
+8	"DT"
+9	"JJ"
+10	"JJ"
+11	"NN"
+12	","
+13	"NN"
+14	"CD"
+15	","
+16	"WDT"
+17	"VBZ"
+18	"DT"
+19	"NN"
+20	"JJ"
+21	"TO"
+22	"RB"
+23	"VB"
+24	"JJ"
+25	"JJ"
+26	"NNS"
+27	","
+28	"VBZ"
+29	"TO"
+30	"VB"
+31	"NN"
+32	"CC"
+33	"VB"
+34	"DT"
+35	"JJ"
+36	"NN"
+37	"NN"
+38	"IN"
+39	"RB"
+40	"JJ"
+41	"NN"
+42	"NNS"
+43	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"advmod"
+3	2	"nsubj"
+28	4	"complm"
+6	5	"amod"
+28	6	"nsubj"
+30	6	"xsubj"
+11	8	"det"
+11	9	"amod"
+11	10	"amod"
+6	11	"prep_of"
+17	11	"nsubj"
+11	13	"appos"
+13	14	"num"
+11	17	"rcmod"
+19	18	"det"
+17	19	"dobj"
+19	20	"amod"
+23	21	"aux"
+23	22	"advmod"
+20	23	"xcomp"
+26	24	"amod"
+26	25	"amod"
+23	26	"dobj"
+3	28	"ccomp"
+30	29	"aux"
+28	30	"xcomp"
+30	31	"dobj"
+28	33	"xcomp"
+30	33	"conj_and"
+37	34	"det"
+37	35	"amod"
+37	36	"nn"
+33	37	"dobj"
+40	39	"advmod"
+42	40	"amod"
+42	41	"nn"
+37	42	"prep_in"
+
+>mention
+13	14	"Protein(ORF)"
+
+>trigger
+5	5	"Regulation"
+6	6	"Gene_expression"
+>argument
+5	6	"Theme"
+6	13	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"identification"
+3	"of"
+4	"this"
+5	"gene"
+6	"opens"
+7	"the"
+8	"way"
+9	"to"
+10	"studies"
+11	"of"
+12	"the"
+13	"physiologic"
+14	"mechanisms"
+15	"controlling"
+16	"reactvation"
+17	"of"
+18	"KSHV"
+19	"from"
+20	"latency"
+21	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"NN"
+6	"VBZ"
+7	"DT"
+8	"NN"
+9	"TO"
+10	"NNS"
+11	"IN"
+12	"DT"
+13	"JJ"
+14	"NNS"
+15	"VBG"
+16	"NN"
+17	"IN"
+18	"NN"
+19	"IN"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+6	2	"nsubj"
+5	4	"det"
+2	5	"prep_of"
+8	7	"det"
+6	8	"dobj"
+8	10	"prep_to"
+14	12	"det"
+14	13	"amod"
+10	14	"prep_of"
+14	15	"partmod"
+15	16	"dobj"
+16	18	"prep_of"
+16	20	"prep_from"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Copyright"
+2	"1998"
+3	"Academic"
+4	"Press"
+5	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CD"
+3	"NNP"
+4	"NNP"
+5	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nn"
+4	2	"num"
+4	3	"nn"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

@@ -1,0 +1,558 @@
+>>
+>word
+0	"Root"
+1	"Tap"
+2	":"
+3	"a"
+4	"novel"
+5	"cellular"
+6	"protein"
+7	"that"
+8	"interacts"
+9	"with"
+10	"tip"
+11	"of"
+12	"herpesvirus"
+13	"saimiri"
+14	"and"
+15	"induces"
+16	"lymphocyte"
+17	"aggregation"
+18	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	":"
+3	"DT"
+4	"JJ"
+5	"JJ"
+6	"NN"
+7	"WDT"
+8	"VBZ"
+9	"IN"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"NN"
+14	"CC"
+15	"VBZ"
+16	"NN"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	3	"det"
+6	4	"amod"
+6	5	"amod"
+1	6	"dep"
+8	6	"nsubj"
+15	6	"nsubj"
+6	8	"rcmod"
+8	10	"prep_with"
+13	12	"nn"
+10	13	"prep_of"
+6	15	"rcmod"
+8	15	"conj_and"
+17	16	"nn"
+15	17	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Tip"
+2	"of"
+3	"herpesvirus"
+4	"saimiri"
+5	"associates"
+6	"with"
+7	"Lck"
+8	"and"
+9	"down-regulates"
+10	"Lck"
+11	"-mediated"
+12	"activation"
+13	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"NN"
+5	"VBZ"
+6	"IN"
+7	"NN"
+8	"CC"
+9	"VBZ"
+10	"NN"
+11	"JJ"
+12	"NN"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"nsubj"
+9	1	"nsubj"
+4	3	"nn"
+1	4	"prep_of"
+5	7	"prep_with"
+5	9	"conj_and"
+12	10	"nn"
+12	11	"amod"
+9	12	"dobj"
+
+>mention
+7	7	"Protein(Lck)"
+10	10	"Protein(Lck)"
+
+>trigger
+5	5	"Binding"
+>argument
+5	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"identified"
+3	"a"
+4	"novel"
+5	"cellular"
+6	"Tip-associated"
+7	"protein"
+8	"("
+9	"Tap"
+10	")"
+11	"by"
+12	"a"
+13	"yeast"
+14	"two-hybrid"
+15	"screen"
+16	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBD"
+3	"DT"
+4	"JJ"
+5	"JJ"
+6	"JJ"
+7	"NN"
+8	"-LRB-"
+9	"NN"
+10	"-RRB-"
+11	"IN"
+12	"DT"
+13	"NN"
+14	"JJ"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+7	3	"det"
+7	4	"amod"
+7	5	"amod"
+7	6	"amod"
+2	7	"dobj"
+7	9	"appos"
+15	12	"det"
+15	13	"nn"
+15	14	"amod"
+2	15	"prep_by"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Tap"
+2	"associated"
+3	"with"
+4	"Tip"
+5	"following"
+6	"transient"
+7	"expression"
+8	"in"
+9	"COS-1"
+10	"cells"
+11	"and"
+12	"stable"
+13	"expression"
+14	"in"
+15	"human"
+16	"Jurkat-T"
+17	"cells"
+18	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"IN"
+4	"NN"
+5	"VBG"
+6	"JJ"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"NNS"
+11	"CC"
+12	"JJ"
+13	"NN"
+14	"IN"
+15	"JJ"
+16	"NN"
+17	"NNS"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+2	4	"prep_with"
+7	6	"amod"
+2	7	"prep_following"
+10	9	"nn"
+7	10	"prep_in"
+13	12	"amod"
+2	13	"prep_following"
+7	13	"conj_and"
+17	15	"amod"
+17	16	"nn"
+13	17	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Expression"
+2	"of"
+3	"Tip"
+4	"and"
+5	"Tap"
+6	"in"
+7	"Jurkat-T"
+8	"cells"
+9	"induced"
+10	"dramatic"
+11	"cell"
+12	"aggregation"
+13	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"CC"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NNS"
+9	"VBD"
+10	"JJ"
+11	"NN"
+12	"NN"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	1	"nsubj"
+1	3	"prep_of"
+1	5	"prep_of"
+3	5	"conj_and"
+8	7	"nn"
+1	8	"prep_in"
+12	10	"amod"
+12	11	"nn"
+9	12	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Aggregation"
+2	"was"
+3	"likely"
+4	"caused"
+5	"by"
+6	"the"
+7	"up-regulated"
+8	"surface"
+9	"expression"
+10	"of"
+11	"adhesion"
+12	"molecules"
+13	"including"
+14	"integrin"
+15	"alpha"
+16	","
+17	"L-selectin"
+18	","
+19	"ICAM-3"
+20	","
+21	"and"
+22	"H-CAM"
+23	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"RB"
+4	"VBN"
+5	"IN"
+6	"DT"
+7	"VBN"
+8	"NN"
+9	"NN"
+10	"IN"
+11	"NN"
+12	"NNS"
+13	"VBG"
+14	"NN"
+15	"NN"
+16	","
+17	"NN"
+18	","
+19	"NN"
+20	","
+21	"CC"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubjpass"
+4	2	"auxpass"
+4	3	"advmod"
+9	6	"det"
+9	7	"amod"
+9	8	"nn"
+4	9	"agent"
+12	11	"nn"
+9	12	"prep_of"
+15	14	"nn"
+12	15	"prep_including"
+12	17	"prep_including"
+15	17	"conj_and"
+12	19	"prep_including"
+15	19	"conj_and"
+12	22	"prep_including"
+15	22	"conj_and"
+
+>mention
+17	17	"Protein(L-selectin)"
+19	19	"Protein(ICAM-3)"
+22	22	"Protein(H-CAM)"
+
+>trigger
+7	7	"Positive_regulation"
+9	9	"Gene_expression"
+>argument
+7	9	"Theme"
+9	17	"Theme"
+9	19	"Theme"
+9	22	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Furthermore"
+2	","
+3	"NF-kappaB"
+4	"transcriptional"
+5	"factor"
+6	"of"
+7	"aggregated"
+8	"cells"
+9	"had"
+10	"approximately"
+11	"40-fold"
+12	"higher"
+13	"activity"
+14	"than"
+15	"that"
+16	"of"
+17	"parental"
+18	"cells"
+19	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"JJ"
+8	"NNS"
+9	"VBD"
+10	"RB"
+11	"RB"
+12	"JJR"
+13	"NN"
+14	"IN"
+15	"DT"
+16	"IN"
+17	"JJ"
+18	"NNS"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	1	"advmod"
+5	3	"nn"
+5	4	"amod"
+9	5	"nsubj"
+8	7	"amod"
+5	8	"prep_of"
+12	10	"advmod"
+12	11	"advmod"
+13	12	"amod"
+9	13	"dobj"
+9	15	"prep_than"
+18	17	"amod"
+15	18	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Thus"
+2	","
+3	"Tap"
+4	"is"
+5	"likely"
+6	"to"
+7	"be"
+8	"an"
+9	"important"
+10	"cellular"
+11	"mediator"
+12	"of"
+13	"Tip"
+14	"function"
+15	"in"
+16	"T"
+17	"cell"
+18	"transformation"
+19	"by"
+20	"herpesvirus"
+21	"saimiri"
+22	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"VBZ"
+5	"JJ"
+6	"TO"
+7	"VB"
+8	"DT"
+9	"JJ"
+10	"JJ"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"NN"
+15	"IN"
+16	"NN"
+17	"NN"
+18	"NN"
+19	"IN"
+20	"NN"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"advmod"
+5	3	"nsubj"
+5	4	"cop"
+11	6	"aux"
+11	7	"cop"
+11	8	"det"
+11	9	"amod"
+9	10	"dep"
+5	11	"xcomp"
+14	13	"nn"
+11	14	"prep_of"
+18	16	"nn"
+18	17	"nn"
+11	18	"prep_in"
+21	20	"nn"
+18	21	"prep_by"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

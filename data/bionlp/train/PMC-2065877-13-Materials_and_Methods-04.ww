@@ -1,0 +1,599 @@
+>>
+>word
+0	"Root"
+1	"Immunohistochemistry"
+2	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Paraffin-embedded"
+2	"spleen"
+3	"sections"
+4	"were"
+5	"deparaffinized"
+6	"in"
+7	"Histoclear"
+8	"("
+9	"National"
+10	"Diagnostics"
+11	")"
+12	"and"
+13	"rehydrated"
+14	"in"
+15	"graded"
+16	"ethanol"
+17	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NNS"
+4	"VBD"
+5	"JJ"
+6	"IN"
+7	"NN"
+8	"-LRB-"
+9	"NN"
+10	"NN"
+11	"-RRB-"
+12	"CC"
+13	"VBN"
+14	"IN"
+15	"VBN"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"nn"
+5	3	"nsubjpass"
+13	3	"nsubjpass"
+5	4	"auxpass"
+5	4	"cop"
+5	7	"prep_in"
+10	9	"nn"
+7	10	"appos"
+5	13	"conj_and"
+16	15	"amod"
+13	16	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Sections"
+2	"were"
+3	"antigen"
+4	"retrieved"
+5	"by"
+6	"microwaving"
+7	"in"
+8	"citrate"
+9	"buffer"
+10	"("
+11	"pH"
+12	"6.0"
+13	")"
+14	"for"
+15	"15"
+16	"min"
+17	"("
+18	"LMP1"
+19	"staining"
+20	")"
+21	"and"
+22	"10"
+23	"min"
+24	"("
+25	"pStat3"
+26	"staining"
+27	")"
+28	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"VBD"
+3	"NN"
+4	"VBN"
+5	"IN"
+6	"VBG"
+7	"IN"
+8	"NN"
+9	"NN"
+10	"-LRB-"
+11	"NN"
+12	"CD"
+13	"-RRB-"
+14	"IN"
+15	"CD"
+16	"NN"
+17	"-LRB-"
+18	"NN"
+19	"NN"
+20	"-RRB-"
+21	"CC"
+22	"CD"
+23	"NN"
+24	"-LRB-"
+25	"NN"
+26	"NN"
+27	"-RRB-"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubjpass"
+4	2	"auxpass"
+4	3	"dep"
+4	6	"agent"
+9	8	"nn"
+6	9	"prep_in"
+9	11	"appos"
+11	12	"num"
+16	15	"num"
+6	16	"prep_for"
+19	18	"nn"
+16	19	"abbrev"
+23	22	"num"
+6	23	"prep_for"
+16	23	"conj_and"
+26	25	"nn"
+23	26	"appos"
+
+>mention
+18	18	"Protein(LMP1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"For"
+2	"LMP1"
+3	"staining"
+4	","
+5	"sections"
+6	"were"
+7	"blocked"
+8	"with"
+9	"1"
+10	"%"
+11	"BSA"
+12	"and"
+13	"0.1"
+14	"%"
+15	"cold"
+16	"fish"
+17	"skin"
+18	"gelatin"
+19	"followed"
+20	"with"
+21	"streptavidin/biotin"
+22	"block"
+23	"("
+24	"Vector"
+25	"Labs"
+26	")"
+27	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	"NN"
+4	","
+5	"NNS"
+6	"VBD"
+7	"VBN"
+8	"IN"
+9	"CD"
+10	"NN"
+11	"NN"
+12	"CC"
+13	"NN"
+14	"NN"
+15	"JJ"
+16	"NN"
+17	"NN"
+18	"NN"
+19	"VBN"
+20	"IN"
+21	"NN"
+22	"NN"
+23	"-LRB-"
+24	"NN"
+25	"NNS"
+26	"-RRB-"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"nn"
+7	3	"prep_for"
+7	5	"nsubjpass"
+7	6	"auxpass"
+11	9	"num"
+11	10	"nn"
+7	11	"prep_with"
+18	13	"nn"
+18	14	"nn"
+18	15	"amod"
+18	16	"nn"
+18	17	"nn"
+7	18	"prep_with"
+11	18	"conj_and"
+18	19	"partmod"
+22	21	"nn"
+19	22	"prep_with"
+25	24	"nn"
+22	25	"appos"
+
+>mention
+2	2	"Protein(LMP1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Rat"
+2	"IgG"
+3	"anti-LMP1"
+4	"("
+5	"clones"
+6	"8G3"
+7	"and"
+8	"1G6"
+9	","
+10	"Ascenion"
+11	")"
+12	"were"
+13	"used"
+14	"at"
+15	"1:10"
+16	"dilution"
+17	"from"
+18	"tissue"
+19	"culture"
+20	"supernatants"
+21	","
+22	"followed"
+23	"with"
+24	"8"
+25	"mug/ml"
+26	"biotinylated"
+27	"mouse"
+28	"F"
+29	"("
+30	"ab"
+31	"'"
+32	")"
+33	"anti-rat"
+34	"IgG"
+35	"("
+36	"H+L"
+37	")"
+38	"pre-adsorbed"
+39	"to"
+40	"mouse"
+41	"serum"
+42	"("
+43	"Jackson"
+44	"ImmunoResearch"
+45	")"
+46	"and"
+47	"2"
+48	"mug/ml"
+49	"streptavidin-alkaline"
+50	"phosphatase"
+51	"conjugate"
+52	"("
+53	"Jackson"
+54	"ImmunoResearch"
+55	")"
+56	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NN"
+4	"-LRB-"
+5	"NNS"
+6	"NN"
+7	"CC"
+8	"NN"
+9	","
+10	"NN"
+11	"-RRB-"
+12	"VBD"
+13	"VBN"
+14	"IN"
+15	"NN"
+16	"NN"
+17	"IN"
+18	"NN"
+19	"NN"
+20	"NNS"
+21	","
+22	"VBN"
+23	"IN"
+24	"CD"
+25	"NN"
+26	"VBN"
+27	"NN"
+28	"NN"
+29	"-LRB-"
+30	"NN"
+31	"''"
+32	"-RRB-"
+33	"NN"
+34	"NN"
+35	"-LRB-"
+36	"NN"
+37	"-RRB-"
+38	"JJ"
+39	"TO"
+40	"NN"
+41	"NN"
+42	"-LRB-"
+43	"NNP"
+44	"NNP"
+45	"-RRB-"
+46	"CC"
+47	"CD"
+48	"NN"
+49	"NN"
+50	"NN"
+51	"NN"
+52	"-LRB-"
+53	"NNP"
+54	"NNP"
+55	"-RRB-"
+56	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	2	"nn"
+13	3	"nsubjpass"
+3	5	"appos"
+5	6	"dep"
+5	8	"dep"
+6	8	"conj_and"
+5	10	"dep"
+13	12	"auxpass"
+16	15	"nn"
+13	16	"prep_at"
+20	18	"nn"
+20	19	"nn"
+16	20	"prep_from"
+16	22	"partmod"
+25	24	"number"
+51	25	"amod"
+51	26	"amod"
+28	27	"nn"
+51	28	"nn"
+28	30	"appos"
+38	33	"dep"
+38	34	"dep"
+38	36	"dep"
+28	38	"amod"
+41	40	"nn"
+38	41	"prep_to"
+44	43	"nn"
+41	44	"appos"
+50	47	"num"
+50	48	"nn"
+50	49	"nn"
+28	50	"conj_and"
+51	50	"nn"
+22	51	"prep_with"
+54	53	"nn"
+51	54	"appos"
+
+>mention
+3	3	"Protein(anti-LMP1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Stains"
+2	"were"
+3	"developed"
+4	"with"
+5	"BCIP/NBT"
+6	"and"
+7	"counterstained"
+8	"in"
+9	"Nuclear"
+10	"Fast"
+11	"Red"
+12	"("
+13	"Dako"
+14	")"
+15	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"VBD"
+3	"VBN"
+4	"IN"
+5	"NN"
+6	"CC"
+7	"JJ"
+8	"IN"
+9	"JJ"
+10	"JJ"
+11	"JJ"
+12	"-LRB-"
+13	"NN"
+14	"-RRB-"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubjpass"
+3	2	"auxpass"
+3	5	"prep_with"
+3	7	"prep_with"
+5	7	"conj_and"
+11	9	"amod"
+11	10	"amod"
+5	11	"prep_in"
+11	13	"appos"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Phospho-Stat3"
+2	"was"
+3	"detected"
+4	"with"
+5	"4"
+6	"mug/ml"
+7	"of"
+8	"pStat3"
+9	"antibody"
+10	"("
+11	"Tyr705"
+12	","
+13	"Cell"
+14	"Signaling"
+15	")"
+16	"and"
+17	"detected"
+18	"with"
+19	"anti-rabbit"
+20	"Poly-HRP"
+21	"IHC"
+22	"detection"
+23	"kit"
+24	"("
+25	"Chemicon"
+26	")"
+27	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"VBN"
+4	"IN"
+5	"CD"
+6	"NN"
+7	"IN"
+8	"JJ"
+9	"NN"
+10	"-LRB-"
+11	"NN"
+12	","
+13	"NN"
+14	"NN"
+15	"-RRB-"
+16	"CC"
+17	"VBN"
+18	"IN"
+19	"JJ"
+20	"NN"
+21	"NN"
+22	"NN"
+23	"NN"
+24	"-LRB-"
+25	"NN"
+26	"-RRB-"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubjpass"
+17	1	"nsubjpass"
+3	2	"auxpass"
+6	5	"num"
+3	6	"prep_with"
+9	8	"amod"
+6	9	"prep_of"
+9	11	"dep"
+14	13	"nn"
+11	14	"appos"
+3	17	"conj_and"
+23	19	"amod"
+23	20	"nn"
+23	21	"nn"
+23	22	"nn"
+17	23	"prep_with"
+23	25	"appos"
+
+>mention
+1	1	"Protein(Phospho-Stat3)"
+
+>trigger
+>argument
+>relation
+
+

@@ -1,0 +1,759 @@
+>>
+>word
+0	"Root"
+1	"Characterization"
+2	"of"
+3	"the"
+4	"murine"
+5	"cyclin-dependent"
+6	"kinase"
+7	"inhibitor"
+8	"gene"
+9	"p27Kip1"
+10	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"DT"
+4	"JJ"
+5	"JJ"
+6	"NN"
+7	"NN"
+8	"NN"
+9	"NN"
+10	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	3	"det"
+9	4	"amod"
+9	5	"amod"
+9	6	"nn"
+9	7	"nn"
+9	8	"nn"
+1	9	"prep_of"
+
+>mention
+9	9	"Protein(p27Kip1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"cyclin-dependent"
+3	"kinase"
+4	"inhibitor"
+5	"p27Kip1"
+6	"plays"
+7	"an"
+8	"important"
+9	"role"
+10	"in"
+11	"regulating"
+12	"cell-cycle"
+13	"progression"
+14	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"NN"
+5	"NN"
+6	"VBZ"
+7	"DT"
+8	"JJ"
+9	"NN"
+10	"IN"
+11	"VBG"
+12	"JJ"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"det"
+5	2	"amod"
+5	3	"nn"
+5	4	"nn"
+6	5	"nsubj"
+9	7	"det"
+9	8	"amod"
+6	9	"dobj"
+6	11	"prepc_in"
+13	12	"amod"
+11	13	"dobj"
+
+>mention
+5	5	"Protein(p27Kip1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"p27Kip1"
+2	"directly"
+3	"inhibits"
+4	"the"
+5	"catalytic"
+6	"activity"
+7	"of"
+8	"cyclin/cdks"
+9	"("
+10	"cyclin-dependent"
+11	"kinase"
+12	")"
+13	"complexes"
+14	"and/or"
+15	"interferes"
+16	"physically"
+17	"with"
+18	"cyclin/cdks"
+19	"activation"
+20	"by"
+21	"CAK"
+22	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"RB"
+3	"VBZ"
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"-LRB-"
+10	"JJ"
+11	"NN"
+12	"-RRB-"
+13	"NNS"
+14	"CC"
+15	"VBZ"
+16	"RB"
+17	"IN"
+18	"NN"
+19	"NN"
+20	"IN"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubj"
+15	1	"nsubj"
+3	2	"advmod"
+6	4	"det"
+6	5	"amod"
+3	6	"dobj"
+13	8	"nn"
+11	10	"amod"
+8	11	"appos"
+6	13	"prep_of"
+3	15	"conj_and/or"
+15	16	"advmod"
+19	18	"nn"
+15	19	"prep_with"
+19	21	"prep_by"
+
+>mention
+1	1	"Protein(p27Kip1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Interestingly"
+2	","
+3	"the"
+4	"expression"
+5	"level"
+6	"of"
+7	"p27Kip1"
+8	"mRNA"
+9	"was"
+10	"maximal"
+11	"in"
+12	"resting"
+13	"Go"
+14	"T-cells"
+15	"and"
+16	"rapidly"
+17	"declined"
+18	"following"
+19	"anti-CD3"
+20	"activation"
+21	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"NN"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NN"
+9	"VBD"
+10	"JJ"
+11	"IN"
+12	"NN"
+13	"VB"
+14	"NNS"
+15	"CC"
+16	"RB"
+17	"VBD"
+18	"VBG"
+19	"JJ"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+10	1	"advmod"
+5	3	"det"
+5	4	"nn"
+10	5	"nsubj"
+17	5	"nsubj"
+8	7	"nn"
+5	8	"prep_of"
+10	9	"cop"
+14	12	"nn"
+14	13	"dep"
+10	14	"prep_in"
+17	16	"advmod"
+10	17	"conj_and"
+20	19	"amod"
+17	20	"prep_following"
+
+>mention
+7	7	"Protein(p27Kip1)"
+
+>trigger
+5	5	"Transcription"
+17	17	"Negative_regulation"
+>argument
+5	7	"Theme"
+17	5	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"report"
+3	"here"
+4	"the"
+5	"cloning"
+6	"of"
+7	"p27Kip1"
+8	"gene"
+9	"from"
+10	"murine"
+11	"genomic"
+12	"DNA"
+13	"and"
+14	"the"
+15	"functional"
+16	"analysis"
+17	"of"
+18	"the"
+19	"promoter"
+20	"of"
+21	"the"
+22	"p27Kip1"
+23	"gene"
+24	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"RB"
+4	"DT"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NN"
+9	"IN"
+10	"JJ"
+11	"JJ"
+12	"NN"
+13	"CC"
+14	"DT"
+15	"JJ"
+16	"NN"
+17	"IN"
+18	"DT"
+19	"NN"
+20	"IN"
+21	"DT"
+22	"NN"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+2	3	"advmod"
+5	4	"det"
+2	5	"dobj"
+8	7	"nn"
+5	8	"prep_of"
+12	10	"amod"
+12	11	"amod"
+8	12	"prep_from"
+16	14	"det"
+16	15	"amod"
+2	16	"dobj"
+5	16	"conj_and"
+19	18	"det"
+16	19	"prep_of"
+23	21	"det"
+23	22	"nn"
+19	23	"prep_of"
+
+>mention
+7	7	"Protein(p27Kip1)"
+22	22	"Protein(p27Kip1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"gene"
+3	"consists"
+4	"of"
+5	"at"
+6	"least"
+7	"three"
+8	"exons"
+9	"and"
+10	"spans"
+11	"more"
+12	"than"
+13	"5.6"
+14	"kb"
+15	"of"
+16	"DNA"
+17	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBZ"
+4	"IN"
+5	"IN"
+6	"JJS"
+7	"CD"
+8	"NNS"
+9	"CC"
+10	"VBZ"
+11	"JJR"
+12	"IN"
+13	"CD"
+14	"NN"
+15	"IN"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+10	2	"nsubj"
+7	5	"quantmod"
+5	6	"mwe"
+5	6	"pobj"
+8	7	"num"
+3	8	"prep_of"
+3	10	"conj_and"
+12	11	"mwe"
+13	12	"quantmod"
+14	13	"num"
+10	14	"dobj"
+14	16	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Primer"
+2	"extension"
+3	"and"
+4	"nuclease"
+5	"S1"
+6	"protection"
+7	"analysis"
+8	"revealed"
+9	"two"
+10	"major"
+11	"transcription"
+12	"initiation"
+13	"sites"
+14	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"CC"
+4	"NN"
+5	"NN"
+6	"NN"
+7	"NN"
+8	"VBD"
+9	"CD"
+10	"JJ"
+11	"NN"
+12	"NN"
+13	"NNS"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+7	2	"nn"
+6	4	"nn"
+6	5	"nn"
+2	6	"conj_and"
+7	6	"nn"
+8	7	"nsubj"
+13	9	"num"
+13	10	"amod"
+13	11	"nn"
+13	12	"nn"
+8	13	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"promoter"
+3	"region"
+4	"lacked"
+5	"a"
+6	"TATA"
+7	"box"
+8	"but"
+9	"contained"
+10	"potential"
+11	"binding"
+12	"sites"
+13	"for"
+14	"the"
+15	"transcriptional"
+16	"factors"
+17	"including"
+18	"two"
+19	"Sp1"
+20	","
+21	"CRE"
+22	","
+23	"Myb"
+24	"and"
+25	"NFkB"
+26	"located"
+27	"at"
+28	"positions"
+29	"-153"
+30	","
+31	"-178"
+32	","
+33	"-286"
+34	","
+35	"-875"
+36	","
+37	"and"
+38	"-1011"
+39	","
+40	"respectively"
+41	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"VBD"
+5	"DT"
+6	"NN"
+7	"NN"
+8	"CC"
+9	"VBD"
+10	"JJ"
+11	"NN"
+12	"NNS"
+13	"IN"
+14	"DT"
+15	"JJ"
+16	"NNS"
+17	"VBG"
+18	"CD"
+19	"NN"
+20	","
+21	"NN"
+22	","
+23	"NN"
+24	"CC"
+25	"NN"
+26	"JJ"
+27	"IN"
+28	"NNS"
+29	"CD"
+30	","
+31	"CD"
+32	","
+33	"CD"
+34	","
+35	"CD"
+36	","
+37	"CC"
+38	"CD"
+39	","
+40	"RB"
+41	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+4	3	"nsubj"
+9	3	"nsubj"
+7	5	"det"
+7	6	"nn"
+4	7	"dobj"
+4	9	"conj_but"
+12	10	"amod"
+12	11	"nn"
+9	12	"dobj"
+16	14	"det"
+16	15	"amod"
+12	16	"prep_for"
+19	18	"num"
+16	19	"prep_including"
+16	21	"prep_including"
+19	21	"conj_and"
+16	23	"prep_including"
+19	23	"conj_and"
+16	25	"prep_including"
+19	25	"conj_and"
+19	26	"amod"
+26	28	"prep_at"
+38	29	"number"
+38	31	"number"
+38	33	"number"
+38	35	"number"
+38	37	"cc"
+28	38	"num"
+26	40	"advmod"
+
+>mention
+19	19	"Protein(Sp1)"
+23	23	"Protein(Myb)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"To"
+2	"analyze"
+3	"the"
+4	"regulatory"
+5	"mechanisms"
+6	"controlling"
+7	"p27Kip1"
+8	"gene"
+9	"expression"
+10	","
+11	"we"
+12	"characterized"
+13	"the"
+14	"5"
+15	"'"
+16	"-"
+17	"flanking"
+18	"region"
+19	"from"
+20	"nt"
+21	"-1609"
+22	"to"
+23	"+178"
+24	"."
+
+>tag
+0	"Root"
+1	"TO"
+2	"VB"
+3	"DT"
+4	"JJ"
+5	"NNS"
+6	"VBG"
+7	"NN"
+8	"NN"
+9	"NN"
+10	","
+11	"PRP"
+12	"VBD"
+13	"DT"
+14	"CD"
+15	"``"
+16	"CC"
+17	"JJ"
+18	"NN"
+19	"IN"
+20	"NN"
+21	"CD"
+22	"TO"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"aux"
+12	2	"purpcl"
+5	3	"det"
+5	4	"amod"
+2	5	"dobj"
+5	6	"partmod"
+9	7	"nn"
+9	8	"nn"
+6	9	"dobj"
+12	11	"nsubj"
+18	13	"det"
+18	14	"num"
+18	17	"amod"
+12	18	"dobj"
+18	20	"prep_from"
+20	21	"num"
+18	23	"prep_to"
+
+>mention
+7	7	"Protein(p27Kip1)"
+
+>trigger
+6	6	"Regulation"
+9	9	"Gene_expression"
+>argument
+6	9	"Theme"
+9	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"-326"
+3	"to"
+4	"-615"
+5	"region"
+6	"contained"
+7	"positive"
+8	"regulatory"
+9	"elements"
+10	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"CD"
+3	"TO"
+4	"CD"
+5	"NN"
+6	"VBD"
+7	"JJ"
+8	"JJ"
+9	"NNS"
+10	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"det"
+5	2	"num"
+5	3	"dep"
+5	4	"num"
+6	5	"nsubj"
+9	7	"amod"
+9	8	"amod"
+6	9	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

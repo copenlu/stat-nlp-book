@@ -1,0 +1,653 @@
+>>
+>word
+0	"Root"
+1	"Epstein-Barr"
+2	"viral"
+3	"latency"
+4	"is"
+5	"disrupted"
+6	"by"
+7	"the"
+8	"immediate-early"
+9	"BRLF1"
+10	"protein"
+11	"through"
+12	"a"
+13	"cell-specific"
+14	"mechanism"
+15	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"JJ"
+3	"NN"
+4	"VBZ"
+5	"VBN"
+6	"IN"
+7	"DT"
+8	"JJ"
+9	"NN"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"amod"
+5	3	"nsubjpass"
+5	4	"auxpass"
+10	7	"det"
+10	8	"amod"
+10	9	"nn"
+5	10	"agent"
+14	12	"det"
+14	13	"amod"
+5	14	"prep_through"
+
+>mention
+9	9	"Protein(BRLF1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Epstein-Barr"
+2	"virus"
+3	"("
+4	"EBV"
+5	")"
+6	","
+7	"the"
+8	"causative"
+9	"agent"
+10	"of"
+11	"infectious"
+12	"mononucleosis"
+13	","
+14	"is"
+15	"a"
+16	"human"
+17	"herpesvirus"
+18	"associated"
+19	"with"
+20	"epithelial"
+21	"cell"
+22	"malignancies"
+23	"("
+24	"nasopharyngeal"
+25	"carcinoma"
+26	")"
+27	"as"
+28	"well"
+29	"as"
+30	"B-cell"
+31	"malignancies"
+32	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"-LRB-"
+4	"NN"
+5	"-RRB-"
+6	","
+7	"DT"
+8	"JJ"
+9	"NN"
+10	"IN"
+11	"JJ"
+12	"NN"
+13	","
+14	"VBZ"
+15	"DT"
+16	"JJ"
+17	"NN"
+18	"VBN"
+19	"IN"
+20	"JJ"
+21	"NN"
+22	"NNS"
+23	"-LRB-"
+24	"JJ"
+25	"NN"
+26	"-RRB-"
+27	"RB"
+28	"RB"
+29	"IN"
+30	"NN"
+31	"NNS"
+32	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+17	2	"nsubj"
+2	4	"abbrev"
+9	7	"det"
+9	8	"amod"
+2	9	"appos"
+12	11	"amod"
+9	12	"prep_of"
+17	14	"cop"
+17	15	"det"
+17	16	"amod"
+17	18	"partmod"
+22	20	"amod"
+22	21	"nn"
+18	22	"prep_with"
+25	24	"amod"
+22	25	"appos"
+31	30	"nn"
+18	31	"prep_with"
+22	31	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Understanding"
+2	"how"
+3	"viral"
+4	"latency"
+5	"is"
+6	"disrupted"
+7	"is"
+8	"a"
+9	"central"
+10	"issue"
+11	"in"
+12	"herpesvirus"
+13	"biology"
+14	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"WRB"
+3	"JJ"
+4	"NN"
+5	"VBZ"
+6	"VBN"
+7	"VBZ"
+8	"DT"
+9	"JJ"
+10	"NN"
+11	"IN"
+12	"JJ"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+10	1	"nsubj"
+6	2	"advmod"
+4	3	"amod"
+6	4	"nsubjpass"
+6	5	"auxpass"
+1	6	"dep"
+10	7	"cop"
+10	8	"det"
+10	9	"amod"
+13	12	"amod"
+10	13	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Epithelial"
+2	"cells"
+3	"are"
+4	"the"
+5	"major"
+6	"site"
+7	"of"
+8	"lytic"
+9	"EBV"
+10	"replication"
+11	"within"
+12	"the"
+13	"human"
+14	"host"
+15	","
+16	"and"
+17	"viral"
+18	"reactivation"
+19	"occurs"
+20	"in"
+21	"EBV-associated"
+22	"nasopharyngeal"
+23	"carcinomas"
+24	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"VBP"
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"IN"
+8	"JJ"
+9	"NN"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	","
+16	"CC"
+17	"JJ"
+18	"NN"
+19	"VBZ"
+20	"IN"
+21	"JJ"
+22	"JJ"
+23	"NNS"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+6	2	"nsubj"
+6	3	"cop"
+6	4	"det"
+6	5	"amod"
+10	8	"amod"
+10	9	"nn"
+6	10	"prep_of"
+14	12	"det"
+14	13	"amod"
+6	14	"prep_within"
+18	17	"amod"
+19	18	"nsubj"
+6	19	"conj_and"
+23	21	"amod"
+23	22	"amod"
+19	23	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"It"
+2	"is"
+3	"known"
+4	"that"
+5	"expression"
+6	"of"
+7	"a"
+8	"single"
+9	"viral"
+10	"immediate-early"
+11	"protein"
+12	","
+13	"BZLF1"
+14	","
+15	"is"
+16	"sufficient"
+17	"to"
+18	"initiate"
+19	"the"
+20	"switch"
+21	"from"
+22	"latent"
+23	"to"
+24	"lytic"
+25	"infection"
+26	"in"
+27	"B"
+28	"cells"
+29	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBZ"
+3	"VBN"
+4	"IN"
+5	"NN"
+6	"IN"
+7	"DT"
+8	"JJ"
+9	"JJ"
+10	"JJ"
+11	"NN"
+12	","
+13	"NN"
+14	","
+15	"VBZ"
+16	"JJ"
+17	"TO"
+18	"VB"
+19	"DT"
+20	"NN"
+21	"IN"
+22	"JJ"
+23	"TO"
+24	"JJ"
+25	"NN"
+26	"IN"
+27	"NN"
+28	"NNS"
+29	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubjpass"
+3	2	"auxpass"
+16	4	"complm"
+16	5	"nsubj"
+11	7	"det"
+11	8	"amod"
+11	9	"amod"
+11	10	"amod"
+5	11	"prep_of"
+11	13	"appos"
+16	15	"cop"
+3	16	"ccomp"
+18	17	"aux"
+16	18	"xcomp"
+20	19	"det"
+18	20	"dobj"
+20	22	"prep_from"
+25	24	"amod"
+20	25	"prep_to"
+28	27	"nn"
+25	28	"prep_in"
+
+>mention
+13	13	"Protein(BZLF1)"
+
+>trigger
+5	5	"Gene_expression"
+>argument
+5	13	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Cellular"
+2	"regulation"
+3	"of"
+4	"BZLF1"
+5	"transcription"
+6	"is"
+7	"therefore"
+8	"thought"
+9	"to"
+10	"play"
+11	"a"
+12	"key"
+13	"role"
+14	"in"
+15	"regulating"
+16	"the"
+17	"stringency"
+18	"of"
+19	"viral"
+20	"latency"
+21	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"NN"
+6	"VBZ"
+7	"RB"
+8	"VBN"
+9	"TO"
+10	"VB"
+11	"DT"
+12	"JJ"
+13	"NN"
+14	"IN"
+15	"VBG"
+16	"DT"
+17	"NN"
+18	"IN"
+19	"JJ"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+8	2	"nsubjpass"
+10	2	"xsubj"
+5	4	"nn"
+2	5	"prep_of"
+8	6	"auxpass"
+8	7	"advmod"
+10	9	"aux"
+8	10	"xcomp"
+13	11	"det"
+13	12	"amod"
+10	13	"dobj"
+10	15	"prepc_in"
+17	16	"det"
+15	17	"dobj"
+20	19	"amod"
+17	20	"prep_of"
+
+>mention
+4	4	"Protein(BZLF1)"
+
+>trigger
+2	2	"Regulation"
+5	5	"Transcription"
+>argument
+2	5	"Theme"
+5	4	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Here"
+2	"we"
+3	"show"
+4	"that"
+5	","
+6	"unexpectedly"
+7	","
+8	"expression"
+9	"of"
+10	"another"
+11	"viral"
+12	"immediate-early"
+13	"protein"
+14	","
+15	"BRLF1"
+16	","
+17	"can"
+18	"disrupt"
+19	"viral"
+20	"latency"
+21	"in"
+22	"an"
+23	"epithelial"
+24	"cell-specific"
+25	"fashion"
+26	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"PRP"
+3	"VBP"
+4	"IN"
+5	","
+6	"RB"
+7	","
+8	"NN"
+9	"IN"
+10	"DT"
+11	"JJ"
+12	"JJ"
+13	"NN"
+14	","
+15	"NN"
+16	","
+17	"MD"
+18	"VB"
+19	"JJ"
+20	"NN"
+21	"IN"
+22	"DT"
+23	"JJ"
+24	"JJ"
+25	"NN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"advmod"
+3	2	"nsubj"
+18	4	"complm"
+18	6	"advmod"
+18	8	"nsubj"
+13	10	"det"
+13	11	"amod"
+13	12	"amod"
+8	13	"prep_of"
+13	15	"appos"
+18	17	"aux"
+3	18	"ccomp"
+20	19	"amod"
+18	20	"dobj"
+25	22	"det"
+25	23	"amod"
+25	24	"amod"
+18	25	"prep_in"
+
+>mention
+15	15	"Protein(BRLF1)"
+
+>trigger
+8	8	"Gene_expression"
+>argument
+8	15	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Therefore"
+2	","
+3	"the"
+4	"mechanisms"
+5	"leading"
+6	"to"
+7	"disruption"
+8	"of"
+9	"EBV"
+10	"latency"
+11	"appear"
+12	"to"
+13	"be"
+14	"cell-type"
+15	"specific"
+16	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"NNS"
+5	"VBG"
+6	"TO"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"NN"
+11	"VBP"
+12	"TO"
+13	"VB"
+14	"NN"
+15	"JJ"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+11	1	"advmod"
+4	3	"det"
+11	4	"nsubj"
+15	4	"xsubj"
+4	5	"partmod"
+5	7	"prep_to"
+10	9	"nn"
+7	10	"prep_of"
+15	12	"aux"
+15	13	"cop"
+15	14	"dep"
+11	15	"xcomp"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

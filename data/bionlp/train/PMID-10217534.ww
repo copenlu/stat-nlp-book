@@ -1,0 +1,1184 @@
+>>
+>word
+0	"Root"
+1	"Cellular"
+2	"disposition"
+3	"of"
+4	"sulphamethoxazole"
+5	"and"
+6	"its"
+7	"metabolites"
+8	":"
+9	"implications"
+10	"for"
+11	"hypersensitivity"
+12	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"CC"
+6	"PRP$"
+7	"NNS"
+8	":"
+9	"NNS"
+10	"IN"
+11	"NN"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+2	4	"prep_of"
+7	6	"poss"
+2	7	"conj_and"
+11	9	"nn"
+11	10	"amod"
+2	11	"dep"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"1"
+2	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Bioactivation"
+2	"of"
+3	"sulphamethoxazole"
+4	"("
+5	"SMX"
+6	")"
+7	"to"
+8	"chemically-reactive"
+9	"metabolites"
+10	"and"
+11	"subsequent"
+12	"protein"
+13	"conjugation"
+14	"is"
+15	"thought"
+16	"to"
+17	"be"
+18	"involved"
+19	"in"
+20	"SMX"
+21	"hypersensitivity"
+22	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"-LRB-"
+5	"NN"
+6	"-RRB-"
+7	"TO"
+8	"JJ"
+9	"NNS"
+10	"CC"
+11	"JJ"
+12	"NN"
+13	"NN"
+14	"VBZ"
+15	"VBN"
+16	"TO"
+17	"VB"
+18	"VBN"
+19	"IN"
+20	"NN"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+15	1	"nsubjpass"
+18	1	"xsubj"
+1	3	"prep_of"
+3	5	"abbrev"
+9	8	"amod"
+1	9	"prep_to"
+13	11	"amod"
+13	12	"nn"
+1	13	"prep_to"
+9	13	"conj_and"
+15	14	"auxpass"
+18	16	"aux"
+18	17	"auxpass"
+15	18	"xcomp"
+21	20	"nn"
+18	21	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"have"
+3	"therefore"
+4	"examined"
+5	"the"
+6	"cellular"
+7	"metabolism"
+8	","
+9	"disposition"
+10	"and"
+11	"conjugation"
+12	"of"
+13	"SMX"
+14	"and"
+15	"its"
+16	"metabolites"
+17	"in"
+18	"vitro"
+19	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"RB"
+4	"VBN"
+5	"DT"
+6	"JJ"
+7	"NN"
+8	","
+9	"NN"
+10	"CC"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"CC"
+15	"PRP$"
+16	"NNS"
+17	"FW"
+18	"FW"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubj"
+4	2	"aux"
+4	3	"advmod"
+7	5	"dep"
+7	6	"amod"
+4	7	"dobj"
+4	9	"dobj"
+7	9	"conj_and"
+4	11	"dobj"
+7	11	"conj_and"
+7	13	"prep_of"
+16	15	"poss"
+7	16	"prep_of"
+13	16	"conj_and"
+18	17	"nn"
+4	18	"advmod"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"2"
+2	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Flow"
+2	"cytometry"
+3	"revealed"
+4	"binding"
+5	"of"
+6	"N-hydroxy"
+7	"("
+8	"SMX-NHOH"
+9	")"
+10	"and"
+11	"nitroso"
+12	"("
+13	"SMX-NO"
+14	")"
+15	"metabolites"
+16	"of"
+17	"SMX"
+18	","
+19	"but"
+20	"not"
+21	"of"
+22	"SMX"
+23	"itself"
+24	","
+25	"to"
+26	"the"
+27	"surface"
+28	"of"
+29	"viable"
+30	"white"
+31	"blood"
+32	"cells"
+33	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBD"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"-LRB-"
+8	"NN"
+9	"-RRB-"
+10	"CC"
+11	"NN"
+12	"-LRB-"
+13	"NN"
+14	"-RRB-"
+15	"NNS"
+16	"IN"
+17	"NN"
+18	","
+19	"CC"
+20	"RB"
+21	"IN"
+22	"NN"
+23	"PRP"
+24	","
+25	"TO"
+26	"DT"
+27	"NN"
+28	"IN"
+29	"JJ"
+30	"JJ"
+31	"NN"
+32	"NNS"
+33	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+3	2	"nsubj"
+3	4	"dobj"
+8	6	"nn"
+15	8	"nn"
+8	11	"conj_and"
+15	11	"nn"
+11	13	"abbrev"
+4	15	"prep_of"
+15	17	"prep_of"
+4	22	"prep_of"
+15	22	"conj_negcc"
+22	23	"dep"
+27	26	"det"
+4	27	"prep_to"
+32	29	"amod"
+32	30	"amod"
+32	31	"nn"
+27	32	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Cellular"
+2	"haptenation"
+3	"by"
+4	"SMX-NO"
+5	"was"
+6	"reduced"
+7	"by"
+8	"exogenous"
+9	"glutathione"
+10	"("
+11	"GSH"
+12	")"
+13	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"VBD"
+6	"VBN"
+7	"IN"
+8	"JJ"
+9	"NN"
+10	"-LRB-"
+11	"NN"
+12	"-RRB-"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+6	2	"nsubjpass"
+2	4	"prep_by"
+6	5	"auxpass"
+9	8	"amod"
+6	9	"agent"
+9	11	"abbrev"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"3"
+2	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"SMX-NHOH"
+2	"and"
+3	"SMX-NO"
+4	"were"
+5	"rapidly"
+6	"reduced"
+7	"back"
+8	"to"
+9	"the"
+10	"parent"
+11	"compound"
+12	"by"
+13	"cysteine"
+14	"("
+15	"CYS"
+16	")"
+17	","
+18	"GSH"
+19	","
+20	"human"
+21	"peripheral"
+22	"blood"
+23	"cells"
+24	"and"
+25	"plasma"
+26	","
+27	"suggesting"
+28	"that"
+29	"this"
+30	"is"
+31	"an"
+32	"important"
+33	"and"
+34	"ubiquitous"
+35	"bioinactivation"
+36	"mechanism"
+37	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CC"
+3	"NN"
+4	"VBD"
+5	"RB"
+6	"VBN"
+7	"RB"
+8	"TO"
+9	"DT"
+10	"NN"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"-LRB-"
+15	"NN"
+16	"-RRB-"
+17	","
+18	"NN"
+19	","
+20	"JJ"
+21	"JJ"
+22	"NN"
+23	"NNS"
+24	"CC"
+25	"NN"
+26	","
+27	"VBG"
+28	"IN"
+29	"DT"
+30	"VBZ"
+31	"DT"
+32	"JJ"
+33	"CC"
+34	"JJ"
+35	"NN"
+36	"NN"
+37	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"nsubjpass"
+1	3	"conj_and"
+6	3	"nsubjpass"
+6	4	"auxpass"
+6	5	"advmod"
+6	7	"advmod"
+11	9	"det"
+11	10	"nn"
+6	11	"prep_to"
+6	13	"agent"
+13	15	"abbrev"
+6	18	"agent"
+13	18	"conj_and"
+23	20	"amod"
+23	21	"amod"
+23	22	"nn"
+6	23	"agent"
+13	23	"conj_and"
+6	25	"agent"
+13	25	"conj_and"
+6	27	"xcomp"
+36	28	"complm"
+36	29	"nsubj"
+36	30	"cop"
+36	31	"det"
+36	32	"amod"
+32	34	"conj_and"
+36	34	"amod"
+36	35	"nn"
+27	36	"ccomp"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"4"
+2	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Fluorescence"
+2	"HPLC"
+3	"showed"
+4	"that"
+5	"SMX-NHOH"
+6	"and"
+7	"SMX-NO"
+8	"depleted"
+9	"CYS"
+10	"and"
+11	"GSH"
+12	"in"
+13	"buffer"
+14	","
+15	"and"
+16	"to"
+17	"a"
+18	"lesser"
+19	"extent"
+20	","
+21	"in"
+22	"cells"
+23	"and"
+24	"plasma"
+25	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBD"
+4	"IN"
+5	"NN"
+6	"CC"
+7	"NN"
+8	"VBD"
+9	"NN"
+10	"CC"
+11	"NN"
+12	"IN"
+13	"NN"
+14	","
+15	"CC"
+16	"TO"
+17	"DT"
+18	"JJR"
+19	"NN"
+20	","
+21	"IN"
+22	"NNS"
+23	"CC"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+3	2	"nsubj"
+8	4	"complm"
+8	5	"nsubj"
+5	7	"conj_and"
+8	7	"nsubj"
+3	8	"ccomp"
+8	9	"dobj"
+8	11	"dobj"
+9	11	"conj_and"
+9	13	"prep_in"
+3	16	"ccomp"
+8	16	"conj_and"
+19	17	"det"
+19	18	"amod"
+8	19	"prep_to"
+3	21	"ccomp"
+8	21	"conj_and"
+8	22	"prep_in"
+8	24	"prep_in"
+22	24	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"5"
+2	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Neutrophil"
+2	"apoptosis"
+3	"and"
+4	"inhibition"
+5	"of"
+6	"neutrophil"
+7	"function"
+8	"were"
+9	"induced"
+10	"at"
+11	"lower"
+12	"concentrations"
+13	"of"
+14	"SMX-NHOH"
+15	"and"
+16	"SMX-NO"
+17	"than"
+18	"those"
+19	"inducing"
+20	"loss"
+21	"of"
+22	"membrane"
+23	"viability"
+24	","
+25	"with"
+26	"SMX"
+27	"having"
+28	"no"
+29	"effect"
+30	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"CC"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"NN"
+8	"VBD"
+9	"VBN"
+10	"IN"
+11	"JJR"
+12	"NNS"
+13	"IN"
+14	"NN"
+15	"CC"
+16	"NN"
+17	"IN"
+18	"DT"
+19	"VBG"
+20	"NN"
+21	"IN"
+22	"NN"
+23	"NN"
+24	","
+25	"IN"
+26	"NN"
+27	"VBG"
+28	"DT"
+29	"NN"
+30	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+9	2	"nsubjpass"
+2	4	"conj_and"
+9	4	"nsubjpass"
+7	6	"nn"
+4	7	"prep_of"
+9	8	"auxpass"
+12	11	"amod"
+9	12	"prep_at"
+12	14	"prep_of"
+12	16	"prep_of"
+14	16	"conj_and"
+14	18	"prep_than"
+18	19	"partmod"
+19	20	"dobj"
+23	22	"nn"
+20	23	"prep_of"
+27	26	"nsubj"
+9	27	"prepc_with"
+29	28	"det"
+27	29	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Lymphocytes"
+2	"were"
+3	"significantly"
+4	"("
+5	"P"
+6	"<"
+7	"0.05"
+8	")"
+9	"more"
+10	"sensitive"
+11	"to"
+12	"the"
+13	"direct"
+14	"cytotoxic"
+15	"effects"
+16	"of"
+17	"SMX-NO"
+18	"than"
+19	"neutrophils"
+20	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"VBD"
+3	"RB"
+4	"-LRB-"
+5	"NN"
+6	"NN"
+7	"NN"
+8	"-RRB-"
+9	"RBR"
+10	"JJ"
+11	"TO"
+12	"DT"
+13	"JJ"
+14	"JJ"
+15	"NNS"
+16	"IN"
+17	"NN"
+18	"IN"
+19	"NNS"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+10	1	"nsubj"
+10	2	"cop"
+10	3	"advmod"
+7	5	"nn"
+7	6	"nn"
+3	7	"dep"
+10	9	"advmod"
+15	12	"det"
+15	13	"amod"
+15	14	"amod"
+10	15	"prep_to"
+15	17	"prep_of"
+10	19	"prep_than"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"6"
+2	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Partitioning"
+2	"of"
+3	"SMX-NHOH"
+4	"into"
+5	"red"
+6	"blood"
+7	"cells"
+8	"was"
+9	"significantly"
+10	"("
+11	"P"
+12	"<"
+13	"0.05"
+14	")"
+15	"lower"
+16	"than"
+17	"with"
+18	"the"
+19	"hydroxylamine"
+20	"of"
+21	"dapsone"
+22	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"IN"
+5	"JJ"
+6	"NN"
+7	"NNS"
+8	"VBD"
+9	"RB"
+10	"-LRB-"
+11	"NN"
+12	"NN"
+13	"NN"
+14	"-RRB-"
+15	"JJR"
+16	"IN"
+17	"IN"
+18	"DT"
+19	"NN"
+20	"IN"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+15	1	"nsubj"
+1	3	"prep_of"
+7	5	"amod"
+7	6	"nn"
+1	7	"prep_into"
+15	8	"cop"
+15	9	"advmod"
+13	11	"nn"
+13	12	"nn"
+15	13	"dep"
+15	16	"prep"
+16	17	"pcomp"
+19	18	"det"
+16	19	"prep_with"
+19	21	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"7"
+2	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Our"
+2	"results"
+3	"suggest"
+4	"that"
+5	"the"
+6	"balance"
+7	"between"
+8	"oxidation"
+9	"of"
+10	"SMX"
+11	"to"
+12	"its"
+13	"toxic"
+14	"metabolites"
+15	"and"
+16	"their"
+17	"reduction"
+18	"is"
+19	"an"
+20	"important"
+21	"protective"
+22	"cellular"
+23	"mechanism"
+24	"."
+
+>tag
+0	"Root"
+1	"PRP$"
+2	"NNS"
+3	"VBP"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"IN"
+10	"NN"
+11	"TO"
+12	"PRP$"
+13	"JJ"
+14	"NNS"
+15	"CC"
+16	"PRP$"
+17	"NN"
+18	"VBZ"
+19	"DT"
+20	"JJ"
+21	"JJ"
+22	"JJ"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"poss"
+3	2	"nsubj"
+23	4	"complm"
+6	5	"det"
+23	6	"nsubj"
+6	8	"prep_between"
+8	10	"prep_of"
+14	12	"poss"
+14	13	"amod"
+8	14	"prep_to"
+17	16	"poss"
+6	17	"prep_between"
+8	17	"conj_and"
+23	18	"cop"
+23	19	"det"
+23	20	"amod"
+23	21	"amod"
+23	22	"amod"
+3	23	"ccomp"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"If"
+2	"an"
+3	"imbalance"
+4	"exists"
+5	","
+6	"haptenation"
+7	"of"
+8	"the"
+9	"toxic"
+10	"metabolites"
+11	"to"
+12	"bodily"
+13	"proteins"
+14	"including"
+15	"the"
+16	"surface"
+17	"of"
+18	"viable"
+19	"cells"
+20	"can"
+21	"occur"
+22	","
+23	"and"
+24	"may"
+25	"result"
+26	"in"
+27	"drug"
+28	"hypersensitivity"
+29	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"NN"
+4	"VBZ"
+5	","
+6	"NN"
+7	"IN"
+8	"DT"
+9	"JJ"
+10	"NNS"
+11	"TO"
+12	"JJ"
+13	"NNS"
+14	"VBG"
+15	"DT"
+16	"NN"
+17	"IN"
+18	"JJ"
+19	"NNS"
+20	"MD"
+21	"VB"
+22	","
+23	"CC"
+24	"MD"
+25	"VB"
+26	"IN"
+27	"NN"
+28	"NN"
+29	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"mark"
+3	2	"det"
+4	3	"nsubj"
+21	4	"advcl"
+21	6	"nsubj"
+25	6	"nsubj"
+10	8	"det"
+10	9	"amod"
+6	10	"prep_of"
+13	12	"amod"
+6	13	"prep_to"
+16	15	"det"
+13	16	"prep_including"
+19	18	"amod"
+16	19	"prep_of"
+21	20	"aux"
+25	24	"aux"
+21	25	"conj_and"
+28	27	"nn"
+25	28	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

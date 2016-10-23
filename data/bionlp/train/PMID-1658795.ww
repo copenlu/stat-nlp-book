@@ -1,0 +1,1028 @@
+>>
+>word
+0	"Root"
+1	"Clone"
+2	"pAT"
+3	"133"
+4	"identifies"
+5	"a"
+6	"gene"
+7	"that"
+8	"encodes"
+9	"another"
+10	"human"
+11	"member"
+12	"of"
+13	"a"
+14	"class"
+15	"of"
+16	"growth"
+17	"factor-induced"
+18	"genes"
+19	"with"
+20	"almost"
+21	"identical"
+22	"zinc-finger"
+23	"domains"
+24	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"CD"
+4	"VBZ"
+5	"DT"
+6	"NN"
+7	"WDT"
+8	"VBZ"
+9	"DT"
+10	"JJ"
+11	"NN"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"IN"
+16	"NN"
+17	"JJ"
+18	"NNS"
+19	"IN"
+20	"RB"
+21	"JJ"
+22	"NN"
+23	"NNS"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+4	2	"nsubj"
+2	3	"num"
+6	5	"det"
+4	6	"dobj"
+8	6	"nsubj"
+6	8	"rcmod"
+11	9	"det"
+11	10	"amod"
+8	11	"dobj"
+14	13	"det"
+11	14	"prep_of"
+17	16	"dep"
+18	17	"amod"
+14	18	"prep_of"
+21	20	"advmod"
+23	21	"amod"
+23	22	"nn"
+14	23	"prep_with"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"report"
+3	"the"
+4	"structure"
+5	"and"
+6	"regulation"
+7	"of"
+8	"a"
+9	"gene"
+10	"represented"
+11	"by"
+12	"clone"
+13	"pAT"
+14	"133"
+15	","
+16	"which"
+17	"is"
+18	"induced"
+19	"upon"
+20	"transition"
+21	"from"
+22	"a"
+23	"resting"
+24	"state"
+25	"("
+26	"G0"
+27	")"
+28	"through"
+29	"the"
+30	"early"
+31	"phase"
+32	"of"
+33	"the"
+34	"cell"
+35	"cycle"
+36	"("
+37	"G1"
+38	")"
+39	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"DT"
+4	"NN"
+5	"CC"
+6	"NN"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"VBN"
+11	"IN"
+12	"NN"
+13	"NN"
+14	"CD"
+15	","
+16	"WDT"
+17	"VBZ"
+18	"VBN"
+19	"IN"
+20	"NN"
+21	"IN"
+22	"DT"
+23	"JJ"
+24	"NN"
+25	"-LRB-"
+26	"NN"
+27	"-RRB-"
+28	"IN"
+29	"DT"
+30	"JJ"
+31	"NN"
+32	"IN"
+33	"DT"
+34	"NN"
+35	"NN"
+36	"-LRB-"
+37	"NN"
+38	"-RRB-"
+39	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+4	3	"dep"
+2	4	"dobj"
+2	6	"dobj"
+4	6	"conj_and"
+9	8	"det"
+4	9	"prep_of"
+9	10	"partmod"
+13	12	"nn"
+10	13	"agent"
+18	13	"nsubjpass"
+13	14	"num"
+18	17	"auxpass"
+13	18	"rcmod"
+18	20	"prep_upon"
+24	22	"det"
+24	23	"amod"
+20	24	"prep_from"
+24	26	"appos"
+31	29	"det"
+31	30	"amod"
+20	31	"prep_through"
+35	33	"det"
+35	34	"nn"
+31	35	"prep_of"
+31	37	"appos"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"pAT"
+3	"133"
+4	"gene"
+5	"is"
+6	"immediately"
+7	"induced"
+8	","
+9	"with"
+10	"FOS-like"
+11	"kinetics"
+12	","
+13	"in"
+14	"human"
+15	"T"
+16	"cells"
+17	"and"
+18	"in"
+19	"fibroblasts"
+20	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"CD"
+4	"NN"
+5	"VBZ"
+6	"RB"
+7	"VBN"
+8	","
+9	"IN"
+10	"JJ"
+11	"NNS"
+12	","
+13	"IN"
+14	"JJ"
+15	"NN"
+16	"NNS"
+17	"CC"
+18	"IN"
+19	"NNS"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"det"
+4	2	"nn"
+4	3	"num"
+7	4	"nsubjpass"
+7	5	"auxpass"
+7	6	"advmod"
+11	10	"amod"
+7	11	"prep_with"
+16	14	"amod"
+16	15	"nn"
+7	16	"prep_in"
+7	19	"prep_in"
+16	19	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Primary"
+2	"structure"
+3	"analysis"
+4	"showed"
+5	"that"
+6	"the"
+7	"encoded"
+8	"protein"
+9	"contains"
+10	"three"
+11	"tandem"
+12	"zinc-finger"
+13	"sequences"
+14	"of"
+15	"the"
+16	"type"
+17	"Cys2-Xaa12-His2"
+18	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NN"
+4	"VBD"
+5	"IN"
+6	"DT"
+7	"VBN"
+8	"NN"
+9	"VBZ"
+10	"CD"
+11	"JJ"
+12	"NN"
+13	"NNS"
+14	"IN"
+15	"DT"
+16	"NN"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"nn"
+4	3	"nsubj"
+9	5	"complm"
+8	6	"det"
+8	7	"amod"
+9	8	"nsubj"
+4	9	"ccomp"
+13	10	"num"
+13	11	"amod"
+13	12	"nn"
+9	13	"dobj"
+17	15	"det"
+17	16	"nn"
+13	17	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"zinc-finger"
+3	"region"
+4	","
+5	"which"
+6	"is"
+7	"thought"
+8	"to"
+9	"bind"
+10	"DNA"
+11	"in"
+12	"a"
+13	"sequence-specific"
+14	"manner"
+15	","
+16	"is"
+17	"similar"
+18	"("
+19	"greater"
+20	"than"
+21	"80"
+22	"%"
+23	"on"
+24	"the"
+25	"amino"
+26	"acid"
+27	"level"
+28	")"
+29	"to"
+30	"two"
+31	"previously"
+32	"described"
+33	"transcription"
+34	"factors"
+35	"pAT"
+36	"225/EGR1"
+37	"and"
+38	"pAT"
+39	"591/EGR2"
+40	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	","
+5	"WDT"
+6	"VBZ"
+7	"VBN"
+8	"TO"
+9	"VB"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	","
+16	"VBZ"
+17	"JJ"
+18	"-LRB-"
+19	"JJR"
+20	"IN"
+21	"CD"
+22	"NN"
+23	"IN"
+24	"DT"
+25	"NN"
+26	"NN"
+27	"NN"
+28	"-RRB-"
+29	"TO"
+30	"CD"
+31	"RB"
+32	"VBN"
+33	"NN"
+34	"NNS"
+35	"NN"
+36	"NN"
+37	"CC"
+38	"NN"
+39	"NN"
+40	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+7	3	"nsubjpass"
+17	3	"nsubj"
+7	6	"auxpass"
+3	7	"rcmod"
+9	8	"aux"
+7	9	"xcomp"
+9	10	"dobj"
+14	12	"det"
+14	13	"amod"
+9	14	"prep_in"
+17	16	"cop"
+20	19	"mwe"
+21	20	"quantmod"
+22	21	"num"
+17	22	"dep"
+22	23	"dep"
+27	24	"det"
+27	25	"nn"
+27	26	"nn"
+23	27	"pobj"
+34	30	"num"
+32	31	"advmod"
+34	32	"amod"
+34	33	"nn"
+17	34	"prep_to"
+36	35	"nn"
+34	36	"dep"
+39	38	"nn"
+34	39	"dep"
+36	39	"conj_and"
+
+>mention
+36	36	"Protein(225/EGR1)"
+39	39	"Protein(591/EGR2)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Except"
+2	"for"
+3	"the"
+4	"conserved"
+5	"zinc-finger"
+6	"domains"
+7	","
+8	"the"
+9	"amino"
+10	"acid"
+11	"sequences"
+12	"of"
+13	"the"
+14	"three"
+15	"proteins"
+16	"are"
+17	"distinct"
+18	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"IN"
+3	"DT"
+4	"VBN"
+5	"NN"
+6	"NNS"
+7	","
+8	"DT"
+9	"NN"
+10	"NN"
+11	"NNS"
+12	"IN"
+13	"DT"
+14	"CD"
+15	"NNS"
+16	"VBP"
+17	"JJ"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	3	"det"
+6	4	"amod"
+6	5	"nn"
+17	6	"prep_except_for"
+11	8	"det"
+11	9	"nn"
+11	10	"nn"
+17	11	"nsubj"
+15	13	"det"
+15	14	"num"
+11	15	"prep_of"
+17	16	"cop"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"structural"
+3	"similarity"
+4	"suggests"
+5	"that"
+6	"the"
+7	"pAT"
+8	"133"
+9	"gene"
+10	"encodes"
+11	"a"
+12	"transcription"
+13	"factor"
+14	"with"
+15	"a"
+16	"specific"
+17	"biological"
+18	"function"
+19	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"VBZ"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"CD"
+9	"NN"
+10	"VBZ"
+11	"DT"
+12	"NN"
+13	"NN"
+14	"IN"
+15	"DT"
+16	"JJ"
+17	"JJ"
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+4	3	"nsubj"
+10	5	"complm"
+9	6	"det"
+9	7	"nn"
+9	8	"num"
+10	9	"nsubj"
+4	10	"ccomp"
+13	11	"det"
+13	12	"nn"
+10	13	"dobj"
+18	15	"det"
+18	16	"amod"
+18	17	"amod"
+13	18	"prep_with"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Comparing"
+2	"the"
+3	"regulation"
+4	"of"
+5	"these"
+6	"related"
+7	"zinc-finger-encoding"
+8	"genes"
+9	"showed"
+10	"coordinate"
+11	"induction"
+12	"upon"
+13	"mitogenic"
+14	"stimulation"
+15	"of"
+16	"resting"
+17	"T"
+18	"lymphocytes"
+19	"and"
+20	"of"
+21	"resting"
+22	"fibroblasts"
+23	"."
+
+>tag
+0	"Root"
+1	"VBG"
+2	"DT"
+3	"NN"
+4	"IN"
+5	"DT"
+6	"JJ"
+7	"JJ"
+8	"NNS"
+9	"VBD"
+10	"JJ"
+11	"NN"
+12	"IN"
+13	"JJ"
+14	"NN"
+15	"IN"
+16	"VBG"
+17	"NN"
+18	"NNS"
+19	"CC"
+20	"IN"
+21	"VBG"
+22	"NNS"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	1	"csubj"
+3	2	"det"
+1	3	"dobj"
+8	5	"det"
+8	6	"amod"
+8	7	"amod"
+3	8	"prep_of"
+11	10	"amod"
+9	11	"dobj"
+14	13	"amod"
+11	14	"prep_upon"
+18	16	"amod"
+18	17	"nn"
+14	18	"prep_of"
+22	21	"amod"
+14	22	"prep_of"
+18	22	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"However"
+2	","
+3	"upon"
+4	"transition"
+5	"from"
+6	"a"
+7	"proliferating"
+8	"("
+9	"G1"
+10	")"
+11	"to"
+12	"a"
+13	"resting"
+14	"state"
+15	"of"
+16	"the"
+17	"cell"
+18	"cycle"
+19	"the"
+20	"three"
+21	"genes"
+22	"were"
+23	"differently"
+24	"regulated"
+25	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"IN"
+4	"NN"
+5	"IN"
+6	"DT"
+7	"JJ"
+8	"-LRB-"
+9	"NN"
+10	"-RRB-"
+11	"TO"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"NN"
+19	"DT"
+20	"CD"
+21	"NNS"
+22	"VBD"
+23	"RB"
+24	"VBN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+24	1	"advmod"
+24	4	"prep_upon"
+7	6	"det"
+4	7	"prep_from"
+7	9	"appos"
+14	12	"det"
+14	13	"amod"
+4	14	"prep_to"
+18	16	"det"
+18	17	"nn"
+14	18	"prep_of"
+21	19	"det"
+21	20	"num"
+24	21	"nsubjpass"
+24	22	"auxpass"
+24	23	"advmod"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"human"
+3	"histiocytic"
+4	"U937"
+5	"cells"
+6	"mRNA"
+7	"of"
+8	"clone"
+9	"pAT"
+10	"133"
+11	"was"
+12	"constitutively"
+13	"expressed"
+14	","
+15	"whereas"
+16	"mRNA"
+17	"of"
+18	"pAT"
+19	"225/EGR1"
+20	"was"
+21	"induced"
+22	"upon"
+23	"induction"
+24	"of"
+25	"terminal"
+26	"differentiation"
+27	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"JJ"
+3	"JJ"
+4	"NN"
+5	"NNS"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"NN"
+10	"CD"
+11	"VBD"
+12	"RB"
+13	"VBN"
+14	","
+15	"IN"
+16	"NN"
+17	"IN"
+18	"NN"
+19	"NN"
+20	"VBD"
+21	"VBN"
+22	"IN"
+23	"NN"
+24	"IN"
+25	"JJ"
+26	"NN"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	2	"amod"
+5	3	"amod"
+5	4	"nn"
+13	5	"prep_in"
+13	6	"nsubjpass"
+9	8	"nn"
+6	9	"prep_of"
+9	10	"num"
+13	11	"auxpass"
+13	12	"advmod"
+21	15	"mark"
+21	16	"nsubjpass"
+19	18	"nn"
+16	19	"prep_of"
+21	20	"auxpass"
+13	21	"advcl"
+21	23	"prep_upon"
+26	25	"amod"
+23	26	"prep_of"
+
+>mention
+19	19	"Protein(225/EGR1)"
+
+>trigger
+21	21	"Positive_regulation"
+>argument
+21	19	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"contrast"
+3	"mRNA"
+4	"representing"
+5	"pAT"
+6	"591/EGR2"
+7	"was"
+8	"not"
+9	"expressed"
+10	"in"
+11	"these"
+12	"cells"
+13	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	"NN"
+4	"VBG"
+5	"NN"
+6	"NN"
+7	"VBD"
+8	"RB"
+9	"VBN"
+10	"IN"
+11	"DT"
+12	"NNS"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	2	"prep_in"
+9	3	"nsubjpass"
+3	4	"partmod"
+6	5	"nn"
+4	6	"dobj"
+9	7	"auxpass"
+9	8	"neg"
+12	11	"det"
+9	12	"prep_in"
+
+>mention
+6	6	"Protein(591/EGR2)"
+
+>trigger
+9	9	"Transcription"
+>argument
+9	6	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"difference"
+3	"in"
+4	"gene"
+5	"regulation"
+6	"suggests"
+7	"distinct"
+8	"biological"
+9	"roles"
+10	"in"
+11	"the"
+12	"control"
+13	"of"
+14	"cell"
+15	"proliferation"
+16	"for"
+17	"the"
+18	"respective"
+19	"proteins"
+20	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"NN"
+6	"VBZ"
+7	"JJ"
+8	"JJ"
+9	"NNS"
+10	"IN"
+11	"DT"
+12	"NN"
+13	"IN"
+14	"NN"
+15	"NN"
+16	"IN"
+17	"DT"
+18	"JJ"
+19	"NNS"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+6	2	"nsubj"
+5	4	"nn"
+2	5	"prep_in"
+9	7	"amod"
+9	8	"amod"
+6	9	"dobj"
+12	11	"det"
+9	12	"prep_in"
+15	14	"nn"
+12	15	"prep_of"
+19	17	"det"
+19	18	"amod"
+9	19	"prep_for"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

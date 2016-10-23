@@ -1,0 +1,627 @@
+>>
+>word
+0	"Root"
+1	"Lineage"
+2	"-"
+3	"and"
+4	"stage-specific"
+5	"expression"
+6	"of"
+7	"runt"
+8	"box"
+9	"polypeptides"
+10	"in"
+11	"primitive"
+12	"and"
+13	"definitive"
+14	"hematopoiesis"
+15	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	":"
+3	"CC"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NN"
+9	"NNS"
+10	"IN"
+11	"JJ"
+12	"CC"
+13	"JJ"
+14	"NN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	4	"amod"
+1	5	"conj_and"
+9	7	"nn"
+9	8	"nn"
+5	9	"prep_of"
+14	11	"amod"
+11	13	"conj_and"
+14	13	"amod"
+5	14	"prep_in"
+
+>mention
+7	7	"Protein(runt)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Translocations"
+2	"involving"
+3	"the"
+4	"human"
+5	"CBFA2"
+6	"locus"
+7	"have"
+8	"been"
+9	"associated"
+10	"with"
+11	"leukemia"
+12	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"VBG"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"VBP"
+8	"VBN"
+9	"VBN"
+10	"IN"
+11	"NN"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	1	"nsubjpass"
+1	2	"partmod"
+6	3	"det"
+6	4	"amod"
+6	5	"nn"
+2	6	"dobj"
+9	7	"aux"
+9	8	"auxpass"
+9	11	"prep_with"
+
+>mention
+5	5	"Protein(CBFA2)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"gene"
+3	","
+4	"originally"
+5	"named"
+6	"AML1"
+7	","
+8	"is"
+9	"a"
+10	"human"
+11	"homologue"
+12	"of"
+13	"the"
+14	"Drosophila"
+15	"gene"
+16	"runt"
+17	"that"
+18	"controls"
+19	"early"
+20	"events"
+21	"in"
+22	"fly"
+23	"embryogenesis"
+24	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	","
+4	"RB"
+5	"VBN"
+6	"NN"
+7	","
+8	"VBZ"
+9	"DT"
+10	"JJ"
+11	"NN"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"NN"
+16	"NN"
+17	"WDT"
+18	"VBZ"
+19	"JJ"
+20	"NNS"
+21	"IN"
+22	"JJ"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+11	2	"nsubj"
+5	4	"advmod"
+2	5	"partmod"
+5	6	"dep"
+11	8	"cop"
+11	9	"det"
+11	10	"amod"
+18	11	"nsubj"
+16	13	"det"
+16	14	"nn"
+16	15	"nn"
+11	16	"prep_of"
+11	18	"rcmod"
+20	19	"amod"
+18	20	"dobj"
+23	22	"amod"
+18	23	"prep_in"
+
+>mention
+6	6	"Protein(AML1)"
+16	16	"Protein(runt)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"To"
+2	"clarify"
+3	"the"
+4	"role"
+5	"of"
+6	"mammalian"
+7	"runt"
+8	"products"
+9	"in"
+10	"normal"
+11	"and"
+12	"leukemic"
+13	"hematopoiesis"
+14	","
+15	"we"
+16	"have"
+17	"studied"
+18	"their"
+19	"pattern"
+20	"of"
+21	"expression"
+22	"in"
+23	"mouse"
+24	"hematopoietic"
+25	"tissues"
+26	"in"
+27	"the"
+28	"adult"
+29	"and"
+30	"during"
+31	"ontogeny"
+32	"using"
+33	"an"
+34	"anti-runt"
+35	"box"
+36	"antiserum"
+37	"."
+
+>tag
+0	"Root"
+1	"TO"
+2	"VB"
+3	"DT"
+4	"NN"
+5	"IN"
+6	"JJ"
+7	"NN"
+8	"NNS"
+9	"IN"
+10	"JJ"
+11	"CC"
+12	"JJ"
+13	"NN"
+14	","
+15	"PRP"
+16	"VBP"
+17	"VBN"
+18	"PRP$"
+19	"NN"
+20	"IN"
+21	"NN"
+22	"IN"
+23	"NN"
+24	"JJ"
+25	"NNS"
+26	"IN"
+27	"DT"
+28	"NN"
+29	"CC"
+30	"IN"
+31	"NN"
+32	"VBG"
+33	"DT"
+34	"JJ"
+35	"NN"
+36	"NN"
+37	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"aux"
+17	2	"purpcl"
+4	3	"det"
+2	4	"dobj"
+8	6	"amod"
+8	7	"nn"
+4	8	"prep_of"
+13	10	"amod"
+10	12	"conj_and"
+13	12	"amod"
+4	13	"prep_in"
+17	15	"nsubj"
+17	16	"aux"
+19	18	"poss"
+17	19	"dobj"
+19	21	"prep_of"
+19	21	"prep_of"
+21	21	"conj_and"
+25	23	"nn"
+25	24	"amod"
+21	25	"prep_in"
+28	27	"det"
+21	28	"prep_in"
+21	31	"prep_during"
+17	32	"xcomp"
+36	33	"det"
+36	34	"amod"
+36	35	"nn"
+32	36	"dobj"
+
+>mention
+7	7	"Protein(runt)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"the"
+3	"adult"
+4	"bone"
+5	"marrow"
+6	","
+7	"we"
+8	"found"
+9	"expression"
+10	"of"
+11	"runt"
+12	"polypeptides"
+13	"in"
+14	"differentiating"
+15	"myeloid"
+16	"cells"
+17	"and"
+18	"in"
+19	"B"
+20	"lymphocytes"
+21	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"JJ"
+4	"NN"
+5	"NN"
+6	","
+7	"PRP"
+8	"VBD"
+9	"NN"
+10	"IN"
+11	"NN"
+12	"NNS"
+13	"IN"
+14	"JJ"
+15	"JJ"
+16	"NNS"
+17	"CC"
+18	"IN"
+19	"NN"
+20	"NNS"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	2	"det"
+5	3	"amod"
+5	4	"nn"
+8	5	"prep_in"
+8	7	"nsubj"
+8	9	"dobj"
+12	11	"nn"
+9	12	"prep_of"
+16	14	"amod"
+16	15	"amod"
+9	16	"prep_in"
+20	19	"nn"
+9	20	"prep_in"
+16	20	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Within"
+2	"the"
+3	"erythroid"
+4	"lineage"
+5	","
+6	"runt"
+7	"expression"
+8	"is"
+9	"biphasic"
+10	","
+11	"clearly"
+12	"present"
+13	"in"
+14	"the"
+15	"erythroblasts"
+16	"of"
+17	"early"
+18	"blood"
+19	"islands"
+20	"and"
+21	"of"
+22	"the"
+23	"fetal"
+24	"liver"
+25	","
+26	"but"
+27	"absent"
+28	"in"
+29	"the"
+30	"adult"
+31	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"JJ"
+4	"NN"
+5	","
+6	"NN"
+7	"NN"
+8	"VBZ"
+9	"JJ"
+10	","
+11	"RB"
+12	"JJ"
+13	"IN"
+14	"DT"
+15	"NNS"
+16	"IN"
+17	"JJ"
+18	"NN"
+19	"NNS"
+20	"CC"
+21	"IN"
+22	"DT"
+23	"JJ"
+24	"NN"
+25	","
+26	"CC"
+27	"JJ"
+28	"IN"
+29	"DT"
+30	"NN"
+31	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	2	"det"
+4	3	"amod"
+9	4	"prep_within"
+7	6	"nn"
+9	7	"nsubj"
+27	7	"nsubj"
+9	8	"cop"
+9	11	"advmod"
+9	11	"conj_but"
+9	12	"dep"
+15	14	"det"
+12	15	"prep_in"
+19	17	"amod"
+19	18	"nn"
+15	19	"prep_of"
+24	22	"det"
+24	23	"amod"
+15	24	"prep_of"
+19	24	"conj_and"
+9	27	"conj_but"
+30	29	"det"
+27	30	"prep_in"
+
+>mention
+6	6	"Protein(runt)"
+
+>trigger
+7	7	"Gene_expression"
+27	27	"Gene_expression"
+>argument
+7	6	"Theme"
+27	6	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Biochemical"
+2	"analysis"
+3	"by"
+4	"Western"
+5	"blotting"
+6	"of"
+7	"fetal"
+8	"and"
+9	"adult"
+10	"hematopoietic"
+11	"populations"
+12	"shows"
+13	"several"
+14	"runt"
+15	"isoforms"
+16	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"NN"
+6	"IN"
+7	"JJ"
+8	"CC"
+9	"JJ"
+10	"JJ"
+11	"NNS"
+12	"VBZ"
+13	"JJ"
+14	"NN"
+15	"NNS"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+12	2	"nsubj"
+5	4	"nn"
+2	5	"prep_by"
+11	7	"amod"
+7	9	"conj_and"
+11	9	"amod"
+11	10	"amod"
+5	11	"prep_of"
+15	13	"amod"
+15	14	"nn"
+12	15	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"At"
+2	"least"
+3	"one"
+4	"of"
+5	"them"
+6	"appears"
+7	"to"
+8	"be"
+9	"myeloid"
+10	"specific"
+11	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"JJS"
+3	"CD"
+4	"IN"
+5	"PRP"
+6	"VBZ"
+7	"TO"
+8	"VB"
+9	"NN"
+10	"JJ"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"quantmod"
+1	2	"mwe"
+1	2	"pobj"
+6	3	"nsubj"
+10	3	"xsubj"
+3	5	"prep_of"
+10	7	"aux"
+10	8	"cop"
+10	9	"dep"
+6	10	"xcomp"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

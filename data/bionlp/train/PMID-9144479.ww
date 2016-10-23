@@ -1,0 +1,755 @@
+>>
+>word
+0	"Root"
+1	"CD40"
+2	"is"
+3	"a"
+4	"functional"
+5	"activation"
+6	"antigen"
+7	"and"
+8	"B7"
+9	"-independent"
+10	"T"
+11	"cell"
+12	"costimulatory"
+13	"molecule"
+14	"on"
+15	"normal"
+16	"human"
+17	"lung"
+18	"fibroblasts"
+19	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"CC"
+8	"NN"
+9	"JJ"
+10	"NN"
+11	"NN"
+12	"JJ"
+13	"NN"
+14	"IN"
+15	"JJ"
+16	"JJ"
+17	"NN"
+18	"NNS"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"nsubj"
+6	2	"cop"
+6	3	"det"
+6	4	"amod"
+6	5	"nn"
+13	8	"nn"
+13	9	"amod"
+13	10	"nn"
+13	11	"nn"
+13	12	"amod"
+6	13	"conj_and"
+18	15	"amod"
+18	16	"amod"
+18	17	"nn"
+6	18	"prep_on"
+
+>mention
+1	1	"Protein(CD40)"
+8	8	"Protein(B7)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"CD40"
+2	"is"
+3	"an"
+4	"important"
+5	"signaling"
+6	"and"
+7	"activation"
+8	"Ag"
+9	"found"
+10	"on"
+11	"certain"
+12	"bone"
+13	"marrow-derived"
+14	"cells"
+15	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"CC"
+7	"NN"
+8	"NN"
+9	"VBN"
+10	"IN"
+11	"JJ"
+12	"NN"
+13	"JJ"
+14	"NNS"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"nsubj"
+5	2	"cop"
+5	3	"det"
+5	4	"amod"
+8	7	"nn"
+5	8	"conj_and"
+5	9	"partmod"
+14	11	"amod"
+14	12	"nn"
+14	13	"amod"
+9	14	"prep_on"
+
+>mention
+1	1	"Protein(CD40)"
+
+>trigger
+9	9	"Gene_expression"
+>argument
+9	1	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Recently"
+2	","
+3	"CD40"
+4	"also"
+5	"has"
+6	"been"
+7	"shown"
+8	"to"
+9	"be"
+10	"expressed"
+11	"by"
+12	"mesenchymal"
+13	"cells"
+14	","
+15	"including"
+16	"human"
+17	"fibroblasts"
+18	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"RB"
+5	"VBZ"
+6	"VBN"
+7	"VBN"
+8	"TO"
+9	"VB"
+10	"VBN"
+11	"IN"
+12	"JJ"
+13	"NNS"
+14	","
+15	"VBG"
+16	"JJ"
+17	"NNS"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	1	"advmod"
+7	3	"nsubjpass"
+10	3	"xsubj"
+7	4	"advmod"
+7	5	"aux"
+7	6	"auxpass"
+10	8	"aux"
+10	9	"auxpass"
+7	10	"xcomp"
+13	12	"amod"
+10	13	"agent"
+17	16	"amod"
+13	17	"prep_including"
+
+>mention
+3	3	"Protein(CD40)"
+
+>trigger
+10	10	"Gene_expression"
+>argument
+10	3	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Little"
+2	"is"
+3	"known"
+4	"about"
+5	"the"
+6	"role"
+7	"of"
+8	"CD40"
+9	"in"
+10	"fibroblasts"
+11	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"VBZ"
+3	"VBN"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"IN"
+10	"NNS"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubjpass"
+3	2	"auxpass"
+6	5	"det"
+3	6	"prep_about"
+6	8	"prep_of"
+6	10	"prep_in"
+
+>mention
+8	8	"Protein(CD40)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"current"
+3	"study"
+4	"investigates"
+5	"the"
+6	"hypothesis"
+7	"that"
+8	"CD40"
+9	"expressed"
+10	"on"
+11	"lung"
+12	"fibroblasts"
+13	"is"
+14	"an"
+15	"activation"
+16	"structure"
+17	"and"
+18	"mechanism"
+19	"for"
+20	"interaction"
+21	"with"
+22	"hemopoietic"
+23	"cells"
+24	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"VBZ"
+5	"DT"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"VBN"
+10	"IN"
+11	"NN"
+12	"NNS"
+13	"VBZ"
+14	"DT"
+15	"NN"
+16	"NN"
+17	"CC"
+18	"NN"
+19	"IN"
+20	"NN"
+21	"IN"
+22	"JJ"
+23	"NNS"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+4	3	"nsubj"
+6	5	"det"
+4	6	"dobj"
+16	7	"complm"
+16	8	"nsubj"
+8	9	"partmod"
+12	11	"nn"
+9	12	"prep_on"
+16	13	"cop"
+16	14	"dep"
+16	15	"nn"
+6	16	"ccomp"
+6	18	"ccomp"
+16	18	"conj_and"
+16	20	"prep_for"
+23	22	"amod"
+20	23	"prep_with"
+
+>mention
+8	8	"Protein(CD40)"
+
+>trigger
+9	9	"Gene_expression"
+>argument
+9	8	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Communication"
+2	"between"
+3	"resident"
+4	"tissue"
+5	"fibroblasts"
+6	"and"
+7	"T"
+8	"cells"
+9	"is"
+10	"necessary"
+11	"for"
+12	"normal"
+13	"wound"
+14	"healing"
+15	","
+16	"and"
+17	"can"
+18	"be"
+19	"pathologic"
+20	","
+21	"resulting"
+22	"in"
+23	"tissue"
+24	"fibrosis"
+25	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"JJ"
+4	"NN"
+5	"NNS"
+6	"CC"
+7	"NN"
+8	"NNS"
+9	"VBZ"
+10	"JJ"
+11	"IN"
+12	"JJ"
+13	"NN"
+14	"NN"
+15	","
+16	"CC"
+17	"MD"
+18	"VB"
+19	"JJ"
+20	","
+21	"VBG"
+22	"IN"
+23	"NN"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+10	1	"nsubj"
+19	1	"nsubj"
+21	1	"nsubj"
+5	3	"amod"
+5	4	"nn"
+1	5	"prep_between"
+8	7	"nn"
+1	8	"prep_between"
+5	8	"conj_and"
+10	9	"cop"
+14	12	"amod"
+14	13	"nn"
+10	14	"prep_for"
+19	17	"aux"
+19	18	"cop"
+10	19	"conj_and"
+10	21	"conj_and"
+10	21	"xcomp"
+24	23	"nn"
+21	24	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Signaling"
+2	"through"
+3	"CD40"
+4	"with"
+5	"soluble"
+6	"CD40"
+7	"ligand"
+8	"stimulated"
+9	"fibroblast"
+10	"activation"
+11	","
+12	"as"
+13	"evidenced"
+14	"by"
+15	"mobilization"
+16	"of"
+17	"nuclear"
+18	"factor-kappaB"
+19	"and"
+20	"by"
+21	"induction"
+22	"of"
+23	"the"
+24	"proinflammatory"
+25	"and"
+26	"chemoattractant"
+27	"cytokines"
+28	"IL-6"
+29	"and"
+30	"IL-8"
+31	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"IN"
+5	"JJ"
+6	"NN"
+7	"NN"
+8	"VBD"
+9	"NN"
+10	"NN"
+11	","
+12	"IN"
+13	"VBN"
+14	"IN"
+15	"NN"
+16	"IN"
+17	"JJ"
+18	"NN"
+19	"CC"
+20	"IN"
+21	"NN"
+22	"IN"
+23	"DT"
+24	"JJ"
+25	"CC"
+26	"JJ"
+27	"NNS"
+28	"NN"
+29	"CC"
+30	"NN"
+31	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"nsubj"
+1	3	"prep_through"
+7	5	"amod"
+7	6	"nn"
+3	7	"prep_with"
+10	9	"nn"
+8	10	"dobj"
+13	12	"mark"
+8	13	"advcl"
+13	15	"prep_by"
+18	17	"amod"
+15	18	"prep_of"
+13	21	"prep_by"
+15	21	"conj_and"
+27	23	"det"
+27	24	"amod"
+24	26	"conj_and"
+27	26	"amod"
+21	27	"prep_of"
+27	28	"dep"
+27	30	"dep"
+28	30	"conj_and"
+
+>mention
+3	3	"Protein(CD40)"
+6	7	"Protein(ligand)"
+28	28	"Protein(IL-6)"
+30	30	"Protein(IL-8)"
+
+>trigger
+21	21	"Positive_regulation"
+>argument
+21	28	"Theme"
+21	30	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"IFN-gamma"
+2	"-primed"
+3	"lung"
+4	"fibroblasts"
+5	"costimulate"
+6	"T"
+7	"lymphocyte"
+8	"proliferation"
+9	"utilizing"
+10	"CD40"
+11	","
+12	"but"
+13	"not"
+14	"the"
+15	"well-studied"
+16	"costimulatory"
+17	"molecules"
+18	"B7-1"
+19	"and"
+20	"B7-2"
+21	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"JJ"
+3	"NN"
+4	"NNS"
+5	"VBP"
+6	"NN"
+7	"NN"
+8	"NN"
+9	"VBG"
+10	"NN"
+11	","
+12	"CC"
+13	"RB"
+14	"DT"
+15	"JJ"
+16	"JJ"
+17	"NNS"
+18	"NN"
+19	"CC"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nn"
+4	2	"amod"
+4	3	"nn"
+5	4	"nsubj"
+8	6	"nn"
+8	7	"nn"
+5	8	"dobj"
+5	9	"xcomp"
+9	10	"dobj"
+17	14	"det"
+17	15	"amod"
+17	16	"amod"
+9	17	"dobj"
+10	17	"conj_negcc"
+17	18	"dep"
+17	20	"dep"
+18	20	"conj_and"
+
+>mention
+1	1	"Protein(IFN-gamma)"
+10	10	"Protein(CD40)"
+18	18	"Protein(B7-1)"
+20	20	"Protein(B7-2)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Data"
+2	"reported"
+3	"herein"
+4	"support"
+5	"the"
+6	"hypothesis"
+7	"that"
+8	"cognate"
+9	"interactions"
+10	"between"
+11	"tissue"
+12	"fibroblasts"
+13	"and"
+14	"infiltrating"
+15	"T"
+16	"lymphocytes"
+17	","
+18	"via"
+19	"the"
+20	"CD40"
+21	"/CD40L"
+22	"pathway"
+23	","
+24	"augment"
+25	"inflammation"
+26	"and"
+27	"may"
+28	"promote"
+29	"fibrogenesis"
+30	"by"
+31	"activating"
+32	"both"
+33	"cell"
+34	"types"
+35	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"VBN"
+3	"RB"
+4	"VBP"
+5	"DT"
+6	"NN"
+7	"IN"
+8	"JJ"
+9	"NNS"
+10	"IN"
+11	"NN"
+12	"NNS"
+13	"CC"
+14	"VBG"
+15	"NN"
+16	"NNS"
+17	","
+18	"IN"
+19	"DT"
+20	"NN"
+21	"NN"
+22	"NN"
+23	","
+24	"VBP"
+25	"NN"
+26	"CC"
+27	"MD"
+28	"VB"
+29	"NN"
+30	"IN"
+31	"VBG"
+32	"DT"
+33	"NN"
+34	"NNS"
+35	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubj"
+1	2	"partmod"
+2	3	"advmod"
+6	5	"det"
+4	6	"dobj"
+24	7	"complm"
+9	8	"amod"
+24	9	"nsubj"
+28	9	"nsubj"
+12	11	"nn"
+9	12	"prep_between"
+16	14	"amod"
+16	15	"nn"
+9	16	"prep_between"
+12	16	"conj_and"
+22	19	"det"
+22	20	"nn"
+22	21	"nn"
+9	22	"prep_via"
+6	24	"ccomp"
+24	25	"dobj"
+28	27	"aux"
+6	28	"ccomp"
+24	28	"conj_and"
+28	29	"dobj"
+28	31	"prepc_by"
+34	32	"det"
+34	33	"nn"
+31	34	"dobj"
+
+>mention
+20	20	"Protein(CD40)"
+21	21	"Protein(/CD40L)"
+
+>trigger
+>argument
+>relation
+
+

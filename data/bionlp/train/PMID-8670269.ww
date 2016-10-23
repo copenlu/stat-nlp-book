@@ -1,0 +1,636 @@
+>>
+>word
+0	"Root"
+1	"An"
+2	"alternatively"
+3	"spliced"
+4	"isoform"
+5	"of"
+6	"the"
+7	"Spi-B"
+8	"transcription"
+9	"factor"
+10	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"RB"
+3	"VBN"
+4	"NN"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"NN"
+9	"NN"
+10	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"det"
+3	2	"advmod"
+4	3	"amod"
+9	6	"det"
+9	7	"nn"
+9	8	"nn"
+4	9	"prep_of"
+
+>mention
+7	7	"Protein(Spi-B)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Spi-B"
+2	"is"
+3	"an"
+4	"Ets"
+5	"transcription"
+6	"factor"
+7	"related"
+8	"to"
+9	"the"
+10	"oncoprotein"
+11	"Spi-1"
+12	"/"
+13	"PU"
+14	".1"
+15	"and"
+16	"highly"
+17	"expressed"
+18	"in"
+19	"B"
+20	"lymphoid"
+21	"cells"
+22	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"DT"
+4	"NN"
+5	"NN"
+6	"NN"
+7	"JJ"
+8	"TO"
+9	"DT"
+10	"NN"
+11	"NN"
+12	":"
+13	"NN"
+14	"NN"
+15	"CC"
+16	"RB"
+17	"VBN"
+18	"IN"
+19	"NN"
+20	"JJ"
+21	"NNS"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+17	1	"nsubjpass"
+17	2	"auxpass"
+17	2	"cop"
+6	3	"det"
+6	4	"nn"
+6	5	"nn"
+17	6	"attr"
+6	7	"amod"
+14	9	"det"
+14	10	"nn"
+14	11	"nn"
+14	12	"punct"
+14	13	"nn"
+7	14	"prep_to"
+17	16	"advmod"
+17	16	"conj_and"
+21	19	"nn"
+21	20	"amod"
+17	21	"prep_in"
+
+>mention
+1	1	"Protein(Spi-B)"
+11	11	"Protein(Spi-1)"
+13	14	"Protein(.1)"
+
+>trigger
+17	17	"Gene_expression"
+>argument
+17	1	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"Ets"
+3	"proteins"
+4	"share"
+5	"a"
+6	"conserved"
+7	"Ets"
+8	"domain"
+9	"that"
+10	"mediates"
+11	"specific"
+12	"DNA"
+13	"binding"
+14	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NNS"
+4	"VBP"
+5	"DT"
+6	"VBN"
+7	"NN"
+8	"NN"
+9	"WDT"
+10	"VBZ"
+11	"JJ"
+12	"NN"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+4	3	"nsubj"
+8	5	"det"
+8	6	"amod"
+8	7	"nn"
+4	8	"dobj"
+10	8	"nsubj"
+8	10	"rcmod"
+13	11	"amod"
+13	12	"nn"
+10	13	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Spi-B"
+2	"binds"
+3	"DNA"
+4	"sequences"
+5	"containing"
+6	"a"
+7	"core"
+8	"5"
+9	"'"
+10	"-"
+11	"GGAA-3"
+12	"'"
+13	"and"
+14	"activates"
+15	"transcription"
+16	"through"
+17	"this"
+18	"motif"
+19	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"NN"
+4	"NNS"
+5	"VBG"
+6	"DT"
+7	"NN"
+8	"CD"
+9	"''"
+10	"CC"
+11	"CD"
+12	"''"
+13	"CC"
+14	"VBZ"
+15	"NN"
+16	"IN"
+17	"DT"
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+14	1	"nsubj"
+4	3	"nn"
+2	4	"dobj"
+4	5	"partmod"
+7	6	"det"
+5	7	"dobj"
+7	8	"dep"
+8	11	"conj"
+2	14	"conj_and"
+14	15	"dobj"
+18	17	"det"
+14	18	"prep_through"
+
+>mention
+1	1	"Protein(Spi-B)"
+
+>trigger
+2	2	"Binding"
+>argument
+2	1	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Up"
+2	"to"
+3	"date"
+4	","
+5	"the"
+6	"biological"
+7	"function"
+8	"of"
+9	"Spi-B"
+10	"remains"
+11	"unknown"
+12	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"TO"
+3	"NN"
+4	","
+5	"DT"
+6	"JJ"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"VBZ"
+11	"JJ"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+11	2	"dep"
+11	3	"prep_up"
+7	5	"det"
+7	6	"amod"
+11	7	"nsubj"
+7	9	"prep_of"
+11	10	"cop"
+
+>mention
+9	9	"Protein(Spi-B)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Here"
+2	","
+3	"we"
+4	"describe"
+5	"the"
+6	"characterization"
+7	"of"
+8	"an"
+9	"alternatively"
+10	"spliced"
+11	"variant"
+12	"of"
+13	"Spi-B"
+14	","
+15	"named"
+16	"deltaSpi-B"
+17	","
+18	"which"
+19	"has"
+20	"lost"
+21	"the"
+22	"Ets"
+23	"domain"
+24	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"PRP"
+4	"VBP"
+5	"DT"
+6	"NN"
+7	"IN"
+8	"DT"
+9	"RB"
+10	"VBN"
+11	"NN"
+12	"IN"
+13	"NN"
+14	","
+15	"VBN"
+16	"NN"
+17	","
+18	"WDT"
+19	"VBZ"
+20	"VBN"
+21	"DT"
+22	"NN"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"advmod"
+4	3	"nsubj"
+6	5	"det"
+4	6	"dobj"
+11	8	"det"
+10	9	"advmod"
+11	10	"amod"
+6	11	"prep_of"
+11	13	"prep_of"
+11	15	"partmod"
+15	16	"dep"
+20	18	"nsubj"
+20	19	"aux"
+11	20	"rcmod"
+23	21	"det"
+23	22	"nn"
+20	23	"dobj"
+
+>mention
+13	13	"Protein(Spi-B)"
+16	16	"Protein(deltaSpi-B)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"B"
+3	"lymphoid"
+4	"cells"
+5	","
+6	"deltaspi-B"
+7	"and"
+8	"spi-B"
+9	"mRNAs"
+10	"were"
+11	"present"
+12	"simultaneously"
+13	"in"
+14	"a"
+15	"ratio"
+16	"of"
+17	"around"
+18	"10"
+19	"%"
+20	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	"JJ"
+4	"NNS"
+5	","
+6	"NN"
+7	"CC"
+8	"NN"
+9	"NNS"
+10	"VBD"
+11	"JJ"
+12	"RB"
+13	"IN"
+14	"DT"
+15	"NN"
+16	"IN"
+17	"IN"
+18	"CD"
+19	"NN"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	2	"nn"
+4	3	"amod"
+11	4	"prep_in"
+11	6	"nsubj"
+6	8	"conj_and"
+11	8	"nsubj"
+6	9	"dep"
+11	10	"cop"
+11	12	"advmod"
+15	14	"det"
+11	15	"prep_in"
+18	17	"quantmod"
+19	18	"num"
+15	19	"prep_of"
+
+>mention
+6	6	"Protein(deltaspi-B)"
+8	8	"Protein(spi-B)"
+
+>trigger
+11	11	"Transcription"
+>argument
+11	6	"Theme"
+11	8	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"DeltaSpi-B"
+2	"product"
+3	"was"
+4	"not"
+5	"able"
+6	"to"
+7	"bind"
+8	"DNA"
+9	"and"
+10	"was"
+11	"recovered"
+12	"in"
+13	"cytoplasmic"
+14	"cellular"
+15	"extracts"
+16	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBD"
+4	"RB"
+5	"JJ"
+6	"TO"
+7	"VB"
+8	"NN"
+9	"CC"
+10	"VBD"
+11	"VBN"
+12	"IN"
+13	"JJ"
+14	"JJ"
+15	"NNS"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+5	2	"nsubj"
+11	2	"nsubjpass"
+5	3	"cop"
+5	4	"neg"
+7	6	"aux"
+5	7	"xcomp"
+7	8	"dobj"
+11	10	"auxpass"
+5	11	"conj_and"
+15	13	"amod"
+15	14	"amod"
+11	15	"prep_in"
+
+>mention
+1	1	"Protein(DeltaSpi-B)"
+
+>trigger
+7	7	"Binding"
+11	11	"Localization"
+>argument
+7	1	"Theme"
+11	1	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"raise"
+3	"the"
+4	"hypothesis"
+5	"that"
+6	"delta"
+7	"Spi-B"
+8	"might"
+9	"affect"
+10	"Spi-B"
+11	"function"
+12	"by"
+13	"recruiting"
+14	"factors"
+15	"involved"
+16	"in"
+17	"Spi-B"
+18	"activity"
+19	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"DT"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"NN"
+8	"MD"
+9	"VB"
+10	"NN"
+11	"NN"
+12	"IN"
+13	"VBG"
+14	"NNS"
+15	"VBN"
+16	"IN"
+17	"NN"
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+4	3	"det"
+2	4	"dobj"
+9	5	"complm"
+7	6	"nn"
+9	7	"nsubj"
+9	8	"aux"
+4	9	"ccomp"
+11	10	"nn"
+9	11	"dobj"
+9	13	"prepc_by"
+13	14	"dobj"
+14	15	"partmod"
+18	17	"nn"
+15	18	"prep_in"
+
+>mention
+6	7	"Protein(Spi-B)"
+10	10	"Protein(Spi-B)"
+17	17	"Protein(Spi-B)"
+
+>trigger
+9	9	"Regulation"
+>argument
+9	10	"Theme"
+>relation
+
+

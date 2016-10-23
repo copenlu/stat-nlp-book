@@ -1,0 +1,681 @@
+>>
+>word
+0	"Root"
+1	"Effect"
+2	"of"
+3	"adenovirus"
+4	"2"
+5	"on"
+6	"cellular"
+7	"gene"
+8	"activation"
+9	"in"
+10	"blood-derived"
+11	"monocytes"
+12	"and"
+13	"macrophages"
+14	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"CD"
+5	"IN"
+6	"JJ"
+7	"NN"
+8	"NN"
+9	"IN"
+10	"JJ"
+11	"NNS"
+12	"CC"
+13	"NNS"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+1	3	"prep_of"
+3	4	"num"
+8	6	"amod"
+8	7	"nn"
+1	8	"prep_on"
+11	10	"amod"
+8	11	"prep_in"
+8	13	"prep_in"
+11	13	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"have"
+3	"investigated"
+4	"the"
+5	"effect"
+6	"of"
+7	"adenovirus"
+8	"2"
+9	"("
+10	"Ad2"
+11	")"
+12	"infection"
+13	"on"
+14	"human"
+15	"monocytes"
+16	"and"
+17	"monocyte-derived"
+18	"macrophages"
+19	"with"
+20	"regard"
+21	"to"
+22	"expression"
+23	"of"
+24	"TNF-alpha"
+25	"and"
+26	"IL-1"
+27	"beta"
+28	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"VBN"
+4	"DT"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"CD"
+9	"-LRB-"
+10	"NN"
+11	"-RRB-"
+12	"NN"
+13	"IN"
+14	"JJ"
+15	"NNS"
+16	"CC"
+17	"JJ"
+18	"NNS"
+19	"IN"
+20	"NN"
+21	"TO"
+22	"NN"
+23	"IN"
+24	"NN"
+25	"CC"
+26	"NN"
+27	"NN"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubj"
+3	2	"aux"
+5	4	"det"
+3	5	"dobj"
+12	7	"nn"
+7	8	"num"
+7	10	"appos"
+5	12	"prep_of"
+15	14	"amod"
+5	15	"prep_on"
+18	17	"amod"
+5	18	"prep_on"
+15	18	"conj_and"
+15	22	"prep_with_regard_to"
+22	24	"prep_of"
+27	26	"nn"
+22	27	"prep_of"
+24	27	"conj_and"
+
+>mention
+24	24	"Protein(TNF-alpha)"
+26	27	"Protein(beta)"
+
+>trigger
+5	5	"Regulation"
+22	22	"Gene_expression"
+>argument
+5	22	"Theme"
+22	24	"Theme"
+22	27	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"monocytes"
+3	","
+4	"the"
+5	"virus"
+6	"was"
+7	"bound"
+8	"to"
+9	"the"
+10	"surface"
+11	"without"
+12	"being"
+13	"internalized"
+14	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NNS"
+3	","
+4	"DT"
+5	"NN"
+6	"VBD"
+7	"VBN"
+8	"TO"
+9	"DT"
+10	"NN"
+11	"IN"
+12	"VBG"
+13	"VBN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	2	"prep_in"
+5	4	"det"
+7	5	"nsubjpass"
+7	6	"auxpass"
+10	9	"det"
+7	10	"prep_to"
+13	12	"auxpass"
+7	13	"prepc_without"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"On"
+2	"the"
+3	"other"
+4	"hand"
+5	","
+6	"Ad2"
+7	"was"
+8	"internalized"
+9	"by"
+10	"macrophages"
+11	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"JJ"
+4	"NN"
+5	","
+6	"NN"
+7	"VBD"
+8	"VBN"
+9	"IN"
+10	"NNS"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	2	"det"
+4	3	"amod"
+8	4	"prep_on"
+8	6	"nsubjpass"
+8	7	"auxpass"
+8	10	"agent"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"No"
+2	"virus"
+3	"replication"
+4	"and"
+5	"no"
+6	"transcription"
+7	"of"
+8	"the"
+9	"Ad2"
+10	"early"
+11	"genes"
+12	"was"
+13	"observed"
+14	"in"
+15	"either"
+16	"of"
+17	"the"
+18	"cells"
+19	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"CC"
+5	"NN"
+6	"NN"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"JJ"
+11	"NNS"
+12	"VBD"
+13	"VBN"
+14	"IN"
+15	"DT"
+16	"IN"
+17	"DT"
+18	"NNS"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"dep"
+3	2	"nn"
+13	3	"nsubjpass"
+6	5	"nn"
+3	6	"conj_and"
+13	6	"nsubjpass"
+11	8	"det"
+11	9	"nn"
+11	10	"amod"
+3	11	"prep_of"
+13	12	"auxpass"
+13	15	"prep_in"
+18	17	"det"
+15	18	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Ad2"
+2	"infection"
+3	"induced"
+4	"transient"
+5	"increase"
+6	"in"
+7	"the"
+8	"mRNA"
+9	"levels"
+10	"for"
+11	"TNF-alpha"
+12	"and"
+13	"IL-1"
+14	"beta"
+15	"in"
+16	"both"
+17	"monocytes"
+18	"and"
+19	"in"
+20	"macrophages"
+21	","
+22	"although"
+23	"the"
+24	"kinetics"
+25	"of"
+26	"the"
+27	"transcription"
+28	"was"
+29	"slightly"
+30	"different"
+31	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBD"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"DT"
+8	"NN"
+9	"NNS"
+10	"IN"
+11	"NN"
+12	"CC"
+13	"NN"
+14	"NN"
+15	"IN"
+16	"DT"
+17	"NNS"
+18	"CC"
+19	"IN"
+20	"NNS"
+21	","
+22	"IN"
+23	"DT"
+24	"NNS"
+25	"IN"
+26	"DT"
+27	"NN"
+28	"VBD"
+29	"RB"
+30	"JJ"
+31	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+3	2	"nsubj"
+5	4	"amod"
+3	5	"dobj"
+9	7	"det"
+9	8	"nn"
+5	9	"prep_in"
+9	11	"prep_for"
+14	13	"nn"
+9	14	"prep_for"
+11	14	"conj_and"
+17	16	"det"
+3	17	"prep_in"
+3	20	"prep_in"
+17	20	"conj_and"
+30	22	"mark"
+24	23	"det"
+30	24	"nsubj"
+27	26	"det"
+24	27	"prep_of"
+30	28	"cop"
+30	29	"advmod"
+3	30	"advcl"
+
+>mention
+11	11	"Protein(TNF-alpha)"
+13	14	"Protein(beta)"
+
+>trigger
+3	3	"Positive_regulation"
+5	5	"Positive_regulation"
+9	9	"Transcription"
+>argument
+3	5	"Theme"
+5	9	"Theme"
+9	11	"Theme"
+9	14	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"production"
+3	"of"
+4	"both"
+5	"cytokines"
+6	","
+7	"measured"
+8	"by"
+9	"ELISA"
+10	"tests"
+11	","
+12	"was"
+13	"enhanced"
+14	"in"
+15	"monocytes"
+16	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"NNS"
+6	","
+7	"VBN"
+8	"IN"
+9	"NN"
+10	"NNS"
+11	","
+12	"VBD"
+13	"VBN"
+14	"IN"
+15	"NNS"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+13	2	"nsubjpass"
+5	4	"det"
+2	5	"prep_of"
+2	7	"partmod"
+10	9	"nn"
+7	10	"agent"
+13	12	"auxpass"
+13	15	"prep_in"
+
+>mention
+
+>trigger
+13	13	"Positive_regulation"
+>argument
+13	2	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"macrophages"
+3	","
+4	"a"
+5	"slight"
+6	"enhancement"
+7	"of"
+8	"TNF-alpha"
+9	"production"
+10	"was"
+11	"seen"
+12	","
+13	"whereas"
+14	"IL-1"
+15	"beta"
+16	"was"
+17	"not"
+18	"detected"
+19	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NNS"
+3	","
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"NN"
+10	"VBD"
+11	"VBN"
+12	","
+13	"IN"
+14	"NN"
+15	"NN"
+16	"VBD"
+17	"RB"
+18	"VBN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+11	2	"prep_in"
+6	4	"det"
+6	5	"amod"
+11	6	"nsubjpass"
+9	8	"nn"
+6	9	"prep_of"
+11	10	"auxpass"
+11	13	"dep"
+15	14	"nn"
+18	15	"nsubjpass"
+18	16	"auxpass"
+18	17	"neg"
+11	18	"dep"
+
+>mention
+8	8	"Protein(TNF-alpha)"
+14	15	"Protein(beta)"
+
+>trigger
+6	6	"Positive_regulation"
+9	9	"Gene_expression"
+18	18	"Gene_expression"
+>argument
+6	9	"Theme"
+9	8	"Theme"
+18	15	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"data"
+3	"indicate"
+4	"that"
+5	"cellular"
+6	"genes"
+7	"might"
+8	"be"
+9	"activated"
+10	"by"
+11	"Ad2"
+12	"virus"
+13	"infection"
+14	"in"
+15	"nonpermissive"
+16	"cells"
+17	"where"
+18	"no"
+19	"viral"
+20	"gene"
+21	"products"
+22	"could"
+23	"be"
+24	"detected"
+25	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NNS"
+3	"VBP"
+4	"IN"
+5	"JJ"
+6	"NNS"
+7	"MD"
+8	"VB"
+9	"VBN"
+10	"IN"
+11	"NN"
+12	"NN"
+13	"NN"
+14	"IN"
+15	"JJ"
+16	"NNS"
+17	"WRB"
+18	"DT"
+19	"JJ"
+20	"NN"
+21	"NNS"
+22	"MD"
+23	"VB"
+24	"VBN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+9	4	"complm"
+6	5	"amod"
+9	6	"nsubjpass"
+9	7	"aux"
+9	8	"auxpass"
+3	9	"ccomp"
+13	11	"nn"
+13	12	"nn"
+9	13	"agent"
+16	15	"amod"
+13	16	"prep_in"
+24	17	"advmod"
+21	18	"det"
+21	19	"amod"
+21	20	"nn"
+24	21	"nsubjpass"
+24	22	"aux"
+24	23	"auxpass"
+16	24	"rcmod"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

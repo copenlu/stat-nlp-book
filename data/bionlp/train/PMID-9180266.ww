@@ -1,0 +1,538 @@
+>>
+>word
+0	"Root"
+1	"Transcriptional"
+2	"activity"
+3	"and"
+4	"constitutive"
+5	"nuclear"
+6	"localization"
+7	"of"
+8	"the"
+9	"ETS"
+10	"protein"
+11	"Elf-1"
+12	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"CC"
+4	"JJ"
+5	"JJ"
+6	"NN"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"NN"
+11	"NN"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+6	4	"amod"
+6	5	"amod"
+2	6	"conj_and"
+11	8	"det"
+11	9	"nn"
+11	10	"nn"
+2	11	"prep_of"
+
+>mention
+11	11	"Protein(Elf-1)"
+
+>trigger
+6	6	"Localization"
+>argument
+6	11	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Elf-1"
+2	"is"
+3	"a"
+4	"lymphoid-specific"
+5	"transcription"
+6	"factor"
+7	"that"
+8	"belongs"
+9	"to"
+10	"the"
+11	"ETS"
+12	"protein"
+13	"family"
+14	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"WDT"
+8	"VBZ"
+9	"TO"
+10	"DT"
+11	"NN"
+12	"NN"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"nsubj"
+6	2	"cop"
+6	3	"det"
+6	4	"amod"
+6	5	"nn"
+8	6	"nsubj"
+6	8	"rcmod"
+13	10	"det"
+13	11	"nn"
+13	12	"nn"
+8	13	"prep_to"
+
+>mention
+1	1	"Protein(Elf-1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"It"
+2	"can"
+3	"bind"
+4	"to"
+5	"DNA"
+6	"target"
+7	"sequences"
+8	"within"
+9	"a"
+10	"variety"
+11	"of"
+12	"cytokine"
+13	"genes"
+14	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"MD"
+3	"VB"
+4	"TO"
+5	"NN"
+6	"NN"
+7	"NNS"
+8	"IN"
+9	"DT"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"NNS"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubj"
+3	2	"aux"
+7	5	"nn"
+7	6	"nn"
+3	7	"prep_to"
+10	9	"det"
+3	10	"prep_within"
+13	12	"nn"
+10	13	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"demonstrate"
+3	"that"
+4	"Elf-1"
+5	"is"
+6	"constitutively"
+7	"localized"
+8	"in"
+9	"the"
+10	"nucleus"
+11	"which"
+12	"is"
+13	"dependent"
+14	"on"
+15	"the"
+16	"presence"
+17	"of"
+18	"amino"
+19	"acids"
+20	"86-265"
+21	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"IN"
+4	"NN"
+5	"VBZ"
+6	"RB"
+7	"VBN"
+8	"IN"
+9	"DT"
+10	"NN"
+11	"WDT"
+12	"VBZ"
+13	"JJ"
+14	"IN"
+15	"DT"
+16	"NN"
+17	"IN"
+18	"NN"
+19	"NNS"
+20	"CD"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+7	3	"complm"
+7	4	"nsubjpass"
+7	5	"auxpass"
+7	6	"advmod"
+2	7	"ccomp"
+10	9	"det"
+7	10	"prep_in"
+13	10	"nsubj"
+13	12	"cop"
+10	13	"rcmod"
+16	15	"det"
+13	16	"prep_on"
+19	18	"nn"
+16	19	"prep_of"
+19	20	"dep"
+
+>mention
+4	4	"Protein(Elf-1)"
+
+>trigger
+7	7	"Localization"
+13	13	"Positive_regulation"
+>argument
+7	4	"Theme"
+13	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Analysis"
+2	"of"
+3	"Gal4"
+4	"-Elf-1"
+5	"fusion"
+6	"proteins"
+7	"revealed"
+8	"that"
+9	"the"
+10	"N-terminal"
+11	"86"
+12	"amino"
+13	"acids"
+14	"of"
+15	"Elf-1"
+16	"contain"
+17	"a"
+18	"transcriptional"
+19	"activation"
+20	"domain"
+21	","
+22	"the"
+23	"activity"
+24	"of"
+25	"which"
+26	"is"
+27	"attenuated"
+28	"by"
+29	"an"
+30	"internal"
+31	"repression"
+32	"domain"
+33	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"NN"
+5	"NN"
+6	"NNS"
+7	"VBD"
+8	"IN"
+9	"DT"
+10	"JJ"
+11	"CD"
+12	"NN"
+13	"NNS"
+14	"IN"
+15	"NN"
+16	"VBP"
+17	"DT"
+18	"JJ"
+19	"NN"
+20	"NN"
+21	","
+22	"DT"
+23	"NN"
+24	"IN"
+25	"WDT"
+26	"VBZ"
+27	"VBN"
+28	"IN"
+29	"DT"
+30	"JJ"
+31	"NN"
+32	"NN"
+33	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	1	"nsubj"
+6	3	"nn"
+6	4	"nn"
+6	5	"nn"
+1	6	"prep_of"
+16	8	"complm"
+13	9	"det"
+13	10	"amod"
+13	11	"num"
+13	12	"nn"
+16	13	"nsubj"
+13	15	"prep_of"
+7	16	"ccomp"
+20	17	"det"
+20	18	"amod"
+20	19	"nn"
+16	20	"dobj"
+23	20	"prep_of"
+23	22	"det"
+27	23	"nsubjpass"
+27	26	"auxpass"
+20	27	"rcmod"
+32	29	"det"
+32	30	"amod"
+32	31	"nn"
+27	32	"agent"
+
+>mention
+3	3	"Protein(Gal4)"
+4	4	"Protein(-Elf-1)"
+15	15	"Protein(Elf-1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Furthermore"
+2	","
+3	"Elf-1"
+4	"interacts"
+5	"specifically"
+6	"with"
+7	"the"
+8	"E74"
+9	"target"
+10	"sequence"
+11	"and"
+12	"can"
+13	"stimulate"
+14	"transcription"
+15	"driven"
+16	"by"
+17	"the"
+18	"E74"
+19	"site"
+20	"independent"
+21	"of"
+22	"mitogenic"
+23	"signaling"
+24	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"VBZ"
+5	"RB"
+6	"IN"
+7	"DT"
+8	"NN"
+9	"NN"
+10	"NN"
+11	"CC"
+12	"MD"
+13	"VB"
+14	"NN"
+15	"VBN"
+16	"IN"
+17	"DT"
+18	"NN"
+19	"NN"
+20	"JJ"
+21	"IN"
+22	"JJ"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"advmod"
+4	3	"nsubj"
+13	3	"nsubj"
+4	5	"advmod"
+10	7	"det"
+10	8	"nn"
+10	9	"nn"
+4	10	"prep_with"
+13	12	"aux"
+4	13	"conj_and"
+13	14	"dobj"
+14	15	"partmod"
+19	17	"det"
+19	18	"nn"
+15	19	"agent"
+19	20	"amod"
+23	22	"amod"
+20	23	"prep_of"
+
+>mention
+3	3	"Protein(Elf-1)"
+
+>trigger
+4	4	"Binding"
+>argument
+4	3	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Thus"
+2	","
+3	"Elf-1"
+4	"is"
+5	"able"
+6	"to"
+7	"stimulate"
+8	"gene"
+9	"transcription"
+10	"which"
+11	"may"
+12	"be"
+13	"required"
+14	"for"
+15	"the"
+16	"development"
+17	"and"
+18	"activity"
+19	"of"
+20	"lymphocytes"
+21	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"VBZ"
+5	"JJ"
+6	"TO"
+7	"VB"
+8	"NN"
+9	"NN"
+10	"WDT"
+11	"MD"
+12	"VB"
+13	"VBN"
+14	"IN"
+15	"DT"
+16	"NN"
+17	"CC"
+18	"NN"
+19	"IN"
+20	"NNS"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"advmod"
+5	3	"nsubj"
+5	4	"cop"
+7	6	"aux"
+5	7	"xcomp"
+9	8	"nn"
+7	9	"dobj"
+13	9	"nsubjpass"
+13	11	"aux"
+13	12	"auxpass"
+9	13	"rcmod"
+16	15	"dep"
+13	16	"prep_for"
+13	18	"prep_for"
+16	18	"conj_and"
+16	20	"prep_of"
+
+>mention
+3	3	"Protein(Elf-1)"
+
+>trigger
+>argument
+>relation
+
+

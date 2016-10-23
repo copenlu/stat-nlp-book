@@ -1,0 +1,882 @@
+>>
+>word
+0	"Root"
+1	"Transcriptional"
+2	"regulation"
+3	"of"
+4	"the"
+5	"pyruvate"
+6	"kinase"
+7	"erythroid-specific"
+8	"promoter"
+9	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"NN"
+6	"NN"
+7	"JJ"
+8	"NN"
+9	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+8	4	"det"
+8	5	"nn"
+8	6	"nn"
+8	7	"amod"
+2	8	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Mammal"
+2	"pyruvate"
+3	"kinases"
+4	"are"
+5	"encoded"
+6	"by"
+7	"two"
+8	"genes"
+9	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NNS"
+4	"VBP"
+5	"VBN"
+6	"IN"
+7	"CD"
+8	"NNS"
+9	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"nn"
+5	3	"nsubjpass"
+5	4	"auxpass"
+8	7	"num"
+5	8	"agent"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"L"
+3	"gene"
+4	"produces"
+5	"the"
+6	"erythroid"
+7	"("
+8	"R-PK"
+9	")"
+10	"or"
+11	"the"
+12	"hepatic"
+13	"("
+14	"L-PK"
+15	")"
+16	"isozymes"
+17	"by"
+18	"the"
+19	"alternative"
+20	"use"
+21	"of"
+22	"two"
+23	"promoters"
+24	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"VBZ"
+5	"DT"
+6	"JJ"
+7	"-LRB-"
+8	"NN"
+9	"-RRB-"
+10	"CC"
+11	"DT"
+12	"JJ"
+13	"-LRB-"
+14	"JJ"
+15	"-RRB-"
+16	"NNS"
+17	"IN"
+18	"DT"
+19	"JJ"
+20	"NN"
+21	"IN"
+22	"CD"
+23	"NNS"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+4	3	"nsubj"
+6	5	"det"
+4	6	"dobj"
+4	6	"iobj"
+6	8	"appos"
+16	10	"cc"
+16	11	"det"
+16	12	"amod"
+12	14	"dep"
+4	16	"dobj"
+6	16	"dep"
+20	18	"det"
+20	19	"amod"
+4	20	"prep_by"
+23	22	"num"
+20	23	"prep_of"
+
+>mention
+2	2	"Protein(L)"
+8	8	"Protein(R-PK)"
+14	14	"Protein(L-PK)"
+
+>trigger
+4	4	"Gene_expression"
+21	21	"Positive_regulation"
+>argument
+4	14	"Theme"
+21	4	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"report"
+3	"the"
+4	"characterization"
+5	"of"
+6	"the"
+7	"cis"
+8	"-"
+9	"and"
+10	"trans-acting"
+11	"elements"
+12	"involved"
+13	"in"
+14	"the"
+15	"tissue-specific"
+16	"activity"
+17	"of"
+18	"the"
+19	"L"
+20	"gene"
+21	"erythroid"
+22	"promoter"
+23	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"DT"
+4	"NN"
+5	"IN"
+6	"DT"
+7	"JJ"
+8	"CC"
+9	"CC"
+10	"JJ"
+11	"NNS"
+12	"VBN"
+13	"IN"
+14	"DT"
+15	"JJ"
+16	"NN"
+17	"IN"
+18	"DT"
+19	"NN"
+20	"NN"
+21	"JJ"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+4	3	"det"
+2	4	"dobj"
+11	6	"det"
+11	7	"amod"
+7	9	"conj_and"
+11	9	"amod"
+7	10	"conj_and"
+11	10	"amod"
+4	11	"prep_of"
+11	12	"partmod"
+16	14	"det"
+16	15	"amod"
+12	16	"prep_in"
+22	18	"det"
+22	19	"nn"
+22	20	"nn"
+22	21	"amod"
+16	22	"prep_of"
+
+>mention
+19	19	"Protein(L)"
+
+>trigger
+16	16	"Positive_regulation"
+>argument
+16	19	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"A"
+2	"R-PK"
+3	"DNA"
+4	"fragment"
+5	"extending"
+6	"from"
+7	"-870"
+8	"to"
+9	"+54"
+10	"relative"
+11	"to"
+12	"the"
+13	"cap"
+14	"site"
+15	"confers"
+16	"erythroid"
+17	"specificity"
+18	"to"
+19	"a"
+20	"reporter"
+21	"gene"
+22	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"NN"
+5	"VBG"
+6	"IN"
+7	"CD"
+8	"TO"
+9	"CD"
+10	"JJ"
+11	"TO"
+12	"DT"
+13	"NN"
+14	"NN"
+15	"VBZ"
+16	"JJ"
+17	"NN"
+18	"TO"
+19	"DT"
+20	"NN"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"det"
+4	2	"nn"
+4	3	"nn"
+15	4	"nsubj"
+4	5	"partmod"
+5	7	"prep_from"
+5	9	"prep_to"
+5	10	"dep"
+14	12	"det"
+14	13	"nn"
+5	14	"prep_to"
+17	16	"amod"
+15	17	"dobj"
+21	19	"det"
+21	20	"nn"
+15	21	"prep_to"
+
+>mention
+2	2	"Protein(R-PK)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Within"
+2	"this"
+3	"region"
+4	","
+5	"we"
+6	"define"
+7	"a"
+8	"minimal"
+9	"promoter"
+10	"("
+11	"-62"
+12	"to"
+13	"+54"
+14	")"
+15	"that"
+16	"displays"
+17	"erythroid-specific"
+18	"activity"
+19	"and"
+20	"contains"
+21	"two"
+22	"DNA"
+23	"binding"
+24	"sites"
+25	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"NN"
+4	","
+5	"PRP"
+6	"VBP"
+7	"DT"
+8	"JJ"
+9	"NN"
+10	"-LRB-"
+11	"CD"
+12	"TO"
+13	"CD"
+14	"-RRB-"
+15	"WDT"
+16	"VBZ"
+17	"JJ"
+18	"NN"
+19	"CC"
+20	"VBZ"
+21	"CD"
+22	"NN"
+23	"NN"
+24	"NNS"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"det"
+6	3	"prep_within"
+6	5	"nsubj"
+9	7	"det"
+9	8	"amod"
+6	9	"dobj"
+16	9	"nsubj"
+20	9	"nsubj"
+9	11	"dep"
+11	13	"prep_to"
+9	16	"rcmod"
+18	17	"amod"
+16	18	"dobj"
+9	20	"rcmod"
+16	20	"conj_and"
+24	21	"num"
+24	22	"nn"
+24	23	"nn"
+20	24	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"One"
+2	","
+3	"located"
+4	"at"
+5	"-50"
+6	","
+7	"binds"
+8	"members"
+9	"of"
+10	"the"
+11	"CCACC/Sp1"
+12	"family"
+13	"and"
+14	"the"
+15	"other"
+16	","
+17	"located"
+18	"at"
+19	"-20"
+20	","
+21	"binds"
+22	"the"
+23	"erythroid"
+24	"factor"
+25	"GATA-1"
+26	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	","
+3	"JJ"
+4	"IN"
+5	"CD"
+6	","
+7	"VBZ"
+8	"NNS"
+9	"IN"
+10	"DT"
+11	"NN"
+12	"NN"
+13	"CC"
+14	"DT"
+15	"JJ"
+16	","
+17	"JJ"
+18	"IN"
+19	"CD"
+20	","
+21	"VBZ"
+22	"DT"
+23	"JJ"
+24	"NN"
+25	"NN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	1	"nsubj"
+1	3	"amod"
+3	5	"prep_at"
+7	8	"dobj"
+12	10	"det"
+12	11	"nn"
+8	12	"prep_of"
+15	14	"det"
+21	15	"nsubj"
+15	17	"amod"
+17	19	"prep_at"
+7	21	"conj_and"
+25	22	"det"
+25	23	"amod"
+25	24	"nn"
+21	25	"dobj"
+
+>mention
+25	25	"Protein(GATA-1)"
+
+>trigger
+21	21	"Binding"
+>argument
+21	25	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Although"
+2	"the"
+3	"-20"
+4	"GATA"
+5	"binding"
+6	"site"
+7	"("
+8	"AGATAA"
+9	")"
+10	"is"
+11	"also"
+12	"a"
+13	"potential"
+14	"TFIID"
+15	"binding"
+16	"site"
+17	","
+18	"it"
+19	"does"
+20	"not"
+21	"bind"
+22	"TFIID"
+23	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"CD"
+4	"NN"
+5	"NN"
+6	"NN"
+7	"-LRB-"
+8	"NN"
+9	"-RRB-"
+10	"VBZ"
+11	"RB"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"NN"
+16	"NN"
+17	","
+18	"PRP"
+19	"VBZ"
+20	"RB"
+21	"VB"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+16	1	"mark"
+6	2	"det"
+6	3	"num"
+6	4	"nn"
+6	5	"nn"
+16	6	"nsubj"
+6	8	"abbrev"
+16	10	"cop"
+16	11	"advmod"
+16	12	"det"
+16	13	"amod"
+16	14	"nn"
+16	15	"nn"
+21	16	"advcl"
+21	18	"nsubj"
+21	19	"aux"
+21	20	"neg"
+21	22	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Furthermore"
+2	","
+3	"the"
+4	"substitution"
+5	"of"
+6	"this"
+7	"GATA"
+8	"binding"
+9	"site"
+10	"by"
+11	"a"
+12	"canonical"
+13	"TFIID"
+14	"binding"
+15	"site"
+16	"suppresses"
+17	"the"
+18	"promoter"
+19	"activity"
+20	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"NN"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"NN"
+9	"NN"
+10	"IN"
+11	"DT"
+12	"JJ"
+13	"NN"
+14	"NN"
+15	"NN"
+16	"VBZ"
+17	"DT"
+18	"NN"
+19	"NN"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+16	1	"advmod"
+4	3	"det"
+16	4	"nsubj"
+9	6	"det"
+9	7	"nn"
+9	8	"nn"
+4	9	"prep_of"
+15	11	"det"
+15	12	"amod"
+15	13	"nn"
+15	14	"nn"
+4	15	"prep_by"
+19	17	"det"
+19	18	"nn"
+16	19	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Mutations"
+2	"and"
+3	"deletions"
+4	"of"
+5	"both"
+6	"sites"
+7	"indicate"
+8	"that"
+9	"only"
+10	"the"
+11	"association"
+12	"of"
+13	"CCACC/Sp1"
+14	"and"
+15	"GATA"
+16	"binding"
+17	"sites"
+18	"can"
+19	"drive"
+20	"efficient"
+21	"and"
+22	"tissue-specific"
+23	"expression"
+24	"of"
+25	"this"
+26	"R-PK"
+27	"minimal"
+28	"promoter"
+29	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"CC"
+3	"NNS"
+4	"IN"
+5	"DT"
+6	"NNS"
+7	"VBP"
+8	"IN"
+9	"RB"
+10	"DT"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"CC"
+15	"NN"
+16	"NN"
+17	"NNS"
+18	"MD"
+19	"VB"
+20	"JJ"
+21	"CC"
+22	"JJ"
+23	"NN"
+24	"IN"
+25	"DT"
+26	"NN"
+27	"JJ"
+28	"NN"
+29	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	1	"nsubj"
+1	3	"conj_and"
+7	3	"nsubj"
+6	5	"det"
+1	6	"prep_of"
+19	8	"complm"
+11	9	"advmod"
+11	10	"det"
+19	11	"nsubj"
+17	13	"nn"
+13	15	"conj_and"
+17	15	"nn"
+17	16	"nn"
+11	17	"prep_of"
+19	18	"aux"
+7	19	"ccomp"
+23	20	"amod"
+20	22	"conj_and"
+23	22	"amod"
+19	23	"dobj"
+28	25	"det"
+28	26	"nn"
+28	27	"amod"
+23	28	"prep_of"
+
+>mention
+26	26	"Protein(R-PK)"
+
+>trigger
+19	19	"Positive_regulation"
+23	23	"Gene_expression"
+>argument
+19	23	"Theme"
+23	26	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Finally"
+2	","
+3	"by"
+4	"co-transfection"
+5	"experiments"
+6	","
+7	"we"
+8	"study"
+9	"the"
+10	"elements"
+11	"involved"
+12	"in"
+13	"the"
+14	"hGATA-1"
+15	"transactivation"
+16	"of"
+17	"the"
+18	"R-PK"
+19	"promoter"
+20	"in"
+21	"HeLa"
+22	"cells"
+23	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"IN"
+4	"NN"
+5	"NNS"
+6	","
+7	"PRP"
+8	"VBD"
+9	"DT"
+10	"NNS"
+11	"VBN"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"NN"
+16	"IN"
+17	"DT"
+18	"NN"
+19	"NN"
+20	"IN"
+21	"NN"
+22	"NNS"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"advmod"
+5	4	"nn"
+8	5	"prep_by"
+8	7	"nsubj"
+10	9	"det"
+8	10	"dobj"
+10	11	"partmod"
+15	13	"det"
+15	14	"nn"
+11	15	"prep_in"
+19	17	"det"
+19	18	"nn"
+15	19	"prep_of"
+22	21	"nn"
+15	22	"prep_in"
+
+>mention
+14	14	"Protein(hGATA-1)"
+18	18	"Protein(R-PK)"
+
+>trigger
+15	15	"Positive_regulation"
+>argument
+15	14	"Cause"
+15	18	"Theme"
+>relation
+
+

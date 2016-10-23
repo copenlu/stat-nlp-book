@@ -1,0 +1,601 @@
+>>
+>word
+0	"Root"
+1	"A"
+2	"T"
+3	"cell-specific"
+4	"enhancer"
+5	"in"
+6	"the"
+7	"interleukin-3"
+8	"locus"
+9	"is"
+10	"activated"
+11	"cooperatively"
+12	"by"
+13	"Oct"
+14	"and"
+15	"NFAT"
+16	"elements"
+17	"within"
+18	"a"
+19	"DNase"
+20	"I-hypersensitive"
+21	"site"
+22	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"JJ"
+4	"NN"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"NN"
+9	"VBZ"
+10	"VBN"
+11	"RB"
+12	"IN"
+13	"NN"
+14	"CC"
+15	"NN"
+16	"NNS"
+17	"IN"
+18	"DT"
+19	"NN"
+20	"JJ"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"det"
+3	2	"dep"
+4	3	"amod"
+10	4	"nsubjpass"
+8	6	"det"
+8	7	"nn"
+4	8	"prep_in"
+10	9	"auxpass"
+10	11	"advmod"
+10	13	"agent"
+16	15	"nn"
+10	16	"agent"
+13	16	"conj_and"
+21	18	"det"
+21	19	"nn"
+21	20	"amod"
+10	21	"prep_within"
+
+>mention
+7	7	"Protein(interleukin-3)"
+
+>trigger
+11	11	"Positive_regulation"
+>argument
+11	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Interleukin-3"
+2	"("
+3	"IL-3"
+4	")"
+5	"is"
+6	"a"
+7	"cytokine"
+8	"that"
+9	"is"
+10	"expressed"
+11	"primarily"
+12	"in"
+13	"activated"
+14	"T"
+15	"cells"
+16	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"-LRB-"
+3	"NN"
+4	"-RRB-"
+5	"VBZ"
+6	"DT"
+7	"NN"
+8	"WDT"
+9	"VBZ"
+10	"VBN"
+11	"RB"
+12	"IN"
+13	"VBN"
+14	"NN"
+15	"NNS"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	1	"nsubj"
+1	3	"abbrev"
+7	5	"cop"
+7	6	"det"
+10	7	"nsubjpass"
+10	9	"auxpass"
+7	10	"rcmod"
+10	11	"advmod"
+15	13	"amod"
+15	14	"nn"
+10	15	"prep_in"
+
+>mention
+1	1	"Protein(Interleukin-3)"
+3	3	"Protein(IL-3)"
+
+>trigger
+10	10	"Gene_expression"
+>argument
+10	1	"Theme"
+10	3	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Here"
+2	"we"
+3	"identified"
+4	"an"
+5	"inducible"
+6	"T"
+7	"cell-specific"
+8	"enhancer"
+9	"14"
+10	"kb"
+11	"upstream"
+12	"of"
+13	"the"
+14	"IL-3"
+15	"gene"
+16	"that"
+17	"responded"
+18	"to"
+19	"activation"
+20	"of"
+21	"T"
+22	"cell"
+23	"receptor"
+24	"signaling"
+25	"pathways"
+26	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"PRP"
+3	"VBD"
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"JJ"
+8	"NN"
+9	"CD"
+10	"NN"
+11	"JJ"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"NN"
+16	"WDT"
+17	"VBD"
+18	"TO"
+19	"NN"
+20	"IN"
+21	"NN"
+22	"NN"
+23	"NN"
+24	"NN"
+25	"NNS"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"advmod"
+3	2	"nsubj"
+8	4	"det"
+8	5	"amod"
+8	6	"nn"
+8	7	"amod"
+3	8	"dobj"
+10	9	"num"
+11	10	"npadvmod"
+8	11	"amod"
+15	13	"det"
+15	14	"nn"
+11	15	"prep_of"
+17	16	"nsubj"
+8	17	"rcmod"
+17	19	"prep_to"
+25	21	"nn"
+25	22	"nn"
+25	23	"nn"
+25	24	"nn"
+19	25	"prep_of"
+
+>mention
+14	14	"Protein(IL-3)"
+
+>trigger
+5	5	"Positive_regulation"
+>argument
+5	14	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"IL-3"
+3	"enhancer"
+4	"spanned"
+5	"an"
+6	"inducible"
+7	"cyclosporin"
+8	"A-sensitive"
+9	"DNase"
+10	"I-hypersensitive"
+11	"site"
+12	"found"
+13	"only"
+14	"in"
+15	"T"
+16	"cells"
+17	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"VBD"
+5	"DT"
+6	"JJ"
+7	"NN"
+8	"JJ"
+9	"NN"
+10	"JJ"
+11	"NN"
+12	"VBN"
+13	"RB"
+14	"IN"
+15	"NN"
+16	"NNS"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+4	3	"nsubj"
+11	5	"det"
+11	6	"amod"
+8	7	"dep"
+11	8	"amod"
+11	9	"nn"
+11	10	"amod"
+4	11	"dobj"
+11	12	"partmod"
+12	13	"advmod"
+16	15	"nn"
+12	16	"prep_in"
+
+>mention
+2	2	"Protein(IL-3)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Four"
+2	"NFAT-like"
+3	"elements"
+4	"exist"
+5	"within"
+6	"the"
+7	"enhancer"
+8	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"JJ"
+3	"NNS"
+4	"VBP"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"num"
+3	2	"amod"
+4	3	"nsubj"
+7	6	"det"
+4	7	"prep_within"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"two"
+3	"most"
+4	"active"
+5	"NFAT-like"
+6	"elements"
+7	"were"
+8	"located"
+9	"at"
+10	"the"
+11	"center"
+12	"of"
+13	"the"
+14	"DNase"
+15	"I-hypersensitive"
+16	"site"
+17	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"CD"
+3	"JJ"
+4	"JJ"
+5	"JJ"
+6	"NNS"
+7	"VBD"
+8	"JJ"
+9	"IN"
+10	"DT"
+11	"NN"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"JJ"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"det"
+6	2	"num"
+6	3	"amod"
+6	4	"amod"
+6	5	"amod"
+8	6	"nsubj"
+8	7	"cop"
+11	10	"det"
+8	11	"prep_at"
+16	13	"det"
+16	14	"nn"
+16	15	"amod"
+11	16	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"One"
+2	"of"
+3	"these"
+4	"NFAT-like"
+5	"elements"
+6	"encompassed"
+7	"overlapping"
+8	"Oct"
+9	"-"
+10	"and"
+11	"NFATp/c-binding"
+12	"sites"
+13	","
+14	"which"
+15	"functioned"
+16	"in"
+17	"a"
+18	"highly"
+19	"synergistic"
+20	"manner"
+21	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"IN"
+3	"DT"
+4	"JJ"
+5	"NNS"
+6	"VBD"
+7	"JJ"
+8	"NN"
+9	":"
+10	"CC"
+11	"JJ"
+12	"NNS"
+13	","
+14	"WDT"
+15	"VBD"
+16	"IN"
+17	"DT"
+18	"RB"
+19	"JJ"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"nsubj"
+5	3	"det"
+5	4	"amod"
+1	5	"prep_of"
+12	7	"amod"
+12	8	"amod"
+8	11	"conj_and"
+12	11	"amod"
+6	12	"dobj"
+15	12	"nsubj"
+12	15	"rcmod"
+20	17	"det"
+19	18	"advmod"
+20	19	"amod"
+15	20	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"suggest"
+3	"that"
+4	"the"
+5	"T"
+6	"cell-specific"
+7	"expression"
+8	"of"
+9	"the"
+10	"IL-3"
+11	"gene"
+12	"is"
+13	"partly"
+14	"controlled"
+15	"through"
+16	"the"
+17	"enhancer"
+18	"by"
+19	"cooperation"
+20	"between"
+21	"Oct"
+22	"and"
+23	"NFAT"
+24	"family"
+25	"proteins"
+26	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"IN"
+4	"DT"
+5	"NN"
+6	"JJ"
+7	"NN"
+8	"IN"
+9	"DT"
+10	"NN"
+11	"NN"
+12	"VBZ"
+13	"RB"
+14	"VBN"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"IN"
+19	"NN"
+20	"IN"
+21	"NNP"
+22	"CC"
+23	"NN"
+24	"NN"
+25	"NNS"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+14	3	"complm"
+7	4	"det"
+6	5	"dep"
+7	6	"amod"
+14	7	"nsubjpass"
+11	9	"det"
+11	10	"nn"
+7	11	"prep_of"
+14	12	"auxpass"
+14	13	"advmod"
+2	14	"ccomp"
+17	16	"det"
+14	17	"prep_through"
+14	19	"agent"
+19	21	"prep_between"
+25	23	"nn"
+25	24	"nn"
+19	25	"prep_between"
+21	25	"conj_and"
+
+>mention
+10	10	"Protein(IL-3)"
+
+>trigger
+7	7	"Gene_expression"
+14	14	"Regulation"
+15	15	"Regulation"
+>argument
+7	10	"Theme"
+14	7	"Theme"
+15	14	"Theme"
+>relation
+
+

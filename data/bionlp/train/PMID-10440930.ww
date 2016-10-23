@@ -1,0 +1,816 @@
+>>
+>word
+0	"Root"
+1	"Suppression"
+2	"of"
+3	"TNFalpha"
+4	"-mediated"
+5	"NFkappaB"
+6	"activity"
+7	"by"
+8	"myricetin"
+9	"and"
+10	"other"
+11	"flavonoids"
+12	"through"
+13	"downregulating"
+14	"the"
+15	"activity"
+16	"of"
+17	"IKK"
+18	"in"
+19	"ECV304"
+20	"cells"
+21	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"CC"
+10	"JJ"
+11	"NNS"
+12	"IN"
+13	"VBG"
+14	"DT"
+15	"NN"
+16	"IN"
+17	"NN"
+18	"IN"
+19	"NN"
+20	"NNS"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	3	"dep"
+6	4	"amod"
+6	5	"nn"
+1	6	"prep_of"
+1	8	"prep_by"
+11	10	"amod"
+1	11	"prep_by"
+8	11	"conj_and"
+1	13	"prepc_through"
+15	14	"det"
+13	15	"dobj"
+15	17	"prep_of"
+20	19	"nn"
+15	20	"prep_in"
+
+>mention
+3	3	"Protein(TNFalpha)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Flavonoids"
+2	"are"
+3	"a"
+4	"group"
+5	"of"
+6	"naturally-occurring"
+7	"phenolic"
+8	"compounds"
+9	"in"
+10	"the"
+11	"plant"
+12	"kingdom"
+13	","
+14	"and"
+15	"many"
+16	"flavonoids"
+17	"are"
+18	"found"
+19	"with"
+20	"vascular"
+21	"protective"
+22	"properties"
+23	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"VBP"
+3	"DT"
+4	"NN"
+5	"IN"
+6	"JJ"
+7	"JJ"
+8	"NNS"
+9	"IN"
+10	"DT"
+11	"NN"
+12	"NN"
+13	","
+14	"CC"
+15	"JJ"
+16	"NNS"
+17	"VBP"
+18	"VBN"
+19	"IN"
+20	"JJ"
+21	"JJ"
+22	"NNS"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubj"
+4	2	"cop"
+4	3	"det"
+8	6	"amod"
+8	7	"amod"
+4	8	"prep_of"
+12	10	"det"
+12	11	"nn"
+8	12	"prep_in"
+16	15	"amod"
+18	16	"nsubjpass"
+18	17	"auxpass"
+4	18	"conj_and"
+22	20	"amod"
+22	21	"amod"
+18	22	"prep_with"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Nevertheless"
+2	"how"
+3	"the"
+4	"protective"
+5	"response"
+6	"is"
+7	"exerted"
+8	"by"
+9	"flavonoids"
+10	"is"
+11	"not"
+12	"well"
+13	"characterized"
+14	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"WRB"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"VBZ"
+7	"VBN"
+8	"IN"
+9	"NNS"
+10	"VBZ"
+11	"RB"
+12	"RB"
+13	"VBN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+13	1	"advmod"
+7	2	"advmod"
+5	3	"det"
+5	4	"amod"
+7	5	"nsubjpass"
+7	6	"auxpass"
+13	7	"csubjpass"
+7	9	"agent"
+13	10	"auxpass"
+13	11	"neg"
+13	12	"advmod"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"view"
+3	"of"
+4	"the"
+5	"nuclear"
+6	"factor-kappaB"
+7	"("
+8	"NFkappaB"
+9	")"
+10	"may"
+11	"play"
+12	"a"
+13	"central"
+14	"role"
+15	"in"
+16	"the"
+17	"initiation"
+18	"of"
+19	"atherosclerosis"
+20	","
+21	"prevention"
+22	"of"
+23	"the"
+24	"activation"
+25	"of"
+26	"NFkappaB"
+27	"represents"
+28	"an"
+29	"important"
+30	"role"
+31	"in"
+32	"protecting"
+33	"vascular"
+34	"injury"
+35	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"-LRB-"
+8	"NN"
+9	"-RRB-"
+10	"MD"
+11	"VB"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"IN"
+19	"NN"
+20	","
+21	"NN"
+22	"IN"
+23	"DT"
+24	"NN"
+25	"IN"
+26	"NN"
+27	"VBZ"
+28	"DT"
+29	"JJ"
+30	"NN"
+31	"IN"
+32	"VBG"
+33	"JJ"
+34	"NN"
+35	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+27	2	"prep_in"
+6	4	"det"
+6	5	"amod"
+11	6	"nsubj"
+6	8	"abbrev"
+11	10	"aux"
+2	11	"prepc_of"
+14	12	"det"
+14	13	"amod"
+11	14	"dobj"
+17	16	"det"
+11	17	"prep_in"
+17	19	"prep_of"
+27	21	"nsubj"
+24	23	"det"
+21	24	"prep_of"
+24	26	"prep_of"
+30	28	"det"
+30	29	"amod"
+27	30	"dobj"
+27	32	"prepc_in"
+34	33	"amod"
+32	34	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"this"
+3	"study"
+4	","
+5	"the"
+6	"effects"
+7	"of"
+8	"flavonoids"
+9	"on"
+10	"NFkappaB/inhibitor-kappaB"
+11	"("
+12	"IkappaB"
+13	")"
+14	"system"
+15	"in"
+16	"ECV304"
+17	"cells"
+18	"activated"
+19	"with"
+20	"tumor"
+21	"necrosis"
+22	"factor-alpha"
+23	"("
+24	"TNFalpha"
+25	")"
+26	"were"
+27	"examined"
+28	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"NN"
+4	","
+5	"DT"
+6	"NNS"
+7	"IN"
+8	"NNS"
+9	"IN"
+10	"NN"
+11	"-LRB-"
+12	"NN"
+13	"-RRB-"
+14	"NN"
+15	"IN"
+16	"NN"
+17	"NNS"
+18	"VBN"
+19	"IN"
+20	"NN"
+21	"NN"
+22	"NN"
+23	"-LRB-"
+24	"NN"
+25	"-RRB-"
+26	"VBD"
+27	"VBN"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"det"
+27	3	"prep_in"
+6	5	"det"
+27	6	"nsubjpass"
+6	8	"prep_of"
+14	10	"nn"
+14	12	"nn"
+6	14	"prep_on"
+17	16	"nn"
+14	17	"prep_in"
+17	18	"partmod"
+22	20	"nn"
+22	21	"nn"
+18	22	"prep_with"
+22	24	"abbrev"
+27	26	"auxpass"
+
+>mention
+20	22	"Protein(factor-alpha)"
+24	24	"Protein(TNFalpha)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"investigated"
+3	"the"
+4	"inhibitory"
+5	"action"
+6	"of"
+7	"six"
+8	"flavonoids"
+9	"on"
+10	"IkappaB"
+11	"kinase"
+12	"("
+13	"IKK"
+14	")"
+15	"activity"
+16	","
+17	"an"
+18	"enzyme"
+19	"recently"
+20	"found"
+21	"to"
+22	"phosphorylate"
+23	"critical"
+24	"serine"
+25	"residues"
+26	"of"
+27	"IkappaB"
+28	"for"
+29	"degradation"
+30	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBD"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"CD"
+8	"NNS"
+9	"IN"
+10	"NN"
+11	"NN"
+12	"-LRB-"
+13	"NN"
+14	"-RRB-"
+15	"NN"
+16	","
+17	"DT"
+18	"NN"
+19	"RB"
+20	"VBN"
+21	"TO"
+22	"VB"
+23	"JJ"
+24	"NN"
+25	"NNS"
+26	"IN"
+27	"NN"
+28	"IN"
+29	"NN"
+30	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+5	3	"det"
+5	4	"amod"
+2	5	"dobj"
+8	7	"num"
+5	8	"prep_of"
+11	10	"nn"
+15	11	"nn"
+11	13	"abbrev"
+5	15	"prep_on"
+18	17	"det"
+15	18	"appos"
+22	18	"xsubj"
+20	19	"advmod"
+18	20	"partmod"
+22	21	"aux"
+20	22	"xcomp"
+25	23	"amod"
+25	24	"nn"
+22	25	"dobj"
+25	27	"prep_of"
+25	29	"prep_for"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Of"
+2	"six"
+3	"flavonoids"
+4	"tested"
+5	","
+6	"myricetin"
+7	"was"
+8	"found"
+9	"to"
+10	"strongly"
+11	"inhibit"
+12	"IKK"
+13	"kinase"
+14	"activity"
+15	","
+16	"and"
+17	"prevent"
+18	"the"
+19	"degradation"
+20	"of"
+21	"IkappaBalpha"
+22	"and"
+23	"IkappaBbeta"
+24	"in"
+25	"activated"
+26	"endothelial"
+27	"cells"
+28	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"CD"
+3	"NNS"
+4	"VBN"
+5	","
+6	"NN"
+7	"VBD"
+8	"VBN"
+9	"TO"
+10	"RB"
+11	"VB"
+12	"NN"
+13	"NN"
+14	"NN"
+15	","
+16	"CC"
+17	"VB"
+18	"DT"
+19	"NN"
+20	"IN"
+21	"NN"
+22	"CC"
+23	"NN"
+24	"IN"
+25	"VBN"
+26	"JJ"
+27	"NNS"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"num"
+8	3	"prep_of"
+3	4	"partmod"
+8	6	"nsubjpass"
+11	6	"xsubj"
+8	7	"auxpass"
+11	9	"aux"
+11	10	"advmod"
+8	11	"xcomp"
+14	12	"nn"
+14	13	"nn"
+11	14	"dobj"
+8	17	"xcomp"
+11	17	"conj_and"
+19	18	"det"
+17	19	"dobj"
+19	21	"prep_of"
+19	23	"prep_of"
+21	23	"conj_and"
+27	25	"amod"
+27	26	"amod"
+19	27	"prep_in"
+
+>mention
+21	21	"Protein(IkappaBalpha)"
+23	23	"Protein(IkappaBbeta)"
+
+>trigger
+17	17	"Negative_regulation"
+19	19	"Protein_catabolism"
+>argument
+17	19	"Theme"
+19	21	"Theme"
+19	23	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Furthermore"
+2	","
+3	"myricetin"
+4	"was"
+5	"also"
+6	"found"
+7	"to"
+8	"inhibit"
+9	"NFkappaB"
+10	"activity"
+11	"correlated"
+12	"with"
+13	"suppression"
+14	"of"
+15	"monocyte"
+16	"adhesion"
+17	"to"
+18	"ECV304"
+19	"cells"
+20	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"VBD"
+5	"RB"
+6	"VBN"
+7	"TO"
+8	"VB"
+9	"NN"
+10	"NN"
+11	"VBN"
+12	"IN"
+13	"NN"
+14	"IN"
+15	"NN"
+16	"NN"
+17	"TO"
+18	"NN"
+19	"NNS"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"advmod"
+6	3	"nsubjpass"
+8	3	"xsubj"
+6	4	"auxpass"
+6	5	"advmod"
+8	7	"aux"
+6	8	"xcomp"
+10	9	"nn"
+8	10	"dobj"
+10	11	"partmod"
+11	13	"prep_with"
+16	15	"nn"
+13	16	"prep_of"
+19	18	"nn"
+16	19	"prep_to"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Therefore"
+2	"we"
+3	"conclude"
+4	"that"
+5	"flavonoids"
+6	"may"
+7	"be"
+8	"of"
+9	"therapeutic"
+10	"value"
+11	"for"
+12	"vascular"
+13	"disease"
+14	"through"
+15	"down"
+16	"regulation"
+17	"of"
+18	"NFkappaB/IkappaB"
+19	"system"
+20	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"PRP"
+3	"VBP"
+4	"IN"
+5	"NNS"
+6	"MD"
+7	"VB"
+8	"IN"
+9	"JJ"
+10	"NN"
+11	"IN"
+12	"JJ"
+13	"NN"
+14	"IN"
+15	"JJ"
+16	"NN"
+17	"IN"
+18	"NN"
+19	"NN"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"advmod"
+3	2	"nsubj"
+7	4	"complm"
+7	5	"nsubj"
+7	6	"aux"
+3	7	"ccomp"
+10	9	"amod"
+7	10	"prep_of"
+13	12	"amod"
+10	13	"prep_for"
+16	15	"amod"
+7	16	"prep_through"
+19	18	"nn"
+16	19	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Copyright"
+2	"1999"
+3	"Wiley-Liss"
+4	","
+5	"Inc"
+6	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CD"
+3	"NNP"
+4	","
+5	"NNP"
+6	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"nn"
+5	2	"num"
+5	3	"nn"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

@@ -1,0 +1,942 @@
+>>
+>word
+0	"Root"
+1	"HIV-1"
+2	"reactivation"
+3	"in"
+4	"resting"
+5	"peripheral"
+6	"blood"
+7	"mononuclear"
+8	"cells"
+9	"of"
+10	"infected"
+11	"adults"
+12	"upon"
+13	"in"
+14	"vitro"
+15	"CD4"
+16	"cross-linking"
+17	"by"
+18	"ligands"
+19	"of"
+20	"the"
+21	"CDR2-loop"
+22	"in"
+23	"extracellular"
+24	"domain"
+25	"1"
+26	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"IN"
+4	"VBG"
+5	"JJ"
+6	"NN"
+7	"JJ"
+8	"NNS"
+9	"IN"
+10	"JJ"
+11	"NNS"
+12	"IN"
+13	"FW"
+14	"FW"
+15	"NN"
+16	"NN"
+17	"IN"
+18	"NNS"
+19	"IN"
+20	"DT"
+21	"NN"
+22	"IN"
+23	"JJ"
+24	"NN"
+25	"CD"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+8	4	"amod"
+8	5	"amod"
+8	6	"nn"
+8	7	"amod"
+2	8	"prep_in"
+11	10	"amod"
+8	11	"prep_of"
+14	13	"nn"
+16	14	"amod"
+16	15	"nn"
+2	16	"prep_upon"
+2	18	"prep_by"
+21	20	"det"
+18	21	"prep_of"
+24	23	"amod"
+21	24	"prep_in"
+24	25	"num"
+
+>mention
+15	15	"Protein(CD4)"
+
+>trigger
+16	16	"Binding"
+>argument
+16	15	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"HIV-1"
+2	"infects"
+3	"resting"
+4	"peripheral"
+5	"blood"
+6	"mononuclear"
+7	"cells"
+8	"("
+9	"PBMCs"
+10	")"
+11	"but"
+12	"remains"
+13	"inactive"
+14	"state"
+15	"until"
+16	"subsequent"
+17	"cell"
+18	"activation"
+19	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"VBG"
+4	"JJ"
+5	"NN"
+6	"JJ"
+7	"NNS"
+8	"-LRB-"
+9	"NNS"
+10	"-RRB-"
+11	"CC"
+12	"VBZ"
+13	"JJ"
+14	"NN"
+15	"IN"
+16	"JJ"
+17	"NN"
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+7	3	"amod"
+7	4	"amod"
+7	5	"nn"
+7	6	"amod"
+2	7	"dobj"
+7	9	"appos"
+14	12	"cop"
+14	13	"amod"
+2	14	"conj_but"
+18	16	"amod"
+18	17	"nn"
+14	18	"prep_until"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"have"
+3	"demonstrated"
+4	"that"
+5	"the"
+6	"cross-linking"
+7	"of"
+8	"cell"
+9	"surface"
+10	"CD4"
+11	"by"
+12	"gp120-anti-gp120"
+13	"immune"
+14	"complexes"
+15	"or"
+16	"heat-inactivated"
+17	"HIV-1"
+18	"("
+19	"iHIV-1"
+20	")"
+21	"is"
+22	"sufficient"
+23	"to"
+24	"trigger"
+25	"activation"
+26	"signals"
+27	"leading"
+28	"to"
+29	"virus"
+30	"reactivation"
+31	"("
+32	"9"
+33	")"
+34	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"VBN"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"NN"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"JJ"
+14	"NNS"
+15	"CC"
+16	"JJ"
+17	"NN"
+18	"-LRB-"
+19	"NN"
+20	"-RRB-"
+21	"VBZ"
+22	"JJ"
+23	"TO"
+24	"VB"
+25	"NN"
+26	"NNS"
+27	"VBG"
+28	"TO"
+29	"NN"
+30	"NN"
+31	"-LRB-"
+32	"CD"
+33	"-RRB-"
+34	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubj"
+3	2	"aux"
+22	4	"complm"
+6	5	"det"
+22	6	"nsubj"
+10	8	"nn"
+10	9	"nn"
+6	10	"prep_of"
+14	12	"nn"
+14	13	"amod"
+6	14	"prep_by"
+17	16	"amod"
+6	17	"prep_by"
+14	17	"conj_or"
+17	19	"appos"
+22	21	"cop"
+3	22	"ccomp"
+24	23	"aux"
+22	24	"xcomp"
+26	25	"nn"
+24	26	"dobj"
+26	27	"partmod"
+30	29	"nn"
+27	30	"prep_to"
+30	32	"num"
+
+>mention
+10	10	"Protein(CD4)"
+
+>trigger
+6	6	"Binding"
+>argument
+6	10	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"this"
+3	"study"
+4	","
+5	"we"
+6	"demonstrate"
+7	"that"
+8	"NF-kappaB"
+9	"nuclear"
+10	"translocation"
+11	"and"
+12	"stimulation"
+13	"of"
+14	"virus"
+15	"production"
+16	"by"
+17	"iHIV-1"
+18	"were"
+19	"strictly"
+20	"linked"
+21	"to"
+22	"the"
+23	"concentrations"
+24	"of"
+25	"viral"
+26	"proteins"
+27	"used"
+28	"as"
+29	"exogenous"
+30	"stimuli"
+31	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"NN"
+4	","
+5	"PRP"
+6	"VBP"
+7	"IN"
+8	"NN"
+9	"JJ"
+10	"NN"
+11	"CC"
+12	"NN"
+13	"IN"
+14	"NN"
+15	"NN"
+16	"IN"
+17	"NN"
+18	"VBD"
+19	"RB"
+20	"VBN"
+21	"TO"
+22	"DT"
+23	"NNS"
+24	"IN"
+25	"JJ"
+26	"NNS"
+27	"VBN"
+28	"IN"
+29	"JJ"
+30	"NNS"
+31	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"det"
+6	3	"prep_in"
+6	5	"nsubj"
+20	7	"complm"
+10	8	"nn"
+10	9	"amod"
+20	10	"nsubjpass"
+10	12	"conj_and"
+20	12	"nsubjpass"
+15	14	"nn"
+12	15	"prep_of"
+12	17	"prep_by"
+20	18	"auxpass"
+20	19	"advmod"
+6	20	"ccomp"
+23	22	"det"
+20	23	"prep_to"
+26	25	"amod"
+23	26	"prep_of"
+26	27	"partmod"
+30	29	"amod"
+27	30	"prep_as"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Moreover"
+2	","
+3	"we"
+4	"further"
+5	"investigated"
+6	"the"
+7	"physiologic"
+8	"relevance"
+9	"of"
+10	"these"
+11	"observations"
+12	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"PRP"
+4	"RB"
+5	"VBD"
+6	"DT"
+7	"JJ"
+8	"NN"
+9	"IN"
+10	"DT"
+11	"NNS"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"advmod"
+5	3	"nsubj"
+5	4	"advmod"
+8	6	"det"
+8	7	"amod"
+5	8	"dobj"
+11	10	"det"
+8	11	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"When"
+2	"submitted"
+3	"to"
+4	"an"
+5	"in"
+6	"vitro"
+7	"CD4"
+8	"cross-linking"
+9	"by"
+10	"iHIV-1"
+11	","
+12	"PBMCs"
+13	"from"
+14	"HIV-1-infected"
+15	"patients"
+16	"were"
+17	"found"
+18	"to"
+19	"produce"
+20	"virus"
+21	"."
+
+>tag
+0	"Root"
+1	"WRB"
+2	"VBN"
+3	"TO"
+4	"DT"
+5	"FW"
+6	"FW"
+7	"NN"
+8	"NN"
+9	"IN"
+10	"NN"
+11	","
+12	"NNS"
+13	"IN"
+14	"JJ"
+15	"NNS"
+16	"VBD"
+17	"VBN"
+18	"TO"
+19	"VB"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"advmod"
+17	2	"advcl"
+8	4	"det"
+6	5	"nn"
+8	6	"amod"
+8	7	"nn"
+2	8	"prep_to"
+2	10	"prep_by"
+17	12	"nsubjpass"
+19	12	"xsubj"
+15	14	"amod"
+12	15	"prep_from"
+17	16	"auxpass"
+19	18	"aux"
+17	19	"xcomp"
+19	20	"dobj"
+
+>mention
+7	7	"Protein(CD4)"
+
+>trigger
+8	8	"Binding"
+>argument
+8	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"viral"
+3	"reactivation"
+4	"was"
+5	"associated"
+6	"with"
+7	"increased"
+8	"NF-kappaB"
+9	"nuclear"
+10	"translocation"
+11	"in"
+12	"patients"
+13	"'"
+14	"PBMCs"
+15	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"VBD"
+5	"VBN"
+6	"IN"
+7	"VBN"
+8	"NN"
+9	"JJ"
+10	"NN"
+11	"IN"
+12	"NNS"
+13	"POS"
+14	"NNS"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+5	3	"nsubjpass"
+5	4	"auxpass"
+10	7	"amod"
+10	8	"nn"
+10	9	"amod"
+5	10	"prep_with"
+14	12	"nn"
+14	12	"poss"
+10	14	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Additionally"
+2	","
+3	"virus"
+4	"reactivation"
+5	"in"
+6	"resting"
+7	"PBMCs"
+8	"infected"
+9	"in"
+10	"vitro"
+11	"with"
+12	"HIV-1"
+13	"was"
+14	"found"
+15	"to"
+16	"be"
+17	"specifically"
+18	"induced"
+19	"by"
+20	"ligands"
+21	"of"
+22	"the"
+23	"CDR2-loop"
+24	"in"
+25	"domain"
+26	"1"
+27	"("
+28	"D1"
+29	")"
+30	"of"
+31	"CD4"
+32	"("
+33	"virus"
+34	"envelope"
+35	"and"
+36	"anti-CD4"
+37	"monoclonal"
+38	"antibodies"
+39	")"
+40	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"NN"
+5	"IN"
+6	"VBG"
+7	"NNS"
+8	"VBN"
+9	"FW"
+10	"FW"
+11	"IN"
+12	"NN"
+13	"VBD"
+14	"VBN"
+15	"TO"
+16	"VB"
+17	"RB"
+18	"VBN"
+19	"IN"
+20	"NNS"
+21	"IN"
+22	"DT"
+23	"NN"
+24	"IN"
+25	"NN"
+26	"CD"
+27	"-LRB-"
+28	"NN"
+29	"-RRB-"
+30	"IN"
+31	"NN"
+32	"-LRB-"
+33	"NN"
+34	"NN"
+35	"CC"
+36	"JJ"
+37	"JJ"
+38	"NNS"
+39	"-RRB-"
+40	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+14	1	"advmod"
+4	3	"nn"
+14	4	"nsubjpass"
+18	4	"xsubj"
+7	6	"amod"
+4	7	"prep_in"
+7	8	"partmod"
+10	9	"nn"
+8	10	"advmod"
+8	12	"prep_with"
+14	13	"auxpass"
+18	15	"aux"
+18	16	"auxpass"
+18	17	"advmod"
+14	18	"xcomp"
+18	20	"agent"
+23	22	"det"
+20	23	"prep_of"
+20	25	"prep_in"
+25	26	"num"
+25	28	"appos"
+25	31	"prep_of"
+34	33	"nn"
+20	34	"dep"
+38	36	"amod"
+38	37	"amod"
+20	38	"dep"
+34	38	"conj_and"
+
+>mention
+31	31	"Protein(CD4)"
+36	36	"Protein(anti-CD4)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"contrast"
+3	","
+4	"virus"
+5	"reactivation"
+6	"was"
+7	"not"
+8	"observed"
+9	"following"
+10	"CD4"
+11	"oligomerization"
+12	"by"
+13	"antibodies"
+14	"that"
+15	"bind"
+16	"other"
+17	"epitopes"
+18	"in"
+19	"D1"
+20	","
+21	"including"
+22	"the"
+23	"D1/CDR3-loop"
+24	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	","
+4	"NN"
+5	"NN"
+6	"VBD"
+7	"RB"
+8	"VBN"
+9	"VBG"
+10	"NN"
+11	"NN"
+12	"IN"
+13	"NNS"
+14	"WDT"
+15	"VBP"
+16	"JJ"
+17	"NNS"
+18	"IN"
+19	"NN"
+20	","
+21	"VBG"
+22	"DT"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	2	"prep_in"
+5	4	"nn"
+8	5	"nsubjpass"
+8	6	"auxpass"
+8	7	"neg"
+11	10	"nn"
+8	11	"prep_following"
+11	13	"prep_by"
+15	13	"nsubj"
+13	15	"rcmod"
+17	16	"amod"
+15	17	"dobj"
+17	19	"prep_in"
+23	22	"det"
+17	23	"prep_including"
+
+>mention
+10	10	"Protein(CD4)"
+
+>trigger
+11	11	"Binding"
+>argument
+11	10	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Finally"
+2	","
+3	"soluble"
+4	"CD4"
+5	"("
+6	"sCD4"
+7	")"
+8	"prevented"
+9	"virus"
+10	"reactivation"
+11	"by"
+12	"D1/CDR2-loop"
+13	"ligands"
+14	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"JJ"
+4	"NN"
+5	"-LRB-"
+6	"NN"
+7	"-RRB-"
+8	"VBD"
+9	"NN"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"NNS"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"advmod"
+4	3	"amod"
+8	4	"nsubj"
+4	6	"appos"
+10	9	"nn"
+8	10	"dobj"
+13	12	"nn"
+8	13	"prep_by"
+
+>mention
+4	4	"Protein(CD4)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Our"
+2	"results"
+3	"indicate"
+4	"that"
+5	"the"
+6	"signaling"
+7	"events"
+8	"initiated"
+9	"in"
+10	"PBMCs"
+11	"by"
+12	"oligomerization"
+13	"of"
+14	"CD4"
+15	"at"
+16	"the"
+17	"D1/CDR2-loop"
+18	"can"
+19	"trigger"
+20	"HIV-1"
+21	"upregulation"
+22	"in"
+23	"infected"
+24	"individuals"
+25	"."
+
+>tag
+0	"Root"
+1	"PRP$"
+2	"NNS"
+3	"VBP"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"NNS"
+8	"VBN"
+9	"IN"
+10	"NNS"
+11	"IN"
+12	"NN"
+13	"IN"
+14	"NN"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"MD"
+19	"VB"
+20	"NN"
+21	"NN"
+22	"IN"
+23	"JJ"
+24	"NNS"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"poss"
+3	2	"nsubj"
+19	4	"complm"
+7	5	"det"
+7	6	"nn"
+19	7	"nsubj"
+7	8	"partmod"
+8	10	"prep_in"
+8	12	"agent"
+12	14	"prep_of"
+17	16	"det"
+12	17	"prep_at"
+19	18	"aux"
+3	19	"ccomp"
+21	20	"nn"
+19	21	"dobj"
+24	23	"amod"
+19	24	"prep_in"
+
+>mention
+14	14	"Protein(CD4)"
+
+>trigger
+12	12	"Binding"
+>argument
+12	14	"Theme"
+>relation
+
+

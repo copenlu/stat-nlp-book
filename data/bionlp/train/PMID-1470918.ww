@@ -1,0 +1,556 @@
+>>
+>word
+0	"Root"
+1	"Targeted"
+2	"degradation"
+3	"of"
+4	"c-Fos"
+5	","
+6	"but"
+7	"not"
+8	"v-Fos"
+9	","
+10	"by"
+11	"a"
+12	"phosphorylation-dependent"
+13	"signal"
+14	"on"
+15	"c-Jun"
+16	"."
+
+>tag
+0	"Root"
+1	"VBN"
+2	"NN"
+3	"IN"
+4	"NN"
+5	","
+6	"CC"
+7	"RB"
+8	"NN"
+9	","
+10	"IN"
+11	"DT"
+12	"JJ"
+13	"NN"
+14	"IN"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+1	2	"dobj"
+2	4	"prep_of"
+2	8	"prep_of"
+4	8	"conj_negcc"
+13	11	"det"
+13	12	"amod"
+1	13	"prep_by"
+13	15	"prep_on"
+
+>mention
+4	4	"Protein(c-Fos)"
+8	8	"Protein(v-Fos)"
+15	15	"Protein(c-Jun)"
+
+>trigger
+1	1	"Positive_regulation"
+2	2	"Protein_catabolism"
+>argument
+1	2	"Theme"
+2	4	"Theme"
+2	8	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"proto-oncogene"
+3	"products"
+4	"c-Fos"
+5	"and"
+6	"c-Jun"
+7	"heterodimerize"
+8	"through"
+9	"their"
+10	"leucine"
+11	"zippers"
+12	"to"
+13	"form"
+14	"the"
+15	"AP-1"
+16	"transcription"
+17	"factor"
+18	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NNS"
+4	"NN"
+5	"CC"
+6	"NN"
+7	"VBP"
+8	"IN"
+9	"PRP$"
+10	"NN"
+11	"NNS"
+12	"TO"
+13	"VB"
+14	"DT"
+15	"NN"
+16	"NN"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+7	3	"nsubj"
+13	3	"xsubj"
+3	4	"dep"
+3	6	"dep"
+4	6	"conj_and"
+11	9	"poss"
+11	10	"nn"
+7	11	"prep_through"
+13	12	"aux"
+7	13	"xcomp"
+17	14	"det"
+17	15	"nn"
+17	16	"nn"
+13	17	"dobj"
+
+>mention
+4	4	"Protein(c-Fos)"
+6	6	"Protein(c-Jun)"
+
+>trigger
+7	7	"Binding"
+8	8	"Positive_regulation"
+>argument
+7	4	"Theme"
+7	6	"Theme"
+8	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"transcriptional"
+3	"activity"
+4	"of"
+5	"the"
+6	"heterodimer"
+7	"is"
+8	"regulated"
+9	"by"
+10	"signal-dependent"
+11	"phosphorylation"
+12	"and"
+13	"dephosphorylation"
+14	"events"
+15	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"VBZ"
+8	"VBN"
+9	"IN"
+10	"JJ"
+11	"NN"
+12	"CC"
+13	"NN"
+14	"NNS"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+8	3	"nsubjpass"
+6	5	"det"
+3	6	"prep_of"
+8	7	"auxpass"
+14	10	"amod"
+14	11	"nn"
+11	13	"conj_and"
+14	13	"nn"
+8	14	"agent"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"stability"
+3	"of"
+4	"c-Fos"
+5	"was"
+6	"found"
+7	"to"
+8	"also"
+9	"be"
+10	"controlled"
+11	"by"
+12	"intracellular"
+13	"signal"
+14	"transduction"
+15	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"VBD"
+6	"VBN"
+7	"TO"
+8	"RB"
+9	"VB"
+10	"VBN"
+11	"IN"
+12	"JJ"
+13	"NN"
+14	"NN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+6	2	"nsubjpass"
+10	2	"xsubj"
+2	4	"prep_of"
+6	5	"auxpass"
+10	7	"aux"
+10	8	"advmod"
+10	9	"auxpass"
+6	10	"xcomp"
+14	12	"amod"
+14	13	"nn"
+10	14	"agent"
+
+>mention
+4	4	"Protein(c-Fos)"
+
+>trigger
+2	2	"Protein_catabolism"
+10	10	"Regulation"
+>argument
+2	4	"Theme"
+10	2	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"transient"
+3	"expression"
+4	"and"
+5	"in"
+6	"vitro"
+7	"degradation"
+8	"experiments"
+9	","
+10	"the"
+11	"stability"
+12	"of"
+13	"c-Fos"
+14	"was"
+15	"decreased"
+16	"when"
+17	"the"
+18	"protein"
+19	"was"
+20	"dimerized"
+21	"with"
+22	"phosphorylated"
+23	"c-Jun"
+24	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"JJ"
+3	"NN"
+4	"CC"
+5	"FW"
+6	"FW"
+7	"NN"
+8	"NNS"
+9	","
+10	"DT"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"VBD"
+15	"VBN"
+16	"WRB"
+17	"DT"
+18	"NN"
+19	"VBD"
+20	"JJ"
+21	"IN"
+22	"VBN"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"amod"
+8	3	"nn"
+6	5	"nn"
+7	6	"amod"
+3	7	"conj_and"
+8	7	"nn"
+15	8	"prep_in"
+11	10	"det"
+15	11	"nsubjpass"
+11	13	"prep_of"
+15	14	"auxpass"
+20	16	"advmod"
+18	17	"det"
+20	18	"nsubj"
+20	19	"aux"
+15	20	"advcl"
+23	22	"amod"
+20	23	"prep_with"
+
+>mention
+13	13	"Protein(c-Fos)"
+23	23	"Protein(c-Jun)"
+
+>trigger
+15	15	"Negative_regulation"
+16	16	"Positive_regulation"
+20	20	"Binding"
+22	22	"Phosphorylation"
+>argument
+15	13	"Theme"
+16	15	"Theme"
+16	20	"Cause"
+20	13	"Theme"
+20	23	"Theme"
+22	23	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"c-Jun"
+2	"protein"
+3	"isolated"
+4	"from"
+5	"phorbol"
+6	"ester-induced"
+7	"cells"
+8	"did"
+9	"not"
+10	"target"
+11	"c-Fos"
+12	"for"
+13	"degradation"
+14	","
+15	"which"
+16	"suggests"
+17	"that"
+18	"c-Fos"
+19	"is"
+20	"transiently"
+21	"stabilized"
+22	"after"
+23	"stimulation"
+24	"of"
+25	"cell"
+26	"growth"
+27	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBN"
+4	"IN"
+5	"NN"
+6	"JJ"
+7	"NNS"
+8	"VBD"
+9	"RB"
+10	"VB"
+11	"NN"
+12	"IN"
+13	"NN"
+14	","
+15	"WDT"
+16	"VBZ"
+17	"IN"
+18	"NN"
+19	"VBZ"
+20	"RB"
+21	"VBN"
+22	"IN"
+23	"NN"
+24	"IN"
+25	"NN"
+26	"NN"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+10	2	"nsubj"
+2	3	"partmod"
+6	5	"dep"
+7	6	"amod"
+3	7	"prep_from"
+10	8	"aux"
+10	9	"neg"
+10	11	"dobj"
+10	13	"prep_for"
+16	13	"nsubj"
+13	16	"rcmod"
+21	17	"complm"
+21	18	"nsubjpass"
+21	19	"auxpass"
+21	20	"advmod"
+16	21	"ccomp"
+21	23	"prep_after"
+26	25	"nn"
+23	26	"prep_of"
+
+>mention
+1	1	"Protein(c-Jun)"
+11	11	"Protein(c-Fos)"
+18	18	"Protein(c-Fos)"
+
+>trigger
+10	10	"Positive_regulation"
+13	13	"Protein_catabolism"
+21	21	"Protein_catabolism"
+22	22	"Positive_regulation"
+>argument
+10	1	"Cause"
+10	13	"Theme"
+13	11	"Theme"
+21	18	"Theme"
+22	21	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"v-Fos"
+2	"protein"
+3	","
+4	"the"
+5	"retroviral"
+6	"counterpart"
+7	"of"
+8	"c-Fos"
+9	","
+10	"was"
+11	"not"
+12	"susceptible"
+13	"to"
+14	"degradation"
+15	"targeted"
+16	"by"
+17	"c-Jun"
+18	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	","
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"IN"
+8	"NN"
+9	","
+10	"VBD"
+11	"RB"
+12	"JJ"
+13	"TO"
+14	"NN"
+15	"VBN"
+16	"IN"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+12	2	"nsubj"
+6	4	"det"
+6	5	"amod"
+2	6	"appos"
+6	8	"prep_of"
+12	10	"cop"
+12	11	"neg"
+12	14	"prep_to"
+14	15	"partmod"
+15	17	"agent"
+
+>mention
+1	1	"Protein(v-Fos)"
+8	8	"Protein(c-Fos)"
+17	17	"Protein(c-Jun)"
+
+>trigger
+12	12	"Positive_regulation"
+14	14	"Protein_catabolism"
+15	15	"Binding"
+>argument
+12	1	"Theme"
+14	1	"Theme"
+15	1	"Theme"
+15	17	"Theme"
+>relation
+
+

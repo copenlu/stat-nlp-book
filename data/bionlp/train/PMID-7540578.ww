@@ -1,0 +1,501 @@
+>>
+>word
+0	"Root"
+1	"Danazol"
+2	"decreases"
+3	"transcription"
+4	"of"
+5	"estrogen"
+6	"receptor"
+7	"gene"
+8	"in"
+9	"human"
+10	"monocytes"
+11	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"NN"
+4	"IN"
+5	"NN"
+6	"NN"
+7	"NN"
+8	"IN"
+9	"JJ"
+10	"NNS"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+2	3	"dobj"
+7	5	"nn"
+7	6	"nn"
+3	7	"prep_of"
+10	9	"amod"
+3	10	"prep_in"
+
+>mention
+5	6	"Protein(receptor)"
+
+>trigger
+2	2	"Negative_regulation"
+3	3	"Transcription"
+>argument
+2	3	"Theme"
+3	6	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"1"
+2	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Administration"
+2	"of"
+3	"danazol"
+4	"for"
+5	"over"
+6	"one"
+7	"month"
+8	"reduced"
+9	"the"
+10	"levels"
+11	"of"
+12	"estrogen"
+13	"receptor"
+14	"("
+15	"ER"
+16	")"
+17	"and"
+18	"its"
+19	"mRNA"
+20	"to"
+21	"approximately"
+22	"50"
+23	"and"
+24	"20"
+25	"%"
+26	","
+27	"respectively"
+28	"in"
+29	"monocytes"
+30	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"IN"
+5	"IN"
+6	"CD"
+7	"NN"
+8	"VBD"
+9	"DT"
+10	"NNS"
+11	"IN"
+12	"NN"
+13	"NN"
+14	"-LRB-"
+15	"NN"
+16	"-RRB-"
+17	"CC"
+18	"PRP$"
+19	"NN"
+20	"TO"
+21	"RB"
+22	"CD"
+23	"CC"
+24	"CD"
+25	"NN"
+26	","
+27	"RB"
+28	"IN"
+29	"NNS"
+30	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"nsubj"
+1	3	"prep_of"
+6	5	"quantmod"
+7	6	"num"
+1	7	"prep_for"
+10	9	"det"
+8	10	"dobj"
+13	12	"nn"
+10	13	"prep_of"
+13	15	"abbrev"
+19	18	"poss"
+10	19	"prep_of"
+13	19	"conj_and"
+22	21	"quantmod"
+25	22	"num"
+22	24	"conj_and"
+25	24	"num"
+8	25	"prep_to"
+8	27	"advmod"
+8	29	"prep_in"
+
+>mention
+12	13	"Protein(receptor)"
+15	15	"Protein(ER)"
+
+>trigger
+10	10	"Negative_regulation"
+>argument
+10	13	"Theme"
+10	15	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"2"
+2	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Danazol"
+2	"did"
+3	"not"
+4	"alter"
+5	"the"
+6	"degradation"
+7	"rate"
+8	"of"
+9	"ER"
+10	"mRNA"
+11	"in"
+12	"monocytes"
+13	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"RB"
+4	"VB"
+5	"DT"
+6	"NN"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"NN"
+11	"IN"
+12	"NNS"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubj"
+4	2	"aux"
+4	3	"neg"
+7	5	"det"
+7	6	"nn"
+4	7	"dobj"
+10	9	"nn"
+7	10	"prep_of"
+7	12	"prep_in"
+
+>mention
+9	9	"Protein(ER)"
+
+>trigger
+4	4	"Regulation"
+6	6	"Protein_catabolism"
+>argument
+4	6	"Theme"
+6	9	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"3"
+2	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Danazol"
+2	"decreased"
+3	"the"
+4	"transcription"
+5	"rate"
+6	"of"
+7	"ER"
+8	"gene"
+9	"to"
+10	"approximately"
+11	"50"
+12	"%"
+13	"in"
+14	"monocytes"
+15	"in"
+16	"a"
+17	"run-on"
+18	"assay"
+19	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"DT"
+4	"NN"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NN"
+9	"TO"
+10	"RB"
+11	"CD"
+12	"NN"
+13	"IN"
+14	"NNS"
+15	"IN"
+16	"DT"
+17	"JJ"
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+5	3	"det"
+5	4	"nn"
+2	5	"dobj"
+8	7	"nn"
+5	8	"prep_of"
+11	10	"quantmod"
+12	11	"num"
+5	12	"prep_to"
+5	14	"prep_in"
+18	16	"det"
+18	17	"amod"
+2	18	"prep_in"
+
+>mention
+7	7	"Protein(ER)"
+
+>trigger
+2	2	"Negative_regulation"
+4	4	"Transcription"
+>argument
+2	4	"Theme"
+4	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"4"
+2	"."
+
+>tag
+0	"Root"
+1	"CD"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Danazol"
+2	"may"
+3	"release"
+4	"estrogen"
+5	"predominance"
+6	"via"
+7	"the"
+8	"reduction"
+9	"of"
+10	"transcription"
+11	"for"
+12	"ER"
+13	"gene"
+14	","
+15	"which"
+16	"leads"
+17	"to"
+18	"the"
+19	"reduction"
+20	"of"
+21	"ER"
+22	"mRNA"
+23	"and"
+24	"ER"
+25	"expressions"
+26	"in"
+27	"monocytes"
+28	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"MD"
+3	"VB"
+4	"NN"
+5	"NN"
+6	"IN"
+7	"DT"
+8	"NN"
+9	"IN"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"NN"
+14	","
+15	"WDT"
+16	"VBZ"
+17	"TO"
+18	"DT"
+19	"NN"
+20	"IN"
+21	"NN"
+22	"NN"
+23	"CC"
+24	"NN"
+25	"NNS"
+26	"IN"
+27	"NNS"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubj"
+3	2	"aux"
+5	4	"nn"
+3	5	"dobj"
+8	7	"det"
+3	8	"prep_via"
+8	10	"prep_of"
+13	12	"nn"
+8	13	"prep_for"
+16	13	"nsubj"
+13	16	"rcmod"
+19	18	"det"
+16	19	"prep_to"
+22	21	"nn"
+19	22	"prep_of"
+25	24	"nn"
+19	25	"prep_of"
+22	25	"conj_and"
+19	27	"prep_in"
+
+>mention
+12	12	"Protein(ER)"
+21	21	"Protein(ER)"
+24	24	"Protein(ER)"
+
+>trigger
+8	8	"Negative_regulation"
+10	10	"Transcription"
+16	16	"Positive_regulation"
+19	19	"Negative_regulation"
+25	25	"Transcription"
+>argument
+8	10	"Theme"
+10	12	"Theme"
+16	8	"Cause"
+16	19	"Theme"
+19	25	"Theme"
+25	21	"Theme"
+25	24	"Theme"
+>relation
+
+

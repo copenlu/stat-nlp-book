@@ -1,0 +1,34 @@
+>>
+>word
+0	"Root"
+1	"["
+2	"Supplemental"
+3	"Material"
+4	"Index"
+5	"]"
+
+>tag
+0	"Root"
+1	"-LRB-"
+2	"NN"
+3	"NN"
+4	"NN"
+5	"-RRB-"
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"punct"
+4	2	"nn"
+4	3	"nn"
+4	5	"punct"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

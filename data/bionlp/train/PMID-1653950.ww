@@ -1,0 +1,698 @@
+>>
+>word
+0	"Root"
+1	"USF"
+2	"-related"
+3	"transcription"
+4	"factor"
+5	","
+6	"HIV-TF1"
+7	","
+8	"stimulates"
+9	"transcription"
+10	"of"
+11	"human"
+12	"immunodeficiency"
+13	"virus-1"
+14	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"JJ"
+3	"NN"
+4	"NN"
+5	","
+6	"NN"
+7	","
+8	"VBZ"
+9	"NN"
+10	"IN"
+11	"JJ"
+12	"NN"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nn"
+4	2	"amod"
+4	3	"nn"
+8	4	"nsubj"
+4	6	"appos"
+8	9	"dobj"
+13	11	"amod"
+13	12	"nn"
+9	13	"prep_of"
+
+>mention
+1	1	"Protein(USF)"
+6	6	"Protein(HIV-TF1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"transcription"
+3	"factor"
+4	"HIV-TF1"
+5	","
+6	"which"
+7	"binds"
+8	"to"
+9	"a"
+10	"region"
+11	"about"
+12	"60"
+13	"bp"
+14	"upstream"
+15	"from"
+16	"the"
+17	"enhancer"
+18	"of"
+19	"the"
+20	"human"
+21	"immunodeficiency"
+22	"virus-1"
+23	"("
+24	"HIV-1"
+25	")"
+26	","
+27	"was"
+28	"purified"
+29	"from"
+30	"human"
+31	"B"
+32	"cells"
+33	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"NN"
+5	","
+6	"WDT"
+7	"VBZ"
+8	"TO"
+9	"DT"
+10	"NN"
+11	"IN"
+12	"CD"
+13	"NN"
+14	"RB"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"IN"
+19	"DT"
+20	"JJ"
+21	"NN"
+22	"NN"
+23	"-LRB-"
+24	"NN"
+25	"-RRB-"
+26	","
+27	"VBD"
+28	"VBN"
+29	"IN"
+30	"JJ"
+31	"NN"
+32	"NNS"
+33	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"det"
+4	2	"nn"
+4	3	"nn"
+7	4	"nsubj"
+28	4	"nsubjpass"
+4	7	"rcmod"
+10	9	"det"
+7	10	"prep_to"
+13	12	"num"
+7	13	"prep_about"
+13	14	"advmod"
+17	16	"det"
+14	17	"prep_from"
+22	19	"det"
+22	20	"amod"
+22	21	"nn"
+17	22	"prep_of"
+22	24	"abbrev"
+28	27	"auxpass"
+32	30	"amod"
+32	31	"nn"
+28	32	"prep_from"
+
+>mention
+4	4	"Protein(HIV-TF1)"
+
+>trigger
+7	7	"Binding"
+>argument
+7	4	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"HIV-TF1"
+2	"had"
+3	"a"
+4	"molecular"
+5	"weight"
+6	"of"
+7	"39,000"
+8	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+5	3	"det"
+5	4	"amod"
+2	5	"dobj"
+5	7	"prep_of"
+
+>mention
+1	1	"Protein(HIV-TF1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Binding"
+2	"of"
+3	"HIV-TF1"
+4	"to"
+5	"the"
+6	"HIV"
+7	"long"
+8	"terminal"
+9	"repeat"
+10	"("
+11	"LTR"
+12	")"
+13	"activated"
+14	"transcription"
+15	"from"
+16	"the"
+17	"HIV"
+18	"promoter"
+19	"in"
+20	"vitro"
+21	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"TO"
+5	"DT"
+6	"NN"
+7	"JJ"
+8	"JJ"
+9	"NN"
+10	"-LRB-"
+11	"NN"
+12	"-RRB-"
+13	"VBD"
+14	"NN"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"NN"
+19	"FW"
+20	"FW"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+13	1	"nsubj"
+1	3	"prep_of"
+6	5	"det"
+1	6	"prep_to"
+9	7	"amod"
+9	8	"amod"
+6	9	"dep"
+9	11	"abbrev"
+13	14	"dobj"
+18	16	"det"
+18	17	"nn"
+14	18	"prep_from"
+20	19	"nn"
+13	20	"advmod"
+
+>mention
+3	3	"Protein(HIV-TF1)"
+
+>trigger
+1	1	"Binding"
+>argument
+1	3	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"HIV-TF1"
+3	"-binding"
+4	"site"
+5	"in"
+6	"HIV"
+7	"LTR"
+8	"was"
+9	"similar"
+10	"to"
+11	"the"
+12	"site"
+13	"recognized"
+14	"by"
+15	"upstream"
+16	"stimulatory"
+17	"factor"
+18	"("
+19	"USF"
+20	")"
+21	"in"
+22	"the"
+23	"adenovirus"
+24	"major"
+25	"late"
+26	"promoter"
+27	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"JJ"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"NN"
+8	"VBD"
+9	"JJ"
+10	"TO"
+11	"DT"
+12	"NN"
+13	"VBN"
+14	"IN"
+15	"JJ"
+16	"JJ"
+17	"NN"
+18	"-LRB-"
+19	"NN"
+20	"-RRB-"
+21	"IN"
+22	"DT"
+23	"NN"
+24	"JJ"
+25	"JJ"
+26	"NN"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"det"
+3	2	"dep"
+4	3	"amod"
+9	4	"nsubj"
+7	6	"nn"
+4	7	"prep_in"
+9	8	"cop"
+12	11	"det"
+9	12	"prep_to"
+12	13	"partmod"
+17	15	"amod"
+17	16	"amod"
+13	17	"agent"
+17	19	"abbrev"
+26	22	"det"
+26	23	"nn"
+26	24	"amod"
+26	25	"amod"
+17	26	"prep_in"
+
+>mention
+2	2	"Protein(HIV-TF1)"
+15	17	"Protein(factor)"
+19	19	"Protein(USF)"
+
+>trigger
+13	13	"Binding"
+>argument
+13	17	"Theme"
+13	19	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"DNA-binding"
+2	"properties"
+3	"of"
+4	"HIV-TF1"
+5	"suggested"
+6	"that"
+7	"HIV-TF1"
+8	"might"
+9	"be"
+10	"identical"
+11	"or"
+12	"related"
+13	"to"
+14	"USF"
+15	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NNS"
+3	"IN"
+4	"NN"
+5	"VBD"
+6	"IN"
+7	"NN"
+8	"MD"
+9	"VB"
+10	"JJ"
+11	"CC"
+12	"JJ"
+13	"TO"
+14	"NN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+5	2	"nsubj"
+2	4	"prep_of"
+10	6	"complm"
+10	7	"nsubj"
+12	7	"nsubj"
+10	8	"aux"
+10	9	"cop"
+5	10	"ccomp"
+5	12	"ccomp"
+10	12	"conj_or"
+12	14	"prep_to"
+
+>mention
+4	4	"Protein(HIV-TF1)"
+7	7	"Protein(HIV-TF1)"
+14	14	"Protein(USF)"
+
+>trigger
+1	1	"Binding"
+>argument
+1	4	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Interestingly"
+2	","
+3	"treatment"
+4	"of"
+5	"purified"
+6	"HIV-TF1"
+7	"by"
+8	"phosphatase"
+9	"greatly"
+10	"reduced"
+11	"its"
+12	"DNA-binding"
+13	"activity"
+14	","
+15	"suggesting"
+16	"that"
+17	"phosphorylation"
+18	"of"
+19	"HIV-TF1"
+20	"was"
+21	"essential"
+22	"for"
+23	"DNA"
+24	"binding"
+25	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"IN"
+5	"VBN"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"RB"
+10	"VBD"
+11	"PRP$"
+12	"JJ"
+13	"NN"
+14	","
+15	"VBG"
+16	"IN"
+17	"NN"
+18	"IN"
+19	"NN"
+20	"VBD"
+21	"JJ"
+22	"IN"
+23	"NN"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+10	1	"advmod"
+10	3	"nsubj"
+6	5	"amod"
+3	6	"prep_of"
+3	8	"prep_by"
+10	9	"advmod"
+13	11	"poss"
+13	12	"amod"
+10	13	"dobj"
+10	15	"partmod"
+10	15	"xcomp"
+21	16	"complm"
+21	17	"nsubj"
+17	19	"prep_of"
+21	20	"cop"
+15	21	"ccomp"
+24	23	"nn"
+21	24	"prep_for"
+
+>mention
+6	6	"Protein(HIV-TF1)"
+19	19	"Protein(HIV-TF1)"
+
+>trigger
+10	10	"Negative_regulation"
+12	12	"Binding"
+17	17	"Phosphorylation"
+21	21	"Positive_regulation"
+24	24	"Binding"
+>argument
+10	12	"Theme"
+12	6	"Theme"
+17	19	"Theme"
+21	17	"Cause"
+21	24	"Theme"
+24	19	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"disruption"
+3	"of"
+4	"HIV-TF1"
+5	"-binding"
+6	"site"
+7	"induced"
+8	"a"
+9	"60"
+10	"%"
+11	"decrease"
+12	"in"
+13	"the"
+14	"level"
+15	"of"
+16	"transcription"
+17	"from"
+18	"the"
+19	"HIV"
+20	"promoter"
+21	"in"
+22	"vivo"
+23	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"JJ"
+6	"NN"
+7	"VBD"
+8	"DT"
+9	"CD"
+10	"NN"
+11	"NN"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"IN"
+16	"NN"
+17	"IN"
+18	"DT"
+19	"NN"
+20	"NN"
+21	"FW"
+22	"FW"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+7	2	"nsubj"
+6	4	"nn"
+6	5	"amod"
+2	6	"prep_of"
+11	8	"det"
+10	9	"number"
+11	10	"amod"
+7	11	"dobj"
+14	13	"det"
+11	14	"prep_in"
+14	16	"prep_of"
+20	18	"det"
+20	19	"nn"
+16	20	"prep_from"
+22	21	"nn"
+16	22	"advmod"
+
+>mention
+4	4	"Protein(HIV-TF1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"These"
+2	"results"
+3	"suggest"
+4	"that"
+5	"HIV-TF1"
+6	"is"
+7	"involved"
+8	"in"
+9	"transcriptional"
+10	"regulation"
+11	"of"
+12	"HIV-1"
+13	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NNS"
+3	"VBP"
+4	"IN"
+5	"NN"
+6	"VBZ"
+7	"VBN"
+8	"IN"
+9	"JJ"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+7	4	"complm"
+7	5	"nsubjpass"
+7	6	"auxpass"
+3	7	"ccomp"
+10	9	"amod"
+7	10	"prep_in"
+10	12	"prep_of"
+
+>mention
+5	5	"Protein(HIV-TF1)"
+
+>trigger
+>argument
+>relation
+
+

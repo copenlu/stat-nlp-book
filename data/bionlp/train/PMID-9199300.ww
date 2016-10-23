@@ -1,0 +1,1221 @@
+>>
+>word
+0	"Root"
+1	"Comparison"
+2	"of"
+3	"the"
+4	"transactivation"
+5	"domains"
+6	"of"
+7	"Stat5"
+8	"and"
+9	"Stat6"
+10	"in"
+11	"lymphoid"
+12	"cells"
+13	"and"
+14	"mammary"
+15	"epithelial"
+16	"cells"
+17	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"DT"
+4	"NN"
+5	"NNS"
+6	"IN"
+7	"NN"
+8	"CC"
+9	"NN"
+10	"IN"
+11	"JJ"
+12	"NNS"
+13	"CC"
+14	"JJ"
+15	"JJ"
+16	"NNS"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	3	"det"
+5	4	"nn"
+1	5	"prep_of"
+5	7	"prep_of"
+5	9	"prep_of"
+7	9	"conj_and"
+12	11	"amod"
+1	12	"prep_in"
+16	14	"amod"
+16	15	"amod"
+1	16	"prep_in"
+12	16	"conj_and"
+
+>mention
+7	7	"Protein(Stat5)"
+9	9	"Protein(Stat6)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Stat"
+2	"("
+3	"signal"
+4	"transducers"
+5	"and"
+6	"activators"
+7	"of"
+8	"transcription"
+9	")"
+10	"and"
+11	"Jak"
+12	"("
+13	"Janus"
+14	"kinases"
+15	")"
+16	"proteins"
+17	"are"
+18	"central"
+19	"components"
+20	"in"
+21	"the"
+22	"signal"
+23	"transduction"
+24	"events"
+25	"in"
+26	"hematopoietic"
+27	"and"
+28	"epithelial"
+29	"cells"
+30	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"-LRB-"
+3	"NN"
+4	"NNS"
+5	"CC"
+6	"NNS"
+7	"IN"
+8	"NN"
+9	"-RRB-"
+10	"CC"
+11	"NN"
+12	"-LRB-"
+13	"NN"
+14	"NNS"
+15	"-RRB-"
+16	"NNS"
+17	"VBP"
+18	"JJ"
+19	"NNS"
+20	"IN"
+21	"DT"
+22	"NN"
+23	"NN"
+24	"NNS"
+25	"IN"
+26	"JJ"
+27	"CC"
+28	"JJ"
+29	"NNS"
+30	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+16	1	"nn"
+4	3	"nn"
+1	4	"dep"
+8	6	"nn"
+8	7	"amod"
+1	8	"dep"
+4	8	"conj_and"
+1	11	"conj_and"
+16	11	"nn"
+14	13	"nn"
+11	14	"appos"
+19	16	"nsubj"
+19	17	"cop"
+19	18	"amod"
+24	21	"det"
+24	22	"nn"
+24	23	"nn"
+19	24	"prep_in"
+24	26	"prep_in"
+29	28	"amod"
+24	29	"prep_in"
+26	29	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"They"
+2	"are"
+3	"rapidly"
+4	"activated"
+5	"by"
+6	"various"
+7	"cytokines"
+8	","
+9	"hormones"
+10	","
+11	"and"
+12	"growth"
+13	"factors"
+14	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"RB"
+4	"VBN"
+5	"IN"
+6	"JJ"
+7	"NNS"
+8	","
+9	"NNS"
+10	","
+11	"CC"
+12	"NN"
+13	"NNS"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubjpass"
+4	2	"auxpass"
+4	3	"advmod"
+7	6	"amod"
+4	7	"agent"
+4	9	"agent"
+7	9	"conj_and"
+13	12	"nn"
+4	13	"agent"
+7	13	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Upon"
+2	"ligand"
+3	"binding"
+4	"and"
+5	"cytokine"
+6	"receptor"
+7	"dimerization"
+8	","
+9	"Stat"
+10	"proteins"
+11	"are"
+12	"phosphorylated"
+13	"on"
+14	"tyrosine"
+15	"residues"
+16	"by"
+17	"Jak"
+18	"kinases"
+19	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	"NN"
+4	"CC"
+5	"NN"
+6	"NN"
+7	"NN"
+8	","
+9	"NN"
+10	"NNS"
+11	"VBP"
+12	"VBN"
+13	"IN"
+14	"NN"
+15	"NNS"
+16	"IN"
+17	"NN"
+18	"NNS"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"nn"
+12	3	"prep_upon"
+7	5	"nn"
+7	6	"nn"
+3	7	"conj_and"
+12	7	"prep_upon"
+10	9	"nn"
+12	10	"nsubjpass"
+12	11	"auxpass"
+15	14	"nn"
+12	15	"prep_on"
+18	17	"nn"
+12	18	"agent"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Activated"
+2	"Stat"
+3	"proteins"
+4	"form"
+5	"homo"
+6	"-"
+7	"or"
+8	"heterodimers"
+9	","
+10	"translocate"
+11	"to"
+12	"the"
+13	"nucleus"
+14	","
+15	"and"
+16	"induce"
+17	"transcription"
+18	"from"
+19	"responsive"
+20	"genes"
+21	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NNS"
+4	"VBP"
+5	"NN"
+6	"CC"
+7	"NN"
+8	"NNS"
+9	","
+10	"VBP"
+11	"TO"
+12	"DT"
+13	"NN"
+14	","
+15	"CC"
+16	"VBP"
+17	"NN"
+18	"IN"
+19	"JJ"
+20	"NNS"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"nn"
+4	3	"nsubj"
+10	3	"nsubj"
+16	3	"nsubj"
+8	5	"nn"
+5	7	"conj"
+4	8	"dobj"
+4	10	"conj_and"
+13	12	"det"
+10	13	"prep_to"
+4	16	"conj_and"
+16	17	"dobj"
+20	19	"amod"
+17	20	"prep_from"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Stat5"
+2	"and"
+3	"Stat6"
+4	"are"
+5	"transcription"
+6	"factors"
+7	"active"
+8	"in"
+9	"mammary"
+10	"epithelial"
+11	"cells"
+12	"and"
+13	"immune"
+14	"cells"
+15	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CC"
+3	"NN"
+4	"VBP"
+5	"NN"
+6	"NNS"
+7	"JJ"
+8	"IN"
+9	"JJ"
+10	"JJ"
+11	"NNS"
+12	"CC"
+13	"JJ"
+14	"NNS"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"nsubj"
+1	3	"conj_and"
+6	3	"nsubj"
+6	4	"cop"
+6	5	"nn"
+6	7	"amod"
+11	9	"amod"
+11	10	"amod"
+7	11	"prep_in"
+14	13	"amod"
+7	14	"prep_in"
+11	14	"conj_and"
+
+>mention
+1	1	"Protein(Stat5)"
+3	3	"Protein(Stat6)"
+
+>trigger
+7	7	"Positive_regulation"
+>argument
+7	1	"Theme"
+7	3	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Prolactin"
+2	"activates"
+3	"Stat5"
+4	","
+5	"and"
+6	"interleukin-4"
+7	"("
+8	"IL-4"
+9	")"
+10	"activates"
+11	"Stat6"
+12	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"NN"
+4	","
+5	"CC"
+6	"NN"
+7	"-LRB-"
+8	"NN"
+9	"-RRB-"
+10	"VBZ"
+11	"NN"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+2	3	"dobj"
+10	6	"nsubj"
+6	8	"abbrev"
+2	10	"conj_and"
+10	11	"dobj"
+
+>mention
+1	1	"Protein(Prolactin)"
+3	3	"Protein(Stat5)"
+6	6	"Protein(interleukin-4)"
+8	8	"Protein(IL-4)"
+11	11	"Protein(Stat6)"
+
+>trigger
+2	2	"Positive_regulation"
+10	10	"Positive_regulation"
+>argument
+2	1	"Cause"
+2	3	"Theme"
+10	6	"Cause"
+10	8	"Cause"
+10	11	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Both"
+2	"cytokines"
+3	"are"
+4	"able"
+5	"to"
+6	"stimulate"
+7	"cell"
+8	"proliferation"
+9	","
+10	"differentiation"
+11	","
+12	"and"
+13	"survival"
+14	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NNS"
+3	"VBP"
+4	"JJ"
+5	"TO"
+6	"VB"
+7	"NN"
+8	"NN"
+9	","
+10	"NN"
+11	","
+12	"CC"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+4	2	"nsubj"
+4	3	"cop"
+6	5	"aux"
+4	6	"xcomp"
+8	7	"nn"
+6	8	"dobj"
+6	10	"dobj"
+8	10	"conj_and"
+6	13	"dobj"
+8	13	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"investigated"
+3	"the"
+4	"transactivation"
+5	"potential"
+6	"of"
+7	"Stat6"
+8	"and"
+9	"found"
+10	"that"
+11	"it"
+12	"is"
+13	"not"
+14	"restricted"
+15	"to"
+16	"lymphocytes"
+17	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBD"
+3	"DT"
+4	"NN"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"CC"
+9	"VBD"
+10	"IN"
+11	"PRP"
+12	"VBZ"
+13	"RB"
+14	"JJ"
+15	"TO"
+16	"NNS"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+9	1	"nsubj"
+5	3	"det"
+5	4	"nn"
+2	5	"dobj"
+5	7	"prep_of"
+2	9	"conj_and"
+14	10	"complm"
+14	11	"nsubj"
+14	12	"cop"
+14	13	"neg"
+9	14	"ccomp"
+14	16	"prep_to"
+
+>mention
+7	7	"Protein(Stat6)"
+
+>trigger
+4	4	"Positive_regulation"
+14	14	"Negative_regulation"
+>argument
+4	7	"Theme"
+14	4	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"IL-4"
+2	"-dependent"
+3	"activation"
+4	"of"
+5	"Stat6"
+6	"was"
+7	"also"
+8	"observed"
+9	"in"
+10	"HC11"
+11	"mammary"
+12	"epithelial"
+13	"cells"
+14	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"JJ"
+3	"NN"
+4	"IN"
+5	"NN"
+6	"VBD"
+7	"RB"
+8	"VBN"
+9	"IN"
+10	"NN"
+11	"JJ"
+12	"JJ"
+13	"NNS"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	2	"amod"
+8	3	"nsubjpass"
+3	5	"prep_of"
+8	6	"auxpass"
+8	7	"advmod"
+13	10	"nn"
+13	11	"amod"
+13	12	"amod"
+8	13	"prep_in"
+
+>mention
+1	1	"Protein(IL-4)"
+5	5	"Protein(Stat6)"
+
+>trigger
+3	3	"Positive_regulation"
+>argument
+3	1	"Cause"
+3	5	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"these"
+3	"cells"
+4	","
+5	"Stat6"
+6	"activation"
+7	"led"
+8	"to"
+9	"the"
+10	"induction"
+11	"of"
+12	"the"
+13	"beta-casein"
+14	"gene"
+15	"promoter"
+16	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"NNS"
+4	","
+5	"NN"
+6	"NN"
+7	"VBD"
+8	"TO"
+9	"DT"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"NN"
+14	"NN"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"det"
+7	3	"prep_in"
+6	5	"nn"
+7	6	"nsubj"
+10	9	"det"
+7	10	"prep_to"
+15	12	"det"
+15	13	"nn"
+15	14	"nn"
+10	15	"prep_of"
+
+>mention
+5	5	"Protein(Stat6)"
+
+>trigger
+6	6	"Positive_regulation"
+>argument
+6	5	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"induction"
+3	"of"
+4	"this"
+5	"promoter"
+6	"was"
+7	"confirmed"
+8	"in"
+9	"COS7"
+10	"cells"
+11	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"NN"
+6	"VBD"
+7	"VBN"
+8	"IN"
+9	"NN"
+10	"NNS"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+7	2	"nsubjpass"
+5	4	"det"
+2	5	"prep_of"
+7	6	"auxpass"
+10	9	"nn"
+7	10	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"glucocorticoid"
+3	"receptor"
+4	"was"
+5	"able"
+6	"to"
+7	"further"
+8	"enhance"
+9	"IL-4"
+10	"-induced"
+11	"gene"
+12	"transcription"
+13	"through"
+14	"the"
+15	"action"
+16	"of"
+17	"Stat6"
+18	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"VBD"
+5	"JJ"
+6	"TO"
+7	"RB"
+8	"VB"
+9	"NN"
+10	"JJ"
+11	"NN"
+12	"NN"
+13	"IN"
+14	"DT"
+15	"NN"
+16	"IN"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+5	3	"nsubj"
+5	4	"cop"
+8	6	"aux"
+8	7	"advmod"
+5	8	"xcomp"
+12	9	"nn"
+12	10	"amod"
+12	11	"nn"
+8	12	"dobj"
+15	14	"det"
+8	15	"prep_through"
+15	17	"prep_of"
+
+>mention
+2	3	"Protein(receptor)"
+9	9	"Protein(IL-4)"
+17	17	"Protein(Stat6)"
+
+>trigger
+8	8	"Positive_regulation"
+>argument
+8	3	"Cause"
+8	17	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Deletion"
+2	"analysis"
+3	"of"
+4	"the"
+5	"carboxyl-terminal"
+6	"region"
+7	"of"
+8	"Stat6"
+9	"and"
+10	"recombination"
+11	"of"
+12	"this"
+13	"region"
+14	"with"
+15	"a"
+16	"heterologous"
+17	"DNA"
+18	"binding"
+19	"domain"
+20	"allowed"
+21	"the"
+22	"delimitation"
+23	"and"
+24	"characterization"
+25	"of"
+26	"the"
+27	"transactivation"
+28	"domain"
+29	"of"
+30	"Stat6"
+31	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"CC"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"NN"
+14	"IN"
+15	"DT"
+16	"JJ"
+17	"NN"
+18	"NN"
+19	"NN"
+20	"VBD"
+21	"DT"
+22	"NN"
+23	"CC"
+24	"NN"
+25	"IN"
+26	"DT"
+27	"NN"
+28	"NN"
+29	"IN"
+30	"NN"
+31	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+20	2	"nsubj"
+6	4	"det"
+6	5	"amod"
+2	6	"prep_of"
+6	8	"prep_of"
+2	10	"conj_and"
+20	10	"nsubj"
+13	12	"det"
+10	13	"prep_of"
+19	15	"det"
+19	16	"amod"
+19	17	"nn"
+19	18	"nn"
+10	19	"prep_with"
+22	21	"dep"
+20	22	"dobj"
+20	24	"dobj"
+22	24	"conj_and"
+28	26	"det"
+28	27	"nn"
+22	28	"prep_of"
+28	30	"prep_of"
+
+>mention
+8	8	"Protein(Stat6)"
+30	30	"Protein(Stat6)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"potencies"
+3	"of"
+4	"the"
+5	"transactivation"
+6	"domains"
+7	"of"
+8	"Stat5"
+9	","
+10	"Stat6"
+11	","
+12	"and"
+13	"viral"
+14	"protein"
+15	"VP16"
+16	"were"
+17	"compared"
+18	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NNS"
+3	"IN"
+4	"DT"
+5	"NN"
+6	"NNS"
+7	"IN"
+8	"NN"
+9	","
+10	"NN"
+11	","
+12	"CC"
+13	"JJ"
+14	"NN"
+15	"NN"
+16	"VBD"
+17	"VBN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+17	2	"nsubjpass"
+6	4	"det"
+6	5	"nn"
+2	6	"prep_of"
+6	8	"prep_of"
+6	10	"prep_of"
+8	10	"conj_and"
+15	13	"amod"
+15	14	"nn"
+6	15	"prep_of"
+8	15	"conj_and"
+17	16	"auxpass"
+
+>mention
+8	8	"Protein(Stat5)"
+10	10	"Protein(Stat6)"
+15	15	"Protein(VP16)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Stat6"
+2	"had"
+3	"a"
+4	"transactivation"
+5	"domain"
+6	"which"
+7	"was"
+8	"about"
+9	"10-fold"
+10	"stronger"
+11	"than"
+12	"that"
+13	"of"
+14	"Stat5"
+15	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"DT"
+4	"NN"
+5	"NN"
+6	"WDT"
+7	"VBD"
+8	"RB"
+9	"RB"
+10	"JJR"
+11	"IN"
+12	"DT"
+13	"IN"
+14	"NN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+5	3	"det"
+5	4	"nn"
+2	5	"dobj"
+10	5	"nsubj"
+10	7	"cop"
+9	8	"advmod"
+10	9	"advmod"
+5	10	"rcmod"
+10	12	"prep_than"
+12	14	"prep_of"
+
+>mention
+1	1	"Protein(Stat6)"
+14	14	"Protein(Stat5)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"pre-B"
+3	"cells"
+4	"("
+5	"Ba/F3"
+6	")"
+7	","
+8	"the"
+9	"transactivation"
+10	"domain"
+11	"of"
+12	"Stat6"
+13	"was"
+14	"IL-4"
+15	"regulated"
+16	","
+17	"independently"
+18	"from"
+19	"its"
+20	"DNA"
+21	"binding"
+22	"function"
+23	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"JJ"
+3	"NNS"
+4	"-LRB-"
+5	"NN"
+6	"-RRB-"
+7	","
+8	"DT"
+9	"NN"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"VBD"
+14	"NN"
+15	"JJ"
+16	","
+17	"RB"
+18	"IN"
+19	"PRP$"
+20	"NN"
+21	"NN"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"amod"
+15	3	"prep_in"
+3	5	"appos"
+10	8	"det"
+10	9	"nn"
+15	10	"nsubj"
+10	12	"prep_of"
+15	13	"cop"
+15	14	"dep"
+15	17	"advmod"
+22	19	"poss"
+22	20	"nn"
+22	21	"nn"
+17	22	"prep_from"
+
+>mention
+12	12	"Protein(Stat6)"
+14	14	"Protein(IL-4)"
+
+>trigger
+15	15	"Regulation"
+17	17	"Positive_regulation"
+21	21	"Binding"
+>argument
+15	12	"Theme"
+15	14	"Cause"
+17	15	"Theme"
+17	21	"Cause"
+21	12	"Theme"
+>relation
+
+

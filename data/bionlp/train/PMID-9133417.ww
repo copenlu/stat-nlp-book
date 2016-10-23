@@ -1,0 +1,597 @@
+>>
+>word
+0	"Root"
+1	"Jak3"
+2	"is"
+3	"associated"
+4	"with"
+5	"CD40"
+6	"and"
+7	"is"
+8	"critical"
+9	"for"
+10	"CD40"
+11	"induction"
+12	"of"
+13	"gene"
+14	"expression"
+15	"in"
+16	"B"
+17	"cells"
+18	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"VBN"
+4	"IN"
+5	"NN"
+6	"CC"
+7	"VBZ"
+8	"JJ"
+9	"IN"
+10	"NN"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"NN"
+15	"IN"
+16	"NN"
+17	"NNS"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubjpass"
+8	1	"nsubj"
+3	2	"auxpass"
+3	5	"prep_with"
+8	7	"cop"
+3	8	"conj_and"
+11	10	"nn"
+8	11	"prep_for"
+14	13	"nn"
+11	14	"prep_of"
+17	16	"nn"
+11	17	"prep_in"
+
+>mention
+1	1	"Protein(Jak3)"
+5	5	"Protein(CD40)"
+10	10	"Protein(CD40)"
+
+>trigger
+3	3	"Binding"
+>argument
+3	1	"Theme"
+3	5	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"CD40"
+2	"is"
+3	"a"
+4	"receptor"
+5	"that"
+6	"is"
+7	"critical"
+8	"for"
+9	"the"
+10	"survival"
+11	","
+12	"growth"
+13	","
+14	"differentiation"
+15	","
+16	"and"
+17	"isotype"
+18	"switching"
+19	"of"
+20	"B"
+21	"lymphocytes"
+22	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"DT"
+4	"NN"
+5	"WDT"
+6	"VBZ"
+7	"JJ"
+8	"IN"
+9	"DT"
+10	"NN"
+11	","
+12	"NN"
+13	","
+14	"NN"
+15	","
+16	"CC"
+17	"NN"
+18	"NN"
+19	"IN"
+20	"NN"
+21	"NNS"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubj"
+4	2	"cop"
+4	3	"det"
+7	4	"nsubj"
+7	6	"cop"
+4	7	"rcmod"
+10	9	"dep"
+7	10	"prep_for"
+7	12	"prep_for"
+10	12	"conj_and"
+7	14	"prep_for"
+10	14	"conj_and"
+18	17	"nn"
+7	18	"prep_for"
+10	18	"conj_and"
+21	20	"nn"
+10	21	"prep_of"
+
+>mention
+1	1	"Protein(CD40)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Although"
+2	"CD40"
+3	"lacks"
+4	"intrinsic"
+5	"tyrosine"
+6	"kinase"
+7	"activity"
+8	","
+9	"its"
+10	"ligation"
+11	"induces"
+12	"protein"
+13	"tyrosine"
+14	"phosphorylation"
+15	","
+16	"which"
+17	"is"
+18	"necessary"
+19	"for"
+20	"several"
+21	"CD40"
+22	"-mediated"
+23	"events"
+24	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	"VBZ"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"NN"
+8	","
+9	"PRP$"
+10	"NN"
+11	"VBZ"
+12	"NN"
+13	"NN"
+14	"NN"
+15	","
+16	"WDT"
+17	"VBZ"
+18	"JJ"
+19	"IN"
+20	"JJ"
+21	"NN"
+22	"JJ"
+23	"NNS"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"mark"
+3	2	"nsubj"
+11	3	"advcl"
+7	4	"amod"
+7	5	"nn"
+7	6	"nn"
+3	7	"dobj"
+10	9	"poss"
+11	10	"nsubj"
+14	12	"nn"
+14	13	"nn"
+11	14	"dobj"
+18	14	"nsubj"
+18	17	"cop"
+14	18	"rcmod"
+23	20	"amod"
+23	21	"nn"
+23	22	"amod"
+18	23	"prep_for"
+
+>mention
+2	2	"Protein(CD40)"
+21	21	"Protein(CD40)"
+
+>trigger
+10	10	"Binding"
+>argument
+10	2	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"show"
+3	"that"
+4	"engagement"
+5	"of"
+6	"CD40"
+7	"induces"
+8	"tyrosine"
+9	"phosphorylation"
+10	"and"
+11	"activation"
+12	"of"
+13	"Jak3"
+14	"as"
+15	"well"
+16	"as"
+17	"of"
+18	"STAT3"
+19	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"IN"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"VBZ"
+8	"NN"
+9	"NN"
+10	"CC"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"RB"
+15	"RB"
+16	"IN"
+17	"IN"
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+7	3	"complm"
+7	4	"nsubj"
+4	6	"prep_of"
+2	7	"ccomp"
+9	8	"nn"
+7	9	"dobj"
+7	11	"dobj"
+9	11	"conj_and"
+11	13	"prep_of"
+7	17	"dobj"
+9	17	"conj_and"
+9	18	"prep_of"
+
+>mention
+6	6	"Protein(CD40)"
+13	13	"Protein(Jak3)"
+18	18	"Protein(STAT3)"
+
+>trigger
+7	7	"Positive_regulation"
+9	9	"Phosphorylation"
+11	11	"Positive_regulation"
+>argument
+7	6	"Cause"
+7	9	"Theme"
+7	11	"Theme"
+9	13	"Theme"
+9	18	"Theme"
+11	13	"Theme"
+11	18	"Theme"
+11	9	"Cause"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Jak3"
+2	"is"
+3	"constitutively"
+4	"associated"
+5	"with"
+6	"CD40"
+7	","
+8	"and"
+9	"this"
+10	"interaction"
+11	"requires"
+12	"a"
+13	"proline-rich"
+14	"sequence"
+15	"in"
+16	"the"
+17	"membrane-proximal"
+18	"region"
+19	"of"
+20	"CD40"
+21	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"RB"
+4	"VBN"
+5	"IN"
+6	"NN"
+7	","
+8	"CC"
+9	"DT"
+10	"NN"
+11	"VBZ"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"IN"
+16	"DT"
+17	"JJ"
+18	"NN"
+19	"IN"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubjpass"
+4	2	"auxpass"
+4	3	"advmod"
+4	6	"prep_with"
+10	9	"det"
+11	10	"nsubj"
+4	11	"conj_and"
+14	12	"det"
+14	13	"amod"
+11	14	"dobj"
+18	16	"det"
+18	17	"amod"
+14	18	"prep_in"
+18	20	"prep_of"
+
+>mention
+1	1	"Protein(Jak3)"
+6	6	"Protein(CD40)"
+20	20	"Protein(CD40)"
+
+>trigger
+4	4	"Binding"
+11	11	"Positive_regulation"
+>argument
+4	1	"Theme"
+4	6	"Theme"
+11	20	"Cause"
+11	4	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Deletion"
+2	"of"
+3	"this"
+4	"sequence"
+5	"abolishes"
+6	"the"
+7	"capacity"
+8	"of"
+9	"CD40"
+10	"to"
+11	"induce"
+12	"expression"
+13	"of"
+14	"CD23"
+15	","
+16	"ICAM-1"
+17	","
+18	"and"
+19	"lymphotoxin-alpha"
+20	"genes"
+21	"in"
+22	"B"
+23	"cells"
+24	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"DT"
+4	"NN"
+5	"VBZ"
+6	"DT"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"TO"
+11	"VB"
+12	"NN"
+13	"IN"
+14	"NN"
+15	","
+16	"NN"
+17	","
+18	"CC"
+19	"NN"
+20	"NNS"
+21	"IN"
+22	"NN"
+23	"NNS"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"nsubj"
+4	3	"det"
+1	4	"prep_of"
+7	6	"det"
+5	7	"dobj"
+7	9	"prep_of"
+11	10	"aux"
+7	11	"infmod"
+11	12	"dobj"
+12	14	"prep_of"
+12	16	"prep_of"
+14	16	"conj_and"
+20	19	"nn"
+12	20	"prep_of"
+14	20	"conj_and"
+23	22	"nn"
+12	23	"prep_in"
+
+>mention
+9	9	"Protein(CD40)"
+14	14	"Protein(CD23)"
+16	16	"Protein(ICAM-1)"
+19	19	"Protein(lymphotoxin-alpha)"
+
+>trigger
+5	5	"Negative_regulation"
+11	11	"Positive_regulation"
+12	12	"Gene_expression"
+>argument
+5	11	"Theme"
+11	9	"Cause"
+11	12	"Theme"
+12	14	"Theme"
+12	16	"Theme"
+12	19	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"These"
+2	"results"
+3	"indicate"
+4	"that"
+5	"signaling"
+6	"through"
+7	"Jak3"
+8	"is"
+9	"activated"
+10	"by"
+11	"CD40"
+12	"and"
+13	"plays"
+14	"an"
+15	"important"
+16	"role"
+17	"in"
+18	"CD40"
+19	"-mediated"
+20	"functions"
+21	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NNS"
+3	"VBP"
+4	"IN"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"VBZ"
+9	"VBN"
+10	"IN"
+11	"NN"
+12	"CC"
+13	"VBZ"
+14	"DT"
+15	"JJ"
+16	"NN"
+17	"IN"
+18	"NN"
+19	"JJ"
+20	"NNS"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+9	4	"complm"
+9	5	"nsubjpass"
+13	5	"nsubj"
+5	7	"prep_through"
+9	8	"auxpass"
+3	9	"ccomp"
+9	11	"agent"
+3	13	"ccomp"
+9	13	"conj_and"
+16	14	"det"
+16	15	"amod"
+13	16	"dobj"
+20	18	"nn"
+20	19	"amod"
+13	20	"prep_in"
+
+>mention
+7	7	"Protein(Jak3)"
+11	11	"Protein(CD40)"
+18	18	"Protein(CD40)"
+
+>trigger
+>argument
+>relation
+
+

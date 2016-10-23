@@ -1,0 +1,906 @@
+>>
+>word
+0	"Root"
+1	"Inhibition"
+2	"of"
+3	"NF-kappa"
+4	"B"
+5	"activation"
+6	"in"
+7	"human"
+8	"T-cell"
+9	"lines"
+10	"by"
+11	"anetholdithiolthione"
+12	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"NN"
+5	"NN"
+6	"IN"
+7	"JJ"
+8	"NN"
+9	"NNS"
+10	"IN"
+11	"NN"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	3	"nn"
+5	4	"nn"
+1	5	"prep_of"
+9	7	"amod"
+9	8	"nn"
+5	9	"prep_in"
+1	11	"prep_by"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Nuclear"
+2	"factor"
+3	"("
+4	"NF"
+5	")"
+6	"-"
+7	"kappa"
+8	"B"
+9	"is"
+10	"a"
+11	"redox"
+12	"sensitive"
+13	"cytosolic"
+14	"transcription"
+15	"factor"
+16	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"-LRB-"
+4	"NN"
+5	"-RRB-"
+6	":"
+7	"NN"
+8	"NN"
+9	"VBZ"
+10	"DT"
+11	"NN"
+12	"JJ"
+13	"JJ"
+14	"NN"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"amod"
+8	2	"nn"
+8	4	"nn"
+8	7	"nn"
+15	8	"nsubj"
+15	9	"cop"
+15	10	"det"
+15	11	"nn"
+15	12	"amod"
+15	13	"amod"
+15	14	"nn"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Redox"
+2	"regulation"
+3	"of"
+4	"NF-kappa"
+5	"B"
+6	"has"
+7	"been"
+8	"implicated"
+9	"in"
+10	"the"
+11	"activation"
+12	"of"
+13	"the"
+14	"human"
+15	"immuno-deficiency"
+16	"virus"
+17	"("
+18	"HIV"
+19	")"
+20	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"NN"
+6	"VBZ"
+7	"VBN"
+8	"VBN"
+9	"IN"
+10	"DT"
+11	"NN"
+12	"IN"
+13	"DT"
+14	"JJ"
+15	"NN"
+16	"NN"
+17	"-LRB-"
+18	"NN"
+19	"-RRB-"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+8	2	"nsubjpass"
+5	4	"nn"
+2	5	"prep_of"
+8	6	"aux"
+8	7	"auxpass"
+11	10	"det"
+8	11	"prep_in"
+16	13	"det"
+16	14	"amod"
+16	15	"nn"
+11	16	"prep_of"
+16	18	"abbrev"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Therefore"
+2	","
+3	"inhibition"
+4	"of"
+5	"NF-kappa"
+6	"B"
+7	"activation"
+8	"may"
+9	"be"
+10	"an"
+11	"effective"
+12	"strategy"
+13	"for"
+14	"acquired"
+15	"immunodeficiency"
+16	"syndrome"
+17	"therapy"
+18	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"IN"
+5	"NN"
+6	"NN"
+7	"NN"
+8	"MD"
+9	"VB"
+10	"DT"
+11	"JJ"
+12	"NN"
+13	"IN"
+14	"VBN"
+15	"NN"
+16	"NN"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+12	1	"advmod"
+12	3	"nsubj"
+6	5	"nn"
+7	6	"nn"
+3	7	"prep_of"
+12	8	"aux"
+12	9	"cop"
+12	10	"det"
+12	11	"amod"
+17	14	"amod"
+17	15	"nn"
+17	16	"nn"
+12	17	"prep_for"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Anetholdithiolthione"
+2	"("
+3	"ADT"
+4	","
+5	"5"
+6	"-"
+7	"["
+8	"p-methoxyphenyl"
+9	"]"
+10	"-3"
+11	"H-1"
+12	",2"
+13	"-"
+14	"dithiol-3-thione"
+15	")"
+16	"is"
+17	"an"
+18	"antioxidant"
+19	"which"
+20	"has"
+21	"been"
+22	"used"
+23	"to"
+24	"protect"
+25	"against"
+26	"acetaminophen"
+27	"-"
+28	"and"
+29	"CCl4-induced"
+30	"hepatotoxicity"
+31	","
+32	"lipid"
+33	"peroxidation"
+34	","
+35	"radiation"
+36	"injury"
+37	","
+38	"and"
+39	"also"
+40	"has"
+41	"been"
+42	"used"
+43	"clinically"
+44	"as"
+45	"an"
+46	"anti-choleretic"
+47	"agent"
+48	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"-LRB-"
+3	"NN"
+4	","
+5	"CD"
+6	":"
+7	"-LRB-"
+8	"NN"
+9	"-RRB-"
+10	"CD"
+11	"NN"
+12	"NN"
+13	":"
+14	"NN"
+15	"-RRB-"
+16	"VBZ"
+17	"DT"
+18	"NN"
+19	"WDT"
+20	"VBZ"
+21	"VBN"
+22	"VBN"
+23	"TO"
+24	"VB"
+25	"IN"
+26	"NN"
+27	":"
+28	"CC"
+29	"JJ"
+30	"NN"
+31	","
+32	"NN"
+33	"NN"
+34	","
+35	"NN"
+36	"NN"
+37	","
+38	"CC"
+39	"RB"
+40	"VBZ"
+41	"VBN"
+42	"VBN"
+43	"RB"
+44	"IN"
+45	"DT"
+46	"JJ"
+47	"NN"
+48	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+18	1	"nsubj"
+1	3	"dep"
+3	5	"appos"
+12	7	"punct"
+12	8	"nn"
+12	9	"punct"
+12	10	"num"
+12	11	"nn"
+3	12	"dep"
+3	14	"dep"
+18	16	"cop"
+18	17	"det"
+22	18	"nsubjpass"
+42	18	"nsubjpass"
+22	20	"aux"
+22	21	"auxpass"
+18	22	"rcmod"
+24	23	"aux"
+22	24	"xcomp"
+24	26	"prep_against"
+30	29	"amod"
+24	30	"prep_against"
+26	30	"conj_and"
+33	32	"nn"
+26	33	"appos"
+36	35	"nn"
+26	36	"appos"
+18	39	"rcmod"
+22	39	"advmod"
+22	39	"conj_and"
+42	40	"aux"
+42	41	"auxpass"
+18	42	"rcmod"
+22	42	"conj_and"
+42	43	"advmod"
+47	45	"det"
+47	46	"amod"
+42	47	"prep_as"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"present"
+3	"study"
+4	"examined"
+5	"the"
+6	"effect"
+7	"of"
+8	"ADT"
+9	"pretreatment"
+10	"on"
+11	"NF-kappa"
+12	"B"
+13	"activation"
+14	"in"
+15	"response"
+16	"to"
+17	"a"
+18	"variety"
+19	"of"
+20	"stimuli"
+21	"such"
+22	"as"
+23	"H2O2"
+24	","
+25	"phorbol"
+26	"myristate"
+27	"acetate"
+28	"("
+29	"PMA"
+30	")"
+31	"or"
+32	"tumor"
+33	"necrosis"
+34	"factor"
+35	"alpha"
+36	"("
+37	"TNF"
+38	"alpha"
+39	")"
+40	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"VBD"
+5	"DT"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"NN"
+10	"IN"
+11	"NN"
+12	"NN"
+13	"NN"
+14	"IN"
+15	"NN"
+16	"TO"
+17	"DT"
+18	"NN"
+19	"IN"
+20	"NNS"
+21	"JJ"
+22	"IN"
+23	"NN"
+24	","
+25	"NN"
+26	"NN"
+27	"NN"
+28	"-LRB-"
+29	"NN"
+30	"-RRB-"
+31	"CC"
+32	"NN"
+33	"NN"
+34	"NN"
+35	"NN"
+36	"-LRB-"
+37	"NN"
+38	"NN"
+39	"-RRB-"
+40	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+4	3	"nsubj"
+6	5	"det"
+4	6	"dobj"
+9	8	"nn"
+6	9	"prep_of"
+12	11	"nn"
+13	12	"nn"
+6	13	"prep_on"
+13	15	"prep_in"
+18	17	"det"
+15	18	"prep_to"
+18	20	"prep_of"
+20	23	"prep_such_as"
+27	25	"nn"
+27	26	"nn"
+20	27	"prep_such_as"
+23	27	"conj_or"
+27	29	"abbrev"
+35	32	"nn"
+35	33	"nn"
+35	34	"nn"
+20	35	"prep_such_as"
+23	35	"conj_or"
+38	37	"nn"
+35	38	"abbrev"
+
+>mention
+32	35	"Protein(alpha)"
+37	38	"Protein(alpha)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"PMA"
+2	"and"
+3	"TNF"
+4	"alpha"
+5	"induced"
+6	"activation"
+7	"of"
+8	"("
+9	"NF"
+10	")"
+11	"-"
+12	"kappa"
+13	"B"
+14	"in"
+15	"human"
+16	"Jurkat"
+17	"T-cells"
+18	"was"
+19	"partially"
+20	"inhibited"
+21	"by"
+22	"ADT"
+23	"("
+24	"0.1"
+25	"mM"
+26	")"
+27	"pretreatment"
+28	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CC"
+3	"NN"
+4	"NN"
+5	"VBD"
+6	"NN"
+7	"IN"
+8	"-LRB-"
+9	"NN"
+10	"-RRB-"
+11	":"
+12	"NN"
+13	"NN"
+14	"IN"
+15	"JJ"
+16	"NN"
+17	"NNS"
+18	"VBD"
+19	"RB"
+20	"VBN"
+21	"IN"
+22	"NN"
+23	"-LRB-"
+24	"NN"
+25	"NN"
+26	"-RRB-"
+27	"NN"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"nsubj"
+4	3	"nn"
+1	4	"conj_and"
+5	4	"nsubj"
+5	6	"dobj"
+13	9	"nn"
+13	12	"nn"
+6	13	"prep_of"
+17	15	"amod"
+17	16	"nn"
+6	17	"prep_in"
+20	18	"auxpass"
+20	19	"advmod"
+5	20	"dep"
+27	22	"nn"
+25	24	"nn"
+22	25	"appos"
+20	27	"agent"
+
+>mention
+3	4	"Protein(alpha)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"ADT"
+2	"("
+3	"0.1"
+4	"mM"
+5	")"
+6	"also"
+7	"inhibited"
+8	"H2O2"
+9	"induced"
+10	"activation"
+11	"of"
+12	"the"
+13	"transcription"
+14	"factor"
+15	"in"
+16	"the"
+17	"peroxide"
+18	"sensitive"
+19	"human"
+20	"Wurzburg"
+21	"T-cells"
+22	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"-LRB-"
+3	"CD"
+4	"NN"
+5	"-RRB-"
+6	"RB"
+7	"VBD"
+8	"NN"
+9	"JJ"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"NN"
+14	"NN"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"JJ"
+19	"JJ"
+20	"NN"
+21	"NNS"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	1	"nsubj"
+4	3	"num"
+1	4	"appos"
+7	6	"advmod"
+10	8	"nn"
+10	9	"amod"
+7	10	"dobj"
+14	12	"det"
+14	13	"nn"
+10	14	"prep_of"
+21	16	"det"
+21	17	"nn"
+21	18	"amod"
+21	19	"amod"
+21	20	"nn"
+10	21	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Furthermore"
+2	","
+3	"ADT"
+4	"treated"
+5	"Wurzburg"
+6	"cells"
+7	"had"
+8	"significantly"
+9	"higher"
+10	"glutathione"
+11	"levels"
+12	"as"
+13	"compared"
+14	"with"
+15	"untreated"
+16	"cells"
+17	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"JJ"
+5	"NN"
+6	"NNS"
+7	"VBD"
+8	"RB"
+9	"JJR"
+10	"NN"
+11	"NNS"
+12	"IN"
+13	"VBN"
+14	"IN"
+15	"JJ"
+16	"NNS"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	1	"advmod"
+6	3	"nn"
+6	4	"amod"
+6	5	"nn"
+7	6	"nsubj"
+9	8	"advmod"
+11	9	"amod"
+11	10	"nn"
+7	11	"dobj"
+13	12	"mark"
+7	13	"advcl"
+16	15	"amod"
+13	16	"prep_with"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"H2O2"
+2	"induced"
+3	"lipid"
+4	"peroxidation"
+5	"in"
+6	"Wurzburg"
+7	"cells"
+8	"was"
+9	"remarkably"
+10	"inhibited"
+11	"by"
+12	"ADT"
+13	"pretreatment"
+14	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"JJ"
+3	"NN"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"NNS"
+8	"VBD"
+9	"RB"
+10	"VBN"
+11	"IN"
+12	"NN"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nn"
+4	2	"amod"
+4	3	"nn"
+10	4	"nsubjpass"
+7	6	"nn"
+4	7	"prep_in"
+10	8	"auxpass"
+10	9	"advmod"
+13	12	"nn"
+10	13	"agent"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"ADT"
+2	","
+3	"a"
+4	"pro-glutathione"
+5	"antioxidant"
+6	","
+7	"was"
+8	"observed"
+9	"to"
+10	"be"
+11	"capable"
+12	"of"
+13	"modulating"
+14	"NF-kappa"
+15	"B"
+16	"activation"
+17	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	","
+3	"DT"
+4	"NN"
+5	"NN"
+6	","
+7	"VBD"
+8	"VBN"
+9	"TO"
+10	"VB"
+11	"JJ"
+12	"IN"
+13	"VBG"
+14	"NN"
+15	"NN"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"nsubjpass"
+11	1	"xsubj"
+5	3	"det"
+5	4	"nn"
+1	5	"appos"
+8	7	"auxpass"
+11	9	"aux"
+11	10	"cop"
+8	11	"xcomp"
+11	13	"prepc_of"
+15	14	"nn"
+16	15	"nn"
+13	16	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

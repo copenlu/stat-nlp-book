@@ -1,0 +1,566 @@
+>>
+>word
+0	"Root"
+1	"Human"
+2	"TAFII"
+3	"105"
+4	"is"
+5	"a"
+6	"cell"
+7	"type-specific"
+8	"TFIID"
+9	"subunit"
+10	"related"
+11	"to"
+12	"hTAFII130"
+13	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"CD"
+4	"VBZ"
+5	"DT"
+6	"NN"
+7	"JJ"
+8	"NN"
+9	"NN"
+10	"JJ"
+11	"TO"
+12	"NN"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+9	2	"nsubj"
+2	3	"num"
+9	4	"cop"
+9	5	"det"
+7	6	"dep"
+9	7	"amod"
+9	8	"nn"
+9	10	"amod"
+10	12	"prep_to"
+
+>mention
+2	3	"Protein(TAFII)"
+12	12	"Protein(hTAFII130)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"previously"
+3	"characterized"
+4	"Drosophila"
+5	"and"
+6	"human"
+7	"TAF"
+8	"subunits"
+9	"that"
+10	"make"
+11	"up"
+12	"the"
+13	"core"
+14	"TFIID"
+15	"complex"
+16	"found"
+17	"in"
+18	"all"
+19	"cells"
+20	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"RB"
+3	"VBD"
+4	"NN"
+5	"CC"
+6	"JJ"
+7	"NN"
+8	"NNS"
+9	"WDT"
+10	"VBP"
+11	"RP"
+12	"DT"
+13	"NN"
+14	"NN"
+15	"NN"
+16	"VBN"
+17	"IN"
+18	"DT"
+19	"NNS"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubj"
+3	2	"advmod"
+8	4	"nn"
+7	6	"amod"
+4	7	"conj_and"
+8	7	"nn"
+3	8	"dobj"
+10	8	"nsubj"
+8	10	"rcmod"
+10	11	"prt"
+15	12	"det"
+15	13	"nn"
+15	14	"nn"
+10	15	"dobj"
+15	16	"partmod"
+19	18	"det"
+16	19	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Here"
+2	","
+3	"we"
+4	"report"
+5	"that"
+6	"differentiated"
+7	"B"
+8	"cells"
+9	"contain"
+10	"a"
+11	"novel"
+12	"substoichiometric"
+13	"TAF"
+14	"of"
+15	"105"
+16	"kDa"
+17	"not"
+18	"found"
+19	"associated"
+20	"with"
+21	"TFIID"
+22	"isolated"
+23	"from"
+24	"other"
+25	"cell"
+26	"types"
+27	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"PRP"
+4	"VBP"
+5	"IN"
+6	"VBN"
+7	"NN"
+8	"NNS"
+9	"VBP"
+10	"DT"
+11	"JJ"
+12	"JJ"
+13	"NN"
+14	"IN"
+15	"CD"
+16	"NN"
+17	"RB"
+18	"VBN"
+19	"VBN"
+20	"IN"
+21	"NN"
+22	"VBN"
+23	"IN"
+24	"JJ"
+25	"NN"
+26	"NNS"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"advmod"
+4	3	"nsubj"
+9	5	"complm"
+8	6	"amod"
+8	7	"nn"
+9	8	"nsubj"
+4	9	"ccomp"
+13	10	"det"
+13	11	"amod"
+13	12	"amod"
+9	13	"dobj"
+16	15	"num"
+13	16	"prep_of"
+18	17	"neg"
+13	18	"partmod"
+18	19	"dep"
+19	21	"prep_with"
+21	22	"partmod"
+26	24	"amod"
+26	25	"nn"
+22	26	"prep_from"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"cDNA"
+3	"encoding"
+4	"hTAFII105"
+5	"reveals"
+6	"a"
+7	"highly"
+8	"conserved"
+9	"C-terminal"
+10	"domain"
+11	"shared"
+12	"by"
+13	"hTAFII130"
+14	"and"
+15	"oTAFII110"
+16	","
+17	"while"
+18	"the"
+19	"N-terminal"
+20	"coactivator"
+21	"domain"
+22	"has"
+23	"diverged"
+24	"significantly"
+25	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"NN"
+5	"VBZ"
+6	"DT"
+7	"RB"
+8	"VBN"
+9	"JJ"
+10	"NN"
+11	"VBN"
+12	"IN"
+13	"NN"
+14	"CC"
+15	"NN"
+16	","
+17	"IN"
+18	"DT"
+19	"JJ"
+20	"NN"
+21	"NN"
+22	"VBZ"
+23	"VBN"
+24	"RB"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"det"
+4	2	"nn"
+4	3	"nn"
+5	4	"nsubj"
+10	6	"det"
+8	7	"advmod"
+10	8	"amod"
+10	9	"amod"
+5	10	"dobj"
+10	11	"partmod"
+11	13	"agent"
+11	15	"agent"
+13	15	"conj_and"
+23	17	"mark"
+21	18	"det"
+21	19	"amod"
+21	20	"nn"
+23	21	"nsubj"
+23	22	"aux"
+5	23	"advcl"
+23	24	"advmod"
+
+>mention
+4	4	"Protein(hTAFII105)"
+13	13	"Protein(hTAFII130)"
+15	15	"Protein(oTAFII110)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"All"
+2	"cells"
+3	"tested"
+4	"express"
+5	"TAFII105"
+6	"mRNA"
+7	","
+8	"but"
+9	"only"
+10	"B"
+11	"cells"
+12	"contain"
+13	"significant"
+14	"levels"
+15	"of"
+16	"protein"
+17	"associated"
+18	"with"
+19	"TFIID"
+20	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"VBN"
+4	"VBP"
+5	"NN"
+6	"NN"
+7	","
+8	"CC"
+9	"RB"
+10	"NN"
+11	"NNS"
+12	"VBP"
+13	"JJ"
+14	"NNS"
+15	"IN"
+16	"NN"
+17	"VBN"
+18	"IN"
+19	"NN"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+4	2	"nsubj"
+2	3	"partmod"
+6	5	"nn"
+4	6	"dobj"
+11	9	"advmod"
+11	10	"nn"
+12	11	"nsubj"
+4	12	"conj_but"
+14	13	"amod"
+12	14	"dobj"
+14	16	"prep_of"
+16	17	"partmod"
+17	19	"prep_with"
+
+>mention
+5	5	"Protein(TAFII105)"
+
+>trigger
+4	4	"Transcription"
+17	17	"Binding"
+>argument
+4	5	"Theme"
+17	5	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Transient"
+2	"overexpression"
+3	"of"
+4	"hTAFII105"
+5	"selectively"
+6	"squelches"
+7	"the"
+8	"transcription"
+9	"of"
+10	"some"
+11	"genes"
+12	"in"
+13	"B"
+14	"cells"
+15	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"RB"
+6	"VBZ"
+7	"DT"
+8	"NN"
+9	"IN"
+10	"DT"
+11	"NNS"
+12	"IN"
+13	"NN"
+14	"NNS"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+6	2	"nsubj"
+2	4	"prep_of"
+6	5	"advmod"
+8	7	"det"
+6	8	"dobj"
+11	10	"det"
+8	11	"prep_of"
+14	13	"nn"
+8	14	"prep_in"
+
+>mention
+4	4	"Protein(hTAFII105)"
+
+>trigger
+2	2	"Gene_expression"
+2	2	"Positive_regulation"
+>argument
+2	4	"Theme"
+2	2	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"These"
+2	"properties"
+3	"suggest"
+4	"that"
+5	"TAFII105"
+6	"is"
+7	"a"
+8	"cell"
+9	"type-specific"
+10	"subunit"
+11	"of"
+12	"TFIID"
+13	"that"
+14	"may"
+15	"be"
+16	"responsible"
+17	"for"
+18	"mediating"
+19	"transcription"
+20	"by"
+21	"a"
+22	"subset"
+23	"of"
+24	"activators"
+25	"in"
+26	"B"
+27	"cells"
+28	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NNS"
+3	"VBP"
+4	"IN"
+5	"NN"
+6	"VBZ"
+7	"DT"
+8	"NN"
+9	"JJ"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"WDT"
+14	"MD"
+15	"VB"
+16	"JJ"
+17	"IN"
+18	"VBG"
+19	"NN"
+20	"IN"
+21	"DT"
+22	"NN"
+23	"IN"
+24	"NNS"
+25	"IN"
+26	"NN"
+27	"NNS"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+10	4	"complm"
+10	5	"nsubj"
+10	6	"cop"
+10	7	"det"
+9	8	"dep"
+10	9	"amod"
+3	10	"ccomp"
+16	10	"nsubj"
+10	12	"prep_of"
+16	14	"aux"
+16	15	"cop"
+10	16	"rcmod"
+16	18	"prepc_for"
+18	19	"dobj"
+22	21	"det"
+18	22	"prep_by"
+22	24	"prep_of"
+27	26	"nn"
+22	27	"prep_in"
+
+>mention
+5	5	"Protein(TAFII105)"
+
+>trigger
+>argument
+>relation
+
+

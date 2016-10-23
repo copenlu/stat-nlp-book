@@ -1,0 +1,988 @@
+>>
+>word
+0	"Root"
+1	"Plasmids"
+2	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Expression"
+2	"vectors"
+3	"encoding"
+4	"human"
+5	"Foxp3"
+6	"("
+7	"pCMV-Foxp3"
+8	"-IRES-EGFP"
+9	")"
+10	"and"
+11	"human"
+12	"Foxp3"
+13	"lacking"
+14	"the"
+15	"forkhead"
+16	"("
+17	"FKH"
+18	")"
+19	"domain"
+20	"("
+21	"pCMV-DeltaFKH-IRES-EGFP"
+22	")"
+23	"were"
+24	"generous"
+25	"gifts"
+26	"from"
+27	"S."
+28	"Ziegler"
+29	"("
+30	"Benaroya"
+31	"Research"
+32	"Institute"
+33	")"
+34	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"VBG"
+4	"JJ"
+5	"NN"
+6	"-LRB-"
+7	"NN"
+8	"NN"
+9	"-RRB-"
+10	"CC"
+11	"JJ"
+12	"NN"
+13	"VBG"
+14	"DT"
+15	"NN"
+16	"-LRB-"
+17	"NN"
+18	"-RRB-"
+19	"NN"
+20	"-LRB-"
+21	"NN"
+22	"-RRB-"
+23	"VBD"
+24	"JJ"
+25	"NNS"
+26	"IN"
+27	"NNP"
+28	"NNP"
+29	"-LRB-"
+30	"NN"
+31	"NN"
+32	"NN"
+33	"-RRB-"
+34	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+25	2	"nsubj"
+2	3	"partmod"
+5	4	"amod"
+3	5	"dobj"
+8	7	"nn"
+5	8	"appos"
+12	11	"amod"
+3	12	"dobj"
+5	12	"conj_and"
+2	13	"partmod"
+19	14	"det"
+19	15	"nn"
+19	17	"nn"
+13	19	"dobj"
+19	21	"appos"
+25	23	"cop"
+25	24	"amod"
+28	27	"nn"
+25	28	"prep_from"
+32	30	"nn"
+32	31	"nn"
+28	32	"appos"
+
+>mention
+5	5	"Protein(Foxp3)"
+7	7	"Protein(pCMV-Foxp3)"
+12	12	"Protein(Foxp3)"
+
+>trigger
+1	1	"Gene_expression"
+13	13	"Negative_regulation"
+>argument
+1	5	"Theme"
+1	12	"Theme"
+13	12	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"pEGFP-C2"
+2	"was"
+3	"provided"
+4	"by"
+5	"I."
+6	"Lipinski"
+7	"("
+8	"NIDDK/NIH"
+9	")"
+10	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"VBN"
+4	"IN"
+5	"NNP"
+6	"NNP"
+7	"-LRB-"
+8	"NN"
+9	"-RRB-"
+10	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubjpass"
+3	2	"auxpass"
+6	5	"nn"
+3	6	"agent"
+6	8	"abbrev"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"pcDNA3"
+2	"was"
+3	"provided"
+4	"by"
+5	"K."
+6	"T."
+7	"Jeang"
+8	"("
+9	"NIAID/NIH"
+10	")"
+11	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"VBN"
+4	"IN"
+5	"NN"
+6	"NN"
+7	"NN"
+8	"-LRB-"
+9	"NN"
+10	"-RRB-"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubjpass"
+3	2	"auxpass"
+7	5	"nn"
+7	6	"nn"
+3	7	"agent"
+7	9	"abbrev"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"pCMV4-Tax"
+2	"was"
+3	"a"
+4	"generous"
+5	"gift"
+6	"from"
+7	"W."
+8	"Greene"
+9	"("
+10	"University"
+11	"of"
+12	"California"
+13	"San"
+14	"Francisco"
+15	")"
+16	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"NNP"
+8	"NNP"
+9	"-LRB-"
+10	"NNP"
+11	"IN"
+12	"NNP"
+13	"NNP"
+14	"NNP"
+15	"-RRB-"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"nsubj"
+5	2	"cop"
+5	3	"det"
+5	4	"amod"
+8	7	"nn"
+5	8	"prep_from"
+8	10	"dep"
+14	12	"nn"
+14	13	"nn"
+10	14	"prep_of"
+
+>mention
+1	1	"Protein(pCMV4-Tax)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"pGL4-luc2"
+2	"and"
+3	"pGL4-TKhRluc2"
+4	"were"
+5	"purchased"
+6	"from"
+7	"Promega"
+8	"("
+9	"Madison"
+10	","
+11	"Wisconsin"
+12	","
+13	"United"
+14	"States"
+15	")"
+16	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CC"
+3	"NN"
+4	"VBD"
+5	"VBN"
+6	"IN"
+7	"NN"
+8	"-LRB-"
+9	"NNP"
+10	","
+11	"NNP"
+12	","
+13	"JJ"
+14	"NNS"
+15	"-RRB-"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"nsubjpass"
+1	3	"conj_and"
+5	3	"nsubjpass"
+5	4	"auxpass"
+5	7	"prep_from"
+14	9	"nn"
+14	11	"appos"
+14	13	"amod"
+7	14	"appos"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"pUC18"
+2	"was"
+3	"purchased"
+4	"from"
+5	"Stratagene"
+6	"("
+7	"La"
+8	"Jolla"
+9	","
+10	"California"
+11	","
+12	"United"
+13	"States"
+14	")"
+15	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"VBN"
+4	"IN"
+5	"NN"
+6	"-LRB-"
+7	"NN"
+8	"NNP"
+9	","
+10	"NNP"
+11	","
+12	"JJ"
+13	"NNS"
+14	"-RRB-"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubjpass"
+3	2	"auxpass"
+3	5	"prep_from"
+13	7	"nn"
+13	8	"nn"
+13	10	"appos"
+13	12	"amod"
+5	13	"appos"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"HIV-1"
+2	"wt"
+3	"LTR"
+4	"and"
+5	"HIV-1"
+6	"Delta-kappaB"
+7	"LTR"
+8	"luciferase"
+9	"reporter"
+10	"vectors"
+11	"were"
+12	"constructed"
+13	"by"
+14	"cloning"
+15	"the"
+16	"XhoI/HindIII"
+17	"LTR"
+18	"fragments"
+19	"from"
+20	"pHIV-CAT"
+21	"and"
+22	"pDelta-kappaB-HIV-CAT"
+23	"("
+24	"AIDS"
+25	"Research"
+26	"and"
+27	"Reference"
+28	"Reagent"
+29	"Program"
+30	","
+31	"NIAID/NIH"
+32	")"
+33	"into"
+34	"the"
+35	"multiple"
+36	"cloning"
+37	"site"
+38	"of"
+39	"pGL4-luc2"
+40	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NN"
+4	"CC"
+5	"NN"
+6	"NN"
+7	"NN"
+8	"NN"
+9	"NN"
+10	"NNS"
+11	"VBD"
+12	"VBN"
+13	"IN"
+14	"VBG"
+15	"DT"
+16	"NN"
+17	"NN"
+18	"NNS"
+19	"IN"
+20	"NN"
+21	"CC"
+22	"NN"
+23	"-LRB-"
+24	"NN"
+25	"NN"
+26	"CC"
+27	"NN"
+28	"NN"
+29	"NN"
+30	","
+31	"NN"
+32	"-RRB-"
+33	"IN"
+34	"DT"
+35	"JJ"
+36	"VBG"
+37	"NN"
+38	"IN"
+39	"NN"
+40	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	2	"nn"
+10	3	"nn"
+7	5	"nn"
+7	6	"nn"
+3	7	"conj_and"
+10	7	"nn"
+10	8	"nn"
+10	9	"nn"
+12	10	"nsubjpass"
+12	11	"auxpass"
+12	14	"agent"
+18	15	"det"
+18	16	"nn"
+18	17	"nn"
+14	18	"dobj"
+14	20	"prep_from"
+14	22	"prep_from"
+20	22	"conj_and"
+25	24	"nn"
+14	25	"dep"
+29	27	"nn"
+29	28	"nn"
+14	29	"dep"
+25	29	"conj_and"
+25	31	"appos"
+37	34	"det"
+37	35	"amod"
+37	36	"amod"
+14	37	"prep_into"
+37	39	"prep_of"
+
+>mention
+8	8	"Protein(luciferase)"
+20	20	"Protein(pHIV-CAT)"
+22	22	"Protein(pDelta-kappaB-HIV-CAT)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"NF-kappaB"
+2	","
+3	"HTLV-I"
+4	"LTR"
+5	","
+6	"and"
+7	"CREB"
+8	"luciferase"
+9	"reporter"
+10	"and"
+11	"pCMV-p300"
+12	"-HA"
+13	"expression"
+14	"vectors"
+15	"were"
+16	"generously"
+17	"provided"
+18	"by"
+19	"B."
+20	"Wigdahl"
+21	"("
+22	"Drexel"
+23	"University"
+24	"College"
+25	"of"
+26	"Medicine"
+27	")"
+28	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	","
+3	"NN"
+4	"NN"
+5	","
+6	"CC"
+7	"NN"
+8	"NN"
+9	"NN"
+10	"CC"
+11	"NN"
+12	"NN"
+13	"NN"
+14	"NNS"
+15	"VBD"
+16	"RB"
+17	"VBN"
+18	"IN"
+19	"NNP"
+20	"NNP"
+21	"-LRB-"
+22	"NNP"
+23	"NNP"
+24	"NNP"
+25	"IN"
+26	"NN"
+27	"-RRB-"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	1	"nn"
+4	3	"nn"
+1	4	"conj_and"
+9	4	"nn"
+1	7	"conj_and"
+9	7	"nn"
+9	8	"nn"
+17	9	"nsubjpass"
+14	11	"nn"
+14	12	"nn"
+14	13	"nn"
+9	14	"conj_and"
+17	14	"nsubjpass"
+17	15	"auxpass"
+17	16	"advmod"
+20	19	"nn"
+17	20	"agent"
+24	22	"nn"
+24	23	"nn"
+20	24	"dep"
+24	26	"prep_of"
+
+>mention
+8	8	"Protein(luciferase)"
+11	11	"Protein(pCMV-p300)"
+
+>trigger
+13	13	"Gene_expression"
+>argument
+13	8	"Theme"
+13	11	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"HTLV-I"
+2	"pACH"
+3	"infectious"
+4	"molecular"
+5	"clone"
+6	"has"
+7	"been"
+8	"described"
+9	"previously"
+10	"["
+11	"30"
+12	"]"
+13	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"JJ"
+4	"JJ"
+5	"NN"
+6	"VBZ"
+7	"VBN"
+8	"VBN"
+9	"RB"
+10	"-LRB-"
+11	"CD"
+12	"-RRB-"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"nn"
+5	2	"nn"
+5	3	"amod"
+5	4	"amod"
+8	5	"nsubjpass"
+8	6	"aux"
+8	7	"auxpass"
+8	9	"advmod"
+11	10	"punct"
+8	11	"dep"
+11	12	"punct"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"pFR-luc"
+2	","
+3	"pFA-CMV"
+4	","
+5	"pFA2-CREB-1"
+6	","
+7	"and"
+8	"pFA2-c-Jun"
+9	"were"
+10	"purchased"
+11	"from"
+12	"Stratagene"
+13	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	","
+3	"NN"
+4	","
+5	"NN"
+6	","
+7	"CC"
+8	"NN"
+9	"VBD"
+10	"VBN"
+11	"IN"
+12	"NN"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+10	1	"nsubjpass"
+1	3	"conj_and"
+10	3	"nsubjpass"
+1	5	"conj_and"
+10	5	"nsubjpass"
+1	8	"conj_and"
+10	8	"nsubjpass"
+10	9	"auxpass"
+10	12	"prep_from"
+
+>mention
+5	5	"Protein(pFA2-CREB-1)"
+8	8	"Protein(pFA2-c-Jun)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"pFA-Tax"
+2	"("
+3	"encoding"
+4	"a"
+5	"fusion"
+6	"protein"
+7	"consisting"
+8	"of"
+9	"the"
+10	"Gal4"
+11	"DNA-binding"
+12	"domain"
+13	"fused"
+14	"in-frame"
+15	"to"
+16	"HTLV-I"
+17	"Tax"
+18	")"
+19	"was"
+20	"constructed"
+21	"by"
+22	"PCR"
+23	"amplification"
+24	"of"
+25	"HTLV-I"
+26	"Tax"
+27	"using"
+28	"pCMV4-Tax"
+29	"as"
+30	"a"
+31	"template"
+32	"and"
+33	"BamHI/BglII-tagged"
+34	"primers"
+35	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"-LRB-"
+3	"VBG"
+4	"DT"
+5	"NN"
+6	"NN"
+7	"VBG"
+8	"IN"
+9	"DT"
+10	"NN"
+11	"JJ"
+12	"NN"
+13	"VBN"
+14	"RB"
+15	"TO"
+16	"NN"
+17	"NN"
+18	"-RRB-"
+19	"VBD"
+20	"VBN"
+21	"IN"
+22	"NN"
+23	"NN"
+24	"IN"
+25	"NN"
+26	"NN"
+27	"VBG"
+28	"NN"
+29	"IN"
+30	"DT"
+31	"NN"
+32	"CC"
+33	"JJ"
+34	"NNS"
+35	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+20	1	"nsubjpass"
+1	3	"partmod"
+6	4	"det"
+6	5	"nn"
+3	6	"dobj"
+6	7	"partmod"
+12	9	"det"
+12	10	"nn"
+12	11	"amod"
+7	12	"prep_of"
+12	13	"partmod"
+13	14	"advmod"
+17	16	"nn"
+13	17	"prep_to"
+20	19	"auxpass"
+23	22	"nn"
+20	23	"agent"
+26	25	"nn"
+23	26	"prep_of"
+23	27	"partmod"
+27	28	"dobj"
+31	30	"det"
+27	31	"prep_as"
+34	33	"amod"
+27	34	"prep_as"
+31	34	"conj_and"
+
+>mention
+1	1	"Protein(pFA-Tax)"
+10	10	"Protein(Gal4)"
+17	17	"Protein(Tax)"
+26	26	"Protein(Tax)"
+28	28	"Protein(pCMV4-Tax)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"amplified"
+3	"insert"
+4	"was"
+5	"digested"
+6	"and"
+7	"ligated"
+8	"into"
+9	"the"
+10	"BamHI/BglII"
+11	"sites"
+12	"of"
+13	"pFA-CMV"
+14	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"VBN"
+3	"NN"
+4	"VBD"
+5	"VBN"
+6	"CC"
+7	"VBN"
+8	"IN"
+9	"DT"
+10	"NN"
+11	"NNS"
+12	"IN"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+5	3	"nsubjpass"
+7	3	"nsubjpass"
+5	4	"auxpass"
+5	7	"conj_and"
+11	9	"det"
+11	10	"nn"
+7	11	"prep_into"
+11	13	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Plasmid"
+2	"contents"
+3	"were"
+4	"confirmed"
+5	"by"
+6	"DNA"
+7	"sequencing"
+8	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"VBD"
+4	"VBN"
+5	"IN"
+6	"NN"
+7	"NN"
+8	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+4	2	"nsubjpass"
+4	3	"auxpass"
+7	6	"nn"
+4	7	"agent"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

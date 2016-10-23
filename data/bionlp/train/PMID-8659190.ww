@@ -1,0 +1,505 @@
+>>
+>word
+0	"Root"
+1	"Transcription"
+2	"factors"
+3	"of"
+4	"T"
+5	"and"
+6	"B"
+7	"lymphocytes"
+8	"--"
+9	"basic"
+10	"research"
+11	"and"
+12	"clinical"
+13	"perspectives"
+14	"for"
+15	"gastroenterology"
+16	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"IN"
+4	"NN"
+5	"CC"
+6	"NN"
+7	"NNS"
+8	":"
+9	"JJ"
+10	"NN"
+11	"CC"
+12	"JJ"
+13	"NNS"
+14	"IN"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+7	4	"nn"
+4	6	"conj_and"
+7	6	"nn"
+2	7	"prep_of"
+10	9	"amod"
+2	10	"dep"
+13	12	"amod"
+2	13	"dep"
+10	13	"conj_and"
+13	15	"prep_for"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Tissue"
+2	"specific"
+3	"regulation"
+4	"of"
+5	"gene"
+6	"expression"
+7	"by"
+8	"transcription"
+9	"factors"
+10	"is"
+11	"a"
+12	"fascinating"
+13	"new"
+14	"field"
+15	"in"
+16	"molecular"
+17	"immunology"
+18	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"JJ"
+3	"NN"
+4	"IN"
+5	"NN"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"NNS"
+10	"VBZ"
+11	"DT"
+12	"JJ"
+13	"JJ"
+14	"NN"
+15	"IN"
+16	"JJ"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"dep"
+3	2	"amod"
+14	3	"nsubj"
+6	5	"nn"
+3	6	"prep_of"
+9	8	"nn"
+3	9	"prep_by"
+14	10	"cop"
+14	11	"det"
+14	12	"amod"
+14	13	"amod"
+17	16	"amod"
+14	17	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"review"
+3	"summarizes"
+4	"data"
+5	"on"
+6	"specific"
+7	"regulation"
+8	"of"
+9	"promoters"
+10	"and"
+11	"enhancers"
+12	"by"
+13	"nuclear"
+14	"trans-acting"
+15	"factors"
+16	"in"
+17	"lymphocytes"
+18	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBZ"
+4	"NNS"
+5	"IN"
+6	"JJ"
+7	"NN"
+8	"IN"
+9	"NNS"
+10	"CC"
+11	"NNS"
+12	"IN"
+13	"JJ"
+14	"JJ"
+15	"NNS"
+16	"IN"
+17	"NNS"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+3	4	"dobj"
+7	6	"amod"
+4	7	"prep_on"
+7	9	"prep_of"
+7	11	"prep_of"
+9	11	"conj_and"
+15	13	"amod"
+15	14	"amod"
+7	15	"prep_by"
+15	17	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"structural"
+3	"classes"
+4	"of"
+5	"transcription"
+6	"factors"
+7	"are"
+8	"described"
+9	"and"
+10	"basic"
+11	"methods"
+12	"for"
+13	"detection"
+14	"and"
+15	"analysis"
+16	"of"
+17	"transcription"
+18	"factors"
+19	"are"
+20	"detailed"
+21	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NNS"
+4	"IN"
+5	"NN"
+6	"NNS"
+7	"VBP"
+8	"VBN"
+9	"CC"
+10	"JJ"
+11	"NNS"
+12	"IN"
+13	"NN"
+14	"CC"
+15	"NN"
+16	"IN"
+17	"NN"
+18	"NNS"
+19	"VBP"
+20	"VBN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+8	3	"nsubjpass"
+6	5	"nn"
+3	6	"prep_of"
+8	7	"auxpass"
+11	10	"amod"
+20	11	"nsubjpass"
+11	13	"prep_for"
+11	15	"prep_for"
+13	15	"conj_and"
+18	17	"nn"
+13	18	"prep_of"
+20	19	"auxpass"
+8	20	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Furthermore"
+2	","
+3	"the"
+4	"most"
+5	"important"
+6	"trans-acting"
+7	"factors"
+8	"of"
+9	"T"
+10	"and"
+11	"B"
+12	"lymphocytes"
+13	"("
+14	"e.g."
+15	"NF-kB"
+16	","
+17	"NF-AT"
+18	"and"
+19	"STAT"
+20	"families"
+21	")"
+22	"and"
+23	"their"
+24	"functional"
+25	"importance"
+26	"are"
+27	"described"
+28	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"RBS"
+5	"JJ"
+6	"JJ"
+7	"NNS"
+8	"IN"
+9	"NN"
+10	"CC"
+11	"NN"
+12	"NNS"
+13	"-LRB-"
+14	"NN"
+15	"NN"
+16	","
+17	"NN"
+18	"CC"
+19	"NN"
+20	"NNS"
+21	"-RRB-"
+22	"CC"
+23	"PRP$"
+24	"JJ"
+25	"NN"
+26	"VBP"
+27	"VBN"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+27	1	"advmod"
+7	3	"det"
+5	4	"advmod"
+7	5	"amod"
+7	6	"amod"
+27	7	"nsubjpass"
+12	9	"nn"
+9	11	"conj_and"
+12	11	"nn"
+7	12	"prep_of"
+15	14	"nn"
+20	15	"nn"
+15	17	"conj_and"
+20	17	"nn"
+15	19	"conj_and"
+20	19	"nn"
+12	20	"appos"
+25	23	"poss"
+25	24	"amod"
+7	25	"conj_and"
+27	25	"nsubjpass"
+27	26	"auxpass"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Several"
+2	"methods"
+3	"for"
+4	"specific"
+5	"down-regulation"
+6	"of"
+7	"transcription"
+8	"factors"
+9	"are"
+10	"shown"
+11	"that"
+12	"may"
+13	"be"
+14	"relevant"
+15	"to"
+16	"treatment"
+17	"of"
+18	"human"
+19	"disease"
+20	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NNS"
+3	"IN"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NNS"
+9	"VBP"
+10	"VBN"
+11	"WDT"
+12	"MD"
+13	"VB"
+14	"JJ"
+15	"TO"
+16	"NN"
+17	"IN"
+18	"JJ"
+19	"NN"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+10	2	"nsubjpass"
+5	4	"amod"
+2	5	"prep_for"
+8	7	"nn"
+5	8	"prep_of"
+10	9	"auxpass"
+14	11	"nsubj"
+14	12	"aux"
+14	13	"cop"
+10	14	"ccomp"
+14	16	"prep_to"
+19	18	"amod"
+16	19	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"data"
+3	"are"
+4	"discussed"
+5	"with"
+6	"regard"
+7	"to"
+8	"their"
+9	"potential"
+10	"clinical"
+11	"relevance"
+12	"for"
+13	"gastroenterology"
+14	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NNS"
+3	"VBP"
+4	"VBN"
+5	"IN"
+6	"NN"
+7	"TO"
+8	"PRP$"
+9	"JJ"
+10	"JJ"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+4	2	"nsubjpass"
+4	3	"auxpass"
+11	8	"poss"
+11	9	"amod"
+11	10	"amod"
+4	11	"prep_with_regard_to"
+11	13	"prep_for"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

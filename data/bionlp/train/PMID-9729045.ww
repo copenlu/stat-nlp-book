@@ -1,0 +1,598 @@
+>>
+>word
+0	"Root"
+1	"CD30"
+2	"is"
+3	"a"
+4	"CD40"
+5	"-inducible"
+6	"molecule"
+7	"that"
+8	"negatively"
+9	"regulates"
+10	"CD40"
+11	"-mediated"
+12	"immunoglobulin"
+13	"class"
+14	"switching"
+15	"in"
+16	"non-antigen-selected"
+17	"human"
+18	"B"
+19	"cells"
+20	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"DT"
+4	"NN"
+5	"JJ"
+6	"NN"
+7	"WDT"
+8	"RB"
+9	"VBZ"
+10	"NN"
+11	"JJ"
+12	"NN"
+13	"NN"
+14	"NN"
+15	"IN"
+16	"JJ"
+17	"JJ"
+18	"NN"
+19	"NNS"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"nsubj"
+6	2	"cop"
+6	3	"det"
+6	4	"nn"
+6	5	"amod"
+9	6	"nsubj"
+9	8	"advmod"
+6	9	"rcmod"
+14	10	"nn"
+14	11	"amod"
+14	12	"nn"
+14	13	"nn"
+9	14	"dobj"
+19	16	"amod"
+19	17	"amod"
+19	18	"nn"
+14	19	"prep_in"
+
+>mention
+1	1	"Protein(CD30)"
+4	4	"Protein(CD40)"
+10	10	"Protein(CD40)"
+
+>trigger
+5	5	"Positive_regulation"
+>argument
+5	1	"Theme"
+5	4	"Cause"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"used"
+3	"our"
+4	"monoclonal"
+5	"model"
+6	"of"
+7	"germinal"
+8	"center"
+9	"maturation"
+10	","
+11	"CL-01"
+12	"B"
+13	"cells"
+14	","
+15	"to"
+16	"investigate"
+17	"the"
+18	"role"
+19	"of"
+20	"CD30"
+21	"in"
+22	"human"
+23	"B"
+24	"cell"
+25	"differentiation"
+26	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBD"
+3	"PRP$"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"JJ"
+8	"NN"
+9	"NN"
+10	","
+11	"NN"
+12	"NN"
+13	"NNS"
+14	","
+15	"TO"
+16	"VB"
+17	"DT"
+18	"NN"
+19	"IN"
+20	"NN"
+21	"IN"
+22	"JJ"
+23	"NN"
+24	"NN"
+25	"NN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+5	3	"poss"
+5	4	"amod"
+2	5	"dobj"
+9	7	"amod"
+9	8	"nn"
+5	9	"prep_of"
+13	11	"nn"
+13	12	"nn"
+9	13	"appos"
+16	15	"aux"
+2	16	"xcomp"
+18	17	"det"
+16	18	"dobj"
+18	20	"prep_of"
+25	22	"amod"
+25	23	"nn"
+25	24	"nn"
+18	25	"prep_in"
+
+>mention
+20	20	"Protein(CD30)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"CL-01"
+2	"cells"
+3	"are"
+4	"IgM"
+5	"+"
+6	"IgD"
+7	"+"
+8	"CD30"
+9	"+"
+10	"and"
+11	"switch"
+12	"to"
+13	"IgG"
+14	","
+15	"IgA"
+16	","
+17	"and"
+18	"IgE"
+19	"when"
+20	"exposed"
+21	"to"
+22	"CD40L"
+23	"and"
+24	"IL-4"
+25	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"VBP"
+4	"NN"
+5	"CC"
+6	"NN"
+7	"CC"
+8	"NN"
+9	"CC"
+10	"CC"
+11	"VBP"
+12	"TO"
+13	"NN"
+14	","
+15	"NN"
+16	","
+17	"CC"
+18	"NN"
+19	"WRB"
+20	"VBN"
+21	"TO"
+22	"NN"
+23	"CC"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+4	2	"nsubj"
+11	2	"nsubj"
+4	3	"cop"
+4	6	"conj_+"
+4	8	"conj_+"
+11	10	"cc"
+4	11	"conj_+"
+11	13	"prep_to"
+11	15	"prep_to"
+13	15	"conj_and"
+11	18	"prep_to"
+13	18	"conj_and"
+20	19	"advmod"
+11	20	"advcl"
+20	22	"prep_to"
+20	24	"prep_to"
+22	24	"conj_and"
+
+>mention
+8	8	"Protein(CD30)"
+22	22	"Protein(CD40L)"
+24	24	"Protein(IL-4)"
+
+>trigger
+9	9	"Gene_expression"
+11	11	"Negative_regulation"
+>argument
+9	8	"Theme"
+11	9	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Switching"
+2	"is"
+3	"hampered"
+4	"by"
+5	"CD30"
+6	"coengagement"
+7	","
+8	"possibly"
+9	"through"
+10	"interference"
+11	"with"
+12	"the"
+13	"CD40"
+14	"-mediated"
+15	"NF-kappaB-dependent"
+16	"transcriptional"
+17	"activation"
+18	"of"
+19	"downstream"
+20	"C"
+21	"("
+22	"H"
+23	")"
+24	"genes"
+25	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"VBN"
+4	"IN"
+5	"NN"
+6	"NN"
+7	","
+8	"RB"
+9	"IN"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"NN"
+14	"JJ"
+15	"JJ"
+16	"JJ"
+17	"NN"
+18	"IN"
+19	"JJ"
+20	"NN"
+21	"-LRB-"
+22	"NN"
+23	"-RRB-"
+24	"NNS"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubjpass"
+3	2	"auxpass"
+6	5	"nn"
+3	6	"agent"
+3	8	"advmod"
+3	10	"prep_through"
+17	12	"det"
+17	13	"nn"
+17	14	"amod"
+17	15	"amod"
+17	16	"amod"
+10	17	"prep_with"
+24	19	"amod"
+24	20	"nn"
+24	22	"nn"
+17	24	"prep_of"
+
+>mention
+5	5	"Protein(CD30)"
+13	13	"Protein(CD40)"
+
+>trigger
+6	6	"Binding"
+>argument
+6	5	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"physiological"
+3	"relevance"
+4	"of"
+5	"this"
+6	"phenomenon"
+7	"is"
+8	"emphasized"
+9	"by"
+10	"similar"
+11	"CD30"
+12	"-mediated"
+13	"effects"
+14	"in"
+15	"naive"
+16	"B"
+17	"cells"
+18	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"VBZ"
+8	"VBN"
+9	"IN"
+10	"JJ"
+11	"NN"
+12	"JJ"
+13	"NNS"
+14	"IN"
+15	"JJ"
+16	"NN"
+17	"NNS"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+8	3	"nsubjpass"
+6	5	"det"
+3	6	"prep_of"
+8	7	"auxpass"
+13	10	"amod"
+13	11	"nn"
+13	12	"amod"
+8	13	"agent"
+17	15	"amod"
+17	16	"nn"
+13	17	"prep_in"
+
+>mention
+11	11	"Protein(CD30)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Expression"
+2	"of"
+3	"CD30"
+4	"by"
+5	"these"
+6	"cells"
+7	"is"
+8	"induced"
+9	"by"
+10	"CD40L"
+11	"but"
+12	"is"
+13	"inhibited"
+14	"by"
+15	"B"
+16	"cell"
+17	"receptor"
+18	"coengagement"
+19	"and/or"
+20	"exposure"
+21	"to"
+22	"IL-6"
+23	"and"
+24	"IL-12"
+25	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"IN"
+5	"DT"
+6	"NNS"
+7	"VBZ"
+8	"VBN"
+9	"IN"
+10	"NN"
+11	"CC"
+12	"VBZ"
+13	"VBN"
+14	"IN"
+15	"NN"
+16	"NN"
+17	"NN"
+18	"NN"
+19	"CC"
+20	"NN"
+21	"TO"
+22	"NN"
+23	"CC"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"nsubjpass"
+13	1	"nsubjpass"
+1	3	"prep_of"
+6	5	"det"
+1	6	"prep_by"
+8	7	"auxpass"
+8	10	"agent"
+13	12	"auxpass"
+8	13	"conj_but"
+18	15	"nn"
+18	16	"nn"
+18	17	"nn"
+13	18	"agent"
+13	20	"agent"
+18	20	"conj_and/or"
+20	22	"prep_to"
+20	24	"prep_to"
+22	24	"conj_and"
+
+>mention
+3	3	"Protein(CD30)"
+10	10	"Protein(CD40L)"
+22	22	"Protein(IL-6)"
+
+>trigger
+1	1	"Gene_expression"
+8	8	"Positive_regulation"
+13	13	"Negative_regulation"
+>argument
+1	3	"Theme"
+8	10	"Cause"
+8	1	"Theme"
+13	8	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Our"
+2	"data"
+3	"suggest"
+4	"that"
+5	"CD30"
+6	"critically"
+7	"regulates"
+8	"the"
+9	"CD40"
+10	"-mediated"
+11	"differentiation"
+12	"of"
+13	"non-antigen-selected"
+14	"human"
+15	"B"
+16	"cells"
+17	"."
+
+>tag
+0	"Root"
+1	"PRP$"
+2	"NNS"
+3	"VBP"
+4	"IN"
+5	"NN"
+6	"RB"
+7	"VBZ"
+8	"DT"
+9	"NN"
+10	"JJ"
+11	"NN"
+12	"IN"
+13	"JJ"
+14	"JJ"
+15	"NN"
+16	"NNS"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"poss"
+3	2	"nsubj"
+7	4	"complm"
+7	5	"nsubj"
+7	6	"advmod"
+3	7	"ccomp"
+11	8	"det"
+11	9	"nn"
+11	10	"amod"
+7	11	"dobj"
+16	13	"amod"
+16	14	"amod"
+16	15	"nn"
+11	16	"prep_of"
+
+>mention
+5	5	"Protein(CD30)"
+9	9	"Protein(CD40)"
+
+>trigger
+>argument
+>relation
+
+

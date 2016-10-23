@@ -1,0 +1,834 @@
+>>
+>word
+0	"Root"
+1	"Cloning"
+2	"and"
+3	"functional"
+4	"characterization"
+5	"of"
+6	"early"
+7	"B-cell"
+8	"factor"
+9	","
+10	"a"
+11	"regulator"
+12	"of"
+13	"lymphocyte-specific"
+14	"gene"
+15	"expression"
+16	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CC"
+3	"JJ"
+4	"NN"
+5	"IN"
+6	"JJ"
+7	"NN"
+8	"NN"
+9	","
+10	"DT"
+11	"NN"
+12	"IN"
+13	"JJ"
+14	"NN"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	3	"amod"
+1	4	"conj_and"
+8	6	"amod"
+8	7	"nn"
+1	8	"prep_of"
+11	10	"det"
+8	11	"appos"
+15	13	"amod"
+15	14	"nn"
+11	15	"prep_of"
+
+>mention
+6	8	"Protein(factor)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Early"
+2	"B-cell"
+3	"factor"
+4	"("
+5	"EBF"
+6	")"
+7	"was"
+8	"identified"
+9	"previously"
+10	"as"
+11	"a"
+12	"tissue-specific"
+13	"and"
+14	"differentiation"
+15	"stage-specific"
+16	"DNA-binding"
+17	"protein"
+18	"that"
+19	"participates"
+20	"in"
+21	"the"
+22	"regulation"
+23	"of"
+24	"the"
+25	"pre-B"
+26	"and"
+27	"B"
+28	"lymphocyte-specific"
+29	"mb-1"
+30	"gene"
+31	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NN"
+4	"-LRB-"
+5	"NN"
+6	"-RRB-"
+7	"VBD"
+8	"VBN"
+9	"RB"
+10	"IN"
+11	"DT"
+12	"JJ"
+13	"CC"
+14	"NN"
+15	"JJ"
+16	"NN"
+17	"NN"
+18	"WDT"
+19	"VBZ"
+20	"IN"
+21	"DT"
+22	"NN"
+23	"IN"
+24	"DT"
+25	"NN"
+26	"CC"
+27	"NN"
+28	"JJ"
+29	"NN"
+30	"NN"
+31	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"nn"
+8	3	"nsubjpass"
+3	5	"abbrev"
+8	7	"auxpass"
+8	9	"advmod"
+17	11	"det"
+17	12	"amod"
+15	14	"dep"
+12	15	"conj_and"
+17	15	"amod"
+17	16	"nn"
+8	17	"prep_as"
+19	17	"nsubj"
+17	19	"rcmod"
+22	21	"det"
+19	22	"prep_in"
+30	24	"det"
+28	25	"dep"
+28	27	"conj_and"
+30	27	"amod"
+30	28	"amod"
+30	29	"nn"
+22	30	"prep_of"
+
+>mention
+1	3	"Protein(factor)"
+5	5	"Protein(EBF)"
+29	29	"Protein(mb-1)"
+
+>trigger
+17	17	"Binding"
+22	22	"Regulation"
+>argument
+17	3	"Theme"
+17	5	"Theme"
+22	3	"Cause"
+22	5	"Cause"
+22	29	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Partial"
+2	"amino"
+3	"acid"
+4	"sequences"
+5	"obtained"
+6	"from"
+7	"purified"
+8	"EBF"
+9	"were"
+10	"used"
+11	"to"
+12	"isolate"
+13	"cDNA"
+14	"clones"
+15	","
+16	"which"
+17	"by"
+18	"multiple"
+19	"criteria"
+20	"encode"
+21	"EBF"
+22	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NN"
+4	"NNS"
+5	"VBN"
+6	"IN"
+7	"VBN"
+8	"NN"
+9	"VBD"
+10	"VBN"
+11	"TO"
+12	"VB"
+13	"NN"
+14	"NNS"
+15	","
+16	"WDT"
+17	"IN"
+18	"JJ"
+19	"NNS"
+20	"VB"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"amod"
+4	2	"nn"
+4	3	"nn"
+10	4	"nsubjpass"
+12	4	"xsubj"
+4	5	"partmod"
+8	7	"amod"
+5	8	"prep_from"
+10	9	"auxpass"
+12	11	"aux"
+10	12	"xcomp"
+14	13	"nn"
+12	14	"dobj"
+20	14	"nsubj"
+19	18	"amod"
+20	19	"prep_by"
+14	20	"rcmod"
+20	21	"dobj"
+
+>mention
+8	8	"Protein(EBF)"
+21	21	"Protein(EBF)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"recombinant"
+3	"polypeptide"
+4	"formed"
+5	"sequence-specific"
+6	"complexes"
+7	"with"
+8	"the"
+9	"EBF"
+10	"-binding"
+11	"site"
+12	"in"
+13	"the"
+14	"mb-1"
+15	"promoter"
+16	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"VBD"
+5	"JJ"
+6	"NNS"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"JJ"
+11	"NN"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+4	3	"nsubj"
+6	5	"amod"
+4	6	"dobj"
+11	8	"det"
+10	9	"dep"
+11	10	"amod"
+6	11	"prep_with"
+15	13	"det"
+15	14	"nn"
+11	15	"prep_in"
+
+>mention
+9	9	"Protein(EBF)"
+14	14	"Protein(mb-1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"cDNA"
+3	"hybridized"
+4	"to"
+5	"multiple"
+6	"transcripts"
+7	"in"
+8	"pre-B"
+9	"and"
+10	"B-cell"
+11	"lines"
+12	","
+13	"but"
+14	"transcripts"
+15	"were"
+16	"not"
+17	"detected"
+18	"at"
+19	"significant"
+20	"levels"
+21	"in"
+22	"plasmacytoma"
+23	","
+24	"T-cell"
+25	","
+26	"and"
+27	"nonlymphoid"
+28	"cell"
+29	"lines"
+30	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBD"
+4	"TO"
+5	"JJ"
+6	"NNS"
+7	"IN"
+8	"JJ"
+9	"CC"
+10	"NN"
+11	"NNS"
+12	","
+13	"CC"
+14	"NNS"
+15	"VBD"
+16	"RB"
+17	"VBN"
+18	"IN"
+19	"JJ"
+20	"NNS"
+21	"IN"
+22	"NN"
+23	","
+24	"NN"
+25	","
+26	"CC"
+27	"JJ"
+28	"NN"
+29	"NNS"
+30	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+6	5	"amod"
+3	6	"prep_to"
+11	8	"nn"
+8	10	"conj_and"
+11	10	"nn"
+3	11	"prep_in"
+17	14	"nsubjpass"
+17	15	"auxpass"
+17	16	"neg"
+3	17	"conj_but"
+20	19	"amod"
+17	20	"prep_at"
+20	22	"prep_in"
+20	24	"prep_in"
+22	24	"conj_and"
+29	27	"amod"
+29	28	"nn"
+20	29	"prep_in"
+22	29	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Expression"
+2	"of"
+3	"recombinant"
+4	"EBF"
+5	"in"
+6	"transfected"
+7	"nonlymphoid"
+8	"cells"
+9	"strongly"
+10	"activated"
+11	"transcription"
+12	"from"
+13	"reporter"
+14	"plasmids"
+15	"containing"
+16	"functional"
+17	"EBF"
+18	"-binding"
+19	"sites"
+20	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"JJ"
+4	"NN"
+5	"IN"
+6	"VBN"
+7	"JJ"
+8	"NNS"
+9	"RB"
+10	"VBD"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"NNS"
+15	"VBG"
+16	"JJ"
+17	"NN"
+18	"JJ"
+19	"NNS"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+10	1	"nsubj"
+4	3	"amod"
+1	4	"prep_of"
+8	6	"amod"
+8	7	"amod"
+1	8	"prep_in"
+10	9	"advmod"
+10	11	"dobj"
+14	13	"nn"
+11	14	"prep_from"
+14	15	"partmod"
+19	16	"amod"
+19	17	"nn"
+19	18	"amod"
+15	19	"dobj"
+
+>mention
+4	4	"Protein(EBF)"
+17	17	"Protein(EBF)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Analysis"
+2	"of"
+3	"DNA"
+4	"binding"
+5	"by"
+6	"deletion"
+7	"mutants"
+8	"of"
+9	"EBF"
+10	"identified"
+11	"an"
+12	"amino-terminal"
+13	"cysteine-rich"
+14	"DNA-binding"
+15	"domain"
+16	"lacking"
+17	"obvious"
+18	"sequence"
+19	"similarity"
+20	"to"
+21	"known"
+22	"transcription"
+23	"factors"
+24	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"NNS"
+8	"IN"
+9	"NN"
+10	"VBD"
+11	"DT"
+12	"JJ"
+13	"JJ"
+14	"JJ"
+15	"NN"
+16	"VBG"
+17	"JJ"
+18	"NN"
+19	"NN"
+20	"TO"
+21	"JJ"
+22	"NN"
+23	"NNS"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+10	1	"nsubj"
+4	3	"nn"
+1	4	"prep_of"
+7	6	"nn"
+1	7	"prep_by"
+7	9	"prep_of"
+15	11	"det"
+15	12	"amod"
+15	13	"amod"
+15	14	"amod"
+10	15	"dobj"
+15	16	"partmod"
+19	17	"amod"
+19	18	"nn"
+16	19	"dobj"
+23	21	"amod"
+23	22	"nn"
+19	23	"prep_to"
+
+>mention
+9	9	"Protein(EBF)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"DNA-binding"
+2	"assays"
+3	"with"
+4	"cotranslated"
+5	"wild-type"
+6	"and"
+7	"truncated"
+8	"forms"
+9	"of"
+10	"EBF"
+11	"indicated"
+12	"that"
+13	"the"
+14	"protein"
+15	"interacts"
+16	"with"
+17	"its"
+18	"site"
+19	"as"
+20	"a"
+21	"homodimer"
+22	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NNS"
+3	"IN"
+4	"VBN"
+5	"JJ"
+6	"CC"
+7	"VBN"
+8	"NNS"
+9	"IN"
+10	"NN"
+11	"VBD"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"VBZ"
+16	"IN"
+17	"PRP$"
+18	"NN"
+19	"IN"
+20	"DT"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+11	2	"nsubj"
+5	4	"amod"
+2	5	"prep_with"
+8	7	"amod"
+2	8	"prep_with"
+5	8	"conj_and"
+8	10	"prep_of"
+15	12	"complm"
+14	13	"det"
+15	14	"nsubj"
+11	15	"ccomp"
+18	17	"poss"
+15	18	"prep_with"
+21	20	"det"
+15	21	"prep_as"
+
+>mention
+10	10	"Protein(EBF)"
+
+>trigger
+15	15	"Binding"
+21	21	"Binding"
+>argument
+15	10	"Theme"
+21	10	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Deletions"
+2	"delineated"
+3	"a"
+4	"carboxy-terminal"
+5	"dimerization"
+6	"region"
+7	"containing"
+8	"two"
+9	"repeats"
+10	"of"
+11	"15"
+12	"amino"
+13	"acids"
+14	"that"
+15	"show"
+16	"similarity"
+17	"with"
+18	"the"
+19	"dimerization"
+20	"domains"
+21	"of"
+22	"basic-helix-loop-helix"
+23	"proteins"
+24	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"VBD"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"VBG"
+8	"CD"
+9	"NNS"
+10	"IN"
+11	"CD"
+12	"NN"
+13	"NNS"
+14	"WDT"
+15	"VBP"
+16	"NN"
+17	"IN"
+18	"DT"
+19	"NN"
+20	"NNS"
+21	"IN"
+22	"JJ"
+23	"NNS"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+6	3	"det"
+6	4	"amod"
+6	5	"nn"
+2	6	"dobj"
+6	7	"partmod"
+9	8	"num"
+7	9	"dobj"
+15	9	"nsubj"
+13	11	"num"
+13	12	"nn"
+9	13	"prep_of"
+9	15	"rcmod"
+15	16	"dobj"
+20	18	"det"
+20	19	"nn"
+16	20	"prep_with"
+23	22	"amod"
+20	23	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Together"
+2	","
+3	"these"
+4	"data"
+5	"suggest"
+6	"that"
+7	"EBF"
+8	"represents"
+9	"a"
+10	"novel"
+11	"regulator"
+12	"of"
+13	"B"
+14	"lymphocyte-specific"
+15	"gene"
+16	"expression"
+17	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"NNS"
+5	"VBP"
+6	"IN"
+7	"NN"
+8	"VBZ"
+9	"DT"
+10	"JJ"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"JJ"
+15	"NN"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"advmod"
+4	3	"det"
+5	4	"nsubj"
+8	6	"complm"
+8	7	"nsubj"
+5	8	"ccomp"
+11	9	"det"
+11	10	"amod"
+8	11	"dobj"
+14	13	"dep"
+16	14	"amod"
+16	15	"nn"
+11	16	"prep_of"
+
+>mention
+7	7	"Protein(EBF)"
+
+>trigger
+>argument
+>relation
+
+

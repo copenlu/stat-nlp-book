@@ -1,0 +1,459 @@
+>>
+>word
+0	"Root"
+1	"Neutrophil"
+2	"maturation"
+3	"and"
+4	"the"
+5	"role"
+6	"of"
+7	"retinoic"
+8	"acid"
+9	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"CC"
+4	"DT"
+5	"NN"
+6	"IN"
+7	"JJ"
+8	"NN"
+9	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+5	4	"det"
+2	5	"conj_and"
+8	7	"amod"
+5	8	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Neutrophil"
+2	"maturation"
+3	"occurs"
+4	"in"
+5	"well"
+6	"defined"
+7	"morphological"
+8	"stages"
+9	"that"
+10	"correlate"
+11	"with"
+12	"the"
+13	"acquisition"
+14	"of"
+15	"molecular"
+16	"markers"
+17	"associated"
+18	"with"
+19	"neutrophil"
+20	"function"
+21	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBZ"
+4	"IN"
+5	"RB"
+6	"VBN"
+7	"JJ"
+8	"NNS"
+9	"WDT"
+10	"VBP"
+11	"IN"
+12	"DT"
+13	"NN"
+14	"IN"
+15	"JJ"
+16	"NNS"
+17	"VBN"
+18	"IN"
+19	"NN"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+3	2	"nsubj"
+6	5	"advmod"
+8	6	"amod"
+8	7	"amod"
+3	8	"prep_in"
+10	8	"nsubj"
+8	10	"rcmod"
+13	12	"det"
+10	13	"prep_with"
+16	15	"amod"
+13	16	"prep_of"
+16	17	"partmod"
+20	19	"nn"
+17	20	"prep_with"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"A"
+2	"variety"
+3	"of"
+4	"factors"
+5	"are"
+6	"known"
+7	"to"
+8	"play"
+9	"a"
+10	"role"
+11	"in"
+12	"terminal"
+13	"neutrophil"
+14	"maturation"
+15	","
+16	"including"
+17	"the"
+18	"vitamin"
+19	"A"
+20	"derivative"
+21	","
+22	"retinoic"
+23	"acid"
+24	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NNS"
+5	"VBP"
+6	"VBN"
+7	"TO"
+8	"VB"
+9	"DT"
+10	"NN"
+11	"IN"
+12	"JJ"
+13	"NN"
+14	"NN"
+15	","
+16	"VBG"
+17	"DT"
+18	"NN"
+19	"NN"
+20	"NN"
+21	","
+22	"JJ"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+6	2	"nsubjpass"
+8	2	"xsubj"
+2	4	"prep_of"
+6	5	"auxpass"
+8	7	"aux"
+6	8	"xcomp"
+10	9	"det"
+8	10	"dobj"
+14	12	"amod"
+14	13	"nn"
+8	14	"prep_in"
+20	17	"det"
+20	18	"nn"
+20	19	"nn"
+14	20	"prep_including"
+23	22	"amod"
+20	23	"appos"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Retinoic"
+2	"acid"
+3	"can"
+4	"directly"
+5	"modulate"
+6	"gene"
+7	"expression"
+8	"via"
+9	"binding"
+10	"to"
+11	"its"
+12	"nuclear"
+13	"receptors"
+14	","
+15	"which"
+16	"can"
+17	","
+18	"in"
+19	"turn"
+20	","
+21	"activate"
+22	"transcription"
+23	"of"
+24	"target"
+25	"genes"
+26	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"MD"
+4	"RB"
+5	"VB"
+6	"NN"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"TO"
+11	"PRP$"
+12	"JJ"
+13	"NNS"
+14	","
+15	"WDT"
+16	"MD"
+17	","
+18	"IN"
+19	"NN"
+20	","
+21	"VB"
+22	"NN"
+23	"IN"
+24	"NN"
+25	"NNS"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+5	2	"nsubj"
+5	3	"aux"
+5	4	"advmod"
+7	6	"nn"
+5	7	"dobj"
+5	9	"prep_via"
+13	11	"poss"
+13	12	"amod"
+9	13	"prep_to"
+21	13	"nsubj"
+21	16	"aux"
+21	19	"prep_in"
+13	21	"rcmod"
+21	22	"dobj"
+25	24	"nn"
+22	25	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"A"
+2	"role"
+3	"for"
+4	"retinoic"
+5	"acid"
+6	"during"
+7	"neutrophil"
+8	"maturation"
+9	"has"
+10	"been"
+11	"suggested"
+12	"from"
+13	"a"
+14	"variety"
+15	"of"
+16	"sources"
+17	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NN"
+9	"VBZ"
+10	"VBN"
+11	"VBN"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"IN"
+16	"NNS"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+11	2	"nsubjpass"
+5	4	"amod"
+2	5	"prep_for"
+8	7	"nn"
+2	8	"prep_during"
+11	9	"aux"
+11	10	"auxpass"
+14	13	"det"
+11	14	"prep_from"
+14	16	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Here"
+2	"we"
+3	"present"
+4	"a"
+5	"review"
+6	"of"
+7	"the"
+8	"mechanism"
+9	"of"
+10	"retinoic"
+11	"acid"
+12	"receptor"
+13	"action"
+14	"and"
+15	"the"
+16	"major"
+17	"evidence"
+18	"showing"
+19	"that"
+20	"normal"
+21	"retinoid"
+22	"signaling"
+23	"is"
+24	"required"
+25	"for"
+26	"neutrophil"
+27	"maturation"
+28	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"PRP"
+3	"VBP"
+4	"DT"
+5	"NN"
+6	"IN"
+7	"DT"
+8	"NN"
+9	"IN"
+10	"JJ"
+11	"NN"
+12	"NN"
+13	"NN"
+14	"CC"
+15	"DT"
+16	"JJ"
+17	"NN"
+18	"VBG"
+19	"IN"
+20	"JJ"
+21	"NN"
+22	"NN"
+23	"VBZ"
+24	"VBN"
+25	"IN"
+26	"NN"
+27	"NN"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"advmod"
+3	2	"nsubj"
+5	4	"det"
+3	5	"dobj"
+8	7	"det"
+5	8	"prep_of"
+12	10	"amod"
+12	11	"nn"
+13	12	"nn"
+8	13	"prep_of"
+17	15	"det"
+17	16	"amod"
+3	17	"dobj"
+5	17	"conj_and"
+17	18	"partmod"
+24	19	"complm"
+22	20	"amod"
+22	21	"nn"
+24	22	"nsubjpass"
+24	23	"auxpass"
+18	24	"ccomp"
+27	26	"nn"
+24	27	"prep_for"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

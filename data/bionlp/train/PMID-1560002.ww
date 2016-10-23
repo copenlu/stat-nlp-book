@@ -1,0 +1,831 @@
+>>
+>word
+0	"Root"
+1	"The"
+2	"B"
+3	"cell-specific"
+4	"nuclear"
+5	"factor"
+6	"OTF-2"
+7	"positively"
+8	"regulates"
+9	"transcription"
+10	"of"
+11	"the"
+12	"human"
+13	"class"
+14	"II"
+15	"transplantation"
+16	"gene"
+17	","
+18	"DRA"
+19	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"JJ"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"RB"
+8	"VBZ"
+9	"NN"
+10	"IN"
+11	"DT"
+12	"JJ"
+13	"NN"
+14	"CD"
+15	"NN"
+16	"NN"
+17	","
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"det"
+3	2	"dep"
+6	3	"amod"
+6	4	"amod"
+6	5	"nn"
+8	6	"nsubj"
+8	7	"advmod"
+8	9	"dobj"
+16	11	"det"
+16	12	"amod"
+16	13	"nn"
+16	14	"num"
+16	15	"nn"
+9	16	"prep_of"
+16	18	"appos"
+
+>mention
+6	6	"Protein(OTF-2)"
+18	18	"Protein(DRA)"
+
+>trigger
+8	8	"Positive_regulation"
+9	9	"Transcription"
+>argument
+8	6	"Cause"
+8	9	"Theme"
+9	18	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"promoter"
+3	"of"
+4	"the"
+5	"major"
+6	"histocompatibility"
+7	"class"
+8	"II"
+9	"gene"
+10	"DRA"
+11	"contains"
+12	"an"
+13	"octamer"
+14	"element"
+15	"("
+16	"ATTTGCAT"
+17	")"
+18	"that"
+19	"is"
+20	"required"
+21	"for"
+22	"efficient"
+23	"DRA"
+24	"expression"
+25	"in"
+26	"B"
+27	"cells"
+28	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"NN"
+8	"CD"
+9	"NN"
+10	"NN"
+11	"VBZ"
+12	"DT"
+13	"NN"
+14	"NN"
+15	"-LRB-"
+16	"NN"
+17	"-RRB-"
+18	"WDT"
+19	"VBZ"
+20	"VBN"
+21	"IN"
+22	"JJ"
+23	"NN"
+24	"NN"
+25	"IN"
+26	"NN"
+27	"NNS"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+11	2	"nsubj"
+10	4	"det"
+10	5	"amod"
+10	6	"nn"
+10	7	"nn"
+10	8	"num"
+10	9	"nn"
+2	10	"prep_of"
+14	12	"det"
+14	13	"nn"
+11	14	"dobj"
+20	14	"nsubjpass"
+14	16	"abbrev"
+20	19	"auxpass"
+14	20	"rcmod"
+24	22	"amod"
+24	23	"nn"
+20	24	"prep_for"
+27	26	"nn"
+24	27	"prep_in"
+
+>mention
+10	10	"Protein(DRA)"
+23	23	"Protein(DRA)"
+
+>trigger
+20	20	"Positive_regulation"
+24	24	"Gene_expression"
+>argument
+20	10	"Cause"
+20	24	"Theme"
+24	23	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Several"
+2	"DNA-binding"
+3	"proteins"
+4	"are"
+5	"known"
+6	"to"
+7	"bind"
+8	"this"
+9	"sequence"
+10	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"JJ"
+3	"NNS"
+4	"VBP"
+5	"VBN"
+6	"TO"
+7	"VB"
+8	"DT"
+9	"NN"
+10	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"amod"
+5	3	"nsubjpass"
+7	3	"xsubj"
+5	4	"auxpass"
+7	6	"aux"
+5	7	"xcomp"
+9	8	"det"
+7	9	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"best"
+3	"characterized"
+4	"are"
+5	"the"
+6	"B"
+7	"cell-specific"
+8	"OTF-2"
+9	"and"
+10	"the"
+11	"ubiquitous"
+12	"OTF-1"
+13	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJS"
+3	"VBN"
+4	"VBP"
+5	"DT"
+6	"NN"
+7	"JJ"
+8	"NN"
+9	"CC"
+10	"DT"
+11	"JJ"
+12	"NN"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+8	2	"nsubj"
+2	3	"partmod"
+8	4	"cop"
+8	5	"det"
+7	6	"dep"
+8	7	"amod"
+12	10	"det"
+12	11	"amod"
+8	12	"conj_and"
+
+>mention
+8	8	"Protein(OTF-2)"
+12	12	"Protein(OTF-1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"report"
+3	"directly"
+4	"demonstrates"
+5	"that"
+6	"OTF-2"
+7	"but"
+8	"not"
+9	"OTF-1"
+10	"regulates"
+11	"the"
+12	"DRA"
+13	"gene"
+14	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"RB"
+4	"VBZ"
+5	"IN"
+6	"NN"
+7	"CC"
+8	"RB"
+9	"NN"
+10	"VBZ"
+11	"DT"
+12	"NN"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+4	2	"nsubj"
+4	3	"advmod"
+10	5	"complm"
+10	6	"nsubj"
+6	9	"conj_negcc"
+10	9	"nsubj"
+4	10	"ccomp"
+13	11	"det"
+13	12	"nn"
+10	13	"dobj"
+
+>mention
+6	6	"Protein(OTF-2)"
+9	9	"Protein(OTF-1)"
+12	12	"Protein(DRA)"
+
+>trigger
+10	10	"Regulation"
+>argument
+10	6	"Cause"
+10	9	"Cause"
+10	12	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"vitro"
+3	"transcription"
+4	"analysis"
+5	"using"
+6	"protein"
+7	"fractions"
+8	"enriched"
+9	"for"
+10	"the"
+11	"octamer-binding"
+12	"protein"
+13	"OTF-2"
+14	"demonstrate"
+15	"a"
+16	"positive"
+17	"functional"
+18	"role"
+19	"for"
+20	"OTF-2"
+21	"in"
+22	"DRA"
+23	"gene"
+24	"transcription"
+25	"."
+
+>tag
+0	"Root"
+1	"FW"
+2	"FW"
+3	"NN"
+4	"NN"
+5	"VBG"
+6	"NN"
+7	"NNS"
+8	"VBN"
+9	"IN"
+10	"DT"
+11	"JJ"
+12	"NN"
+13	"NN"
+14	"VBP"
+15	"DT"
+16	"JJ"
+17	"JJ"
+18	"NN"
+19	"IN"
+20	"NN"
+21	"IN"
+22	"NN"
+23	"NN"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+4	2	"amod"
+4	3	"nn"
+14	4	"nsubj"
+4	5	"partmod"
+7	6	"nn"
+5	7	"dobj"
+7	8	"partmod"
+13	10	"det"
+13	11	"amod"
+13	12	"nn"
+8	13	"prep_for"
+18	15	"det"
+18	16	"amod"
+18	17	"amod"
+14	18	"dobj"
+18	20	"prep_for"
+24	22	"nn"
+24	23	"nn"
+18	24	"prep_in"
+
+>mention
+13	13	"Protein(OTF-2)"
+20	20	"Protein(OTF-2)"
+22	22	"Protein(DRA)"
+
+>trigger
+18	18	"Positive_regulation"
+24	24	"Transcription"
+>argument
+18	20	"Cause"
+18	24	"Theme"
+24	22	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"contrast"
+3	","
+4	"OTF-1"
+5	"-enriched"
+6	"protein"
+7	"fractions"
+8	"did"
+9	"not"
+10	"affect"
+11	"DRA"
+12	"gene"
+13	"transcription"
+14	"although"
+15	"it"
+16	"functionally"
+17	"enhanced"
+18	"the"
+19	"transcription"
+20	"of"
+21	"another"
+22	"gene"
+23	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	","
+4	"NN"
+5	"JJ"
+6	"NN"
+7	"NNS"
+8	"VBD"
+9	"RB"
+10	"VB"
+11	"NN"
+12	"NN"
+13	"NN"
+14	"IN"
+15	"PRP"
+16	"RB"
+17	"VBD"
+18	"DT"
+19	"NN"
+20	"IN"
+21	"DT"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+10	2	"prep_in"
+7	4	"nn"
+7	5	"amod"
+7	6	"nn"
+10	7	"nsubj"
+10	8	"aux"
+10	9	"neg"
+13	11	"nn"
+13	12	"nn"
+10	13	"dobj"
+17	14	"mark"
+17	15	"nsubj"
+17	16	"advmod"
+10	17	"advcl"
+19	18	"det"
+17	19	"dobj"
+22	21	"det"
+19	22	"prep_of"
+
+>mention
+4	4	"Protein(OTF-1)"
+11	11	"Protein(DRA)"
+
+>trigger
+10	10	"Regulation"
+13	13	"Transcription"
+>argument
+10	4	"Cause"
+10	13	"Theme"
+13	11	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Recombinant"
+2	"OTF-2"
+3	"protein"
+4	"produced"
+5	"by"
+6	"in"
+7	"vitro"
+8	"transcription/translation"
+9	"could"
+10	"also"
+11	"enhance"
+12	"DRA"
+13	"gene"
+14	"transcription"
+15	"in"
+16	"vitro"
+17	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NN"
+4	"VBN"
+5	"IN"
+6	"FW"
+7	"FW"
+8	"NN"
+9	"MD"
+10	"RB"
+11	"VBP"
+12	"NN"
+13	"NN"
+14	"NN"
+15	"FW"
+16	"FW"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"nn"
+11	3	"nsubj"
+3	4	"partmod"
+7	6	"nn"
+8	7	"amod"
+4	8	"agent"
+11	9	"aux"
+11	10	"advmod"
+14	12	"nn"
+14	13	"nn"
+11	14	"dobj"
+16	15	"nn"
+11	16	"advmod"
+
+>mention
+2	2	"Protein(OTF-2)"
+12	12	"Protein(DRA)"
+
+>trigger
+11	11	"Positive_regulation"
+14	14	"Transcription"
+>argument
+11	2	"Cause"
+11	14	"Theme"
+14	12	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"vivo"
+3	"transient"
+4	"transfection"
+5	"studies"
+6	"utilizing"
+7	"an"
+8	"OTF-2"
+9	"expression"
+10	"vector"
+11	"resulted"
+12	"in"
+13	"similar"
+14	"findings"
+15	":"
+16	"that"
+17	"OTF-2"
+18	"protein"
+19	"enhanced"
+20	"DRA"
+21	"gene"
+22	"transcription"
+23	","
+24	"and"
+25	"that"
+26	"this"
+27	"effect"
+28	"requires"
+29	"an"
+30	"intact"
+31	"octamer"
+32	"element"
+33	"."
+
+>tag
+0	"Root"
+1	"FW"
+2	"FW"
+3	"JJ"
+4	"NN"
+5	"NNS"
+6	"VBG"
+7	"DT"
+8	"NN"
+9	"NN"
+10	"NN"
+11	"VBD"
+12	"IN"
+13	"JJ"
+14	"NNS"
+15	":"
+16	"IN"
+17	"NN"
+18	"NN"
+19	"VBD"
+20	"NN"
+21	"NN"
+22	"NN"
+23	","
+24	"CC"
+25	"IN"
+26	"DT"
+27	"NN"
+28	"VBZ"
+29	"DT"
+30	"JJ"
+31	"NN"
+32	"NN"
+33	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+5	2	"amod"
+5	3	"amod"
+5	4	"nn"
+11	5	"nsubj"
+5	6	"partmod"
+10	7	"det"
+10	8	"nn"
+10	9	"nn"
+6	10	"dobj"
+14	13	"amod"
+11	14	"prep_in"
+19	16	"dep"
+18	17	"nn"
+19	18	"nsubj"
+14	19	"ccomp"
+22	20	"nn"
+22	21	"nn"
+19	22	"dobj"
+28	25	"dep"
+27	26	"det"
+28	27	"nsubj"
+14	28	"ccomp"
+19	28	"conj_and"
+32	29	"det"
+32	30	"amod"
+32	31	"nn"
+28	32	"dobj"
+
+>mention
+8	8	"Protein(OTF-2)"
+17	17	"Protein(OTF-2)"
+20	20	"Protein(DRA)"
+
+>trigger
+19	19	"Positive_regulation"
+22	22	"Transcription"
+28	28	"Positive_regulation"
+>argument
+19	17	"Cause"
+19	22	"Theme"
+22	20	"Theme"
+28	19	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Together"
+2	"these"
+3	"results"
+4	"constitute"
+5	"the"
+6	"first"
+7	"direct"
+8	"evidence"
+9	"of"
+10	"a"
+11	"positive"
+12	"role"
+13	"for"
+14	"the"
+15	"lymphoid-specific"
+16	"octamer-binding"
+17	"factor"
+18	"in"
+19	"DRA"
+20	"gene"
+21	"transcription"
+22	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"DT"
+3	"NNS"
+4	"VBP"
+5	"DT"
+6	"JJ"
+7	"JJ"
+8	"NN"
+9	"IN"
+10	"DT"
+11	"JJ"
+12	"NN"
+13	"IN"
+14	"DT"
+15	"JJ"
+16	"JJ"
+17	"NN"
+18	"IN"
+19	"NN"
+20	"NN"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"advmod"
+3	2	"det"
+4	3	"nsubj"
+8	5	"det"
+8	6	"amod"
+8	7	"amod"
+4	8	"dobj"
+12	10	"det"
+12	11	"amod"
+8	12	"prep_of"
+17	14	"det"
+17	15	"amod"
+17	16	"amod"
+12	17	"prep_for"
+21	19	"nn"
+21	20	"nn"
+12	21	"prep_in"
+
+>mention
+19	19	"Protein(DRA)"
+
+>trigger
+12	12	"Positive_regulation"
+21	21	"Transcription"
+>argument
+12	21	"Theme"
+21	19	"Theme"
+>relation
+
+

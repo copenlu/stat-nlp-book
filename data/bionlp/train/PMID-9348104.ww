@@ -1,0 +1,1026 @@
+>>
+>word
+0	"Root"
+1	"Helenalin"
+2	","
+3	"an"
+4	"anti-inflammatory"
+5	"sesquiterpene"
+6	"lactone"
+7	"from"
+8	"Arnica"
+9	","
+10	"selectively"
+11	"inhibits"
+12	"transcription"
+13	"factor"
+14	"NF-kappaB"
+15	"["
+16	"see"
+17	"comments"
+18	"]"
+19	"Alcoholic"
+20	"extracts"
+21	"prepared"
+22	"form"
+23	"Arnicae"
+24	"flos"
+25	","
+26	"the"
+27	"collective"
+28	"name"
+29	"for"
+30	"flowerheads"
+31	"from"
+32	"Arnica"
+33	"montana"
+34	"and"
+35	"A."
+36	"chamissonis"
+37	"ssp"
+38	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	","
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"IN"
+8	"FW"
+9	","
+10	"RB"
+11	"VBZ"
+12	"NN"
+13	"NN"
+14	"NN"
+15	"-LRB-"
+16	"VB"
+17	"NNS"
+18	"-RRB-"
+19	"JJ"
+20	"NNS"
+21	"VBN"
+22	"IN"
+23	"FW"
+24	"FW"
+25	","
+26	"DT"
+27	"JJ"
+28	"NN"
+29	"IN"
+30	"NNS"
+31	"IN"
+32	"FW"
+33	"FW"
+34	"CC"
+35	"NNP"
+36	"FW"
+37	"NN"
+38	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+11	1	"nsubj"
+6	3	"det"
+6	4	"amod"
+6	5	"nn"
+1	6	"appos"
+6	8	"prep_from"
+11	10	"advmod"
+14	12	"nn"
+14	13	"nn"
+11	14	"dobj"
+16	15	"punct"
+14	16	"dep"
+16	17	"dobj"
+16	18	"punct"
+20	19	"amod"
+16	20	"dep"
+20	21	"partmod"
+24	23	"nn"
+21	24	"prep_form"
+28	26	"det"
+28	27	"amod"
+24	28	"appos"
+28	30	"prep_for"
+33	32	"nn"
+30	33	"prep_from"
+37	35	"nn"
+37	36	"nn"
+30	37	"prep_from"
+33	37	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"foliosa"
+2	","
+3	"are"
+4	"used"
+5	"therapeutically"
+6	"as"
+7	"anti-inflammatory"
+8	"remedies"
+9	"."
+
+>tag
+0	"Root"
+1	"FW"
+2	","
+3	"VBP"
+4	"VBN"
+5	"RB"
+6	"IN"
+7	"JJ"
+8	"NNS"
+9	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"advmod"
+4	3	"auxpass"
+4	5	"advmod"
+8	7	"amod"
+4	8	"prep_as"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"active"
+3	"ingredients"
+4	"mediating"
+5	"the"
+6	"pharmacological"
+7	"effect"
+8	"are"
+9	"mainly"
+10	"sesquiterpene"
+11	"lactones"
+12	","
+13	"such"
+14	"as"
+15	"helenalin"
+16	","
+17	"11alpha,13-dihydrohelenalin"
+18	","
+19	"chamissonolid"
+20	"and"
+21	"their"
+22	"ester"
+23	"derivatives"
+24	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NNS"
+4	"VBG"
+5	"DT"
+6	"JJ"
+7	"NN"
+8	"VBP"
+9	"RB"
+10	"NN"
+11	"NNS"
+12	","
+13	"JJ"
+14	"IN"
+15	"NN"
+16	","
+17	"NN"
+18	","
+19	"NN"
+20	"CC"
+21	"PRP$"
+22	"NN"
+23	"NNS"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+11	3	"nsubj"
+3	4	"partmod"
+7	5	"det"
+7	6	"amod"
+4	7	"dobj"
+11	8	"cop"
+11	9	"advmod"
+11	10	"nn"
+11	15	"prep_such_as"
+11	17	"prep_such_as"
+15	17	"conj_and"
+11	19	"prep_such_as"
+15	19	"conj_and"
+23	21	"poss"
+23	22	"nn"
+11	23	"prep_such_as"
+15	23	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"While"
+2	"these"
+3	"compounds"
+4	"affect"
+5	"various"
+6	"cellular"
+7	"processes"
+8	","
+9	"current"
+10	"data"
+11	"do"
+12	"not"
+13	"fully"
+14	"explain"
+15	"how"
+16	"sesquiterpene"
+17	"lactones"
+18	"exert"
+19	"their"
+20	"anti-inflammatory"
+21	"effect"
+22	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"NNS"
+4	"VBP"
+5	"JJ"
+6	"JJ"
+7	"NNS"
+8	","
+9	"JJ"
+10	"NNS"
+11	"VBP"
+12	"RB"
+13	"RB"
+14	"VB"
+15	"WRB"
+16	"NN"
+17	"NNS"
+18	"VBP"
+19	"PRP$"
+20	"JJ"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"mark"
+3	2	"det"
+4	3	"nsubj"
+14	4	"advcl"
+7	5	"amod"
+7	6	"amod"
+4	7	"dobj"
+10	9	"amod"
+14	10	"nsubj"
+14	11	"aux"
+14	12	"neg"
+14	13	"advmod"
+18	15	"advmod"
+17	16	"nn"
+18	17	"nsubj"
+14	18	"ccomp"
+21	19	"poss"
+21	20	"amod"
+18	21	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"show"
+3	"here"
+4	"that"
+5	"helenalin"
+6	","
+7	"and"
+8	","
+9	"to"
+10	"a"
+11	"much"
+12	"lesser"
+13	"degree"
+14	","
+15	"11alpha,13-dihydrohelenalin"
+16	"and"
+17	"chamissonolid"
+18	","
+19	"inhibit"
+20	"activation"
+21	"of"
+22	"transcription"
+23	"factor"
+24	"NF-kappaB"
+25	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"RB"
+4	"IN"
+5	"NN"
+6	","
+7	"CC"
+8	","
+9	"TO"
+10	"DT"
+11	"RB"
+12	"JJR"
+13	"NN"
+14	","
+15	"NN"
+16	"CC"
+17	"NN"
+18	","
+19	"VBP"
+20	"NN"
+21	"IN"
+22	"NN"
+23	"NN"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+2	3	"advmod"
+19	4	"complm"
+19	5	"nsubj"
+5	9	"conj_and"
+19	9	"nsubj"
+13	10	"det"
+12	11	"advmod"
+13	12	"amod"
+5	13	"prep_to"
+5	15	"conj_and"
+19	15	"nsubj"
+5	17	"conj_and"
+19	17	"nsubj"
+2	19	"ccomp"
+19	20	"dobj"
+24	22	"nn"
+24	23	"nn"
+20	24	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"difference"
+3	"in"
+4	"efficacy"
+5	","
+6	"which"
+7	"correlates"
+8	"with"
+9	"the"
+10	"compounds"
+11	"'"
+12	"anti-inflammatory"
+13	"potency"
+14	"in"
+15	"vivo"
+16	","
+17	"may"
+18	"be"
+19	"explained"
+20	"by"
+21	"differences"
+22	"in"
+23	"structure"
+24	"and"
+25	"conformation"
+26	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	","
+6	"WDT"
+7	"VBZ"
+8	"IN"
+9	"DT"
+10	"NNS"
+11	"POS"
+12	"JJ"
+13	"NN"
+14	"FW"
+15	"FW"
+16	","
+17	"MD"
+18	"VB"
+19	"VBN"
+20	"IN"
+21	"NNS"
+22	"IN"
+23	"NN"
+24	"CC"
+25	"NN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+7	2	"nsubj"
+19	2	"nsubjpass"
+2	4	"prep_in"
+2	7	"rcmod"
+13	9	"det"
+13	10	"nn"
+13	10	"poss"
+13	12	"amod"
+7	13	"prep_with"
+15	14	"nn"
+13	15	"amod"
+19	17	"aux"
+19	18	"auxpass"
+19	21	"agent"
+21	23	"prep_in"
+21	25	"prep_in"
+23	25	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"NF-kappaB"
+2	","
+3	"which"
+4	"resides"
+5	"in"
+6	"an"
+7	"inactive"
+8	","
+9	"cytoplasmic"
+10	"complex"
+11	"in"
+12	"unstimulated"
+13	"cells"
+14	","
+15	"is"
+16	"activated"
+17	"by"
+18	"phosphorylation"
+19	"and"
+20	"degradation"
+21	"of"
+22	"its"
+23	"inhibitory"
+24	"subunit"
+25	","
+26	"IkappaB"
+27	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	","
+3	"WDT"
+4	"VBZ"
+5	"IN"
+6	"DT"
+7	"JJ"
+8	","
+9	"JJ"
+10	"NN"
+11	"IN"
+12	"JJ"
+13	"NNS"
+14	","
+15	"VBZ"
+16	"VBN"
+17	"IN"
+18	"NN"
+19	"CC"
+20	"NN"
+21	"IN"
+22	"PRP$"
+23	"JJ"
+24	"NN"
+25	","
+26	"NN"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubj"
+16	1	"nsubjpass"
+1	4	"rcmod"
+10	6	"det"
+10	7	"amod"
+7	9	"dep"
+4	10	"prep_in"
+13	12	"amod"
+10	13	"prep_in"
+16	15	"auxpass"
+16	18	"agent"
+16	20	"agent"
+18	20	"conj_and"
+24	22	"poss"
+24	23	"amod"
+18	24	"prep_of"
+24	26	"appos"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Helenalin"
+2	"inhibits"
+3	"NF-kappaB"
+4	"activation"
+5	"in"
+6	"response"
+7	"to"
+8	"four"
+9	"different"
+10	"stimuli"
+11	"in"
+12	"T-cells"
+13	","
+14	"B-cells"
+15	"and"
+16	"epithelial"
+17	"cells"
+18	"and"
+19	"abrogates"
+20	"kappaB-driven"
+21	"gene"
+22	"expression"
+23	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"NN"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"TO"
+8	"CD"
+9	"JJ"
+10	"NNS"
+11	"IN"
+12	"NNS"
+13	","
+14	"NNS"
+15	"CC"
+16	"JJ"
+17	"NNS"
+18	"CC"
+19	"VBZ"
+20	"JJ"
+21	"NN"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+19	1	"nsubj"
+4	3	"nn"
+2	4	"dobj"
+4	6	"prep_in"
+10	8	"num"
+10	9	"amod"
+6	10	"prep_to"
+10	12	"prep_in"
+10	14	"prep_in"
+12	14	"conj_and"
+17	16	"amod"
+10	17	"prep_in"
+12	17	"conj_and"
+2	19	"conj_and"
+22	20	"amod"
+22	21	"nn"
+19	22	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"inhibition"
+3	"is"
+4	"selective"
+5	","
+6	"as"
+7	"the"
+8	"activity"
+9	"of"
+10	"four"
+11	"other"
+12	"transcription"
+13	"factors"
+14	","
+15	"Oct-1"
+16	","
+17	"TBP"
+18	","
+19	"Sp1"
+20	"and"
+21	"STAT"
+22	"5"
+23	"was"
+24	"not"
+25	"affected"
+26	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBZ"
+4	"JJ"
+5	","
+6	"IN"
+7	"DT"
+8	"NN"
+9	"IN"
+10	"CD"
+11	"JJ"
+12	"NN"
+13	"NNS"
+14	","
+15	"NN"
+16	","
+17	"NN"
+18	","
+19	"NN"
+20	"CC"
+21	"NN"
+22	"CD"
+23	"VBD"
+24	"RB"
+25	"VBN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+4	2	"nsubj"
+4	3	"cop"
+25	6	"mark"
+8	7	"det"
+25	8	"nsubjpass"
+13	10	"num"
+13	11	"amod"
+13	12	"nn"
+8	13	"prep_of"
+13	15	"appos"
+13	17	"appos"
+15	17	"conj_and"
+13	19	"appos"
+15	19	"conj_and"
+13	21	"appos"
+15	21	"conj_and"
+21	22	"num"
+25	23	"auxpass"
+25	24	"neg"
+4	25	"advcl"
+
+>mention
+15	15	"Protein(Oct-1)"
+17	17	"Protein(TBP)"
+19	19	"Protein(Sp1)"
+
+>trigger
+25	25	"Regulation"
+>argument
+25	15	"Theme"
+25	17	"Theme"
+25	19	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"show"
+3	"that"
+4	"inhibition"
+5	"is"
+6	"not"
+7	"due"
+8	"to"
+9	"a"
+10	"direct"
+11	"modification"
+12	"of"
+13	"the"
+14	"active"
+15	"NF-kappaB"
+16	"heterodimer"
+17	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"IN"
+4	"NN"
+5	"VBZ"
+6	"RB"
+7	"JJ"
+8	"TO"
+9	"DT"
+10	"JJ"
+11	"NN"
+12	"IN"
+13	"DT"
+14	"JJ"
+15	"NN"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+7	3	"complm"
+7	4	"nsubj"
+7	5	"cop"
+7	6	"neg"
+2	7	"ccomp"
+11	9	"det"
+11	10	"amod"
+7	11	"prep_to"
+16	13	"det"
+16	14	"amod"
+16	15	"nn"
+11	16	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Rather"
+2	","
+3	"helenalin"
+4	"modifies"
+5	"the"
+6	"NF-kappaB/IkappaB"
+7	"complex"
+8	","
+9	"preventing"
+10	"the"
+11	"release"
+12	"of"
+13	"IkappaB"
+14	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"VBZ"
+5	"DT"
+6	"NN"
+7	"NN"
+8	","
+9	"VBG"
+10	"DT"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"advmod"
+4	3	"nsubj"
+7	5	"det"
+7	6	"nn"
+4	7	"dobj"
+4	9	"partmod"
+4	9	"xcomp"
+11	10	"det"
+9	11	"dobj"
+11	13	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"These"
+2	"data"
+3	"suggest"
+4	"a"
+5	"molecular"
+6	"mechanism"
+7	"for"
+8	"the"
+9	"anti-inflammatory"
+10	"effect"
+11	"of"
+12	"sesquiterpene"
+13	"lactones"
+14	","
+15	"which"
+16	"differs"
+17	"from"
+18	"that"
+19	"of"
+20	"other"
+21	"nonsteroidal"
+22	"anti-inflammatory"
+23	"drugs"
+24	"("
+25	"NSAIDs"
+26	")"
+27	","
+28	"indomethacin"
+29	"and"
+30	"acetyl"
+31	"salicylic"
+32	"acid"
+33	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NNS"
+3	"VBP"
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"IN"
+8	"DT"
+9	"JJ"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"NNS"
+14	","
+15	"WDT"
+16	"VBZ"
+17	"IN"
+18	"DT"
+19	"IN"
+20	"JJ"
+21	"JJ"
+22	"JJ"
+23	"NNS"
+24	"-LRB-"
+25	"NNS"
+26	"-RRB-"
+27	","
+28	"NN"
+29	"CC"
+30	"NN"
+31	"JJ"
+32	"NN"
+33	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+6	4	"det"
+6	5	"amod"
+3	6	"dobj"
+10	8	"det"
+10	9	"amod"
+6	10	"prep_for"
+16	10	"nsubj"
+13	12	"nn"
+10	13	"prep_of"
+10	16	"rcmod"
+16	18	"prep_from"
+23	20	"amod"
+23	21	"amod"
+23	22	"amod"
+18	23	"prep_of"
+23	25	"appos"
+23	28	"appos"
+32	30	"nn"
+32	31	"amod"
+23	32	"appos"
+28	32	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

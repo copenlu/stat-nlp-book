@@ -1,0 +1,666 @@
+>>
+>word
+0	"Root"
+1	"Retinoblastoma"
+2	"protein"
+3	"expression"
+4	"leads"
+5	"to"
+6	"reduced"
+7	"Oct-1"
+8	"DNA"
+9	"binding"
+10	"activity"
+11	"and"
+12	"enhances"
+13	"interleukin-8"
+14	"expression"
+15	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NN"
+4	"VBZ"
+5	"TO"
+6	"VBN"
+7	"NN"
+8	"NN"
+9	"NN"
+10	"NN"
+11	"CC"
+12	"VBZ"
+13	"NN"
+14	"NN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	2	"nn"
+4	3	"nsubj"
+12	3	"nsubj"
+10	6	"amod"
+10	7	"nn"
+10	8	"nn"
+10	9	"nn"
+4	10	"prep_to"
+4	12	"conj_and"
+14	13	"nn"
+12	14	"dobj"
+
+>mention
+1	1	"Protein(Retinoblastoma)"
+7	7	"Protein(Oct-1)"
+13	13	"Protein(interleukin-8)"
+
+>trigger
+3	3	"Gene_expression"
+6	6	"Negative_regulation"
+10	10	"Binding"
+12	12	"Positive_regulation"
+14	14	"Gene_expression"
+>argument
+3	1	"Theme"
+6	3	"Cause"
+6	10	"Theme"
+10	7	"Theme"
+12	3	"Cause"
+12	14	"Theme"
+14	13	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Tumor"
+2	"cell"
+3	"lines"
+4	"with"
+5	"a"
+6	"defective"
+7	"retinoblastoma"
+8	"gene"
+9	"are"
+10	"unable"
+11	"to"
+12	"transcribe"
+13	"the"
+14	"HLA"
+15	"class"
+16	"II"
+17	"genes"
+18	"in"
+19	"response"
+20	"to"
+21	"IFN-gamma"
+22	"treatment"
+23	","
+24	"and"
+25	"reconstitution"
+26	"of"
+27	"functional"
+28	"Rb"
+29	"rescues"
+30	"IFN-gamma"
+31	"-induced"
+32	"class"
+33	"II"
+34	"gene"
+35	"expression"
+36	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NNS"
+4	"IN"
+5	"DT"
+6	"JJ"
+7	"NN"
+8	"NN"
+9	"VBP"
+10	"JJ"
+11	"TO"
+12	"VB"
+13	"DT"
+14	"NN"
+15	"NN"
+16	"CD"
+17	"NNS"
+18	"IN"
+19	"NN"
+20	"TO"
+21	"NN"
+22	"NN"
+23	","
+24	"CC"
+25	"NN"
+26	"IN"
+27	"JJ"
+28	"NN"
+29	"VBZ"
+30	"NN"
+31	"JJ"
+32	"NN"
+33	"CD"
+34	"NN"
+35	"NN"
+36	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	2	"nn"
+10	3	"nsubj"
+8	5	"det"
+8	6	"amod"
+8	7	"nn"
+3	8	"prep_with"
+10	9	"cop"
+12	11	"aux"
+10	12	"xcomp"
+17	13	"det"
+17	14	"nn"
+17	15	"nn"
+17	16	"num"
+12	17	"dobj"
+12	19	"prep_in"
+22	21	"nn"
+19	22	"prep_to"
+29	25	"nsubj"
+28	27	"amod"
+25	28	"prep_of"
+10	29	"conj_and"
+35	30	"nn"
+35	31	"amod"
+35	32	"nn"
+35	33	"num"
+35	34	"nn"
+29	35	"dobj"
+
+>mention
+7	7	"Protein(retinoblastoma)"
+21	21	"Protein(IFN-gamma)"
+28	28	"Protein(Rb)"
+30	30	"Protein(IFN-gamma)"
+
+>trigger
+6	6	"Negative_regulation"
+>argument
+6	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"However"
+2	","
+3	"the"
+4	"molecular"
+5	"mechanism"
+6	"of"
+7	"Rb"
+8	"rescue"
+9	"of"
+10	"the"
+11	"class"
+12	"II"
+13	"genes"
+14	"is"
+15	"unknown"
+16	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NN"
+9	"IN"
+10	"DT"
+11	"NN"
+12	"NN"
+13	"NNS"
+14	"VBZ"
+15	"JJ"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+15	1	"advmod"
+5	3	"det"
+5	4	"amod"
+15	5	"nsubj"
+8	7	"nn"
+5	8	"prep_of"
+13	10	"det"
+13	11	"nn"
+13	12	"nn"
+8	13	"prep_of"
+15	14	"cop"
+
+>mention
+7	7	"Protein(Rb)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"have"
+3	"examined"
+4	"the"
+5	"effect"
+6	"of"
+7	"Rb"
+8	"expression"
+9	"on"
+10	"the"
+11	"activation"
+12	"of"
+13	"the"
+14	"promoter"
+15	"for"
+16	"HLA-DRA"
+17	","
+18	"the"
+19	"prototype"
+20	"class"
+21	"II"
+22	"gene"
+23	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"VBN"
+4	"DT"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NN"
+9	"IN"
+10	"DT"
+11	"NN"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"IN"
+16	"NN"
+17	","
+18	"DT"
+19	"NN"
+20	"NN"
+21	"CD"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubj"
+3	2	"aux"
+5	4	"det"
+3	5	"dobj"
+8	7	"nn"
+5	8	"prep_of"
+11	10	"det"
+5	11	"prep_on"
+14	13	"det"
+11	14	"prep_of"
+14	16	"prep_for"
+22	18	"det"
+22	19	"nn"
+22	20	"nn"
+22	21	"num"
+16	22	"appos"
+
+>mention
+7	7	"Protein(Rb)"
+
+>trigger
+8	8	"Gene_expression"
+>argument
+8	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Oct-1"
+2	","
+3	"a"
+4	"POU"
+5	"domain"
+6	"transcription"
+7	"factor"
+8	","
+9	"was"
+10	"identified"
+11	"as"
+12	"a"
+13	"repressor"
+14	"of"
+15	"HLA-DRA"
+16	"promoter"
+17	"activity"
+18	"in"
+19	"the"
+20	"Rb"
+21	"-defective"
+22	"cells"
+23	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	","
+3	"DT"
+4	"NN"
+5	"NN"
+6	"NN"
+7	"NN"
+8	","
+9	"VBD"
+10	"VBN"
+11	"IN"
+12	"DT"
+13	"NN"
+14	"IN"
+15	"NN"
+16	"NN"
+17	"NN"
+18	"IN"
+19	"DT"
+20	"NN"
+21	"JJ"
+22	"NNS"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+10	1	"nsubjpass"
+7	3	"det"
+7	4	"nn"
+7	5	"nn"
+7	6	"nn"
+1	7	"appos"
+10	9	"auxpass"
+13	12	"det"
+10	13	"prep_as"
+17	15	"nn"
+17	16	"nn"
+13	17	"prep_of"
+22	19	"det"
+22	20	"nn"
+22	21	"amod"
+13	22	"prep_in"
+
+>mention
+1	1	"Protein(Oct-1)"
+20	20	"Protein(Rb)"
+
+>trigger
+21	21	"Negative_regulation"
+>argument
+21	20	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Rb"
+2	"expression"
+3	"led"
+4	"to"
+5	"phosphorylation"
+6	"of"
+7	"Oct-1"
+8	","
+9	"thus"
+10	"relieving"
+11	"its"
+12	"repressive"
+13	"effect"
+14	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBD"
+4	"TO"
+5	"NN"
+6	"IN"
+7	"NN"
+8	","
+9	"RB"
+10	"VBG"
+11	"PRP$"
+12	"JJ"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+3	2	"nsubj"
+3	5	"prep_to"
+5	7	"prep_of"
+10	9	"advmod"
+3	10	"xcomp"
+13	11	"poss"
+13	12	"amod"
+10	13	"dobj"
+
+>mention
+1	1	"Protein(Rb)"
+7	7	"Protein(Oct-1)"
+
+>trigger
+2	2	"Gene_expression"
+3	3	"Positive_regulation"
+5	5	"Phosphorylation"
+>argument
+2	1	"Theme"
+3	2	"Cause"
+3	5	"Theme"
+5	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Oct-1"
+2	"has"
+3	"also"
+4	"been"
+5	"shown"
+6	"to"
+7	"repress"
+8	"interleukin"
+9	"8"
+10	"promoter"
+11	"activity"
+12	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"RB"
+4	"VBN"
+5	"VBN"
+6	"TO"
+7	"VB"
+8	"NN"
+9	"CD"
+10	"NN"
+11	"NN"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"nsubjpass"
+7	1	"xsubj"
+5	2	"aux"
+5	3	"advmod"
+5	4	"auxpass"
+7	6	"aux"
+5	7	"xcomp"
+11	8	"nn"
+11	9	"num"
+11	10	"nn"
+7	11	"dobj"
+
+>mention
+1	1	"Protein(Oct-1)"
+8	9	"Protein(interleukin)"
+
+>trigger
+7	7	"Negative_regulation"
+>argument
+7	1	"Cause"
+7	8	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Consistent"
+2	"with"
+3	"reduced"
+4	"levels"
+5	"of"
+6	"Oct-1"
+7	"DNA"
+8	"binding"
+9	"activity"
+10	"in"
+11	"the"
+12	"Rb"
+13	"-transformed"
+14	"cell"
+15	"lines"
+16	","
+17	"interleukin"
+18	"8"
+19	"expression"
+20	"is"
+21	"higher"
+22	"in"
+23	"these"
+24	"cell"
+25	"lines"
+26	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"IN"
+3	"VBN"
+4	"NNS"
+5	"IN"
+6	"NN"
+7	"NN"
+8	"NN"
+9	"NN"
+10	"IN"
+11	"DT"
+12	"NN"
+13	"JJ"
+14	"NN"
+15	"NNS"
+16	","
+17	"NN"
+18	"CD"
+19	"NN"
+20	"VBZ"
+21	"JJR"
+22	"IN"
+23	"DT"
+24	"NN"
+25	"NNS"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+21	1	"ccomp"
+4	3	"amod"
+1	4	"prep_with"
+9	6	"nn"
+9	7	"nn"
+9	8	"nn"
+4	9	"prep_of"
+15	11	"det"
+15	12	"nn"
+15	13	"amod"
+15	14	"nn"
+9	15	"prep_in"
+19	17	"nn"
+17	18	"num"
+21	19	"nsubj"
+21	20	"cop"
+25	23	"det"
+25	24	"nn"
+21	25	"prep_in"
+
+>mention
+6	6	"Protein(Oct-1)"
+12	12	"Protein(Rb)"
+17	18	"Protein(interleukin)"
+
+>trigger
+4	4	"Negative_regulation"
+9	9	"Binding"
+19	19	"Gene_expression"
+21	21	"Positive_regulation"
+>argument
+4	9	"Theme"
+9	6	"Theme"
+19	17	"Theme"
+21	19	"Theme"
+>relation
+
+

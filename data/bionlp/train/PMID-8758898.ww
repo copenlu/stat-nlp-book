@@ -1,0 +1,567 @@
+>>
+>word
+0	"Root"
+1	"C/EBP"
+2	"activators"
+3	"are"
+4	"required"
+5	"for"
+6	"HIV-1"
+7	"replication"
+8	"and"
+9	"proviral"
+10	"induction"
+11	"in"
+12	"monocytic"
+13	"cell"
+14	"lines"
+15	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"VBP"
+4	"VBN"
+5	"IN"
+6	"NN"
+7	"NN"
+8	"CC"
+9	"JJ"
+10	"NN"
+11	"IN"
+12	"JJ"
+13	"NN"
+14	"NNS"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+4	2	"nsubjpass"
+4	3	"auxpass"
+7	6	"nn"
+4	7	"prep_for"
+10	9	"amod"
+4	10	"prep_for"
+7	10	"conj_and"
+14	12	"amod"
+14	13	"nn"
+7	14	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Previous"
+2	"work"
+3	"has"
+4	"shown"
+5	"that"
+6	"C/EBP"
+7	"sites"
+8	"and"
+9	"C/EBP"
+10	"transcriptional"
+11	"activators"
+12	"are"
+13	"necessary"
+14	"for"
+15	"HIV-1"
+16	"LTR"
+17	"activity"
+18	"in"
+19	"monocytes/macrophages"
+20	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"VBZ"
+4	"VBN"
+5	"IN"
+6	"NN"
+7	"NNS"
+8	"CC"
+9	"NN"
+10	"JJ"
+11	"NNS"
+12	"VBP"
+13	"JJ"
+14	"IN"
+15	"NN"
+16	"NN"
+17	"NN"
+18	"IN"
+19	"NNS"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+4	2	"nsubj"
+4	3	"aux"
+13	5	"complm"
+7	6	"nn"
+13	7	"nsubj"
+11	9	"nn"
+11	10	"amod"
+7	11	"conj_and"
+13	11	"nsubj"
+13	12	"cop"
+4	13	"ccomp"
+17	15	"nn"
+17	16	"nn"
+13	17	"prep_for"
+17	19	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"have"
+3	"investigated"
+4	"the"
+5	"role"
+6	"that"
+7	"C/EBP"
+8	"proteins"
+9	"play"
+10	"in"
+11	"induction"
+12	"and"
+13	"replication"
+14	"of"
+15	"HIV-1"
+16	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"VBN"
+4	"DT"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NNS"
+9	"VBP"
+10	"IN"
+11	"NN"
+12	"CC"
+13	"NN"
+14	"IN"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubj"
+3	2	"aux"
+5	4	"det"
+3	5	"dobj"
+9	6	"complm"
+8	7	"nn"
+9	8	"nsubj"
+5	9	"ccomp"
+9	11	"prep_in"
+9	13	"prep_in"
+11	13	"conj_and"
+11	15	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Ectopic"
+2	"expression"
+3	"of"
+4	"the"
+5	"dominant"
+6	"negative"
+7	"C/EBP"
+8	"protein"
+9	"LIP"
+10	"inhibited"
+11	"HIV-1"
+12	"mRNA"
+13	"and"
+14	"virus"
+15	"production"
+16	"in"
+17	"activated"
+18	"U1"
+19	"cells"
+20	","
+21	"demonstrating"
+22	"that"
+23	"C/EBP"
+24	"proteins"
+25	"are"
+26	"required"
+27	"for"
+28	"provirus"
+29	"induction"
+30	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"JJ"
+6	"JJ"
+7	"NN"
+8	"NN"
+9	"NN"
+10	"VBD"
+11	"NN"
+12	"NN"
+13	"CC"
+14	"NN"
+15	"NN"
+16	"IN"
+17	"VBN"
+18	"NN"
+19	"NNS"
+20	","
+21	"VBG"
+22	"IN"
+23	"NN"
+24	"NNS"
+25	"VBP"
+26	"VBN"
+27	"IN"
+28	"NN"
+29	"NN"
+30	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+10	2	"nsubj"
+9	4	"det"
+9	5	"amod"
+9	6	"amod"
+9	7	"nn"
+9	8	"nn"
+2	9	"prep_of"
+12	11	"nn"
+10	12	"dobj"
+15	14	"nn"
+10	15	"dobj"
+12	15	"conj_and"
+19	17	"amod"
+19	18	"nn"
+12	19	"prep_in"
+10	21	"partmod"
+10	21	"xcomp"
+26	22	"complm"
+24	23	"nn"
+26	24	"nsubjpass"
+26	25	"auxpass"
+21	26	"ccomp"
+29	28	"nn"
+26	29	"prep_for"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"U1"
+2	"lines"
+3	"overexpressing"
+4	"C/EBP"
+5	"activator"
+6	"NF-IL-6"
+7	"produced"
+8	"more"
+9	"viral"
+10	"mRNA"
+11	"and"
+12	"virus"
+13	"particles"
+14	"following"
+15	"cellular"
+16	"activation"
+17	"than"
+18	"control"
+19	"lines"
+20	","
+21	"demonstrating"
+22	"that"
+23	"C/EBP"
+24	"proteins"
+25	"are"
+26	"limiting"
+27	"for"
+28	"virus"
+29	"transcription"
+30	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"VBG"
+4	"NN"
+5	"NN"
+6	"NN"
+7	"VBD"
+8	"JJR"
+9	"JJ"
+10	"NN"
+11	"CC"
+12	"NN"
+13	"NNS"
+14	"VBG"
+15	"JJ"
+16	"NN"
+17	"IN"
+18	"NN"
+19	"NNS"
+20	","
+21	"VBG"
+22	"IN"
+23	"NN"
+24	"NNS"
+25	"VBP"
+26	"VBG"
+27	"IN"
+28	"NN"
+29	"NN"
+30	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+7	2	"nsubj"
+2	3	"partmod"
+6	4	"nn"
+6	5	"nn"
+3	6	"dobj"
+10	8	"amod"
+10	9	"amod"
+7	10	"dobj"
+13	12	"nn"
+7	13	"dobj"
+10	13	"conj_and"
+16	15	"amod"
+7	16	"prep_following"
+19	18	"nn"
+7	19	"prep_than"
+7	21	"partmod"
+7	21	"xcomp"
+26	22	"complm"
+24	23	"nn"
+26	24	"nsubj"
+26	25	"aux"
+21	26	"ccomp"
+29	28	"nn"
+26	29	"prep_for"
+
+>mention
+6	6	"Protein(NF-IL-6)"
+
+>trigger
+3	3	"Gene_expression"
+3	3	"Positive_regulation"
+>argument
+3	6	"Theme"
+3	3	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"HIV-1"
+2	"harboring"
+3	"mutations"
+4	"within"
+5	"two"
+6	"C/EBP"
+7	"sites"
+8	"were"
+9	"crippled"
+10	"in"
+11	"their"
+12	"ability"
+13	"to"
+14	"replicate"
+15	"in"
+16	"U937"
+17	"promonocytic"
+18	"cells"
+19	","
+20	"indicating"
+21	"that"
+22	"these"
+23	"sites"
+24	"are"
+25	"required"
+26	"for"
+27	"replication"
+28	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NNS"
+4	"IN"
+5	"CD"
+6	"NN"
+7	"NNS"
+8	"VBD"
+9	"VBN"
+10	"IN"
+11	"PRP$"
+12	"NN"
+13	"TO"
+14	"VB"
+15	"IN"
+16	"NN"
+17	"JJ"
+18	"NNS"
+19	","
+20	"VBG"
+21	"IN"
+22	"DT"
+23	"NNS"
+24	"VBP"
+25	"VBN"
+26	"IN"
+27	"NN"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	2	"nn"
+9	3	"nsubjpass"
+7	5	"num"
+7	6	"nn"
+3	7	"prep_within"
+9	8	"auxpass"
+12	11	"poss"
+9	12	"prep_in"
+14	13	"aux"
+12	14	"infmod"
+18	16	"nn"
+18	17	"amod"
+14	18	"prep_in"
+9	20	"xcomp"
+25	21	"complm"
+23	22	"det"
+25	23	"nsubjpass"
+25	24	"auxpass"
+20	25	"ccomp"
+25	27	"prep_for"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"These"
+2	"data"
+3	"identify"
+4	"C/EBP"
+5	"proteins"
+6	"as"
+7	"regulators"
+8	"of"
+9	"HIV-1"
+10	"expression"
+11	"in"
+12	"monocytes/macrophages"
+13	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NNS"
+3	"VBP"
+4	"NN"
+5	"NNS"
+6	"IN"
+7	"NNS"
+8	"IN"
+9	"NN"
+10	"NN"
+11	"IN"
+12	"NNS"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+5	4	"nn"
+3	5	"dobj"
+3	7	"prep_as"
+10	9	"nn"
+7	10	"prep_of"
+10	12	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

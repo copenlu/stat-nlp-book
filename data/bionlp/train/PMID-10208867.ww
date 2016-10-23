@@ -1,0 +1,724 @@
+>>
+>word
+0	"Root"
+1	"Angiotensin"
+2	"II"
+3	"activates"
+4	"the"
+5	"proinflammatory"
+6	"transcription"
+7	"factor"
+8	"nuclear"
+9	"factor-kappaB"
+10	"in"
+11	"human"
+12	"monocytes"
+13	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CD"
+3	"VBZ"
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"NN"
+8	"JJ"
+9	"NN"
+10	"IN"
+11	"JJ"
+12	"NNS"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubj"
+1	2	"num"
+9	4	"det"
+9	5	"amod"
+9	6	"nn"
+9	7	"nn"
+9	8	"amod"
+3	9	"dobj"
+12	11	"amod"
+9	12	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"renin-angiotensin"
+3	"system"
+4	"may"
+5	"contribute"
+6	"to"
+7	"the"
+8	"pathogenesis"
+9	"of"
+10	"atherosclerosis"
+11	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"MD"
+5	"VB"
+6	"TO"
+7	"DT"
+8	"NN"
+9	"IN"
+10	"NN"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+5	3	"nsubj"
+5	4	"aux"
+8	7	"det"
+5	8	"prep_to"
+8	10	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"A"
+2	"common"
+3	"feature"
+4	"of"
+5	"all"
+6	"stages"
+7	"of"
+8	"atherosclerosis"
+9	"is"
+10	"inflammation"
+11	"of"
+12	"the"
+13	"vessel"
+14	"wall"
+15	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"IN"
+5	"DT"
+6	"NNS"
+7	"IN"
+8	"NN"
+9	"VBZ"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"NN"
+14	"NN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+10	3	"nsubj"
+6	5	"det"
+3	6	"prep_of"
+6	8	"prep_of"
+10	9	"cop"
+14	12	"det"
+14	13	"nn"
+10	14	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"transcription"
+3	"factor"
+4	"nuclear"
+5	"factor-kappaB"
+6	"("
+7	"NF-kappaB"
+8	")"
+9	"participates"
+10	"in"
+11	"most"
+12	"signaling"
+13	"pathways"
+14	"involved"
+15	"in"
+16	"inflammation"
+17	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"JJ"
+5	"NN"
+6	"-LRB-"
+7	"NN"
+8	"-RRB-"
+9	"VBZ"
+10	"IN"
+11	"JJ"
+12	"NN"
+13	"NNS"
+14	"VBN"
+15	"IN"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"det"
+5	2	"nn"
+5	3	"nn"
+5	4	"amod"
+9	5	"nsubj"
+5	7	"abbrev"
+13	11	"amod"
+13	12	"nn"
+9	13	"prep_in"
+13	14	"partmod"
+14	16	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"study"
+3	"therefore"
+4	"examined"
+5	"the"
+6	"effect"
+7	"of"
+8	"angiotensin"
+9	"("
+10	"ANG"
+11	")"
+12	"II"
+13	"on"
+14	"NF-kappaB"
+15	"activation"
+16	"in"
+17	"monocytic"
+18	"cells"
+19	","
+20	"a"
+21	"major"
+22	"cellular"
+23	"component"
+24	"of"
+25	"human"
+26	"atheroma"
+27	","
+28	"by"
+29	"electrophoretic"
+30	"mobility"
+31	"shift"
+32	"assay"
+33	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"RB"
+4	"VBD"
+5	"DT"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"-LRB-"
+10	"NN"
+11	"-RRB-"
+12	"CD"
+13	"IN"
+14	"NN"
+15	"NN"
+16	"IN"
+17	"JJ"
+18	"NNS"
+19	","
+20	"DT"
+21	"JJ"
+22	"JJ"
+23	"NN"
+24	"IN"
+25	"JJ"
+26	"NN"
+27	","
+28	"IN"
+29	"JJ"
+30	"NN"
+31	"NN"
+32	"NN"
+33	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+4	2	"nsubj"
+4	3	"advmod"
+6	5	"det"
+4	6	"dobj"
+10	8	"nn"
+6	10	"prep_of"
+10	12	"num"
+15	14	"nn"
+6	15	"prep_on"
+18	17	"amod"
+15	18	"prep_in"
+23	20	"det"
+23	21	"amod"
+23	22	"amod"
+18	23	"appos"
+26	25	"amod"
+23	26	"prep_of"
+32	29	"amod"
+32	30	"nn"
+32	31	"nn"
+4	32	"prep_by"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"ANG"
+2	"II"
+3	","
+4	"like"
+5	"TNFalpha"
+6	","
+7	"caused"
+8	"rapid"
+9	"activation"
+10	"of"
+11	"NF-kappaB"
+12	"in"
+13	"human"
+14	"mononuclear"
+15	"cells"
+16	"isolated"
+17	"from"
+18	"peripheral"
+19	"blood"
+20	"by"
+21	"Ficoll"
+22	"density"
+23	"gradient"
+24	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CD"
+3	","
+4	"IN"
+5	"NN"
+6	","
+7	"VBD"
+8	"JJ"
+9	"NN"
+10	"IN"
+11	"NN"
+12	"IN"
+13	"JJ"
+14	"JJ"
+15	"NNS"
+16	"VBN"
+17	"IN"
+18	"JJ"
+19	"NN"
+20	"IN"
+21	"NN"
+22	"NN"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	1	"nsubj"
+1	2	"num"
+7	5	"prep_like"
+9	8	"amod"
+7	9	"dobj"
+9	11	"prep_of"
+15	13	"amod"
+15	14	"amod"
+9	15	"prep_in"
+15	16	"partmod"
+19	18	"amod"
+16	19	"prep_from"
+23	21	"nn"
+23	22	"nn"
+16	23	"agent"
+
+>mention
+5	5	"Protein(TNFalpha)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"ANG"
+3	"II"
+4	"effect"
+5	"was"
+6	"blocked"
+7	"by"
+8	"the"
+9	"angiotensin"
+10	"AT1"
+11	"receptor"
+12	"antagonist"
+13	"losartan"
+14	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"CD"
+4	"NN"
+5	"VBD"
+6	"VBN"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"NN"
+11	"NN"
+12	"NN"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"det"
+4	2	"nn"
+4	3	"num"
+6	4	"nsubjpass"
+6	5	"auxpass"
+13	8	"det"
+13	9	"nn"
+13	10	"nn"
+13	11	"nn"
+13	12	"nn"
+6	13	"agent"
+
+>mention
+9	11	"Protein(receptor)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Specificity"
+2	"of"
+3	"ANG"
+4	"II-induced"
+5	"NF-kappaB"
+6	"activation"
+7	"was"
+8	"ascertained"
+9	"by"
+10	"supershift"
+11	"and"
+12	"competition"
+13	"experiments"
+14	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"JJ"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"VBD"
+8	"VBN"
+9	"IN"
+10	"NN"
+11	"CC"
+12	"NN"
+13	"NNS"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"nsubjpass"
+6	3	"amod"
+6	4	"amod"
+6	5	"nn"
+1	6	"prep_of"
+8	7	"auxpass"
+8	10	"agent"
+8	12	"agent"
+10	12	"conj_and"
+10	13	"dep"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Moreover"
+2	","
+3	"ANG"
+4	"II"
+5	"stimulated"
+6	"NF-kappaB"
+7	"activation"
+8	"in"
+9	"human"
+10	"monocytes"
+11	","
+12	"but"
+13	"not"
+14	"in"
+15	"lymphocytes"
+16	"from"
+17	"the"
+18	"same"
+19	"preparation"
+20	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"CD"
+5	"VBD"
+6	"NN"
+7	"NN"
+8	"IN"
+9	"JJ"
+10	"NNS"
+11	","
+12	"CC"
+13	"RB"
+14	"IN"
+15	"NNS"
+16	"IN"
+17	"DT"
+18	"JJ"
+19	"NN"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"advmod"
+5	3	"nsubj"
+3	4	"num"
+7	6	"nn"
+5	7	"dobj"
+10	9	"amod"
+5	10	"prep_in"
+5	13	"neg"
+5	15	"prep_in"
+10	15	"conj_but"
+19	17	"det"
+19	18	"amod"
+15	19	"prep_from"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Together"
+2	","
+3	"the"
+4	"data"
+5	"demonstrate"
+6	"the"
+7	"ability"
+8	"of"
+9	"the"
+10	"vasoactive"
+11	"peptide"
+12	"ANG"
+13	"II"
+14	"to"
+15	"activate"
+16	"inflammatory"
+17	"pathways"
+18	"in"
+19	"human"
+20	"monocytes"
+21	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"NNS"
+5	"VBP"
+6	"DT"
+7	"NN"
+8	"IN"
+9	"DT"
+10	"JJ"
+11	"NN"
+12	"NN"
+13	"CD"
+14	"TO"
+15	"VB"
+16	"JJ"
+17	"NNS"
+18	"IN"
+19	"JJ"
+20	"NNS"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"advmod"
+4	3	"det"
+5	4	"nsubj"
+7	6	"det"
+5	7	"dobj"
+12	9	"det"
+12	10	"amod"
+12	11	"nn"
+7	12	"prep_of"
+12	13	"num"
+15	14	"aux"
+7	15	"infmod"
+17	16	"amod"
+15	17	"dobj"
+20	19	"amod"
+17	20	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Copyright"
+2	"1999"
+3	"Academic"
+4	"Press"
+5	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CD"
+3	"NNP"
+4	"NNP"
+5	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nn"
+4	2	"num"
+4	3	"nn"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

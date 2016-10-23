@@ -1,0 +1,648 @@
+>>
+>word
+0	"Root"
+1	"Tandem"
+2	"AP-1-binding"
+3	"sites"
+4	"within"
+5	"the"
+6	"human"
+7	"beta-globin"
+8	"dominant"
+9	"control"
+10	"region"
+11	"function"
+12	"as"
+13	"an"
+14	"inducible"
+15	"enhancer"
+16	"in"
+17	"erythroid"
+18	"cells"
+19	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"JJ"
+3	"NNS"
+4	"IN"
+5	"DT"
+6	"JJ"
+7	"NN"
+8	"JJ"
+9	"NN"
+10	"NN"
+11	"VBP"
+12	"IN"
+13	"DT"
+14	"JJ"
+15	"NN"
+16	"IN"
+17	"JJ"
+18	"NNS"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"amod"
+11	3	"nsubj"
+10	5	"det"
+10	6	"amod"
+10	7	"nn"
+10	8	"amod"
+10	9	"nn"
+3	10	"prep_within"
+15	13	"det"
+15	14	"amod"
+11	15	"prep_as"
+18	17	"amod"
+15	18	"prep_in"
+
+>mention
+7	7	"Protein(beta-globin)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"A"
+2	"powerful"
+3	"enhancer"
+4	"has"
+5	"been"
+6	"mapped"
+7	"to"
+8	"an"
+9	"18-bp"
+10	"DNA"
+11	"segment"
+12	"located"
+13	"11"
+14	"kb"
+15	"5"
+16	"'"
+17	"to"
+18	"the"
+19	"human"
+20	"epsilon-globin"
+21	"gene"
+22	"within"
+23	"the"
+24	"dominant"
+25	"control"
+26	"or"
+27	"locus-activating"
+28	"region"
+29	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"VBZ"
+5	"VBN"
+6	"VBN"
+7	"TO"
+8	"DT"
+9	"JJ"
+10	"NN"
+11	"NN"
+12	"JJ"
+13	"CD"
+14	"NN"
+15	"CD"
+16	"''"
+17	"TO"
+18	"DT"
+19	"JJ"
+20	"NN"
+21	"NN"
+22	"IN"
+23	"DT"
+24	"JJ"
+25	"NN"
+26	"CC"
+27	"JJ"
+28	"NN"
+29	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+6	3	"nsubjpass"
+6	4	"aux"
+6	5	"auxpass"
+11	8	"det"
+11	9	"amod"
+11	10	"nn"
+6	11	"prep_to"
+11	12	"amod"
+14	13	"num"
+12	14	"dep"
+14	15	"num"
+21	18	"det"
+21	19	"amod"
+21	20	"nn"
+14	21	"prep_to"
+25	23	"det"
+25	24	"amod"
+12	25	"prep_within"
+28	27	"amod"
+12	28	"prep_within"
+25	28	"conj_or"
+
+>mention
+20	20	"Protein(epsilon-globin)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"enhancer"
+3	"is"
+4	"inducible"
+5	"in"
+6	"K562"
+7	"human"
+8	"erythroleukemia"
+9	"cells"
+10	","
+11	"increasing"
+12	"linked"
+13	"gamma-globin"
+14	"promoter/luciferase"
+15	"gene"
+16	"expression"
+17	"to"
+18	"170-fold"
+19	"over"
+20	"an"
+21	"enhancerless"
+22	"construct"
+23	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBZ"
+4	"JJ"
+5	"IN"
+6	"NN"
+7	"JJ"
+8	"NN"
+9	"NNS"
+10	","
+11	"VBG"
+12	"VBN"
+13	"NN"
+14	"NN"
+15	"NN"
+16	"NN"
+17	"TO"
+18	"RB"
+19	"IN"
+20	"DT"
+21	"JJ"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+4	2	"nsubj"
+4	3	"cop"
+9	6	"nn"
+9	7	"amod"
+9	8	"nn"
+4	9	"prep_in"
+4	11	"xcomp"
+16	12	"amod"
+14	13	"nn"
+16	14	"nn"
+16	15	"nn"
+11	16	"dobj"
+11	17	"prep"
+17	18	"pobj"
+22	20	"det"
+22	21	"amod"
+11	22	"prep_over"
+
+>mention
+13	13	"Protein(gamma-globin)"
+14	14	"Protein(promoter/luciferase)"
+
+>trigger
+11	11	"Positive_regulation"
+16	16	"Gene_expression"
+>argument
+11	16	"Theme"
+16	14	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"enhancer"
+3	"consists"
+4	"of"
+5	"tandem"
+6	"AP-1-binding"
+7	"sites"
+8	","
+9	"phased"
+10	"10"
+11	"bp"
+12	"apart"
+13	","
+14	"which"
+15	"are"
+16	"both"
+17	"required"
+18	"for"
+19	"full"
+20	"activity"
+21	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBZ"
+4	"IN"
+5	"JJ"
+6	"JJ"
+7	"NNS"
+8	","
+9	"JJ"
+10	"CD"
+11	"NN"
+12	"RB"
+13	","
+14	"WDT"
+15	"VBP"
+16	"DT"
+17	"VBN"
+18	"IN"
+19	"JJ"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+7	5	"amod"
+7	6	"amod"
+3	7	"prep_of"
+7	9	"amod"
+11	10	"num"
+12	11	"npadvmod"
+9	12	"advmod"
+17	14	"nsubjpass"
+17	15	"auxpass"
+17	16	"dep"
+7	17	"rcmod"
+20	19	"amod"
+17	20	"prep_for"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"DNA-protein"
+2	"binding"
+3	"assays"
+4	"with"
+5	"nuclear"
+6	"extracts"
+7	"from"
+8	"induced"
+9	"cells"
+10	"demonstrate"
+11	"a"
+12	"high"
+13	"molecular"
+14	"weight"
+15	"complex"
+16	"on"
+17	"the"
+18	"enhancer"
+19	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NNS"
+4	"IN"
+5	"JJ"
+6	"NNS"
+7	"IN"
+8	"VBN"
+9	"NNS"
+10	"VBP"
+11	"DT"
+12	"JJ"
+13	"JJ"
+14	"NN"
+15	"NN"
+16	"IN"
+17	"DT"
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	2	"nn"
+10	3	"nsubj"
+6	5	"amod"
+3	6	"prep_with"
+9	8	"amod"
+6	9	"prep_from"
+15	11	"det"
+15	12	"amod"
+15	13	"amod"
+15	14	"nn"
+10	15	"dobj"
+18	17	"det"
+15	18	"prep_on"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"formation"
+3	"of"
+4	"this"
+5	"complex"
+6	"also"
+7	"requires"
+8	"both"
+9	"AP-1"
+10	"sites"
+11	"and"
+12	"correlates"
+13	"with"
+14	"maximal"
+15	"enhancer"
+16	"activity"
+17	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"NN"
+6	"RB"
+7	"VBZ"
+8	"DT"
+9	"NN"
+10	"NNS"
+11	"CC"
+12	"VBZ"
+13	"IN"
+14	"JJ"
+15	"NN"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+7	2	"nsubj"
+12	2	"nsubj"
+5	4	"det"
+2	5	"prep_of"
+7	6	"advmod"
+10	8	"det"
+10	9	"nn"
+7	10	"dobj"
+7	12	"conj_and"
+16	14	"amod"
+16	15	"nn"
+12	16	"prep_with"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Induction"
+2	"of"
+3	"the"
+4	"enhancer"
+5	"may"
+6	"have"
+7	"a"
+8	"role"
+9	"in"
+10	"the"
+11	"increase"
+12	"in"
+13	"globin"
+14	"gene"
+15	"transcription"
+16	"that"
+17	"characterizes"
+18	"erythroid"
+19	"maturation"
+20	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"DT"
+4	"NN"
+5	"MD"
+6	"VB"
+7	"DT"
+8	"NN"
+9	"IN"
+10	"DT"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"NN"
+15	"NN"
+16	"WDT"
+17	"VBZ"
+18	"JJ"
+19	"NN"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"nsubj"
+4	3	"det"
+1	4	"prep_of"
+6	5	"aux"
+8	7	"det"
+6	8	"dobj"
+11	10	"det"
+6	11	"prep_in"
+15	13	"nn"
+15	14	"nn"
+11	15	"prep_in"
+17	15	"nsubj"
+15	17	"rcmod"
+19	18	"amod"
+17	19	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Enhancer"
+2	"activity"
+3	"appears"
+4	"to"
+5	"be"
+6	"mediated"
+7	"by"
+8	"the"
+9	"binding"
+10	"of"
+11	"a"
+12	"complex"
+13	"of"
+14	"proteins"
+15	"from"
+16	"the"
+17	"jun"
+18	"and"
+19	"fos"
+20	"families"
+21	"to"
+22	"tandem"
+23	"AP-1"
+24	"consensus"
+25	"sequences"
+26	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBZ"
+4	"TO"
+5	"VB"
+6	"VBN"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"IN"
+11	"DT"
+12	"NN"
+13	"IN"
+14	"NNS"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"CC"
+19	"NN"
+20	"NNS"
+21	"TO"
+22	"JJ"
+23	"NN"
+24	"NN"
+25	"NNS"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+3	2	"nsubj"
+6	2	"xsubj"
+6	4	"aux"
+6	5	"auxpass"
+3	6	"xcomp"
+9	8	"det"
+6	9	"agent"
+12	11	"det"
+9	12	"prep_of"
+12	14	"prep_of"
+20	16	"det"
+20	17	"nn"
+17	19	"conj_and"
+20	19	"nn"
+14	20	"prep_from"
+25	22	"amod"
+25	23	"nn"
+25	24	"nn"
+9	25	"prep_to"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

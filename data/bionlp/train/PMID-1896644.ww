@@ -1,0 +1,705 @@
+>>
+>word
+0	"Root"
+1	"HIV1"
+2	"infection"
+3	"of"
+4	"human"
+5	"monocytes"
+6	"and"
+7	"macrophages"
+8	"promotes"
+9	"induction"
+10	"or"
+11	"translocation"
+12	"of"
+13	"NF-KB-related"
+14	"factors"
+15	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"IN"
+4	"JJ"
+5	"NNS"
+6	"CC"
+7	"NNS"
+8	"VBZ"
+9	"NN"
+10	"CC"
+11	"NN"
+12	"IN"
+13	"JJ"
+14	"NNS"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+8	2	"nsubj"
+5	4	"amod"
+2	5	"prep_of"
+2	7	"prep_of"
+5	7	"conj_and"
+8	9	"dobj"
+8	11	"dobj"
+9	11	"conj_or"
+14	13	"amod"
+9	14	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"1991"
+3	","
+4	"we"
+5	"demonstrated"
+6	","
+7	"using"
+8	"electrophoretic"
+9	"mobility"
+10	"shift"
+11	"assays"
+12	","
+13	"that"
+14	"3"
+15	"different"
+16	"factors"
+17	"("
+18	"termed"
+19	"B1"
+20	","
+21	"B2"
+22	"and"
+23	"B3"
+24	")"
+25	"with"
+26	"affinity"
+27	"for"
+28	"the"
+29	"KB-enhancer"
+30	"target"
+31	"sequence"
+32	"were"
+33	"specifically"
+34	"detected"
+35	"in"
+36	"nuclear"
+37	"extracts"
+38	"from"
+39	"HIV1-infected"
+40	"monocytes"
+41	"and"
+42	"macrophages"
+43	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"CD"
+3	","
+4	"PRP"
+5	"VBD"
+6	","
+7	"VBG"
+8	"JJ"
+9	"NN"
+10	"NN"
+11	"NNS"
+12	","
+13	"WDT"
+14	"CD"
+15	"JJ"
+16	"NNS"
+17	"-LRB-"
+18	"VBN"
+19	"NN"
+20	","
+21	"NN"
+22	"CC"
+23	"NN"
+24	"-RRB-"
+25	"IN"
+26	"NN"
+27	"IN"
+28	"DT"
+29	"JJ"
+30	"NN"
+31	"NN"
+32	"VBD"
+33	"RB"
+34	"VBN"
+35	"IN"
+36	"JJ"
+37	"NNS"
+38	"IN"
+39	"JJ"
+40	"NNS"
+41	"CC"
+42	"NNS"
+43	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	2	"prep_in"
+5	4	"nsubj"
+5	7	"xcomp"
+11	8	"amod"
+11	9	"nn"
+11	10	"nn"
+7	11	"dobj"
+34	11	"dobj"
+34	13	"rel"
+16	14	"num"
+16	15	"amod"
+34	16	"nsubjpass"
+19	18	"amod"
+16	19	"dep"
+16	21	"dep"
+19	21	"conj_and"
+16	23	"dep"
+19	23	"conj_and"
+16	26	"prep_with"
+31	28	"det"
+31	29	"amod"
+31	30	"nn"
+26	31	"prep_for"
+34	32	"auxpass"
+34	33	"advmod"
+11	34	"rcmod"
+37	36	"amod"
+34	37	"prep_in"
+40	39	"amod"
+37	40	"prep_from"
+37	42	"prep_from"
+40	42	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"B2"
+3	"factor"
+4	"was"
+5	"induced"
+6	"in"
+7	"the"
+8	"nuclei"
+9	"of"
+10	"these"
+11	"cells"
+12	"only"
+13	"upon"
+14	"HIV1"
+15	"infection"
+16	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"VBD"
+5	"VBN"
+6	"IN"
+7	"DT"
+8	"NNS"
+9	"IN"
+10	"DT"
+11	"NNS"
+12	"RB"
+13	"IN"
+14	"NN"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+5	3	"nsubjpass"
+5	4	"auxpass"
+8	7	"det"
+5	8	"prep_in"
+11	10	"det"
+8	11	"prep_of"
+5	12	"advmod"
+15	14	"nn"
+5	15	"prep_upon"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"B3"
+3	"factor"
+4	"was"
+5	"only"
+6	"slightly"
+7	"evident"
+8	"in"
+9	"nuclei"
+10	"of"
+11	"uninfected"
+12	"cells"
+13	"but"
+14	"was"
+15	"readily"
+16	"detectable"
+17	"in"
+18	"nuclei"
+19	"of"
+20	"infected"
+21	"monocytes"
+22	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"VBD"
+5	"RB"
+6	"RB"
+7	"JJ"
+8	"IN"
+9	"NNS"
+10	"IN"
+11	"JJ"
+12	"NNS"
+13	"CC"
+14	"VBD"
+15	"RB"
+16	"JJ"
+17	"IN"
+18	"NNS"
+19	"IN"
+20	"JJ"
+21	"NNS"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+7	3	"nsubj"
+16	3	"nsubj"
+7	4	"cop"
+6	5	"advmod"
+7	6	"advmod"
+7	9	"prep_in"
+12	11	"amod"
+9	12	"prep_of"
+16	14	"cop"
+16	15	"advmod"
+7	16	"conj_but"
+16	18	"prep_in"
+21	20	"amod"
+18	21	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Its"
+2	"expression"
+3	"remained"
+4	"very"
+5	"low"
+6	"in"
+7	"nuclei"
+8	"of"
+9	"HIV1-infected"
+10	"macrophages"
+11	"."
+
+>tag
+0	"Root"
+1	"PRP$"
+2	"NN"
+3	"VBD"
+4	"RB"
+5	"JJ"
+6	"IN"
+7	"NNS"
+8	"IN"
+9	"JJ"
+10	"NNS"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"poss"
+5	2	"nsubj"
+5	3	"cop"
+5	4	"advmod"
+5	7	"prep_in"
+10	9	"amod"
+7	10	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"this"
+3	"paper"
+4	","
+5	"we"
+6	"demonstrate"
+7	"that"
+8	"the"
+9	"B2"
+10	"factor"
+11	"is"
+12	"expressed"
+13	"in"
+14	"the"
+15	"cytosol"
+16	"of"
+17	"monocytes"
+18	"and"
+19	"macrophages"
+20	"as"
+21	"a"
+22	"DNA-binding"
+23	"protein"
+24	","
+25	"indicating"
+26	"that"
+27	"it"
+28	"is"
+29	"not"
+30	"associated"
+31	"with"
+32	"an"
+33	"inhibitor"
+34	"("
+35	"IKB"
+36	")"
+37	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"NN"
+4	","
+5	"PRP"
+6	"VBP"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"NN"
+11	"VBZ"
+12	"VBN"
+13	"IN"
+14	"DT"
+15	"NN"
+16	"IN"
+17	"NNS"
+18	"CC"
+19	"NNS"
+20	"IN"
+21	"DT"
+22	"JJ"
+23	"NN"
+24	","
+25	"VBG"
+26	"IN"
+27	"PRP"
+28	"VBZ"
+29	"RB"
+30	"VBN"
+31	"IN"
+32	"DT"
+33	"NN"
+34	"-LRB-"
+35	"NN"
+36	"-RRB-"
+37	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"det"
+6	3	"prep_in"
+6	5	"nsubj"
+12	7	"complm"
+10	8	"det"
+10	9	"nn"
+12	10	"nsubjpass"
+12	11	"auxpass"
+6	12	"ccomp"
+15	14	"det"
+12	15	"prep_in"
+15	17	"prep_of"
+15	19	"prep_of"
+17	19	"conj_and"
+23	21	"det"
+23	22	"amod"
+12	23	"prep_as"
+12	25	"xcomp"
+30	26	"complm"
+30	27	"nsubjpass"
+30	28	"auxpass"
+30	29	"neg"
+25	30	"ccomp"
+33	32	"det"
+30	33	"prep_with"
+33	35	"abbrev"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"factor"
+3	"remained"
+4	"clustered"
+5	"in"
+6	"the"
+7	"cytosol"
+8	"and"
+9	"was"
+10	"translocated"
+11	"to"
+12	"the"
+13	"nuclei"
+14	"only"
+15	"after"
+16	"HIV1"
+17	"infection"
+18	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBD"
+4	"VBN"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"CC"
+9	"VBD"
+10	"VBN"
+11	"TO"
+12	"DT"
+13	"NNS"
+14	"RB"
+15	"IN"
+16	"NN"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+4	2	"nsubjpass"
+10	2	"nsubjpass"
+4	3	"auxpass"
+7	6	"det"
+4	7	"prep_in"
+10	9	"auxpass"
+4	10	"conj_and"
+13	12	"det"
+10	13	"prep_to"
+10	14	"advmod"
+17	16	"nn"
+10	17	"prep_after"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"B3"
+3	"factor"
+4	"is"
+5	"detected"
+6	"in"
+7	"the"
+8	"cytosol"
+9	"only"
+10	"when"
+11	"cells"
+12	"are"
+13	"HIV1-infected"
+14	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"VBZ"
+5	"VBN"
+6	"IN"
+7	"DT"
+8	"NN"
+9	"RB"
+10	"WRB"
+11	"NNS"
+12	"VBP"
+13	"JJ"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+5	3	"nsubjpass"
+5	4	"auxpass"
+8	7	"det"
+5	8	"prep_in"
+10	9	"advmod"
+13	10	"advmod"
+13	11	"nsubj"
+13	12	"cop"
+5	13	"advcl"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"role"
+3	"of"
+4	"HIV1"
+5	"infection"
+6	"in"
+7	"the"
+8	"expression"
+9	"and"
+10	"the"
+11	"translocation"
+12	"of"
+13	"these"
+14	"factors"
+15	"is"
+16	"discussed"
+17	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"NN"
+6	"IN"
+7	"DT"
+8	"NN"
+9	"CC"
+10	"DT"
+11	"NN"
+12	"IN"
+13	"DT"
+14	"NNS"
+15	"VBZ"
+16	"VBN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+16	2	"nsubjpass"
+5	4	"nn"
+2	5	"prep_of"
+8	7	"det"
+2	8	"prep_in"
+11	10	"det"
+2	11	"prep_in"
+8	11	"conj_and"
+14	13	"det"
+8	14	"prep_of"
+16	15	"auxpass"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

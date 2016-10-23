@@ -1,0 +1,801 @@
+>>
+>word
+0	"Root"
+1	"LMP1"
+2	"Upregulates"
+3	"IL10"
+4	"Expression"
+5	"and"
+6	"Constitutively"
+7	"Activates"
+8	"Stat3"
+9	"("
+10	"A"
+11	")"
+12	"Relative"
+13	"expression"
+14	"of"
+15	"IL10"
+16	","
+17	"IL15"
+18	","
+19	"and"
+20	"IFNgamma"
+21	"mRNA"
+22	"in"
+23	"WT"
+24	"and"
+25	"LMP1"
+26	"transgenic"
+27	"B"
+28	"cells"
+29	"("
+30	"CD19"
+31	"+"
+32	")"
+33	","
+34	"as"
+35	"detected"
+36	"with"
+37	"an"
+38	"Rnase"
+39	"protection"
+40	"assay"
+41	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"NN"
+4	"NN"
+5	"CC"
+6	"RB"
+7	"VBZ"
+8	"NN"
+9	"-LRB-"
+10	"NN"
+11	"-RRB-"
+12	"JJ"
+13	"NN"
+14	"IN"
+15	"NN"
+16	","
+17	"NN"
+18	","
+19	"CC"
+20	"NN"
+21	"NN"
+22	"IN"
+23	"NN"
+24	"CC"
+25	"NN"
+26	"JJ"
+27	"NN"
+28	"NNS"
+29	"-LRB-"
+30	"NN"
+31	"CC"
+32	"-RRB-"
+33	","
+34	"IN"
+35	"VBN"
+36	"IN"
+37	"DT"
+38	"NN"
+39	"NN"
+40	"NN"
+41	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+7	1	"nsubj"
+4	3	"nn"
+2	4	"dobj"
+7	6	"advmod"
+2	7	"conj_and"
+13	8	"nn"
+13	10	"nn"
+13	12	"amod"
+7	13	"dobj"
+13	15	"prep_of"
+13	17	"prep_of"
+15	17	"conj_and"
+21	20	"nn"
+13	21	"prep_of"
+15	21	"conj_and"
+28	23	"nn"
+23	25	"conj_and"
+28	25	"nn"
+28	26	"amod"
+28	27	"nn"
+13	28	"prep_in"
+28	30	"dep"
+30	31	"dep"
+35	34	"mark"
+7	35	"advcl"
+40	37	"det"
+40	38	"nn"
+40	39	"nn"
+35	40	"prep_with"
+
+>mention
+1	1	"Protein(LMP1)"
+3	3	"Protein(IL10)"
+8	8	"Protein(Stat3)"
+15	15	"Protein(IL10)"
+17	17	"Protein(IL15)"
+20	20	"Protein(IFNgamma)"
+25	25	"Protein(LMP1)"
+30	30	"Protein(CD19)"
+
+>trigger
+2	2	"Positive_regulation"
+4	4	"Gene_expression"
+7	7	"Positive_regulation"
+13	13	"Transcription"
+>argument
+2	1	"Cause"
+2	4	"Theme"
+4	3	"Theme"
+7	1	"Cause"
+7	8	"Theme"
+13	15	"Theme"
+13	17	"Theme"
+13	20	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Mouse"
+2	"lymphoma"
+3	"cell"
+4	"lines"
+5	"967"
+6	"and"
+7	"K46mu"
+8	"were"
+9	"used"
+10	"as"
+11	"controls"
+12	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NN"
+4	"NNS"
+5	"CD"
+6	"CC"
+7	"CD"
+8	"VBD"
+9	"VBN"
+10	"IN"
+11	"NNS"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nn"
+4	2	"nn"
+4	3	"nn"
+9	4	"nsubjpass"
+4	5	"dep"
+4	7	"dep"
+5	7	"conj_and"
+9	8	"auxpass"
+9	11	"prep_as"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Expression"
+2	"levels"
+3	"were"
+4	"quantified"
+5	"with"
+6	"a"
+7	"phosphorimager"
+8	"and"
+9	"values"
+10	"were"
+11	"normalized"
+12	"to"
+13	"the"
+14	"ribosomal"
+15	"housekeeping"
+16	"gene"
+17	"L32"
+18	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"VBD"
+4	"VBN"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"CC"
+9	"NNS"
+10	"VBD"
+11	"VBN"
+12	"TO"
+13	"DT"
+14	"JJ"
+15	"JJ"
+16	"NN"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+4	2	"nsubjpass"
+4	3	"auxpass"
+7	6	"det"
+4	7	"prep_with"
+11	9	"nsubjpass"
+11	10	"auxpass"
+4	11	"conj_and"
+17	13	"det"
+17	14	"amod"
+17	15	"amod"
+17	16	"nn"
+11	17	"prep_to"
+
+>mention
+17	17	"Protein(L32)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"cytokine"
+3	":"
+4	"L32"
+5	"ratio"
+6	"was"
+7	"set"
+8	"to"
+9	"1"
+10	"in"
+11	"the"
+12	"mouse"
+13	"B"
+14	"cell"
+15	"lymphoma"
+16	"line"
+17	"967"
+18	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	":"
+4	"NN"
+5	"NN"
+6	"VBD"
+7	"VBN"
+8	"TO"
+9	"CD"
+10	"IN"
+11	"DT"
+12	"NN"
+13	"NN"
+14	"NN"
+15	"NN"
+16	"NN"
+17	"CD"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"det"
+5	2	"nn"
+5	4	"nn"
+7	5	"nsubjpass"
+7	6	"auxpass"
+7	9	"prep_to"
+16	11	"det"
+16	12	"nn"
+16	13	"nn"
+16	14	"nn"
+16	15	"nn"
+9	16	"prep_in"
+16	17	"num"
+
+>mention
+4	4	"Protein(L32)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"("
+2	"B"
+3	"and"
+4	"C"
+5	")"
+6	"Immunoblot"
+7	"analysis"
+8	"of"
+9	"activated"
+10	"pStat3"
+11	"in"
+12	"purified"
+13	"B"
+14	"cells"
+15	"("
+16	"CD19"
+17	"+"
+18	")"
+19	"from"
+20	"WT"
+21	"and"
+22	"LMP1"
+23	"transgenic"
+24	"mice"
+25	"("
+26	"B"
+27	")"
+28	"at"
+29	"the"
+30	"time"
+31	"of"
+32	"harvest"
+33	","
+34	"and"
+35	"("
+36	"C"
+37	")"
+38	"4"
+39	"h"
+40	"after"
+41	"culture"
+42	"with"
+43	"or"
+44	"without"
+45	"IL10"
+46	","
+47	"a"
+48	"neutralizing"
+49	"antibody"
+50	"to"
+51	"IL10"
+52	","
+53	"or"
+54	"a"
+55	"rat"
+56	"IgG1"
+57	"isotype"
+58	"control"
+59	"."
+
+>tag
+0	"Root"
+1	"-LRB-"
+2	"NN"
+3	"CC"
+4	"LS"
+5	"-RRB-"
+6	"NN"
+7	"NN"
+8	"IN"
+9	"VBN"
+10	"NN"
+11	"IN"
+12	"VBN"
+13	"NN"
+14	"NNS"
+15	"-LRB-"
+16	"NN"
+17	"CC"
+18	"-RRB-"
+19	"IN"
+20	"NN"
+21	"CC"
+22	"NN"
+23	"JJ"
+24	"NNS"
+25	"-LRB-"
+26	"NN"
+27	"-RRB-"
+28	"IN"
+29	"DT"
+30	"NN"
+31	"IN"
+32	"NN"
+33	","
+34	"CC"
+35	"-LRB-"
+36	"LS"
+37	"-RRB-"
+38	"CD"
+39	"NN"
+40	"IN"
+41	"NN"
+42	"IN"
+43	"CC"
+44	"IN"
+45	"NN"
+46	","
+47	"DT"
+48	"VBG"
+49	"NN"
+50	"TO"
+51	"NN"
+52	","
+53	"CC"
+54	"DT"
+55	"NN"
+56	"NN"
+57	"NN"
+58	"NN"
+59	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	4	"dep"
+7	6	"nn"
+2	7	"conj_and"
+10	9	"amod"
+7	10	"prep_of"
+14	12	"amod"
+14	13	"nn"
+10	14	"prep_in"
+14	16	"dep"
+16	17	"dep"
+24	20	"nn"
+20	22	"conj_and"
+24	22	"nn"
+24	23	"amod"
+14	24	"prep_from"
+2	26	"appos"
+30	29	"det"
+2	30	"prep_at"
+30	32	"prep_of"
+39	36	"dep"
+39	38	"num"
+2	39	"conj_and"
+39	41	"prep_after"
+41	42	"prep"
+41	44	"prep"
+42	44	"conj_or"
+44	45	"pobj"
+49	47	"det"
+49	48	"amod"
+44	49	"pobj"
+45	49	"conj_or"
+49	51	"prep_to"
+58	54	"det"
+58	55	"nn"
+58	56	"nn"
+58	57	"nn"
+44	58	"pobj"
+45	58	"conj_or"
+
+>mention
+10	10	"Protein(pStat3)"
+16	16	"Protein(CD19)"
+22	22	"Protein(LMP1)"
+45	45	"Protein(IL10)"
+51	51	"Protein(IL10)"
+
+>trigger
+9	9	"Positive_regulation"
+>argument
+9	10	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"("
+2	"C"
+3	")"
+4	"Shown"
+5	"are"
+6	"the"
+7	"results"
+8	"for"
+9	"WT"
+10	"lymphoma"
+11	"1"
+12	"and"
+13	"LMP1"
+14	"transgenic"
+15	"lymphoma"
+16	"1"
+17	"."
+
+>tag
+0	"Root"
+1	"-LRB-"
+2	"LS"
+3	"-RRB-"
+4	"VBN"
+5	"VBP"
+6	"DT"
+7	"NNS"
+8	"IN"
+9	"NN"
+10	"NN"
+11	"CD"
+12	"CC"
+13	"NN"
+14	"JJ"
+15	"NN"
+16	"CD"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	2	"dep"
+7	5	"cop"
+7	6	"det"
+4	7	"ccomp"
+10	9	"nn"
+7	10	"prep_for"
+10	11	"num"
+15	13	"nn"
+15	14	"amod"
+7	15	"prep_for"
+10	15	"conj_and"
+15	16	"num"
+
+>mention
+13	13	"Protein(LMP1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Arrows"
+2	"indicate"
+3	"the"
+4	"positions"
+5	"of"
+6	"the"
+7	"alpha"
+8	"and"
+9	"beta"
+10	"isoforms"
+11	"of"
+12	"Stat3"
+13	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"VBP"
+3	"DT"
+4	"NNS"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"CC"
+9	"NN"
+10	"NNS"
+11	"IN"
+12	"NN"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+4	3	"det"
+2	4	"dobj"
+10	6	"det"
+10	7	"nn"
+7	9	"conj_and"
+10	9	"nn"
+4	10	"prep_of"
+10	12	"prep_of"
+
+>mention
+12	12	"Protein(Stat3)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Actin"
+2	"was"
+3	"used"
+4	"as"
+5	"a"
+6	"loading"
+7	"control"
+8	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"VBN"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"NN"
+8	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubjpass"
+3	2	"auxpass"
+7	5	"det"
+7	6	"nn"
+3	7	"prep_as"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"("
+2	"D"
+3	")"
+4	"Immunohistochemistry"
+5	"detection"
+6	"of"
+7	"activated"
+8	"nuclear"
+9	"pStat3"
+10	"in"
+11	"the"
+12	"spleens"
+13	"of"
+14	"WT"
+15	"and"
+16	"LMP1"
+17	"transgenic"
+18	"mice"
+19	"."
+
+>tag
+0	"Root"
+1	"-LRB-"
+2	"LS"
+3	"-RRB-"
+4	"NN"
+5	"NN"
+6	"IN"
+7	"VBN"
+8	"JJ"
+9	"NN"
+10	"IN"
+11	"DT"
+12	"NNS"
+13	"IN"
+14	"NN"
+15	"CC"
+16	"NN"
+17	"JJ"
+18	"NNS"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	2	"dep"
+5	4	"nn"
+9	7	"amod"
+9	8	"amod"
+5	9	"prep_of"
+12	11	"det"
+5	12	"prep_in"
+18	14	"nn"
+14	16	"conj_and"
+18	16	"nn"
+18	17	"amod"
+12	18	"prep_of"
+
+>mention
+9	9	"Protein(pStat3)"
+16	16	"Protein(LMP1)"
+
+>trigger
+7	7	"Positive_regulation"
+>argument
+7	9	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Scale"
+2	"bar"
+3	","
+4	"20"
+5	"mum"
+6	"."
+
+>tag
+0	"Root"
+1	"VBP"
+2	"NN"
+3	","
+4	"CD"
+5	"NN"
+6	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+1	2	"dobj"
+5	4	"num"
+2	5	"appos"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

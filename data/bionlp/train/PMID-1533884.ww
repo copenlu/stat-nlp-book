@@ -1,0 +1,325 @@
+>>
+>word
+0	"Root"
+1	"Activation"
+2	"of"
+3	"the"
+4	"human"
+5	"immunodeficiency"
+6	"virus"
+7	"type"
+8	"1"
+9	"enhancer"
+10	"is"
+11	"not"
+12	"dependent"
+13	"on"
+14	"NFAT-1"
+15	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"NN"
+8	"CD"
+9	"NN"
+10	"VBZ"
+11	"RB"
+12	"JJ"
+13	"IN"
+14	"NN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+12	1	"nsubj"
+9	3	"det"
+9	4	"amod"
+9	5	"nn"
+9	6	"nn"
+9	7	"nn"
+9	8	"num"
+1	9	"prep_of"
+12	10	"cop"
+12	11	"neg"
+12	14	"prep_on"
+
+>mention
+14	14	"Protein(NFAT-1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"function"
+3	"of"
+4	"a"
+5	"putative"
+6	"NFAT-1"
+7	"site"
+8	"in"
+9	"the"
+10	"human"
+11	"immunodeficiency"
+12	"virus"
+13	"type"
+14	"1"
+15	"enhancer"
+16	"has"
+17	"been"
+18	"analyzed"
+19	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"NN"
+8	"IN"
+9	"DT"
+10	"JJ"
+11	"NN"
+12	"NN"
+13	"NN"
+14	"CD"
+15	"NN"
+16	"VBZ"
+17	"VBN"
+18	"VBN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+18	2	"nsubjpass"
+7	4	"det"
+7	5	"amod"
+7	6	"nn"
+2	7	"prep_of"
+15	9	"det"
+15	10	"amod"
+15	11	"nn"
+15	12	"nn"
+15	13	"nn"
+15	14	"num"
+2	15	"prep_in"
+18	16	"aux"
+18	17	"auxpass"
+
+>mention
+6	6	"Protein(NFAT-1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Activation"
+2	"by"
+3	"the"
+4	"T-cell"
+5	"antigen"
+6	"receptor"
+7	"is"
+8	"minimal"
+9	"in"
+10	"Jurkat"
+11	"cells"
+12	"and"
+13	"is"
+14	"mediated"
+15	"by"
+16	"the"
+17	"kappa"
+18	"B"
+19	"sites"
+20	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"DT"
+4	"NN"
+5	"NN"
+6	"NN"
+7	"VBZ"
+8	"JJ"
+9	"IN"
+10	"NN"
+11	"NNS"
+12	"CC"
+13	"VBZ"
+14	"VBN"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"NN"
+19	"NNS"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"nsubj"
+14	1	"nsubjpass"
+6	3	"det"
+6	4	"nn"
+6	5	"nn"
+1	6	"prep_by"
+8	7	"cop"
+11	10	"nn"
+8	11	"prep_in"
+14	13	"auxpass"
+8	14	"conj_and"
+19	16	"det"
+19	17	"nn"
+19	18	"nn"
+14	19	"agent"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"putative"
+3	"NFAT-1"
+4	"region"
+5	"is"
+6	"not"
+7	"required"
+8	"for"
+9	"the"
+10	"response"
+11	"to"
+12	"anti-CD3"
+13	"or"
+14	"to"
+15	"mitogens"
+16	"in"
+17	"T-cell"
+18	","
+19	"B-cell"
+20	","
+21	"or"
+22	"monocyte/macrophage"
+23	"leukemia"
+24	"lines"
+25	","
+26	"nor"
+27	"is"
+28	"it"
+29	"a"
+30	"cis-acting"
+31	"negative"
+32	"regulatory"
+33	"element"
+34	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"NN"
+5	"VBZ"
+6	"RB"
+7	"VBN"
+8	"IN"
+9	"DT"
+10	"NN"
+11	"TO"
+12	"NN"
+13	"CC"
+14	"TO"
+15	"NNS"
+16	"IN"
+17	"NN"
+18	","
+19	"NN"
+20	","
+21	"CC"
+22	"NN"
+23	"NN"
+24	"NNS"
+25	","
+26	"CC"
+27	"VBZ"
+28	"PRP"
+29	"DT"
+30	"JJ"
+31	"JJ"
+32	"JJ"
+33	"NN"
+34	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"det"
+4	2	"amod"
+4	3	"nn"
+7	4	"nsubjpass"
+7	5	"auxpass"
+7	6	"neg"
+10	9	"det"
+7	10	"prep_for"
+10	12	"prep_to"
+10	15	"prep_to"
+12	15	"conj_or"
+24	17	"nn"
+17	19	"conj_or"
+24	19	"nn"
+23	22	"nn"
+17	23	"conj_or"
+24	23	"nn"
+10	24	"prep_in"
+28	27	"cop"
+7	28	"conj_nor"
+33	29	"det"
+33	30	"amod"
+33	31	"amod"
+33	32	"amod"
+28	33	"attr"
+
+>mention
+3	3	"Protein(NFAT-1)"
+
+>trigger
+>argument
+>relation
+
+

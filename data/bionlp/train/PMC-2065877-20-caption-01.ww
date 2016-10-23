@@ -1,0 +1,418 @@
+>>
+>word
+0	"Root"
+1	"High"
+2	"LMP1"
+3	"Expression"
+4	"Correlates"
+5	"with"
+6	"the"
+7	"Development"
+8	"of"
+9	"Lymphoma"
+10	"LMP1"
+11	"expression"
+12	"is"
+13	"shown"
+14	"by"
+15	"("
+16	"A"
+17	")"
+18	"immunoblotting"
+19	"of"
+20	"purified"
+21	"B"
+22	"cells"
+23	"("
+24	"CD19"
+25	"+"
+26	")"
+27	"and"
+28	"("
+29	"B"
+30	")"
+31	"immunohistochemistry"
+32	"staining"
+33	"of"
+34	"spleen"
+35	"tissue"
+36	"from"
+37	"wild-type"
+38	"("
+39	"WT"
+40	")"
+41	"and"
+42	"LMP1"
+43	"transgenic"
+44	"mice"
+45	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NN"
+4	"VBZ"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"NN"
+11	"NN"
+12	"VBZ"
+13	"VBN"
+14	"IN"
+15	"-LRB-"
+16	"LS"
+17	"-RRB-"
+18	"NN"
+19	"IN"
+20	"VBN"
+21	"NN"
+22	"NNS"
+23	"-LRB-"
+24	"NN"
+25	"CC"
+26	"-RRB-"
+27	"CC"
+28	"-LRB-"
+29	"LS"
+30	"-RRB-"
+31	"NN"
+32	"NN"
+33	"IN"
+34	"NN"
+35	"NN"
+36	"IN"
+37	"JJ"
+38	"-LRB-"
+39	"JJ"
+40	"-RRB-"
+41	"CC"
+42	"NN"
+43	"JJ"
+44	"NNS"
+45	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"nn"
+4	3	"nsubj"
+7	6	"det"
+4	7	"prep_with"
+13	8	"mark"
+11	9	"nn"
+11	10	"nn"
+13	11	"nsubjpass"
+13	12	"auxpass"
+7	13	"dep"
+18	16	"dep"
+13	18	"agent"
+22	20	"amod"
+22	21	"nn"
+18	22	"prep_of"
+18	24	"dep"
+24	25	"dep"
+32	29	"dep"
+32	31	"nn"
+13	32	"agent"
+18	32	"conj_and"
+35	34	"nn"
+32	35	"prep_of"
+35	37	"prep_from"
+37	39	"dep"
+35	42	"prep_from"
+37	42	"conj_and"
+44	43	"amod"
+37	44	"dep"
+
+>mention
+2	2	"Protein(LMP1)"
+10	10	"Protein(LMP1)"
+24	24	"Protein(CD19)"
+42	42	"Protein(LMP1)"
+
+>trigger
+1	1	"Positive_regulation"
+3	3	"Gene_expression"
+11	11	"Gene_expression"
+>argument
+1	3	"Theme"
+3	2	"Theme"
+11	10	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"("
+2	"A"
+3	")"
+4	"Lymphomas"
+5	"are"
+6	"identified"
+7	"with"
+8	"a"
+9	"number"
+10	"("
+11	"1-7"
+12	")"
+13	"."
+
+>tag
+0	"Root"
+1	"-LRB-"
+2	"LS"
+3	"-RRB-"
+4	"NNS"
+5	"VBP"
+6	"VBN"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"-LRB-"
+11	"NN"
+12	"-RRB-"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	2	"dep"
+6	4	"nsubjpass"
+6	5	"auxpass"
+9	8	"det"
+6	9	"prep_with"
+9	11	"appos"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Arrows"
+2	"indicate"
+3	"the"
+4	"LMP1"
+5	"-specific"
+6	"band"
+7	"and"
+8	"its"
+9	"degradation"
+10	"products"
+11	"as"
+12	"well"
+13	"as"
+14	"a"
+15	"non-specific"
+16	"band"
+17	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"VBP"
+3	"DT"
+4	"NN"
+5	"JJ"
+6	"NN"
+7	"CC"
+8	"PRP$"
+9	"NN"
+10	"NNS"
+11	"RB"
+12	"RB"
+13	"IN"
+14	"DT"
+15	"JJ"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+6	3	"dep"
+6	4	"nn"
+6	5	"amod"
+2	6	"dobj"
+10	8	"poss"
+10	9	"nn"
+2	10	"dobj"
+6	10	"conj_and"
+16	14	"det"
+16	15	"amod"
+2	16	"dobj"
+6	16	"conj_and"
+
+>mention
+4	4	"Protein(LMP1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Actin"
+2	"was"
+3	"used"
+4	"as"
+5	"a"
+6	"loading"
+7	"control"
+8	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBD"
+3	"VBN"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"NN"
+8	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubjpass"
+3	2	"auxpass"
+7	5	"det"
+7	6	"nn"
+3	7	"prep_as"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"("
+2	"B"
+3	")"
+4	"White"
+5	"and"
+6	"red"
+7	"pulps"
+8	"are"
+9	"shown"
+10	","
+11	"but"
+12	"this"
+13	"architecture"
+14	"is"
+15	"lost"
+16	"upon"
+17	"development"
+18	"of"
+19	"lymphoma"
+20	"."
+
+>tag
+0	"Root"
+1	"-LRB-"
+2	"LS"
+3	"-RRB-"
+4	"JJ"
+5	"CC"
+6	"JJ"
+7	"NNS"
+8	"VBP"
+9	"VBN"
+10	","
+11	"CC"
+12	"DT"
+13	"NN"
+14	"VBZ"
+15	"VBN"
+16	"IN"
+17	"NN"
+18	"IN"
+19	"NN"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	2	"dep"
+7	4	"amod"
+4	6	"conj_and"
+7	6	"amod"
+9	7	"nsubjpass"
+9	8	"auxpass"
+13	12	"det"
+15	13	"nsubjpass"
+15	14	"auxpass"
+9	15	"conj_but"
+15	17	"prep_upon"
+17	19	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Scale"
+2	"bar"
+3	","
+4	"20"
+5	"mum"
+6	"."
+
+>tag
+0	"Root"
+1	"VBP"
+2	"NN"
+3	","
+4	"CD"
+5	"NN"
+6	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+1	2	"dobj"
+5	4	"num"
+2	5	"appos"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

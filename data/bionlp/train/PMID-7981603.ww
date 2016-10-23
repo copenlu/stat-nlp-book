@@ -1,0 +1,396 @@
+>>
+>word
+0	"Root"
+1	"Glucocorticoid-induced"
+2	"apoptosis"
+3	"of"
+4	"lymphoid"
+5	"cells"
+6	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"IN"
+4	"JJ"
+5	"NNS"
+6	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+5	4	"amod"
+2	5	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"induction"
+3	"of"
+4	"cell"
+5	"death"
+6	"in"
+7	"lymphoid"
+8	"cells"
+9	"by"
+10	"glucocorticoids"
+11	"is"
+12	"one"
+13	"of"
+14	"the"
+15	"earliest"
+16	"and"
+17	"most"
+18	"thoroughly"
+19	"studied"
+20	"models"
+21	"of"
+22	"apoptosis"
+23	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"NN"
+6	"IN"
+7	"JJ"
+8	"NNS"
+9	"IN"
+10	"NNS"
+11	"VBZ"
+12	"CD"
+13	"IN"
+14	"DT"
+15	"JJS"
+16	"CC"
+17	"RBS"
+18	"RB"
+19	"VBN"
+20	"NNS"
+21	"IN"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+12	2	"nsubj"
+5	4	"nn"
+2	5	"prep_of"
+8	7	"amod"
+2	8	"prep_in"
+2	10	"prep_by"
+12	11	"cop"
+20	14	"det"
+20	15	"amod"
+18	17	"advmod"
+19	18	"advmod"
+15	19	"conj_and"
+20	19	"amod"
+12	20	"prep_of"
+20	22	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Although"
+2	"the"
+3	"exact"
+4	"mechanism"
+5	"by"
+6	"which"
+7	"apoptosis"
+8	"occurs"
+9	"in"
+10	"lymphocytes"
+11	"is"
+12	"unknown"
+13	"many"
+14	"biochemical"
+15	"and"
+16	"molecular"
+17	"changes"
+18	"have"
+19	"been"
+20	"shown"
+21	"to"
+22	"occur"
+23	"in"
+24	"these"
+25	"cells"
+26	"in"
+27	"response"
+28	"to"
+29	"glucocorticoids"
+30	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"JJ"
+4	"NN"
+5	"IN"
+6	"WDT"
+7	"NN"
+8	"VBZ"
+9	"IN"
+10	"NNS"
+11	"VBZ"
+12	"JJ"
+13	"JJ"
+14	"JJ"
+15	"CC"
+16	"JJ"
+17	"NNS"
+18	"VBP"
+19	"VBN"
+20	"VBN"
+21	"TO"
+22	"VB"
+23	"IN"
+24	"DT"
+25	"NNS"
+26	"IN"
+27	"NN"
+28	"TO"
+29	"NNS"
+30	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+12	1	"mark"
+4	2	"det"
+4	3	"amod"
+12	4	"nsubj"
+8	6	"rel"
+8	7	"nsubj"
+4	8	"rcmod"
+8	10	"prep_in"
+12	11	"cop"
+20	12	"advcl"
+17	13	"amod"
+17	14	"amod"
+14	16	"conj_and"
+17	16	"amod"
+20	17	"nsubjpass"
+22	17	"xsubj"
+20	18	"aux"
+20	19	"auxpass"
+22	21	"aux"
+20	22	"xcomp"
+25	24	"det"
+22	25	"prep_in"
+22	27	"prep_in"
+27	29	"prep_to"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"role"
+3	"of"
+4	"chromatin"
+5	"degradation"
+6	"and"
+7	"endonucleases"
+8	"in"
+9	"the"
+10	"apoptotic"
+11	"process"
+12	"has"
+13	"been"
+14	"closely"
+15	"studied"
+16	","
+17	"as"
+18	"well"
+19	"as"
+20	"the"
+21	"involvement"
+22	"of"
+23	"several"
+24	"oncogenes"
+25	"in"
+26	"glucocorticoid-induced"
+27	"cell"
+28	"lysis"
+29	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"NN"
+6	"CC"
+7	"NNS"
+8	"IN"
+9	"DT"
+10	"JJ"
+11	"NN"
+12	"VBZ"
+13	"VBN"
+14	"RB"
+15	"VBN"
+16	","
+17	"RB"
+18	"RB"
+19	"IN"
+20	"DT"
+21	"NN"
+22	"IN"
+23	"JJ"
+24	"NNS"
+25	"IN"
+26	"JJ"
+27	"NN"
+28	"NN"
+29	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+15	2	"nsubjpass"
+5	4	"nn"
+2	5	"prep_of"
+2	7	"prep_of"
+5	7	"conj_and"
+11	9	"det"
+11	10	"amod"
+2	11	"prep_in"
+15	12	"aux"
+15	13	"auxpass"
+15	13	"cop"
+15	14	"advmod"
+21	20	"det"
+15	21	"attr"
+15	21	"conj_and"
+24	23	"amod"
+21	24	"prep_of"
+28	26	"amod"
+28	27	"nn"
+21	28	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"addition"
+3	","
+4	"the"
+5	"clinical"
+6	"importance"
+7	"of"
+8	"glucocorticoid-induced"
+9	"apoptosis"
+10	"in"
+11	"the"
+12	"treatment"
+13	"of"
+14	"lymphoid"
+15	"neoplasms"
+16	"has"
+17	"recently"
+18	"received"
+19	"increased"
+20	"attention"
+21	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	","
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"IN"
+8	"JJ"
+9	"NN"
+10	"IN"
+11	"DT"
+12	"NN"
+13	"IN"
+14	"JJ"
+15	"NNS"
+16	"VBZ"
+17	"RB"
+18	"VBN"
+19	"VBN"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+18	2	"prep_in"
+6	4	"det"
+6	5	"amod"
+18	6	"nsubj"
+9	8	"amod"
+6	9	"prep_of"
+12	11	"det"
+6	12	"prep_in"
+15	14	"amod"
+12	15	"prep_of"
+18	16	"aux"
+18	17	"advmod"
+20	19	"amod"
+18	20	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

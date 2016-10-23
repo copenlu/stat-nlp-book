@@ -1,0 +1,300 @@
+>>
+>word
+0	"Root"
+1	"Towards"
+2	"a"
+3	"molecular"
+4	"understanding"
+5	"of"
+6	"T-cell"
+7	"differentiation"
+8	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"JJ"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"NN"
+8	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"dep"
+4	2	"det"
+4	3	"amod"
+1	4	"pobj"
+7	6	"nn"
+4	7	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Lymphoid"
+2	"differentiation"
+3	"is"
+4	"one"
+5	"of"
+6	"the"
+7	"best"
+8	"studied"
+9	"examples"
+10	"of"
+11	"mammalian"
+12	"development"
+13	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"VBZ"
+4	"CD"
+5	"IN"
+6	"DT"
+7	"RBS"
+8	"VBN"
+9	"NNS"
+10	"IN"
+11	"JJ"
+12	"NN"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+4	2	"nsubj"
+4	3	"cop"
+9	6	"det"
+8	7	"advmod"
+9	8	"amod"
+4	9	"prep_of"
+12	11	"amod"
+9	12	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Here"
+2	"Hans"
+3	"Clevers"
+4	"and"
+5	"Michael"
+6	"Owen"
+7	"describe"
+8	"how"
+9	"the"
+10	"cloning"
+11	"of"
+12	"the"
+13	"genes"
+14	"that"
+15	"encode"
+16	"T-cell-specific"
+17	"membrane"
+18	"proteins"
+19	"allows"
+20	"the"
+21	"identification"
+22	"of"
+23	"transcription"
+24	"factors"
+25	"that"
+26	"control"
+27	"the"
+28	"expression"
+29	"of"
+30	"these"
+31	"T-cell"
+32	"genes"
+33	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"NNP"
+3	"NNP"
+4	"CC"
+5	"NNP"
+6	"NNP"
+7	"VBP"
+8	"WRB"
+9	"DT"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"NNS"
+14	"WDT"
+15	"VBP"
+16	"JJ"
+17	"NN"
+18	"NNS"
+19	"VBZ"
+20	"DT"
+21	"NN"
+22	"IN"
+23	"NN"
+24	"NNS"
+25	"WDT"
+26	"VBP"
+27	"DT"
+28	"NN"
+29	"IN"
+30	"DT"
+31	"NN"
+32	"NNS"
+33	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	1	"advmod"
+3	2	"nn"
+7	3	"nsubj"
+6	5	"nn"
+3	6	"conj_and"
+7	6	"nsubj"
+19	8	"advmod"
+10	9	"det"
+19	10	"nsubj"
+13	12	"det"
+10	13	"prep_of"
+15	13	"nsubj"
+13	15	"rcmod"
+18	16	"amod"
+18	17	"nn"
+15	18	"dobj"
+7	19	"ccomp"
+21	20	"det"
+19	21	"dobj"
+24	23	"nn"
+21	24	"prep_of"
+26	24	"nsubj"
+24	26	"rcmod"
+28	27	"det"
+26	28	"dobj"
+32	30	"det"
+32	31	"nn"
+28	32	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Such"
+2	"transcription"
+3	"factors"
+4	"play"
+5	"a"
+6	"key"
+7	"role"
+8	"in"
+9	"the"
+10	"development"
+11	"of"
+12	"the"
+13	"mature"
+14	"T-cell"
+15	"phenotype"
+16	"by"
+17	"functioning"
+18	"as"
+19	"'"
+20	"master"
+21	"regulators"
+22	"of"
+23	"T-cell"
+24	"differentiation"
+25	"'"
+26	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NNS"
+4	"VBP"
+5	"DT"
+6	"JJ"
+7	"NN"
+8	"IN"
+9	"DT"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"NN"
+16	"IN"
+17	"VBG"
+18	"IN"
+19	"``"
+20	"JJ"
+21	"NNS"
+22	"IN"
+23	"NN"
+24	"NN"
+25	"''"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"nn"
+4	3	"nsubj"
+7	5	"det"
+7	6	"amod"
+4	7	"dobj"
+10	9	"det"
+4	10	"prep_in"
+15	12	"det"
+15	13	"amod"
+15	14	"nn"
+10	15	"prep_of"
+4	17	"prepc_by"
+21	20	"amod"
+17	21	"prep_as"
+24	23	"nn"
+21	24	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

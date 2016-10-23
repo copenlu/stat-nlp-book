@@ -1,0 +1,691 @@
+>>
+>word
+0	"Root"
+1	"NF-kappaB"
+2	"functions"
+3	"as"
+4	"both"
+5	"a"
+6	"proapoptotic"
+7	"and"
+8	"antiapoptotic"
+9	"regulatory"
+10	"factor"
+11	"within"
+12	"a"
+13	"single"
+14	"cell"
+15	"type"
+16	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"IN"
+4	"CC"
+5	"DT"
+6	"JJ"
+7	"CC"
+8	"JJ"
+9	"JJ"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+10	4	"dep"
+10	5	"det"
+10	6	"amod"
+6	8	"conj_and"
+10	8	"amod"
+10	9	"amod"
+2	10	"prep_as"
+15	12	"det"
+15	13	"amod"
+15	14	"nn"
+10	15	"prep_within"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Recently"
+2	"NF-kappaB"
+3	"has"
+4	"been"
+5	"shown"
+6	"to"
+7	"have"
+8	"both"
+9	"proapoptotic"
+10	"and"
+11	"antiapoptotic"
+12	"functions"
+13	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"NN"
+3	"VBZ"
+4	"VBN"
+5	"VBN"
+6	"TO"
+7	"VBP"
+8	"CC"
+9	"JJ"
+10	"CC"
+11	"JJ"
+12	"NNS"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"advmod"
+5	2	"nsubjpass"
+7	2	"xsubj"
+5	3	"aux"
+5	4	"auxpass"
+7	6	"aux"
+5	7	"xcomp"
+9	8	"preconj"
+12	9	"amod"
+9	11	"conj_and"
+12	11	"amod"
+7	12	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"T"
+3	"cell"
+4	"hybridomas"
+5	","
+6	"both"
+7	"T"
+8	"cell"
+9	"activators"
+10	"and"
+11	"glucocorticoids"
+12	"induce"
+13	"apoptosis"
+14	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	"NN"
+4	"NNS"
+5	","
+6	"CC"
+7	"NN"
+8	"NN"
+9	"NNS"
+10	"CC"
+11	"NNS"
+12	"VBP"
+13	"NN"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	2	"nn"
+4	3	"nn"
+12	4	"prep_in"
+9	6	"preconj"
+9	7	"nn"
+9	8	"nn"
+12	9	"nsubj"
+9	11	"conj_and"
+12	11	"nsubj"
+12	13	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Here"
+2	"we"
+3	"show"
+4	"that"
+5	"blockade"
+6	"of"
+7	"NF-kappaB"
+8	"activity"
+9	","
+10	"using"
+11	"a"
+12	"dominant"
+13	"negative"
+14	"IkappaBalpha"
+15	","
+16	"has"
+17	"opposite"
+18	"effects"
+19	"on"
+20	"these"
+21	"two"
+22	"apoptotic"
+23	"signals"
+24	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"PRP"
+3	"VBP"
+4	"IN"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NN"
+9	","
+10	"VBG"
+11	"DT"
+12	"JJ"
+13	"JJ"
+14	"NN"
+15	","
+16	"VBZ"
+17	"JJ"
+18	"NNS"
+19	"IN"
+20	"DT"
+21	"CD"
+22	"JJ"
+23	"NNS"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"advmod"
+3	2	"nsubj"
+16	4	"complm"
+16	5	"nsubj"
+8	7	"nn"
+5	8	"prep_of"
+5	10	"dep"
+14	11	"det"
+14	12	"amod"
+14	13	"amod"
+10	14	"dobj"
+3	16	"ccomp"
+18	17	"amod"
+16	18	"dobj"
+23	20	"det"
+23	21	"num"
+23	22	"amod"
+16	23	"prep_on"
+
+>mention
+14	14	"Protein(IkappaBalpha)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Treatment"
+2	"with"
+3	"PMA"
+4	"plus"
+5	"ionomycin"
+6	"("
+7	"P/I"
+8	")"
+9	"results"
+10	"in"
+11	"the"
+12	"upregulation"
+13	"of"
+14	"Fas"
+15	"Ligand"
+16	"("
+17	"FasL"
+18	")"
+19	"and"
+20	"induction"
+21	"of"
+22	"apoptosis"
+23	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"CC"
+5	"NN"
+6	"-LRB-"
+7	"NN"
+8	"-RRB-"
+9	"VBZ"
+10	"IN"
+11	"DT"
+12	"NN"
+13	"IN"
+14	"NN"
+15	"NN"
+16	"-LRB-"
+17	"NN"
+18	"-RRB-"
+19	"CC"
+20	"NN"
+21	"IN"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	1	"nsubj"
+1	3	"prep_with"
+1	5	"prep_with"
+3	5	"conj_plus"
+5	7	"appos"
+12	11	"det"
+9	12	"prep_in"
+15	14	"nn"
+12	15	"prep_of"
+15	17	"appos"
+9	20	"prep_in"
+12	20	"conj_and"
+20	22	"prep_of"
+
+>mention
+14	15	"Protein(Ligand)"
+17	17	"Protein(FasL)"
+
+>trigger
+12	12	"Positive_regulation"
+>argument
+12	15	"Theme"
+12	17	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Inhibition"
+2	"of"
+3	"NF-kappaB"
+4	"activity"
+5	"inhibits"
+6	"the"
+7	"P/I"
+8	"mediated"
+9	"induction"
+10	"of"
+11	"FasL"
+12	"mRNA"
+13	"and"
+14	"decreases"
+15	"the"
+16	"level"
+17	"of"
+18	"apoptosis"
+19	"in"
+20	"these"
+21	"cultures"
+22	","
+23	"thus"
+24	"establishing"
+25	"NF-kappaB"
+26	"as"
+27	"a"
+28	"proapoptotic"
+29	"factor"
+30	"in"
+31	"this"
+32	"context"
+33	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"NN"
+5	"VBZ"
+6	"DT"
+7	"NN"
+8	"JJ"
+9	"NN"
+10	"IN"
+11	"NN"
+12	"NN"
+13	"CC"
+14	"VBZ"
+15	"DT"
+16	"NN"
+17	"IN"
+18	"NN"
+19	"IN"
+20	"DT"
+21	"NNS"
+22	","
+23	"RB"
+24	"VBG"
+25	"NN"
+26	"IN"
+27	"DT"
+28	"JJ"
+29	"NN"
+30	"IN"
+31	"DT"
+32	"NN"
+33	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"nsubj"
+14	1	"nsubj"
+4	3	"nn"
+1	4	"prep_of"
+9	6	"det"
+8	7	"dep"
+9	8	"amod"
+5	9	"dobj"
+12	11	"nn"
+9	12	"prep_of"
+5	14	"conj_and"
+16	15	"det"
+14	16	"dobj"
+16	18	"prep_of"
+21	20	"det"
+16	21	"prep_in"
+24	23	"advmod"
+5	24	"xcomp"
+24	25	"dobj"
+29	27	"det"
+29	28	"amod"
+24	29	"prep_as"
+32	31	"det"
+29	32	"prep_in"
+
+>mention
+11	11	"Protein(FasL)"
+
+>trigger
+5	5	"Negative_regulation"
+8	8	"Positive_regulation"
+9	9	"Transcription"
+>argument
+5	9	"Theme"
+8	9	"Theme"
+9	11	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Conversely"
+2	","
+3	"inhibition"
+4	"of"
+5	"NF-kappaB"
+6	"confers"
+7	"a"
+8	"tenfold"
+9	"increase"
+10	"in"
+11	"glucocorticoid"
+12	"mediated"
+13	"apoptosis"
+14	","
+15	"establishing"
+16	"that"
+17	"NF-kappaB"
+18	"also"
+19	"functions"
+20	"as"
+21	"an"
+22	"antiapoptotic"
+23	"factor"
+24	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"IN"
+5	"NN"
+6	"VBZ"
+7	"DT"
+8	"JJ"
+9	"NN"
+10	"IN"
+11	"NN"
+12	"JJ"
+13	"NN"
+14	","
+15	"VBG"
+16	"IN"
+17	"NN"
+18	"RB"
+19	"VBZ"
+20	"IN"
+21	"DT"
+22	"JJ"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"advmod"
+6	3	"nsubj"
+3	5	"prep_of"
+9	7	"det"
+9	8	"amod"
+6	9	"dobj"
+13	11	"nn"
+13	12	"amod"
+9	13	"prep_in"
+6	15	"partmod"
+6	15	"xcomp"
+19	16	"complm"
+19	17	"nsubj"
+19	18	"advmod"
+15	19	"ccomp"
+23	21	"det"
+23	22	"amod"
+19	23	"prep_as"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"conclude"
+3	"that"
+4	"NF-kappaB"
+5	"is"
+6	"a"
+7	"context-dependent"
+8	"apoptosis"
+9	"regulator"
+10	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"IN"
+4	"NN"
+5	"VBZ"
+6	"DT"
+7	"JJ"
+8	"NN"
+9	"NN"
+10	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+9	3	"complm"
+9	4	"nsubj"
+9	5	"cop"
+9	6	"det"
+9	7	"amod"
+9	8	"nn"
+2	9	"ccomp"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Our"
+2	"data"
+3	"suggests"
+4	"that"
+5	"NF-kappaB"
+6	"may"
+7	"function"
+8	"as"
+9	"an"
+10	"antiapoptotic"
+11	"factor"
+12	"in"
+13	"thymocytes"
+14	"while"
+15	"functioning"
+16	"as"
+17	"a"
+18	"proapoptotic"
+19	"factor"
+20	"in"
+21	"mature"
+22	"peripheral"
+23	"T"
+24	"cells"
+25	"."
+
+>tag
+0	"Root"
+1	"PRP$"
+2	"NN"
+3	"VBZ"
+4	"IN"
+5	"NN"
+6	"MD"
+7	"VB"
+8	"IN"
+9	"DT"
+10	"JJ"
+11	"NN"
+12	"IN"
+13	"NNS"
+14	"IN"
+15	"VBG"
+16	"IN"
+17	"DT"
+18	"JJ"
+19	"NN"
+20	"IN"
+21	"JJ"
+22	"JJ"
+23	"NN"
+24	"NNS"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"poss"
+3	2	"nsubj"
+7	4	"complm"
+7	5	"nsubj"
+7	6	"aux"
+3	7	"ccomp"
+11	9	"det"
+11	10	"amod"
+7	11	"prep_as"
+11	13	"prep_in"
+15	14	"mark"
+7	15	"advcl"
+19	17	"det"
+19	18	"amod"
+15	19	"prep_as"
+24	21	"amod"
+24	22	"amod"
+24	23	"nn"
+19	24	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

@@ -1,0 +1,680 @@
+>>
+>word
+0	"Root"
+1	"Decreased"
+2	"proteasome-mediated"
+3	"degradation"
+4	"in"
+5	"T"
+6	"cells"
+7	"from"
+8	"the"
+9	"elderly"
+10	":"
+11	"A"
+12	"role"
+13	"in"
+14	"immune"
+15	"senescence"
+16	"."
+
+>tag
+0	"Root"
+1	"VBN"
+2	"JJ"
+3	"NN"
+4	"IN"
+5	"NN"
+6	"NNS"
+7	"IN"
+8	"DT"
+9	"JJ"
+10	":"
+11	"DT"
+12	"NN"
+13	"IN"
+14	"JJ"
+15	"NN"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"amod"
+6	5	"nn"
+3	6	"prep_in"
+9	8	"det"
+6	9	"prep_from"
+12	11	"det"
+3	12	"dep"
+15	14	"amod"
+12	15	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Induction"
+2	"of"
+3	"NFkappaB"
+4	"is"
+5	"a"
+6	"highly"
+7	"regulated"
+8	"process"
+9	"requiring"
+10	"phosphorylation"
+11	","
+12	"ubiquitination"
+13	","
+14	"and"
+15	"proteasome-mediated"
+16	"degradation"
+17	"of"
+18	"the"
+19	"cytosolic"
+20	"inhibitor"
+21	"IkappaBalpha"
+22	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"VBZ"
+5	"DT"
+6	"RB"
+7	"VBN"
+8	"NN"
+9	"VBG"
+10	"NN"
+11	","
+12	"NN"
+13	","
+14	"CC"
+15	"JJ"
+16	"NN"
+17	"IN"
+18	"DT"
+19	"JJ"
+20	"NN"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"nsubj"
+1	3	"prep_of"
+8	4	"cop"
+8	5	"det"
+7	6	"advmod"
+8	7	"amod"
+8	9	"partmod"
+9	10	"dobj"
+9	12	"dobj"
+10	12	"conj_and"
+16	15	"amod"
+9	16	"dobj"
+10	16	"conj_and"
+21	18	"det"
+21	19	"amod"
+21	20	"nn"
+10	21	"prep_of"
+
+>mention
+21	21	"Protein(IkappaBalpha)"
+
+>trigger
+15	15	"Positive_regulation"
+16	16	"Protein_catabolism"
+>argument
+15	16	"Theme"
+16	21	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Analyses"
+2	"of"
+3	"the"
+4	"regulation"
+5	"of"
+6	"IkappaBalpha"
+7	"in"
+8	"TNF-alpha"
+9	"-treated"
+10	"T"
+11	"lymphocytes"
+12	"from"
+13	"young"
+14	"and"
+15	"elderly"
+16	"donors"
+17	"revealed"
+18	"severely"
+19	"compromised"
+20	"degradation"
+21	"of"
+22	"IkappaBalpha"
+23	"in"
+24	"T"
+25	"cells"
+26	"from"
+27	"the"
+28	"elderly"
+29	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"IN"
+3	"DT"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"JJ"
+10	"NN"
+11	"NNS"
+12	"IN"
+13	"JJ"
+14	"CC"
+15	"JJ"
+16	"NNS"
+17	"VBD"
+18	"RB"
+19	"VBN"
+20	"NN"
+21	"IN"
+22	"NN"
+23	"IN"
+24	"NN"
+25	"NNS"
+26	"IN"
+27	"DT"
+28	"JJ"
+29	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+17	1	"nsubj"
+4	3	"det"
+1	4	"prep_of"
+4	6	"prep_of"
+11	8	"nn"
+11	9	"amod"
+11	10	"nn"
+6	11	"prep_in"
+16	13	"amod"
+13	15	"conj_and"
+16	15	"amod"
+11	16	"prep_from"
+19	18	"advmod"
+20	19	"amod"
+17	20	"dobj"
+20	22	"prep_of"
+25	24	"nn"
+22	25	"prep_in"
+28	27	"det"
+25	28	"prep_from"
+
+>mention
+6	6	"Protein(IkappaBalpha)"
+8	8	"Protein(TNF-alpha)"
+22	22	"Protein(IkappaBalpha)"
+
+>trigger
+4	4	"Regulation"
+20	20	"Protein_catabolism"
+>argument
+4	6	"Theme"
+20	22	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Examination"
+2	"of"
+3	"activation-induced"
+4	"phosphorylation"
+5	"and"
+6	"ubiquitination"
+7	"of"
+8	"IkappaBalpha"
+9	"did"
+10	"not"
+11	"demonstrate"
+12	"any"
+13	"significant"
+14	"age-related"
+15	"alterations"
+16	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"JJ"
+4	"NN"
+5	"CC"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"VBD"
+10	"RB"
+11	"VB"
+12	"DT"
+13	"JJ"
+14	"JJ"
+15	"NNS"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+11	1	"nsubj"
+4	3	"amod"
+1	4	"prep_of"
+1	6	"prep_of"
+4	6	"conj_and"
+4	8	"prep_of"
+11	9	"aux"
+11	10	"neg"
+15	12	"det"
+15	13	"amod"
+15	14	"amod"
+11	15	"dobj"
+
+>mention
+8	8	"Protein(IkappaBalpha)"
+
+>trigger
+3	3	"Positive_regulation"
+4	4	"Phosphorylation"
+15	15	"Regulation"
+>argument
+3	4	"Theme"
+4	8	"Theme"
+15	3	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"However"
+2	","
+3	"examination"
+4	"of"
+5	"proteasome"
+6	"activity"
+7	"in"
+8	"these"
+9	"T"
+10	"cells"
+11	"using"
+12	"fluorogenic"
+13	"peptide"
+14	"assays"
+15	"revealed"
+16	"a"
+17	"significant"
+18	"age-related"
+19	"decline"
+20	"in"
+21	"chymotryptic"
+22	"activity"
+23	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"NN"
+4	"IN"
+5	"NN"
+6	"NN"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"NNS"
+11	"VBG"
+12	"JJ"
+13	"NN"
+14	"NNS"
+15	"VBD"
+16	"DT"
+17	"JJ"
+18	"JJ"
+19	"NN"
+20	"IN"
+21	"JJ"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+15	1	"advmod"
+15	3	"nsubj"
+6	5	"nn"
+3	6	"prep_of"
+10	8	"det"
+10	9	"nn"
+6	10	"prep_in"
+3	11	"partmod"
+14	12	"amod"
+14	13	"nn"
+11	14	"dobj"
+19	16	"det"
+19	17	"amod"
+19	18	"amod"
+15	19	"dobj"
+22	21	"amod"
+19	22	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"These"
+2	"results"
+3	"suggest"
+4	"that"
+5	"a"
+6	"decline"
+7	"in"
+8	"proteasome"
+9	"activity"
+10	"results"
+11	"in"
+12	"a"
+13	"failure"
+14	"to"
+15	"fully"
+16	"degrade"
+17	"IkappaBalpha"
+18	"in"
+19	"the"
+20	"elderly"
+21	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NNS"
+3	"VBP"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"NN"
+10	"VBZ"
+11	"IN"
+12	"DT"
+13	"NN"
+14	"TO"
+15	"RB"
+16	"VB"
+17	"NN"
+18	"IN"
+19	"DT"
+20	"JJ"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+10	4	"complm"
+6	5	"det"
+10	6	"nsubj"
+9	8	"nn"
+6	9	"prep_in"
+3	10	"ccomp"
+13	12	"det"
+10	13	"prep_in"
+16	14	"aux"
+16	15	"advmod"
+13	16	"infmod"
+16	17	"dobj"
+20	19	"det"
+16	20	"prep_in"
+
+>mention
+17	17	"Protein(IkappaBalpha)"
+
+>trigger
+10	10	"Positive_regulation"
+16	16	"Protein_catabolism"
+>argument
+10	16	"Theme"
+16	17	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"failure"
+3	"to"
+4	"degrade"
+5	"IkappaBalpha"
+6	"may"
+7	"underlie"
+8	"both"
+9	"the"
+10	"observed"
+11	"decrease"
+12	"in"
+13	"NFkappaB"
+14	"induction"
+15	"and"
+16	"the"
+17	"IL-2"
+18	"receptor"
+19	"expression"
+20	"in"
+21	"TNF-treated"
+22	"T"
+23	"cells"
+24	"during"
+25	"aging"
+26	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"TO"
+4	"VB"
+5	"NN"
+6	"MD"
+7	"VB"
+8	"CC"
+9	"DT"
+10	"VBN"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"NN"
+15	"CC"
+16	"DT"
+17	"NN"
+18	"NN"
+19	"NN"
+20	"IN"
+21	"JJ"
+22	"NN"
+23	"NNS"
+24	"IN"
+25	"NN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+7	2	"nsubj"
+4	3	"aux"
+2	4	"infmod"
+4	5	"dobj"
+7	6	"aux"
+11	8	"preconj"
+11	9	"det"
+11	10	"amod"
+7	11	"dobj"
+14	13	"nn"
+11	14	"prep_in"
+19	16	"det"
+19	17	"nn"
+19	18	"nn"
+7	19	"dobj"
+11	19	"conj_and"
+23	21	"amod"
+23	22	"nn"
+19	23	"prep_in"
+7	25	"prep_during"
+
+>mention
+5	5	"Protein(IkappaBalpha)"
+
+>trigger
+4	4	"Protein_catabolism"
+>argument
+4	5	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Thus"
+2	","
+3	"decreased"
+4	"proteasome-mediated"
+5	"degradation"
+6	"may"
+7	"be"
+8	"central"
+9	"to"
+10	"immune"
+11	"dysfunction"
+12	"that"
+13	"accompanies"
+14	"aging"
+15	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"VBN"
+4	"JJ"
+5	"NN"
+6	"MD"
+7	"VB"
+8	"JJ"
+9	"TO"
+10	"JJ"
+11	"NN"
+12	"WDT"
+13	"VBZ"
+14	"NN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"advmod"
+5	3	"amod"
+5	4	"amod"
+8	5	"nsubj"
+8	6	"aux"
+8	7	"cop"
+11	10	"amod"
+8	11	"prep_to"
+13	11	"nsubj"
+11	13	"rcmod"
+13	14	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Copyright"
+2	"1999"
+3	"Academic"
+4	"Press"
+5	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CD"
+3	"NNP"
+4	"NNP"
+5	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nn"
+4	2	"num"
+4	3	"nn"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

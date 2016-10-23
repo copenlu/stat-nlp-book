@@ -1,0 +1,724 @@
+>>
+>word
+0	"Root"
+1	"Activation"
+2	"of"
+3	"the"
+4	"transcription"
+5	"factor"
+6	"NF-kappaB"
+7	"in"
+8	"lipopolysaccharide-stimulated"
+9	"U937"
+10	"cells"
+11	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"DT"
+4	"NN"
+5	"NN"
+6	"NN"
+7	"IN"
+8	"JJ"
+9	"NN"
+10	"NNS"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	3	"det"
+6	4	"nn"
+6	5	"nn"
+1	6	"prep_of"
+10	8	"amod"
+10	9	"nn"
+1	10	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"During"
+2	"the"
+3	"course"
+4	"of"
+5	"serious"
+6	"bacterial"
+7	"infections"
+8	","
+9	"lipopolysaccharide"
+10	"("
+11	"LPS"
+12	")"
+13	"interacts"
+14	"with"
+15	"monocyte/macrophage"
+16	"receptors"
+17	","
+18	"resulting"
+19	"in"
+20	"the"
+21	"generation"
+22	"of"
+23	"inflammatory"
+24	"cytokines"
+25	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"NN"
+4	"IN"
+5	"JJ"
+6	"JJ"
+7	"NNS"
+8	","
+9	"NN"
+10	"-LRB-"
+11	"NN"
+12	"-RRB-"
+13	"VBZ"
+14	"IN"
+15	"NN"
+16	"NNS"
+17	","
+18	"VBG"
+19	"IN"
+20	"DT"
+21	"NN"
+22	"IN"
+23	"JJ"
+24	"NNS"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"det"
+13	3	"prep_during"
+7	5	"amod"
+7	6	"amod"
+3	7	"prep_of"
+13	9	"nsubj"
+9	11	"abbrev"
+16	15	"nn"
+13	16	"prep_with"
+13	18	"xcomp"
+21	20	"det"
+18	21	"prep_in"
+24	23	"amod"
+21	24	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Transcription"
+2	"factor"
+3	"NF-kappaB"
+4	"is"
+5	"crucial"
+6	"in"
+7	"activating"
+8	"the"
+9	"transcription"
+10	"of"
+11	"genes"
+12	"encoding"
+13	"proinflammatory"
+14	"cytokines"
+15	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NN"
+4	"VBZ"
+5	"JJ"
+6	"IN"
+7	"VBG"
+8	"DT"
+9	"NN"
+10	"IN"
+11	"NNS"
+12	"VBG"
+13	"JJ"
+14	"NNS"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	2	"nn"
+5	3	"nsubj"
+5	4	"cop"
+5	7	"prepc_in"
+9	8	"det"
+7	9	"dobj"
+9	11	"prep_of"
+11	12	"partmod"
+14	13	"amod"
+12	14	"dobj"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"this"
+3	"paper"
+4	","
+5	"we"
+6	"demonstrate"
+7	"that"
+8	"the"
+9	"activation"
+10	"of"
+11	"NF-kappaB"
+12	"by"
+13	"LPS"
+14	"in"
+15	"a"
+16	"promonocytic"
+17	"cell"
+18	"line"
+19	"("
+20	"U937"
+21	")"
+22	"followed"
+23	"a"
+24	"rather"
+25	"slow"
+26	"kinetics"
+27	","
+28	"depending"
+29	"on"
+30	"the"
+31	"rate"
+32	"of"
+33	"IkappaB-alpha"
+34	"inhibitor"
+35	"hydrolysis"
+36	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"NN"
+4	","
+5	"PRP"
+6	"VBP"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"IN"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"IN"
+15	"DT"
+16	"JJ"
+17	"NN"
+18	"NN"
+19	"-LRB-"
+20	"NN"
+21	"-RRB-"
+22	"VBD"
+23	"DT"
+24	"RB"
+25	"JJ"
+26	"NN"
+27	","
+28	"VBG"
+29	"IN"
+30	"DT"
+31	"NN"
+32	"IN"
+33	"NN"
+34	"NN"
+35	"NN"
+36	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"det"
+6	3	"prep_in"
+6	5	"nsubj"
+22	7	"complm"
+9	8	"det"
+22	9	"nsubj"
+9	11	"prep_of"
+9	13	"prep_by"
+18	15	"det"
+18	16	"amod"
+18	17	"nn"
+9	18	"prep_in"
+18	20	"appos"
+6	22	"ccomp"
+26	23	"det"
+25	24	"advmod"
+26	25	"amod"
+22	26	"dobj"
+22	29	"prepc_depending_on"
+31	30	"det"
+22	31	"pobj"
+35	33	"nn"
+35	34	"nn"
+31	35	"prep_of"
+
+>mention
+33	33	"Protein(IkappaB-alpha)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"No"
+2	"degradation"
+3	"of"
+4	"p105"
+5	"and"
+6	"p100"
+7	"inhibitors"
+8	"was"
+9	"observed"
+10	"under"
+11	"these"
+12	"conditions"
+13	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"CC"
+6	"NN"
+7	"NNS"
+8	"VBD"
+9	"VBN"
+10	"IN"
+11	"DT"
+12	"NNS"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+9	2	"nsubjpass"
+7	4	"nn"
+4	6	"conj_and"
+7	6	"nn"
+2	7	"prep_of"
+9	8	"auxpass"
+12	11	"det"
+9	12	"prep_under"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"transduction"
+3	"pathway"
+4	"leading"
+5	"to"
+6	"NF-kappaB"
+7	"activation"
+8	"in"
+9	"U937"
+10	"cells"
+11	"involved"
+12	"the"
+13	"intracellular"
+14	"generation"
+15	"of"
+16	"reactive"
+17	"oxygen"
+18	"species"
+19	"("
+20	"ROS"
+21	")"
+22	","
+23	"as"
+24	"demonstrated"
+25	"by"
+26	"the"
+27	"concomitant"
+28	"inhibitory"
+29	"effects"
+30	"of"
+31	"antioxidants"
+32	"on"
+33	"NF-kappaB"
+34	"activation"
+35	"and"
+36	"the"
+37	"emission"
+38	"of"
+39	"a"
+40	"fluorescent"
+41	"probe"
+42	"reacting"
+43	"intracellularly"
+44	"with"
+45	"hydrogen"
+46	"peroxide"
+47	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"VBG"
+5	"TO"
+6	"NN"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"NNS"
+11	"VBD"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"IN"
+16	"JJ"
+17	"NN"
+18	"NNS"
+19	"-LRB-"
+20	"NN"
+21	"-RRB-"
+22	","
+23	"IN"
+24	"VBN"
+25	"IN"
+26	"DT"
+27	"JJ"
+28	"JJ"
+29	"NNS"
+30	"IN"
+31	"NNS"
+32	"IN"
+33	"NN"
+34	"NN"
+35	"CC"
+36	"DT"
+37	"NN"
+38	"IN"
+39	"DT"
+40	"JJ"
+41	"NN"
+42	"VBG"
+43	"RB"
+44	"IN"
+45	"NN"
+46	"NN"
+47	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+11	3	"nsubj"
+3	4	"partmod"
+7	6	"nn"
+4	7	"prep_to"
+10	9	"nn"
+7	10	"prep_in"
+14	12	"det"
+14	13	"amod"
+11	14	"dobj"
+18	16	"amod"
+18	17	"nn"
+14	18	"prep_of"
+18	20	"abbrev"
+24	23	"mark"
+11	24	"advcl"
+29	26	"det"
+29	27	"amod"
+29	28	"amod"
+24	29	"prep_by"
+29	31	"prep_of"
+34	33	"nn"
+29	34	"prep_on"
+37	36	"det"
+29	37	"prep_on"
+34	37	"conj_and"
+41	39	"det"
+41	40	"amod"
+37	41	"prep_of"
+41	42	"partmod"
+42	43	"advmod"
+46	45	"nn"
+42	46	"prep_with"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"ROS"
+3	"pathway"
+4	"was"
+5	"also"
+6	"characterized"
+7	"by"
+8	"the"
+9	"use"
+10	"of"
+11	"other"
+12	"inhibitors"
+13	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"VBD"
+5	"RB"
+6	"VBN"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"IN"
+11	"JJ"
+12	"NNS"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"nn"
+6	3	"nsubjpass"
+6	4	"auxpass"
+6	5	"advmod"
+9	8	"det"
+6	9	"agent"
+12	11	"amod"
+9	12	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"finding"
+3	"indicates"
+4	"that"
+5	"phospholipase"
+6	"A2"
+7	"and"
+8	"5-lipoxygenase"
+9	"are"
+10	"also"
+11	"involved"
+12	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBZ"
+4	"IN"
+5	"NN"
+6	"NN"
+7	"CC"
+8	"NN"
+9	"VBP"
+10	"RB"
+11	"VBN"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+11	4	"complm"
+6	5	"nn"
+11	6	"nsubjpass"
+6	8	"conj_and"
+11	8	"nsubjpass"
+11	9	"auxpass"
+11	10	"advmod"
+3	11	"ccomp"
+
+>mention
+8	8	"Protein(5-lipoxygenase)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"However"
+2	","
+3	"the"
+4	"NF-kappaB"
+5	"activation"
+6	"pathway"
+7	"involving"
+8	"the"
+9	"acidic"
+10	"sphingomyelinase"
+11	"of"
+12	"the"
+13	"endolysosomial"
+14	"membrane"
+15	"did"
+16	"not"
+17	"seem"
+18	"to"
+19	"participate"
+20	"in"
+21	"the"
+22	"LPS-induced"
+23	"NF-kappaB"
+24	"activation"
+25	"in"
+26	"U937"
+27	"cells"
+28	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"NN"
+5	"NN"
+6	"NN"
+7	"VBG"
+8	"DT"
+9	"JJ"
+10	"NN"
+11	"IN"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"VBD"
+16	"RB"
+17	"VB"
+18	"TO"
+19	"VB"
+20	"IN"
+21	"DT"
+22	"JJ"
+23	"NN"
+24	"NN"
+25	"IN"
+26	"NN"
+27	"NNS"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+17	1	"advmod"
+6	3	"det"
+6	4	"nn"
+6	5	"nn"
+17	6	"nsubj"
+19	6	"xsubj"
+6	7	"partmod"
+10	8	"det"
+10	9	"amod"
+7	10	"dobj"
+14	12	"det"
+14	13	"amod"
+10	14	"prep_of"
+17	15	"aux"
+17	16	"neg"
+19	18	"aux"
+17	19	"xcomp"
+24	21	"det"
+24	22	"amod"
+24	23	"nn"
+19	24	"prep_in"
+27	26	"nn"
+24	27	"prep_in"
+
+>mention
+9	10	"Protein(sphingomyelinase)"
+
+>trigger
+>argument
+>relation
+
+

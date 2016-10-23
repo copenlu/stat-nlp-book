@@ -1,0 +1,311 @@
+>>
+>word
+0	"Root"
+1	"The"
+2	"effect"
+3	"of"
+4	"Toremifene"
+5	"on"
+6	"the"
+7	"expression"
+8	"of"
+9	"some"
+10	"genes"
+11	"in"
+12	"human"
+13	"mononuclear"
+14	"cells"
+15	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"IN"
+9	"DT"
+10	"NNS"
+11	"IN"
+12	"JJ"
+13	"JJ"
+14	"NNS"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+2	4	"prep_of"
+7	6	"det"
+2	7	"prep_on"
+10	9	"det"
+7	10	"prep_of"
+14	12	"amod"
+14	13	"amod"
+7	14	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Toremifene"
+2	"exerts"
+3	"multiple"
+4	"and"
+5	"varied"
+6	"effects"
+7	"on"
+8	"the"
+9	"gene"
+10	"expression"
+11	"of"
+12	"human"
+13	"peripheral"
+14	"mononuclear"
+15	"cells"
+16	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"JJ"
+4	"CC"
+5	"JJ"
+6	"NNS"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"NN"
+11	"IN"
+12	"JJ"
+13	"JJ"
+14	"JJ"
+15	"NNS"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+6	3	"amod"
+3	5	"conj_and"
+6	5	"amod"
+2	6	"dobj"
+10	8	"det"
+10	9	"nn"
+2	10	"prep_on"
+15	12	"amod"
+15	13	"amod"
+15	14	"amod"
+10	15	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"After"
+2	"short-term"
+3	","
+4	"in"
+5	"vitro"
+6	"exposure"
+7	"to"
+8	"therapeutical"
+9	"levels"
+10	","
+11	"distinct"
+12	"changes"
+13	"in"
+14	"P-glycoprotein"
+15	","
+16	"steroid"
+17	"receptors"
+18	","
+19	"p53"
+20	"and"
+21	"Bcl-2"
+22	"expression"
+23	"take"
+24	"place"
+25	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"JJ"
+3	","
+4	"FW"
+5	"FW"
+6	"NN"
+7	"TO"
+8	"JJ"
+9	"NNS"
+10	","
+11	"JJ"
+12	"NNS"
+13	"IN"
+14	"NN"
+15	","
+16	"NN"
+17	"NNS"
+18	","
+19	"NN"
+20	"CC"
+21	"NN"
+22	"NN"
+23	"VBP"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	2	"amod"
+5	4	"nn"
+2	5	"dep"
+23	6	"prep_after"
+9	8	"amod"
+6	9	"prep_to"
+12	11	"amod"
+23	12	"nsubj"
+12	14	"prep_in"
+17	16	"nn"
+12	17	"prep_in"
+14	17	"conj_and"
+12	19	"prep_in"
+14	19	"conj_and"
+12	21	"prep_in"
+14	21	"conj_and"
+14	22	"dep"
+23	24	"dobj"
+
+>mention
+19	19	"Protein(p53)"
+21	21	"Protein(Bcl-2)"
+
+>trigger
+12	12	"Regulation"
+22	22	"Gene_expression"
+>argument
+12	22	"Theme"
+22	19	"Theme"
+22	21	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"view"
+3	"of"
+4	"the"
+5	"increasing"
+6	"use"
+7	"of"
+8	"antiestrogens"
+9	"in"
+10	"cancer"
+11	"therapy"
+12	"and"
+13	"prevention"
+14	","
+15	"there"
+16	"is"
+17	"obvious"
+18	"merit"
+19	"in"
+20	"long-term"
+21	"in"
+22	"vivo"
+23	"studies"
+24	"to"
+25	"be"
+26	"conducted"
+27	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"VBG"
+6	"NN"
+7	"IN"
+8	"NNS"
+9	"IN"
+10	"NN"
+11	"NN"
+12	"CC"
+13	"NN"
+14	","
+15	"EX"
+16	"VBZ"
+17	"JJ"
+18	"NN"
+19	"IN"
+20	"JJ"
+21	"FW"
+22	"FW"
+23	"NNS"
+24	"TO"
+25	"VB"
+26	"VBN"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+16	2	"prep_in"
+6	4	"det"
+6	5	"amod"
+2	6	"prep_of"
+6	8	"prep_of"
+6	10	"prep_in"
+10	11	"dep"
+6	13	"prep_in"
+10	13	"conj_and"
+16	15	"expl"
+18	17	"amod"
+16	18	"nsubj"
+23	20	"amod"
+22	21	"nn"
+23	22	"amod"
+18	23	"prep_in"
+26	24	"aux"
+26	25	"auxpass"
+18	26	"infmod"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

@@ -1,0 +1,411 @@
+>>
+>word
+0	"Root"
+1	"Arrested"
+2	"development"
+3	":"
+4	"understanding"
+5	"v-abl"
+6	"."
+
+>tag
+0	"Root"
+1	"VBN"
+2	"NN"
+3	":"
+4	"VBG"
+5	"NN"
+6	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+2	4	"dep"
+4	5	"dobj"
+
+>mention
+5	5	"Protein(v-abl)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"protein"
+3	"tyrosine"
+4	"kinase"
+5	"activity"
+6	"of"
+7	"the"
+8	"v-abl"
+9	"oncogene"
+10	"has"
+11	"been"
+12	"demonstrated"
+13	"to"
+14	"subvert"
+15	"the"
+16	"normal"
+17	"second"
+18	"messenger"
+19	"systems"
+20	"used"
+21	"by"
+22	"lymphoid"
+23	"cells"
+24	"for"
+25	"growth"
+26	"and"
+27	"differentiation"
+28	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"NN"
+4	"NN"
+5	"NN"
+6	"IN"
+7	"DT"
+8	"NN"
+9	"NN"
+10	"VBZ"
+11	"VBN"
+12	"VBN"
+13	"TO"
+14	"VB"
+15	"DT"
+16	"JJ"
+17	"JJ"
+18	"NN"
+19	"NNS"
+20	"VBN"
+21	"IN"
+22	"JJ"
+23	"NNS"
+24	"IN"
+25	"NN"
+26	"CC"
+27	"NN"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"det"
+5	2	"nn"
+5	3	"nn"
+5	4	"nn"
+12	5	"nsubjpass"
+14	5	"xsubj"
+9	7	"det"
+9	8	"nn"
+5	9	"prep_of"
+12	10	"aux"
+12	11	"auxpass"
+14	13	"aux"
+12	14	"xcomp"
+19	15	"det"
+19	16	"amod"
+19	17	"amod"
+19	18	"nn"
+14	19	"dobj"
+19	20	"partmod"
+23	22	"amod"
+20	23	"agent"
+20	25	"prep_for"
+20	27	"prep_for"
+25	27	"conj_and"
+
+>mention
+8	8	"Protein(v-abl)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Transformation"
+2	"of"
+3	"bone"
+4	"marrow"
+5	"with"
+6	"the"
+7	"Abelson"
+8	"murine"
+9	"leukemia"
+10	"virus"
+11	"results"
+12	"in"
+13	"the"
+14	"appearance"
+15	"of"
+16	"B"
+17	"cell"
+18	"lineage"
+19	"cells"
+20	"arrested"
+21	"at"
+22	"the"
+23	"pre-B"
+24	"cell"
+25	"stage"
+26	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"NN"
+5	"IN"
+6	"DT"
+7	"NN"
+8	"JJ"
+9	"NN"
+10	"NN"
+11	"VBZ"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"IN"
+16	"NN"
+17	"NN"
+18	"NN"
+19	"NNS"
+20	"VBN"
+21	"IN"
+22	"DT"
+23	"JJ"
+24	"NN"
+25	"NN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+11	1	"nsubj"
+4	3	"nn"
+1	4	"prep_of"
+10	6	"det"
+10	7	"nn"
+10	8	"amod"
+10	9	"nn"
+1	10	"prep_with"
+14	13	"det"
+11	14	"prep_in"
+19	16	"nn"
+19	17	"nn"
+19	18	"nn"
+14	19	"prep_of"
+19	20	"partmod"
+25	22	"det"
+25	23	"amod"
+25	24	"nn"
+20	25	"prep_at"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Recent"
+2	"reports"
+3	"have"
+4	"characterized"
+5	"these"
+6	"cells"
+7	"expressing"
+8	"high"
+9	"v-abl"
+10	"kinase"
+11	"activity"
+12	"as"
+13	"deficient"
+14	"in"
+15	"detectable"
+16	"NF-kappaB"
+17	"DNA"
+18	"binding"
+19	"activity"
+20	"and"
+21	"low"
+22	"level"
+23	"RAG"
+24	"gene"
+25	"expression"
+26	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NNS"
+3	"VBP"
+4	"VBN"
+5	"DT"
+6	"NNS"
+7	"VBG"
+8	"JJ"
+9	"NN"
+10	"NN"
+11	"NN"
+12	"IN"
+13	"JJ"
+14	"IN"
+15	"JJ"
+16	"NN"
+17	"NN"
+18	"NN"
+19	"NN"
+20	"CC"
+21	"JJ"
+22	"NN"
+23	"NN"
+24	"NN"
+25	"NN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+4	2	"nsubj"
+4	3	"aux"
+6	5	"det"
+4	6	"dobj"
+6	7	"partmod"
+11	8	"amod"
+11	9	"nn"
+11	10	"nn"
+7	11	"dobj"
+4	13	"prep_as"
+19	15	"amod"
+19	16	"nn"
+19	17	"nn"
+19	18	"nn"
+13	19	"prep_in"
+25	21	"amod"
+25	22	"nn"
+25	23	"nn"
+25	24	"nn"
+13	25	"prep_in"
+19	25	"conj_and"
+
+>mention
+9	9	"Protein(v-abl)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"These"
+2	"observations"
+3	"suggest"
+4	"that"
+5	"v-abl"
+6	"may"
+7	"be"
+8	"inhibiting"
+9	"the"
+10	"differentiation"
+11	"of"
+12	"B"
+13	"cells"
+14	"by"
+15	"blocking"
+16	"these"
+17	"two"
+18	"crucial"
+19	"elements"
+20	"in"
+21	"the"
+22	"maturation"
+23	"pathway"
+24	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NNS"
+3	"VBP"
+4	"IN"
+5	"NN"
+6	"MD"
+7	"VB"
+8	"VBG"
+9	"DT"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"NNS"
+14	"IN"
+15	"VBG"
+16	"DT"
+17	"CD"
+18	"JJ"
+19	"NNS"
+20	"IN"
+21	"DT"
+22	"NN"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+8	4	"complm"
+8	5	"nsubj"
+8	6	"aux"
+8	7	"aux"
+3	8	"ccomp"
+10	9	"det"
+8	10	"dobj"
+13	12	"nn"
+10	13	"prep_of"
+8	15	"prepc_by"
+19	16	"det"
+19	17	"num"
+19	18	"amod"
+15	19	"dobj"
+23	21	"det"
+23	22	"nn"
+15	23	"prep_in"
+
+>mention
+5	5	"Protein(v-abl)"
+
+>trigger
+>argument
+>relation
+
+

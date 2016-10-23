@@ -1,0 +1,1099 @@
+>>
+>word
+0	"Root"
+1	"Interferon-gamma"
+2	"potentiates"
+3	"the"
+4	"antiviral"
+5	"activity"
+6	"and"
+7	"the"
+8	"expression"
+9	"of"
+10	"interferon-stimulated"
+11	"genes"
+12	"induced"
+13	"by"
+14	"interferon-alpha"
+15	"in"
+16	"U937"
+17	"cells"
+18	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"VBZ"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"CC"
+7	"DT"
+8	"NN"
+9	"IN"
+10	"JJ"
+11	"NNS"
+12	"VBN"
+13	"IN"
+14	"NN"
+15	"IN"
+16	"NN"
+17	"NNS"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+5	3	"det"
+5	4	"amod"
+2	5	"dobj"
+8	7	"det"
+2	8	"dobj"
+5	8	"conj_and"
+11	10	"amod"
+8	11	"prep_of"
+11	12	"partmod"
+12	14	"agent"
+17	16	"nn"
+12	17	"prep_in"
+
+>mention
+1	1	"Protein(Interferon-gamma)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Binding"
+2	"of"
+3	"type"
+4	"I"
+5	"interferon"
+6	"("
+7	"IFN-alpha/beta"
+8	")"
+9	"to"
+10	"specific"
+11	"receptors"
+12	"results"
+13	"in"
+14	"the"
+15	"rapid"
+16	"transcriptional"
+17	"activation"
+18	","
+19	"independent"
+20	"of"
+21	"protein"
+22	"synthesis"
+23	","
+24	"of"
+25	"IFN-alpha-stimulated"
+26	"genes"
+27	"("
+28	"ISGs"
+29	")"
+30	"in"
+31	"human"
+32	"fibroblasts"
+33	"and"
+34	"HeLa"
+35	"and"
+36	"Daudi"
+37	"cell"
+38	"lines"
+39	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"CD"
+5	"NN"
+6	"-LRB-"
+7	"NN"
+8	"-RRB-"
+9	"TO"
+10	"JJ"
+11	"NNS"
+12	"VBZ"
+13	"IN"
+14	"DT"
+15	"JJ"
+16	"JJ"
+17	"NN"
+18	","
+19	"JJ"
+20	"IN"
+21	"NN"
+22	"NN"
+23	","
+24	"IN"
+25	"JJ"
+26	"NNS"
+27	"-LRB-"
+28	"NNS"
+29	"-RRB-"
+30	"IN"
+31	"JJ"
+32	"NNS"
+33	"CC"
+34	"NN"
+35	"CC"
+36	"NN"
+37	"NN"
+38	"NNS"
+39	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+12	1	"nsubj"
+5	3	"nn"
+5	4	"num"
+1	5	"prep_of"
+5	7	"abbrev"
+11	10	"amod"
+1	11	"prep_to"
+17	14	"det"
+17	15	"amod"
+17	16	"amod"
+12	17	"prep_in"
+17	19	"amod"
+22	21	"nn"
+19	22	"prep_of"
+26	25	"amod"
+17	26	"prep_of"
+26	28	"appos"
+32	31	"amod"
+26	32	"prep_in"
+38	34	"nn"
+34	36	"conj_and"
+38	36	"nn"
+38	37	"nn"
+26	38	"prep_in"
+32	38	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"binding"
+3	"of"
+4	"ISGF3"
+5	"("
+6	"IFN-stimulated"
+7	"gene"
+8	"factor"
+9	"3"
+10	")"
+11	"to"
+12	"the"
+13	"conserved"
+14	"IFN-stimulated"
+15	"response"
+16	"element"
+17	"("
+18	"ISRE"
+19	")"
+20	"results"
+21	"in"
+22	"transcriptional"
+23	"activation"
+24	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"-LRB-"
+6	"JJ"
+7	"NN"
+8	"NN"
+9	"CD"
+10	"-RRB-"
+11	"TO"
+12	"DT"
+13	"VBN"
+14	"JJ"
+15	"NN"
+16	"NN"
+17	"-LRB-"
+18	"NN"
+19	"-RRB-"
+20	"VBZ"
+21	"IN"
+22	"JJ"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+20	2	"nsubj"
+2	4	"prep_of"
+8	6	"amod"
+8	7	"nn"
+4	8	"appos"
+8	9	"num"
+16	12	"det"
+16	13	"amod"
+16	14	"amod"
+16	15	"nn"
+2	16	"prep_to"
+16	18	"abbrev"
+23	22	"amod"
+20	23	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"factor"
+3	"is"
+4	"composed"
+5	"of"
+6	"a"
+7	"DNA-binding"
+8	"protein"
+9	"("
+10	"ISGF3"
+11	"gamma"
+12	")"
+13	","
+14	"which"
+15	"normally"
+16	"is"
+17	"present"
+18	"in"
+19	"the"
+20	"cytoplasm"
+21	","
+22	"and"
+23	"other"
+24	"IFN-alpha-activated"
+25	"proteins"
+26	"which"
+27	"preexist"
+28	"as"
+29	"latent"
+30	"cytoplasmic"
+31	"precursors"
+32	"("
+33	"ISGF3"
+34	"alpha"
+35	")"
+36	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBZ"
+4	"VBN"
+5	"IN"
+6	"DT"
+7	"JJ"
+8	"NN"
+9	"-LRB-"
+10	"NN"
+11	"NN"
+12	"-RRB-"
+13	","
+14	"WDT"
+15	"RB"
+16	"VBZ"
+17	"JJ"
+18	"IN"
+19	"DT"
+20	"NN"
+21	","
+22	"CC"
+23	"JJ"
+24	"JJ"
+25	"NNS"
+26	"WDT"
+27	"VBP"
+28	"IN"
+29	"JJ"
+30	"JJ"
+31	"NNS"
+32	"-LRB-"
+33	"NN"
+34	"NN"
+35	"-RRB-"
+36	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+4	2	"nsubjpass"
+4	3	"auxpass"
+8	6	"det"
+8	7	"amod"
+4	8	"prep_of"
+17	8	"nsubj"
+11	10	"nn"
+8	11	"abbrev"
+17	15	"advmod"
+17	16	"cop"
+8	17	"rcmod"
+20	19	"det"
+17	20	"prep_in"
+25	23	"amod"
+25	24	"amod"
+4	25	"prep_of"
+8	25	"conj_and"
+27	25	"nsubj"
+25	27	"rcmod"
+31	29	"amod"
+31	30	"amod"
+27	31	"prep_as"
+34	33	"nn"
+31	34	"abbrev"
+
+>mention
+10	11	"Protein(gamma)"
+
+>trigger
+17	17	"Localization"
+>argument
+17	11	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"have"
+3	"found"
+4	"that"
+5	"ISG"
+6	"expression"
+7	"in"
+8	"the"
+9	"monocytic"
+10	"U937"
+11	"cell"
+12	"line"
+13	"differs"
+14	"from"
+15	"most"
+16	"cell"
+17	"lines"
+18	"previously"
+19	"examined"
+20	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"VBN"
+4	"IN"
+5	"NN"
+6	"NN"
+7	"IN"
+8	"DT"
+9	"JJ"
+10	"NN"
+11	"NN"
+12	"NN"
+13	"VBZ"
+14	"IN"
+15	"JJ"
+16	"NN"
+17	"NNS"
+18	"RB"
+19	"VBN"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubj"
+3	2	"aux"
+13	4	"complm"
+6	5	"nn"
+13	6	"nsubj"
+12	8	"det"
+12	9	"amod"
+12	10	"nn"
+12	11	"nn"
+6	12	"prep_in"
+3	13	"ccomp"
+17	15	"amod"
+17	16	"nn"
+13	17	"prep_from"
+19	18	"advmod"
+17	19	"partmod"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"U937"
+2	"cells"
+3	"express"
+4	"both"
+5	"type"
+6	"I"
+7	"and"
+8	"type"
+9	"II"
+10	"IFN"
+11	"receptors"
+12	","
+13	"but"
+14	"only"
+15	"IFN-alpha"
+16	"is"
+17	"capable"
+18	"of"
+19	"inducing"
+20	"antiviral"
+21	"protection"
+22	"in"
+23	"these"
+24	"cells"
+25	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NNS"
+3	"VBP"
+4	"CC"
+5	"NN"
+6	"CD"
+7	"CC"
+8	"NN"
+9	"CD"
+10	"NN"
+11	"NNS"
+12	","
+13	"CC"
+14	"RB"
+15	"NN"
+16	"VBZ"
+17	"JJ"
+18	"IN"
+19	"VBG"
+20	"JJ"
+21	"NN"
+22	"IN"
+23	"DT"
+24	"NNS"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+3	2	"nsubj"
+5	4	"preconj"
+11	5	"nn"
+5	6	"num"
+5	8	"conj_and"
+11	8	"nn"
+8	9	"num"
+11	10	"nn"
+3	11	"dobj"
+15	14	"advmod"
+17	15	"nsubj"
+17	16	"cop"
+3	17	"conj_but"
+17	19	"prepc_of"
+21	20	"amod"
+19	21	"dobj"
+24	23	"det"
+19	24	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Pretreatment"
+2	"with"
+3	"IFN-gamma"
+4	"potentiates"
+5	"the"
+6	"IFN-alpha-induced"
+7	"protection"
+8	","
+9	"but"
+10	"IFN-gamma"
+11	"alone"
+12	"does"
+13	"not"
+14	"have"
+15	"any"
+16	"antiviral"
+17	"activity"
+18	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"VBZ"
+5	"DT"
+6	"JJ"
+7	"NN"
+8	","
+9	"CC"
+10	"NN"
+11	"RB"
+12	"VBZ"
+13	"RB"
+14	"VB"
+15	"DT"
+16	"JJ"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubj"
+1	3	"prep_with"
+7	5	"det"
+7	6	"amod"
+4	7	"dobj"
+14	10	"nsubj"
+10	11	"advmod"
+14	12	"aux"
+14	13	"neg"
+4	14	"conj_but"
+17	15	"det"
+17	16	"amod"
+14	17	"dobj"
+
+>mention
+3	3	"Protein(IFN-gamma)"
+10	10	"Protein(IFN-gamma)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"ISG15"
+2	"mRNA"
+3	"accumulation"
+4	"in"
+5	"U937"
+6	"cells"
+7	"is"
+8	"not"
+9	"detectable"
+10	"before"
+11	"6"
+12	"h"
+13	"of"
+14	"IFN-alpha"
+15	"treatment"
+16	","
+17	"peaks"
+18	"at"
+19	"24"
+20	"h"
+21	","
+22	"and"
+23	"requires"
+24	"protein"
+25	"synthesis"
+26	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NN"
+4	"IN"
+5	"NN"
+6	"NNS"
+7	"VBZ"
+8	"RB"
+9	"JJ"
+10	"IN"
+11	"CD"
+12	"NN"
+13	"IN"
+14	"NN"
+15	"NN"
+16	","
+17	"VBZ"
+18	"IN"
+19	"CD"
+20	"NN"
+21	","
+22	"CC"
+23	"VBZ"
+24	"NN"
+25	"NN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	2	"nn"
+9	3	"nsubj"
+17	3	"nsubj"
+23	3	"nsubj"
+6	5	"nn"
+3	6	"prep_in"
+9	7	"cop"
+9	8	"neg"
+12	11	"num"
+9	12	"prep_before"
+15	14	"nn"
+12	15	"prep_of"
+9	17	"conj_and"
+20	19	"num"
+17	20	"prep_at"
+9	23	"conj_and"
+25	24	"nn"
+23	25	"dobj"
+
+>mention
+1	1	"Protein(ISG15)"
+
+>trigger
+3	3	"Positive_regulation"
+9	9	"Positive_regulation"
+23	23	"Positive_regulation"
+>argument
+3	1	"Theme"
+9	3	"Theme"
+23	9	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Although"
+2	"IFN-gamma"
+3	"alone"
+4	"does"
+5	"not"
+6	"induce"
+7	"ISG"
+8	"expression"
+9	","
+10	"IFN-gamma"
+11	"pretreatment"
+12	"markedly"
+13	"increases"
+14	"and"
+15	"hastens"
+16	"ISG"
+17	"expression"
+18	"and"
+19	"transcriptional"
+20	"induction"
+21	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"NN"
+3	"RB"
+4	"VBZ"
+5	"RB"
+6	"VB"
+7	"NN"
+8	"NN"
+9	","
+10	"NN"
+11	"NN"
+12	"RB"
+13	"VBZ"
+14	"CC"
+15	"VBZ"
+16	"NN"
+17	"NN"
+18	"CC"
+19	"JJ"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+6	1	"mark"
+6	2	"nsubj"
+6	3	"advmod"
+6	4	"aux"
+6	5	"neg"
+13	6	"advcl"
+8	7	"nn"
+6	8	"dobj"
+11	10	"nn"
+13	11	"nsubj"
+15	11	"nsubj"
+13	12	"advmod"
+13	15	"conj_and"
+17	16	"nn"
+15	17	"dobj"
+20	19	"amod"
+15	20	"dobj"
+17	20	"conj_and"
+
+>mention
+2	2	"Protein(IFN-gamma)"
+10	10	"Protein(IFN-gamma)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Nuclear"
+2	"extracts"
+3	"assayed"
+4	"for"
+5	"the"
+6	"presence"
+7	"of"
+8	"ISRE"
+9	"binding"
+10	"factors"
+11	"by"
+12	"electrophoretic"
+13	"mobility"
+14	"shift"
+15	"assays"
+16	"show"
+17	"that"
+18	"ISGF3"
+19	"is"
+20	"induced"
+21	"by"
+22	"IFN-alpha"
+23	"within"
+24	"6"
+25	"h"
+26	"from"
+27	"undetectable"
+28	"basal"
+29	"levels"
+30	"in"
+31	"untreated"
+32	"U937"
+33	"cells"
+34	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NNS"
+3	"VBN"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"NN"
+10	"NNS"
+11	"IN"
+12	"JJ"
+13	"NN"
+14	"NN"
+15	"NNS"
+16	"VBP"
+17	"IN"
+18	"NN"
+19	"VBZ"
+20	"VBN"
+21	"IN"
+22	"NN"
+23	"IN"
+24	"CD"
+25	"NN"
+26	"IN"
+27	"JJ"
+28	"JJ"
+29	"NNS"
+30	"IN"
+31	"JJ"
+32	"NN"
+33	"NNS"
+34	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+16	2	"nsubj"
+2	3	"partmod"
+6	5	"det"
+3	6	"prep_for"
+10	8	"nn"
+10	9	"nn"
+6	10	"prep_of"
+15	12	"amod"
+15	13	"nn"
+15	14	"nn"
+3	15	"agent"
+20	17	"complm"
+20	18	"nsubjpass"
+20	19	"auxpass"
+16	20	"ccomp"
+20	22	"agent"
+25	24	"num"
+20	25	"prep_within"
+29	27	"amod"
+29	28	"amod"
+25	29	"prep_from"
+33	31	"amod"
+33	32	"nn"
+25	33	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Activation"
+2	"of"
+3	"ISGF3"
+4	"alpha"
+5	","
+6	"the"
+7	"latent"
+8	"component"
+9	"of"
+10	"ISGF3"
+11	","
+12	"occurs"
+13	"rapidly"
+14	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"NN"
+5	","
+6	"DT"
+7	"JJ"
+8	"NN"
+9	"IN"
+10	"NN"
+11	","
+12	"VBZ"
+13	"RB"
+14	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+12	1	"nsubj"
+4	3	"nn"
+1	4	"prep_of"
+8	6	"det"
+8	7	"amod"
+4	8	"appos"
+8	10	"prep_of"
+12	13	"advmod"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"However"
+2	","
+3	"the"
+4	"increase"
+5	"in"
+6	"ISGF3"
+7	"activity"
+8	"ultimately"
+9	"correlates"
+10	"with"
+11	"the"
+12	"accumulation"
+13	"of"
+14	"ISGF3"
+15	"gamma"
+16	"induced"
+17	"by"
+18	"IFN-alpha"
+19	"or"
+20	"IFN-gamma"
+21	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"NN"
+8	"RB"
+9	"VBZ"
+10	"IN"
+11	"DT"
+12	"NN"
+13	"IN"
+14	"NN"
+15	"NN"
+16	"VBN"
+17	"IN"
+18	"NN"
+19	"CC"
+20	"NN"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	1	"advmod"
+4	3	"det"
+9	4	"nsubj"
+7	6	"nn"
+4	7	"prep_in"
+9	8	"advmod"
+12	11	"det"
+9	12	"prep_with"
+15	14	"nn"
+12	15	"prep_of"
+12	16	"partmod"
+16	18	"agent"
+16	20	"agent"
+18	20	"conj_or"
+
+>mention
+14	15	"Protein(gamma)"
+20	20	"Protein(IFN-gamma)"
+
+>trigger
+12	12	"Positive_regulation"
+>argument
+12	15	"Theme"
+12	20	"Cause"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"("
+2	"ABSTRACT"
+3	"TRUNCATED"
+4	"AT"
+5	"250"
+6	"WORDS"
+7	")"
+
+>tag
+0	"Root"
+1	"-LRB-"
+2	"NN"
+3	"VBN"
+4	"IN"
+5	"CD"
+6	"NNS"
+7	"-RRB-"
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	3	"partmod"
+6	5	"num"
+3	6	"prep_at"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

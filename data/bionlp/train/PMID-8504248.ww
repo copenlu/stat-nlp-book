@@ -1,0 +1,266 @@
+>>
+>word
+0	"Root"
+1	"Regulation"
+2	"of"
+3	"the"
+4	"beta-globin"
+5	"locus"
+6	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"DT"
+4	"NN"
+5	"NN"
+6	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	3	"det"
+5	4	"nn"
+1	5	"prep_of"
+
+>mention
+4	4	"Protein(beta-globin)"
+
+>trigger
+1	1	"Regulation"
+>argument
+1	4	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Transcription"
+2	"of"
+3	"the"
+4	"human"
+5	"beta-globin"
+6	"gene"
+7	"cluster"
+8	"depends"
+9	"upon"
+10	"upstream"
+11	"regulatory"
+12	"sequences"
+13	","
+14	"which"
+15	"are"
+16	"collectively"
+17	"termed"
+18	"the"
+19	"locus"
+20	"control"
+21	"region"
+22	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"NN"
+8	"VBZ"
+9	"IN"
+10	"JJ"
+11	"JJ"
+12	"NNS"
+13	","
+14	"WDT"
+15	"VBP"
+16	"RB"
+17	"VBN"
+18	"DT"
+19	"NN"
+20	"NN"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"nsubj"
+7	3	"det"
+7	4	"amod"
+7	5	"nn"
+7	6	"nn"
+1	7	"prep_of"
+12	10	"amod"
+12	11	"amod"
+8	12	"prep_upon"
+17	12	"nsubjpass"
+17	15	"auxpass"
+17	16	"advmod"
+12	17	"rcmod"
+21	18	"det"
+21	19	"nn"
+21	20	"nn"
+17	21	"xcomp"
+
+>mention
+5	5	"Protein(beta-globin)"
+
+>trigger
+1	1	"Transcription"
+8	8	"Regulation"
+>argument
+1	5	"Theme"
+8	1	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Recent"
+2	"studies"
+3	"have"
+4	"provided"
+5	"new"
+6	"insights"
+7	"into"
+8	"how"
+9	"the"
+10	"individual"
+11	"genes"
+12	"of"
+13	"the"
+14	"cluster"
+15	"are"
+16	"regulated"
+17	"through"
+18	"development"
+19	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NNS"
+3	"VBP"
+4	"VBN"
+5	"JJ"
+6	"NNS"
+7	"IN"
+8	"WRB"
+9	"DT"
+10	"JJ"
+11	"NNS"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"VBP"
+16	"VBN"
+17	"IN"
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+4	2	"nsubj"
+4	3	"aux"
+6	5	"amod"
+4	6	"dobj"
+16	8	"advmod"
+11	9	"det"
+11	10	"amod"
+16	11	"nsubjpass"
+14	13	"det"
+11	14	"prep_of"
+16	15	"auxpass"
+6	16	"prepc_into"
+16	18	"prep_through"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"crux"
+3	"of"
+4	"transcriptional"
+5	"activation"
+6	"is"
+7	"how"
+8	"the"
+9	"locus"
+10	"control"
+11	"region"
+12	"communicates"
+13	"with"
+14	"the"
+15	"gene-proximal"
+16	"regulatory"
+17	"elements"
+18	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"JJ"
+5	"NN"
+6	"VBZ"
+7	"WRB"
+8	"DT"
+9	"NN"
+10	"NN"
+11	"NN"
+12	"VBZ"
+13	"IN"
+14	"DT"
+15	"JJ"
+16	"JJ"
+17	"NNS"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+6	2	"nsubj"
+5	4	"amod"
+2	5	"prep_of"
+12	7	"advmod"
+11	8	"det"
+11	9	"nn"
+11	10	"nn"
+12	11	"nsubj"
+6	12	"ccomp"
+17	14	"det"
+17	15	"amod"
+17	16	"amod"
+12	17	"prep_with"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

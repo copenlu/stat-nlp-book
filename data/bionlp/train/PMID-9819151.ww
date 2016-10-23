@@ -1,0 +1,403 @@
+>>
+>word
+0	"Root"
+1	"Transcription"
+2	"factor"
+3	"NF-kappaB"
+4	"regulation"
+5	"of"
+6	"renal"
+7	"fibrosis"
+8	"during"
+9	"ureteral"
+10	"obstruction"
+11	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NN"
+4	"NN"
+5	"IN"
+6	"JJ"
+7	"NN"
+8	"IN"
+9	"JJ"
+10	"NN"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nn"
+4	2	"nn"
+4	3	"nn"
+7	6	"amod"
+4	7	"prep_of"
+10	9	"amod"
+4	10	"prep_during"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Irrespective"
+2	"of"
+3	"the"
+4	"etiology"
+5	","
+6	"many"
+7	"kidney"
+8	"diseases"
+9	"result"
+10	"in"
+11	"inflammation"
+12	"and"
+13	"fibrosis"
+14	"of"
+15	"the"
+16	"tubulointerstitium"
+17	","
+18	"with"
+19	"the"
+20	"subsequent"
+21	"loss"
+22	"of"
+23	"renal"
+24	"function"
+25	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"IN"
+3	"DT"
+4	"NN"
+5	","
+6	"JJ"
+7	"NN"
+8	"NNS"
+9	"VBP"
+10	"IN"
+11	"NN"
+12	"CC"
+13	"NN"
+14	"IN"
+15	"DT"
+16	"NN"
+17	","
+18	"IN"
+19	"DT"
+20	"JJ"
+21	"NN"
+22	"IN"
+23	"JJ"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	3	"det"
+9	4	"prep_irrespective_of"
+8	6	"amod"
+8	7	"nn"
+9	8	"nsubj"
+9	11	"prep_in"
+9	13	"prep_in"
+11	13	"conj_and"
+16	15	"det"
+11	16	"prep_of"
+21	19	"det"
+21	20	"amod"
+9	21	"prep_with"
+24	23	"amod"
+21	24	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"To"
+2	"initiate"
+3	"any"
+4	"disease"
+5	"process"
+6	"or"
+7	"for"
+8	"any"
+9	"disease"
+10	"process"
+11	"to"
+12	"progress"
+13	","
+14	"there"
+15	"must"
+16	"be"
+17	"changes"
+18	"in"
+19	"the"
+20	"transcription"
+21	"of"
+22	"genes"
+23	"within"
+24	"the"
+25	"affected"
+26	"tissue"
+27	"."
+
+>tag
+0	"Root"
+1	"TO"
+2	"VB"
+3	"DT"
+4	"NN"
+5	"NN"
+6	"CC"
+7	"IN"
+8	"DT"
+9	"NN"
+10	"NN"
+11	"TO"
+12	"VB"
+13	","
+14	"EX"
+15	"MD"
+16	"VB"
+17	"NNS"
+18	"IN"
+19	"DT"
+20	"NN"
+21	"IN"
+22	"NNS"
+23	"IN"
+24	"DT"
+25	"VBN"
+26	"NN"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"aux"
+17	2	"dep"
+5	3	"det"
+5	4	"nn"
+2	5	"dobj"
+12	7	"mark"
+10	8	"det"
+10	9	"nn"
+12	10	"nsubj"
+12	11	"aux"
+2	12	"conj_or"
+17	12	"dep"
+17	14	"expl"
+17	15	"aux"
+17	16	"cop"
+20	19	"det"
+17	20	"prep_in"
+20	22	"prep_of"
+26	24	"det"
+26	25	"amod"
+17	26	"prep_within"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"nuclear"
+3	"factor-kappa"
+4	"B"
+5	"("
+6	"NF-kappaB"
+7	")"
+8	"family"
+9	"of"
+10	"transcription"
+11	"factors"
+12	"regulates"
+13	"genes"
+14	"involved"
+15	"in"
+16	"inflammation"
+17	","
+18	"cell"
+19	"proliferation"
+20	","
+21	"and"
+22	"cell"
+23	"differentiation"
+24	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"NN"
+5	"-LRB-"
+6	"NN"
+7	"-RRB-"
+8	"NN"
+9	"IN"
+10	"NN"
+11	"NNS"
+12	"VBZ"
+13	"NNS"
+14	"VBN"
+15	"IN"
+16	"NN"
+17	","
+18	"NN"
+19	"NN"
+20	","
+21	"CC"
+22	"NN"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"det"
+8	2	"amod"
+8	3	"nn"
+8	4	"nn"
+8	6	"nn"
+12	8	"nsubj"
+11	10	"nn"
+8	11	"prep_of"
+12	13	"dobj"
+13	14	"partmod"
+14	16	"prep_in"
+19	18	"nn"
+14	19	"prep_in"
+16	19	"conj_and"
+23	22	"nn"
+14	23	"prep_in"
+16	23	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"review"
+3	"discusses"
+4	"the"
+5	"NF-kappaB"
+6	"transcription"
+7	"factor"
+8	"family"
+9	"in"
+10	"general"
+11	"and"
+12	"the"
+13	"association"
+14	"of"
+15	"NF-kappaB"
+16	"activation"
+17	"with"
+18	"cellular/molecular"
+19	"events"
+20	"of"
+21	"renal"
+22	"inflammation"
+23	"and"
+24	"fibrosis"
+25	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBZ"
+4	"DT"
+5	"NN"
+6	"NN"
+7	"NN"
+8	"NN"
+9	"IN"
+10	"JJ"
+11	"CC"
+12	"DT"
+13	"NN"
+14	"IN"
+15	"NN"
+16	"NN"
+17	"IN"
+18	"JJ"
+19	"NNS"
+20	"IN"
+21	"JJ"
+22	"NN"
+23	"CC"
+24	"NN"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+8	4	"det"
+8	5	"nn"
+8	6	"nn"
+8	7	"nn"
+3	8	"dobj"
+8	10	"prep_in"
+13	12	"det"
+3	13	"dobj"
+8	13	"conj_and"
+16	15	"nn"
+13	16	"prep_of"
+19	18	"amod"
+13	19	"prep_with"
+22	21	"amod"
+19	22	"prep_of"
+19	24	"prep_of"
+22	24	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

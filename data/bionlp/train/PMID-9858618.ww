@@ -1,0 +1,665 @@
+>>
+>word
+0	"Root"
+1	"Interactions"
+2	"between"
+3	"the"
+4	"class"
+5	"II"
+6	"transactivator"
+7	"and"
+8	"CREB"
+9	"binding"
+10	"protein"
+11	"increase"
+12	"transcription"
+13	"of"
+14	"major"
+15	"histocompatibility"
+16	"complex"
+17	"class"
+18	"II"
+19	"genes"
+20	"."
+
+>tag
+0	"Root"
+1	"NNS"
+2	"IN"
+3	"DT"
+4	"NN"
+5	"CD"
+6	"NN"
+7	"CC"
+8	"NN"
+9	"NN"
+10	"NN"
+11	"VBP"
+12	"NN"
+13	"IN"
+14	"JJ"
+15	"NN"
+16	"NN"
+17	"NN"
+18	"CD"
+19	"NNS"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+11	1	"nsubj"
+6	3	"det"
+6	4	"nn"
+6	5	"num"
+1	6	"prep_between"
+10	8	"nn"
+10	9	"nn"
+1	10	"prep_between"
+6	10	"conj_and"
+11	12	"dobj"
+17	14	"amod"
+17	15	"nn"
+17	16	"nn"
+19	17	"nn"
+17	18	"num"
+12	19	"prep_of"
+
+>mention
+4	6	"Protein(transactivator)"
+8	10	"Protein(protein)"
+
+>trigger
+1	1	"Binding"
+>argument
+1	6	"Theme"
+1	10	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Class"
+2	"II"
+3	"major"
+4	"histocompatibility"
+5	"("
+6	"class"
+7	"II"
+8	")"
+9	"genes"
+10	"are"
+11	"regulated"
+12	"in"
+13	"a"
+14	"B-cell-specific"
+15	"and"
+16	"gamma"
+17	"interferon"
+18	"-inducible"
+19	"fashion"
+20	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"CD"
+3	"JJ"
+4	"NN"
+5	"-LRB-"
+6	"NN"
+7	"CD"
+8	"-RRB-"
+9	"NNS"
+10	"VBP"
+11	"VBN"
+12	"IN"
+13	"DT"
+14	"JJ"
+15	"CC"
+16	"NN"
+17	"NN"
+18	"JJ"
+19	"NN"
+20	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	1	"nn"
+9	2	"num"
+9	3	"amod"
+9	4	"nn"
+9	6	"nn"
+9	7	"num"
+11	9	"nsubjpass"
+11	10	"auxpass"
+19	13	"det"
+19	14	"amod"
+18	16	"dep"
+18	17	"dep"
+14	18	"conj_and"
+19	18	"amod"
+11	19	"prep_in"
+
+>mention
+16	17	"Protein(interferon)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"master"
+3	"switch"
+4	"for"
+5	"the"
+6	"expression"
+7	"of"
+8	"these"
+9	"genes"
+10	"is"
+11	"the"
+12	"class"
+13	"II"
+14	"transactivator"
+15	"("
+16	"CIITA"
+17	")"
+18	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"IN"
+5	"DT"
+6	"NN"
+7	"IN"
+8	"DT"
+9	"NNS"
+10	"VBZ"
+11	"DT"
+12	"NN"
+13	"CD"
+14	"NN"
+15	"-LRB-"
+16	"NN"
+17	"-RRB-"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+14	3	"nsubj"
+6	5	"det"
+3	6	"prep_for"
+9	8	"det"
+6	9	"prep_of"
+14	10	"cop"
+14	11	"det"
+14	12	"nn"
+14	13	"num"
+14	16	"abbrev"
+
+>mention
+12	14	"Protein(transactivator)"
+16	16	"Protein(CIITA)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"In"
+2	"this"
+3	"report"
+4	","
+5	"we"
+6	"demonstrate"
+7	"that"
+8	"one"
+9	"of"
+10	"the"
+11	"functions"
+12	"of"
+13	"CIITA"
+14	"is"
+15	"to"
+16	"recruit"
+17	"the"
+18	"CREB"
+19	"binding"
+20	"protein"
+21	"("
+22	"CBP"
+23	")"
+24	"to"
+25	"class"
+26	"II"
+27	"promoters"
+28	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"NN"
+4	","
+5	"PRP"
+6	"VBP"
+7	"IN"
+8	"CD"
+9	"IN"
+10	"DT"
+11	"NNS"
+12	"IN"
+13	"NN"
+14	"VBZ"
+15	"TO"
+16	"VB"
+17	"DT"
+18	"NN"
+19	"NN"
+20	"NN"
+21	"-LRB-"
+22	"NN"
+23	"-RRB-"
+24	"TO"
+25	"NN"
+26	"CD"
+27	"NNS"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	2	"det"
+6	3	"prep_in"
+6	5	"nsubj"
+14	7	"complm"
+14	8	"nsubj"
+16	8	"xsubj"
+11	10	"det"
+8	11	"prep_of"
+11	13	"prep_of"
+6	14	"ccomp"
+16	15	"aux"
+14	16	"xcomp"
+20	17	"det"
+20	18	"nn"
+20	19	"nn"
+16	20	"dobj"
+20	22	"abbrev"
+27	25	"nn"
+27	26	"num"
+16	27	"prep_to"
+
+>mention
+13	13	"Protein(CIITA)"
+18	20	"Protein(protein)"
+22	22	"Protein(CBP)"
+
+>trigger
+11	11	"Positive_regulation"
+16	16	"Binding"
+>argument
+11	13	"Cause"
+11	16	"Theme"
+16	20	"Theme"
+16	22	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Not"
+2	"only"
+3	"functional"
+4	"but"
+5	"also"
+6	"specific"
+7	"binding"
+8	"interactions"
+9	"between"
+10	"CIITA"
+11	"and"
+12	"CBP"
+13	"were"
+14	"demonstrated"
+15	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"RB"
+3	"JJ"
+4	"CC"
+5	"RB"
+6	"JJ"
+7	"NN"
+8	"NNS"
+9	"IN"
+10	"NN"
+11	"CC"
+12	"NN"
+13	"VBD"
+14	"VBN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"neg"
+3	2	"preconj"
+8	3	"amod"
+3	6	"conj_and"
+8	6	"amod"
+8	7	"nn"
+14	8	"nsubjpass"
+8	10	"prep_between"
+8	12	"prep_between"
+10	12	"conj_and"
+14	13	"auxpass"
+
+>mention
+10	10	"Protein(CIITA)"
+12	12	"Protein(CBP)"
+
+>trigger
+8	8	"Binding"
+>argument
+8	10	"Theme"
+8	12	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Moreover"
+2	","
+3	"a"
+4	"dominant"
+5	"negative"
+6	"form"
+7	"of"
+8	"CBP"
+9	"decreased"
+10	"the"
+11	"activity"
+12	"of"
+13	"class"
+14	"II"
+15	"promoters"
+16	"and"
+17	"levels"
+18	"of"
+19	"class"
+20	"II"
+21	"determinants"
+22	"on"
+23	"the"
+24	"surface"
+25	"of"
+26	"cells"
+27	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"JJ"
+5	"JJ"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"VBD"
+10	"DT"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"CD"
+15	"NNS"
+16	"CC"
+17	"NNS"
+18	"IN"
+19	"NN"
+20	"CD"
+21	"NNS"
+22	"IN"
+23	"DT"
+24	"NN"
+25	"IN"
+26	"NNS"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+9	1	"advmod"
+6	3	"det"
+6	4	"amod"
+6	5	"amod"
+9	6	"nsubj"
+6	8	"prep_of"
+11	10	"det"
+9	11	"dobj"
+15	13	"nn"
+15	14	"num"
+11	15	"prep_of"
+9	17	"dobj"
+11	17	"conj_and"
+21	19	"nn"
+21	20	"num"
+17	21	"prep_of"
+24	23	"det"
+9	24	"prep_on"
+24	26	"prep_of"
+
+>mention
+8	8	"Protein(CBP)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Finally"
+2	","
+3	"the"
+4	"inhibition"
+5	"of"
+6	"class"
+7	"II"
+8	"gene"
+9	"expression"
+10	"by"
+11	"the"
+12	"glucocorticoid"
+13	"hormone"
+14	"could"
+15	"be"
+16	"attributed"
+17	"to"
+18	"the"
+19	"squelching"
+20	"of"
+21	"CBP"
+22	"by"
+23	"the"
+24	"glucocorticoid"
+25	"receptor"
+26	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"CD"
+8	"NN"
+9	"NN"
+10	"IN"
+11	"DT"
+12	"NN"
+13	"NN"
+14	"MD"
+15	"VB"
+16	"VBN"
+17	"TO"
+18	"DT"
+19	"NN"
+20	"IN"
+21	"NN"
+22	"IN"
+23	"DT"
+24	"NN"
+25	"NN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+16	1	"advmod"
+4	3	"det"
+16	4	"nsubjpass"
+9	6	"nn"
+9	7	"num"
+9	8	"nn"
+4	9	"prep_of"
+13	11	"det"
+13	12	"nn"
+4	13	"prep_by"
+16	14	"aux"
+16	15	"auxpass"
+19	18	"det"
+16	19	"prep_to"
+19	21	"prep_of"
+25	23	"det"
+25	24	"nn"
+19	25	"prep_by"
+
+>mention
+21	21	"Protein(CBP)"
+24	25	"Protein(receptor)"
+
+>trigger
+19	19	"Negative_regulation"
+>argument
+19	21	"Theme"
+19	25	"Cause"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"conclude"
+3	"that"
+4	"CBP"
+5	","
+6	"a"
+7	"histone"
+8	"acetyltransferase"
+9	","
+10	"plays"
+11	"an"
+12	"important"
+13	"role"
+14	"in"
+15	"the"
+16	"transcription"
+17	"of"
+18	"class"
+19	"II"
+20	"genes"
+21	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"IN"
+4	"NN"
+5	","
+6	"DT"
+7	"NN"
+8	"NN"
+9	","
+10	"VBZ"
+11	"DT"
+12	"JJ"
+13	"NN"
+14	"IN"
+15	"DT"
+16	"NN"
+17	"IN"
+18	"NN"
+19	"NN"
+20	"NNS"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+10	3	"complm"
+10	4	"nsubj"
+8	6	"det"
+8	7	"nn"
+4	8	"appos"
+2	10	"ccomp"
+13	11	"det"
+13	12	"amod"
+10	13	"dobj"
+16	15	"det"
+10	16	"prep_in"
+20	18	"nn"
+20	19	"nn"
+16	20	"prep_of"
+
+>mention
+4	4	"Protein(CBP)"
+
+>trigger
+>argument
+>relation
+
+

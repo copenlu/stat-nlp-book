@@ -1,0 +1,490 @@
+>>
+>word
+0	"Root"
+1	"Host"
+2	"defense"
+3	"mechanisms"
+4	"triggered"
+5	"by"
+6	"microbial"
+7	"lipoproteins"
+8	"through"
+9	"toll-like"
+10	"receptors"
+11	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"NNS"
+4	"VBD"
+5	"IN"
+6	"JJ"
+7	"NNS"
+8	"IN"
+9	"JJ"
+10	"NNS"
+11	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nn"
+3	2	"nn"
+4	3	"nsubj"
+7	6	"amod"
+4	7	"prep_by"
+10	9	"amod"
+4	10	"prep_through"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"generation"
+3	"of"
+4	"cell-mediated"
+5	"immunity"
+6	"against"
+7	"many"
+8	"infectious"
+9	"pathogens"
+10	"involves"
+11	"the"
+12	"production"
+13	"of"
+14	"interleukin-12"
+15	"("
+16	"IL-12"
+17	")"
+18	","
+19	"a"
+20	"key"
+21	"signal"
+22	"of"
+23	"the"
+24	"innate"
+25	"immune"
+26	"system"
+27	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"IN"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"JJ"
+8	"JJ"
+9	"NNS"
+10	"VBZ"
+11	"DT"
+12	"NN"
+13	"IN"
+14	"NN"
+15	"-LRB-"
+16	"NN"
+17	"-RRB-"
+18	","
+19	"DT"
+20	"JJ"
+21	"NN"
+22	"IN"
+23	"DT"
+24	"JJ"
+25	"JJ"
+26	"NN"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+10	2	"nsubj"
+5	4	"amod"
+2	5	"prep_of"
+9	7	"amod"
+9	8	"amod"
+5	9	"prep_against"
+12	11	"det"
+10	12	"dobj"
+12	14	"prep_of"
+14	16	"abbrev"
+21	19	"det"
+21	20	"amod"
+14	21	"appos"
+26	23	"det"
+26	24	"amod"
+26	25	"amod"
+21	26	"prep_of"
+
+>mention
+14	14	"Protein(interleukin-12)"
+16	16	"Protein(IL-12)"
+
+>trigger
+12	12	"Gene_expression"
+>argument
+12	14	"Theme"
+12	16	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Yet"
+2	","
+3	"for"
+4	"many"
+5	"pathogens"
+6	","
+7	"the"
+8	"molecules"
+9	"that"
+10	"induce"
+11	"IL-12"
+12	"production"
+13	"by"
+14	"macrophages"
+15	"and"
+16	"the"
+17	"mechanisms"
+18	"by"
+19	"which"
+20	"they"
+21	"do"
+22	"so"
+23	"remain"
+24	"undefined"
+25	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"IN"
+4	"JJ"
+5	"NNS"
+6	","
+7	"DT"
+8	"NNS"
+9	"WDT"
+10	"VBP"
+11	"NN"
+12	"NN"
+13	"IN"
+14	"NNS"
+15	"CC"
+16	"DT"
+17	"NNS"
+18	"IN"
+19	"WDT"
+20	"PRP"
+21	"VBP"
+22	"RB"
+23	"VB"
+24	"JJ"
+25	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+24	1	"advmod"
+5	4	"amod"
+24	5	"prep_for"
+8	7	"det"
+10	8	"nsubj"
+24	8	"nsubj"
+8	10	"rcmod"
+12	11	"nn"
+10	12	"dobj"
+12	14	"prep_by"
+17	16	"det"
+8	17	"conj_and"
+21	19	"rel"
+21	20	"nsubj"
+17	21	"rcmod"
+21	22	"advmod"
+24	23	"cop"
+
+>mention
+11	11	"Protein(IL-12)"
+
+>trigger
+10	10	"Positive_regulation"
+12	12	"Gene_expression"
+>argument
+10	12	"Theme"
+12	11	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Here"
+2	"it"
+3	"is"
+4	"shown"
+5	"that"
+6	"microbial"
+7	"lipoproteins"
+8	"are"
+9	"potent"
+10	"stimulators"
+11	"of"
+12	"IL-12"
+13	"production"
+14	"by"
+15	"human"
+16	"macrophages"
+17	","
+18	"and"
+19	"that"
+20	"induction"
+21	"is"
+22	"mediated"
+23	"by"
+24	"Toll-like"
+25	"receptors"
+26	"("
+27	"TLRs"
+28	")"
+29	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"PRP"
+3	"VBZ"
+4	"VBN"
+5	"IN"
+6	"JJ"
+7	"NNS"
+8	"VBP"
+9	"JJ"
+10	"NNS"
+11	"IN"
+12	"NN"
+13	"NN"
+14	"IN"
+15	"JJ"
+16	"NNS"
+17	","
+18	"CC"
+19	"IN"
+20	"NN"
+21	"VBZ"
+22	"VBN"
+23	"IN"
+24	"JJ"
+25	"NNS"
+26	"-LRB-"
+27	"NNS"
+28	"-RRB-"
+29	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"advmod"
+4	2	"nsubjpass"
+4	3	"auxpass"
+10	5	"complm"
+7	6	"amod"
+10	7	"nsubj"
+10	8	"cop"
+10	9	"amod"
+4	10	"ccomp"
+13	12	"nn"
+10	13	"prep_of"
+16	15	"amod"
+13	16	"prep_by"
+22	19	"complm"
+22	20	"nsubjpass"
+22	21	"auxpass"
+4	22	"ccomp"
+10	22	"conj_and"
+25	24	"amod"
+22	25	"agent"
+25	27	"appos"
+
+>mention
+12	12	"Protein(IL-12)"
+
+>trigger
+13	13	"Gene_expression"
+>argument
+13	12	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Several"
+2	"lipoproteins"
+3	"stimulated"
+4	"TLR-dependent"
+5	"transcription"
+6	"of"
+7	"inducible"
+8	"nitric"
+9	"oxide"
+10	"synthase"
+11	"and"
+12	"the"
+13	"production"
+14	"of"
+15	"nitric"
+16	"oxide"
+17	","
+18	"a"
+19	"powerful"
+20	"microbicidal"
+21	"pathway"
+22	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NNS"
+3	"VBD"
+4	"JJ"
+5	"NN"
+6	"IN"
+7	"JJ"
+8	"JJ"
+9	"NN"
+10	"NN"
+11	"CC"
+12	"DT"
+13	"NN"
+14	"IN"
+15	"JJ"
+16	"NN"
+17	","
+18	"DT"
+19	"JJ"
+20	"NN"
+21	"NN"
+22	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+3	2	"nsubj"
+5	4	"amod"
+3	5	"dobj"
+10	7	"amod"
+10	8	"amod"
+10	9	"nn"
+5	10	"prep_of"
+13	12	"det"
+3	13	"dobj"
+5	13	"conj_and"
+16	15	"amod"
+13	16	"prep_of"
+21	18	"det"
+21	19	"amod"
+21	20	"nn"
+16	21	"appos"
+
+>mention
+8	10	"Protein(synthase)"
+
+>trigger
+3	3	"Positive_regulation"
+4	4	"Regulation"
+5	5	"Transcription"
+7	7	"Positive_regulation"
+>argument
+3	5	"Theme"
+4	5	"Theme"
+5	10	"Theme"
+7	10	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Activation"
+2	"of"
+3	"TLRs"
+4	"by"
+5	"microbial"
+6	"lipoproteins"
+7	"may"
+8	"initiate"
+9	"innate"
+10	"defense"
+11	"mechanisms"
+12	"against"
+13	"infectious"
+14	"pathogens"
+15	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"IN"
+5	"JJ"
+6	"NNS"
+7	"MD"
+8	"VB"
+9	"JJ"
+10	"NN"
+11	"NNS"
+12	"IN"
+13	"JJ"
+14	"NNS"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+8	1	"nsubj"
+1	3	"prep_of"
+6	5	"amod"
+1	6	"prep_by"
+8	7	"aux"
+11	9	"amod"
+11	10	"nn"
+8	11	"dobj"
+14	13	"amod"
+8	14	"prep_against"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+

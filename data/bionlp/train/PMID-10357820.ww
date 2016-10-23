@@ -1,0 +1,505 @@
+>>
+>word
+0	"Root"
+1	"Repression"
+2	"by"
+3	"Ikaros"
+4	"and"
+5	"Aiolos"
+6	"is"
+7	"mediated"
+8	"through"
+9	"histone"
+10	"deacetylase"
+11	"complexes"
+12	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"CC"
+5	"NN"
+6	"VBZ"
+7	"VBN"
+8	"IN"
+9	"NN"
+10	"NN"
+11	"NNS"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+7	1	"nsubjpass"
+1	3	"prep_by"
+1	5	"prep_by"
+3	5	"conj_and"
+7	6	"auxpass"
+11	9	"nn"
+11	10	"nn"
+7	11	"prep_through"
+
+>mention
+3	3	"Protein(Ikaros)"
+5	5	"Protein(Aiolos)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Here"
+2	"we"
+3	"show"
+4	"that"
+5	"the"
+6	"lymphoid"
+7	"lineage-determining"
+8	"factors"
+9	"Ikaros"
+10	"and"
+11	"Aiolos"
+12	"can"
+13	"function"
+14	"as"
+15	"strong"
+16	"transcriptional"
+17	"repressors"
+18	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	"PRP"
+3	"VBP"
+4	"IN"
+5	"DT"
+6	"JJ"
+7	"JJ"
+8	"NNS"
+9	"NN"
+10	"CC"
+11	"NN"
+12	"MD"
+13	"VB"
+14	"IN"
+15	"JJ"
+16	"JJ"
+17	"NNS"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"advmod"
+3	2	"nsubj"
+13	4	"complm"
+8	5	"det"
+8	6	"amod"
+8	7	"amod"
+13	8	"nsubj"
+8	9	"dep"
+8	11	"dep"
+9	11	"conj_and"
+13	12	"aux"
+3	13	"ccomp"
+17	15	"amod"
+17	16	"amod"
+13	17	"prep_as"
+
+>mention
+9	9	"Protein(Ikaros)"
+11	11	"Protein(Aiolos)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"function"
+3	"is"
+4	"mediated"
+5	"through"
+6	"two"
+7	"repression"
+8	"domains"
+9	"and"
+10	"is"
+11	"dependent"
+12	"upon"
+13	"the"
+14	"promoter"
+15	"context"
+16	"and"
+17	"cell"
+18	"type"
+19	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBZ"
+4	"VBN"
+5	"IN"
+6	"CD"
+7	"NN"
+8	"NNS"
+9	"CC"
+10	"VBZ"
+11	"JJ"
+12	"IN"
+13	"DT"
+14	"NN"
+15	"NN"
+16	"CC"
+17	"NN"
+18	"NN"
+19	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+4	2	"nsubjpass"
+11	2	"nsubj"
+4	3	"auxpass"
+8	6	"num"
+8	7	"nn"
+4	8	"prep_through"
+11	10	"cop"
+4	11	"conj_and"
+15	13	"dep"
+15	14	"nn"
+11	15	"prep_upon"
+18	17	"nn"
+11	18	"prep_upon"
+15	18	"conj_and"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Repression"
+2	"by"
+3	"Ikaros"
+4	"proteins"
+5	"correlates"
+6	"with"
+7	"hypo-acetylation"
+8	"of"
+9	"core"
+10	"histones"
+11	"at"
+12	"promoter"
+13	"sites"
+14	"and"
+15	"is"
+16	"relieved"
+17	"by"
+18	"histone"
+19	"deacetylase"
+20	"inhibitors"
+21	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"NNS"
+5	"VBZ"
+6	"IN"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"NNS"
+11	"IN"
+12	"NN"
+13	"NNS"
+14	"CC"
+15	"VBZ"
+16	"VBN"
+17	"IN"
+18	"NN"
+19	"NN"
+20	"NNS"
+21	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"nsubj"
+16	1	"nsubjpass"
+4	3	"nn"
+1	4	"prep_by"
+5	7	"prep_with"
+10	9	"nn"
+7	10	"prep_of"
+13	12	"nn"
+7	13	"prep_at"
+16	15	"auxpass"
+5	16	"conj_and"
+20	18	"nn"
+20	19	"nn"
+16	20	"agent"
+
+>mention
+3	3	"Protein(Ikaros)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Consistent"
+2	"with"
+3	"these"
+4	"findings"
+5	","
+6	"Ikaros"
+7	"and"
+8	"its"
+9	"repression"
+10	"domains"
+11	"can"
+12	"interact"
+13	"in"
+14	"vivo"
+15	"and"
+16	"in"
+17	"vitro"
+18	"with"
+19	"the"
+20	"mSin3"
+21	"family"
+22	"of"
+23	"co-repressors"
+24	"which"
+25	"bind"
+26	"to"
+27	"histone"
+28	"deacetylases"
+29	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"IN"
+3	"DT"
+4	"NNS"
+5	","
+6	"NN"
+7	"CC"
+8	"PRP$"
+9	"NN"
+10	"NNS"
+11	"MD"
+12	"VB"
+13	"FW"
+14	"FW"
+15	"CC"
+16	"FW"
+17	"FW"
+18	"IN"
+19	"DT"
+20	"NN"
+21	"NN"
+22	"IN"
+23	"NNS"
+24	"WDT"
+25	"VBP"
+26	"TO"
+27	"NN"
+28	"NNS"
+29	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+12	1	"ccomp"
+4	3	"det"
+1	4	"prep_with"
+12	6	"nsubj"
+10	8	"poss"
+10	9	"nn"
+6	10	"conj_and"
+12	10	"nsubj"
+12	11	"aux"
+14	13	"nn"
+12	14	"advmod"
+17	16	"nn"
+12	17	"advmod"
+14	17	"conj_and"
+21	19	"det"
+21	20	"nn"
+12	21	"prep_with"
+21	23	"prep_of"
+25	23	"nsubj"
+23	25	"rcmod"
+28	27	"nn"
+25	28	"prep_to"
+
+>mention
+6	6	"Protein(Ikaros)"
+
+>trigger
+12	12	"Binding"
+>argument
+12	6	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Based"
+2	"on"
+3	"these"
+4	"and"
+5	"our"
+6	"recent"
+7	"findings"
+8	"of"
+9	"associations"
+10	"between"
+11	"Ikaros"
+12	"and"
+13	"Mi-2-HDAC"
+14	","
+15	"we"
+16	"propose"
+17	"that"
+18	"Ikaros"
+19	"family"
+20	"members"
+21	"modulate"
+22	"gene"
+23	"expression"
+24	"during"
+25	"lymphocyte"
+26	"development"
+27	"by"
+28	"recruiting"
+29	"distinct"
+30	"histone"
+31	"deacetylase"
+32	"complexes"
+33	"to"
+34	"specific"
+35	"promoters"
+36	"."
+
+>tag
+0	"Root"
+1	"VBN"
+2	"IN"
+3	"DT"
+4	"CC"
+5	"PRP$"
+6	"JJ"
+7	"NNS"
+8	"IN"
+9	"NNS"
+10	"IN"
+11	"NN"
+12	"CC"
+13	"NN"
+14	","
+15	"PRP"
+16	"VBP"
+17	"IN"
+18	"NN"
+19	"NN"
+20	"NNS"
+21	"VBP"
+22	"NN"
+23	"NN"
+24	"IN"
+25	"NN"
+26	"NN"
+27	"IN"
+28	"VBG"
+29	"JJ"
+30	"NN"
+31	"NN"
+32	"NNS"
+33	"TO"
+34	"JJ"
+35	"NNS"
+36	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+16	2	"prepc_based_on"
+16	3	"pobj"
+7	5	"poss"
+7	6	"amod"
+3	7	"conj_and"
+16	7	"pobj"
+7	9	"prep_of"
+9	11	"prep_between"
+9	13	"prep_between"
+11	13	"conj_and"
+16	15	"nsubj"
+21	17	"complm"
+20	18	"nn"
+20	19	"nn"
+21	20	"nsubj"
+16	21	"ccomp"
+23	22	"nn"
+21	23	"dobj"
+26	25	"nn"
+21	26	"prep_during"
+21	28	"prepc_by"
+32	29	"amod"
+32	30	"nn"
+32	31	"nn"
+28	32	"dobj"
+35	34	"amod"
+28	35	"prep_to"
+
+>mention
+11	11	"Protein(Ikaros)"
+13	13	"Protein(Mi-2-HDAC)"
+18	18	"Protein(Ikaros)"
+
+>trigger
+9	9	"Binding"
+>argument
+9	11	"Theme"
+9	13	"Theme"
+>relation
+
+

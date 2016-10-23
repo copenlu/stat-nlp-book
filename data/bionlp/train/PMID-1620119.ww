@@ -1,0 +1,751 @@
+>>
+>word
+0	"Root"
+1	"Oct2"
+2	"transactivation"
+3	"from"
+4	"a"
+5	"remote"
+6	"enhancer"
+7	"position"
+8	"requires"
+9	"a"
+10	"B-cell-restricted"
+11	"activity"
+12	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"IN"
+4	"DT"
+5	"JJ"
+6	"NN"
+7	"NN"
+8	"VBZ"
+9	"DT"
+10	"JJ"
+11	"NN"
+12	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+8	2	"nsubj"
+7	4	"det"
+7	5	"amod"
+7	6	"nn"
+2	7	"prep_from"
+11	9	"det"
+11	10	"amod"
+8	11	"dobj"
+
+>mention
+1	1	"Protein(Oct2)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Previous"
+2	"cotransfection"
+3	"experiments"
+4	"had"
+5	"demonstrated"
+6	"that"
+7	"ectopic"
+8	"expression"
+9	"of"
+10	"the"
+11	"lymphocyte-specific"
+12	"transcription"
+13	"factor"
+14	"Oct2"
+15	"could"
+16	"efficiently"
+17	"activate"
+18	"a"
+19	"promoter"
+20	"containing"
+21	"an"
+22	"octamer"
+23	"motif"
+24	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NN"
+3	"NNS"
+4	"VBD"
+5	"VBN"
+6	"IN"
+7	"JJ"
+8	"NN"
+9	"IN"
+10	"DT"
+11	"JJ"
+12	"NN"
+13	"NN"
+14	"NN"
+15	"MD"
+16	"RB"
+17	"VB"
+18	"DT"
+19	"NN"
+20	"VBG"
+21	"DT"
+22	"NN"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"amod"
+3	2	"nn"
+5	3	"nsubj"
+5	4	"aux"
+17	6	"complm"
+8	7	"amod"
+17	8	"nsubj"
+14	10	"det"
+14	11	"amod"
+14	12	"nn"
+14	13	"nn"
+8	14	"prep_of"
+17	15	"aux"
+17	16	"advmod"
+5	17	"ccomp"
+19	18	"det"
+17	19	"dobj"
+19	20	"partmod"
+23	21	"det"
+23	22	"nn"
+20	23	"dobj"
+
+>mention
+14	14	"Protein(Oct2)"
+
+>trigger
+8	8	"Gene_expression"
+>argument
+8	14	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Oct2"
+2	"expression"
+3	"was"
+4	"unable"
+5	"to"
+6	"stimulate"
+7	"a"
+8	"multimerized"
+9	"octamer"
+10	"enhancer"
+11	"element"
+12	"in"
+13	"HeLa"
+14	"cells"
+15	","
+16	"however"
+17	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBD"
+4	"JJ"
+5	"TO"
+6	"VB"
+7	"DT"
+8	"JJ"
+9	"NN"
+10	"NN"
+11	"NN"
+12	"IN"
+13	"NN"
+14	"NNS"
+15	","
+16	"RB"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+4	2	"nsubj"
+4	3	"cop"
+6	5	"aux"
+4	6	"xcomp"
+11	7	"det"
+11	8	"amod"
+11	9	"nn"
+11	10	"nn"
+6	11	"dobj"
+14	13	"nn"
+11	14	"prep_in"
+4	16	"advmod"
+
+>mention
+1	1	"Protein(Oct2)"
+
+>trigger
+2	2	"Gene_expression"
+>argument
+2	1	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"have"
+3	"tested"
+4	"a"
+5	"variety"
+6	"of"
+7	"Oct2"
+8	"isoforms"
+9	"generated"
+10	"by"
+11	"alternative"
+12	"splicing"
+13	"for"
+14	"the"
+15	"capability"
+16	"to"
+17	"activate"
+18	"an"
+19	"octamer"
+20	"enhancer"
+21	"in"
+22	"nonlymphoid"
+23	"cells"
+24	"and"
+25	"a"
+26	"B-cell"
+27	"line"
+28	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBP"
+3	"VBN"
+4	"DT"
+5	"NN"
+6	"IN"
+7	"NN"
+8	"NNS"
+9	"VBN"
+10	"IN"
+11	"JJ"
+12	"NN"
+13	"IN"
+14	"DT"
+15	"NN"
+16	"TO"
+17	"VB"
+18	"DT"
+19	"NN"
+20	"NN"
+21	"IN"
+22	"JJ"
+23	"NNS"
+24	"CC"
+25	"DT"
+26	"NN"
+27	"NN"
+28	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"nsubj"
+3	2	"aux"
+5	4	"det"
+3	5	"dobj"
+8	7	"nn"
+5	8	"prep_of"
+8	9	"partmod"
+12	11	"amod"
+9	12	"agent"
+15	14	"det"
+12	15	"prep_for"
+17	16	"aux"
+15	17	"infmod"
+20	18	"det"
+20	19	"nn"
+17	20	"dobj"
+23	22	"amod"
+17	23	"prep_in"
+27	25	"det"
+27	26	"nn"
+17	27	"prep_in"
+23	27	"conj_and"
+
+>mention
+7	7	"Protein(Oct2)"
+
+>trigger
+9	9	"Positive_regulation"
+>argument
+9	7	"Theme"
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Our"
+2	"analyses"
+3	"show"
+4	"that"
+5	"several"
+6	"Oct2"
+7	"isoforms"
+8	"can"
+9	"stimulate"
+10	"from"
+11	"a"
+12	"remote"
+13	"position"
+14	"but"
+15	"that"
+16	"this"
+17	"stimulation"
+18	"is"
+19	"restricted"
+20	"to"
+21	"B"
+22	"cells"
+23	"."
+
+>tag
+0	"Root"
+1	"PRP$"
+2	"NNS"
+3	"VBP"
+4	"IN"
+5	"JJ"
+6	"NN"
+7	"NNS"
+8	"MD"
+9	"VB"
+10	"IN"
+11	"DT"
+12	"JJ"
+13	"NN"
+14	"CC"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"VBZ"
+19	"JJ"
+20	"TO"
+21	"NN"
+22	"NNS"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"poss"
+3	2	"nsubj"
+9	4	"complm"
+7	5	"amod"
+7	6	"nn"
+9	7	"nsubj"
+9	8	"aux"
+3	9	"ccomp"
+13	11	"det"
+13	12	"amod"
+9	13	"prep_from"
+19	15	"complm"
+17	16	"det"
+19	17	"nsubj"
+19	18	"cop"
+3	19	"ccomp"
+9	19	"conj_but"
+22	21	"nn"
+19	22	"prep_to"
+
+>mention
+6	6	"Protein(Oct2)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"This"
+2	"result"
+3	"indicates"
+4	"the"
+5	"involvement"
+6	"of"
+7	"either"
+8	"a"
+9	"B-cell-specific"
+10	"cofactor"
+11	"or"
+12	"a"
+13	"specific"
+14	"modification"
+15	"of"
+16	"a"
+17	"cofactor"
+18	"or"
+19	"the"
+20	"Oct2"
+21	"protein"
+22	"in"
+23	"Oct2"
+24	"-mediated"
+25	"enhancer"
+26	"activation"
+27	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"NN"
+3	"VBZ"
+4	"DT"
+5	"NN"
+6	"IN"
+7	"CC"
+8	"DT"
+9	"JJ"
+10	"NN"
+11	"CC"
+12	"DT"
+13	"JJ"
+14	"NN"
+15	"IN"
+16	"DT"
+17	"NN"
+18	"CC"
+19	"DT"
+20	"NN"
+21	"NN"
+22	"IN"
+23	"NN"
+24	"JJ"
+25	"NN"
+26	"NN"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"det"
+3	2	"nsubj"
+5	4	"det"
+3	5	"dobj"
+10	7	"preconj"
+10	8	"det"
+10	9	"amod"
+5	10	"prep_of"
+14	12	"det"
+14	13	"amod"
+5	14	"prep_of"
+10	14	"conj_or"
+17	16	"det"
+14	17	"prep_of"
+21	19	"det"
+21	20	"nn"
+14	21	"prep_of"
+17	21	"conj_or"
+26	23	"nn"
+26	24	"amod"
+26	25	"nn"
+5	26	"prep_in"
+
+>mention
+20	20	"Protein(Oct2)"
+23	23	"Protein(Oct2)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Mutational"
+2	"analyses"
+3	"indicate"
+4	"that"
+5	"the"
+6	"carboxy-terminal"
+7	"domain"
+8	"of"
+9	"Oct2"
+10	"is"
+11	"critical"
+12	"for"
+13	"enhancer"
+14	"activation"
+15	"."
+
+>tag
+0	"Root"
+1	"JJ"
+2	"NNS"
+3	"VBP"
+4	"IN"
+5	"DT"
+6	"JJ"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"VBZ"
+11	"JJ"
+12	"IN"
+13	"NN"
+14	"NN"
+15	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"amod"
+3	2	"nsubj"
+11	4	"complm"
+7	5	"det"
+7	6	"amod"
+11	7	"nsubj"
+7	9	"prep_of"
+11	10	"cop"
+3	11	"ccomp"
+14	13	"nn"
+11	14	"prep_for"
+
+>mention
+9	9	"Protein(Oct2)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Moreover"
+2	","
+3	"this"
+4	"domain"
+5	"conferred"
+6	"enhancing"
+7	"activity"
+8	"when"
+9	"fused"
+10	"to"
+11	"the"
+12	"Oct1"
+13	"protein"
+14	","
+15	"which"
+16	"by"
+17	"itself"
+18	"was"
+19	"unable"
+20	"to"
+21	"stimulate"
+22	"from"
+23	"a"
+24	"remote"
+25	"position"
+26	"."
+
+>tag
+0	"Root"
+1	"RB"
+2	","
+3	"DT"
+4	"NN"
+5	"VBD"
+6	"NN"
+7	"NN"
+8	"WRB"
+9	"VBN"
+10	"TO"
+11	"DT"
+12	"NN"
+13	"NN"
+14	","
+15	"WDT"
+16	"IN"
+17	"PRP"
+18	"VBD"
+19	"JJ"
+20	"TO"
+21	"VB"
+22	"IN"
+23	"DT"
+24	"JJ"
+25	"NN"
+26	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+5	1	"advmod"
+4	3	"det"
+5	4	"nsubj"
+7	6	"nn"
+5	7	"dobj"
+9	8	"advmod"
+5	9	"advcl"
+13	11	"det"
+13	12	"nn"
+9	13	"prep_to"
+19	13	"nsubj"
+19	17	"prep_by"
+19	18	"cop"
+13	19	"rcmod"
+21	20	"aux"
+19	21	"xcomp"
+25	23	"det"
+25	24	"amod"
+21	25	"prep_from"
+
+>mention
+12	12	"Protein(Oct1)"
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"glutamine-rich"
+3	"activation"
+4	"domain"
+5	"present"
+6	"in"
+7	"the"
+8	"amino-terminal"
+9	"portion"
+10	"of"
+11	"Oct2"
+12	"and"
+13	"the"
+14	"POU"
+15	"domain"
+16	"contribute"
+17	"only"
+18	"marginally"
+19	"to"
+20	"the"
+21	"transactivation"
+22	"function"
+23	"from"
+24	"a"
+25	"distal"
+26	"position"
+27	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NN"
+4	"NN"
+5	"JJ"
+6	"IN"
+7	"DT"
+8	"JJ"
+9	"NN"
+10	"IN"
+11	"NN"
+12	"CC"
+13	"DT"
+14	"NN"
+15	"NN"
+16	"VBP"
+17	"RB"
+18	"RB"
+19	"TO"
+20	"DT"
+21	"NN"
+22	"NN"
+23	"IN"
+24	"DT"
+25	"JJ"
+26	"NN"
+27	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"det"
+4	2	"amod"
+4	3	"nn"
+16	4	"nsubj"
+4	5	"amod"
+9	7	"det"
+9	8	"amod"
+5	9	"prep_in"
+9	11	"prep_of"
+15	13	"det"
+15	14	"nn"
+4	15	"conj_and"
+16	15	"nsubj"
+18	17	"advmod"
+16	18	"advmod"
+22	20	"det"
+22	21	"nn"
+16	22	"prep_to"
+26	24	"det"
+26	25	"amod"
+22	26	"prep_from"
+
+>mention
+11	11	"Protein(Oct2)"
+
+>trigger
+>argument
+>relation
+
+

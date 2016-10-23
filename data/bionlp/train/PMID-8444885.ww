@@ -1,0 +1,738 @@
+>>
+>word
+0	"Root"
+1	"Suppression"
+2	"of"
+3	"a"
+4	"cellular"
+5	"differentiation"
+6	"program"
+7	"by"
+8	"phorbol"
+9	"esters"
+10	"coincides"
+11	"with"
+12	"inhibition"
+13	"of"
+14	"binding"
+15	"of"
+16	"a"
+17	"cell-specific"
+18	"transcription"
+19	"factor"
+20	"("
+21	"NF-E2"
+22	")"
+23	"to"
+24	"an"
+25	"enhancer"
+26	"element"
+27	"required"
+28	"for"
+29	"expression"
+30	"of"
+31	"an"
+32	"erythroid-specific"
+33	"gene"
+34	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"DT"
+4	"JJ"
+5	"NN"
+6	"NN"
+7	"IN"
+8	"NN"
+9	"NNS"
+10	"VBZ"
+11	"IN"
+12	"NN"
+13	"IN"
+14	"NN"
+15	"IN"
+16	"DT"
+17	"JJ"
+18	"NN"
+19	"NN"
+20	"-LRB-"
+21	"NN"
+22	"-RRB-"
+23	"TO"
+24	"DT"
+25	"NN"
+26	"NN"
+27	"VBN"
+28	"IN"
+29	"NN"
+30	"IN"
+31	"DT"
+32	"JJ"
+33	"NN"
+34	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+10	1	"nsubj"
+6	3	"det"
+6	4	"amod"
+6	5	"nn"
+1	6	"prep_of"
+9	8	"nn"
+1	9	"prep_by"
+10	12	"prep_with"
+12	14	"prep_of"
+19	16	"det"
+19	17	"amod"
+19	18	"nn"
+14	19	"prep_of"
+19	21	"abbrev"
+26	24	"det"
+26	25	"nn"
+14	26	"prep_to"
+26	27	"partmod"
+27	29	"prep_for"
+33	31	"det"
+33	32	"amod"
+29	33	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Induction"
+2	"by"
+3	"hemin"
+4	"increases"
+5	","
+6	"while"
+7	"induction"
+8	"with"
+9	"12-O-tetradecanoylphorbol-13-acetate"
+10	"("
+11	"TPA"
+12	")"
+13	"represses"
+14	","
+15	"erythroid-specific"
+16	"gene"
+17	"expression"
+18	"in"
+19	"the"
+20	"human"
+21	"cell"
+22	"line"
+23	"K562"
+24	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"IN"
+3	"NN"
+4	"VBZ"
+5	","
+6	"IN"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"-LRB-"
+11	"NN"
+12	"-RRB-"
+13	"VBZ"
+14	","
+15	"JJ"
+16	"NN"
+17	"NN"
+18	"IN"
+19	"DT"
+20	"JJ"
+21	"NN"
+22	"NN"
+23	"NN"
+24	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	1	"nsubj"
+1	3	"prep_by"
+13	6	"mark"
+13	7	"nsubj"
+7	9	"prep_with"
+9	11	"abbrev"
+4	13	"advcl"
+17	15	"amod"
+17	16	"nn"
+4	17	"dobj"
+23	19	"det"
+23	20	"amod"
+23	21	"nn"
+23	22	"nn"
+17	23	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"We"
+2	"analyzed"
+3	"the"
+4	"effects"
+5	"of"
+6	"hemin"
+7	"or"
+8	"TPA"
+9	"induction"
+10	"on"
+11	"the"
+12	"binding"
+13	"and"
+14	"activity"
+15	"of"
+16	"transcription"
+17	"factors"
+18	"at"
+19	"a"
+20	"regulatory"
+21	"element"
+22	"found"
+23	"within"
+24	"the"
+25	"transcriptional"
+26	"regulatory"
+27	"sequences"
+28	"of"
+29	"many"
+30	"erythroid-specific"
+31	"genes"
+32	"."
+
+>tag
+0	"Root"
+1	"PRP"
+2	"VBD"
+3	"DT"
+4	"NNS"
+5	"IN"
+6	"NN"
+7	"CC"
+8	"NN"
+9	"NN"
+10	"IN"
+11	"DT"
+12	"NN"
+13	"CC"
+14	"NN"
+15	"IN"
+16	"NN"
+17	"NNS"
+18	"IN"
+19	"DT"
+20	"JJ"
+21	"NN"
+22	"VBN"
+23	"IN"
+24	"DT"
+25	"JJ"
+26	"JJ"
+27	"NNS"
+28	"IN"
+29	"JJ"
+30	"JJ"
+31	"NNS"
+32	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nsubj"
+4	3	"det"
+2	4	"dobj"
+9	6	"nn"
+6	8	"conj_or"
+9	8	"nn"
+4	9	"prep_of"
+12	11	"dep"
+4	12	"prep_on"
+4	14	"prep_on"
+12	14	"conj_and"
+17	16	"nn"
+12	17	"prep_of"
+21	19	"det"
+21	20	"amod"
+12	21	"prep_at"
+21	22	"partmod"
+27	24	"det"
+27	25	"amod"
+27	26	"amod"
+22	27	"prep_within"
+31	29	"amod"
+31	30	"amod"
+27	31	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"TPA"
+2	"induction"
+3	"increases"
+4	"the"
+5	"binding"
+6	"of"
+7	"ubiquitous"
+8	"AP-1"
+9	"factors"
+10	"to"
+11	"this"
+12	"element"
+13	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBZ"
+4	"DT"
+5	"NN"
+6	"IN"
+7	"JJ"
+8	"NN"
+9	"NNS"
+10	"TO"
+11	"DT"
+12	"NN"
+13	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+3	2	"nsubj"
+5	4	"det"
+3	5	"dobj"
+9	7	"amod"
+9	8	"nn"
+5	9	"prep_of"
+12	11	"det"
+5	12	"prep_to"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"TPA"
+2	"induction"
+3	"inhibits"
+4	"the"
+5	"binding"
+6	"of"
+7	"the"
+8	"lineage"
+9	"limited"
+10	"transcription"
+11	"factor"
+12	"NF-E2"
+13	"to"
+14	"this"
+15	"transcriptional"
+16	"control"
+17	"element"
+18	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBZ"
+4	"DT"
+5	"NN"
+6	"IN"
+7	"DT"
+8	"NN"
+9	"JJ"
+10	"NN"
+11	"NN"
+12	"NN"
+13	"TO"
+14	"DT"
+15	"JJ"
+16	"NN"
+17	"NN"
+18	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+3	2	"nsubj"
+5	4	"det"
+3	5	"dobj"
+12	7	"det"
+9	8	"dep"
+12	9	"amod"
+12	10	"nn"
+12	11	"nn"
+5	12	"prep_of"
+17	14	"det"
+17	15	"amod"
+17	16	"nn"
+5	17	"prep_to"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Hemin"
+2	"induction"
+3	"of"
+4	"K562"
+5	"cells"
+6	"does"
+7	"not"
+8	"facilitate"
+9	"the"
+10	"binding"
+11	"of"
+12	"NF-E2"
+13	"to"
+14	"its"
+15	"recognition"
+16	"site"
+17	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"IN"
+4	"NN"
+5	"NNS"
+6	"VBZ"
+7	"RB"
+8	"VB"
+9	"DT"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"TO"
+14	"PRP$"
+15	"NN"
+16	"NN"
+17	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+8	2	"nsubj"
+5	4	"nn"
+2	5	"prep_of"
+8	6	"aux"
+8	7	"neg"
+10	9	"det"
+8	10	"dobj"
+10	12	"prep_of"
+16	14	"poss"
+16	15	"nn"
+10	16	"prep_to"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Hemin"
+2	"induction"
+3	"appears"
+4	"to"
+5	"nonspecifically"
+6	"increase"
+7	"the"
+8	"expression"
+9	"of"
+10	"transiently"
+11	"transfected"
+12	"genes"
+13	"in"
+14	"K562"
+15	"cells"
+16	"."
+
+>tag
+0	"Root"
+1	"NN"
+2	"NN"
+3	"VBZ"
+4	"TO"
+5	"RB"
+6	"VB"
+7	"DT"
+8	"NN"
+9	"IN"
+10	"RB"
+11	"VBN"
+12	"NNS"
+13	"IN"
+14	"NN"
+15	"NNS"
+16	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+2	1	"nn"
+3	2	"nsubj"
+6	2	"xsubj"
+6	4	"aux"
+6	5	"advmod"
+3	6	"xcomp"
+8	7	"det"
+6	8	"dobj"
+11	10	"advmod"
+12	11	"amod"
+8	12	"prep_of"
+15	14	"nn"
+8	15	"prep_in"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"Beyond"
+2	"this"
+3	"nonspecific"
+4	"increase"
+5	"in"
+6	"gene"
+7	"expression"
+8	","
+9	"hemin"
+10	"induction"
+11	"acts"
+12	"to"
+13	"increase"
+14	"the"
+15	"activity"
+16	"of"
+17	"the"
+18	"lineage"
+19	"limited"
+20	"transcription"
+21	"factor"
+22	"NF-E2"
+23	"."
+
+>tag
+0	"Root"
+1	"IN"
+2	"DT"
+3	"JJ"
+4	"NN"
+5	"IN"
+6	"NN"
+7	"NN"
+8	","
+9	"NN"
+10	"NN"
+11	"VBZ"
+12	"TO"
+13	"VB"
+14	"DT"
+15	"NN"
+16	"IN"
+17	"DT"
+18	"NN"
+19	"JJ"
+20	"NN"
+21	"NN"
+22	"NN"
+23	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+4	2	"det"
+4	3	"amod"
+11	4	"prep_beyond"
+7	6	"nn"
+4	7	"prep_in"
+10	9	"nn"
+11	10	"nsubj"
+13	10	"xsubj"
+13	12	"aux"
+11	13	"xcomp"
+15	14	"det"
+13	15	"dobj"
+22	17	"det"
+19	18	"dep"
+22	19	"amod"
+22	20	"nn"
+22	21	"nn"
+15	22	"prep_of"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
+>>
+>word
+0	"Root"
+1	"The"
+2	"divergent"
+3	"effects"
+4	"of"
+5	"hemin"
+6	"and"
+7	"TPA"
+8	"on"
+9	"gene"
+10	"expression"
+11	"in"
+12	"K562"
+13	"cells"
+14	"are"
+15	"mediated"
+16	","
+17	"in"
+18	"part"
+19	","
+20	"by"
+21	"their"
+22	"contrasting"
+23	"effects"
+24	"on"
+25	"the"
+26	"transcription"
+27	"factor"
+28	"NF-E2"
+29	"."
+
+>tag
+0	"Root"
+1	"DT"
+2	"JJ"
+3	"NNS"
+4	"IN"
+5	"NN"
+6	"CC"
+7	"NN"
+8	"IN"
+9	"NN"
+10	"NN"
+11	"IN"
+12	"NN"
+13	"NNS"
+14	"VBP"
+15	"VBN"
+16	","
+17	"IN"
+18	"NN"
+19	","
+20	"IN"
+21	"PRP$"
+22	"JJ"
+23	"NNS"
+24	"IN"
+25	"DT"
+26	"NN"
+27	"NN"
+28	"NN"
+29	"."
+
+>ner
+0	"Root"
+
+
+>dep_mcclosky
+3	1	"det"
+3	2	"amod"
+15	3	"nsubjpass"
+3	5	"prep_of"
+3	7	"prep_of"
+5	7	"conj_and"
+10	9	"nn"
+3	10	"prep_on"
+13	12	"nn"
+10	13	"prep_in"
+15	14	"auxpass"
+15	18	"prep_in"
+23	21	"poss"
+23	22	"amod"
+15	23	"agent"
+28	25	"det"
+28	26	"nn"
+28	27	"nn"
+23	28	"prep_on"
+
+>mention
+
+>trigger
+>argument
+>relation
+
+
