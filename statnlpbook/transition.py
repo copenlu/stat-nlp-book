@@ -14,23 +14,28 @@ def render_tree(tokens, edges):
 
     dot = Digraph(comment='The Round Table')
 
-    for token_id, token in enumerate(tokens):
-        dot.node(str(token_id), token)
+    # Removed this to avoid having tokens appearing without edges
+    #for token_id, token in enumerate(tokens):
+    #    dot.node(str(token_id), token)
 
     for edge in edges:
         head, dep, label = edge
         dot.edge(str(head), str(dep), label)
 
+        dot.node(str(head), tokens[head])
+        dot.node(str(dep), tokens[dep])
+
     return dot
 
-def render_transitions(transitions):
+def render_transitions(transitions, tokens):
     class Output:
         def _repr_html_(self):
             rows = ["<tr><td>buffer</td><td>stack</td><td>parse</td><td>action</td></tr>"]
-            rows += ["<tr><td>{}</td><td>{}</td><td>{}</td></tr>".format(
-                " ".join(state.buffer),
-                render_forest(state.stack)._repr_svg_(),
+            rows += ["<tr><td>{}</td><td>{}</td><td>{}</td><td>{}</td></tr>".format(
+                " ".join(configuration.buffer),
+                " ".join(configuration.stack),
+                render_tree(tokens, configuration.arcs)._repr_svg_(),
                 action)
-                    for state, action in transitions]
+                    for configuration, action in transitions]
             return "<table>{}</table>".format("\n".join(rows))
     return Output()
