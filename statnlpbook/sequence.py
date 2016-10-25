@@ -347,7 +347,7 @@ def add_to_trainer(trainer, data, feat):
 
 class CRFSequenceLabeler:
     def __init__(self, feat, data, **crf_params):
-        self.feat = feat #lambda x, i: {**feat(x, i), 'b_bias': 'True'}
+        self.feat = feat  # lambda x, i: {**feat(x, i), 'b_bias': 'True'}
         self.trainer = pycrf.Trainer(verbose=False)
         self.trainer.set_params({
             **crf_params,
@@ -402,24 +402,8 @@ def confusion_matrix_dict(gold, guess, normalise=False):
     return counts
 
 
-def plot_confusion_matrix_dict(matrix_dict):
-    labels = set([y for y, _ in matrix_dict.keys()] + [y for _, y in matrix_dict.keys()])
-    sorted_labels = sorted(labels)
-    matrix = np.zeros((len(sorted_labels), len(sorted_labels)))
-    for i1, y1 in enumerate(sorted_labels):
-        for i2, y2 in enumerate(sorted_labels):
-            matrix[i1, i2] = matrix_dict[y1, y2]
-    plt.imshow(matrix, interpolation='nearest', cmap=plt.cm.Blues)
-    plt.colorbar()
-    tick_marks = np.arange(len(sorted_labels))
-    plt.xticks(tick_marks, sorted_labels, rotation=45)
-    plt.yticks(tick_marks, sorted_labels)
-    plt.tight_layout()
-    # return matrix
-
-
 def plot_confusion_matrix(gold, guess, normalise=False):
-    plot_confusion_matrix_dict(confusion_matrix_dict(gold, guess, normalise))
+    util.plot_confusion_matrix_dict(confusion_matrix_dict(gold, guess, normalise))
 
 
 # dev_classifier_output[2],to_classifier_y(dev)[2]

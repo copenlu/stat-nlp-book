@@ -4,6 +4,7 @@ import uuid
 
 import matplotlib.pyplot as plt
 from nbformat import reader
+import numpy as np
 
 
 def execute_notebook(nbfile, silent=True):
@@ -143,4 +144,19 @@ class Table:
         return result
 
 
+def plot_confusion_matrix_dict(matrix_dict,rotation=45, outside_label=""):
+    labels = set([y for y, _ in matrix_dict.keys()] + [y for _, y in matrix_dict.keys()])
+    sorted_labels = sorted(labels)
+    matrix = np.zeros((len(sorted_labels), len(sorted_labels)))
+    for i1, y1 in enumerate(sorted_labels):
+        for i2, y2 in enumerate(sorted_labels):
+            if y1 != outside_label or y2 != outside_label:
+                matrix[i1, i2] = matrix_dict[y1, y2]
+    plt.imshow(matrix, interpolation='nearest', cmap=plt.cm.Blues)
+    plt.colorbar()
+    tick_marks = np.arange(len(sorted_labels))
+    plt.xticks(tick_marks, sorted_labels, rotation=rotation)
+    plt.yticks(tick_marks, sorted_labels)
+    plt.tight_layout()
+    # return matrix
 
