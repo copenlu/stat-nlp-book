@@ -27,7 +27,8 @@ RUN pip3 install --upgrade pdfkit
 RUN pip3 install \
     graphviz==0.4.10 \
     git+git://github.com/robjstan/tikzmagic.git \
-    hide_code
+    hide_code \
+    python-crfsuite
 
 # Install hide_code extension:
 # - original not Python3 - git clone https://github.com/kirbs-/hide_code && \
