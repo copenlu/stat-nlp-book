@@ -24,6 +24,16 @@ class Sentence:
         self.tokens = sent['tokens']
         self.dependencies = sent['deps']
         self.mentions = sent['mentions']
+        self.is_protein = defaultdict(bool)
+        for m in self.mentions:
+            for i in range(m['begin'], m['end']):
+                self.is_protein[i] = True
+
+        self.children = defaultdict(list)
+        self.parents = defaultdict(list)
+        for dep in self.dependencies:
+            self.children[dep['head']].append(dep['mod'])
+            self.parents[dep['mod']].append(dep['head'])
 
     def _repr_html_(self):
         return " ".join([t['word'] for t in self.tokens])
