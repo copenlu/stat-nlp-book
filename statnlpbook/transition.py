@@ -67,8 +67,8 @@ i = [0]
 
 def to_displacy_graph(deps, tokens, filter_dangling_nodes=False):
     words = [{'text': t} for t in tokens]
-    arcs = [{'start': head, 'end': mod, 'label': label, 'direction': 'right'} if head < mod else
-            {'start': mod, 'end': head, 'label': label, 'direction': 'left'}
+    arcs = [{'start': head, 'end': mod, 'label': label, 'dir': 'right'} if head < mod else
+            {'start': mod, 'end': head, 'label': label, 'dir': 'left'}
             for (head, mod, label) in deps]
     if filter_dangling_nodes:
         non_dangling_nodes = {h for h, _, _ in deps} | {m for _, m, _ in deps}
@@ -85,7 +85,7 @@ def to_displacy_graph(deps, tokens, filter_dangling_nodes=False):
             new_arcs.append({'start': offsets[arc['start']],
                              'end': offsets[arc['end']],
                              'label': arc['label'],
-                             'direction': arc['direction']})
+                             'dir': arc['dir']})
         return new_arcs, new_words
 
 
@@ -127,6 +127,7 @@ def render_displacy(arcs, words, width="5000px"):
         };
 
         displacy.render(parse, {
+            uniqueId: 'render_""" + div_id + """'
             //color: '#ff0000'
         });
         return {};
