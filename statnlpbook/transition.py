@@ -55,7 +55,7 @@ def create_displacy_html(arcs, words):
     div_id = "displacy" + str(i[0])
     i[0] += 1
     js = """
-    <div id='""" + div_id + """'></div>
+    <div id='""" + div_id + """' style="overflow: scroll; width: 5000px"></div>
     <script>
     $(function() {
     requirejs.config({
@@ -69,9 +69,11 @@ def create_displacy_html(arcs, words):
         const displacy = new displaCy('http://localhost:8000', {
             container: '#""" + div_id + """',
             format: 'spacy',
-            distance: 80,
+            distance: 150,
             offsetX: 0,
-            wordSpacing: 20
+            wordSpacing: 20,
+            arrowSpacing: 3,
+
         });
         const parse = {
             arcs: """ + json.dumps(arcs) + """,
@@ -79,7 +81,7 @@ def create_displacy_html(arcs, words):
         };
 
         displacy.render(parse, {
-            color: '#ff0000'
+            //color: '#ff0000'
         });
         return {};
     });
