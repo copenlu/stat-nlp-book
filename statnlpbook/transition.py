@@ -44,18 +44,64 @@ def render_transitions(transitions, tokens):
     return Output()
 
 
+def render_transitions_displacy(transitions, tokens):
+    class Output:
+        def _repr_html_(self):
+            rows = ["<tr><td>buffer</td><td>stack</td><td>parse</td><td>action</td></tr>"]
+            rows += ["<tr><td>{}</td><td>{}</td><td>{}</td><td>{}</td></tr>".format(
+                " ".join(configuration.buffer),
+                " ".join(configuration.stack),
+                render_displacy(*to_displacy_graph(list(configuration.arcs), list(tokens),True), "500px").data,
+                action)
+                     for configuration, action in transitions]
+            return "<table>{}</table>".format("\n".join(rows))
+
+    return Output()
+
+
 import uuid
 import json
 
 i = [0]
 
 
-def create_displacy_html(arcs, words):
+def to_displacy_graph(deps, tokens, filter_dangling_nodes=False):
+    words = [{'text': t} for t in tokens]
+    arcs = [{'start': head, 'end': mod, 'label': label, 'direction': 'right'} if head < mod else
+            {'start': mod, 'end': head, 'label': label, 'direction': 'left'}
+            for (head, mod, label) in deps]
+    if filter_dangling_nodes:
+        non_dangling_nodes = {h for h, _, _ in deps} | {m for _, m, _ in deps}
+        current_offset = 0
+        offsets = []
+        new_words = []
+        for i in range(0, len(words)):
+            offsets.append(current_offset)
+            if i in non_dangling_nodes:
+                current_offset += 1
+                new_words.append(words[i])
+        new_arcs = []
+        for arc in arcs:
+            new_arcs.append({'start': offsets[arc['start']],
+                             'end': offsets[arc['end']],
+                             'label': arc['label'],
+                             'direction': arc['direction']})
+        return new_arcs, new_words
+
+
+    else:
+        return arcs, words
+
+
+from IPython.core.display import HTML
+
+
+def render_displacy(arcs, words, width="5000px"):
     #     div_id = str(uuid.uuid4())
     div_id = "displacy" + str(i[0])
     i[0] += 1
     js = """
-    <div id='""" + div_id + """' style="overflow: scroll; width: 5000px"></div>
+    <div id='""" + div_id + """' style="overflow: scroll; width: """ + width + """;"></div>
     <script>
     $(function() {
     requirejs.config({
@@ -87,7 +133,7 @@ def create_displacy_html(arcs, words):
     });
     });
     </script>"""
-    return js
+    return HTML(js)
 
 
 class DependencyTree:
@@ -96,4 +142,4 @@ class DependencyTree:
         self.words = words
 
     def _repr_html_(self):
-        return create_displacy_html(self.arcs, self.words)
+        return render_displacy(self.arcs, self.words).data

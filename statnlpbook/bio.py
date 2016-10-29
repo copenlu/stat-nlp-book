@@ -32,8 +32,8 @@ class Sentence:
         self.children = defaultdict(list)
         self.parents = defaultdict(list)
         for dep in self.dependencies:
-            self.children[dep['head']].append(dep['mod'])
-            self.parents[dep['mod']].append(dep['head'])
+            self.children[dep['head']].append((dep['mod'], dep['label']))
+            self.parents[dep['mod']].append((dep['head'], dep['label']))
 
     def _repr_html_(self):
         return " ".join([t['word'] for t in self.tokens])
