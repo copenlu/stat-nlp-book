@@ -51,7 +51,9 @@ def render_transitions_displacy(transitions, tokens):
             rows += ["<tr><td>{}</td><td>{}</td><td>{}</td><td>{}</td></tr>".format(
                 " ".join(configuration.buffer),
                 " ".join(configuration.stack),
-                render_displacy(*to_displacy_graph(list(configuration.arcs), list(tokens),True), "500px").data,
+                render_displacy(*to_displacy_graph(list(configuration.arcs), list(tokens),
+                                                   max_length=1+len(configuration.sentence) - len(configuration.buffer)),
+                                "500px").data,
                 action)
                      for configuration, action in transitions]
             return "<table>{}</table>".format("\n".join(rows))
@@ -65,7 +67,7 @@ import json
 i = [0]
 
 
-def to_displacy_graph(deps, tokens, filter_dangling_nodes=False):
+def to_displacy_graph(deps, tokens, filter_dangling_nodes=False, max_length=None):
     words = [{'text': t} for t in tokens]
     arcs = [{'start': head, 'end': mod, 'label': label, 'dir': 'right'} if head < mod else
             {'start': mod, 'end': head, 'label': label, 'dir': 'left'}
@@ -88,6 +90,13 @@ def to_displacy_graph(deps, tokens, filter_dangling_nodes=False):
                              'dir': arc['dir']})
         return new_arcs, new_words
 
+    elif max_length is not None:
+        new_arcs = []
+        for arc in arcs:
+            if arc['start'] < max_length and arc['end'] < max_length:
+                new_arcs.append(arc)
+        new_words = words[:max_length]
+        return new_arcs, new_words
 
     else:
         return arcs, words
