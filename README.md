@@ -37,12 +37,6 @@ We assume from here on that you are in the top level `stat-nlp-book` directory:
 
 Note: you need to be in the `stat-nlp-book` directory every time you want to run/update the book.
 
-### Download Data
-
-The book requires some data that cannot be stored on github. To download execute:
-
-    docker run -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book scripts/download_data.sh   
-
 ### Run Notebook
 
     docker run -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book 
