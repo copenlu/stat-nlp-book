@@ -1,25 +1,52 @@
 from collections import defaultdict
 from IPython.core.display import HTML
+import statnlpbook.transition as transition
+from os import listdir
+from os.path import isfile, join
+import json
+import os
+import pandas as pd
 
 
 class EventCandidate:
-    def __init__(self, sent, trigger_index, argument_candidate_indices):
+    """
+    An EventCandidate specifies a trigger word candidate within a given sentence, together with a set of
+    candidate argument spans.
+    """
+
+    def __init__(self, sent: Sentence, trigger_index: int, argument_candidate_spans):
+        """
+        Constructs a new EventCandidate.
+        Args:
+            sent: a `Sentence` object.
+            trigger_index: the index of the event trigger candidate within the sentence.
+            argument_candidate_spans: a list of (begin,end) pairs that denote the spans in the sentence
+            which are argument candidates.
+        """
         self.sent = sent
-        self.argument_candidate_indices = argument_candidate_indices
+        self.argument_candidate_spans = argument_candidate_spans
         self.trigger_index = trigger_index
 
-    #         if trigger_index == 79:
-    #             print(sent)
-
     def __str__(self):
-        return str((self.sent, self.argument_candidate_indices, self.trigger_index))
+        return str((self.sent, self.argument_candidate_spans, self.trigger_index))
 
     def _repr_html_(self):
         return render_event(self).data
 
 
 class Sentence:
+    """
+    A representation of a sentence.
+    """
+
     def __init__(self, sent, events):
+        """
+        Construct a new sentence.
+        Args:
+            sent: a dictionary loaded from the list of elements in the json files of `data/bionlp/train`.
+            See for example: `data/bionlp/train/PMC-1310901-00-TIAB.json`
+            events: a list of `Event` objects.
+        """
         self.events = events
         self.tokens = sent['tokens']
         self.dependencies = sent['deps']
@@ -39,7 +66,26 @@ class Sentence:
         return " ".join([t['word'] for t in self.tokens])
 
 
+def load_assignment2_training_data(path_to_dataset_folder):
+    """
+    Load event candidates and they event labels from the specified folder.
+    Args:
+        path_to_dataset_folder: the path to the folder that stores the dataset you want to load.
+
+    Returns:
+        a list of (event_candidate,label) pairs.
+    """
+    training_corpus = load_corpus(path_to_dataset_folder)
+    event_corpus, _ = unzip_events_and_labels(training_corpus)
+    return event_corpus
+
+
 class EventLabels:
+    """
+    A label for an event and labels for all its argument candidates. **NOT NEEDED IN ASSIGNMENT**, but
+    feel free to look at.
+    """
+
     def __init__(self, event_label, arg_labels):
         self.event_label = event_label
         self.arg_labels = arg_labels
@@ -49,6 +95,10 @@ class EventLabels:
 
 
 class SentenceLabels:
+    """
+    A container class for all structured labels in a sentence.
+    """
+
     def __init__(self, event_labels):
         self.event_labels = event_labels
 
@@ -56,30 +106,26 @@ class SentenceLabels:
         return "\n".join([str(e) for e in self.event_labels])
 
 
-# TODO:
-# * Extract Sentence objects with event candidates
-# * load events and labels jointly,
-# * support filter on events and arguments that produces consistent sentence/label pairs
-# * label function works on sentences, returns [(label,[arg_labels])] list
-# * SentenceLabelStructure -> EventLabelStructure -> (string, [string])
-# * def wrap(sentences, event_labels:[string], argument_labels:[string]) -> [SentenceLabelStructure]
-# * def unwrap(sentences, sentence_label_structures) -> ([string],[string])
+def render_event(event, label=None):
+    """
+    Produces an HTML rendering of an event, including sentence and argument candidates and proteins in sentence.
+    Args:
+        event: the event candidate to render.
+        label: an optional event label to render as well. Set to `None` if no label should be shown.
 
-def render_event(event, labels=None):
+    Returns:
+        an HTML representation of the event.
+    """
     tokens = event.sent.tokens
     prefixes = defaultdict(list)
     postfixes = defaultdict(list)
     prefixes[event.trigger_index].append("<font color='green'>")
     postfixes[event.trigger_index].append("</font>")
-    for b, e in event.argument_candidate_indices:
+    for b, e in event.argument_candidate_spans:
         prefixes[b].append("<font color='red'>[</font>")
         postfixes[e - 1].append("<font color='red'>]</font>")
-    if labels is not None:
-        postfixes[event.trigger_index].insert(0, ":<b>" + labels.event_label + "</b>")
-        for arg_index in range(len(labels.arg_labels)):
-            if labels.arg_labels[arg_index] != 'None':
-                e = event.argument_candidate_indices[arg_index][1]
-                postfixes[e - 1].insert(0, ":<b>" + labels.arg_labels[arg_index] + "</b>")
+    if label is not None:
+        postfixes[event.trigger_index].insert(0, ":<b>" + label + "</b>")
 
     for mention in event.sent.mentions:
         prefixes[mention['begin']].append("<font color='blue'>[")
@@ -94,6 +140,19 @@ def render_event(event, labels=None):
 
 
 def find_errors(gold_label, guess_label, data, predictions):
+    """
+    Searches for cases where a `gold_label` was labelled as `guess_label`, using gold `data`, and guess `predictions`.
+    Args:
+        gold_label: the label that the error should have been given.
+        guess_label: the label that model guessed instead (could be identical if you are looking for correct instances).
+        data: the gold data, a list of (event_candidate,label) pairs.
+        predictions: a list of predicted labels, in order corresponding to `data`
+
+    Returns:
+        all triples `(x,y_gold,y_guess)` where `x` is an event candidate for which the gold label `y_gold` was `gold_label`,
+        and the guess label `y_guess' was 'guess_label.
+
+    """
     result = []
     for (x, y_gold), y_guess in zip(data, predictions):
         if y_gold == gold_label and y_guess == guess_label:
@@ -101,11 +160,18 @@ def find_errors(gold_label, guess_label, data, predictions):
     return result
 
 
-from IPython.core.display import HTML
-import statnlpbook.transition as transition
-
-
 def show_event_error(x, y_gold, y_guess):
+    """
+    Renders an error by rendering the event candidate, the sentence and the dependency parse, together with
+    gold and guess labels.
+    Args:
+        x: the event candidate.
+        y_gold: the correct label.
+        y_guess: the predicted label.
+
+    Returns:
+        An HTML representation of the error.
+    """
     label_info = pd.DataFrame([(y_gold, y_guess)], columns=("Gold", "Guess")).to_html(header=True, index=False)
     words = [{'text': t['word'], 'tag': t['pos']} for t in x.sent.tokens]
     arcs = [{'dir': 'right', 'start': a['head'], 'label': a['label'], 'end': a['mod']} if a['head'] < a['mod'] else
@@ -115,7 +181,33 @@ def show_event_error(x, y_gold, y_guess):
     return HTML(label_info + x._repr_html_() + tree._repr_html_())
 
 
+def render_dependencies(sent):
+    """
+    Renders dependency graph of the sentence `sent`.
+    Args:
+        sent: the sentence to render the dependency parse for.
+
+    Returns:
+        HTML representation of the parse, using `displaCy`.
+    """
+    words = [{'text': t['word'], 'tag': t['pos']} for t in sent.tokens]
+    arcs = [{'dir': 'right', 'start': a['head'], 'label': a['label'], 'end': a['mod']} if a['head'] < a['mod'] else
+            {'dir': 'left', 'start': a['mod'], 'label': a['label'], 'end': a['head']} for a in sent.dependencies
+            ]
+    return HTML(transition.DependencyTree(arcs, words)._repr_html_())
+
+
 def load_document(doc_dict, event_filter=lambda e: True, arg_filter=lambda a: True):
+    """
+    Loads a json event document.
+    Args:
+        doc_dict: the json document as dictionary.
+        event_filter: a function that decides whether a particular event should be loaded or not.
+        arg_filter: a function that decideds whether a particular event argument candidate should be loaded.
+
+    Returns:
+        A list of pairs of `Sentence` and `SentenceLabels`.
+    """
     result = []
     for sent_dict in doc_dict['sentences']:
         events = []
@@ -142,16 +234,20 @@ def load_document(doc_dict, event_filter=lambda e: True, arg_filter=lambda a: Tr
     return result
 
 
-from os import listdir
-from os.path import isfile, join
-import json
-import os
-
-
 def load_corpus(directory, filter_events=lambda e: True, filter_arguments=lambda a: True):
+    """
+    Loads a corpus of events and their structured labels.
+    Args:
+        directory: The directory to load the events from.
+        filter_events: Function to decide whether an event should be loaded.
+        filter_arguments: Function to decide whether an event argument candidate should be loaded.
+
+    Returns:
+        List of pairs of `Sentence` and `SentenceLabels` object.
+    """
     files = [f for f in listdir(directory) if isfile(join(directory, f))]
     result = []
-    for file_name in files:
+    for file_name in sorted(files):
         with open(directory + os.sep + file_name) as file:
             data = json.load(file)
             result += load_document(data, filter_events, filter_arguments)
@@ -159,6 +255,18 @@ def load_corpus(directory, filter_events=lambda e: True, filter_arguments=lambda
 
 
 def unzip_events_and_labels(corpus):
+    """
+    Unzips the structured sentence labels into two lists: of (event_candidate,label) pairs,
+    and nested ((event_candidate,argument_index),argument_label) pairs.
+    Args:
+        corpus: a list of `Sentence`,`SentenceLabel` pairs.
+
+    Returns:
+        a pair `event_corpus, argument_corpus`, where `event_corpus` is a list
+        of pairs of `event_candidate` and `label`, and `argument_corpus` is a list of
+        `(event_candidate,argument_index),argument_label)` pairs that indicate the labels of the
+        `argument_index`-th argument in event `event_candidate`.
+    """
     event_data = [(event, e.event_label)
                   for x, y in corpus
                   for event, e in zip(x.events, y.event_labels)]
@@ -169,47 +277,17 @@ def unzip_events_and_labels(corpus):
     return event_data, arg_data
 
 
-def unzip_events(corpus):
-    event_data = [event
-                  for x in corpus
-                  for event in x.events]
-    arg_data = [(event, arg_index)
-                for x in corpus
-                for event in x.events
-                for arg_index in range(0, len(event.argument_candidate_indices))]
-    return event_data, arg_data
-
-
-def zip_events(corpus, event_labels, arg_labels):
-    result = []
-    event_label_index = 0
-    arg_label_index = 0
-
-    def get_label(l):
-        return l[1] if isinstance(l, tuple) else l
-
-    for instance in corpus:
-        if isinstance(instance, tuple):
-            sent = instance[0]
-        else:
-            sent = instance
-        print(type(sent))
-        print(isinstance(sent, Sentence))
-        assert (isinstance(sent, Sentence))
-        sentence_event_labels = []
-        for event in sent.events:
-            event_label = get_label(event_labels[event_label_index])
-            event_label_index += 1
-            event_arg_labels = []
-            for arg in event.argument_candidate_indices:
-                event_arg_labels.append(get_label(arg_labels[arg_label_index]))
-                arg_label_index += 1
-            sentence_event_labels.append(EventLabels(event_label, event_arg_labels))
-        result.append((sent, SentenceLabels(sentence_event_labels)))
-    return result
-
-
 def create_confusion_matrix(data, predictions):
+    """
+    Creates a confusion matrix that counts for each gold label how often it was labelled by what label
+    in the predictions.
+    Args:
+        data: a list of gold (x,y) pairs.
+        predictions: a list of y labels, same length and with matching order.
+
+    Returns:
+        a `defaultdict` that maps `(gold_label,guess_label)` pairs to their prediction counts.
+    """
     confusion = defaultdict(int)
     for (x, y_gold), y_guess in zip(data, predictions):
         confusion[(y_gold, y_guess)] += 1
@@ -217,6 +295,15 @@ def create_confusion_matrix(data, predictions):
 
 
 def evaluate(conf_matrix, label_filter=None):
+    """
+    Evaluate Precision, Recall and F1 based on a confusion matrix as produced by `create_confusion_matrix`.
+    Args:
+        conf_matrix: a confusion matrix in form of a dictionary from `(gold_label,guess_label)` pairs to counts.
+        label_filter: a set of gold labels to consider. If set to `None` all labels are considered.
+
+    Returns:
+        Precision, Recall, F1 triple.
+    """
     tp = 0
     tn = 0
     fp = 0
@@ -237,10 +324,15 @@ def evaluate(conf_matrix, label_filter=None):
     return prec, recall, f1
 
 
-import pandas as pd
-
-
 def full_evaluation_table(confusion_matrix):
+    """
+    Produce a pandas data-frame with Precision, F1 and Recall for all labels.
+    Args:
+        confusion_matrix: the confusion matrix to calculate metrics from.
+
+    Returns:
+        a pandas Dataframe with one row per gold label, and one more row for the aggregate of all labels.
+    """
     labels = sorted(list({l for l, _ in confusion_matrix.keys()} | {l for _, l in confusion_matrix.keys()}))
     gold_counts = defaultdict(int)
     guess_counts = defaultdict(int)
@@ -259,16 +351,3 @@ def full_evaluation_table(confusion_matrix):
 
     result_table.append(("[All]", gold_counts["[All]"], guess_counts["[All]"], *evaluate(confusion_matrix)))
     return pd.DataFrame(result_table, columns=('Label', 'Gold', 'Guess', 'Precision', 'Recall', 'F1'))
-
-
-import random
-
-random_subsample = random.Random(0)
-
-
-def subsample_nones(pairs, accept_none_probability):
-    result = []
-    for pair in pairs:
-        if pair[1] != 'None' or random_subsample.random() <= accept_none_probability:
-            result.append(pair)
-    return result
