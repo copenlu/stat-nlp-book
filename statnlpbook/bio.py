@@ -8,32 +8,6 @@ import os
 import pandas as pd
 
 
-class EventCandidate:
-    """
-    An EventCandidate specifies a trigger word candidate within a given sentence, together with a set of
-    candidate argument spans.
-    """
-
-    def __init__(self, sent: Sentence, trigger_index: int, argument_candidate_spans):
-        """
-        Constructs a new EventCandidate.
-        Args:
-            sent: a `Sentence` object.
-            trigger_index: the index of the event trigger candidate within the sentence.
-            argument_candidate_spans: a list of (begin,end) pairs that denote the spans in the sentence
-            which are argument candidates.
-        """
-        self.sent = sent
-        self.argument_candidate_spans = argument_candidate_spans
-        self.trigger_index = trigger_index
-
-    def __str__(self):
-        return str((self.sent, self.argument_candidate_spans, self.trigger_index))
-
-    def _repr_html_(self):
-        return render_event(self).data
-
-
 class Sentence:
     """
     A representation of a sentence.
@@ -64,6 +38,32 @@ class Sentence:
 
     def _repr_html_(self):
         return " ".join([t['word'] for t in self.tokens])
+
+
+class EventCandidate:
+    """
+    An EventCandidate specifies a trigger word candidate within a given sentence, together with a set of
+    candidate argument spans.
+    """
+
+    def __init__(self, sent: Sentence, trigger_index: int, argument_candidate_spans):
+        """
+        Constructs a new EventCandidate.
+        Args:
+            sent: a `Sentence` object.
+            trigger_index: the index of the event trigger candidate within the sentence.
+            argument_candidate_spans: a list of (begin,end) pairs that denote the spans in the sentence
+            which are argument candidates.
+        """
+        self.sent = sent
+        self.argument_candidate_spans = argument_candidate_spans
+        self.trigger_index = trigger_index
+
+    def __str__(self):
+        return str((self.sent, self.argument_candidate_spans, self.trigger_index))
+
+    def _repr_html_(self):
+        return render_event(self).data
 
 
 def load_assignment2_training_data(path_to_dataset_folder):
@@ -314,10 +314,13 @@ def evaluate(conf_matrix, label_filter=None):
                 fp += count
             elif gold == 'None' and guess == gold:
                 tn += count
-            elif gold != 'None' and guess != gold:
-                fn += count
             elif gold != 'None' and guess == gold:
                 tp += count
+            elif gold != 'None' and guess == 'None':
+                fn += count
+            else:  # both gold and guess are not-None, but different
+                fp += count
+                fn += count
     prec = tp / (tp + fp) if (tp + fp) > 0 else 0.0
     recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
     f1 = 2 * prec * recall / (prec + recall) if prec * recall > 0 else 0.0
