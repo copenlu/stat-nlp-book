@@ -161,7 +161,7 @@ def predict(model, features_test):
     return preds
 
 
-def supervisedExtraction(train_sents, train_entpairs, train_labels, test_sents, test_entpairs):
+def supervisedExtraction(train_sents, train_labels, test_sents):
     """
     Given pos/neg training instances, train a logistic regression model with simple BOW features and predict labels on unseen test instances
     Args:
@@ -209,7 +209,7 @@ def show_most_informative_features(vectorizer, clf, n=20):
 
 
 if __name__ == '__main__':
-    #training_patterns, training_entpairs = readLabelledPatternData()
+    training_patterns, training_entpairs = readLabelledPatternData()
     testing_patterns, testing_entpairs = readPatternData()
 
     # for relation extraction with patterns
@@ -219,4 +219,4 @@ if __name__ == '__main__':
     #bootstrappingExtraction(training_patterns, training_entpairs, testing_patterns, testing_entpairs)
 
     training_sents, training_entpairs, training_labels = readLabelledData()
-    supervisedExtraction(training_sents, training_entpairs, training_labels, testing_patterns, testing_entpairs)
+    supervisedExtraction(training_sents, training_labels, testing_patterns)
