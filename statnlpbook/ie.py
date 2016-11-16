@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import CountVectorizer
 
 
-def readLabelledPatternData(filepath="data/ie/ie_bootstrap_patterns.txt"):
+def readLabelledPatternData(filepath="../data/ie/ie_bootstrap_patterns.txt"):
     f = open(filepath, "r")
     patterns = []
     entpairs = []
@@ -18,7 +18,7 @@ def readLabelledPatternData(filepath="data/ie/ie_bootstrap_patterns.txt"):
     return patterns, entpairs
 
 
-def readPatternData(filepath="data/ie/ie_patterns.txt"):
+def readPatternData(filepath="../data/ie/ie_patterns.txt"):
     f = open(filepath, "r")
     patterns = []
     entpairs = []
@@ -30,18 +30,35 @@ def readPatternData(filepath="data/ie/ie_patterns.txt"):
     return patterns, entpairs
 
 
-def readLabelledData(filepath="data/ie/ie_training_data.txt"):
+def readLabelledData(filepath="../data/ie/ie_training_data.txt"):
     f = open(filepath, "r")
-    patterns = []
+    sents = []
     entpairs = []
     labels = []
     for l in f:
         label, pattern, entpair = l.strip().replace("    ", "\t").split("\t")
         labels.append(label)
-        patterns.append(pattern)
+        sents.append(pattern)
         entpair = entpair.strip("['").strip("']").split("', '")
         entpairs.append(entpair)
-    return patterns, entpairs, labels
+    return sents, entpairs, labels
+
+
+def readDataForDistantSupervision(filepath="../data/ie/ie_training_data.txt"):
+    f = open(filepath, "r")
+    unlab_sents = []
+    unlab_entpairs = []
+    kb_entpairs = []
+    for l in f:
+        label, sent, entpair = l.strip().replace("    ", "\t").split("\t")
+        entpair = entpair.strip("['").strip("']").split("', '")
+        # Define the positively labelled entity pairs as the KB ones, which are all for the same relation.
+        # Normally these would come from an actual KB.
+        if label != "NONE":
+            kb_entpairs.append(entpair)
+        unlab_sents.append(sent)
+        unlab_entpairs.append(entpair)
+    return kb_entpairs, unlab_sents, unlab_entpairs
 
 
 def sentenceToShortPath(sent):
@@ -99,6 +116,31 @@ def searchForPatternsAndEntpairsByEntpairs(training_entpairs, testing_patterns, 
             appearing_testing_entpairs.append(testing_entpair)
             appearing_testing_patterns.append(testing_patterns[i])
     return testing_extractions, appearing_testing_patterns, appearing_testing_entpairs
+
+
+def distantlySupervisedLabelling(kb_entpairs, unlab_sents, unlab_entpairs):
+    """
+    Label instances using distant supervision assumption
+    Args:
+        kb_entpairs: entity pairs for a specific relation
+        unlab_sents: unlabelled sentences with entity pairs anonymised
+        unlab_entpairs: entity pairs which were anonymised in unlab_sents
+
+    Returns: pos_train_sents, pos_train_enpairs, neg_train_sents, neg_train_entpairs
+
+    """
+    train_sents, train_entpairs, train_labels = [], [], []
+    for i, unlab_entpair in enumerate(unlab_entpairs):
+        if unlab_entpair in kb_entpairs:  # if the entity pair is a KB tuple, it is a positive example for that relation
+            train_entpairs.append(unlab_entpair)
+            train_sents.append(unlab_sents[i])
+            train_labels.append("method used for task")
+        else: # else, it is a negative example for that relation
+            train_entpairs.append(unlab_entpair)
+            train_sents.append(unlab_sents[i])
+            train_labels.append("NONE")
+
+    return train_sents, train_entpairs, train_labels
 
 
 def bootstrappingExtraction(train_sents, train_entpairs, test_sents, test_entpairs):
@@ -161,7 +203,7 @@ def predict(model, features_test):
     return preds
 
 
-def supervisedExtraction(train_sents, train_labels, test_sents):
+def supervisedExtraction(train_sents, train_entpairs, train_labels, test_sents, test_entpairs):
     """
     Given pos/neg training instances, train a logistic regression model with simple BOW features and predict labels on unseen test instances
     Args:
@@ -191,11 +233,15 @@ def supervisedExtraction(train_sents, train_labels, test_sents):
     predictions = predict(model, features_test)
 
     # show the predictions
-    for pair in zip(predictions, test_sents):
-        print(pair)
+    for tup in zip(predictions, test_sents, test_entpairs):
+        print(tup)
 
     return predictions
 
+
+def distantlySupervisedExtraction(kb_entpairs, unlab_sents, unlab_entpairs, test_sents, test_entpairs):
+    train_sents, train_entpairs, train_labels = distantlySupervisedLabelling(kb_entpairs, unlab_sents, unlab_entpairs)
+    supervisedExtraction(train_sents, train_entpairs, train_labels, test_sents, test_entpairs)
 
 
 def show_most_informative_features(vectorizer, clf, n=20):
@@ -218,5 +264,8 @@ if __name__ == '__main__':
     # for relation extraction with bootstrapping
     #bootstrappingExtraction(training_patterns, training_entpairs, testing_patterns, testing_entpairs)
 
-    training_sents, training_entpairs, training_labels = readLabelledData()
-    supervisedExtraction(training_sents, training_labels, testing_patterns)
+    #training_sents, training_entpairs, training_labels = readLabelledData()
+    #supervisedExtraction(training_sents, training_entpairs, training_labels, testing_patterns, testing_entpairs)
+
+    kb_entpairs, unlab_sents, unlab_entpairs = readDataForDistantSupervision()
+    distantlySupervisedExtraction(kb_entpairs, unlab_sents, unlab_entpairs, testing_patterns, testing_entpairs)
