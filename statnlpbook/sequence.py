@@ -66,8 +66,8 @@ def draw_local_fg(length=3):
     result = graph()
     result.node("x", shape='circle', style='filled', fillcolor='lightgrey')
     for i in range(0, length):
-        node_id = "y" + str(i)
-        factor_id = "f" + str(i)
+        node_id = "y" + str(i+1)
+        factor_id = "p(y{index} | x, {index})".format(index=i+1)
         ys.node(node_id, **var_style)
         result.node(factor_id, **factor_style)
         result.edge(node_id, factor_id)
@@ -185,7 +185,7 @@ class LocalSequenceLabeler:
         errors = []
         for (x, y), y_guess in zip(data, guess):
             for i in range(0, len(y)):
-                if y[i] != y_guess[i] and filter_gold(y[i]) and filter_guess(y_guess[i]):
+                if filter_gold(y[i]) and filter_guess(y_guess[i]):
                     errors.append(SingleError(i, x, y, y_guess, model))
         return errors
 
@@ -220,8 +220,10 @@ class SingleError:
         def to_feat_key(key, value):
             if isinstance(value, bool):
                 return key
+            elif isinstance(value, float):
+                return key
             else:
-                return "{}={}".format(key, value)
+                return "{}:{}".format(key, value)
 
         gold_weights_row = "<td>" + "</td><td>".join(
             ["{:.2f}".format(gold_weights[to_feat_key(key, feats[key])]) for key in sorted_feat_keys]) + "</td>"
