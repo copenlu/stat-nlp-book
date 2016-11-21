@@ -4,7 +4,9 @@ __author__ = 'Isabelle Augenstein'
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import CountVectorizer
-
+import collections
+from tfutil import *
+import random
 
 def readLabelledPatternData(filepath="../data/ie/ie_bootstrap_patterns.txt"):
     f = open(filepath, "r")
@@ -252,6 +254,188 @@ def show_most_informative_features(vectorizer, clf, n=20):
         print("\t%.4f\t%-15s\t\t%.4f\t%-15s" % (coef_1, fn_1, coef_2, fn_2))
 
 
+def build_dataset(words, vocabulary_size=5000000, min_count=1):
+    """
+    Build vocabulary, code based on tensorflow/examples/tutorials/word2vec/word2vec_basic.py
+    :param words: list of words in corpus
+    :param vocabulary_size: max vocabulary size
+    :param min_count: min count for words to be considered
+    :return: counts, dictionary mapping words to indeces, reverse dictionary
+    """
+    count = [['UNK', -1]]
+    count.extend(collections.Counter(words).most_common(vocabulary_size - 1))
+    dictionary = dict()
+    for word, _ in count:
+        if _ >= min_count:# or _ == -1:  # that's UNK only
+            dictionary[word] = len(dictionary)
+    reverse_dictionary = dict(zip(dictionary.values(), dictionary.keys()))
+    print("Final vocab size:", len(dictionary))
+    return count, dictionary, reverse_dictionary
+
+
+def transform_dict(dictionary, words, maxlen):
+    """
+    Transform list of tokens, add padding to maxlen
+    :param dictionary: dict which maps tokens to integer indices
+    :param words: list of tokens
+    :param maxlen: maximum length
+    :return: transformed tweet, as numpy array
+    """
+    data = list()
+    for i in range(0, maxlen-1):  #range(0, len(words)-1):
+        if i < len(words):
+            word = words[i]
+            if word in dictionary:
+                index = dictionary[word]
+            else:
+                index = 0  # dictionary['UNK']
+        else:
+            index = 0
+        data.append(index)
+    return np.asarray(data)
+
+
+def transf_labels(labels):
+    # transforming labels
+    labels_t = []
+    for lab in training_labels:
+        v = np.zeros(2)
+        if lab == 'NONE':
+            ix = 1
+        else:
+            ix = 0
+        v[ix] = 1
+        labels_t.append(v)
+
+    return labels_t
+
+
+def vectorise_data(training_sents, training_entpairs, training_labels, testing_sents, testing_entpairs):
+
+    labels = transf_labels(training_labels)
+
+    #training_toks = [sentenceToShortPath(t).split(" ") for t in training_sents]  # this version doesn't work so well as shortest path is very short - show that
+    #testing_toks = [sentenceToShortPath(t).split(" ") for t in testing_sents] # this version doesn't work so well as shortest path is very short - show that
+    training_toks = [t.split(" ") for t in training_sents]
+    testing_toks = [t.split(" ") for t in testing_sents]
+
+    training_ent_toks = [" ".join(t).split(" ") for t in training_entpairs]
+    testing_ent_toks = [" ".join(t).split(" ") for t in testing_entpairs]
+
+    lens_rel = [len(s) for s in training_toks]
+    lens_ents = [len(s) for s in training_ent_toks]
+    print("Max sentence length:", max(lens_rel))
+    print("Max entity length:", max(lens_ents))
+
+    count_rels, dictionary_rels, reverse_dictionary_rels = build_dataset(
+        [token for senttoks in training_ent_toks for token in senttoks])
+
+    count_ents, dictionary_ents, reverse_dictionary_ents = build_dataset(
+        [token for senttoks in training_toks for token in senttoks])
+
+    transf_rels_train = [transform_dict(dictionary_rels, senttoks, max(lens_rel)) for senttoks in training_toks]
+    transf_ents_train = [transform_dict(dictionary_ents, senttoks, max(lens_ents)) for senttoks in training_ent_toks]  # this needs to have one dimensionality more for the neg data
+
+    transf_rels_test = [transform_dict(dictionary_rels, senttoks, max(lens_rel)) for senttoks in testing_toks]
+    transf_ents_test = [transform_dict(dictionary_ents, senttoks, max(lens_ents)) for senttoks in testing_ent_toks]
+
+    vocab_size_rels = len(dictionary_rels)
+    vocab_size_ents = len(dictionary_ents)
+
+    neg_ents_train = random.sample(transf_ents_train, len(transf_ents_train)) # negatively sample some for training
+    train_ents = [(pos, neg) for pos, neg in zip(transf_ents_train, neg_ents_train)]
+
+    test_ents = [transf_ents_test] * len(transf_ents_test) # for testing, the targets are all the targets
+
+
+    #train_target_values = [(pos, neg) for pos, neg in zip(labels, [np.array([1.0, 0.0]) for _ in range(0, len(labels))])]
+
+    train_target_values = labels
+
+    #return transf_rels_train, transf_ents_train, transf_rels_test, transf_ents_test, labels, testing_toks, testing_ent_toks, vocab_size_rels, vocab_size_ents
+    return transf_rels_train, train_ents, transf_rels_test, test_ents, train_target_values, testing_toks, testing_ent_toks, vocab_size_rels, vocab_size_ents
+
+
+
+def create_dense_embedding(ids, repr_dim, num_symbols, name):
+    """
+    :param ids: tensor [d1, ... ,dn] of int32 symbols
+    :param repr_dim: dimension of embeddings
+    :param num_symbols: number of symbols
+    :return: [d1, ... ,dn,repr_dim] tensor representation of symbols.
+    """
+    embeddings = tf.Variable(tf.random_normal((num_symbols, repr_dim)), name=name)
+    encodings = tf.gather(embeddings, ids)  # [batch_size, repr_dim]
+    return encodings
+
+
+def create_dot_product_scorer(rel_encodings, cand_encodings):
+    """
+
+    :param rel_encodings: [batch_size, enc_dim] tensor of relation representations
+    :param cand_encodings: [batch_size, num_candidates, enc_dim] tensor of candidate encodings
+    :return: a [batch_size, num_candidate] tensor of scores for each candidate
+    """
+    return tf.reduce_sum(tf.expand_dims(rel_encodings, 1) * cand_encodings, 2)
+
+
+def create_softmax_loss(scores, target_values):
+    """
+
+    :param scores: [batch_size, num_candidates] logit scores
+    :param target_values: [batch_size, num_candidates] vector of 0/1 target values.
+    :return: [batch_size] vector of losses (or single number of total loss).
+    """
+    return tf.nn.softmax_cross_entropy_with_logits(scores, target_values)
+
+
+def create_model_f_reader(batch_size, max_cand_seq_length, max_rel_seq_length, repr_dim, vocab_size_rels, vocab_size_cands):
+    """
+    Create a ModelF reader.
+    :param options: 'repr_dim', dimension of representation .
+    :param reference_data: the data to determine the question / answer candidate symbols.
+    :return: ModelF
+    """
+    relations = tf.placeholder(tf.int32, [batch_size, max_rel_seq_length], name='relations')
+    candidates = tf.placeholder(tf.int32, [batch_size, None, max_cand_seq_length], name="candidates")
+    rel_encoding = create_dense_embedding(relations, repr_dim, vocab_size_rels, 'rel_emb')
+    cand_encoding = create_dense_embedding(candidates, repr_dim, vocab_size_cands, 'cand_embed')
+    rel_encoding = tf.reduce_sum(rel_encoding, 1)  # [batch_size, num_rels, repr_dim]
+    cand_encoding = tf.reduce_sum(cand_encoding, 2)  # [batch_size, num_candidates, repr_dim]
+    scores = create_dot_product_scorer(rel_encoding, cand_encoding)
+    return scores, [relations, candidates]
+
+
+def universalSchemaExtraction(training_rels, training_entpairs, testing_rels, testing_entpairs, train_target_values, vocab_size_rels, vocab_size_ents):
+
+    batch_size = 5
+    repr_dim = 10
+    learning_rate = 0.001
+    max_epochs = 21
+    target_size = 2 # binary relation classification
+    max_rel_seq_length = len(training_rels[0])
+    max_cand_seq_length = len(training_entpairs[0][0])
+
+    target_values = tf.placeholder(tf.float32, [batch_size, target_size], name="target_values")
+
+    scores, placeholders = create_model_f_reader(batch_size, max_cand_seq_length, max_rel_seq_length, repr_dim, vocab_size_rels,
+                          vocab_size_ents)
+
+    loss = create_softmax_loss(scores, target_values)
+
+    data = [np.asarray(training_rels), np.asarray(training_entpairs), np.asarray(train_target_values)]
+
+    optimizer = tf.train.AdamOptimizer(learning_rate)
+    batcher = BatchBucketSampler(data, batch_size)
+
+    placeholders += [target_values]
+
+    with tf.Session() as sess:
+        trainer = Trainer(optimizer, max_epochs)
+
+        trainer(batcher=batcher, placeholders=placeholders, loss=loss, model=scores, session=sess)
+
+    # todo: show results on test
 
 
 if __name__ == '__main__':
@@ -264,8 +448,15 @@ if __name__ == '__main__':
     # for relation extraction with bootstrapping
     #bootstrappingExtraction(training_patterns, training_entpairs, testing_patterns, testing_entpairs)
 
-    #training_sents, training_entpairs, training_labels = readLabelledData()
+    training_sents, training_entpairs, training_labels = readLabelledData()
     #supervisedExtraction(training_sents, training_entpairs, training_labels, testing_patterns, testing_entpairs)
 
-    kb_entpairs, unlab_sents, unlab_entpairs = readDataForDistantSupervision()
-    distantlySupervisedExtraction(kb_entpairs, unlab_sents, unlab_entpairs, testing_patterns, testing_entpairs)
+    #kb_entpairs, unlab_sents, unlab_entpairs = readDataForDistantSupervision()
+    #distantlySupervisedExtraction(kb_entpairs, unlab_sents, unlab_entpairs, testing_patterns, testing_entpairs)
+
+    np.random.seed(1337)
+    tf.set_random_seed(1337)
+
+    transf_rels_train, transf_ents_train, transf_rels_test, transf_ents_test, labels, testing_toks, testing_ent_toks, vocab_size_rels, vocab_size_ents = vectorise_data(training_sents, training_entpairs, training_labels, testing_patterns, testing_entpairs)
+
+    universalSchemaExtraction(transf_rels_train, transf_ents_train, transf_rels_test, transf_ents_test, labels, vocab_size_rels, vocab_size_ents)
