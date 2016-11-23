@@ -308,6 +308,8 @@ def reverse_dict_lookup(dictionary, indeces):
         else:
             break
     res.reverse()
+    if res[-1] == '||':
+        res.append('UNK')
     return res
 
 
@@ -371,9 +373,6 @@ def vectorise_data(training_sents, training_entpairs, training_kb_rels, testing_
 def create_model_f_reader(max_rel_seq_length, max_cand_seq_length, repr_dim, vocab_size_rels, vocab_size_cands):
     """
     Create a ModelF reader.
-    :param options: 'repr_dim', dimension of representation .
-    :param reference_data: the data to determine the question / answer candidate symbols.
-    :return: ModelF
     """
     relations_pos = tf.placeholder(tf.int32, [None, max_rel_seq_length], name='relations_pos')  # [batch_size, max_rel_seq_len]
     relations_neg = tf.placeholder(tf.int32, [None, max_rel_seq_length], name='relations_neg')  # [batch_size, max_rel_seq_len]
@@ -436,16 +435,16 @@ def universalSchemaExtraction(data):
     with tf.Session() as sess:
         trainer = Trainer(optimizer, max_epochs)
 
-        trainer(batcher=batcher, placeholders=placeholders, loss=loss, model=dotprod_pos, session=sess)
+        trainer(batcher=batcher, placeholders=placeholders, loss=loss, session=sess)
 
-        test_scores = trainer.test(batcher=batcher_test, placeholders=placeholders, loss=loss, model=dotprod_pos, session=sess)
+        test_scores = trainer.test(batcher=batcher_test, placeholders=placeholders, model=tf.nn.sigmoid(dotprod_pos), session=sess)
 
     # show predictions
     ents_test = [reverse_dict_lookup(dictionary_ents_rev, e) for e in ents_test_pos]
     rels_test = [reverse_dict_lookup(dictionary_rels_rev, r) for r in rels_test_pos]
     testresults = sorted(zip(test_scores, ents_test, rels_test), key=lambda t: t[0], reverse=True)  # sort for decreasing score
 
-    print("Test predictions by decreasing score:")
+    print("Test predictions by decreasing probability:")
     for score, tup, rel in testresults:
         print('%f\t%s\tREL\t%s' % (score, " ".join(tup), " ".join(rel)))
 
