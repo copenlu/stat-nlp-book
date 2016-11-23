@@ -146,7 +146,7 @@ def distantlySupervisedLabelling(kb_entpairs, unlab_sents, unlab_entpairs):
     return train_sents, train_entpairs, train_labels
 
 
-def bootstrappingExtraction(train_sents, train_entpairs, test_sents, test_entpairs):
+def bootstrappingExtraction(train_sents, train_entpairs, test_sents, test_entpairs, num_iter=6):
     """
     Given a set of patterns and entity pairs for a relation, extracts more patterns and entity pairs iteratively
     Args:
@@ -159,12 +159,13 @@ def bootstrappingExtraction(train_sents, train_entpairs, test_sents, test_entpai
     """
 
     # convert training and testing sentences to short paths to obtain patterns
-    train_patterns = set([sentenceToShortPath(test_sent) for test_sent in train_sents])
-    test_patterns = [sentenceToShortPath(test_sent) for test_sent in test_sents]
+    train_patterns = set([sentenceToShortPath(s) for s in train_sents])
+    train_patterns.remove("in")
+    test_patterns = [sentenceToShortPath(s) for s in test_sents]
     test_extracts = []
 
     # iteratively get more patterns and entity pairs
-    for i in range(0, 5):
+    for i in range(0, num_iter):
         print("Number extractions at iteration", str(i), ":", str(len(test_extracts)))
         print("Number patterns at iteration", str(i), ":", str(len(train_patterns)))
         print("Number entpairs at iteration", str(i), ":", str(len(train_entpairs)))
@@ -457,18 +458,16 @@ if __name__ == '__main__':
     #patternExtraction(training_patterns, testing_patterns)
 
     # for relation extraction with bootstrapping
-    #bootstrappingExtraction(training_patterns, training_entpairs, testing_patterns, testing_entpairs)
+    bootstrappingExtraction(training_patterns, training_entpairs, testing_patterns, testing_entpairs)
 
-    training_sents, training_entpairs, training_labels = readLabelledData()
+    #training_sents, training_entpairs, training_labels = readLabelledData()
     #supervisedExtraction(training_sents, training_entpairs, training_labels, testing_patterns, testing_entpairs)
 
     #kb_entpairs, unlab_sents, unlab_entpairs = readDataForDistantSupervision()
     #distantlySupervisedExtraction(kb_entpairs, unlab_sents, unlab_entpairs, testing_patterns, testing_entpairs)
 
-    np.random.seed(1337)
-    tf.set_random_seed(1337)
+    #np.random.seed(1337)
+    #tf.set_random_seed(1337)
 
-    data = vectorise_data(
-        training_sents, training_entpairs, training_labels, testing_patterns, testing_entpairs)
-
-    universalSchemaExtraction(data)
+    #data = vectorise_data(training_sents, training_entpairs, training_labels, testing_patterns, testing_entpairs)
+    #universalSchemaExtraction(data)
