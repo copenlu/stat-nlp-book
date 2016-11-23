@@ -7,6 +7,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 import collections
 from tfutil import *
 import random
+import copy
 
 def readLabelledPatternData(filepath="../data/ie/ie_bootstrap_patterns.txt"):
     f = open(filepath, "r")
@@ -262,11 +263,11 @@ def build_dataset(words, vocabulary_size=5000000, min_count=1):
     :param min_count: min count for words to be considered
     :return: counts, dictionary mapping words to indeces, reverse dictionary
     """
-    count = [['UNK', -1]]
+    count = [['UNK', 100000]]
     count.extend(collections.Counter(words).most_common(vocabulary_size - 1))
     dictionary = dict()
     for word, _ in count:
-        if _ >= min_count:# or _ == -1:  # that's UNK only
+        if _ >= min_count:
             dictionary[word] = len(dictionary)
     reverse_dictionary = dict(zip(dictionary.values(), dictionary.keys()))
     print("Final vocab size:", len(dictionary))
@@ -282,7 +283,7 @@ def transform_dict(dictionary, words, maxlen):
     :return: transformed tweet, as numpy array
     """
     data = list()
-    for i in range(0, maxlen-1):  #range(0, len(words)-1):
+    for i in range(0, maxlen):  #range(0, len(words)-1):
         if i < len(words):
             word = words[i]
             if word in dictionary:
@@ -295,147 +296,158 @@ def transform_dict(dictionary, words, maxlen):
     return np.asarray(data)
 
 
-def transf_labels(labels):
-    # transforming labels
-    labels_t = []
-    for lab in training_labels:
-        v = np.zeros(2)
-        if lab == 'NONE':
-            ix = 1
+def reverse_dict_lookup(dictionary, indeces):
+    res = []
+    for i in indeces:
+        word = dictionary[i]
+        res.append(word)
+    res.reverse()
+    for w in copy.deepcopy(res):
+        if w == 'UNK':
+            res.remove(w)
         else:
-            ix = 0
-        v[ix] = 1
-        labels_t.append(v)
-
-    return labels_t
+            break
+    res.reverse()
+    return res
 
 
-def vectorise_data(training_sents, training_entpairs, training_labels, testing_sents, testing_entpairs):
 
-    labels = transf_labels(training_labels)
 
-    #training_toks = [sentenceToShortPath(t).split(" ") for t in training_sents]  # this version doesn't work so well as shortest path is very short - show that
-    #testing_toks = [sentenceToShortPath(t).split(" ") for t in testing_sents] # this version doesn't work so well as shortest path is very short - show that
-    training_toks = [t.split(" ") for t in training_sents]
-    testing_toks = [t.split(" ") for t in testing_sents]
+def split_labels_pos_neg(labels):
+    neg_train_ids = []
+    pos_train_ids = []
+    for i, lab in enumerate(labels):
+        if lab == "NONE":
+            neg_train_ids.append(i)
+        else:
+            pos_train_ids.append(i)
+    return pos_train_ids, neg_train_ids
 
-    training_ent_toks = [" ".join(t).split(" ") for t in training_entpairs]
-    testing_ent_toks = [" ".join(t).split(" ") for t in testing_entpairs]
 
-    lens_rel = [len(s) for s in training_toks]
-    lens_ents = [len(s) for s in training_ent_toks]
-    print("Max sentence length:", max(lens_rel))
-    print("Max entity length:", max(lens_ents))
+def vectorise_data(training_sents, training_entpairs, training_kb_rels, testing_sents, testing_entpairs):
+
+    pos_train_ids, neg_train_ids = split_labels_pos_neg(training_kb_rels + training_kb_rels)
+
+    training_toks_pos = [t.split(" ") for i, t in enumerate(training_sents + training_kb_rels) if i in pos_train_ids]
+    training_toks_neg = [t.split(" ") for i, t in enumerate(training_sents + training_kb_rels) if i in neg_train_ids]
+
+    training_ent_toks_pos = [" || ".join(t).split(" ") for i, t in enumerate(training_entpairs + training_entpairs) if i in pos_train_ids]
+    training_ent_toks_neg = [" || ".join(t).split(" ") for i, t in enumerate(training_entpairs + training_entpairs) if i in neg_train_ids]
+    testing_ent_toks = [" || ".join(t).split(" ") for t in testing_entpairs]
+
+    lens_rel = [len(s) for s in training_toks_pos + training_toks_neg]
+    lens_ents = [len(s) for s in training_ent_toks_pos + training_ent_toks_neg + testing_ent_toks]
+    print("Max relation length:", max(lens_rel))
+    print("Max entity pair length:", max(lens_ents))
 
     count_rels, dictionary_rels, reverse_dictionary_rels = build_dataset(
-        [token for senttoks in training_ent_toks for token in senttoks])
+        [token for senttoks in training_toks_pos + training_toks_neg for token in senttoks])
 
     count_ents, dictionary_ents, reverse_dictionary_ents = build_dataset(
-        [token for senttoks in training_toks for token in senttoks])
+        [token for senttoks in training_ent_toks_pos + training_ent_toks_neg for token in senttoks])
 
-    transf_rels_train = [transform_dict(dictionary_rels, senttoks, max(lens_rel)) for senttoks in training_toks]
-    transf_ents_train = [transform_dict(dictionary_ents, senttoks, max(lens_ents)) for senttoks in training_ent_toks]  # this needs to have one dimensionality more for the neg data
+    rels_train_pos = [transform_dict(dictionary_rels, senttoks, max(lens_rel)) for senttoks in training_toks_pos]
+    rels_train_neg = [transform_dict(dictionary_rels, senttoks, max(lens_rel)) for senttoks in training_toks_neg]
+    ents_train_pos = [transform_dict(dictionary_ents, senttoks, max(lens_ents)) for senttoks in training_ent_toks_pos]
+    ents_train_neg = [transform_dict(dictionary_ents, senttoks, max(lens_ents)) for senttoks in training_ent_toks_neg]
 
-    transf_rels_test = [transform_dict(dictionary_rels, senttoks, max(lens_rel)) for senttoks in testing_toks]
-    transf_ents_test = [transform_dict(dictionary_ents, senttoks, max(lens_ents)) for senttoks in testing_ent_toks]
+    ents_test_pos = [transform_dict(dictionary_ents, senttoks, max(lens_ents)) for senttoks in testing_ent_toks]
+    ents_test_neg_samp = [random.choice(ents_train_neg) for _ in ents_test_pos]  # sample those from train as for that we have neg annotations
 
     vocab_size_rels = len(dictionary_rels)
     vocab_size_ents = len(dictionary_ents)
 
-    neg_ents_train = random.sample(transf_ents_train, len(transf_ents_train)) # negatively sample some for training
-    train_ents = [(pos, neg) for pos, neg in zip(transf_ents_train, neg_ents_train)]
+    ents_train_neg_samp = [random.choice(ents_train_neg) for _ in rels_train_neg] # Negatively sample some for training. Here we have some manually labelled neg ones, so we can sample from them.
 
-    test_ents = [transf_ents_test] * len(transf_ents_test) # for testing, the targets are all the targets
+    rels_test_pos = [transform_dict(dictionary_rels, training_toks_pos[-1], max(lens_rel)) for _ in testing_sents]  # for testing, we want to check if each unlabelled instance expresses the given relation "method for tas"
+    rels_test_neg_samp = [random.choice(rels_train_neg) for _ in rels_test_pos]
 
-
-    #train_target_values = [(pos, neg) for pos, neg in zip(labels, [np.array([1.0, 0.0]) for _ in range(0, len(labels))])]
-
-    train_target_values = labels
-
-    #return transf_rels_train, transf_ents_train, transf_rels_test, transf_ents_test, labels, testing_toks, testing_ent_toks, vocab_size_rels, vocab_size_ents
-    return transf_rels_train, train_ents, transf_rels_test, test_ents, train_target_values, testing_toks, testing_ent_toks, vocab_size_rels, vocab_size_ents
+    return rels_train_pos, rels_train_neg, ents_train_pos, ents_train_neg_samp, rels_test_pos, rels_test_neg_samp, \
+           ents_test_pos, ents_test_neg_samp, vocab_size_rels, vocab_size_ents, max(lens_rel), max(lens_ents), \
+           reverse_dictionary_rels, reverse_dictionary_ents
 
 
 
-def create_dense_embedding(ids, repr_dim, num_symbols, name):
-    """
-    :param ids: tensor [d1, ... ,dn] of int32 symbols
-    :param repr_dim: dimension of embeddings
-    :param num_symbols: number of symbols
-    :return: [d1, ... ,dn,repr_dim] tensor representation of symbols.
-    """
-    embeddings = tf.Variable(tf.random_normal((num_symbols, repr_dim)), name=name)
-    encodings = tf.gather(embeddings, ids)  # [batch_size, repr_dim]
-    return encodings
-
-
-def create_dot_product_scorer(rel_encodings, cand_encodings):
-    """
-
-    :param rel_encodings: [batch_size, enc_dim] tensor of relation representations
-    :param cand_encodings: [batch_size, num_candidates, enc_dim] tensor of candidate encodings
-    :return: a [batch_size, num_candidate] tensor of scores for each candidate
-    """
-    return tf.reduce_sum(tf.expand_dims(rel_encodings, 1) * cand_encodings, 2)
-
-
-def create_softmax_loss(scores, target_values):
-    """
-
-    :param scores: [batch_size, num_candidates] logit scores
-    :param target_values: [batch_size, num_candidates] vector of 0/1 target values.
-    :return: [batch_size] vector of losses (or single number of total loss).
-    """
-    return tf.nn.softmax_cross_entropy_with_logits(scores, target_values)
-
-
-def create_model_f_reader(batch_size, max_cand_seq_length, max_rel_seq_length, repr_dim, vocab_size_rels, vocab_size_cands):
+def create_model_f_reader(max_rel_seq_length, max_cand_seq_length, repr_dim, vocab_size_rels, vocab_size_cands):
     """
     Create a ModelF reader.
     :param options: 'repr_dim', dimension of representation .
     :param reference_data: the data to determine the question / answer candidate symbols.
     :return: ModelF
     """
-    relations = tf.placeholder(tf.int32, [batch_size, max_rel_seq_length], name='relations')
-    candidates = tf.placeholder(tf.int32, [batch_size, None, max_cand_seq_length], name="candidates")
-    rel_encoding = create_dense_embedding(relations, repr_dim, vocab_size_rels, 'rel_emb')
-    cand_encoding = create_dense_embedding(candidates, repr_dim, vocab_size_cands, 'cand_embed')
-    rel_encoding = tf.reduce_sum(rel_encoding, 1)  # [batch_size, num_rels, repr_dim]
-    cand_encoding = tf.reduce_sum(cand_encoding, 2)  # [batch_size, num_candidates, repr_dim]
-    scores = create_dot_product_scorer(rel_encoding, cand_encoding)
-    return scores, [relations, candidates]
+    relations_pos = tf.placeholder(tf.int32, [None, max_rel_seq_length], name='relations_pos')  # [batch_size, max_rel_seq_len]
+    relations_neg = tf.placeholder(tf.int32, [None, max_rel_seq_length], name='relations_neg')  # [batch_size, max_rel_seq_len]
+
+    candidates_pos = tf.placeholder(tf.int32, [None, max_cand_seq_length], name="candidates_pos") # [batch_size, max_cand_seq_len]
+    candidates_neg = tf.placeholder(tf.int32, [None, max_cand_seq_length], name="candidates_neg") # [batch_size, max_cand_seq_len]
+
+    relation_embeddings = tf.Variable(tf.random_uniform([vocab_size_rels, repr_dim], -0.1, 0.1, dtype=tf.float32),
+                                   name='rel_emb', trainable=True)
+
+    candidate_embeddings = tf.Variable(tf.random_uniform([vocab_size_cands, repr_dim], -0.1, 0.1, dtype=tf.float32),
+                                      name='cand_emb', trainable=True)
+
+    rel_encodings_pos = tf.nn.embedding_lookup(relation_embeddings, relations_pos)
+    rel_encodings_neg = tf.nn.embedding_lookup(relation_embeddings, relations_neg)
+
+    cand_encodings_pos = tf.nn.embedding_lookup(candidate_embeddings, candidates_pos)
+    cand_encodings_neg = tf.nn.embedding_lookup(candidate_embeddings, candidates_neg)
+
+    rel_encodings_pos = tf.reduce_sum(rel_encodings_pos, 1)  # [batch_size, num_rel_toks, repr_dim] -- reduce toks to one dim
+    rel_encodings_neg = tf.reduce_sum(rel_encodings_neg, 1)  # [batch_size, num_rel_toks, repr_dim]
+
+    cand_encodings_pos = tf.reduce_sum(cand_encodings_pos, 1)  # [batch_size, num_cand_toks, repr_dim]
+    cand_encodings_neg = tf.reduce_sum(cand_encodings_neg, 1)  # [batch_size, num_cand_toks, repr_dim]
+
+    dotprod_pos = tf.reduce_sum(tf.mul(cand_encodings_pos, rel_encodings_pos), 1)  # for ranking test data
+    dotprod_neg = tf.reduce_sum(tf.mul(cand_encodings_neg, rel_encodings_neg), 1)
+
+    diff_dotprod = tf.reduce_sum(tf.mul(cand_encodings_pos, rel_encodings_pos) - tf.mul(cand_encodings_neg, rel_encodings_neg), 1)
+
+    return dotprod_pos, dotprod_neg, diff_dotprod, [relations_pos, relations_neg, candidates_pos, candidates_neg]
 
 
-def universalSchemaExtraction(training_rels, training_entpairs, testing_rels, testing_entpairs, train_target_values, vocab_size_rels, vocab_size_ents):
+def universalSchemaExtraction(data):
+    rels_train_pos, rels_train_neg, ents_train_pos, ents_train_neg_samp, rels_test_pos, rels_test_neg_samp, \
+    ents_test_pos, ents_test_neg_samp, vocab_size_rels, vocab_size_ents, max_lens_rel, max_lens_ents, \
+    dictionary_rels_rev, dictionary_ents_rev = data
 
-    batch_size = 5
-    repr_dim = 10
+    batch_size = 4
+    repr_dim = 30
     learning_rate = 0.001
     max_epochs = 21
-    target_size = 2 # binary relation classification
-    max_rel_seq_length = len(training_rels[0])
-    max_cand_seq_length = len(training_entpairs[0][0])
 
-    target_values = tf.placeholder(tf.float32, [batch_size, target_size], name="target_values")
-
-    scores, placeholders = create_model_f_reader(batch_size, max_cand_seq_length, max_rel_seq_length, repr_dim, vocab_size_rels,
+    dotprod_pos, dotprod_neg, diff_dotprod, placeholders = create_model_f_reader(max_lens_rel, max_lens_ents, repr_dim, vocab_size_rels,
                           vocab_size_ents)
 
-    loss = create_softmax_loss(scores, target_values)
+    # logistic loss
+    loss = tf.reduce_sum(tf.nn.softplus(-dotprod_pos)+tf.nn.softplus(dotprod_neg))
 
-    data = [np.asarray(training_rels), np.asarray(training_entpairs), np.asarray(train_target_values)]
+    # alternative: BPR loss
+    #loss = tf.reduce_sum(tf.nn.softplus(diff_dotprod))
+
+    data = [np.asarray(rels_train_pos), np.asarray(rels_train_neg), np.asarray(ents_train_pos), np.asarray(ents_train_neg_samp)]
+    data_test = [np.asarray(rels_test_pos), np.asarray(rels_test_neg_samp), np.asarray(ents_test_pos), np.asarray(ents_test_neg_samp)]
 
     optimizer = tf.train.AdamOptimizer(learning_rate)
     batcher = BatchBucketSampler(data, batch_size)
-
-    placeholders += [target_values]
+    batcher_test = BatchBucketSampler(data_test, 1, test=True)
 
     with tf.Session() as sess:
         trainer = Trainer(optimizer, max_epochs)
 
-        trainer(batcher=batcher, placeholders=placeholders, loss=loss, model=scores, session=sess)
+        trainer(batcher=batcher, placeholders=placeholders, loss=loss, model=dotprod_pos, session=sess)
 
-    # todo: show results on test
+        test_scores = trainer.test(batcher=batcher_test, placeholders=placeholders, loss=loss, model=dotprod_pos, session=sess)
+
+    # show predictions
+    ents_test = [reverse_dict_lookup(dictionary_ents_rev, e) for e in ents_test_pos]
+    rels_test = [reverse_dict_lookup(dictionary_rels_rev, r) for r in rels_test_pos]
+    testresults = sorted(zip(test_scores, ents_test, rels_test), key=lambda t: t[0], reverse=True)  # sort for decreasing score
+
+    print("Test predictions by decreasing score:")
+    for score, tup, rel in testresults:
+        print('%f\t%s\tREL\t%s' % (score, " ".join(tup), " ".join(rel)))
 
 
 if __name__ == '__main__':
@@ -457,6 +469,7 @@ if __name__ == '__main__':
     np.random.seed(1337)
     tf.set_random_seed(1337)
 
-    transf_rels_train, transf_ents_train, transf_rels_test, transf_ents_test, labels, testing_toks, testing_ent_toks, vocab_size_rels, vocab_size_ents = vectorise_data(training_sents, training_entpairs, training_labels, testing_patterns, testing_entpairs)
+    data = vectorise_data(
+        training_sents, training_entpairs, training_labels, testing_patterns, testing_entpairs)
 
-    universalSchemaExtraction(transf_rels_train, transf_ents_train, transf_rels_test, transf_ents_test, labels, vocab_size_rels, vocab_size_ents)
+    universalSchemaExtraction(data)
