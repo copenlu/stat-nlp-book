@@ -180,7 +180,7 @@ def bootstrappingExtraction(train_sents, train_entpairs, test_sents, test_entpai
         test_extracts.extend(test_extracts_p)
         test_extracts.extend(test_extracts_e)
 
-    return test_extracts
+    return test_extracts, test_entpairs
 
 
 
@@ -371,40 +371,71 @@ def vectorise_data(training_sents, training_entpairs, training_kb_rels, testing_
 
 
 
-def create_model_f_reader(max_rel_seq_length, max_cand_seq_length, repr_dim, vocab_size_rels, vocab_size_cands):
+def create_model_f_reader(max_lens_rel, max_lens_ents, repr_dim, vocab_size_rels, vocab_size_ents):
     """
-    Create a ModelF reader.
+    Create a Model F Universal Schema reader (Tensorflow graph).
+    Args:
+        max_rel_seq_length: maximum sentence sequence length
+        max_cand_seq_length: maximum candidate sequence length
+        repr_dim: dimensionality of vectors
+        vocab_size_rels: size of relation vocabulary
+        vocab_size_cands: size of candidate vocabulary
+    Returns:
+        dotprod_pos: dot product between positive entity pairs and relations
+        dotprod_neg: dot product between negative entity pairs and relations
+        diff_dotprod: difference in dot product of positive and negative instances, used for BPR loss (optional)
+        [relations_pos, relations_neg, ents_pos, ents_neg]: placeholders, fed in during training for each batch
     """
-    relations_pos = tf.placeholder(tf.int32, [None, max_rel_seq_length], name='relations_pos')  # [batch_size, max_rel_seq_len]
-    relations_neg = tf.placeholder(tf.int32, [None, max_rel_seq_length], name='relations_neg')  # [batch_size, max_rel_seq_len]
 
-    candidates_pos = tf.placeholder(tf.int32, [None, max_cand_seq_length], name="candidates_pos") # [batch_size, max_cand_seq_len]
-    candidates_neg = tf.placeholder(tf.int32, [None, max_cand_seq_length], name="candidates_neg") # [batch_size, max_cand_seq_len]
+    # Placeholders (empty Tensorflow variables) for positive and negative relations and entity pairs
+    # In each training epoch, for each batch, those will be set through mini batching
 
+    relations_pos = tf.placeholder(tf.int32, [None, max_lens_rel],
+                                   name='relations_pos')  # [batch_size, max_rel_seq_len]
+    relations_neg = tf.placeholder(tf.int32, [None, max_lens_rel],
+                                   name='relations_neg')  # [batch_size, max_rel_seq_len]
+
+    ents_pos = tf.placeholder(tf.int32, [None, max_lens_ents], name="ents_pos")  # [batch_size, max_ent_seq_len]
+    ents_neg = tf.placeholder(tf.int32, [None, max_lens_ents], name="ents_neg")  # [batch_size, max_ent_seq_len]
+
+    # Creating latent representations of relations and entity pairs
+    # latent feature representation of all relations, which are initialised randomly
     relation_embeddings = tf.Variable(tf.random_uniform([vocab_size_rels, repr_dim], -0.1, 0.1, dtype=tf.float32),
-                                   name='rel_emb', trainable=True)
+                                      name='rel_emb', trainable=True)
 
-    candidate_embeddings = tf.Variable(tf.random_uniform([vocab_size_cands, repr_dim], -0.1, 0.1, dtype=tf.float32),
-                                      name='cand_emb', trainable=True)
+    # latent feature representation of all entity pairs, which are initialised randomly
+    ent_embeddings = tf.Variable(tf.random_uniform([vocab_size_ents, repr_dim], -0.1, 0.1, dtype=tf.float32),
+                                 name='cand_emb', trainable=True)
 
+    # look up latent feature representation for relations and entities in current batch
     rel_encodings_pos = tf.nn.embedding_lookup(relation_embeddings, relations_pos)
     rel_encodings_neg = tf.nn.embedding_lookup(relation_embeddings, relations_neg)
 
-    cand_encodings_pos = tf.nn.embedding_lookup(candidate_embeddings, candidates_pos)
-    cand_encodings_neg = tf.nn.embedding_lookup(candidate_embeddings, candidates_neg)
+    ent_encodings_pos = tf.nn.embedding_lookup(ent_embeddings, ents_pos)
+    ent_encodings_neg = tf.nn.embedding_lookup(ent_embeddings, ents_neg)
 
-    rel_encodings_pos = tf.reduce_sum(rel_encodings_pos, 1)  # [batch_size, num_rel_toks, repr_dim] -- reduce toks to one dim
+    # our feature representation here is a vector for each word in a relation or entity
+    # because our training data is so small
+    # we therefore take the sum of those vectors to get a representation of each relation or entity pair
+    rel_encodings_pos = tf.reduce_sum(rel_encodings_pos, 1)  # [batch_size, num_rel_toks, repr_dim]
     rel_encodings_neg = tf.reduce_sum(rel_encodings_neg, 1)  # [batch_size, num_rel_toks, repr_dim]
 
-    cand_encodings_pos = tf.reduce_sum(cand_encodings_pos, 1)  # [batch_size, num_cand_toks, repr_dim]
-    cand_encodings_neg = tf.reduce_sum(cand_encodings_neg, 1)  # [batch_size, num_cand_toks, repr_dim]
+    ent_encodings_pos = tf.reduce_sum(ent_encodings_pos, 1)  # [batch_size, num_ent_toks, repr_dim]
+    ent_encodings_neg = tf.reduce_sum(ent_encodings_neg, 1)  # [batch_size, num_ent_toks, repr_dim]
 
-    dotprod_pos = tf.reduce_sum(tf.mul(cand_encodings_pos, rel_encodings_pos), 1)  # for ranking test data
-    dotprod_neg = tf.reduce_sum(tf.mul(cand_encodings_neg, rel_encodings_neg), 1)
+    # measuring compatibility between positive entity pairs and relations
+    # used for ranking test data
+    dotprod_pos = tf.reduce_sum(tf.mul(ent_encodings_pos, rel_encodings_pos), 1)
 
-    diff_dotprod = tf.reduce_sum(tf.mul(cand_encodings_pos, rel_encodings_pos) - tf.mul(cand_encodings_neg, rel_encodings_neg), 1)
+    # measuring compatibility between negative entity pairs and relations
+    dotprod_neg = tf.reduce_sum(tf.mul(ent_encodings_neg, rel_encodings_neg), 1)
 
-    return dotprod_pos, dotprod_neg, diff_dotprod, [relations_pos, relations_neg, candidates_pos, candidates_neg]
+    # difference in dot product of positive and negative instances
+    # used for BPR loss (ranking loss)
+    diff_dotprod = tf.reduce_sum(
+        tf.mul(ent_encodings_pos, rel_encodings_pos) - tf.mul(ent_encodings_neg, rel_encodings_neg), 1)
+
+    return dotprod_pos, dotprod_neg, diff_dotprod, [relations_pos, relations_neg, ents_pos, ents_neg]
 
 
 def universalSchemaExtraction(data):
