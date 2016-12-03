@@ -1,3 +1,50 @@
+navBar = '\
+<nav class="navbar navbar-light bg-faded"> \
+  <ul class="nav navbar-nav contexts"> \
+    <li class="nav-item dropdown">\
+      <a class="nav-link dropdown-toggle" href="#" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Image</a>\
+      <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">\
+        <a id="clear" class="dropdown-item" href="#">Clear</a>\
+        <a id="save" class="dropdown-item" href="#">Save</a>\
+      </div>\
+    </li>\
+    <li id="selectContext" class="nav-item active"> \
+      <a class="nav-link" href="#">Select<span class="sr-only">(current)</span></a>\
+    </li>\
+    <li id="makeRect" class="nav-item">\
+      <a class="nav-link" href="#">Rect</a>\
+    </li>\
+    <li id="makeCircle" class="nav-item">\
+      <a class="nav-link" href="#">Circle</a>\
+    </li>\
+    <li id="makeText" class="nav-item">\
+      <a class="nav-link" href="#">Text</a>\
+    </li>\
+    <li class="nav-item dropdown">\
+      <a class="nav-link dropdown-toggle" href="#" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Order</a>\
+      <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">\
+        <a id="toFront" class="dropdown-item" href="#">To Front</a>\
+        <a id="toBack" class="dropdown-item" href="#">To Back</a>\
+      </div>\
+    </li>\
+  </ul>\
+  <form class="form-inline float-xs-right">\
+    <div class="input-group">\
+      <span class="input-group-addon" id="basic-addon1">Stroke</span>\
+      <input style="width:80px" class="form-control" type="number" placeholder="12">\
+    </div>\
+    <div class="input-group">\
+      <span class="input-group-addon" id="basic-addon1">Color</span>\
+      <input style="width:80px" class="form-control" type="text" placeholder="red">\
+    </div>\
+    <div class="input-group">\
+      <span class="input-group-addon" id="basic-addon1">Fill</span>\
+      <input style="width:80px" class="form-control" type="text" placeholder="red">\
+    </div>\
+  </form>\
+</nav>';
+
+
 //view-source:https://viereck.ch/latex-to-svg/
 //http://stackoverflow.com/questions/34924033/convert-latex-mathml-to-svg-or-image-with-mathjax-or-similar
 function Drupyter(container, drawName, options) {
@@ -24,57 +71,43 @@ function Drupyter(container, drawName, options) {
     this.selectionContext = new SelectionContext(this);
     this.textContext = new TextContext(this);
     this.lineContext = new LineContext(this);
-    this.currentContext = this.makeCircle;
+    this.currentContext = this.selectionContext;
 
-    function createButton(title, context) {
-        var button = $('<button type="button" class="btn btn-outline-primary drup-button" data-toggle="button" aria-pressed="false" autocomplete="off">' + title + '</button>');
-        button.click(function () {
+    function linkContextButton(selector, context) {
+        $(selector + ' a').click(function () {
             self.currentContext = context;
-            $('.drup-button').removeClass("active");
-            button.addClass("active drup-button");
-
-        });
-        return button;
-
+            $('.contexts li').removeClass("active");
+            $(selector).addClass("active");
+        })
     }
 
-    var clearButton = $('<button type="button" class="btn btn-outline-primary drup-button">Clear</button>');
-    clearButton.click(function () {
-        // $('.drup-button').removeClass("active");
-        // clearButton.addClass("active");
-        $(self.svg).empty();
-        self.saveCurrentSVG();
-    });
 
-    var buttons = $('<div class="btn-group" data-toggle="buttons">');
-    buttons.append(createButton("Circle", this.makeCircle));
-    buttons.append(createButton("Rect", this.makeRect));
-    buttons.append(createButton("Line", this.lineContext));
-    buttons.append(createButton("Text", this.textContext));
-    buttons.append(createButton("Select", this.selectionContext));
-    buttons.append(clearButton);
-
-    var zPositionButtons = $('<div class="btn-group">');
-    var toFrontButton = $('<button type="button" class="btn btn-outline-primary drup-button">To Front</button>');
-    toFrontButton.click(function () {
-        self.selectionContext.moveToFront();
-    });
-    var toBackButton = $('<button type="button" class="btn btn-outline-primary drup-button">To Back</button>');
-    toBackButton.click(function () {
-        self.selectionContext.moveToBack();
-    });
-    zPositionButtons.append(toFrontButton);
-    zPositionButtons.append(toBackButton);
-
-    var menuDiv = $("<div class='menu'></div>");
-    menuDiv.append(buttons);
-    menuDiv.append(zPositionButtons);
-
-    $(self.container).append(menuDiv);
+    // $(self.container).append(menuDiv);
+    $(self.container).append($(navBar));
     $(self.container).append("<div class='drawing'></div>");
     $(self.container).append("<div class='hidden' style=''></div>");
 
+    linkContextButton('#makeRect', this.makeRect);
+    linkContextButton('#makeCircle', this.makeCircle);
+    linkContextButton('#makeText', this.textContext);
+    linkContextButton('#selectContext', this.selectionContext);
+
+    $("#toFront").click(function () {
+        self.selectionContext.moveToFront();
+    });
+    $("#toBack").click(function () {
+        self.selectionContext.moveToBack();
+    });
+
+    $("#clear").click(function () {
+        $(self.svg).empty();
+    });
+    $("#save").click(function () {
+        self.saveCurrentSVG();
+    });
+
     this.registerElement = function (elem) {
+        elem.attr({id: self.createNewId()});
         elem.click(function (e) {
             if (self.currentContext.onClickElement) self.currentContext.onClickElement(e, this);
         });
@@ -89,6 +122,7 @@ function Drupyter(container, drawName, options) {
         $(self.svg).attr("height", self.options.height || 600);
         $(self.svg).attr("width", self.options.width || 400);
         self.snap = Snap($(self.svg).get(0));
+        self.filter = self.snap.filter(Snap.filter.shadow(0, 2, 3));
 
         self.registerElement($(self.svg).find("*"));
         // $(self.svg).find("*").click(function (e) {
@@ -152,7 +186,6 @@ function MakeCircleContext(drupyter) {
                 fill: "#bada55",
                 stroke: "#000",
                 strokeWidth: 5,
-                id: drupyter.createNewId()
             });
             var remembered = circle.node;
             drupyter.registerElement($(circle.node));
@@ -224,7 +257,9 @@ function SelectionContext(drupyter) {
         startX = e.pageX;
         startY = e.pageY;
         currentSelection = element;
-        oldMatrix = new Snap(currentSelection).attr("transform").localMatrix; //$(currentSelection).attr("transform");
+        var snapElement = new Snap(currentSelection);
+        snapElement.attr({filter: drupyter.filter});
+        oldMatrix = snapElement.attr("transform").localMatrix; //$(currentSelection).attr("transform");
         moving = true;
     };
 
@@ -241,6 +276,7 @@ function SelectionContext(drupyter) {
     this.onMouseUp = function (e, element) {
         console.log("MouseUp");
         moving = false;
+        new Snap(currentSelection).attr({filter: null});
         // currentSelection = null;
     };
 
@@ -306,7 +342,6 @@ function TextContext(drupyter) {
         var y = e.pageY - offset.top;
         var text = drupyter.snap.text(0, 0, "");
         var textGroup = drupyter.snap.group(text);
-        textGroup.attr({id: drupyter.createNewId()});
         drupyter.registerElement($(textGroup.node));
         var svgns = "http://www.w3.org/2000/svg";
         var field = document.createElementNS(svgns, "foreignObject");
@@ -397,7 +432,6 @@ function MakeRectangleContext(drupyter) {
                 fill: "#bada55",
                 stroke: "#000",
                 strokeWidth: 5,
-                id: drupyter.createNewId()
             });
             var remembered = rect.node;
             drupyter.registerElement($(rect.node));

@@ -13,9 +13,8 @@ def edit_svg(filename, height="400"):
     # javascript code that edits svg
     # trigger that stores current svg element in original file
     html = """
+    <link rel="stylesheet" href="/files/javascript/bootstrap/css/bootstrap.css">
     <div id='""" + svg_id + """'>
-    <!--    <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-    </svg> -->
     <script>
         requirejs.config({
             paths: {
