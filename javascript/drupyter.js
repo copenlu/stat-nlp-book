@@ -31,7 +31,7 @@ navBar = '\
   <form class="form-inline float-xs-right">\
     <div class="input-group">\
       <span class="input-group-addon" id="basic-addon1">Stroke</span>\
-      <input style="width:80px" class="form-control" type="number" placeholder="12">\
+      <input id="stroke" style="width:80px" class="form-control" type="number" placeholder="12">\
     </div>\
     <div class="input-group">\
       <span class="input-group-addon" id="basic-addon1">Color</span>\
@@ -104,6 +104,10 @@ function Drupyter(container, drawName, options) {
     });
     $("#save").click(function () {
         self.saveCurrentSVG();
+    });
+
+    $("#stroke").click(function () {
+
     });
 
     this.registerElement = function (elem) {
