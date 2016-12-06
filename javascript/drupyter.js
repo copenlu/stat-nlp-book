@@ -17,6 +17,12 @@ navBar = '\
     <li id="makeCircle" class="nav-item">\
       <a class="nav-link" href="#">Circle</a>\
     </li>\
+    <li id="makeLine" class="nav-item">\
+      <a class="nav-link" href="#">Line</a>\
+    </li>\
+    <li id="makeConnect" class="nav-item">\
+      <a class="nav-link" href="#">Connect</a>\
+    </li>\
     <li id="makeText" class="nav-item">\
       <a class="nav-link" href="#">Text</a>\
     </li>\
@@ -35,15 +41,19 @@ navBar = '\
     </div>\
     <div class="input-group">\
       <span class="input-group-addon" id="basic-addon1">Color</span>\
-      <input style="width:80px" class="form-control" type="text" placeholder="red">\
+      <input id="color" style="width:100px" class="form-control" type="text" placeholder="red">\
     </div>\
     <div class="input-group">\
       <span class="input-group-addon" id="basic-addon1">Fill</span>\
-      <input style="width:80px" class="form-control" type="text" placeholder="red">\
+      <input id="fill" style="width:100px" class="form-control" type="text" placeholder="red">\
     </div>\
   </form>\
 </nav>';
 
+
+function trimPX(string) {
+    return string.substring(0, string.length - 2);
+}
 
 //view-source:https://viereck.ch/latex-to-svg/
 //http://stackoverflow.com/questions/34924033/convert-latex-mathml-to-svg-or-image-with-mathjax-or-similar
@@ -71,6 +81,7 @@ function Drupyter(container, drawName, options) {
     this.selectionContext = new SelectionContext(this);
     this.textContext = new TextContext(this);
     this.lineContext = new LineContext(this);
+    this.connectContext = new ConnectContext(this);
     this.currentContext = this.selectionContext;
 
     function linkContextButton(selector, context) {
@@ -89,6 +100,8 @@ function Drupyter(container, drawName, options) {
 
     linkContextButton('#makeRect', this.makeRect);
     linkContextButton('#makeCircle', this.makeCircle);
+    linkContextButton('#makeLine', this.lineContext);
+    linkContextButton('#makeConnect', this.connectContext);
     linkContextButton('#makeText', this.textContext);
     linkContextButton('#selectContext', this.selectionContext);
 
@@ -101,17 +114,41 @@ function Drupyter(container, drawName, options) {
 
     $("#clear").click(function () {
         $(self.svg).empty();
+        $(self.drawing + ">div").remove();
+        self.connectContext.clear();
+        self.currentId = 0;
+
     });
     $("#save").click(function () {
         self.saveCurrentSVG();
     });
 
-    $("#stroke").click(function () {
-
+    $("#stroke").change(function () {
+        var snapSelection = new Snap(self.selectionContext.currentSelection);
+        snapSelection.attr({strokeWidth: $('#stroke').val()})
     });
 
-    this.registerElement = function (elem) {
-        elem.attr({id: self.createNewId()});
+    $("#fill").change(function () {
+        var snapSelection = new Snap(self.selectionContext.currentSelection);
+        snapSelection.attr({fill: $('#fill').val()})
+    });
+
+    $("#color").change(function () {
+        var snapSelection = new Snap(self.selectionContext.currentSelection);
+        snapSelection.attr({stroke: $('#color').val()})
+    });
+
+    this.selectionContext.onSelect(function (elem) {
+        snapElem = new Snap(elem);
+        console.log(snapElem.attr("fill"));
+        $('#stroke').val(trimPX(snapElem.attr("strokeWidth")));
+        $('#fill').val(Snap.color(snapElem.attr("fill")).hex);
+        $('#color').val(Snap.color(snapElem.attr("stroke")).hex);
+    });
+
+    ;
+
+    this.activateElement = function (elem) {
         elem.click(function (e) {
             if (self.currentContext.onClickElement) self.currentContext.onClickElement(e, this);
         });
@@ -121,6 +158,11 @@ function Drupyter(container, drawName, options) {
         });
     };
 
+    this.registerElement = function (elem) {
+        elem.attr({id: self.createNewId()}).addClass("drupElem");
+        this.activateElement(elem);
+    };
+
     $.get('/draw/' + self.drawName, function (data, status) {
         $(self.drawing).html(data);
         $(self.svg).attr("height", self.options.height || 600);
@@ -128,7 +170,8 @@ function Drupyter(container, drawName, options) {
         self.snap = Snap($(self.svg).get(0));
         self.filter = self.snap.filter(Snap.filter.shadow(0, 2, 3));
 
-        self.registerElement($(self.svg).find("*"));
+        self.activateElement($(self.svg).find("*"));
+        self.currentId = $(".drupElem").length;
         // $(self.svg).find("*").click(function (e) {
         //     if (self.currentContext.onClickElement) self.currentContext.onClickElement(e, this);
         // });
@@ -145,6 +188,7 @@ function Drupyter(container, drawName, options) {
             if (self.currentContext.onMouseUp) self.currentContext.onMouseUp(e, this);
         });
 
+        self.connectContext.loadConnectors();
         console.log("Set SVG");
         // MathJax.Hub.Queue(["Typeset", MathJax.Hub, self.svg])
 
@@ -152,10 +196,13 @@ function Drupyter(container, drawName, options) {
 
 
     this.saveCurrentSVG = function () {
+        self.connectContext.saveConnectors();
+        var cloned = $(self.drawing).clone();
+        cloned.find(".transient").remove();
         $.ajax({
             type: 'POST',
             url: '/draw/' + drawName,
-            data: $(self.drawing).html(),
+            data: cloned.html(),
             contentType: "text/xml",
             dataType: "text",
             success: function (data, status) {
@@ -219,11 +266,22 @@ function MakeCircleContext(drupyter) {
 
 function SelectionContext(drupyter) {
 
-    var currentSelection = null;
+    this.currentSelection = null;
     var startX = 0;
     var startY = 0;
     var oldMatrix = null;
     var moving = false;
+    var listeners = [];
+    var moveListeners = [];
+    var self = this;
+
+    this.onSelect = function (listener) {
+        listeners.push(listener)
+    };
+
+    this.onMove = function (listener) {
+        moveListeners.push(listener)
+    };
 
     this.onClick = function (e, element) {
         // console.log("OnClick");
@@ -231,6 +289,14 @@ function SelectionContext(drupyter) {
         //     currentSelection = null
         // }
     };
+
+    this.selectElement = function (elem) {
+        console.log(this.listeners);
+        this.currentSelection = elem;
+        $.each(listeners, function (index, value) {
+            value(elem);
+        });
+    }
 
 
     this.onMouseMove = function (e, element) {
@@ -248,8 +314,11 @@ function SelectionContext(drupyter) {
                     oldMatrix.d, oldMatrix.e + x - startX, oldMatrix.f + y - startY);
                 console.log(newMatrix)
             }
-            new Snap(currentSelection).attr({
+            new Snap(this.currentSelection).attr({
                 transform: newMatrix
+            });
+            $.each(moveListeners, function (index, listener) {
+                listener(self.currentSelection);
             });
 
         }
@@ -260,27 +329,27 @@ function SelectionContext(drupyter) {
         console.log("Clicked " + element);
         startX = e.pageX;
         startY = e.pageY;
-        currentSelection = element;
-        var snapElement = new Snap(currentSelection);
+        this.selectElement(element);
+        var snapElement = new Snap(this.currentSelection);
         snapElement.attr({filter: drupyter.filter});
         oldMatrix = snapElement.attr("transform").localMatrix; //$(currentSelection).attr("transform");
         moving = true;
     };
 
     this.moveToFront = function () {
-        var detached = $(currentSelection).detach();
+        var detached = $(this.currentSelection).detach();
         $(drupyter.svg).append(detached);
     };
 
     this.moveToBack = function () {
-        var detached = $(currentSelection).detach();
+        var detached = $(this.currentSelection).detach();
         $(drupyter.svg).prepend(detached);
     };
 
     this.onMouseUp = function (e, element) {
         console.log("MouseUp");
         moving = false;
-        new Snap(currentSelection).attr({filter: null});
+        new Snap(this.currentSelection).attr({filter: null});
         // currentSelection = null;
     };
 
@@ -299,7 +368,6 @@ function LineContext(drupyter) {
         if (line) {
             line = null;
             drupyter.saveCurrentSVG();
-
         } else {
             var offset = $(element).offset();
             var x = e.pageX - offset.left;
@@ -307,6 +375,8 @@ function LineContext(drupyter) {
             line = drupyter.snap.line(x, y, x, y).attr({
                 stroke: '#00ADEF'
             });
+            drupyter.registerElement($(line.node));
+            drupyter.selectionContext.selectElement(line.node);
         }
     };
 
@@ -327,6 +397,101 @@ function LineContext(drupyter) {
             })
         }
     }
+}
+
+function ConnectContext(drupyter) {
+
+    var line = null;
+    var connectors = [];
+    var currentStart = null;
+    var elem2line = {};
+
+    drupyter.selectionContext.onMove(function (elem) {
+        var bbox = new Snap(elem).getBBox();
+        console.log("Moved " + elem);
+        // line.attr({x2: bbox.cx, y2: bbox.cy})
+        var elemLine = elem2line[elem.id];
+        console.log(elemLine);
+        if (elemLine) {
+            $.each(elemLine, function (index, elem) {
+                if (elem.start) {
+                    elem.line.attr({x1: bbox.cx, y1: bbox.cy})
+                } else {
+                    elem.line.attr({x2: bbox.cx, y2: bbox.cy})
+                }
+            })
+        }
+    });
+
+    this.clear = function () {
+        connectors = [];
+        elem2line = {};
+    };
+
+    this.saveConnectors = function () {
+        var currentConnectors = $(drupyter.drawing).children(".connector");
+        console.log(currentConnectors);
+        if (currentConnectors) {
+            currentConnectors.remove();
+        }
+        $.each(connectors, function (index, connector) {
+            $(drupyter.drawing).append($("<div>", {class: "connector", n1: connector.n1, n2: connector.n2}));
+        })
+    };
+
+    this.loadConnectors = function () {
+        var connectors = $(drupyter.drawing).children(".connector");
+        connectors.each(function (i, elem) {
+            console.log(elem);
+            console.log(typeof(elem));
+            console.log($(elem));
+            //    todo: set up line
+            //     var line = drupyter.snap.line({})
+            let id1 = elem.getAttribute("n1");
+            let id2 = elem.getAttribute("n2");
+            var n1 = drupyter.snap.select('#' + id1);
+            var n2 = drupyter.snap.select('#' + id2);
+            var b1 = n1.getBBox();
+            var b2 = n2.getBBox();
+            var line = drupyter.snap.line({
+                x1: b1.cx,
+                y1: b1.cy,
+                x2: b2.cx,
+                y2: b2.cy
+            }).attr({stroke: '#00ADEF'}).addClass("transient").prependTo(drupyter.snap);
+            if (!elem2line[id1]) elem2line[id1] = [];
+            if (!elem2line[id2]) elem2line[id2] = [];
+            elem2line[id1].push({line: line, start: true});
+            elem2line[id2].push({line: line, start: false});
+            connectors.push({n1: id1, n2: id2});
+        });
+    };
+
+
+    this.onClickElement = function (e, element) {
+        var id = $(element).attr('id');
+        var bbox = new Snap(element).getBBox();
+        if (currentStart == null) {
+            currentStart = id;
+            line = drupyter.snap.line(bbox.cx, bbox.cy, bbox.cx, bbox.cy).attr({
+                stroke: '#00ADEF',
+            }).addClass("transient");
+            line.prependTo(drupyter.snap);
+            console.log("Clicked start: " + id);
+            if (!elem2line[id]) elem2line[id] = [];
+            elem2line[id].push({line: line, start: true});
+        } else {
+            console.log("Clicked end: " + id);
+            line.attr({x2: bbox.cx, y2: bbox.cy});
+            console.log(element.id);
+            if (!elem2line[id]) elem2line[id] = [];
+            elem2line[id].push({line: line, start: false});
+            connectors.push({n1: currentStart, n2: element.id})
+            currentStart = null;
+            console.log(elem2line);
+        }
+    };
+
 }
 
 
