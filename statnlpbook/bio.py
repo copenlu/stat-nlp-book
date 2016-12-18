@@ -319,8 +319,8 @@ def evaluate(conf_matrix, label_filter=None):
             elif gold != 'None' and guess == 'None':
                 fn += count
             else:  # both gold and guess are not-None, but different
-                fp += count
-                fn += count
+                fp += count if label_filter is None or guess in label_filter else 0
+                fn += count if label_filter is None or gold in label_filter else 0
     prec = tp / (tp + fp) if (tp + fp) > 0 else 0.0
     recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
     f1 = 2 * prec * recall / (prec + recall) if prec * recall > 0 else 0.0

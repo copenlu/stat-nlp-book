@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drawing</title>
+
+    <!--<script type="text/x-mathjax-config">-->
+      <!--MathJax.Hub.Config({-->
+        <!--extensions: ["tex2jax.js"],-->
+        <!--jax: ["input/TeX", "output/SVG"],-->
+        <!--tex2jax: {-->
+          <!--inlineMath: [ ['$','$'], ["\\(","\\)"] ],-->
+          <!--displayMath: [ ['$$','$$'], ["\\[","\\]"] ],-->
+          <!--processEscapes: true-->
+        <!--},-->
+        <!--"HTML-CSS": { availableFonts: ["TeX"] },-->
+        <!--skipStartupTypeset: false-->
+      <!--});-->
+
+
+
+
+    <!--</script>-->
+    <!--<script type="text/javascript"-->
+            <!--src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">-->
+    <!--</script>-->
+
+    <script src="/files/javascript/jquery-3.1.1.js"></script>
+    <script src="/files/javascript/drupyter.js"></script>
+    <script src="/files/javascript/snap.svg.js"></script>
+    <link rel="stylesheet" href="/files/javascript/bootstrap/css/bootstrap.css">
+    <script src="/files/javascript/bootstrap/js/bootstrap.js"></script>
+
+</head>
+
+
+<body>
+
+<div id="drup"></div>
+
+<script>
+
+    drupyter = new Drupyter('#drup', "blah", {height: 600, width: "100%"});
+
+</script>
+
+</body>
+</html>

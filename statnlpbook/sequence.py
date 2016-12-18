@@ -66,8 +66,8 @@ def draw_local_fg(length=3):
     result = graph()
     result.node("x", shape='circle', style='filled', fillcolor='lightgrey')
     for i in range(0, length):
-        node_id = "y" + str(i)
-        factor_id = "f" + str(i)
+        node_id = "y" + str(i + 1)
+        factor_id = "p(y{index} | x, {index})".format(index=i + 1)
         ys.node(node_id, **var_style)
         result.node(factor_id, **factor_style)
         result.edge(node_id, factor_id)
@@ -153,9 +153,9 @@ class LocalSequenceLabeler:
         train_classifier_x = self.vectorizer.fit_transform(to_classifier_x(train_data, feat))
         train_classifier_y = self.label_encoder.fit_transform(to_classifier_y(train_data))
         if "C" not in lr_params:
-            self.lr = LogisticRegression(C=10, **lr_params)
+            self.lr = LogisticRegression(C=10, fit_intercept=False, **lr_params)
         else:
-            self.lr = LogisticRegression(**lr_params)
+            self.lr = LogisticRegression(fit_intercept=False, **lr_params)
         self.lr.fit_transform(train_classifier_x, train_classifier_y)
 
         self.v_weights = self.vectorizer.inverse_transform(self.lr.coef_)
@@ -185,9 +185,20 @@ class LocalSequenceLabeler:
         errors = []
         for (x, y), y_guess in zip(data, guess):
             for i in range(0, len(y)):
-                if y[i] != y_guess[i] and filter_gold(y[i]) and filter_guess(y_guess[i]):
+                if filter_gold(y[i]) and filter_guess(y_guess[i]):
                     errors.append(SingleError(i, x, y, y_guess, model))
         return errors
+
+
+def find_contexts(data, pred, window=2):
+    result = []
+    for xs, ys in data:
+        for i in range(0, len(xs)):
+            if pred(xs[i]):
+                begin = max(0, i - window)
+                end = min(len(xs) - 1, i + window)
+                result.append((xs[begin:end], ys[begin:end]))
+    return result
 
 
 class SingleError:
@@ -220,8 +231,10 @@ class SingleError:
         def to_feat_key(key, value):
             if isinstance(value, bool):
                 return key
+            elif isinstance(value, float):
+                return key
             else:
-                return "{}={}".format(key, value)
+                return "{}:{}".format(key, value)
 
         gold_weights_row = "<td>" + "</td><td>".join(
             ["{:.2f}".format(gold_weights[to_feat_key(key, feats[key])]) for key in sorted_feat_keys]) + "</td>"
@@ -279,7 +292,7 @@ class MEMMSequenceLabeler:
 
         train_classifier_x = self.vectorizer.fit_transform(self.transform_input(train_data))
         train_classifier_y = self.label_encoder.fit_transform(to_classifier_y(train_data))
-        self.lr = LogisticRegression(**lr_params)
+        self.lr = LogisticRegression(fit_intercept=False, **lr_params)
         self.lr.fit_transform(train_classifier_x, train_classifier_y)
         self.v_weights = self.vectorizer.inverse_transform(self.lr.coef_)
 
@@ -317,6 +330,12 @@ class MEMMSequenceLabeler:
 
     def predict_scores(self, x, i, y):
         return self.lr.predict_log_proba(self.sklearn_repr(x, i, y))[0]
+
+    def predict_label_scores(self, x, i, y):
+        scores = self.predict_scores(x, i, y)
+        labels = self.labels()
+        return sorted([(labels[label_index], label_score) for label_index, label_score in enumerate(scores)],
+                      key=lambda x: -x[1])
 
     def predict_scores_hist(self, x, i, hist):
         scikit_x = self.vectorizer.transform([self.feat(x, i, padded_history(hist, 1, self.order))])
