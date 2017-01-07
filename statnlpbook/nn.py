@@ -65,7 +65,6 @@ def pipeline(data, vocab=None, max_sent_len_=None):
 # displaying the loaded data
 def show_data_instance(data_stories, data_orders, vocab, num_story):
     inverted_vocab = {value: key for key, value in vocab.items()}
-    num_story = 155
     print('Input:\n Story:')
     story_example = {}
     for i, elem in enumerate(data_stories[num_story]):
