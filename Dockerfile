@@ -16,7 +16,7 @@ USER $NB_USER
 
 RUN conda install --quiet --yes \
     -c jacksongs -c damianavila82 -c anaconda -c auto -c conda-forge  \
-    mpld3=0.2 \
+    mpld3=0.3 \
     graphviz=2.38.0 \
     tensorflow \
     rise && \
@@ -27,6 +27,7 @@ RUN pip3 install --upgrade pdfkit
 RUN pip3 install \
     graphviz==0.4.10 \
     git+git://github.com/robjstan/tikzmagic.git \
+    git+https://github.com/uclmr/egal.git \
     hide_code \
     python-crfsuite
 
@@ -38,10 +39,14 @@ RUN pip3 install \
 #    cd /home/jovyan/src/git/hide_code && \
 #    python3 setup.py install
 
-RUN jupyter-nbextension install rise --py --sys-prefix
+RUN jupyter-nbextension install rise --py --sys-prefix && \
+    jupyter-nbextension install egal --py --sys-prefix
 
 RUN jupyter-nbextension enable rise --py --sys-prefix && \
-    jupyter-nbextension enable calico-spell-check
+    jupyter-nbextension enable calico-spell-check && \
+    jupyter-nbextension enable  egal --py --sys-prefix
 
 # Customisation
 COPY .jupyter $HOME/
+
+WORKDIR /home/jovyan/work
