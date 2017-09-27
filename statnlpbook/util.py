@@ -131,7 +131,7 @@ def safe_log(x):
 
 
 class Table:
-    def __init__(self, rows, font_size="large", padding='initial'):
+    def __init__(self, rows, font_size="large", padding='5px'):
         self.font_size = font_size
         self.rows = rows
         self.padding = padding
