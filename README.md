@@ -23,7 +23,7 @@ Go to the [docker webpage](https://www.docker.com/) and follow the instruction f
 
 Next you can download the `stat-nlp-book` docker image like so:
 
-    docker pull riedelcastro/stat-nlp-book
+    docker pull riedelcastro/stat-nlp-book:2017
     
 ### Get Stat-NLP-Book Repository
 
