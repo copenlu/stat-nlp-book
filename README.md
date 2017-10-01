@@ -6,7 +6,7 @@ The easiest option for reading the book is via the static [nbviewer](http://nbvi
 While this does not allow you to change and execute code, it also doesn't require you to install software locally and only needs a browser.
 
 
-## Installation 
+## Docker installation 
 
 We assume you have a command line interface (CLI) in your OS 
 (bash, zsh, cygwin, git-bash, power-shell etc.). We assume this CLI sets 
@@ -47,7 +47,6 @@ Note: you need to be in the `stat-nlp-book` directory every time you want to run
 
 You are now ready to visit the [overview page](http://localhost:8888/notebooks/overview.ipynb) of the installed book. 
 
-
 ## Usage
 
 Once installed you can always run your notebook server by first changing
@@ -86,4 +85,40 @@ the top-level [overview page (local-link)](http://localhost:8888/notebooks/overv
 
 
 
- 
+## virtualenv installation [BETA]
+
+### Install virtualenv
+Follow the instructions [here](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
+In short:
+
+    pip3 install virtualenv
+
+### git clone the stat-nlp-book repository
+
+git clone https://github.com/uclmr/stat-nlp-book.git
+
+### Create virtual environment
+Enter the cloned stat-nlp-book directory:
+
+    cd stat-nlp-book
+
+and create the virtual environment:
+
+    virtualenv -p python3 venv
+
+### Enter the virtual environment
+
+    source venv/bin/activate
+
+### Install dependencies
+
+    pip3 install --upgrade pip
+    pip3 install git+git://github.com/robjstan/tikzmagic.git
+    pip3 install RISE
+    jupyter-nbextension install rise --py --sys-prefix
+    jupyter-nbextension enable rise --py --sys-prefix
+    pip3 install -r requirements.txt
+
+### Run the notebook
+
+    jupyter notebook
