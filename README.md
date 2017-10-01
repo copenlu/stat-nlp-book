@@ -43,7 +43,7 @@ Note: you need to be in the `stat-nlp-book` directory every time you want to run
 
 ### Run Notebook
 
-    docker run -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book 
+    docker run -it --rm -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book 
 
 You are now ready to visit the [overview page](http://localhost:8888/notebooks/overview.ipynb) of the installed book. 
 
@@ -53,7 +53,7 @@ You are now ready to visit the [overview page](http://localhost:8888/notebooks/o
 Once installed you can always run your notebook server by first changing
 into your local `stat-nlp-book` directory, and then executing:
 
-    docker run -it -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book 
+    docker run -it --rm -p 8888:8888 -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book 
     
 This is **assuming that your docker daemon is running** and that you are
 **in the `stat-nlp-book` directory**. How to run the docker daemon
@@ -71,7 +71,8 @@ or simply running it) to the files that we changed. In these cases `git`
     docker run -v $PWD:/home/jovyan/work riedelcastro/stat-nlp-book git checkout -- .
     
 If you want to keep your changes **create copies of the changed files**.
-Jupyter has a "Make a copy" option in the "File" menu for this. 
+Jupyter has a "Make a copy" option in the "File" menu for this. You can also create a clone of this repository
+to keep your own changes and merge our changes in a more controlled manner. 
 
 To get the actual updates then run
 
