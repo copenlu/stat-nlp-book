@@ -19,11 +19,11 @@ Go to the [docker webpage](https://www.docker.com/) and follow the instruction f
 
 ### Download Stat-NLP-Book Image
 
-[![](https://images.microbadger.com/badges/image/riedelcastro/stat-nlp-book-2017.svg)](https://microbadger.com/images/riedelcastro/stat-nlp-book-2017 "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/riedelcastro/stat-nlp-book.svg)](https://microbadger.com/images/riedelcastro/stat-nlp-book-2017 "Get your own image badge on microbadger.com")
 
 Next you can download the `stat-nlp-book` docker image like so:
 
-    docker pull riedelcastro/stat-nlp-book-2017
+    docker pull riedelcastro/stat-nlp-book
     
 ### Get Stat-NLP-Book Repository
 
