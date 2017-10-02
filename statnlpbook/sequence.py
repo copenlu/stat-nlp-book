@@ -156,18 +156,18 @@ class LocalSequenceLabeler:
             self.lr = LogisticRegression(C=10, fit_intercept=False, **lr_params)
         else:
             self.lr = LogisticRegression(fit_intercept=False, **lr_params)
-        self.lr.fit_transform(train_classifier_x, train_classifier_y)
+        self.lr.fit(train_classifier_x, train_classifier_y)
 
         self.v_weights = self.vectorizer.inverse_transform(self.lr.coef_)
 
     def weights(self, label):
-        v_index = self.label_encoder.transform(label)
-        v_weights = self.v_weights[v_index]
+        v_index = self.label_encoder.transform([label])
+        v_weights = self.v_weights[v_index[0]]
         return v_weights
 
     def plot_lr_weights(self, label, how_many=20, reverse=True):
-        v_index = self.label_encoder.transform(label)
-        v_weights = self.vectorizer.inverse_transform(self.lr.coef_)[v_index]
+        v_index = self.label_encoder.transform([label])
+        v_weights = self.vectorizer.inverse_transform(self.lr.coef_)[v_index[0]]
         sorted_weights = sorted(v_weights.items(), key=lambda t: t[1], reverse=reverse)
         return util.plot_bar_graph([w for _, w in sorted_weights[:how_many]],
                                    [f for f, _ in sorted_weights[:how_many]], rotation=45)
@@ -293,17 +293,17 @@ class MEMMSequenceLabeler:
         train_classifier_x = self.vectorizer.fit_transform(self.transform_input(train_data))
         train_classifier_y = self.label_encoder.fit_transform(to_classifier_y(train_data))
         self.lr = LogisticRegression(fit_intercept=False, **lr_params)
-        self.lr.fit_transform(train_classifier_x, train_classifier_y)
+        self.lr.fit(train_classifier_x, train_classifier_y)
         self.v_weights = self.vectorizer.inverse_transform(self.lr.coef_)
 
     def weights(self, label):
-        v_index = self.label_encoder.transform(label)
-        v_weights = self.v_weights[v_index]
+        v_index = self.label_encoder.transform([label])
+        v_weights = self.v_weights[v_index[0]]
         return v_weights
 
     def plot_lr_weights(self, label, how_many=20, reverse=True, feat_filter=lambda s: True):
-        v_index = self.label_encoder.transform(label)
-        v_weights = self.vectorizer.inverse_transform(self.lr.coef_)[v_index]
+        v_index = self.label_encoder.transform([label])
+        v_weights = self.vectorizer.inverse_transform(self.lr.coef_)[v_index[0]]
         # print(type(v_weights.items()))
         filtered = [(k, v) for k, v in v_weights.items() if feat_filter(k)]
         sorted_weights = sorted(filtered, key=lambda t: t[1],
