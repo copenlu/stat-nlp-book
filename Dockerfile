@@ -22,9 +22,9 @@ RUN conda install --quiet --yes \
     rise && \
     conda clean -tipsy
 
-RUN pip3 install --upgrade pdfkit
+RUN pip install --upgrade pdfkit
 
-RUN pip3 install \
+RUN pip install \
     graphviz==0.4.10 \
     git+git://github.com/robjstan/tikzmagic.git \
     git+https://github.com/uclmr/egal.git \
