@@ -425,15 +425,15 @@ def create_model_f_reader(max_lens_rel, max_lens_ents, repr_dim, vocab_size_rels
 
     # measuring compatibility between positive entity pairs and relations
     # used for ranking test data
-    dotprod_pos = tf.reduce_sum(tf.mul(ent_encodings_pos, rel_encodings_pos), 1)
+    dotprod_pos = tf.reduce_sum(tf.multiply(ent_encodings_pos, rel_encodings_pos), 1)
 
     # measuring compatibility between negative entity pairs and relations
-    dotprod_neg = tf.reduce_sum(tf.mul(ent_encodings_neg, rel_encodings_neg), 1)
+    dotprod_neg = tf.reduce_sum(tf.multiply(ent_encodings_neg, rel_encodings_neg), 1)
 
     # difference in dot product of positive and negative instances
     # used for BPR loss (ranking loss)
     diff_dotprod = tf.reduce_sum(
-        tf.mul(ent_encodings_pos, rel_encodings_pos) - tf.mul(ent_encodings_neg, rel_encodings_neg), 1)
+        tf.multiply(ent_encodings_pos, rel_encodings_pos) - tf.multiply(ent_encodings_neg, rel_encodings_neg), 1)
 
     return dotprod_pos, dotprod_neg, diff_dotprod, [relations_pos, relations_neg, ents_pos, ents_neg]
 
