@@ -226,20 +226,17 @@ class Trainer(object):
     Object representing a TensorFlow trainer.
     """
 
-    def __init__(self, optimizer, max_epochs, hooks=None):
+    def __init__(self, optimizer, max_epochs):
         self.loss = None
         self.optimizer = optimizer
         self.max_epochs = max_epochs
-        self.hooks = hooks
 
-    def __call__(self, batcher, placeholders, loss, model=None, session=None):
+    def __call__(self, batcher, placeholders, loss, session=None):
         self.loss = loss
         minimization_op = self.optimizer.minimize(loss)
-        close_session_after_training = False
 
         if session is None:
             session = tf.Session()
-            close_session_after_training = True  # no session existed before, we provide a temporary session
 
         init = tf.initialize_all_variables()
         session.run(init)
@@ -248,7 +245,6 @@ class Trainer(object):
             iteration = 1
             total_loss = 0
             total = 0
-            correct = 0
             for values in batcher:
                 iteration += 1
                 total += len(values[-1])
@@ -257,26 +253,30 @@ class Trainer(object):
                     feed_dict[placeholders[i]] = values[i]
                 _, current_loss = session.run([minimization_op, loss], feed_dict=feed_dict)
                 total_loss += current_loss
-                truth = np.argmax(values[-1], 1)
-                predicted = session.run(tf.arg_max(tf.nn.softmax(model), 1),
-                                     feed_dict=feed_dict)
-                correct += sum(truth == predicted)
 
-            print("Epoch " + str(epoch) +
-                  "\tLoss " + str(sum(total_loss)/len(total_loss)))
-
-            acc = float(correct) / total
-
-            print("Epoch " + str(epoch) +
-                  "\tAcc " + str(acc) +
-                  "\tCorrect " + str(correct) + "\tTotal " + str(total))
-
+            print("Epoch ", str(epoch), "\tLoss ", total_loss)
             epoch += 1
 
-        if close_session_after_training:
-            session.close()
+        return session
 
-        return self.max_epochs-1
+
+    def test(self, batcher, placeholders, model=None, session=None):
+        """
+        Test using a trained Tensorflow model
+        """
+
+        predicted_all = []
+        total = 0
+        for values in batcher:
+            total += len(values[-1])
+            feed_dict = {}
+            for i in range(0, len(placeholders)):
+                feed_dict[placeholders[i]] = values[i]
+            scores = session.run(model, feed_dict=feed_dict)
+            predicted_all.extend(scores)
+
+        session.close()
+        return predicted_all
 
 
 def load_model(sess, path, modelname):
