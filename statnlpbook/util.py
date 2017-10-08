@@ -131,15 +131,25 @@ def safe_log(x):
 
 
 class Table:
-    def __init__(self, rows, font_size="x-large", padding='5px', column_names=None):
+    def __init__(self, rows, font_size="x-large", padding='5px', column_names=None,
+                 number_format: str = "{0:.2f}"):
+        self.number_format = number_format
         self.column_names = column_names
         self.font_size = font_size
         self.rows = rows
         self.padding = padding
 
     def _repr_html_(self):
+
+        def format_elem(elem):
+            if isinstance(elem, float):
+                return self.number_format.format(elem)
+            else:
+                return elem
+
         rows = "".join(["<tr>{}<tr>".format(" ".join(
-            ["<td style='padding:{padding}'>{elem}</td>".format(padding=self.padding, elem=elem) for elem in row])) for
+            ["<td style='padding:{padding}'>{elem}</td>".format(padding=self.padding,
+                                                                elem=format_elem(elem)) for elem in row])) for
             row in self.rows])
         result = """<table style="font-size:{font_size};">{header}{rows}</table>""".format(
             header="" if self.column_names is None else
