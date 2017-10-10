@@ -10,8 +10,8 @@ While this does not allow you to change and execute code, it also doesn't requir
 
 We assume you have a command line interface (CLI) in your OS 
 (bash, zsh, cygwin, git-bash, power-shell etc.). We assume this CLI sets 
- the variable `($pwd)` to the current directory. If it doesn't replace
- all mentions of `($pwd)` with the current directory you are in. 
+ the variable `$(pwd)` to the current directory. If it doesn't replace
+ all mentions of `$(pwd)` with the current directory you are in. 
 
 ### Install Docker
 
@@ -29,7 +29,7 @@ Next you can download the `stat-nlp-book` docker image like so:
 
 You can use the git installation in the docker container to get the repository:
 
-    docker run -v "($pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git clone https://github.com/uclmr/stat-nlp-book.git  
+    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git clone https://github.com/uclmr/stat-nlp-book.git  
 
 Note: this will create a new `stat-nlp-book` directory in your current directory.
 
@@ -43,7 +43,7 @@ Note: you need to be in the `stat-nlp-book` directory every time you want to run
 
 ### Run Notebook
 
-    docker run -it --rm -p 8888:8888 -v "($pwd)":/home/jovyan/work riedelcastro/stat-nlp-book 
+    docker run -it --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book 
 
 You are now ready to visit the [overview page](http://localhost:8888/notebooks/overview.ipynb) of the installed book. 
 
@@ -52,7 +52,7 @@ You are now ready to visit the [overview page](http://localhost:8888/notebooks/o
 Once installed you can always run your notebook server by first changing
 into your local `stat-nlp-book` directory, and then executing:
 
-    docker run -it --rm -p 8888:8888 -v "($pwd)":/home/jovyan/work riedelcastro/stat-nlp-book 
+    docker run -it --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book 
     
 This is **assuming that your docker daemon is running** and that you are
 **in the `stat-nlp-book` directory**. How to run the docker daemon
@@ -67,7 +67,7 @@ or simply running it) to the files that we changed. In these cases `git`
  will complain when you do the update. To overcome this you can undo all
  your changes by executing:
  
-    docker run -v "($pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git checkout -- .
+    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git checkout -- .
     
 If you want to keep your changes **create copies of the changed files**.
 Jupyter has a "Make a copy" option in the "File" menu for this. You can also create a clone of this repository
@@ -75,7 +75,7 @@ to keep your own changes and merge our changes in a more controlled manner.
 
 To get the actual updates then run
 
-    docker run -v "($pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git pull
+    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git pull
     
 ### Access Content
 
