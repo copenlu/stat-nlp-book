@@ -1,3 +1,6 @@
+# OSX specific files
+.DS_Store
+
 # virtualenv files
 bookenv/
 

@@ -131,20 +131,35 @@ def safe_log(x):
 
 
 class Table:
-    def __init__(self, rows, font_size="large", padding='5px'):
+    def __init__(self, rows, font_size="x-large", padding='5px', column_names=None,
+                 number_format: str = "{0:.2f}"):
+        self.number_format = number_format
+        self.column_names = column_names
         self.font_size = font_size
         self.rows = rows
         self.padding = padding
 
     def _repr_html_(self):
+
+        def format_elem(elem):
+            if isinstance(elem, float):
+                return self.number_format.format(elem)
+            else:
+                return elem
+
         rows = "".join(["<tr>{}<tr>".format(" ".join(
-            ["<td style='padding:{padding}'>{elem}</td>".format(padding=self.padding, elem=elem) for elem in row])) for
-                        row in self.rows])
-        result = """<table style="font-size:{font_size};">{rows}</table>""".format(font_size=self.font_size, rows=rows)
+            ["<td style='padding:{padding}'>{elem}</td>".format(padding=self.padding,
+                                                                elem=format_elem(elem)) for elem in row])) for
+            row in self.rows])
+        result = """<table style="font-size:{font_size};">{header}{rows}</table>""".format(
+            header="" if self.column_names is None else
+            "<tr>{}</tr>".format("".join(["<th>{}</th>".format(name) for name in self.column_names])),
+            font_size=self.font_size,
+            rows=rows)
         return result
 
 
-def plot_confusion_matrix_dict(matrix_dict,rotation=45, outside_label=""):
+def plot_confusion_matrix_dict(matrix_dict, rotation=45, outside_label=""):
     labels = set([y for y, _ in matrix_dict.keys()] + [y for _, y in matrix_dict.keys()])
     sorted_labels = sorted(labels)
     matrix = np.zeros((len(sorted_labels), len(sorted_labels)))
@@ -159,4 +174,3 @@ def plot_confusion_matrix_dict(matrix_dict,rotation=45, outside_label=""):
     plt.yticks(tick_marks, sorted_labels)
     plt.tight_layout()
     # return matrix
-

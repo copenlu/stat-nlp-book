@@ -113,11 +113,10 @@ and create the virtual environment:
 ### Install dependencies
 
     pip3 install --upgrade pip
-    pip3 install git+git://github.com/robjstan/tikzmagic.git
-    pip3 install RISE
-    jupyter-nbextension install rise --py --sys-prefix
-    jupyter-nbextension enable rise --py --sys-prefix
     pip3 install -r requirements.txt
+    pip3 install git+git://github.com/robjstan/tikzmagic.git
+    jupyter-nbextension install rise --py --sys-prefix
+    jupyter-nbextension enable rise --py --sys-prefix    
 
 ### Run the notebook
 
@@ -168,11 +167,10 @@ and create the virtual environment:
 ### Install dependencies
 
     pip3 install --upgrade pip
+    pip3 install -r requirements.txt
     pip3 install git+git://github.com/robjstan/tikzmagic.git
-    pip3 install RISE
     jupyter-nbextension install rise --py --sys-prefix
     jupyter-nbextension enable rise --py --sys-prefix
-    pip3 install -r requirements.txt
 
 ### Run the notebook
 

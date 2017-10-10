@@ -40,11 +40,14 @@ RUN pip install \
 #    python3 setup.py install
 
 RUN jupyter-nbextension install rise --py --sys-prefix && \
-    jupyter-nbextension install egal --py --sys-prefix
+    jupyter-nbextension install egal --py --sys-prefix && \
+    jupyter nbextension install hide_code --py --sys-prefix
 
 RUN jupyter-nbextension enable rise --py --sys-prefix && \
-    jupyter-nbextension enable calico-spell-check && \
-    jupyter-nbextension enable  egal --py --sys-prefix
+    jupyter-nbextension enable calico-spell-check --sys-prefix && \
+    jupyter-nbextension enable egal --py --sys-prefix && \
+    jupyter-nbextension enable hide_code --py --sys-prefix && \
+    jupyter-serverextension enable hide_code --py --sys-prefix
 
 # Customisation
 COPY .jupyter $HOME/
