@@ -22,6 +22,7 @@ class LanguageModel(metaclass=abc.ABCMeta):
         Args:
             word: the word we need the probability of
             history: words to condition on.
+
         Returns:
             the probability p(w|history)
         """
