@@ -148,10 +148,11 @@ class Table:
                 return elem
 
         rows = "".join(["<tr>{}<tr>".format(" ".join(
-            ["<td style='padding:{padding}'>{elem}</td>".format(padding=self.padding,
-                                                                elem=format_elem(elem)) for elem in row])) for
+            ["<td style='padding:{padding}; text-align:left'>{elem}</td>".format(padding=self.padding,
+                                                                                 elem=format_elem(elem)) for elem in
+             row])) for
             row in self.rows])
-        result = """<table style="font-size:{font_size};">{header}{rows}</table>""".format(
+        result = """<table align="left" style="font-size:{font_size};">{header}{rows}</table>""".format(
             header="" if self.column_names is None else
             "<tr>{}</tr>".format("".join(["<th>{}</th>".format(name) for name in self.column_names])),
             font_size=self.font_size,
