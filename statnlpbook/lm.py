@@ -130,7 +130,7 @@ class OOVAwareLM(LanguageModel):
             missing_words: a set of words that are not in the base_lm vocab but expected
             in the vocab of this LM.
         """
-        super().__init__(base_lm.vocab | missing_words, base_lm.order)
+        super().__init__({w for w in (base_lm.vocab | missing_words) if w != oov}, base_lm.order)
         self.base_lm = base_lm
         self.oov = oov
         self.missing_words = missing_words
