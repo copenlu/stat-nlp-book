@@ -27,7 +27,7 @@ RUN pip install --upgrade pdfkit
 RUN pip install \
     graphviz==0.4.10 \
     git+git://github.com/robjstan/tikzmagic.git \
-    git+https://github.com/uclmr/egal.git \
+    git+https://github.com/uclmr/egal.git@v0.2.1 \
     hide_code \
     python-crfsuite
 
