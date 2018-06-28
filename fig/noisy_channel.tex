@@ -1,0 +1,13 @@
+\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\begin{document}
+\begin{tikzpicture}
+\tikzset{every node/.style={font=\sffamily,white}}
+
+\node at (0,0) (a) {};
+\node[fill=blue] at (2,0) (b) {Target};
+\node[fill=blue] at (5,0) (c) {Source};
+\draw[->] (a) -- (b) node [midway,above,font=\scriptsize,black]{$p(\mathbf{t})$};
+\draw[->] (b) -- (c) node [midway,above,font=\scriptsize,black]{$p(\mathbf{s}|\mathbf{t})$};
+\end{tikzpicture}
+\end{document}

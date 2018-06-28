@@ -1,74 +1,190 @@
-# stat-nlp-book
+# The Stat-NLP-Book Project
 
-### Live Online Version
+## Render Book Statically
 
-We are running a [live online version](http://stat-nlp-book.wolfe.ml:9000/template/statnlpbook/04_compgi19/02_overview) of the book. 
-Due to security reasons the content is not editable. If you want to play with the code and execute it you need to
-install the book locally, as described below.
+The easiest option for reading the book is via the static [nbviewer](http://nbviewer.jupyter.org/github/uclmr/stat-nlp-book/blob/python/overview.ipynb). 
+While this does not allow you to change and execute code, it also doesn't require you to install software locally and only needs a browser.
 
-### Setup and run the book
 
-Before running any of the following comands, make sure you have [all the prerequisites installed](https://github.com/uclmr/stat-nlp-book/wiki/Installation-of-prerequisites).
+## Docker installation 
 
-After installing prerequisites, install the following libraries to a local repository by running the following:
+We assume you have a command line interface (CLI) in your OS 
+(bash, zsh, cygwin, git-bash, power-shell etc.). We assume this CLI sets 
+ the variable `$(pwd)` to the current directory. If it doesn't replace
+ all mentions of `$(pwd)` with the current directory you are in. 
 
-    git clone https://github.com/sameersingh/scalaplot.git; cd scalaplot
-    mvn clean install -Dgpg.skip=true; cd ..
-    git clone https://github.com/sameersingh/htmlgen.git; cd htmlgen
-    mvn clean install -Dgpg.skip=true; cd ..
+### Install Docker
 
-Clone the repository (1), 
-Initialize sub-modules (wolfe & moro) (2), compile the project (3) and compile wolfe, and publish it to your local ivy repository (4), setup the project specific configuration file (5) and run moro (6).
+Go to the [docker webpage](https://www.docker.com/) and follow the instruction for your platform.
 
-1. `git clone https://github.com/uclmr/stat-nlp-book.git; cd stat-nlp-book`
-2. `git submodule update --init --recursive`
-3. `sbt compile`
-4. `cd wolfe; sbt compile; sbt publish-local; cd ..`
-5. `cp moro/conf/application-statnlpbook.conf moro/conf/application.conf`
-6. `cd moro; git checkout master; sbt run`
-7. `ln -s $PWD/src/main/moro/figures $PWD/moro/public/figures`
+### Download Stat-NLP-Book Image
 
-Remarks:
-- ignore `[error] (wolfe-examples/compile:doc) Scaladoc generation failed` when executing step 4
-- step 4 - You may have to delete the wolfe directory in the ivy cache to make sure you get the newest version.
-- step 6 - You might me bugged by your firewall here. Set it to allow the application. This step might take some time depending on your computer performance. Do not panic over warning messages :)
-- for windows users, split the commands at the semi-colon (;) and run them on separate lines. The cmd command equivalent for *cp* is *copy*.
+[![](https://images.microbadger.com/badges/image/riedelcastro/stat-nlp-book.svg)](https://microbadger.com/images/riedelcastro/stat-nlp-book "Get your own image badge on microbadger.com")
+
+Next you can download the `stat-nlp-book` docker image like so:
+
+    docker pull riedelcastro/stat-nlp-book
+    
+### Get Stat-NLP-Book Repository
+
+You can use the git installation in the docker container to get the repository:
+
+    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git clone https://github.com/uclmr/stat-nlp-book.git  
+
+Note: this will create a new `stat-nlp-book` directory in your current directory.
+
+### Change into Stat-NLP-Book directory
+
+We assume from here on that you are in the top level `stat-nlp-book` directory:
+
+    cd stat-nlp-book
+
+Note: you need to be in the `stat-nlp-book` directory every time you want to run/update the book.
+
+### Run Notebook
+
+    docker run -it --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book 
+
+You are now ready to visit the [overview page](http://localhost:8888/notebooks/overview.ipynb) of the installed book. 
+
+## Usage
+
+Once installed you can always run your notebook server by first changing
+into your local `stat-nlp-book` directory, and then executing:
+
+    docker run -it --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book 
+    
+This is **assuming that your docker daemon is running** and that you are
+**in the `stat-nlp-book` directory**. How to run the docker daemon
+depends on your system.
+
+### Update the notebook
+
+We frequently make changes to the book. To get these changes you
+should first make sure to clean your *local changes* to avoid merge 
+conflicts. That is, you might have made changes (by changing the code
+or simply running it) to the files that we changed. In these cases `git`
+ will complain when you do the update. To overcome this you can undo all
+ your changes by executing:
+ 
+    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git checkout -- .
+    
+If you want to keep your changes **create copies of the changed files**.
+Jupyter has a "Make a copy" option in the "File" menu for this. You can also create a clone of this repository
+to keep your own changes and merge our changes in a more controlled manner. 
+
+To get the actual updates then run
+
+    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git pull
+    
+### Access Content
+
+The repository contains a lot of material, some of which may not be ready
+for consumption yet. This is why you should always access content through
+the top-level [overview page (local-link)](http://localhost:8888/notebooks/overview.ipynb).
+
+
+
+## virtualenv installation [BETA]
+
+### Install virtualenv
+Follow the instructions [here](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
+In short:
+
+    pip3 install virtualenv
+
+### git clone the stat-nlp-book repository
+
+    git clone https://github.com/uclmr/stat-nlp-book.git
+
+### Create virtual environment
+Enter the cloned stat-nlp-book directory:
+
+    cd stat-nlp-book
+
+and create the virtual environment:
+
+    virtualenv -p python3 venv
+
+### Enter the virtual environment
+
+    source venv/bin/activate
+
+### Install dependencies
+
+    pip3 install --upgrade pip
+    pip3 install -r requirements.txt
+    pip3 install git+git://github.com/robjstan/tikzmagic.git
+    jupyter-nbextension install rise --py --sys-prefix
+    jupyter-nbextension enable rise --py --sys-prefix    
+
+### Run the notebook
+
+    jupyter notebook
     
 
-### Download Data
-To download the OHHLA files, execute the following in your stat-nlp-book folder (NOT in the script folder)
+## Installation on the UCL CS cluster
+### Install virtualenv
+When installing virtualenv (full instructions here [here](http://docs.python-guide.org/en/latest/dev/virtualenvs/)) on the CS cluster you will likely have to install it with the `--user` flag. In short:
 
-    ./scripts/download_ohhla.sh j_live
-    ./scripts/download_ohhla_txt.sh YFA_roots.html
-    ./scripts/download_ohhla_txt.sh YFA_rakim.html
+    pip3 install --user virtualenv
     
-Remarks:
-- the scripts make use of the *wget* command for downloading files. If you cannot run the scripts, open them with a text editor and run the command on the command line.
-- for windows users, you first need to instal *wget* for your windows command line.
+At this point `virtualenv` may not yet directly be found. You can solve this by finding its location via
 
-## Browse the Book
-Everytime you want to run the book, you have to go to the `stat-nlp-book/moro` directory and call `sbt run`.
+    pip3 show virtualenv
+    
+then appending the LOCATION shown (a directory name) to your $PATH variable using
+    
+    export PATH=$PATH:LOCATION
+    
+and giving permission to execute via
 
-Once you have the book running (step 6), proceed to the COMPGI19 entry point [here](http://localhost:9000/template/statnlpbook/04_compgi19/02_overview).
+    chmod u=rwx LOCATION/virtualenv.py
+    
+You should then be able to run `virtualenv.py`. You can check this by running
+    
+    virtualenv.py --version
 
-## Live editing in IntelliJ
+### git clone the stat-nlp-book repository
+Now we're ready to clone the notebook:
 
-You can write code in IntelliJ and access it from moro after you compile it (either through IntelliJ or sbt)
+    git clone https://github.com/uclmr/stat-nlp-book.git
+    
+### Create virtual environment
+Enter the cloned stat-nlp-book directory via
 
-To import the stat-nlp-book project to IntelliJ:
+    cd stat-nlp-book
 
-1. Open IntelliJ
-2. Select *Import Project* and select the stat-nlp-book directory
-3. Select *Import project from external module* and SBT under it, and click on OK.
-4. In the next window select auto-import and continue with importing.
+and create the virtual environment:
 
-## Contact your TAs
+    virtualenv.py -p python3 venv
 
-If you have a question that is not specific to you but could be interesting for other students as well, please post it in the [discussion forum](https://moodle.ucl.ac.uk/mod/forum/view.php?id=1402119). Otherwise, contact us directly.
+### Enter the virtual environment
 
-- [George Spithourakis](mailto:g.spithourakis.12@ucl.ac.uk)
-- [Johannes Welbl](mailto:johannes.welbl.14@ucl.ac.uk)
-- [Tim Rocktäschel](mailto:t.rocktaschel@cs.ucl.ac.uk)
-- [Matko Bošnjak](mailto:matko.bosnjak@cs.ucl.ac.uk)
+    source venv/bin/activate
+    
+    
+### Install dependencies
 
-When contacting us, please send a single e-mail to all four of us so we can coordinate the response.
+    pip3 install --upgrade pip
+    pip3 install -r requirements.txt
+    pip3 install git+git://github.com/robjstan/tikzmagic.git
+    jupyter-nbextension install rise --py --sys-prefix
+    jupyter-nbextension enable rise --py --sys-prefix
+
+### Run the notebook
+
+    jupyter notebook
+    
+    
+### Access in local browser
+With the notebook running on the UCL CS cluster, you can also access it locally via first setting up an SSH tunnel 
+
+    # run this on your local machine
+    ssh -N -f -L localhost:8157:localhost:8888 username@cs_cluster
+
+and accessing it through your local browser by entering 
+    
+    localhost:8157
+    
+into the browser address bar.
