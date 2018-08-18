@@ -29,7 +29,7 @@ Next you can download the `stat-nlp-book` docker image like so:
 
 You can use the git installation in the docker container to get the repository:
 
-    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git clone https://github.com/uclmr/stat-nlp-book.git  
+    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git clone https://github.com/coastalcph/stat-nlp-book.git  
 
 Note: this will create a new `stat-nlp-book` directory in your current directory.
 
@@ -95,7 +95,7 @@ In short:
 
 ### git clone the stat-nlp-book repository
 
-    git clone https://github.com/uclmr/stat-nlp-book.git
+    git clone https://github.com/coastalcph/stat-nlp-book.git
 
 ### Create virtual environment
 Enter the cloned stat-nlp-book directory:
@@ -121,70 +121,4 @@ and create the virtual environment:
 ### Run the notebook
 
     jupyter notebook
-    
-
-## Installation on the UCL CS cluster
-### Install virtualenv
-When installing virtualenv (full instructions here [here](http://docs.python-guide.org/en/latest/dev/virtualenvs/)) on the CS cluster you will likely have to install it with the `--user` flag. In short:
-
-    pip3 install --user virtualenv
-    
-At this point `virtualenv` may not yet directly be found. You can solve this by finding its location via
-
-    pip3 show virtualenv
-    
-then appending the LOCATION shown (a directory name) to your $PATH variable using
-    
-    export PATH=$PATH:LOCATION
-    
-and giving permission to execute via
-
-    chmod u=rwx LOCATION/virtualenv.py
-    
-You should then be able to run `virtualenv.py`. You can check this by running
-    
-    virtualenv.py --version
-
-### git clone the stat-nlp-book repository
-Now we're ready to clone the notebook:
-
-    git clone https://github.com/uclmr/stat-nlp-book.git
-    
-### Create virtual environment
-Enter the cloned stat-nlp-book directory via
-
-    cd stat-nlp-book
-
-and create the virtual environment:
-
-    virtualenv.py -p python3 venv
-
-### Enter the virtual environment
-
-    source venv/bin/activate
-    
-    
-### Install dependencies
-
-    pip3 install --upgrade pip
-    pip3 install -r requirements.txt
-    pip3 install git+git://github.com/robjstan/tikzmagic.git
-    jupyter-nbextension install rise --py --sys-prefix
-    jupyter-nbextension enable rise --py --sys-prefix
-
-### Run the notebook
-
-    jupyter notebook
-    
-    
-### Access in local browser
-With the notebook running on the UCL CS cluster, you can also access it locally via first setting up an SSH tunnel 
-
-    # run this on your local machine
-    ssh -N -f -L localhost:8157:localhost:8888 username@cs_cluster
-
-and accessing it through your local browser by entering 
-    
-    localhost:8157
-    
-into the browser address bar.
+   
