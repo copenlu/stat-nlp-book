@@ -15,7 +15,7 @@ We assume you have a command line interface (CLI) in your OS
 
 ### Install Docker
 
-Go to the [docker webpage](https://www.docker.com/) and follow the instruction for your platform.
+For Mac and Windows, go to the [docker webpage](https://www.docker.com/get-started) and follow the instruction for your platform. Instructions for Ubuntu can be found [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1). 
 
 ### Download Stat-NLP-Book Image
 
@@ -24,7 +24,13 @@ Go to the [docker webpage](https://www.docker.com/) and follow the instruction f
 Next you can download the `stat-nlp-book` docker image like so:
 
     docker pull riedelcastro/stat-nlp-book
+
+If you get a permission error here and at any later point, try prepending `sudo ` to the command:
+
+    sudo docker pull riedelcastro/stat-nlp-book
     
+This process may take a while, so use the time to start familiarising yourself with [the structure of the course](https://github.com/coastalcph/stat-nlp-book/blob/d88507ad8526ba5a1b56484c20bf72e91d753d5d/overview.ipynb).
+
 ### Get Stat-NLP-Book Repository
 
 You can use the git installation in the docker container to get the repository:
@@ -45,7 +51,7 @@ Note: you need to be in the `stat-nlp-book` directory every time you want to run
 
     docker run -it --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book 
 
-You are now ready to visit the [overview page](http://localhost:8888/notebooks/overview.ipynb) of the installed book. 
+You are now ready to visit the [overview page](http://localhost:8888/notebooks/overview.ipynb) *locally* through the installed book . 
 
 ## Usage
 
