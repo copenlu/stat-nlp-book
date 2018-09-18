@@ -200,6 +200,15 @@ def find_contexts(data, pred, window=2):
                 result.append((xs[begin:end], ys[begin:end]))
     return result
 
+def find_tag_contexts(data, pred, window=2):
+    result = []
+    for xs, ys in data:
+        for i in range(0, len(xs)):
+            if pred(xs[i], ys[i]):
+                begin = max(0, i - window)
+                end = min(len(xs) - 1, i + window)
+                result.append((xs[begin:end], ys[begin:end]))
+    return result
 
 class SingleError:
     def __init__(self, i, x, y, y_guess, model):
