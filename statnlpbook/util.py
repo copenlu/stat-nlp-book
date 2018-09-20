@@ -106,7 +106,7 @@ class Carousel:
         <div id="{0}" class="carousel" data-ride="carousel" data-interval="false">
           <!-- Controls -->
           <a href="#{0}" role="button2" data-slide="prev">Previous</a>
-          &nbsp
+          &nbsp;
           <a  href="#{0}" role="button2" data-slide="next">Next</a>
           <div class="carousel-inner" role="listbox">
           {1}
