@@ -2,7 +2,7 @@
 
 ## Render Book Statically
 
-The easiest option for reading the book is via the static [nbviewer](https://nbviewer.jupyter.org/github/coastalcph/stat-nlp-book/blob/master/overview.ipynb). 
+The easiest option for reading the book is via the static [nbviewer](https://nbviewer.jupyter.org/github/copenlu/stat-nlp-book/blob/master/overview.ipynb). 
 While this does not allow you to change and execute code, it also doesn't require you to install software locally and only needs a browser.
 
 
@@ -29,13 +29,13 @@ If you get a permission error here and at any later point, try prepending `sudo 
 
     sudo docker pull riedelcastro/stat-nlp-book
     
-This process may take a while, so use the time to start familiarising yourself with [the structure of the course](https://github.com/coastalcph/stat-nlp-book/blob/d88507ad8526ba5a1b56484c20bf72e91d753d5d/overview.ipynb).
+This process may take a while, so use the time to start familiarising yourself with [the structure of the course](https://github.com/copenlu/stat-nlp-book/blob/d88507ad8526ba5a1b56484c20bf72e91d753d5d/overview.ipynb).
 
 ### Get Stat-NLP-Book Repository
 
 You can use the git installation in the docker container to get the repository:
 
-    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git clone https://github.com/coastalcph/stat-nlp-book.git  
+    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git clone https://github.com/copenlu/stat-nlp-book.git  
 
 Note: this will create a new `stat-nlp-book` directory in your current directory.
 
@@ -101,7 +101,7 @@ In short:
 
 ### git clone the stat-nlp-book repository
 
-    git clone https://github.com/coastalcph/stat-nlp-book.git
+    git clone https://github.com/copenlu/stat-nlp-book.git
 
 ### Create virtual environment
 Enter the cloned stat-nlp-book directory:
