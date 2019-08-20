@@ -120,7 +120,6 @@ and create the virtual environment:
 
     pip3 install --upgrade pip
     pip3 install -r requirements.txt
-    pip3 install git+git://github.com/robjstan/tikzmagic.git
     jupyter-nbextension install rise --py --sys-prefix
     jupyter-nbextension enable rise --py --sys-prefix    
 
