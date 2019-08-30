@@ -1,7 +1,15 @@
 # The Stat-NLP-Book Project
 
-## Render Book Statically
+There are several ways to set-up and run the project:
+1. [ Render Book Statically ](#render-book-statically)
+2. [ Docker installation ](#install-docker) (*recommended)
+3. [ Set-up a Local Virtual Environment ](#set-up-a-local-virtual-environment)
 
+Important notes:
+1. [ Access Content ](#access-content)
+2. [ Pull new content regularly ](#pull-new-content-regularly)
+
+## Render Book Statically
 The easiest option for reading the book is via the static [nbviewer](https://nbviewer.jupyter.org/github/copenlu/stat-nlp-book/blob/master/overview.ipynb). 
 While this does not allow you to change and execute code, it also doesn't require you to install software locally and only needs a browser.
 
@@ -9,7 +17,7 @@ While this does not allow you to change and execute code, it also doesn't requir
 ## Docker installation 
 
 We assume you have a command line interface (CLI) in your OS 
-(bash, zsh, cygwin, git-bash, power-shell etc.). We assume this CLI sets 
+(bash, zsh, cygwin, git-bash, power-shell, etc.). We assume this CLI sets 
  the variable `$(pwd)` to the current directory. If it doesn't replace
  all mentions of `$(pwd)` with the current directory you are in. 
 
@@ -21,7 +29,7 @@ For Mac and Windows, go to the [docker webpage](https://www.docker.com/get-start
 
 [![](https://images.microbadger.com/badges/image/riedelcastro/stat-nlp-book.svg)](https://microbadger.com/images/riedelcastro/stat-nlp-book "Get your own image badge on microbadger.com")
 
-Next you can download the `stat-nlp-book` docker image like so:
+Next, you can download the `stat-nlp-book` docker image like so:
 
     docker pull riedelcastro/stat-nlp-book
 
@@ -53,7 +61,7 @@ Note: you need to be in the `stat-nlp-book` directory every time you want to run
 
 You are now ready to visit the [overview page](http://localhost:8888/notebooks/overview.ipynb) *locally* through the installed book . 
 
-## Usage
+### Usage
 
 Once installed you can always run your notebook server by first changing
 into your local `stat-nlp-book` directory, and then executing:
@@ -82,22 +90,8 @@ to keep your own changes and merge our changes in a more controlled manner.
 To get the actual updates then run
 
     docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git pull
-    
-### Access Content
 
-The repository contains a lot of material, some of which may not be ready
-for consumption yet. This is why you should always access content through
-the top-level [overview page (local-link)](http://localhost:8888/notebooks/overview.ipynb).
-
-
-
-## virtualenv installation [BETA]
-
-### Install virtualenv
-Follow the instructions [here](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
-In short:
-
-    pip3 install virtualenv
+## Set-up a Local Virtual Environment
 
 ### git clone the stat-nlp-book repository
 
@@ -110,11 +104,13 @@ Enter the cloned stat-nlp-book directory:
 
 and create the virtual environment:
 
-    virtualenv -p python3 venv
+    python -m venv nlp_venv
+
+(for python<3.3, install and use virtualenv instead)
 
 ### Enter the virtual environment
 
-    source venv/bin/activate
+    source nlp_venv/bin/activate
 
 ### Install dependencies
 
@@ -123,7 +119,17 @@ and create the virtual environment:
     jupyter-nbextension install rise --py --sys-prefix
     jupyter-nbextension enable rise --py --sys-prefix    
 
-### Run the notebook
+### Run the notebook server 
+(the UI of the server will be opened automatically)
 
     jupyter notebook
    
+
+## Access Content
+
+The repository contains a lot of material, some of which may not be ready
+for consumption yet. This is why you should always access content through
+the top-level [overview page (local-link)](http://localhost:8888/notebooks/overview.ipynb).
+
+## Pull new content regularly
+Receive notificationf for new updates by "Watch" -ing the repo.
