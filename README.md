@@ -27,15 +27,15 @@ For Mac and Windows, go to the [docker webpage](https://www.docker.com/get-start
 
 ### Download Stat-NLP-Book Image
 
-[![](https://images.microbadger.com/badges/image/riedelcastro/stat-nlp-book.svg)](https://microbadger.com/images/riedelcastro/stat-nlp-book "Get your own image badge on microbadger.com")
+*Note that we have updated the docker image - the new one is hosted at bjerva/stat-nlp-book:pytorch*
 
 Next, you can download the `stat-nlp-book` docker image like so:
 
-    docker pull riedelcastro/stat-nlp-book
+    docker pull bjerva/stat-nlp-book:pytorch
 
 If you get a permission error here and at any later point, try prepending `sudo ` to the command:
 
-    sudo docker pull riedelcastro/stat-nlp-book
+    sudo docker pull bjerva/stat-nlp-book:pytorch
     
 This process may take a while, so use the time to start familiarising yourself with [the structure of the course](https://github.com/copenlu/stat-nlp-book/blob/d88507ad8526ba5a1b56484c20bf72e91d753d5d/overview.ipynb).
 
@@ -43,7 +43,7 @@ This process may take a while, so use the time to start familiarising yourself w
 
 You can use the git installation in the docker container to get the repository:
 
-    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git clone https://github.com/copenlu/stat-nlp-book.git  
+    docker run -v "$(pwd)":/home/jovyan/work bjerva/stat-nlp-book:pytorch git clone https://github.com/copenlu/stat-nlp-book.git  
 
 Note: this will create a new `stat-nlp-book` directory in your current directory.
 
@@ -57,7 +57,7 @@ Note: you need to be in the `stat-nlp-book` directory every time you want to run
 
 ### Run Notebook
 
-    docker run -it --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book 
+    docker run -it --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work bjerva/stat-nlp-book:pytorch 
 
 You are now ready to visit the [overview page](http://localhost:8888/notebooks/overview.ipynb) *locally* through the installed book . 
 
@@ -66,7 +66,7 @@ You are now ready to visit the [overview page](http://localhost:8888/notebooks/o
 Once installed you can always run your notebook server by first changing
 into your local `stat-nlp-book` directory, and then executing:
 
-    docker run -it --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book 
+    docker run -it --rm -p 8888:8888 -v "$(pwd)":/home/jovyan/work bjerva/stat-nlp-book:pytorch 
     
 This is **assuming that your docker daemon is running** and that you are
 **in the `stat-nlp-book` directory**. How to run the docker daemon
@@ -81,7 +81,7 @@ or simply running it) to the files that we changed. In these cases `git`
  will complain when you do the update. To overcome this you can undo all
  your changes by executing:
  
-    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git checkout -- .
+    docker run -v "$(pwd)":/home/jovyan/work bjerva/stat-nlp-book:pytorch git checkout -- .
     
 If you want to keep your changes **create copies of the changed files**.
 Jupyter has a "Make a copy" option in the "File" menu for this. You can also create a clone of this repository
@@ -89,7 +89,7 @@ to keep your own changes and merge our changes in a more controlled manner.
 
 To get the actual updates then run
 
-    docker run -v "$(pwd)":/home/jovyan/work riedelcastro/stat-nlp-book git pull
+    docker run -v "$(pwd)":/home/jovyan/work bjerva/stat-nlp-book:pytorch git pull
 
 ## Set-up a Local Virtual Environment
 
