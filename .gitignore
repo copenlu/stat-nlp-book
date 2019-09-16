@@ -80,3 +80,8 @@ target/
 
 # pycharm
 .idea
+/data/gmb/*.txt
+data/scienceie/dev
+data/scienceie/train2
+data/scienceie/*.py
+data/scienceie/*.md
