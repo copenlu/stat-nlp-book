@@ -10,7 +10,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #
-# Authors: Milan Straka, Martin Popel <surname@ufal.mff.cuni.cz>
+# Authors: Milan Straka, Martin Popel <surname@ufal.mff.cuni.cz>, Daniel Hershcovich
 #
 # Changelog:
 # - [12 Apr 2018] Version 0.9: Initial release.
@@ -21,6 +21,7 @@
 #                              just ASCII space.
 # - [25 Jun 2018] Version 1.2: Use python3 in the she-bang (instead of python).
 #                              In Python2, make the whole computation use `unicode` strings.
+# - [26 Sep 2019] Stripped-down version for NLP course.
 
 # Command line usage
 # ------------------
@@ -35,17 +36,9 @@
 #   - Words: how well can the gold words be aligned to system words
 #   - UPOS: using aligned words, how well does UPOS match
 #   - XPOS: using aligned words, how well does XPOS match
-#   - UFeats: using aligned words, how well does universal FEATS match
-#   - AllTags: using aligned words, how well does UPOS+XPOS+FEATS match
 #   - Lemmas: using aligned words, how well does LEMMA match
 #   - UAS: using aligned words, how well does HEAD match
 #   - LAS: using aligned words, how well does HEAD+DEPREL(ignoring subtypes) match
-#   - CLAS: using aligned words with content DEPREL, how well does
-#       HEAD+DEPREL(ignoring subtypes) match
-#   - MLAS: using aligned words with content DEPREL, how well does
-#       HEAD+DEPREL(ignoring subtypes)+UPOS+UFEATS+FunctionalChildren(DEPREL+UPOS+UFEATS) match
-#   - BLEX: using aligned words with content DEPREL, how well does
-#       HEAD+DEPREL(ignoring subtypes)+LEMMAS match
 # - if -c is given, raw counts of correct/gold_total/system_total/aligned words are printed
 #   instead of precision/recall/F1/AlignedAccuracy for all metrics.
 
@@ -99,25 +92,7 @@ import unicodedata
 import unittest
 
 # CoNLL-U column names
-ID, FORM, LEMMA, UPOS, XPOS, FEATS, HEAD, DEPREL, DEPS, MISC = range(10)
-
-# Content and functional relations
-CONTENT_DEPRELS = {
-    "nsubj", "obj", "iobj", "csubj", "ccomp", "xcomp", "obl", "vocative",
-    "expl", "dislocated", "advcl", "advmod", "discourse", "nmod", "appos",
-    "nummod", "acl", "amod", "conj", "fixed", "flat", "compound", "list",
-    "parataxis", "orphan", "goeswith", "reparandum", "root", "dep"
-}
-
-FUNCTIONAL_DEPRELS = {
-    "aux", "cop", "mark", "det", "clf", "case", "cc"
-}
-
-UNIVERSAL_FEATURES = {
-    "PronType", "NumType", "Poss", "Reflex", "Foreign", "Abbr", "Gender",
-    "Animacy", "Number", "Case", "Definite", "Degree", "VerbForm", "Mood",
-    "Tense", "Aspect", "Voice", "Evident", "Polarity", "Person", "Polite"
-}
+ID, FORM, LEMMA, UPOS, XPOS, _, HEAD, DEPREL, _, _ = range(10)
 
 # UD Error is used when raising exceptions in this module
 class UDError(Exception):
@@ -161,16 +136,8 @@ def load_conllu(file):
             self.is_multiword = is_multiword
             # Reference to the UDWord instance representing the HEAD (or None if root).
             self.parent = None
-            # List of references to UDWord instances representing functional-deprel children.
-            self.functional_children = []
-            # Only consider universal FEATS.
-            self.columns[FEATS] = "|".join(sorted(feat for feat in columns[FEATS].split("|")
-                                                  if feat.split("=", 1)[0] in UNIVERSAL_FEATURES))
             # Let's ignore language-specific deprel subtypes.
             self.columns[DEPREL] = columns[DEPREL].split(":")[0]
-            # Precompute which deprels are CONTENT_DEPRELS and which FUNCTIONAL_DEPRELS
-            self.is_content_deprel = self.columns[DEPREL] in CONTENT_DEPRELS
-            self.is_functional_deprel = self.columns[DEPREL] in FUNCTIONAL_DEPRELS
 
     ud = UDRepresentation()
 
@@ -207,11 +174,6 @@ def load_conllu(file):
 
             for word in ud.words[sentence_start:]:
                 process_word(word)
-            # func_children cannot be assigned within process_word
-            # because it is called recursively and may result in adding one child twice.
-            for word in ud.words[sentence_start:]:
-                if word.parent and word.is_functional_deprel:
-                    word.parent.functional_children.append(word)
 
             # Check there is a single root node
             if len([word for word in ud.words[sentence_start:] if word.parent is None]) != 1:
@@ -456,20 +418,9 @@ def evaluate(gold_ud, system_ud):
         "Words": alignment_score(alignment),
         "UPOS": alignment_score(alignment, lambda w, _: w.columns[UPOS]),
         "XPOS": alignment_score(alignment, lambda w, _: w.columns[XPOS]),
-        "UFeats": alignment_score(alignment, lambda w, _: w.columns[FEATS]),
-        "AllTags": alignment_score(alignment, lambda w, _: (w.columns[UPOS], w.columns[XPOS], w.columns[FEATS])),
         "Lemmas": alignment_score(alignment, lambda w, ga: w.columns[LEMMA] if ga(w).columns[LEMMA] != "_" else "_"),
         "UAS": alignment_score(alignment, lambda w, ga: ga(w.parent)),
         "LAS": alignment_score(alignment, lambda w, ga: (ga(w.parent), w.columns[DEPREL])),
-        "CLAS": alignment_score(alignment, lambda w, ga: (ga(w.parent), w.columns[DEPREL]),
-                                filter_fn=lambda w: w.is_content_deprel),
-        "MLAS": alignment_score(alignment, lambda w, ga: (ga(w.parent), w.columns[DEPREL], w.columns[UPOS], w.columns[FEATS],
-                                                         [(ga(c), c.columns[DEPREL], c.columns[UPOS], c.columns[FEATS])
-                                                          for c in w.functional_children]),
-                                filter_fn=lambda w: w.is_content_deprel),
-        "BLEX": alignment_score(alignment, lambda w, ga: (ga(w.parent), w.columns[DEPREL],
-                                                          w.columns[LEMMA] if ga(w).columns[LEMMA] != "_" else "_"),
-                                filter_fn=lambda w: w.is_content_deprel),
     }
 
 
@@ -505,15 +456,13 @@ def main():
     # Print the evaluation
     if not args.verbose and not args.counts:
         print("LAS F1 Score: {:.2f}".format(100 * evaluation["LAS"].f1))
-        print("MLAS Score: {:.2f}".format(100 * evaluation["MLAS"].f1))
-        print("BLEX Score: {:.2f}".format(100 * evaluation["BLEX"].f1))
     else:
         if args.counts:
             print("Metric     | Correct   |      Gold | Predicted | Aligned")
         else:
             print("Metric     | Precision |    Recall |  F1 Score | AligndAcc")
         print("-----------+-----------+-----------+-----------+-----------")
-        for metric in["Tokens", "Sentences", "Words", "UPOS", "XPOS", "UFeats", "AllTags", "Lemmas", "UAS", "LAS", "CLAS", "MLAS", "BLEX"]:
+        for metric in["Tokens", "Sentences", "Words", "UPOS", "XPOS", "Lemmas", "UAS", "LAS"]:
             if args.counts:
                 print("{:11}|{:10} |{:10} |{:10} |{:10}".format(
                     metric,
@@ -533,53 +482,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# Tests, which can be executed with `python -m unittest conll18_ud_eval`.
-class TestAlignment(unittest.TestCase):
-    @staticmethod
-    def _load_words(words):
-        """Prepare fake CoNLL-U files with fake HEAD to prevent multiple roots errors."""
-        lines, num_words = [], 0
-        for w in words:
-            parts = w.split(" ")
-            if len(parts) == 1:
-                num_words += 1
-                lines.append("{}\t{}\t_\t_\t_\t_\t{}\t_\t_\t_".format(num_words, parts[0], int(num_words>1)))
-            else:
-                lines.append("{}-{}\t{}\t_\t_\t_\t_\t_\t_\t_\t_".format(num_words + 1, num_words + len(parts) - 1, parts[0]))
-                for part in parts[1:]:
-                    num_words += 1
-                    lines.append("{}\t{}\t_\t_\t_\t_\t{}\t_\t_\t_".format(num_words, part, int(num_words>1)))
-        return load_conllu((io.StringIO if sys.version_info >= (3, 0) else io.BytesIO)("\n".join(lines+["\n"])))
-
-    def _test_exception(self, gold, system):
-        self.assertRaises(UDError, evaluate, self._load_words(gold), self._load_words(system))
-
-    def _test_ok(self, gold, system, correct):
-        metrics = evaluate(self._load_words(gold), self._load_words(system))
-        gold_words = sum((max(1, len(word.split(" ")) - 1) for word in gold))
-        system_words = sum((max(1, len(word.split(" ")) - 1) for word in system))
-        self.assertEqual((metrics["Words"].precision, metrics["Words"].recall, metrics["Words"].f1),
-                         (correct / system_words, correct / gold_words, 2 * correct / (gold_words + system_words)))
-
-    def test_exception(self):
-        self._test_exception(["a"], ["b"])
-
-    def test_equal(self):
-        self._test_ok(["a"], ["a"], 1)
-        self._test_ok(["a", "b", "c"], ["a", "b", "c"], 3)
-
-    def test_equal_with_multiword(self):
-        self._test_ok(["abc a b c"], ["a", "b", "c"], 3)
-        self._test_ok(["a", "bc b c", "d"], ["a", "b", "c", "d"], 4)
-        self._test_ok(["abcd a b c d"], ["ab a b", "cd c d"], 4)
-        self._test_ok(["abc a b c", "de d e"], ["a", "bcd b c d", "e"], 5)
-
-    def test_alignment(self):
-        self._test_ok(["abcd"], ["a", "b", "c", "d"], 0)
-        self._test_ok(["abc", "d"], ["a", "b", "c", "d"], 1)
-        self._test_ok(["a", "bc", "d"], ["a", "b", "c", "d"], 2)
-        self._test_ok(["a", "bc b c", "d"], ["a", "b", "cd"], 2)
-        self._test_ok(["abc a BX c", "def d EX f"], ["ab a b", "cd c d", "ef e f"], 4)
-        self._test_ok(["ab a b", "cd bc d"], ["a", "bc", "d"], 2)
-        self._test_ok(["a", "bc b c", "d"], ["ab AX BX", "cd CX a"], 1)
