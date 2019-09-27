@@ -15,20 +15,18 @@ def load_conllu(file_path):
         for line_no, line in enumerate(list(f) + [""]):  # Append empty line to handle last
             try:
                 line = line.strip()
-                if not line:  # Empty line
-                    if tree:  # Finalize tree and add to list
-                        for node in tree["nodes"][1:]:  # Add this node to head's dependents list
-                            tree["nodes"][int(node["head"])]["dependents"].append(node)
-                        trees.append(tree)
-                    tree = None  # Prepare to read a new sentence
-                elif tree is None:  # Creating a new tree
-                    root = {"index": "0", "form": "ROOT", "dependents": []}
+                if tree is None:  # Creating a new tree
+                    root = {"index": "0", "form": "ROOT"}
                     tree = {"nodes": [root]}  # Initialize node list
+                if not line:  # Empty line
+                    if tree and len(tree["nodes"]) > 1:  # Finalize tree and add to list
+                        trees.append(tree)
+                        tree = None
                 elif line.startswith("#"):  # Handle sent_id and text comments
                     key, _, value = line[1:].strip().partition(" = ")
                     tree[key] = value
                 else:  # Read columns into new node
-                    node = {"dependents": []}
+                    node = {}
                     node["index"], node["form"], node["lemma"], node["upos"], \
                         node["xpos"], _, node["head"], node["deprel"], _, _ = line.split("\t")
                     if not {".", "-"}.intersection(node["index"]):  # Skip special nodes
