@@ -46,7 +46,7 @@ def render_transitions(transitions, tokens):
 
 def render_transitions_displacy(transitions, tokens):
     def clean_tokens(tokens):
-        return [t[:-2] for t in tokens]
+        return [t["form"] for t in tokens]
     class Output:
         def _repr_html_(self):
             rows = ["<tr><td>buffer</td><td>stack</td><td>parse</td><td>action</td></tr>"]
