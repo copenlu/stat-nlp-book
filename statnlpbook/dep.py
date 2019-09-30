@@ -9,31 +9,47 @@ def load_conllu(file_path):
     Returns:
         A sequence of Python object or dict representing parsed sentences.
     """
+    if isinstance(file_path, str):
+        return load_conllu_lines(file_path.splitlines())
+    with open(file_path, encoding="utf-8") as f:
+        return load_conllu_lines(f, file_path)
+
+
+def load_conllu_lines(f, file_path=""):
     trees = []
     tree = None
-    with open(file_path, encoding="utf-8") as f:
-        for line_no, line in enumerate(list(f) + [""]):  # Append empty line to handle last
-            try:
-                line = line.strip()
-                if tree is None:  # Creating a new tree
-                    root = {"index": "0", "form": "ROOT"}
-                    tree = {"nodes": [root]}  # Initialize node list
-                if not line:  # Empty line
-                    if tree and len(tree["nodes"]) > 1:  # Finalize tree and add to list
-                        trees.append(tree)
-                        tree = None
-                elif line.startswith("#"):  # Handle sent_id and text comments
-                    key, _, value = line[1:].strip().partition(" = ")
-                    tree[key] = value
-                else:  # Read columns into new node
-                    node = {}
-                    node["index"], node["form"], node["lemma"], node["upos"], \
-                        node["xpos"], _, node["head"], node["deprel"], _, _ = line.split("\t")
-                    if not {".", "-"}.intersection(node["index"]):  # Skip special nodes
-                        tree["nodes"].append(node)
-            except:
-                raise IOError("Failed loading line %d in '%s':\n%s" % (line_no, file_path, line))
+    for line_no, line in enumerate(list(f) + [""]):  # Append empty line to handle last
+        try:
+            line = line.strip()
+            if tree is None:  # Creating a new tree
+                root = {"index": "0", "form": "ROOT"}
+                tree = {"nodes": [root]}  # Initialize node list
+            if not line:  # Empty line
+                if tree and len(tree["nodes"]) > 1:  # Finalize tree and add to list
+                    trees.append(tree)
+                    tree = None
+            elif line.startswith("#"):  # Handle sent_id and text comments
+                key, _, value = line[1:].strip().partition(" = ")
+                tree[key] = value
+            else:  # Read columns into new node
+                node = {}
+                node["index"], node["form"], node["lemma"], node["upos"], \
+                node["xpos"], _, node["head"], node["deprel"], _, _ = line.split("\t")
+                if not {".", "-"}.intersection(node["index"]):  # Skip special nodes
+                    tree["nodes"].append(node)
+        except:
+            raise IOError("Failed loading line %d in '%s':\n%s" % (line_no, file_path, line))
     return trees
+
+
+def arcs_tokens(tree):
+    arcs = {(int(node["head"]), int(node["index"]), node["deprel"]) for node in tree["nodes"][1:]}
+    tokens = [node["form"] for node in tree["nodes"]]
+    return arcs, tokens
+
+
+def load_arcs_tokens(lines):
+    return arcs_tokens(load_conllu(lines)[0])
 
 
 def save_to_conllu(data, file_path):
