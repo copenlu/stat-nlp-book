@@ -12,7 +12,7 @@ def load_conllu(file_path):
     try:
         with open(file_path, encoding="utf-8") as f:
             return load_conllu_lines(f, file_path)
-    except FileNotFoundError:
+    except OSError:
         return load_conllu_lines(file_path.splitlines())
 
 
