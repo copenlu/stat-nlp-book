@@ -32,8 +32,10 @@ def render_tree(tokens, edges):
 def render_transitions(transitions, tokens):
     class Output:
         def _repr_html_(self):
-            rows = ["<tr><td>buffer</td><td>stack</td><td>parse</td><td>action</td></tr>"]
-            rows += ["<tr><td>{}</td><td>{}</td><td>{}</td><td>{}</td></tr>".format(
+            rows = ["<tr><td style='font-size: x-large;'>buffer</td><td style='font-size: x-large;'>stack</td>"
+                    "<td style='font-size: x-large;'>parse</td><td style='font-size: x-large;'>action</td></tr>"]
+            rows += ["<tr><td style='font-size: x-large;'>{}</td><td style='font-size: x-large;'>{}</td>" \
+                     "<td style='font-size: x-large;'>{}</td><td style='font-size: x-large;'>{}</td></tr>".format(
                 " ".join(configuration.buffer),
                 " ".join(configuration.stack),
                 render_tree(tokens, configuration.arcs)._repr_svg_(),
@@ -49,8 +51,10 @@ def render_transitions_displacy(transitions, tokens):
         return [t["form"] for t in tokens]
     class Output:
         def _repr_html_(self):
-            rows = ["<tr><td>buffer</td><td>stack</td><td>parse</td><td>action</td></tr>"]
-            rows += ["<tr><td>{}</td><td>{}</td><td>{}</td><td>{}</td></tr>".format(
+            rows = ["<tr><td style='font-size: x-large;'>buffer</td><td style='font-size: x-large;'>stack</td>"
+                    "<td style='font-size: x-large;'>parse</td><td style='font-size: x-large;'>action</td></tr>"]
+            rows += ["<tr><td style='font-size: x-large;'>{}</td><td style='font-size: x-large;'>{}</td>" \
+                     "<td style='font-size: x-large;'>{}</td><td style='font-size: x-large;'>{}</td></tr>".format(
                 " ".join(clean_tokens(configuration.buffer)),
                 " ".join(clean_tokens(configuration.stack)),
                 render_displacy(*to_displacy_graph(list(configuration.arcs), list(tokens),
