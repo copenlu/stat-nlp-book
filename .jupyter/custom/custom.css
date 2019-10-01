@@ -8,3 +8,12 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.rendered_html td {
+    font-size: x-large;
+    text-align: left; !important
+}
+.rendered_html th {
+    font-size: x-large;
+    text-align: left; !important
+}
