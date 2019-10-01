@@ -9,10 +9,11 @@ def load_conllu(file_path):
     Returns:
         A sequence of Python object or dict representing parsed sentences.
     """
-    if isinstance(file_path, str):
+    try:
+        with open(file_path, encoding="utf-8") as f:
+            return load_conllu_lines(f, file_path)
+    except FileNotFoundError:
         return load_conllu_lines(file_path.splitlines())
-    with open(file_path, encoding="utf-8") as f:
-        return load_conllu_lines(f, file_path)
 
 
 def load_conllu_lines(f, file_path=""):
