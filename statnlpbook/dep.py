@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-def load_conllu(file_path):
+def load_conllu(file_path, test=False):
     """
     Load a given CoNLL-U file and return a sequence of Python object or dict representing parsed sentences.
     Args:
@@ -11,12 +11,12 @@ def load_conllu(file_path):
     """
     try:
         with open(file_path, encoding="utf-8") as f:
-            return load_conllu_lines(f, file_path)
+            return load_conllu_lines(f, file_path, test=test)
     except OSError:
-        return load_conllu_lines(file_path.splitlines())
+        return load_conllu_lines(file_path.splitlines(), test=test)
 
 
-def load_conllu_lines(f, file_path=""):
+def load_conllu_lines(f, file_path="", test=False):
     trees = []
     tree = None
     for line_no, line in enumerate(list(f) + [""]):  # Append empty line to handle last
@@ -36,6 +36,8 @@ def load_conllu_lines(f, file_path=""):
                 node = {}
                 node["index"], node["form"], node["lemma"], node["upos"], \
                 node["xpos"], _, node["head"], node["deprel"], _, _ = line.split("\t")
+                if test:
+                    node["head"] = node["deprel"] = "_"
                 if not {".", "-"}.intersection(node["index"]):  # Skip special nodes
                     tree["nodes"].append(node)
         except:
@@ -93,9 +95,9 @@ def evaluate_las(gold, pred):
     return correct / total
 
 
-def try_load_conllu(file_or_sentences):
+def try_load_conllu(file_or_sentences, test=False):
     try:
-        return load_conllu(file_or_sentences)
+        return load_conllu(file_or_sentences, test=test)
     except TypeError:
         return file_or_sentences
 
