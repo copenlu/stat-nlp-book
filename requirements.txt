@@ -76,7 +76,7 @@ nbconvert==4.3.0
 nbformat==4.4.0
 networkx==2.0
 nltk==3.4.5
-notebook==5.1.0
+notebook==5.7.8
 numba==0.40.1
 numexpr==2.6.2
 numpy==1.18.5
