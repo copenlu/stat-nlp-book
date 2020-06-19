@@ -161,7 +161,7 @@ vincent==0.4.4
 wasabi==0.2.2
 wcwidth==0.1.7
 webencodings==0.5
-Werkzeug==0.12.2
+Werkzeug==0.15.3
 widgetsnbextension==3.0.3
 wrapt==1.11.2
 xlrd==1.0.0
