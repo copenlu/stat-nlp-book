@@ -160,7 +160,7 @@ def bootstrappingExtraction(train_sents, train_entpairs, test_sents, test_entpai
 
     # convert training and testing sentences to short paths to obtain patterns
     train_patterns = set([sentenceToShortPath(s) for s in train_sents])
-    train_patterns.remove("in")
+    #train_patterns.remove("in") # too general
     test_patterns = [sentenceToShortPath(s) for s in test_sents]
     test_extracts = []
 
