@@ -132,4 +132,4 @@ for consumption yet. This is why you should always access content through
 the top-level [overview page (local-link)](http://localhost:8888/notebooks/overview.ipynb).
 
 ## Pull new content regularly
-Receive notificationf for new updates by "Watch" -ing the repo.
+Receive notifications for new updates by "Watch" -ing the repo.
