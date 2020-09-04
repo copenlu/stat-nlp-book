@@ -115,6 +115,12 @@ and create the virtual environment:
 ### Install dependencies
 
     pip3 install --upgrade pip
+    
+**MacOS**: Install rust
+    curl https://sh.rustup.rs -sSf | sh
+**MacOS**: Install xcode
+    xcode-select --install
+    
     pip3 install -r requirements.txt
     jupyter-nbextension install rise --py --sys-prefix
     jupyter-nbextension enable rise --py --sys-prefix    
