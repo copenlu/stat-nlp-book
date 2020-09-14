@@ -17,7 +17,8 @@ USER $NB_USER
 RUN conda install --quiet --yes \
     -c jacksongs -c damianavila82 -c anaconda -c auto -c conda-forge  \
     mpld3=0.3 \
-    graphviz=2.38.0 \
+    graphviz=2.40.1 \
+    python-graphviz=0.14 \
     tensorflow \
     rise && \
     conda clean -tipsy
