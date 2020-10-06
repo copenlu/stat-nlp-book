@@ -51,12 +51,12 @@ def render_transitions_displacy(transitions, tokens):
         return [t["form"] for t in tokens]
     class Output:
         def _repr_html_(self):
-            rows = ["<tr><td style='font-size: x-large;'>buffer</td><td style='font-size: x-large;'>stack</td>"
+            rows = ["<tr><td style='font-size: x-large;'>stack</td><td style='font-size: x-large;'>buffer</td>"
                     "<td style='font-size: x-large;'>parse</td><td style='font-size: x-large;'>action</td></tr>"]
             rows += ["<tr><td style='font-size: x-large;'>{}</td><td style='font-size: x-large;'>{}</td>" \
                      "<td style='font-size: x-large;'>{}</td><td style='font-size: x-large;'>{}</td></tr>".format(
-                " ".join(clean_tokens(configuration.buffer)),
                 " ".join(clean_tokens(configuration.stack)),
+                " ".join(clean_tokens(configuration.buffer)),
                 render_displacy(*to_displacy_graph(list(configuration.arcs), list(tokens),
                                                    max_length=1+len(configuration.sentence) - len(configuration.buffer)),
                                 "500px").data,
