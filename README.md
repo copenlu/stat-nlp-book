@@ -2,7 +2,7 @@
 
 There are several ways to set-up and run the project:
 1. [ Render Book Statically ](#render-book-statically)
-2. [ Docker installation ](#install-docker) (*recommended)
+2. [ Docker installation ](#install-docker)
 3. [ Set-up a Local Virtual Environment ](#set-up-a-local-virtual-environment)
 
 Important notes:
@@ -16,6 +16,7 @@ While this does not allow you to change and execute code, it also doesn't requir
 
 ## Docker installation 
 
+To be able to make changes to the book and render it dynamically, we recommend you use Docker.
 We assume you have a command line interface (CLI) in your OS 
 (bash, zsh, cygwin, git-bash, power-shell, etc.). We assume this CLI sets 
  the variable `$(pwd)` to the current directory. If it doesn't replace
@@ -26,8 +27,6 @@ We assume you have a command line interface (CLI) in your OS
 For Mac and Windows, go to the [docker webpage](https://www.docker.com/get-started) and follow the instruction for your platform. Instructions for Ubuntu can be found [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1). 
 
 ### Download Stat-NLP-Book Image
-
-*Note that we have updated the docker image - the new one is hosted at bjerva/stat-nlp-book:ndak18000u*
 
 Next, you can download the `stat-nlp-book` docker image like so:
 
@@ -93,6 +92,8 @@ To get the actual updates then run
 
 ## Set-up a Local Virtual Environment
 
+If you cannot use Docker, you can alternatively set up the book directly.
+
 ### git clone the stat-nlp-book repository
 
     git clone https://github.com/copenlu/stat-nlp-book.git
@@ -106,15 +107,13 @@ and create the virtual environment:
 
     python -m venv nlp_venv
 
-(for python<3.3, install and use virtualenv instead)
-
 ### Enter the virtual environment
 
     source nlp_venv/bin/activate
 
 ### Install dependencies
 
-    pip3 install --upgrade pip
+    pip install --upgrade pip
     
 **MacOS**: Install rust
 
@@ -124,7 +123,7 @@ and create the virtual environment:
 
     xcode-select --install
     
-    pip3 install -r requirements.txt
+    pip install -r requirements.txt
     jupyter-nbextension install rise --py --sys-prefix
     jupyter-nbextension enable rise --py --sys-prefix    
 
