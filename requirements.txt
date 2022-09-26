@@ -110,7 +110,7 @@ spacy @ file:///tmp/build/80754af9/spacy_1594305068600/work
 srsly==1.0.2
 tensorboard==2.2.1
 tensorboard-plugin-wit==1.6.0
-tensorflow==2.2.0
+tensorflow==2.7.2
 tensorflow-estimator==2.2.0
 termcolor==1.1.0
 terminado==0.8.3
