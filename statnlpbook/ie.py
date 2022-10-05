@@ -8,6 +8,7 @@ import collections
 from tfutil import *
 import random
 import copy
+import json
 
 def readLabelledPatternData(filepath="../data/ie/ie_bootstrap_patterns.txt"):
     f = open(filepath, "r")
@@ -62,6 +63,11 @@ def readDataForDistantSupervision(filepath="../data/ie/ie_training_data.txt"):
         unlab_sents.append(sent)
         unlab_entpairs.append(entpair)
     return kb_entpairs, unlab_sents, unlab_entpairs
+
+
+def read_few_rel_data(filepath="../data/ie/fewrel_val_wiki.json"):
+    with open(filepath) as f:
+        return json.load(f)
 
 
 def sentenceToShortPath(sent):
