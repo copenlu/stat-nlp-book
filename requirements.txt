@@ -76,7 +76,7 @@ plac @ file:///tmp/build/80754af9/plac_1594261900949/work
 preshed==3.0.2
 prometheus-client==0.8.0
 prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1598885458782/work
-protobuf==3.12.4
+protobuf==3.18.3
 ptyprocess==0.6.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.7
