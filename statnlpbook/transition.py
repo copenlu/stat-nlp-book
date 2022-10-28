@@ -116,7 +116,7 @@ def render_displacy(arcs, words, width="5000px"):
     div_id = "displacy" + str(i[0])
     i[0] += 1
     js = """
-    <div id='""" + div_id + """' style="overflow: scroll; width: """ + width + """;"></div>
+    <div id='""" + div_id + """' style="width: """ + width + """;"></div>
     <script>
     $(function() {
     requirejs.config({
