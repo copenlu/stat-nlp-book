@@ -11,7 +11,7 @@ blis==0.4.1
 brotlipy==0.7.0
 cachetools @ file:///tmp/build/80754af9/cachetools_1596822027882/work
 catalogue==1.0.0
-certifi==2020.6.20
+certifi==2022.12.7
 cffi==1.14.0
 chardet==3.0.4
 click==7.1.2
