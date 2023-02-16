@@ -128,7 +128,7 @@ urllib3 @ file:///tmp/build/80754af9/urllib3_1597086586889/work
 wasabi @ file:///tmp/build/80754af9/wasabi_1597087387881/work
 wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
 webencodings==0.5.1
-Werkzeug==1.0.1
+Werkzeug==2.2.3
 widgetsnbextension==3.5.1
 wrapt==1.12.1
 zipp==3.1.0
