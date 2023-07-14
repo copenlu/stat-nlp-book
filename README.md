@@ -1,5 +1,7 @@
 # The Stat-NLP-Book Project
 
+## For the latest materials of the University of Copenhagen Natural Language Processing (NLP) course, see [coastalcph/nlp-course](https://github.com/coastalcph/nlp-course).
+
 There are several ways to set-up and run the project:
 1. [ Render Book Statically ](#render-book-statically)
 2. [ Docker installation ](#install-docker)
